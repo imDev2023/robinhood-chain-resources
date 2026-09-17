@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "schema": "quotrons-v2-migration-v1",
+    "generatedAt": "2026-08-13T11:58:01.114Z",
+    "chainId": 4663,
+    "deployBlock": "34546608",
+    "snapshotBlock": "34984482",
+    "snapshotBlockHash": "0xfbe4be5a06e1c2af4d3b64d2e16ca421dadf962a849dd8aca86fd1706fbb882d",
+    "liquidEligibilityPolicy": "Liquid ERC-404 balances, dark ids, fractional balances, and restitution are frozen at block 34984482. Post-cutoff buys and transfers create no V2 entitlement.",
+    "hardwiredOwnershipCutoffBlock": "35337540",
+    "hardwiredOwnershipCutoffHash": "0x85a3668228eb45a92d4b41e042ba15058978924fe279808004ff891216250eb4",
+    "hardwiredEligibilityPolicy": "Only ids already hardwired at block 34984482 receive lit copies; those ids follow V1 NFT ownership through block 35337540. Later hardwires remain dark allocations owned at block 34984482.",
+    "legacy": {
+      "legacy": "0x40686524e56AfF0F1446958725dCF6e6dA5381E6",
+      "mirror": "0xbde7BEc47cbFc689e5E952B6cdD113A500abcd83",
+      "reflections": "0x666A51Eb731a9CF79d97B4A9c64cD5a4806c877C",
+      "hook": "0x5A7D914597476393794E100dDD8b70f8c3f570CC",
+      "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+      "seeder": "0xe2EaE8F7eB81Bb4a5971BB65847632bc6Be6cf18",
+      "owner": "0x7171E64E979265aeD6588577D1c6b60A701d7866",
+      "attacker": "0xB53CcF301CF2E2283265810372a0915Defb7e53d",
+      "operator": "0x2001a402E8803c1C92317c080326f1c80aA74532",
+      "poisonSeed": "0x122778523DF4ddf5189218B2bAbffCb3bc351bbC"
+    },
+    "assignmentHash": "0xd385f0257ffb1ca15f9fb7bafba1896d1c0af0cc413d552e46145f1b36200fd0",
+    "leafDomain": "0x010665319fa9e2b81786b6f4f5b644477d67ccb2402ceb0a9a6806c7c9e610e0",
+    "merkleRoot": "0x1c28b8292e4784ff5cd5209dae8e8667d0648c7748c85ce09b9449af0a1a0cde",
+    "leafEncoding": "keccak256(bytes.concat(keccak256(abi.encode(domain,chainId,legacy,snapshotBlock,kind,account,v1Id,v2Id,amount))))",
+    "kinds": {
+      "DARK": 1,
+      "HARDWIRED": 2,
+      "FRACTIONAL": 3,
+      "RESTITUTION_DARK": 4
+    },
+    "leafCount": 4307,
+    "accountCount": 734,
+    "migrationReserveWei": "3925448872639031210668",
+    "migrationReserveUnits": 3925.4488726390314,
+    "conflictPolicy": "Every verified attacker receive gets one allocation. Pause-block terminal claims keep exact ids; the first non-conflicting incident event may recover the original id; repeated or colliding events receive a same-floor/same-tier replacement when capacity permits, otherwise a tier-preserving cross-floor replacement."
+  },
+  "accountPath": "/migration/accounts/{lowercase-address}.json"
+}

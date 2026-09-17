@@ -1,0 +1,587 @@
+{
+ "file_path": "src/FeeRouter.sol",
+ "creation_status": "success",
+ "source_code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\nimport {Ownable} from \"@openzeppelin/contracts/access/Ownable.sol\";\nimport {ReentrancyGuard} from \"@openzeppelin/contracts/utils/ReentrancyGuard.sol\";\nimport {IERC20} from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport {SafeERC20} from \"@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol\";\n\ninterface IFeeSplitterRecipient {\n    function feeRouter() external view returns (address);\n    function currentEpoch() external view returns (uint256);\n    function deposit(address token, uint256 amount) external;\n}\n\n/// @notice Splits both ERC20 assets collected by the LauncherLocker among the\n/// protocol, the buy-burner, and the token's current CTO fee vault.\ncontract FeeRouter is Ownable, ReentrancyGuard {\n    using SafeERC20 for IERC20;\n\n    error InvalidBasisPoints();\n    error ZeroAddress();\n    error InvalidRecipient();\n    error NotConfigured();\n    error NotLocker();\n    error AlreadyInitialized();\n\n    event FeesDistributed(\n        address indexed token,\n        address indexed ctoRecipient,\n        uint256 ctoTokenAmount,\n        uint256 ctoPairAmount,\n        uint256 protocolTokenAmount,\n        uint256 protocolPairAmount,\n        uint256 burnerTokenAmount,\n        uint256 burnerPairAmount\n    );\n    event RecipientsUpdated(address indexed protocolRecipient, address indexed burnerRecipient);\n    event ProtocolSplitterModeUpdated(bool enabled);\n    event SharesUpdated(uint16 protocolShareBps, uint16 burnerShareBps, uint16 ctoShareBps);\n    event LockerUpdated(address locker);\n\n    uint16 public constant MAX_BPS = 10_000;\n    uint16 public constant DEFAULT_PROTOCOL_SHARE_BPS = 3_333;\n    uint16 public constant DEFAULT_BURNER_SHARE_BPS = 3_333;\n    uint16 public constant DEFAULT_CTO_SHARE_BPS = 3_334;\n\n    address public protocolRecipient;\n    address public burnerRecipient;\n    address public locker;\n    bool public protocolRecipientIsSplitter;\n\n    /// @notice Share paid to the fixed protocol recipient for each fee asset.\n    uint16 public protocolShareBps = DEFAULT_PROTOCOL_SHARE_BPS;\n    /// @notice Share paid to the fixed buy-burner recipient for each fee asset.\n    uint16 public burnerShareBps = DEFAULT_BURNER_SHARE_BPS;\n    /// @notice Share paid to the per-token CTO vault for each fee asset.\n    uint16 public ctoShareBps = DEFAULT_CTO_SHARE_BPS;\n\n    constructor() Ownable(msg.sender) {}\n\n    /// @notice Atomically updates the two fixed recipients and the split applied\n    /// identically to both ERC20 fee assets. The per-token CTO recipient\n    /// continues to be supplied by the LauncherLocker.\n    function setFeeConfig(\n        address protocolRecipient_,\n        address burnerRecipient_,\n        uint16 protocolShareBps_,\n        uint16 burnerShareBps_,\n        uint16 ctoShareBps_\n    ) external onlyOwner {\n        if (protocolRecipient_ == address(0) || burnerRecipient_ == address(0)) {\n            revert ZeroAddress();\n        }\n        if (\n            protocolRecipient_ == burnerRecipient_ || protocolRecipient_ == address(this)\n                || burnerRecipient_ == address(this)\n        ) revert InvalidRecipient();\n\n        (bool protocolIsSplitter, address protocolSplitterSource) = _splitterBinding(protocolRecipient_);\n        if (protocolIsSplitter && protocolSplitterSource != address(this)) revert InvalidRecipient();\n\n        // The factory sends launch-fee WETH directly to this semantic slot.\n        // A FeeSplitter intentionally ignores raw transfers, so accepting one\n        // here would make every launch fee unallocated and unclaimable.\n        (bool burnerIsSplitter,) = _splitterBinding(burnerRecipient_);\n        if (burnerIsSplitter) revert InvalidRecipient();\n        if (uint256(protocolShareBps_) + burnerShareBps_ + ctoShareBps_ != MAX_BPS) {\n            revert InvalidBasisPoints();\n        }\n\n        protocolRecipient = protocolRecipient_;\n        burnerRecipient = burnerRecipient_;\n        protocolShareBps = protocolShareBps_;\n        burnerShareBps = burnerShareBps_;\n        ctoShareBps = ctoShareBps_;\n        protocolRecipientIsSplitter = protocolIsSplitter;\n\n        emit RecipientsUpdated(protocolRecipient_, burnerRecipient_);\n        emit ProtocolSplitterModeUpdated(protocolRecipientIsSplitter);\n        emit SharesUpdated(protocolShareBps_, burnerShareBps_, ctoShareBps_);\n    }\n\n    /// @notice One-time wiring of the locker (set at deployment).\n    function setLocker(address locker_) external onlyOwner {\n        if (locker_ == address(0)) revert ZeroAddress();\n        if (locker != address(0)) revert AlreadyInitialized();\n        locker = locker_;\n        emit LockerUpdated(locker_);\n    }\n\n    /// @notice Distributes fees previously transferred to this contract by the locker.\n    /// @dev Only callable by the locker, within the same tx as the collect.\n    function distribute(address token, address pairToken, uint256 tokenAmount, uint256 pairAmount, address ctoRecipient)\n        external\n        nonReentrant\n    {\n        if (msg.sender != locker) revert NotLocker();\n        if (protocolRecipient == address(0) || burnerRecipient == address(0)) revert NotConfigured();\n        if (ctoRecipient == address(0)) revert ZeroAddress();\n\n        uint16 fixedRecipientShareBps = uint16(uint256(protocolShareBps) + burnerShareBps);\n\n        uint256 protocolTokenAmount = _mulBps(tokenAmount, protocolShareBps);\n        uint256 fixedRecipientTokenAmount = _mulBps(tokenAmount, fixedRecipientShareBps);\n        uint256 burnerTokenAmount = fixedRecipientTokenAmount - protocolTokenAmount;\n        uint256 ctoTokenAmount = tokenAmount - fixedRecipientTokenAmount;\n\n        uint256 protocolPairAmount = _mulBps(pairAmount, protocolShareBps);\n        uint256 fixedRecipientPairAmount = _mulBps(pairAmount, fixedRecipientShareBps);\n        uint256 burnerPairAmount = fixedRecipientPairAmount - protocolPairAmount;\n        uint256 ctoPairAmount = pairAmount - fixedRecipientPairAmount;\n\n        _payFixedRecipient(token, protocolRecipient, protocolTokenAmount, protocolRecipientIsSplitter);\n        _payFixedRecipient(token, burnerRecipient, burnerTokenAmount, false);\n        if (ctoTokenAmount != 0) IERC20(token).safeTransfer(ctoRecipient, ctoTokenAmount);\n\n        _payFixedRecipient(pairToken, protocolRecipient, protocolPairAmount, protocolRecipientIsSplitter);\n        _payFixedRecipient(pairToken, burnerRecipient, burnerPairAmount, false);\n        if (ctoPairAmount != 0) IERC20(pairToken).safeTransfer(ctoRecipient, ctoPairAmount);\n\n        emit FeesDistributed(\n            token,\n            ctoRecipient,\n            ctoTokenAmount,\n            ctoPairAmount,\n            protocolTokenAmount,\n            protocolPairAmount,\n            burnerTokenAmount,\n            burnerPairAmount\n        );\n    }\n\n    function _payFixedRecipient(address token, address recipient, uint256 amount, bool isSplitter) private {\n        if (amount == 0) return;\n\n        IERC20 asset = IERC20(token);\n        if (!isSplitter) {\n            asset.safeTransfer(recipient, amount);\n            return;\n        }\n\n        asset.forceApprove(recipient, amount);\n        IFeeSplitterRecipient(recipient).deposit(token, amount);\n        asset.forceApprove(recipient, 0);\n    }\n\n    function _splitterBinding(address recipient) private view returns (bool, address) {\n        if (recipient.code.length == 0) return (false, address(0));\n        try IFeeSplitterRecipient(recipient).feeRouter() returns (address source) {\n            try IFeeSplitterRecipient(recipient).currentEpoch() returns (uint256 epoch) {\n                return (epoch != 0, source);\n            } catch {\n                return (false, address(0));\n            }\n        } catch {\n            return (false, address(0));\n        }\n    }\n\n    /// @dev Equivalent to floor(amount * bps / MAX_BPS) without risking\n    /// overflow for arbitrary uint256 amounts.\n    function _mulBps(uint256 amount, uint16 bps) private pure returns (uint256) {\n        return (amount / MAX_BPS) * bps + ((amount % MAX_BPS) * bps) / MAX_BPS;\n    }\n}\n",
+ "deployed_bytecode": "0x60806040526004361015610011575f80fd5b5f3560e01c806304e868bf1461088a5780630fb109091461086e57806310fe288014610633578063171060ec146105a757806337ed3f1e146105835780633d0b8965146102e157806352d00b73146102bd5780635e008e75146102b8578063715018a614610261578063790ba658146102395780638da5cb5b14610212578063941f5d25146101ea57806395af69ff146101c6578063d7b96d4e1461019e578063e73baf9d14610179578063f2fde38b146100f45763fd967f47146100d4575f80fd5b346100f0575f3660031901126100f05760206040516127108152f35b5f80fd5b346100f05760203660031901126100f05761010d6108a6565b610115610900565b6001600160a01b03168015610166575f80546001600160a01b03198116831782556001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a3005b631e4fbdf760e01b5f525f60045260245ffd5b346100f0575f3660031901126100f057602060ff60035460a01c166040519015158152f35b346100f0575f3660031901126100f0576003546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f057602061ffff60035460b81c16604051908152f35b346100f0575f3660031901126100f0576001546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f0575f546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f0576002546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f057610279610900565b5f80546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b61088a565b346100f0575f3660031901126100f057602061ffff60035460c81c16604051908152f35b346100f05760a03660031901126100f0576102fa6108a6565b6103026108bc565b6084356001600160a01b038116926044359291906064358583036100f05760027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0054146105745760027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055600354946001600160a01b0386163303610565576001546001600160a01b03169586158015610552575b610543578715610534578060a81c61ffff16968160b81c61ffff166103bc90896108d2565b61ffff16916103cb8985610a5e565b9788926103d88587610a5e565b956103e385886108f3565b966103ed916108f3565b9a6103f89088610a5e565b946104039088610a5e565b9661040e86896108f3565b97610418916108f3565b998a9360a01c60ff169061042c928a610aad565b6002546104449086906001600160a01b031689610a8c565b7fe033f9de062c7ff63befed270f9c88a6abc834e1eeb2dfa806ef79841f46549b9860c0988b61051b575b61048e60018060a01b03600154168760ff60035460a01c169186610aad565b6002546104a69089906001600160a01b031685610a8c565b81610501575b5050604080519a8b5260208b0192909252508801526060870152608086015260a08501526001600160a01b031692a360017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055005b610513926001600160a01b0316610bf8565b8a81816104ac565b61052f8c826001600160a01b038c16610bf8565b61046f565b63d92e233d60e01b5f5260045ffd5b63d311bc3960e01b5f5260045ffd5b506002546001600160a01b031615610397565b631c12f2e960e01b5f5260045ffd5b633ee5aeb560e01b5f5260045ffd5b346100f0575f3660031901126100f057602061ffff60035460a81c16604051908152f35b346100f05760203660031901126100f0576105c06108a6565b6105c8610900565b6001600160a01b03168015610534576003546001600160a01b038116610625576001600160a01b03191681176003556040519081527f9c1923fcd8c9836ef423262ae307a6976f3c4da41d27f7ffba11d82c7d83f4a090602090a1005b62dc149f60e41b5f5260045ffd5b346100f05760a03660031901126100f05761064c6108a6565b6106546108bc565b60443561ffff8116908181036100f05760643561ffff8116908181036100f0576084359061ffff8216938483036100f05761068d610900565b6001600160a01b038816908115801561085d575b610534576001600160a01b03881698828a148015610854575b801561084b575b610828576106ce9061095c565b9080999181610837575b50610828576106e69061095c565b5061082857612710610701876106fc888b6108d2565b6108d2565b03610819577f87e014cb2b42bddaaba32d0bc7f4fcb8f1039410bac3c6bee0f89d07db4f7f0e986060987fea64cfc2761cd51428d3a24663bdbb6ba24543a6ec95551c27f61dac07e098059560209560ff94866bffffffffffffffffffffffff60a01b6001541617600155846bffffffffffffffffffffffff60a01b6002541617600255600354938660a01b90151560a01b16938660a01b199161ffff60a81b9060a81b169065ffffffffffff60a81b191617169061ffff60b81b9060b81b16179061ffff60c81b9060c81b1617179081600355604051937fb46243848fd4cfcaa63343d3207d276896a2fb784a5bba9c37f737170bf5fe425f80a360a01c1615158152a160405192835260208301526040820152a1005b63800c7e9160e01b5f5260045ffd5b634e46966960e11b5f5260045ffd5b6001600160a01b031630141590508b6106d8565b50308a146106c1565b503083146106ba565b506001600160a01b038816156106a1565b346100f0575f3660031901126100f0576020604051610d068152f35b346100f0575f3660031901126100f0576020604051610d058152f35b600435906001600160a01b03821682036100f057565b602435906001600160a01b03821682036100f057565b919082018092116108df57565b634e487b7160e01b5f52601160045260245ffd5b919082039182116108df57565b5f546001600160a01b0316330361091357565b63118cdaa760e01b5f523360045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761094857604052565b634e487b7160e01b5f52604160045260245ffd5b803b15610a445760405163f29ebf6160e01b815291906001600160a01b0316602083600481845afa5f9381610a00575b5061099957505f91508190565b602060049160405192838092630ecce30160e31b82525afa5f91816109cc575b506109c657505f91508190565b15159190565b9091506020813d6020116109f8575b816109e860209383610926565b810103126100f05751905f6109b9565b3d91506109db565b9093506020813d602011610a3c575b81610a1c60209383610926565b810103126100f057516001600160a01b03811681036100f057925f61098c565b3d9150610a0f565b505f905f90565b818102929181159184041417156108df57565b612710610a82610a899382610a7b61ffff82870493168093610a4b565b9406610a4b565b04906108d2565b90565b91908115610aa857610aa6926001600160a01b0316610bf8565b565b505050565b9190918115610bf2576001600160a01b03169215610be857610ad0818385610c59565b15610bab575b6001600160a01b03821690813b156100f0575f916044839260405194859384926311f9fbc960e21b845289600485015260248401525af18015610ba057610b90575b50610b245f8284610c59565b15610b2d575050565b610b378183610ca6565b15610b6f575f610b479183610d0a565b15610b4f5750565b635274afe760e01b5f9081526001600160a01b0391909116600452602490fd5b50635274afe760e01b5f9081526001600160a01b0391909116600452602490fd5b5f610b9a91610926565b5f610b18565b6040513d5f823e3d90fd5b610bb58284610ca6565b15610bca57610bc5818385610d0a565b610ad6575b635274afe760e01b5f9081526001600160a01b038416600452602490fd5b90610aa692610bf8565b50505050565b916040519163a9059cbb60e01b5f5260018060a01b031660045260245260205f60448180865af19060015f5114821615610c38575b60405215610b4f5750565b906001811516610c5057823b15153d15161690610c2d565b503d5f823e3d90fd5b92916040519163095ea7b360e01b5f5260018060a01b031660045260245260205f60448180875af19260015f5114841615610c95575b50604052565b3d15903b151516909216915f610c8f565b60405163095ea7b360e01b5f9081526001600160a01b03909316600452602483905290929160209060448180875af19260015f5114841615610ce85750604052565b60018492941516610d01573b15153d151616915f610c8f565b833d5f823e3d90fd5b92916040519163095ea7b360e01b5f5260018060a01b031660045260245260205f60448180875af19260015f5114841615610ce8575060405256fea26469706673582212209c2f0a79da8c851354401360957f499e903a347810a59879b198bcc40524e6ea64736f6c634300081a0033",
+ "optimization_enabled": true,
+ "verified_twin_address_hash": null,
+ "is_verified": true,
+ "github_repository_metadata": null,
+ "compiler_settings": {
+  "evmVersion": "cancun",
+  "libraries": {},
+  "metadata": {
+   "appendCBOR": true,
+   "bytecodeHash": "ipfs",
+   "useLiteralContent": false
+  },
+  "optimizer": {
+   "enabled": true,
+   "runs": 200
+  },
+  "outputSelection": {
+   "*": {
+    "": [
+     "*"
+    ],
+    "*": [
+     "*"
+    ]
+   }
+  },
+  "remappings": [
+   "@openzeppelin/=lib/openzeppelin-contracts/",
+   "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/"
+  ],
+  "viaIR": true
+ },
+ "optimization_runs": 200,
+ "sourcify_repo_url": null,
+ "decoded_constructor_args": null,
+ "compiler_version": "v0.8.26+commit.8a97fa7a",
+ "is_verified_via_verifier_alliance": false,
+ "verified_at": "2026-07-17T03:21:14.669970Z",
+ "implementations": [],
+ "proxy_type": null,
+ "external_libraries": [],
+ "creation_bytecode": "0x6080806040523460b2573315609f575f8054336001600160a01b0319821681178355916001600160a01b03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a360017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00556003805465ffffffffffff60a81b1916650d060d050d0560a81b179055610d7b90816100b78239f35b631e4fbdf760e01b5f525f60045260245ffd5b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c806304e868bf1461088a5780630fb109091461086e57806310fe288014610633578063171060ec146105a757806337ed3f1e146105835780633d0b8965146102e157806352d00b73146102bd5780635e008e75146102b8578063715018a614610261578063790ba658146102395780638da5cb5b14610212578063941f5d25146101ea57806395af69ff146101c6578063d7b96d4e1461019e578063e73baf9d14610179578063f2fde38b146100f45763fd967f47146100d4575f80fd5b346100f0575f3660031901126100f05760206040516127108152f35b5f80fd5b346100f05760203660031901126100f05761010d6108a6565b610115610900565b6001600160a01b03168015610166575f80546001600160a01b03198116831782556001600160a01b0316907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09080a3005b631e4fbdf760e01b5f525f60045260245ffd5b346100f0575f3660031901126100f057602060ff60035460a01c166040519015158152f35b346100f0575f3660031901126100f0576003546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f057602061ffff60035460b81c16604051908152f35b346100f0575f3660031901126100f0576001546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f0575f546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f0576002546040516001600160a01b039091168152602090f35b346100f0575f3660031901126100f057610279610900565b5f80546001600160a01b0319811682556001600160a01b03167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e08280a3005b61088a565b346100f0575f3660031901126100f057602061ffff60035460c81c16604051908152f35b346100f05760a03660031901126100f0576102fa6108a6565b6103026108bc565b6084356001600160a01b038116926044359291906064358583036100f05760027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0054146105745760027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055600354946001600160a01b0386163303610565576001546001600160a01b03169586158015610552575b610543578715610534578060a81c61ffff16968160b81c61ffff166103bc90896108d2565b61ffff16916103cb8985610a5e565b9788926103d88587610a5e565b956103e385886108f3565b966103ed916108f3565b9a6103f89088610a5e565b946104039088610a5e565b9661040e86896108f3565b97610418916108f3565b998a9360a01c60ff169061042c928a610aad565b6002546104449086906001600160a01b031689610a8c565b7fe033f9de062c7ff63befed270f9c88a6abc834e1eeb2dfa806ef79841f46549b9860c0988b61051b575b61048e60018060a01b03600154168760ff60035460a01c169186610aad565b6002546104a69089906001600160a01b031685610a8c565b81610501575b5050604080519a8b5260208b0192909252508801526060870152608086015260a08501526001600160a01b031692a360017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055005b610513926001600160a01b0316610bf8565b8a81816104ac565b61052f8c826001600160a01b038c16610bf8565b61046f565b63d92e233d60e01b5f5260045ffd5b63d311bc3960e01b5f5260045ffd5b506002546001600160a01b031615610397565b631c12f2e960e01b5f5260045ffd5b633ee5aeb560e01b5f5260045ffd5b346100f0575f3660031901126100f057602061ffff60035460a81c16604051908152f35b346100f05760203660031901126100f0576105c06108a6565b6105c8610900565b6001600160a01b03168015610534576003546001600160a01b038116610625576001600160a01b03191681176003556040519081527f9c1923fcd8c9836ef423262ae307a6976f3c4da41d27f7ffba11d82c7d83f4a090602090a1005b62dc149f60e41b5f5260045ffd5b346100f05760a03660031901126100f05761064c6108a6565b6106546108bc565b60443561ffff8116908181036100f05760643561ffff8116908181036100f0576084359061ffff8216938483036100f05761068d610900565b6001600160a01b038816908115801561085d575b610534576001600160a01b03881698828a148015610854575b801561084b575b610828576106ce9061095c565b9080999181610837575b50610828576106e69061095c565b5061082857612710610701876106fc888b6108d2565b6108d2565b03610819577f87e014cb2b42bddaaba32d0bc7f4fcb8f1039410bac3c6bee0f89d07db4f7f0e986060987fea64cfc2761cd51428d3a24663bdbb6ba24543a6ec95551c27f61dac07e098059560209560ff94866bffffffffffffffffffffffff60a01b6001541617600155846bffffffffffffffffffffffff60a01b6002541617600255600354938660a01b90151560a01b16938660a01b199161ffff60a81b9060a81b169065ffffffffffff60a81b191617169061ffff60b81b9060b81b16179061ffff60c81b9060c81b1617179081600355604051937fb46243848fd4cfcaa63343d3207d276896a2fb784a5bba9c37f737170bf5fe425f80a360a01c1615158152a160405192835260208301526040820152a1005b63800c7e9160e01b5f5260045ffd5b634e46966960e11b5f5260045ffd5b6001600160a01b031630141590508b6106d8565b50308a146106c1565b503083146106ba565b506001600160a01b038816156106a1565b346100f0575f3660031901126100f0576020604051610d068152f35b346100f0575f3660031901126100f0576020604051610d058152f35b600435906001600160a01b03821682036100f057565b602435906001600160a01b03821682036100f057565b919082018092116108df57565b634e487b7160e01b5f52601160045260245ffd5b919082039182116108df57565b5f546001600160a01b0316330361091357565b63118cdaa760e01b5f523360045260245ffd5b90601f8019910116810190811067ffffffffffffffff82111761094857604052565b634e487b7160e01b5f52604160045260245ffd5b803b15610a445760405163f29ebf6160e01b815291906001600160a01b0316602083600481845afa5f9381610a00575b5061099957505f91508190565b602060049160405192838092630ecce30160e31b82525afa5f91816109cc575b506109c657505f91508190565b15159190565b9091506020813d6020116109f8575b816109e860209383610926565b810103126100f05751905f6109b9565b3d91506109db565b9093506020813d602011610a3c575b81610a1c60209383610926565b810103126100f057516001600160a01b03811681036100f057925f61098c565b3d9150610a0f565b505f905f90565b818102929181159184041417156108df57565b612710610a82610a899382610a7b61ffff82870493168093610a4b565b9406610a4b565b04906108d2565b90565b91908115610aa857610aa6926001600160a01b0316610bf8565b565b505050565b9190918115610bf2576001600160a01b03169215610be857610ad0818385610c59565b15610bab575b6001600160a01b03821690813b156100f0575f916044839260405194859384926311f9fbc960e21b845289600485015260248401525af18015610ba057610b90575b50610b245f8284610c59565b15610b2d575050565b610b378183610ca6565b15610b6f575f610b479183610d0a565b15610b4f5750565b635274afe760e01b5f9081526001600160a01b0391909116600452602490fd5b50635274afe760e01b5f9081526001600160a01b0391909116600452602490fd5b5f610b9a91610926565b5f610b18565b6040513d5f823e3d90fd5b610bb58284610ca6565b15610bca57610bc5818385610d0a565b610ad6575b635274afe760e01b5f9081526001600160a01b038416600452602490fd5b90610aa692610bf8565b50505050565b916040519163a9059cbb60e01b5f5260018060a01b031660045260245260205f60448180865af19060015f5114821615610c38575b60405215610b4f5750565b906001811516610c5057823b15153d15161690610c2d565b503d5f823e3d90fd5b92916040519163095ea7b360e01b5f5260018060a01b031660045260245260205f60448180875af19260015f5114841615610c95575b50604052565b3d15903b151516909216915f610c8f565b60405163095ea7b360e01b5f9081526001600160a01b03909316600452602483905290929160209060448180875af19260015f5114841615610ce85750604052565b60018492941516610d01573b15153d151616915f610c8f565b833d5f823e3d90fd5b92916040519163095ea7b360e01b5f5260018060a01b031660045260245260205f60448180875af19260015f5114841615610ce8575060405256fea26469706673582212209c2f0a79da8c851354401360957f499e903a347810a59879b198bcc40524e6ea64736f6c634300081a0033",
+ "name": "FeeRouter",
+ "is_blueprint": false,
+ "license_type": "none",
+ "is_fully_verified": true,
+ "is_verified_via_eth_bytecode_db": false,
+ "language": "solidity",
+ "evm_version": "cancun",
+ "can_be_visualized_via_sol2uml": true,
+ "is_verified_via_sourcify": false,
+ "additional_sources": [
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\n\npragma solidity ^0.8.20;\n\nimport {Context} from \"../utils/Context.sol\";\n\n/**\n * @dev Contract module which provides a basic access control mechanism, where\n * there is an account (an owner) that can be granted exclusive access to\n * specific functions.\n *\n * The initial owner is set to the address provided by the deployer. This can\n * later be changed with {transferOwnership}.\n *\n * This module is used through inheritance. It will make available the modifier\n * `onlyOwner`, which can be applied to your functions to restrict their use to\n * the owner.\n */\nabstract contract Ownable is Context {\n    address private _owner;\n\n    /**\n     * @dev The caller account is not authorized to perform an operation.\n     */\n    error OwnableUnauthorizedAccount(address account);\n\n    /**\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\n     */\n    error OwnableInvalidOwner(address owner);\n\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\n\n    /**\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\n     */\n    constructor(address initialOwner) {\n        if (initialOwner == address(0)) {\n            revert OwnableInvalidOwner(address(0));\n        }\n        _transferOwnership(initialOwner);\n    }\n\n    /**\n     * @dev Throws if called by any account other than the owner.\n     */\n    modifier onlyOwner() {\n        _checkOwner();\n        _;\n    }\n\n    /**\n     * @dev Returns the address of the current owner.\n     */\n    function owner() public view virtual returns (address) {\n        return _owner;\n    }\n\n    /**\n     * @dev Throws if the sender is not the owner.\n     */\n    function _checkOwner() internal view virtual {\n        if (owner() != _msgSender()) {\n            revert OwnableUnauthorizedAccount(_msgSender());\n        }\n    }\n\n    /**\n     * @dev Leaves the contract without owner. It will not be possible to call\n     * `onlyOwner` functions. Can only be called by the current owner.\n     *\n     * NOTE: Renouncing ownership will leave the contract without an owner,\n     * thereby disabling any functionality that is only available to the owner.\n     */\n    function renounceOwnership() public virtual onlyOwner {\n        _transferOwnership(address(0));\n    }\n\n    /**\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\n     * Can only be called by the current owner.\n     */\n    function transferOwnership(address newOwner) public virtual onlyOwner {\n        if (newOwner == address(0)) {\n            revert OwnableInvalidOwner(address(0));\n        }\n        _transferOwnership(newOwner);\n    }\n\n    /**\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\n     * Internal function without access restriction.\n     */\n    function _transferOwnership(address newOwner) internal virtual {\n        address oldOwner = _owner;\n        _owner = newOwner;\n        emit OwnershipTransferred(oldOwner, newOwner);\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/interfaces/IERC1363.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (interfaces/IERC1363.sol)\n\npragma solidity >=0.6.2;\n\nimport {IERC20} from \"./IERC20.sol\";\nimport {IERC165} from \"./IERC165.sol\";\n\n/**\n * @title IERC1363\n * @dev Interface of the ERC-1363 standard as defined in the https://eips.ethereum.org/EIPS/eip-1363[ERC-1363].\n *\n * Defines an extension interface for ERC-20 tokens that supports executing code on a recipient contract\n * after `transfer` or `transferFrom`, or code on a spender contract after `approve`, in a single transaction.\n */\ninterface IERC1363 is IERC20, IERC165 {\n    /*\n     * Note: the ERC-165 identifier for this interface is 0xb0202a11.\n     * 0xb0202a11 ===\n     *   bytes4(keccak256('transferAndCall(address,uint256)')) ^\n     *   bytes4(keccak256('transferAndCall(address,uint256,bytes)')) ^\n     *   bytes4(keccak256('transferFromAndCall(address,address,uint256)')) ^\n     *   bytes4(keccak256('transferFromAndCall(address,address,uint256,bytes)')) ^\n     *   bytes4(keccak256('approveAndCall(address,uint256)')) ^\n     *   bytes4(keccak256('approveAndCall(address,uint256,bytes)'))\n     */\n\n    /**\n     * @dev Moves a `value` amount of tokens from the caller's account to `to`\n     * and then calls {IERC1363Receiver-onTransferReceived} on `to`.\n     * @param to The address which you want to transfer to.\n     * @param value The amount of tokens to be transferred.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function transferAndCall(address to, uint256 value) external returns (bool);\n\n    /**\n     * @dev Moves a `value` amount of tokens from the caller's account to `to`\n     * and then calls {IERC1363Receiver-onTransferReceived} on `to`.\n     * @param to The address which you want to transfer to.\n     * @param value The amount of tokens to be transferred.\n     * @param data Additional data with no specified format, sent in call to `to`.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function transferAndCall(address to, uint256 value, bytes calldata data) external returns (bool);\n\n    /**\n     * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism\n     * and then calls {IERC1363Receiver-onTransferReceived} on `to`.\n     * @param from The address which you want to send tokens from.\n     * @param to The address which you want to transfer to.\n     * @param value The amount of tokens to be transferred.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function transferFromAndCall(address from, address to, uint256 value) external returns (bool);\n\n    /**\n     * @dev Moves a `value` amount of tokens from `from` to `to` using the allowance mechanism\n     * and then calls {IERC1363Receiver-onTransferReceived} on `to`.\n     * @param from The address which you want to send tokens from.\n     * @param to The address which you want to transfer to.\n     * @param value The amount of tokens to be transferred.\n     * @param data Additional data with no specified format, sent in call to `to`.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function transferFromAndCall(address from, address to, uint256 value, bytes calldata data) external returns (bool);\n\n    /**\n     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the\n     * caller's tokens and then calls {IERC1363Spender-onApprovalReceived} on `spender`.\n     * @param spender The address which will spend the funds.\n     * @param value The amount of tokens to be spent.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function approveAndCall(address spender, uint256 value) external returns (bool);\n\n    /**\n     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the\n     * caller's tokens and then calls {IERC1363Spender-onApprovalReceived} on `spender`.\n     * @param spender The address which will spend the funds.\n     * @param value The amount of tokens to be spent.\n     * @param data Additional data with no specified format, sent in call to `spender`.\n     * @return A boolean value indicating whether the operation succeeded unless throwing.\n     */\n    function approveAndCall(address spender, uint256 value, bytes calldata data) external returns (bool);\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/interfaces/IERC165.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (interfaces/IERC165.sol)\n\npragma solidity >=0.4.16;\n\nimport {IERC165} from \"../utils/introspection/IERC165.sol\";\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/interfaces/IERC20.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (interfaces/IERC20.sol)\n\npragma solidity >=0.4.16;\n\nimport {IERC20} from \"../token/ERC20/IERC20.sol\";\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/interfaces/IERC20Metadata.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (interfaces/IERC20Metadata.sol)\n\npragma solidity >=0.6.2;\n\nimport {IERC20Metadata} from \"../token/ERC20/extensions/IERC20Metadata.sol\";\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (token/ERC20/IERC20.sol)\n\npragma solidity >=0.4.16;\n\n/**\n * @dev Interface of the ERC-20 standard as defined in the ERC.\n */\ninterface IERC20 {\n    /**\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\n     * another (`to`).\n     *\n     * Note that `value` may be zero.\n     */\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    /**\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\n     * a call to {approve}. `value` is the new allowance.\n     */\n    event Approval(address indexed owner, address indexed spender, uint256 value);\n\n    /**\n     * @dev Returns the value of tokens in existence.\n     */\n    function totalSupply() external view returns (uint256);\n\n    /**\n     * @dev Returns the value of tokens owned by `account`.\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n    /**\n     * @dev Moves a `value` amount of tokens from the caller's account to `to`.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transfer(address to, uint256 value) external returns (bool);\n\n    /**\n     * @dev Returns the remaining number of tokens that `spender` will be\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\n     * zero by default.\n     *\n     * This value changes when {approve} or {transferFrom} are called.\n     */\n    function allowance(address owner, address spender) external view returns (uint256);\n\n    /**\n     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the\n     * caller's tokens.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\n     * that someone may use both the old and the new allowance by unfortunate\n     * transaction ordering. One possible solution to mitigate this race\n     * condition is to first reduce the spender's allowance to 0 and set the\n     * desired value afterwards:\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n     *\n     * Emits an {Approval} event.\n     */\n    function approve(address spender, uint256 value) external returns (bool);\n\n    /**\n     * @dev Moves a `value` amount of tokens from `from` to `to` using the\n     * allowance mechanism. `value` is then deducted from the caller's\n     * allowance.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transferFrom(address from, address to, uint256 value) external returns (bool);\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (token/ERC20/extensions/IERC20Metadata.sol)\n\npragma solidity >=0.6.2;\n\nimport {IERC20} from \"../IERC20.sol\";\n\n/**\n * @dev Interface for the optional metadata functions from the ERC-20 standard.\n */\ninterface IERC20Metadata is IERC20 {\n    /**\n     * @dev Returns the name of the token.\n     */\n    function name() external view returns (string memory);\n\n    /**\n     * @dev Returns the symbol of the token.\n     */\n    function symbol() external view returns (string memory);\n\n    /**\n     * @dev Returns the decimals places of the token.\n     */\n    function decimals() external view returns (uint8);\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.5.0) (token/ERC20/utils/SafeERC20.sol)\n\npragma solidity ^0.8.20;\n\nimport {IERC20} from \"../IERC20.sol\";\nimport {IERC1363} from \"../../../interfaces/IERC1363.sol\";\nimport {IERC20Metadata} from \"../../../interfaces/IERC20Metadata.sol\";\n\n/**\n * @title SafeERC20\n * @dev Wrappers around ERC-20 operations that throw on failure (when the token\n * contract returns false). Tokens that return no value (and instead revert or\n * throw on failure) are also supported, non-reverting calls are assumed to be\n * successful.\n * To use this library you can add a `using SafeERC20 for IERC20;` statement to your contract,\n * which allows you to call the safe operations as `token.safeTransfer(...)`, etc.\n */\nlibrary SafeERC20 {\n    /**\n     * @dev An operation with an ERC-20 token failed.\n     */\n    error SafeERC20FailedOperation(address token);\n\n    /**\n     * @dev Indicates a failed `decreaseAllowance` request.\n     */\n    error SafeERC20FailedDecreaseAllowance(address spender, uint256 currentAllowance, uint256 requestedDecrease);\n\n    /**\n     * @dev Transfer `value` amount of `token` from the calling contract to `to`. If `token` returns no value,\n     * non-reverting calls are assumed to be successful.\n     */\n    function safeTransfer(IERC20 token, address to, uint256 value) internal {\n        if (!_safeTransfer(token, to, value, true)) {\n            revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /**\n     * @dev Transfer `value` amount of `token` from `from` to `to`, spending the approval given by `from` to the\n     * calling contract. If `token` returns no value, non-reverting calls are assumed to be successful.\n     */\n    function safeTransferFrom(IERC20 token, address from, address to, uint256 value) internal {\n        if (!_safeTransferFrom(token, from, to, value, true)) {\n            revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /**\n     * @dev Variant of {safeTransfer} that returns a bool instead of reverting if the operation is not successful.\n     */\n    function trySafeTransfer(IERC20 token, address to, uint256 value) internal returns (bool) {\n        return _safeTransfer(token, to, value, false);\n    }\n\n    /**\n     * @dev Variant of {safeTransferFrom} that returns a bool instead of reverting if the operation is not successful.\n     */\n    function trySafeTransferFrom(IERC20 token, address from, address to, uint256 value) internal returns (bool) {\n        return _safeTransferFrom(token, from, to, value, false);\n    }\n\n    /**\n     * @dev Increase the calling contract's allowance toward `spender` by `value`. If `token` returns no value,\n     * non-reverting calls are assumed to be successful.\n     *\n     * IMPORTANT: If the token implements ERC-7674 (ERC-20 with temporary allowance), and if the \"client\"\n     * smart contract uses ERC-7674 to set temporary allowances, then the \"client\" smart contract should avoid using\n     * this function. Performing a {safeIncreaseAllowance} or {safeDecreaseAllowance} operation on a token contract\n     * that has a non-zero temporary allowance (for that particular owner-spender) will result in unexpected behavior.\n     */\n    function safeIncreaseAllowance(IERC20 token, address spender, uint256 value) internal {\n        uint256 oldAllowance = token.allowance(address(this), spender);\n        forceApprove(token, spender, oldAllowance + value);\n    }\n\n    /**\n     * @dev Decrease the calling contract's allowance toward `spender` by `requestedDecrease`. If `token` returns no\n     * value, non-reverting calls are assumed to be successful.\n     *\n     * IMPORTANT: If the token implements ERC-7674 (ERC-20 with temporary allowance), and if the \"client\"\n     * smart contract uses ERC-7674 to set temporary allowances, then the \"client\" smart contract should avoid using\n     * this function. Performing a {safeIncreaseAllowance} or {safeDecreaseAllowance} operation on a token contract\n     * that has a non-zero temporary allowance (for that particular owner-spender) will result in unexpected behavior.\n     */\n    function safeDecreaseAllowance(IERC20 token, address spender, uint256 requestedDecrease) internal {\n        unchecked {\n            uint256 currentAllowance = token.allowance(address(this), spender);\n            if (currentAllowance < requestedDecrease) {\n                revert SafeERC20FailedDecreaseAllowance(spender, currentAllowance, requestedDecrease);\n            }\n            forceApprove(token, spender, currentAllowance - requestedDecrease);\n        }\n    }\n\n    /**\n     * @dev Set the calling contract's allowance toward `spender` to `value`. If `token` returns no value,\n     * non-reverting calls are assumed to be successful. Meant to be used with tokens that require the approval\n     * to be set to zero before setting it to a non-zero value, such as USDT.\n     *\n     * NOTE: If the token implements ERC-7674, this function will not modify any temporary allowance. This function\n     * only sets the \"standard\" allowance. Any temporary allowance will remain active, in addition to the value being\n     * set here.\n     */\n    function forceApprove(IERC20 token, address spender, uint256 value) internal {\n        if (!_safeApprove(token, spender, value, false)) {\n            if (!_safeApprove(token, spender, 0, true)) revert SafeERC20FailedOperation(address(token));\n            if (!_safeApprove(token, spender, value, true)) revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /**\n     * @dev Performs an {ERC1363} transferAndCall, with a fallback to the simple {ERC20} transfer if the target has no\n     * code. This can be used to implement an {ERC721}-like safe transfer that relies on {ERC1363} checks when\n     * targeting contracts.\n     *\n     * Reverts if the returned value is other than `true`.\n     */\n    function transferAndCallRelaxed(IERC1363 token, address to, uint256 value, bytes memory data) internal {\n        if (to.code.length == 0) {\n            safeTransfer(token, to, value);\n        } else if (!token.transferAndCall(to, value, data)) {\n            revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /**\n     * @dev Performs an {ERC1363} transferFromAndCall, with a fallback to the simple {ERC20} transferFrom if the target\n     * has no code. This can be used to implement an {ERC721}-like safe transfer that relies on {ERC1363} checks when\n     * targeting contracts.\n     *\n     * Reverts if the returned value is other than `true`.\n     */\n    function transferFromAndCallRelaxed(\n        IERC1363 token,\n        address from,\n        address to,\n        uint256 value,\n        bytes memory data\n    ) internal {\n        if (to.code.length == 0) {\n            safeTransferFrom(token, from, to, value);\n        } else if (!token.transferFromAndCall(from, to, value, data)) {\n            revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /**\n     * @dev Performs an {ERC1363} approveAndCall, with a fallback to the simple {ERC20} approve if the target has no\n     * code. This can be used to implement an {ERC721}-like safe transfer that rely on {ERC1363} checks when\n     * targeting contracts.\n     *\n     * NOTE: When the recipient address (`to`) has no code (i.e. is an EOA), this function behaves as {forceApprove}.\n     * Oppositely, when the recipient address (`to`) has code, this function only attempts to call {ERC1363-approveAndCall}\n     * once without retrying, and relies on the returned value to be true.\n     *\n     * Reverts if the returned value is other than `true`.\n     */\n    function approveAndCallRelaxed(IERC1363 token, address to, uint256 value, bytes memory data) internal {\n        if (to.code.length == 0) {\n            forceApprove(token, to, value);\n        } else if (!token.approveAndCall(to, value, data)) {\n            revert SafeERC20FailedOperation(address(token));\n        }\n    }\n\n    /// @dev Attempts to fetch the token decimals. A return value of false indicates that the attempt failed in some way.\n    function tryGetDecimals(IERC20 token) internal view returns (bool success, uint8 decimals) {\n        bytes4 selector = IERC20Metadata.decimals.selector;\n        assembly (\"memory-safe\") {\n            mstore(0x00, selector)\n            success := staticcall(gas(), token, 0x00, 4, 0x00, 0x20)\n            success := and(and(success, gt(returndatasize(), 0x1f)), lt(mload(0x00), 0x100))\n            decimals := mul(success, mload(0x00))\n        }\n    }\n\n    /**\n     * @dev Imitates a Solidity `token.transfer(to, value)` call, relaxing the requirement on the return value: the\n     * return value is optional (but if data is returned, it must not be false).\n     *\n     * @param token The token targeted by the call.\n     * @param to The recipient of the tokens\n     * @param value The amount of token to transfer\n     * @param bubble Behavior switch if the transfer call reverts: bubble the revert reason or return a false boolean.\n     */\n    function _safeTransfer(IERC20 token, address to, uint256 value, bool bubble) private returns (bool success) {\n        bytes4 selector = IERC20.transfer.selector;\n\n        assembly (\"memory-safe\") {\n            let fmp := mload(0x40)\n            mstore(0x00, selector)\n            mstore(0x04, and(to, shr(96, not(0))))\n            mstore(0x24, value)\n            success := call(gas(), token, 0, 0x00, 0x44, 0x00, 0x20)\n            // if call success and return is true, all is good.\n            // otherwise (not success or return is not true), we need to perform further checks\n            if iszero(and(success, eq(mload(0x00), 1))) {\n                // if the call was a failure and bubble is enabled, bubble the error\n                if and(iszero(success), bubble) {\n                    returndatacopy(fmp, 0x00, returndatasize())\n                    revert(fmp, returndatasize())\n                }\n                // if the return value is not true, then the call is only successful if:\n                // - the token address has code\n                // - the returndata is empty\n                success := and(success, and(iszero(returndatasize()), gt(extcodesize(token), 0)))\n            }\n            mstore(0x40, fmp)\n        }\n    }\n\n    /**\n     * @dev Imitates a Solidity `token.transferFrom(from, to, value)` call, relaxing the requirement on the return\n     * value: the return value is optional (but if data is returned, it must not be false).\n     *\n     * @param token The token targeted by the call.\n     * @param from The sender of the tokens\n     * @param to The recipient of the tokens\n     * @param value The amount of token to transfer\n     * @param bubble Behavior switch if the transfer call reverts: bubble the revert reason or return a false boolean.\n     */\n    function _safeTransferFrom(\n        IERC20 token,\n        address from,\n        address to,\n        uint256 value,\n        bool bubble\n    ) private returns (bool success) {\n        bytes4 selector = IERC20.transferFrom.selector;\n\n        assembly (\"memory-safe\") {\n            let fmp := mload(0x40)\n            mstore(0x00, selector)\n            mstore(0x04, and(from, shr(96, not(0))))\n            mstore(0x24, and(to, shr(96, not(0))))\n            mstore(0x44, value)\n            success := call(gas(), token, 0, 0x00, 0x64, 0x00, 0x20)\n            // if call success and return is true, all is good.\n            // otherwise (not success or return is not true), we need to perform further checks\n            if iszero(and(success, eq(mload(0x00), 1))) {\n                // if the call was a failure and bubble is enabled, bubble the error\n                if and(iszero(success), bubble) {\n                    returndatacopy(fmp, 0x00, returndatasize())\n                    revert(fmp, returndatasize())\n                }\n                // if the return value is not true, then the call is only successful if:\n                // - the token address has code\n                // - the returndata is empty\n                success := and(success, and(iszero(returndatasize()), gt(extcodesize(token), 0)))\n            }\n            mstore(0x40, fmp)\n            mstore(0x60, 0)\n        }\n    }\n\n    /**\n     * @dev Imitates a Solidity `token.approve(spender, value)` call, relaxing the requirement on the return value:\n     * the return value is optional (but if data is returned, it must not be false).\n     *\n     * @param token The token targeted by the call.\n     * @param spender The spender of the tokens\n     * @param value The amount of token to transfer\n     * @param bubble Behavior switch if the transfer call reverts: bubble the revert reason or return a false boolean.\n     */\n    function _safeApprove(IERC20 token, address spender, uint256 value, bool bubble) private returns (bool success) {\n        bytes4 selector = IERC20.approve.selector;\n\n        assembly (\"memory-safe\") {\n            let fmp := mload(0x40)\n            mstore(0x00, selector)\n            mstore(0x04, and(spender, shr(96, not(0))))\n            mstore(0x24, value)\n            success := call(gas(), token, 0, 0x00, 0x44, 0x00, 0x20)\n            // if call success and return is true, all is good.\n            // otherwise (not success or return is not true), we need to perform further checks\n            if iszero(and(success, eq(mload(0x00), 1))) {\n                // if the call was a failure and bubble is enabled, bubble the error\n                if and(iszero(success), bubble) {\n                    returndatacopy(fmp, 0x00, returndatasize())\n                    revert(fmp, returndatasize())\n                }\n                // if the return value is not true, then the call is only successful if:\n                // - the token address has code\n                // - the returndata is empty\n                success := and(success, and(iszero(returndatasize()), gt(extcodesize(token), 0)))\n            }\n            mstore(0x40, fmp)\n        }\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\n\npragma solidity ^0.8.20;\n\n/**\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        return msg.data;\n    }\n\n    function _contextSuffixLength() internal view virtual returns (uint256) {\n        return 0;\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.5.0) (utils/ReentrancyGuard.sol)\n\npragma solidity ^0.8.20;\n\nimport {StorageSlot} from \"./StorageSlot.sol\";\n\n/**\n * @dev Contract module that helps prevent reentrant calls to a function.\n *\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\n * available, which can be applied to functions to make sure there are no nested\n * (reentrant) calls to them.\n *\n * Note that because there is a single `nonReentrant` guard, functions marked as\n * `nonReentrant` may not call one another. This can be worked around by making\n * those functions `private`, and then adding `external` `nonReentrant` entry\n * points to them.\n *\n * TIP: If EIP-1153 (transient storage) is available on the chain you're deploying at,\n * consider using {ReentrancyGuardTransient} instead.\n *\n * TIP: If you would like to learn more about reentrancy and alternative ways\n * to protect against it, check out our blog post\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\n *\n * IMPORTANT: Deprecated. This storage-based reentrancy guard will be removed and replaced\n * by the {ReentrancyGuardTransient} variant in v6.0.\n *\n * @custom:stateless\n */\nabstract contract ReentrancyGuard {\n    using StorageSlot for bytes32;\n\n    // keccak256(abi.encode(uint256(keccak256(\"openzeppelin.storage.ReentrancyGuard\")) - 1)) & ~bytes32(uint256(0xff))\n    bytes32 private constant REENTRANCY_GUARD_STORAGE =\n        0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00;\n\n    // Booleans are more expensive than uint256 or any type that takes up a full\n    // word because each write operation emits an extra SLOAD to first read the\n    // slot's contents, replace the bits taken up by the boolean, and then write\n    // back. This is the compiler's defense against contract upgrades and\n    // pointer aliasing, and it cannot be disabled.\n\n    // The values being non-zero value makes deployment a bit more expensive,\n    // but in exchange the refund on every call to nonReentrant will be lower in\n    // amount. Since refunds are capped to a percentage of the total\n    // transaction's gas, it is best to keep them low in cases like this one, to\n    // increase the likelihood of the full refund coming into effect.\n    uint256 private constant NOT_ENTERED = 1;\n    uint256 private constant ENTERED = 2;\n\n    /**\n     * @dev Unauthorized reentrant call.\n     */\n    error ReentrancyGuardReentrantCall();\n\n    constructor() {\n        _reentrancyGuardStorageSlot().getUint256Slot().value = NOT_ENTERED;\n    }\n\n    /**\n     * @dev Prevents a contract from calling itself, directly or indirectly.\n     * Calling a `nonReentrant` function from another `nonReentrant`\n     * function is not supported. It is possible to prevent this from happening\n     * by making the `nonReentrant` function external, and making it call a\n     * `private` function that does the actual work.\n     */\n    modifier nonReentrant() {\n        _nonReentrantBefore();\n        _;\n        _nonReentrantAfter();\n    }\n\n    /**\n     * @dev A `view` only version of {nonReentrant}. Use to block view functions\n     * from being called, preventing reading from inconsistent contract state.\n     *\n     * CAUTION: This is a \"view\" modifier and does not change the reentrancy\n     * status. Use it only on view functions. For payable or non-payable functions,\n     * use the standard {nonReentrant} modifier instead.\n     */\n    modifier nonReentrantView() {\n        _nonReentrantBeforeView();\n        _;\n    }\n\n    function _nonReentrantBeforeView() private view {\n        if (_reentrancyGuardEntered()) {\n            revert ReentrancyGuardReentrantCall();\n        }\n    }\n\n    function _nonReentrantBefore() private {\n        // On the first call to nonReentrant, _status will be NOT_ENTERED\n        _nonReentrantBeforeView();\n\n        // Any calls to nonReentrant after this point will fail\n        _reentrancyGuardStorageSlot().getUint256Slot().value = ENTERED;\n    }\n\n    function _nonReentrantAfter() private {\n        // By storing the original value once again, a refund is triggered (see\n        // https://eips.ethereum.org/EIPS/eip-2200)\n        _reentrancyGuardStorageSlot().getUint256Slot().value = NOT_ENTERED;\n    }\n\n    /**\n     * @dev Returns true if the reentrancy guard is currently set to \"entered\", which indicates there is a\n     * `nonReentrant` function in the call stack.\n     */\n    function _reentrancyGuardEntered() internal view returns (bool) {\n        return _reentrancyGuardStorageSlot().getUint256Slot().value == ENTERED;\n    }\n\n    function _reentrancyGuardStorageSlot() internal pure virtual returns (bytes32) {\n        return REENTRANCY_GUARD_STORAGE;\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/StorageSlot.sol)\n// This file was procedurally generated from scripts/generate/templates/StorageSlot.js.\n\npragma solidity ^0.8.20;\n\n/**\n * @dev Library for reading and writing primitive types to specific storage slots.\n *\n * Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\n * This library helps with reading and writing to such slots without the need for inline assembly.\n *\n * The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\n *\n * Example usage to set ERC-1967 implementation slot:\n * ```solidity\n * contract ERC1967 {\n *     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.\n *     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\n *\n *     function _getImplementation() internal view returns (address) {\n *         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\n *     }\n *\n *     function _setImplementation(address newImplementation) internal {\n *         require(newImplementation.code.length > 0);\n *         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\n *     }\n * }\n * ```\n *\n * TIP: Consider using this library along with {SlotDerivation}.\n */\nlibrary StorageSlot {\n    struct AddressSlot {\n        address value;\n    }\n\n    struct BooleanSlot {\n        bool value;\n    }\n\n    struct Bytes32Slot {\n        bytes32 value;\n    }\n\n    struct Uint256Slot {\n        uint256 value;\n    }\n\n    struct Int256Slot {\n        int256 value;\n    }\n\n    struct StringSlot {\n        string value;\n    }\n\n    struct BytesSlot {\n        bytes value;\n    }\n\n    /**\n     * @dev Returns an `AddressSlot` with member `value` located at `slot`.\n     */\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `BooleanSlot` with member `value` located at `slot`.\n     */\n    function getBooleanSlot(bytes32 slot) internal pure returns (BooleanSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Bytes32Slot` with member `value` located at `slot`.\n     */\n    function getBytes32Slot(bytes32 slot) internal pure returns (Bytes32Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Uint256Slot` with member `value` located at `slot`.\n     */\n    function getUint256Slot(bytes32 slot) internal pure returns (Uint256Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Int256Slot` with member `value` located at `slot`.\n     */\n    function getInt256Slot(bytes32 slot) internal pure returns (Int256Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `StringSlot` with member `value` located at `slot`.\n     */\n    function getStringSlot(bytes32 slot) internal pure returns (StringSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns an `StringSlot` representation of the string storage pointer `store`.\n     */\n    function getStringSlot(string storage store) internal pure returns (StringSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := store.slot\n        }\n    }\n\n    /**\n     * @dev Returns a `BytesSlot` with member `value` located at `slot`.\n     */\n    function getBytesSlot(bytes32 slot) internal pure returns (BytesSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns an `BytesSlot` representation of the bytes storage pointer `store`.\n     */\n    function getBytesSlot(bytes storage store) internal pure returns (BytesSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := store.slot\n        }\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (utils/introspection/IERC165.sol)\n\npragma solidity >=0.4.16;\n\n/**\n * @dev Interface of the ERC-165 standard, as defined in the\n * https://eips.ethereum.org/EIPS/eip-165[ERC].\n *\n * Implementers can declare support of contract interfaces, which can then be\n * queried by others ({ERC165Checker}).\n *\n * For an implementation, see {ERC165}.\n */\ninterface IERC165 {\n    /**\n     * @dev Returns true if this contract implements the interface defined by\n     * `interfaceId`. See the corresponding\n     * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section]\n     * to learn more about how these ids are created.\n     *\n     * This function call must use less than 30 000 gas.\n     */\n    function supportsInterface(bytes4 interfaceId) external view returns (bool);\n}\n"
+  }
+ ],
+ "certified": false,
+ "conflicting_implementations": null,
+ "abi": [
+  {
+   "inputs": [],
+   "stateMutability": "nonpayable",
+   "type": "constructor"
+  },
+  {
+   "inputs": [],
+   "name": "AlreadyInitialized",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "InvalidBasisPoints",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "InvalidRecipient",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotConfigured",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotLocker",
+   "type": "error"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "owner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnableInvalidOwner",
+   "type": "error"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "account",
+     "type": "address"
+    }
+   ],
+   "name": "OwnableUnauthorizedAccount",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "ReentrancyGuardReentrantCall",
+   "type": "error"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "token",
+     "type": "address"
+    }
+   ],
+   "name": "SafeERC20FailedOperation",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "ZeroAddress",
+   "type": "error"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "token",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "ctoRecipient",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "ctoTokenAmount",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "ctoPairAmount",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "protocolTokenAmount",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "protocolPairAmount",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "burnerTokenAmount",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "burnerPairAmount",
+     "type": "uint256"
+    }
+   ],
+   "name": "FeesDistributed",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "address",
+     "name": "locker",
+     "type": "address"
+    }
+   ],
+   "name": "LockerUpdated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "previousOwner",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnershipTransferred",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "bool",
+     "name": "enabled",
+     "type": "bool"
+    }
+   ],
+   "name": "ProtocolSplitterModeUpdated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "protocolRecipient",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "burnerRecipient",
+     "type": "address"
+    }
+   ],
+   "name": "RecipientsUpdated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "uint16",
+     "name": "protocolShareBps",
+     "type": "uint16"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint16",
+     "name": "burnerShareBps",
+     "type": "uint16"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint16",
+     "name": "ctoShareBps",
+     "type": "uint16"
+    }
+   ],
+   "name": "SharesUpdated",
+   "type": "event"
+  },
+  {
+   "inputs": [],
+   "name": "DEFAULT_BURNER_SHARE_BPS",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "DEFAULT_CTO_SHARE_BPS",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "DEFAULT_PROTOCOL_SHARE_BPS",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "MAX_BPS",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "burnerRecipient",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "burnerShareBps",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "ctoShareBps",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "token",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "pairToken",
+     "type": "address"
+    },
+    {
+     "internalType": "uint256",
+     "name": "tokenAmount",
+     "type": "uint256"
+    },
+    {
+     "internalType": "uint256",
+     "name": "pairAmount",
+     "type": "uint256"
+    },
+    {
+     "internalType": "address",
+     "name": "ctoRecipient",
+     "type": "address"
+    }
+   ],
+   "name": "distribute",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "locker",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "owner",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "protocolRecipient",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "protocolRecipientIsSplitter",
+   "outputs": [
+    {
+     "internalType": "bool",
+     "name": "",
+     "type": "bool"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "protocolShareBps",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "renounceOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "protocolRecipient_",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "burnerRecipient_",
+     "type": "address"
+    },
+    {
+     "internalType": "uint16",
+     "name": "protocolShareBps_",
+     "type": "uint16"
+    },
+    {
+     "internalType": "uint16",
+     "name": "burnerShareBps_",
+     "type": "uint16"
+    },
+    {
+     "internalType": "uint16",
+     "name": "ctoShareBps_",
+     "type": "uint16"
+    }
+   ],
+   "name": "setFeeConfig",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "locker_",
+     "type": "address"
+    }
+   ],
+   "name": "setLocker",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "transferOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  }
+ ],
+ "is_changed_bytecode": false,
+ "is_partially_verified": false,
+ "package_name": null,
+ "constructor_args": null
+}

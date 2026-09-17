@@ -1,0 +1,12 @@
+ETH: r=1.9189797 h=107036752 k=2124381054.2419344
+  K check (S+h)(0+r) = 2124381054.2419344
+  reserve at 800M sold = 5.000000 ETH
+  opening price = 0.000000001733  -> FDV 1.733438 quote  (~$7,280)
+  graduation price = 0.000000022535 -> FDV 22.534695 quote  (~$94,646)
+  price multiple over the curve = 13.0000x
+HOODon: r=34.26749453 h=107036751 k=37935375809.40147203
+  K check (S+h)(0+r) = 37935375809.40147203
+  reserve at 800M sold = 89.285714 HOODon
+  opening price = 0.000000030954  -> FDV 30.954252 quote  (~$3,114)
+  graduation price = 0.000000402405 -> FDV 402.405277 quote  (~$40,483)
+  price multiple over the curve = 13.0000x

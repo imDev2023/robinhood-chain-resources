@@ -1,0 +1,284 @@
+# Virtuals Protocol - Agent page 111724 (VANTIS)
+
+> Source: https://app.virtuals.io/virtuals/111724
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/12-app-agent-111724-vantis.png
+Interactive snapshot: _raw/network/snapshot-app-agent-111724-vantis.txt
+Network requests: _raw/network/requests-app-agent-111724-vantis.txt
+
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# VANTIS by Virtuals
+
+VANTIS
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+No trades yet
+
+Buys and sells will stream in here.
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.001373+0.00%
+
+Launched by:0x4dD3...9921
+
+powered by
+
+## About
+
+Vantis is an AI software factory, on chain. One line from our own GPU compute to shipped software — consumer and enterprise products across perception, generative, agentic and robotics AI. Stake $VANTIS and the software factory opens: Pro access to every product plus a daily inference allowance. Own the factory.
+
+## Team
+
+-
+
+@lucaxyzzOwner
+
+## Allocation
+
+Next unlock in 45 days
+
+Total1B
+
+Automated Capital Formation25.00%
+
+249.99MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation249.99M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+249.99M · 16 Jul 27Default Team Vesting
+
+Team249.99M25.00%Default Team Vesting · Unlocks 16 Jul 27
+
+Liquidity Pool19.17%
+
+191.69MFixed Supply
+
+Liquidity Pool191.69M19.17%Fixed Supply
+
+Sniper Tax Buyback for Team15.58%
+
+155.79M · 17 Oct 26Locked for 3 months, vesting linearly over 9 months
+
+Sniper Tax Buyback for Team155.79M15.58%Locked for 3 months, vesting linearly over 9 months · Unlocks 17 Oct 26
+
+Team Initial Buy15.00%
+
+149.99M · 15 Aug 26Locked for 30 days, vesting linearly over 6 months
+
+Team Initial Buy149.99M15.00%Locked for 30 days, vesting linearly over 6 months · Unlocks 15 Aug 26
+
+veVIRTUAL Airdrop0.25%
+
+2.5MFixed Supply
+
+veVIRTUAL Airdrop2.5M0.25%Fixed Supply
+
+## Supply
+
+999.9M750M500M250M0
+
+Today
+
+16 Jul 2622 Nov 2631 Mar 2707 Aug 2713 Dec 27
+
+Automated Capital FormationTeamLiquidity PoolSniper Tax Buyback for TeamTeam Initial BuyveVIRTUAL Airdrop
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $VANTIS or 1,000 veVIRTUAL to join the conversation.
+
+Buy $VANTIS
+
+No posts yet
+
+Holders with 10,000 $VANTIS or 1,000 veVIRTUAL can start the conversation.
+
+## Market Overview
+
+Mechanics
+
+Mcap$265.9K
+
+FDV$1.4M
+
+Liq.$226.9K
+
+Holders840
+
+24h Vol$0
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+VANTIS
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (840)
+
+View top 500
+
+Top 1092.0%
+
+Others8.0%
+
+0x1fea…be9dUnlocker555.8M VANTIS63.6%
+
+0xe289…ee8aACF Vault189.5M VANTIS21.7%
+
+0x2149…a5f0LP65.3M VANTIS—
+
+0xca88…ad03ACF Pool58.6M VANTIS—
+
+0xa3b7…01d8Airdrop2.4M VANTIS—
+
+0xec82…863512.1M VANTIS1.4%
+
+0x2559…47a09.7M VANTIS1.1%
+
+0x829d…224a7.7M VANTIS0.9%
+
+0x8436…73b57.2M VANTIS0.8%
+
+0x4dd3…9921Dev6.6M VANTIS0.8%
+
+0x8366…09516.1M VANTIS0.7%
+
+0x050e…11964.9M VANTIS0.6%
+
+0xb27f…a1064.1M VANTIS0.5%
+
+## Twitter Feed
+
+Vantis@vantis_ai
+
+Sep 1
+
+Frontier tech: https://t.co/2jqWmFmFAw - https://t.co/hXwmkphRUZ
+Degen activity: https://t.co/No9CGb9qIJ
+Crypto primitivies: $vantis by ethereum:0x44ff8620b8ca30902395a7bd3f2407e1a091bf73 https://t.co/ZcynMx1yW5
+
+Vantis@vantis_ai
+
+Sep 1
+
+Remember $AI, which we posted about two weeks ago? It reached a $180M market cap roughly 180x from its lows.
+
+Over the last four days, we also released https://t.co/EAQ2OJG0pD to the public, so everyone can see its performance.
+
+All of these engines will be aggregated into https://t.co/SjAiJ6Ngry
+
+Vantis@vantis_ai
+
+Aug 31
+
+LP ing with intelligent, trade and degen with agent
+
+Soon at https://t.co/No9CGb9qIJ https://t.co/5WtqVdpVHf
+
+Vantis@vantis_ai
+
+Aug 31
+
+Early preview of https://t.co/No9CGb9qIJ, leveraging x402 endpoints for agentic trading, including providing liquidity to Uniswap pools.
+
+It’s not live yet, but we expect it to be available by the end of this week at the latest.
+
+Vantis@vantis_ai
+
+Aug 30
+
+In the last 4 days we collected 1,248 active x402 endpoints into one catalog — 1,147 of them payable in solana:2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH on Robinhood Chain through our facilitator.
+
+Our target is at 3,000 active x402 endpoints, easily used by any people with
+
+Vantis@vantis_ai
+
+Aug 24
+
+Coming soon: $VANTIS as x402 facilitator on $USDG rails. An agentic economy infrastructure on @RobinhoodCrypto
+
+Vantis@vantis_ai
+
+Aug 22
+
+The fastest x402 on the @RobinhoodCrypto chain. From inference and dev-tool APIs to tokenized stocks.
+
+Coming soon to https://t.co/me0U0cZBYn.
+
+Vantis@vantis_ai
+
+Aug 19
+
+Agentic economy is here,
+
+x402 soon at https://t.co/hXwmkphRUZ https://t.co/tdaWCWxezd
+
+Vantis@vantis_ai
+
+Aug 18
+
+Partnering with @rztaji, we've built a fully live dashboard for $VANTIS. It covers tokenomics, distribution, vesting schedule, burn details, and many detailed metrics powered by @Dune.
+
+Explore it here: https://t.co/fbujoaXJoa
+
+Vantis@vantis_ai
+
+Aug 17
+
+What if DeepSeek V4 Flash 0731 could hit up to 450 tok/s—5× the original @deepseek_ai speed, at only 2× the cost, with zero data retention?
+
+Coming soon on https://t.co/zBgH1O08EN, powered by $VANTIS.
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

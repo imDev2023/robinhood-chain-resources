@@ -1,0 +1,54 @@
+{
+ "props": {
+  "pageProps": {
+   "contextProvider": {
+    "features": {},
+    "scribeData": {
+     "client_version": null,
+     "dnt": false,
+     "widget_id": "embed-0",
+     "widget_origin": "",
+     "widget_frame": "",
+     "widget_partner": "",
+     "widget_site_screen_name": "",
+     "widget_site_user_id": "",
+     "widget_creator_screen_name": "",
+     "widget_creator_user_id": "",
+     "widget_iframe_version": "6a3f4bd:1779931425403",
+     "widget_data_source": "screen-name:NOXA_CTO",
+     "session_id": ""
+    },
+    "messengerContext": {
+     "embedId": "embed-0"
+    },
+    "hasResults": true,
+    "lang": "en",
+    "theme": "light"
+   },
+   "lang": "en",
+   "maxHeight": null,
+   "showHeader": true,
+   "hideBorder": false,
+   "hideFooter": false,
+   "hideScrollBar": false,
+   "transparent": false,
+   "timeline": {
+    "entries": []
+   },
+   "headerProps": {
+    "screenName": "NOXA_CTO"
+   }
+  },
+  "__N_SSP": true
+ },
+ "page": "/timeline-profile/screen-name/[screenName]",
+ "query": {
+  "screenName": "NOXA_CTO"
+ },
+ "buildId": "x2fngEIE_DxbokNn5nJqO",
+ "assetPrefix": "https://platform.twitter.com",
+ "isFallback": false,
+ "gssp": true,
+ "customServer": true,
+ "scriptLoader": []
+}

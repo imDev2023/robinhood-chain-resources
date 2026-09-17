@@ -1,0 +1,153 @@
+# Long - Dune query 8032324, LONG: stock TVL counter
+
+> Source: https://dune.com/queries/8032324
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/dune/query-8032324.md`
+
+---
+
+[Skip to content](https://dune.com/queries/8032324#skip-nav)
+
+[](https://dune.com/)
+
+*   [Search](https://dune.com/search)
+*   [Catalog](https://dune.com/data)
+
+[Library](https://dune.com/auth/login?next=%2Fworkspace%2Fqueries)
+
+[Monitor](https://dune.com/auth/login?next=%2Fworkspace%2Factivity)
+
+*   [Activity](https://dune.com/auth/login?next=%2Fworkspace%2Factivity)
+*   [Usage](https://dune.com/auth/login?next=%2Fsettings%2Fusage)
+*   [Schedules](https://dune.com/auth/login?next=%2Fworkspace%2Fschedules)
+*   [Alerts](https://dune.com/auth/login?next=%2Fworkspace%2Falerts)
+
+[Connect](https://dune.com/auth/login?next=%2Fworkspace%2Fapis)
+
+Get started Making onchain finance observable.
+
+[Sign up](https://dune.com/auth/register?next=%2Fqueries%2F8032324)[Log in](https://dune.com/auth/login?next=%2Fqueries%2F8032324)
+
+*   [Docs](https://docs.dune.com/)
+*   [Pricing](https://dune.com/pricing)
+
+*   [](https://dune.com/)
+
+*   [Log in](https://dune.com/auth/login?next=%2Fqueries%2F8032324)
+
+*   [Sign up](https://dune.com/auth/register?next=%2Fqueries%2F8032324)
+
+# LONG: stock TVL counter
+
+[0](https://dune.com/auth/login?next=%2Fqueries%2F8032324)[Share](https://dune.com/auth/login?next=%2Fqueries%2F8032324)[Fork](https://dune.com/auth/register?next=%2Fqueries%2F8032324&onboarding=short)
+
+[![Image 2: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)@natan_benish2001](https://dune.com/natan_benish2001)
+
+Last run 4h ago in 1m 132 Updated 1mo
+
+Query editor
+
+*   [](https://dune.com/auth/login?next=%2Fqueries%2F8032324)
+
+[](https://dune.com/queries/8032324/visuals/12017380)
+
+9
+
+1
+
+2
+
+3
+
+4
+
+5
+
+-- LONG widget: total USD value of stock tokens held across all LONG pools (counter)
+
+SELECT
+
+SUM(held_usd)AS stock_tvl_usd,
+
+MAX_BY(stock,held_usd)AS largest_stock_position
+
+FROM query_8032293
+
+[Run](https://dune.com/auth/register?next=%2Fqueries%2F8032324&onboarding=short)
+
+Query results
+
+[](https://dune.com/auth/login?next=%2Fqueries%2F8032324)
+
+[Query results](https://dune.com/queries/8032324/12017380)[Stock TVL in LONG Pools](https://dune.com/queries/8032324/12017423)[Lineage](https://dune.com/queries/8032324/lineage)
+
+[Query results LONG: stock TVL counter](https://dune.com/queries/8032324/12017380)
+
+| stock_tvl_usd | largest_stock_position |
+| --- | --- |
+| 11386890.476847166 | NVDA |
+
+*   1 row
+
+[![Image 3: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)@natan_benish2001](https://dune.com/natan_benish2001)
+
+API 4h
+
+About this query
+
+# Fork with prompt
+
+[Fork](https://dune.com/auth/register?next=%2Fqueries%2F8032324&onboarding=short)
+
+Data sources
+
+ 11
+
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [tokens.transfers](https://dune.com/data/tokens.transfers)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [tokens.transfers](https://dune.com/data/tokens.transfers)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+
+[Show all](https://dune.com/queries/8032324/lineage)
+
+Description
+
+ AI
+
+LONG widget: Total USD value of stock tokens held across all LONG pools and identifies the largest stock position by dollar value.
+
+History
+
+ 1
+
+*   Created 1 month ago
+*   Updated 1 month ago
+
+Dashboards
+
+ 1
+
+*   [![Image 4: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)LONG on Robinhood Chain](https://dune.com/natan_benish2001/long-on-robinhood-chain)
+
+Querying other queries
+
+ 6
+
+*   [LONG: launches (foundation)](https://dune.com/queries/8032167)
+*   [LONG: pools (foundation)](https://dune.com/queries/8032178)
+*   [LONG: numeraire prices hourly (foundation)](https://dune.com/queries/8032188)
+*   [LONG: swaps (foundation)](https://dune.com/queries/8032229)
+*   [LONG: supply share per stock](https://dune.com/queries/8032293)
+*   [LONG: numeraire prices derived (foundation 3b)](https://dune.com/queries/8391616)
+
+We use cookies to improve your experience on our site. By using this website you agree to our [Cookie Policy](https://dune.com/privacy).
+
+Manage settings Accept
+
+## Version history

@@ -1,0 +1,239 @@
+# Long - Dune query 8032289, LONG: daily volume by stock
+
+> Source: https://dune.com/queries/8032289
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/dune/query-8032289.md`
+
+---
+
+[Skip to content](https://dune.com/queries/8032289#skip-nav)
+
+[](https://dune.com/)
+
+*   [Search](https://dune.com/search)
+*   [Catalog](https://dune.com/data)
+
+[Library](https://dune.com/auth/login?next=%2Fworkspace%2Fqueries)
+
+[Monitor](https://dune.com/auth/login?next=%2Fworkspace%2Factivity)
+
+*   [Activity](https://dune.com/auth/login?next=%2Fworkspace%2Factivity)
+*   [Usage](https://dune.com/auth/login?next=%2Fsettings%2Fusage)
+*   [Schedules](https://dune.com/auth/login?next=%2Fworkspace%2Fschedules)
+*   [Alerts](https://dune.com/auth/login?next=%2Fworkspace%2Falerts)
+
+[Connect](https://dune.com/auth/login?next=%2Fworkspace%2Fapis)
+
+Get started Making onchain finance observable.
+
+[Sign up](https://dune.com/auth/register?next=%2Fqueries%2F8032289)[Log in](https://dune.com/auth/login?next=%2Fqueries%2F8032289)
+
+*   [Docs](https://docs.dune.com/)
+*   [Pricing](https://dune.com/pricing)
+
+*   [](https://dune.com/)
+
+*   [Log in](https://dune.com/auth/login?next=%2Fqueries%2F8032289)
+
+*   [Sign up](https://dune.com/auth/register?next=%2Fqueries%2F8032289)
+
+# LONG: daily volume by stock
+
+[0](https://dune.com/auth/login?next=%2Fqueries%2F8032289)[Share](https://dune.com/auth/login?next=%2Fqueries%2F8032289)[Fork](https://dune.com/auth/register?next=%2Fqueries%2F8032289&onboarding=short)
+
+[![Image 1: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)@natan_benish2001](https://dune.com/natan_benish2001)
+
+Last run 4h ago in 3m 111 Updated 12d
+
+Query editor
+
+*   [](https://dune.com/auth/login?next=%2Fqueries%2F8032289)
+
+[](https://dune.com/queries/8032289/visuals/12017345)
+
+99
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+-- LONG widget: daily volume, stacked by stock token
+
+-- volume_gross_usd includes protocol buyback legs; volume_user_usd is trader flow only
+
+-- 2026-08-20: series bucketed to top-10 stocks + 'Other' (platform is at 49 stocks;
+
+-- metric unchanged, the stack was unreadable)
+
+WITH s AS(
+
+SELECT*FROM query_8032229
+
+),
+
+top_stocks AS(
+
+SELECT numeraire_symbol FROM s GROUP BY 1 ORDER BY SUM(amount_usd)DESC LIMIT 10
+
+)
+
+SELECT
+
+block_date AS day,
+
+CASE WHEN numeraire_symbol IN(SELECT numeraire_symbol FROM top_stocks)
+
+THEN numeraire_symbol ELSE'Other'END AS stock,
+
+SUM(amount_usd)AS volume_gross_usd,
+
+SUM(CASE WHEN NOT is_buyback THEN amount_usd ELSE 0 END)AS volume_user_usd,
+
+COUNT(*)AS swaps
+
+FROM s
+
+GROUP BY 1, 2
+
+ORDER BY 1, 3 DESC
+
+[Run](https://dune.com/auth/register?next=%2Fqueries%2F8032289&onboarding=short)
+
+Query results
+
+[](https://dune.com/auth/login?next=%2Fqueries%2F8032289)
+
+[Query results](https://dune.com/queries/8032289/12017345)[Daily Volume by Stock Token](https://dune.com/queries/8032289/12017427)[Lineage](https://dune.com/queries/8032289/lineage)
+
+[Query results LONG: daily volume by stock](https://dune.com/queries/8032289/12017345)
+
+| day | stock | volume_gross_usd | volume_user_usd | swaps |
+| --- | --- | --- | --- | --- |
+| 2026-07-12 00:00:00 | SPCX | 0.18062369857225713 | 0.18013868867665764 | 2 |
+| 2026-07-13 00:00:00 | AAPL | 0.17809624920867287 | 0.17761802606811425 | 2 |
+| 2026-07-13 00:00:00 | SPCX | 0.17528506136546543 | 0.17481438683305633 | 2 |
+| 2026-07-13 00:00:00 | Other | 0.03713268966079225 | 0.03703298193103616 | 4 |
+| 2026-07-14 00:00:00 | SPCX | 785511.4634743651 | 781555.3636998455 | 4836 |
+| 2026-07-14 00:00:00 | NVDA | 770227.1343364632 | 766438.9003308729 | 6283 |
+| 2026-07-14 00:00:00 | Other | 282257.1765081024 | 280855.2122205248 | 4208 |
+| 2026-07-14 00:00:00 | AAPL | 164095.90059160057 | 163290.43052106415 | 1579 |
+| 2026-07-15 00:00:00 | SPCX | 548267.7024761174 | 545577.8168369124 | 3071 |
+| 2026-07-15 00:00:00 | NVDA | 329910.82886513317 | 328287.50231449044 | 2929 |
+| 2026-07-15 00:00:00 | Other | 21427.94755693016 | 21343.735667781835 | 307 |
+| 2026-07-15 00:00:00 | AAPL | 18453.816928026332 | 18356.677064404823 | 222 |
+| 2026-07-16 00:00:00 | NVDA | 94043.71514140468 | 93568.76469790458 | 729 |
+| 2026-07-16 00:00:00 | SPCX | 86056.2426725091 | 85688.21791278133 | 518 |
+| 2026-07-16 00:00:00 | Other | 52629.02441978462 | 52342.54028564418 | 916 |
+| 2026-07-16 00:00:00 | AAPL | 7242.167571477608 | 7070.248611794116 | 103 |
+| 2026-07-17 00:00:00 | SPCX | 617566.6961245167 | 614519.5943687527 | 3421 |
+| 2026-07-17 00:00:00 | NVDA | 452581.3246429961 | 450235.6339803124 | 2568 |
+| 2026-07-17 00:00:00 | AAPL | 321639.720257969 | 320042.92137289536 | 2594 |
+| 2026-07-17 00:00:00 | Other | 200043.7817083257 | 199056.42399438392 | 2325 |
+| 2026-07-17 00:00:00 | MSFT | 7480.643662525089 | 7444.9683664656895 | 68 |
+| 2026-07-18 00:00:00 | NVDA | 197062.70730372175 | 196165.48765844182 | 1605 |
+| 2026-07-18 00:00:00 | SPCX | 98472.03039910113 | 98040.84331902472 | 614 |
+| 2026-07-18 00:00:00 | Other | 28960.67173382013 | 28832.270307976258 | 356 |
+| 2026-07-18 00:00:00 | AAPL | 21599.63502847173 | 21494.904298711725 | 226 |
+
+*   421 rows
+
+*   
+    *   2
+    *   ...
+    *   17
+
+[![Image 2: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)@natan_benish2001](https://dune.com/natan_benish2001)
+
+API 4h
+
+About this query
+
+# Fork with prompt
+
+[Fork](https://dune.com/auth/register?next=%2Fqueries%2F8032289&onboarding=short)
+
+Data sources
+
+ 6
+
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [tokens.transfers](https://dune.com/data/tokens.transfers)
+*   [robinhood.logs](https://dune.com/data/robinhood.logs)
+*   [robinhood.transactions](https://dune.com/data/robinhood.transactions)
+
+Description
+
+ AI
+
+Daily stock token swap volume on a DEX platform, broken down by top 10 stock tokens plus 'Other' category. Reports both gross volume (including protocol buyback transactions) and user-only volume (excluding buybacks), with transaction counts. Visualized as a stacked area chart tracking user adoption across the platform's 49-stock ecosystem.
+
+Show more
+
+History
+
+ 2
+
+*   Created 1 month ago
+*   Updated 12 days ago
+
+Dashboards
+
+ 1
+
+*   [![Image 3: @natan_benish2001](https://dune.com/_next/image?url=%2Fassets%2Favatar-fallback%2Fanon-09.png&w=32&q=75&dpl=dpl_AVadPP2B5UWR24VnXSDaBg3oA12P)LONG on Robinhood Chain](https://dune.com/natan_benish2001/long-on-robinhood-chain)
+
+Querying other queries
+
+ 5
+
+*   [LONG: launches (foundation)](https://dune.com/queries/8032167)
+*   [LONG: pools (foundation)](https://dune.com/queries/8032178)
+*   [LONG: numeraire prices hourly (foundation)](https://dune.com/queries/8032188)
+*   [LONG: swaps (foundation)](https://dune.com/queries/8032229)
+*   [LONG: numeraire prices derived (foundation 3b)](https://dune.com/queries/8391616)
+
+We use cookies to improve your experience on our site. By using this website you agree to our [Cookie Policy](https://dune.com/privacy).
+
+Manage settings Accept
+
+## Version history

@@ -1,0 +1,148 @@
+Title: Robinhood Chain Contracts
+
+URL Source: https://docs.robinhood.com/chain/protocol-contracts
+
+Markdown Content:
+[Skip to content](https://docs.robinhood.com/chain/protocol-contracts#vocs-content)
+
+[![Image 1: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-light.svg)![Image 2: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-dark.svg)](https://docs.robinhood.com/chain)
+
+Get Started
+
+[About Robinhood Chain](https://docs.robinhood.com/chain)[Connecting to Robinhood Chain](https://docs.robinhood.com/chain/connecting)[Add network to your wallet](https://docs.robinhood.com/chain/add-network-to-wallet)[Bridging](https://docs.robinhood.com/chain/bridging)
+
+Stock Tokens
+
+[Overview](https://docs.robinhood.com/chain/stock-tokens)[Building with Stock Tokens](https://docs.robinhood.com/chain/building-with-stock-tokens)[Stock Token APIs](https://docs.robinhood.com/chain/stock-token-apis)
+
+Core Concepts
+
+[Differences from Ethereum](https://docs.robinhood.com/chain/differences-from-ethereum)[Gas & Fees](https://docs.robinhood.com/chain/gas-and-fees)[Transaction Finality](https://docs.robinhood.com/chain/transaction-finality)
+
+[Token Contracts](https://docs.robinhood.com/chain/contracts)[Protocol Contracts](https://docs.robinhood.com/chain/protocol-contracts)
+
+Build
+
+[Deploy a Contract](https://docs.robinhood.com/chain/deploy-smart-contracts)[Account Abstraction](https://docs.robinhood.com/chain/account-abstraction)[Cross-Chain Messaging](https://docs.robinhood.com/chain/cross-chain-messaging)[Oracles & Price Feeds](https://docs.robinhood.com/chain/oracles-and-price-feeds)[Data Streams](https://docs.robinhood.com/chain/data-streams)
+
+[Run a full node](https://docs.robinhood.com/chain/run-a-full-node)[Governance](https://docs.robinhood.com/chain/governance)
+
+Brand Guidelines
+
+[Overview](https://docs.robinhood.com/chain/brand-guidelines)
+
+Notices & Upgrades
+
+[Overview](https://docs.robinhood.com/chain/notices-and-upgrades)
+
+[Report an issue](https://docs.robinhood.com/chain/report-issue)[Terms of Service](https://docs.robinhood.com/chain/terms-of-service)
+
+Search...
+
+[![Image 3: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-light.svg)![Image 4: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-dark.svg)](https://docs.robinhood.com/chain)
+
+[![Image 5: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-light.svg)![Image 6: Logo](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/feather-dark.svg)](https://docs.robinhood.com/chain)
+
+Menu
+
+Protocol Contracts
+
+On this page
+
+[Ask in ChatGPT](https://chatgpt.com/?hints=search&q=Please%20research%20and%20analyze%20this%20page%3A%20https%3A%2F%2Fdocs.robinhood.com%2Fchain%2Fprotocol-contracts%20so%20I%20can%20ask%20you%20questions%20about%20it.%20Once%20you%20have%20read%20it%2C%20prompt%20me%20with%20any%20questions%20I%20have.%20Do%20not%20post%20content%20from%20the%20page%20in%20your%20response.%20Any%20of%20my%20follow%20up%20questions%20must%20reference%20the%20site%20I%20gave%20you.)
+
+## On this page
+
+*   [Core contracts](https://docs.robinhood.com/chain/protocol-contracts#core-contracts)
+*   [Cross-chain messaging contracts](https://docs.robinhood.com/chain/protocol-contracts#cross-chain-messaging-contracts)
+*   [Token bridge smart contracts](https://docs.robinhood.com/chain/protocol-contracts#token-bridge-smart-contracts)
+
+    *   [Core contracts (L1)](https://docs.robinhood.com/chain/protocol-contracts#core-contracts-l1)
+    *   [Core contracts (L2)](https://docs.robinhood.com/chain/protocol-contracts#core-contracts-l2)
+
+*   [Precompiles](https://docs.robinhood.com/chain/protocol-contracts#precompiles)
+*   [Misc](https://docs.robinhood.com/chain/protocol-contracts#misc)
+
+# Robinhood Chain Contracts[](https://docs.robinhood.com/chain/protocol-contracts#robinhood-chain-contracts)
+
+## Core contracts[](https://docs.robinhood.com/chain/protocol-contracts#core-contracts)
+
+The following contracts are deployed on Ethereum (L1).
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| Rollup | [**`0x23A19d23e89166adedbDcB432518AB01e4272D94`**](https://etherscan.io/address/0x23A19d23e89166adedbDcB432518AB01e4272D94) | [**`0xdc5F8E399DBd8a9F5F87AeC4C23Beb12431b386D`**](https://sepolia.etherscan.io/address/0xdc5F8E399DBd8a9F5F87AeC4C23Beb12431b386D) |
+| Sequencer Inbox | [**`0xBd0D173EEb87D57A09521c24388a12789F33ba96`**](https://etherscan.io/address/0xBd0D173EEb87D57A09521c24388a12789F33ba96) | [**`0xA0D9dB3DC9791D54b5183C1C1866eFe1eCA7D414`**](https://sepolia.etherscan.io/address/0xA0D9dB3DC9791D54b5183C1C1866eFe1eCA7D414) |
+| CoreProxyAdmin | [**`0x1232813BDd40aa9d53066A880dE78a4Be70B90FD`**](https://etherscan.io/address/0x1232813BDd40aa9d53066A880dE78a4Be70B90FD) | [**`0x20d5d542c1bF0a3c295524Eaef336fC07e890622`**](https://sepolia.etherscan.io/address/0x20d5d542c1bF0a3c295524Eaef336fC07e890622) |
+
+## Cross-chain messaging contracts[](https://docs.robinhood.com/chain/protocol-contracts#cross-chain-messaging-contracts)
+
+The following contracts are deployed on Ethereum (L1).
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| Delayed Inbox | [**`0x1A07cc4BD17E0118BdB54D70990D2158AbAD7a2D`**](https://etherscan.io/address/0x1A07cc4BD17E0118BdB54D70990D2158AbAD7a2D) | [**`0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4`**](https://sepolia.etherscan.io/address/0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4) |
+| Bridge | [**`0xDf8755334ce7A73cCF6b581C02eA649AE3E864b3`**](https://etherscan.io/address/0xDf8755334ce7A73cCF6b581C02eA649AE3E864b3) | [**`0x96295BDad104eaD97cC08797b3dC68efF59CcF30`**](https://sepolia.etherscan.io/address/0x96295BDad104eaD97cC08797b3dC68efF59CcF30) |
+| Outbox | [**`0xf0ce991ea4A0d2400A4AB49b20ae333f6Dce3DE9`**](https://etherscan.io/address/0xf0ce991ea4A0d2400A4AB49b20ae333f6Dce3DE9) | [**`0x8D180Caf588f3Da027BEf1F42a106Da93F90b166`**](https://sepolia.etherscan.io/address/0x8D180Caf588f3Da027BEf1F42a106Da93F90b166) |
+
+## Token bridge smart contracts[](https://docs.robinhood.com/chain/protocol-contracts#token-bridge-smart-contracts)
+
+### Core contracts (L1)[](https://docs.robinhood.com/chain/protocol-contracts#core-contracts-l1)
+
+The following contracts are deployed on Ethereum (L1).
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| L1 Gateway Router | [**`0x6a2E3a1e16FC29f27Ce61429746D558d656975bB`**](https://etherscan.io/address/0x6a2E3a1e16FC29f27Ce61429746D558d656975bB) | [**`0xF6F11aAEE80875776C264d93B37B34cE437382D1`**](https://sepolia.etherscan.io/address/0xF6F11aAEE80875776C264d93B37B34cE437382D1) |
+| L1 ERC20 Gateway | [**`0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0`**](https://etherscan.io/address/0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0) | [**`0x52C2976cbDEf48BcC51d07d3c523769F76ECBd09`**](https://sepolia.etherscan.io/address/0x52C2976cbDEf48BcC51d07d3c523769F76ECBd09) |
+| L1 Arb-Custom Gateway | [**`0x9368EAEbFe6E063C69dcF8126711A6997E0eCeE1`**](https://etherscan.io/address/0x9368EAEbFe6E063C69dcF8126711A6997E0eCeE1) | [**`0xFB4aa8024F70B00121723A9C923BaD0Dd2dFaf8F`**](https://sepolia.etherscan.io/address/0xFB4aa8024F70B00121723A9C923BaD0Dd2dFaf8F) |
+| L1 Weth Gateway | [**`0xF7e12b9614b509C747ab4423bC4ACF923759Cf1B`**](https://etherscan.io/address/0xF7e12b9614b509C747ab4423bC4ACF923759Cf1B) | [**`0x8f8A6799F2b1978c6586318543c73D8Fb12f218f`**](https://sepolia.etherscan.io/address/0x8f8A6799F2b1978c6586318543c73D8Fb12f218f) |
+| L1 Weth | [**`0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2`**](https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) | [**`0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9`**](https://sepolia.etherscan.io/address/0x7b79995e5f793A07Bc00c21412e50Ecae098E7f9) |
+| L1 Proxy Admin | [**`0x1232813BDd40aa9d53066A880dE78a4Be70B90FD`**](https://etherscan.io/address/0x1232813BDd40aa9d53066A880dE78a4Be70B90FD) | [**`0x20d5d542c1bF0a3c295524Eaef336fC07e890622`**](https://sepolia.etherscan.io/address/0x20d5d542c1bF0a3c295524Eaef336fC07e890622) |
+| L1 Multicall | [**`0x7cdCB0Cc61f47B8Dd8f47C5A29edaDd84a1BDf5e`**](https://etherscan.io/address/0x7cdCB0Cc61f47B8Dd8f47C5A29edaDd84a1BDf5e) |  |
+
+### Core contracts (L2)[](https://docs.robinhood.com/chain/protocol-contracts#core-contracts-l2)
+
+The following contracts are deployed on the corresponding L2 chain.
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| L2 Gateway Router | [**`0x1E324B9316138CA9a73F960213621AD1aaf01B89`**](https://robinhoodchain.blockscout.com/address/0x1E324B9316138CA9a73F960213621AD1aaf01B89) | [**`0x77bF00A6A90c600f214b34BAFBB7918c0cF113A8`**](https://explorer.testnet.chain.robinhood.com/address/0x77bF00A6A90c600f214b34BAFBB7918c0cF113A8) |
+| L2 ERC20 Gateway | [**`0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e`**](https://robinhoodchain.blockscout.com/address/0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e) | [**`0x8689aFB9086734e12beA6b5DF541a1da252Ea32a`**](https://explorer.testnet.chain.robinhood.com/address/0x8689aFB9086734e12beA6b5DF541a1da252Ea32a) |
+| L2 Arb-Custom Gateway | [**`0x912285144fC0f6e89d3Ed16F5Ab72f87A1878959`**](https://robinhoodchain.blockscout.com/address/0x912285144fC0f6e89d3Ed16F5Ab72f87A1878959) | [**`0xE4EE9C15e2cA44136796342e31b67d953E67a70b`**](https://explorer.testnet.chain.robinhood.com/address/0xE4EE9C15e2cA44136796342e31b67d953E67a70b) |
+| L2 Weth Gateway | [**`0x1D187C3E2dA52D72BC9C41e3AbA0fdFa6a7bF055`**](https://robinhoodchain.blockscout.com/address/0x1D187C3E2dA52D72BC9C41e3AbA0fdFa6a7bF055) | [**`0x5A8F55202A625D12FFCb76F857FE4563bC8Ce413`**](https://explorer.testnet.chain.robinhood.com/address/0x5A8F55202A625D12FFCb76F857FE4563bC8Ce413) |
+| L2 Weth | [**`0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73`**](https://robinhoodchain.blockscout.com/address/0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73) | [**`0x7943e237c7F95DA44E0301572D358911207852Fa`**](https://explorer.testnet.chain.robinhood.com/address/0x7943e237c7F95DA44E0301572D358911207852Fa) |
+| L2 Proxy Admin | [**`0xa3Acd31AFb851B4eB9DAD00F5204c01D924267dF`**](https://robinhoodchain.blockscout.com/address/0xa3Acd31AFb851B4eB9DAD00F5204c01D924267dF) | [**`0xE743e696B00789Ef489cF617477771764E9283a0`**](https://explorer.testnet.chain.robinhood.com/address/0xE743e696B00789Ef489cF617477771764E9283a0) |
+
+## Precompiles[](https://docs.robinhood.com/chain/protocol-contracts#precompiles)
+
+The following precompiles are deployed on every L2 chain and always have the same address.
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| ArbAddressTable | [**`0x0000000000000000000000000000000000000066`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000066) | [**`0x0000000000000000000000000000000000000066`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000066) |
+| ArbAggregator | [**`0x000000000000000000000000000000000000006D`**](https://robinhoodchain.blockscout.com/address/0x000000000000000000000000000000000000006D) | [**`0x000000000000000000000000000000000000006D`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000000000000000000000000000000006D) |
+| ArbFunctionTable | [**`0x0000000000000000000000000000000000000068`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000068) | [**`0x0000000000000000000000000000000000000068`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000068) |
+| ArbGasInfo | [**`0x000000000000000000000000000000000000006C`**](https://robinhoodchain.blockscout.com/address/0x000000000000000000000000000000000000006C) | [**`0x000000000000000000000000000000000000006C`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000000000000000000000000000000006C) |
+| ArbInfo | [**`0x0000000000000000000000000000000000000065`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000065) | [**`0x0000000000000000000000000000000000000065`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000065) |
+| ArbOwner | [**`0x0000000000000000000000000000000000000070`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000070) | [**`0x0000000000000000000000000000000000000070`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000070) |
+| ArbOwnerPublic | [**`0x000000000000000000000000000000000000006b`**](https://robinhoodchain.blockscout.com/address/0x000000000000000000000000000000000000006b) | [**`0x000000000000000000000000000000000000006b`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000000000000000000000000000000006b) |
+| ArbRetryableTx | [**`0x000000000000000000000000000000000000006E`**](https://robinhoodchain.blockscout.com/address/0x000000000000000000000000000000000000006E) | [**`0x000000000000000000000000000000000000006E`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000000000000000000000000000000006E) |
+| ArbStatistics | [**`0x000000000000000000000000000000000000006F`**](https://robinhoodchain.blockscout.com/address/0x000000000000000000000000000000000000006F) | [**`0x000000000000000000000000000000000000006F`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000000000000000000000000000000006F) |
+| ArbSys | [**`0x0000000000000000000000000000000000000064`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000064) | [**`0x0000000000000000000000000000000000000064`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000064) |
+| ArbWasm | [**`0x0000000000000000000000000000000000000071`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000071) | [**`0x0000000000000000000000000000000000000071`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000071) |
+| ArbWasmCache | [**`0x0000000000000000000000000000000000000072`**](https://robinhoodchain.blockscout.com/address/0x0000000000000000000000000000000000000072) | [**`0x0000000000000000000000000000000000000072`**](https://explorer.testnet.chain.robinhood.com/address/0x0000000000000000000000000000000000000072) |
+| NodeInterface | [**`0x00000000000000000000000000000000000000C8`**](https://robinhoodchain.blockscout.com/address/0x00000000000000000000000000000000000000C8) | [**`0x00000000000000000000000000000000000000C8`**](https://explorer.testnet.chain.robinhood.com/address/0x00000000000000000000000000000000000000C8) |
+
+## Misc[](https://docs.robinhood.com/chain/protocol-contracts#misc)
+
+The following contracts are deployed on the corresponding L2 chain.
+
+| Contract | Robinhood Chain | Robinhood Chain Testnet |
+| --- | --- | --- |
+| L2 Multicall | [**`0x2cAC2D899eCC914d704FeaAE33ac1bF36277DaD1`**](https://robinhoodchain.blockscout.com/address/0x2cAC2D899eCC914d704FeaAE33ac1bF36277DaD1) | [**`0xa432504b6F04Cafe775b09D8AA92e8dbe41Ec7a8`**](https://explorer.testnet.chain.robinhood.com/address/0xa432504b6F04Cafe775b09D8AA92e8dbe41Ec7a8) |
+| Permit2 | [**`0x000000000022D473030F116dDEE9F6B43aC78BA3`**](https://robinhoodchain.blockscout.com/address/0x000000000022D473030F116dDEE9F6B43aC78BA3) | [**`0x000000000022D473030F116dDEE9F6B43aC78BA3`**](https://explorer.testnet.chain.robinhood.com/address/0x000000000022D473030F116dDEE9F6B43aC78BA3) |
+
+[Token Contracts Previous shift←](https://docs.robinhood.com/chain/contracts)[Deploy a Contract Next shift→](https://docs.robinhood.com/chain/deploy-smart-contracts)
+
+Your Privacy Choices![Image 7](https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/privacy-options.svg)

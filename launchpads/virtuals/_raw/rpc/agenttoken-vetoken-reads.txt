@@ -1,0 +1,64 @@
+## AgentTokenV4 no-arg views: botProtectionDurationInSeconds decimals fundedDate liquidityPools name owner pairToken pendingOwner projectBuyTaxBasisPoints projectSellTaxBasisPoints projectTaxPendingSwap projectTaxRecipient swapThresholdBasisPoints symbol taxAccountingAdapter totalBuyTaxBasisPoints totalSellTaxBasisPoints totalSupply uniswapV2Pair validCallers vault
+## AgentTokenV4 clone VEX (graduated) 0x8Ff92566f2e81BDd68EDfAa8cde73942A723796b
+botProtectionDurationInSeconds() = 0
+decimals() = 18
+fundedDate() = 1783098081
+liquidityPools() = ['0x817f16F5D8da83d1B089B082c0172af3923618dA']
+name() = ProjectVex
+owner() = 0xE220329659D41B2a9F26E83816B424bDAcF62567
+pairToken() = 0xc6911796042b15d7Fa4F6CDe69e245DdCd3d9c31
+pendingOwner() = 0x0000000000000000000000000000000000000000
+projectBuyTaxBasisPoints() = 100
+projectSellTaxBasisPoints() = 100
+projectTaxPendingSwap() = 3114423184438100608848
+projectTaxRecipient() = 0x6D80B81d9Fc56A7A839b1Af9006Eb49151961ce7
+swapThresholdBasisPoints() = 100
+symbol() = VEX
+taxAccountingAdapter() = 0xF36F0dd7b6b1730d0A59d1F3fD0E494C4D5c66E8
+totalBuyTaxBasisPoints() = 100
+totalSellTaxBasisPoints() = 100
+totalSupply() = 1000000000000000000000000000
+uniswapV2Pair() = 0x817f16F5D8da83d1B089B082c0172af3923618dA
+validCallers() = []
+vault() = 0xd4cCBFA37e2f35611b3042e4096Ad7a3459Bd007
+## AgentTokenV4 clone BLITZO (undergrad) 0x21C6b18b64Ab4c8051138fc05B70ac74deCC84e9
+botProtectionDurationInSeconds() = 0
+decimals() = 18
+fundedDate() = 0
+liquidityPools() = ['0xd278a729e8e08A4f1f97Ab84B0d86d7923dB2347']
+name() = Blitzo by Virtuals
+owner() = 0xE220329659D41B2a9F26E83816B424bDAcF62567
+pairToken() = 0xc6911796042b15d7Fa4F6CDe69e245DdCd3d9c31
+pendingOwner() = 0x0000000000000000000000000000000000000000
+projectBuyTaxBasisPoints() = 100
+projectSellTaxBasisPoints() = 100
+projectTaxPendingSwap() = 0
+projectTaxRecipient() = 0x6D80B81d9Fc56A7A839b1Af9006Eb49151961ce7
+swapThresholdBasisPoints() = 100
+symbol() = BLITZO
+taxAccountingAdapter() = 0xF36F0dd7b6b1730d0A59d1F3fD0E494C4D5c66E8
+totalBuyTaxBasisPoints() = 100
+totalSellTaxBasisPoints() = 100
+totalSupply() = 1000000000000000000000000000
+uniswapV2Pair() = 0xd278a729e8e08A4f1f97Ab84B0d86d7923dB2347
+validCallers() = []
+vault() = 0xd4cCBFA37e2f35611b3042e4096Ad7a3459Bd007
+## AgentVeTokenV2 clone for VEX 0x121c6C95697C9cFbD737989B589b71b26aB9d2b4
+CLOCK_MODE() = mode=blocknumber&from=default
+agentNft() = 0x4008561D44A774AD3D517a009D0B6b647932D8D0
+assetToken() = 0x817f16F5D8da83d1B089B082c0172af3923618dA
+canStake() = True
+clock() = 25891248
+decimals() = 18
+eip712Domain() = [b'\x0f', '', '', 4663, '0x121c6C95697C9cFbD737989B589b71b26aB9d2b4', b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', []]
+founder() = 0x32e7c4AFEA4f868A53EC51435C92eD80625EeB33
+initialLock() = 2101443044995105592357902
+matureAt() = 2098458081
+name() = Staked ProjectVex
+owner() = 0x0000000000000000000000000000000000000000
+pendingOwner() = 0x0000000000000000000000000000000000000000
+symbol() = sVEX
+totalSupply() = 2101443044995105592357902
+block 1239190 timestamp 2026-07-02T12:33:04Z
+block 1966137 timestamp 2026-07-03T17:01:21Z
+block 46245101 timestamp 2026-08-26T02:54:07Z

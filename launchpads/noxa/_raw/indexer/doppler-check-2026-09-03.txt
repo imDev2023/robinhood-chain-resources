@@ -1,0 +1,35 @@
+Doppler indexer check for Noxa, run 2026-09-03
+endpoint: https://indexer-prod.doppler.lol/
+
+control { assets(where:{chainId:4663}, limit:1){ totalCount } }
+{"data":{"assets":{"totalCount":110393}}}
+integrator 0xD9eC2db5f3D1b236843925949fe5bd8a3836FCcB
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0xD9eC2db5f3D1b236843925949fe5bd8a3836FCcB
+{"data":{"assets":{"totalCount":0}}}
+integrator 0xDd84fDdEA1206115B37dbBC0ba5721530E1bA9C5
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0xDd84fDdEA1206115B37dbBC0ba5721530E1bA9C5
+{"data":{"assets":{"totalCount":0}}}
+integrator 0x0742D64925E4C78cb1bAFfce2fA1dceBa8Cf133c
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0x0742D64925E4C78cb1bAFfce2fA1dceBa8Cf133c
+{"data":{"assets":{"totalCount":0}}}
+integrator 0x7E035Fb048a31e0481b88074557415b1C187242B
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0x7E035Fb048a31e0481b88074557415b1C187242B
+{"data":{"assets":{"totalCount":0}}}
+integrator 0x63CD726Ccc6560F571861BbAb925f9AF4a6095B2
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0x63CD726Ccc6560F571861BbAb925f9AF4a6095B2
+{"data":{"assets":{"totalCount":0}}}
+integrator 0x9eFdC1A8e6E94f16A228e44f3025E1f346EE0417
+{"data":{"assets":{"totalCount":0}}}
+poolInitializer 0x9eFdC1A8e6E94f16A228e44f3025E1f346EE0417
+{"data":{"assets":{"totalCount":0}}}
+asset CASHCAT 0x020bfC650A365f8BB26819deAAbF3E21291018b4
+{"data":{"assets":{"totalCount":0}}}
+asset PCC 0xBF3e53713a53E9C3d5d1dDc25dd2C65669244663
+{"data":{"assets":{"totalCount":0}}}
+
+CONCLUSION: Noxa is NOT Doppler-derived. Control 110392, every Noxa address 0.

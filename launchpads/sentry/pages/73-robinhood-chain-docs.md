@@ -1,0 +1,124 @@
+# Sentry - Robinhood Chain documentation
+
+> Source: https://docs.robinhood.com/chain/
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/robinhood-chain-docs.md`
+
+---
+
+**Robinhood Chain** is a permissionless, Ethereum-compatible Layer-2 blockchain built to support a new era of onchain financial infrastructure — one that brings traditional markets, crypto, and real-world assets together on a fast, efficient, and open network.
+
+Robinhood Chain is part of _Robinhood's broader mission_ to democratize access to global financial markets and to empower users and developers with modern blockchain tools. It is designed to enable the seamless transfer, access, and management of digital assets anywhere in the world, without intermediaries or platform lock-in.
+
+## Start building
+
+## Built for Real-World Assets
+
+At its core, Robinhood Chain is optimized for **tokenized real-world assets (RWAs)** — including equities, ETFs, private assets, and other financial instruments — allowing them to be represented and traded onchain. This infrastructure supports Robinhood's vision of a financial ecosystem where assets can be **programmatically traded, self-custodied by users, and accessible 24/7**.
+
+## Built on Proven Technology
+
+Robinhood Chain is built on Arbitrum Dedicated Blockchains, a modular Layer-2 framework that combines Ethereum's security with high throughput and low transaction costs. By operating as a Layer-2 solution, Robinhood Chain offloads transaction processing from Ethereum mainnet, aiming to achieve faster finality and cost efficiency. Robinhood Chain uses ETH as its native gas token.
+
+### Predictable Transaction Ordering
+
+Robinhood Chain utilizes a first-come, first-served sequencing model, where the order is determined strictly by the arrival time at the sequencer. The network ensures a transparent and predictable environment where no transaction can bypass others by paying higher fees.
+
+## Open and Permissionless
+
+Robinhood Chain is designed to be **permissionless and developer-friendly**. Anyone can interact with the network, build applications, and deploy smart contracts. This openness invites a diverse ecosystem of builders and users, expanding beyond a closed application into a fully accessible blockchain environment.
+
+### EVM Compatible
+
+Robinhood Chain is fully EVM-compatible. Smart contracts written in Solidity or Vyper deploy without modification, and all standard developer tooling works out of the box — including Hardhat, Foundry, ethers.js, viem, and Wagmi. Any wallet or dapp that supports standard JSON-RPC can connect directly.
+
+### Account Abstraction
+
+Robinhood Chain has first-class support for ERC-4337 account abstraction. Developers can submit and manage transactions, sponsor gas fees for users and create programmable wallets with built-in batching and session key support.
+
+## Ecosystem
+
+Robinhood Chain is supported by a set of infrastructure and application partners:
+
+| Category | Partner | Description |
+| --- | --- | --- |
+| Analytics | [Entropy Advisors](https://entropyadvisors.com/) | [Onchain data dashboards for Robinhood Chain](https://arbdata.com/ecosystems/robinhood) |
+| RPC & AA Infrastructure | [Alchemy](https://www.alchemy.com/) | Recommended RPC provider; also supplies Data API, and Gasless Transaction Infrastructure |
+| Cross-chain Bridge | [LayerZero](https://layerzero.network/) | Omnichain messaging and asset bridging |
+| Oracles | [Chainlink](https://chain.link/) | Price feeds and off-chain data |
+| Institutional Custody | [Fireblocks](https://www.fireblocks.com/) | Secure digital asset operations |
+| Institutional Custody | [Bitgo](https://www.bitgo.com/) | Secure digital asset operations |
+| Blockchain Analytics | [Allium](https://allium.so/) | Onchain data and analytics |
+| Token Tracking | [Coingecko](https://www.coingecko.com/) | Price and volume tracking |
+| Public DEX | [Uniswap](https://uniswap.org/) | Decentralized token exchange |
+| PropAMM / Aggregator | [Rialto](https://rialto.xyz/) | PropAMM driven spot exchange |
+| Lending | [Morpho](https://morpho.org/) | Decentralized lending and borrowing |
+| Perps | [Lighter](https://robinhoodchain.lighter.xyz/) | Perpetuals dex |
+| Perps | [Arcus](https://arcus.xyz/) | Perpetuals dex |
+| Stablecoin | [Paxos](https://globaldollar.com/) (USDG) | Stablecoin infrastructure provider |
+| Wallet Data | [Zerion](https://zerion.io/) | Enterprise-Grade Wallet Data API |
+| Compliance & Risk Management | [TRM Labs](https://www.trmlabs.com/) | analytics and risk management tools |
+
+This page features third-party developers and protocols building on Robinhood Chain. Inclusion on this page does not constitute an endorsement, partnership, affiliation, sponsorship, or warranty by Robinhood. Robinhood makes no representations regarding the safety, legitimacy, or suitability of any featured protocol or application and is not responsible for the content of any third-party websites, apps, or protocols, or any financial risks arising from interacting with them.
+
+## Start Building on Robinhood Chain
+
+Robinhood Chain is live. Connect to the network, deploy contracts, and explore the ecosystem.
+
+*   Network details & RPC: [Connecting to Robinhood Chain](https://docs.robinhood.com/chain/connecting)
+*   [Robinhood Chain Status](http://status.robinhoodchain.offchain.io/)
+*   Bridge assets onto Robinhood Chain: [Bridging](https://docs.robinhood.com/chain/bridging)
+*   Deploy your first contract: [Deploy smart contracts](https://docs.robinhood.com/chain/deploy-smart-contracts)
+*   Run a full node: [Run a full node](https://docs.robinhood.com/chain/run-a-full-node)
+*   Questions or issues: [Report an issue](mailto:chain-developers-group@robinhood.com)
+
+Links/Buttons:
+- [Skip to content](https://docs.robinhood.com/chain/#vocs-content)
+- [](https://docs.robinhood.com/chain/#about-robinhood-chain)
+- [Connecting to Robinhood Chain](https://docs.robinhood.com/chain/connecting)
+- [Add network to your wallet](https://docs.robinhood.com/chain/add-network-to-wallet)
+- [Bridging](https://docs.robinhood.com/chain/bridging)
+- [Overview](https://docs.robinhood.com/chain/notices-and-upgrades)
+- [Building with Stock Tokens](https://docs.robinhood.com/chain/building-with-stock-tokens)
+- [Stock Token APIs](https://docs.robinhood.com/chain/stock-token-apis)
+- [Differences from Ethereum](https://docs.robinhood.com/chain/differences-from-ethereum)
+- [Gas & Fees](https://docs.robinhood.com/chain/gas-and-fees)
+- [Transaction Finality](https://docs.robinhood.com/chain/transaction-finality)
+- [Token Contracts](https://docs.robinhood.com/chain/contracts)
+- [Protocol Contracts](https://docs.robinhood.com/chain/protocol-contracts)
+- [Deploy a Contract](https://docs.robinhood.com/chain/deploy-smart-contracts)
+- [Account Abstraction](https://docs.robinhood.com/chain/#account-abstraction)
+- [Cross-Chain Messaging](https://docs.robinhood.com/chain/cross-chain-messaging)
+- [Oracles & Price Feeds](https://docs.robinhood.com/chain/oracles-and-price-feeds)
+- [Data Streams](https://docs.robinhood.com/chain/data-streams)
+- [Run a full node](https://docs.robinhood.com/chain/run-a-full-node)
+- [Governance](https://docs.robinhood.com/chain/governance)
+- [Report an issue](mailto:chain-developers-group@robinhood.com)
+- [Terms of Service](https://docs.robinhood.com/chain/terms-of-service)
+- [Ask in ChatGPT](https://chatgpt.com/?hints=search&q=Please%20research%20and%20analyze%20this%20page%3A%20https%3A%2F%2Fdocs.robinhood.com%2Fchain%2F%20so%20I%20can%20ask%20you%20questions%20about%20it.%20Once%20you%20have%20read%20it%2C%20prompt%20me%20with%20any%20questions%20I%20have.%20Do%20not%20post%20content%20from%20the%20page%20in%20your%20response.%20Any%20of%20my%20follow%20up%20questions%20must%20reference%20the%20site%20I%20gave%20you.)
+- [Start building](https://docs.robinhood.com/chain/#start-building)
+- [Built for Real-World Assets](https://docs.robinhood.com/chain/#built-for-real-world-assets)
+- [Built on Proven Technology](https://docs.robinhood.com/chain/#built-on-proven-technology)
+- [Predictable Transaction Ordering](https://docs.robinhood.com/chain/#predictable-transaction-ordering)
+- [Open and Permissionless](https://docs.robinhood.com/chain/#open-and-permissionless)
+- [EVM Compatible](https://docs.robinhood.com/chain/#evm-compatible)
+- [Ecosystem](https://docs.robinhood.com/chain/#ecosystem)
+- [Start Building on Robinhood Chain](https://docs.robinhood.com/chain/#start-building-on-robinhood-chain)
+- [Entropy Advisors](https://entropyadvisors.com/)
+- [Onchain data dashboards for Robinhood Chain](https://arbdata.com/ecosystems/robinhood)
+- [Alchemy](https://www.alchemy.com/)
+- [LayerZero](https://layerzero.network/)
+- [Chainlink](https://chain.link/)
+- [Fireblocks](https://www.fireblocks.com/)
+- [Bitgo](https://www.bitgo.com/)
+- [Allium](https://allium.so/)
+- [Coingecko](https://www.coingecko.com/)
+- [Uniswap](https://uniswap.org/)
+- [Rialto](https://rialto.xyz/)
+- [Morpho](https://morpho.org/)
+- [Lighter](https://robinhoodchain.lighter.xyz/)
+- [Arcus](https://arcus.xyz/)
+- [Paxos](https://globaldollar.com/)
+- [Zerion](https://zerion.io/)
+- [TRM Labs](https://www.trmlabs.com/)
+- [Robinhood Chain Status](http://status.robinhoodchain.offchain.io/)

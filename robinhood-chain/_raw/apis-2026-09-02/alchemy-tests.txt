@@ -1,0 +1,20 @@
+alchemy_getTokenMetadata: {"jsonrpc":"2.0","id":1,"result":{"decimals":18,"logo":null,"name":"NVIDIA • Robinhood Token","symbol":"NVDA"}}
+alchemy_getTokenBalances: {"jsonrpc":"2.0","id":1,"result":{"address":"0x8366a39cc670b4001a1121b8f6a443a643e40951","tokenBalances":[{"contractAddress":"0x00000000043c1117dafa3a3d0c7148eb48b30130","tokenBalance":"0x000000000000000000000000000000000000000000000001497ddd73237e8a3f"},{"contractAddress":"0x0000000062f54298e1efbeb
+
+alchemy_getAssetTransfers: {"jsonrpc":"2.0","id":1,"result":{"transfers":[{"blockNum":"0x257db","uniqueId":"0xe49b702543735b6b525a8aabd24882cde9bd126b09ffb094e4d47f53365f625b:log:0","hash":"0xe49b702543735b6b525a8aabd24882cde9bd126b09ffb094e4d47f53365f625b","from":"0x0000000000000000000000000000000000000000","to":"0xcfaece215
+
+alchemy_getTransactionReceipts: {"jsonrpc":"2.0","id":1,"result":{"receipts":[{"blockHash":"0xc2c2498e27d9c2cfe3c9f69a7468c341b0442161e3c7ca58576aeb5da8804eec","blockNumber":"0x31d8584","contractAddress":null,"cumulativeGasUsed":"0x
+
+eth_getLogs 100k blocks: {'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32600, 'message': 'Under the Free tier plan, you can make eth_getLogs requests with up to a 10 block range. Based on your parameters, this block range should work: [0x31c0000, 0x31c0009]. Upgrade to PAYG for expanded block range.'}}
+trace_block: {"jsonrpc":"2.0","id":1,"error":{"code":-32600,"message":"trace_block is not available on the ROBINHOOD_MAINNET. For more information see our docs: https://docs.alchemy.com/alchemy/documentation/apis/
+
+debug_traceBlockByNumber: {"jsonrpc":"2.0","id":1,"error":{"code":-32600,"message":"debug_traceBlockByNumber is not available on the Free tier - upgrade to Pay As You Go, or Enterprise for access."}}
+arbtrace_block: {"jsonrpc":"2.0","id":1,"error":{"code":-32600,"message":"arbtrace_block is not available on the ROBINHOOD_MAINNET. For more information see our docs: https://docs.alchemy.com/alchemy/documentation/ap
+
+prices by-address: {"data":[{"network":"robinhood-mainnet","address":"0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC","prices":[{"currency":"usd","value":"217.20033101863353","lastUpdatedAt":"2026-09-02T03:53:40Z"}]}]}
+portfolio tokens by-address: {"data":{"tokens":[{"address":"0x8366a39cc670b4001a1121b8f6a443a643e40951","network":"robinhood-mainnet","tokenAddress":null,"tokenBalance":"0x00000000000000000000000000000000000000000000021923ddfc3ec3ddb05f","tokenMetadata":{"symbol":null,"decimals":null,"name":null,"logo":null},"tokenPrices":[]},{
+
+tx history by-address: Unsupported network: ROBINHOOD_MAINNET
+nft getNFTsForOwner: {"ownedNfts":[{"contract":{"address":"0x1292B64bEbF13eb7C34F3385Ab67fC64223d6332","name":"ASCII CATS","symbol":"CATS","totalSupply":null,"tokenType":"ERC721","contractDeployer":null,"deployedBlockNumb
+
+subgraphs: 530

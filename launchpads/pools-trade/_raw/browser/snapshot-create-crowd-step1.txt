@@ -1,0 +1,12 @@
+- heading "Create a token" [level=2, ref=e1]
+- button "Back" [ref=e3]
+- button "Close" [ref=e4]
+- button "Upload token image" [ref=e5]
+- button "Choose file" [ref=e6]: No file chosen
+- textbox "Token name" [ref=e10]
+- textbox "Ticker symbol" [ref=e11]
+- textbox "Description" [ref=e12]
+- button "About X verification" [ref=e7]
+- button "Connect" [ref=e8]
+- switch "Creator fee" [checked=false, ref=e9]
+- button "Review" [disabled, ref=e2]

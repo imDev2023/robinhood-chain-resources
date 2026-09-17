@@ -1,0 +1,1624 @@
+# Virtuals Protocol - Agent page 111515 (KARMA)
+
+> Source: https://app.virtuals.io/virtuals/111515
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/07-app-agent-111515-karma.png
+Interactive snapshot: _raw/network/snapshot-app-agent-111515-karma.txt
+Network requests: _raw/network/requests-app-agent-111515-karma.txt
+
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# Karma by Virtuals
+
+KARMA
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+-
+
+0x50de…55dd-241.19K KARMA
+
+7m@ $0.0₃9289
+
+-
+
+0x9b04…7ac0-1.07M KARMA
+
+16m@ $0.0₃9404
+
+-
+
+0xd840…37ba+54.64K KARMA
+
+17m@ $0.0₃96
+
+-
+
+0x4e23…421d+50.09K KARMA
+
+26m@ $0.0₃9632
+
+-
+
+0x5126…c06d-492.36K KARMA
+
+28m@ $0.0₃9623
+
+-
+
+0x05c5…5dd1+50.21K KARMA
+
+32m@ $0.0₃9734
+
+-
+
+0x0db4…c17e+51.11K KARMA
+
+32m@ $0.0₃9691
+
+-
+
+0x25bc…d9bb+248.78K KARMA
+
+34m@ $0.0₃9649
+
+-
+
+0x8a10…6a08+6.38K KARMA
+
+54m@ $0.0₃953
+
+-
+
+0xbd3e…34b5+125.62K KARMA
+
+57m@ $0.0₃9469
+
+-
+
+0x6085…fdab+27.13K KARMA
+
+1h@ $0.0₃947
+
+-
+
+0x0fac…1806+105.25K KARMA
+
+1h@ $0.0₃9442
+
+-
+
+0x94e0…d0f8+73.09K KARMA
+
+1h@ $0.0₃9485
+
+-
+
+0xdd50…ca08-10.42K KARMA
+
+1h@ $0.0₃9341
+
+-
+
+0x239b…b565+616.98K KARMA
+
+1h@ $0.0₃9287
+
+-
+
+0x235b…da69+10.71K KARMA
+
+1h@ $0.0₃9232
+
+-
+
+0x331d…2466+1.09M KARMA
+
+1h@ $0.0₃9086
+
+-
+
+0x4c6f…da23+663.2K KARMA
+
+1h@ $0.0₃8871
+
+-
+
+0xe540…3695+98.71K KARMA
+
+2h@ $0.0₃8759
+
+-
+
+0x391b…5ab1-2.35M KARMA
+
+2h@ $0.0₃9019
+
+-
+
+0xbd3e…34b5+1.31M KARMA
+
+2h@ $0.0₃9172
+
+-
+
+0xbd3e…34b5+7.71K KARMA
+
+2h@ $0.0₃9062
+
+-
+
+0xfc53…6a3b-108.72K KARMA
+
+2h@ $0.0₃9003
+
+-
+
+0x391b…5ab1-2.35M KARMA
+
+2h@ $0.0₃9357
+
+-
+
+0xc7f7…7789+1.19M KARMA
+
+2h@ $0.0₃9495
+
+-
+
+0x183e…ebc4-149.57K KARMA
+
+2h@ $0.0₃9322
+
+-
+
+0xbd3e…34b5-482.63K KARMA
+
+3h@ $0.0₃9383
+
+-
+
+0x9bc4…1083+53.06K KARMA
+
+3h@ $0.0₃9432
+
+-
+
+0x0a25…7ed7+252.39K KARMA
+
+3h@ $0.0₃9435
+
+-
+
+0x5c87…e4d4+366.06K KARMA
+
+3h@ $0.0₃9369
+
+-
+
+0x7d2d…ad84-40.28K KARMA
+
+3h@ $0.0₃929
+
+-
+
+0x5b0e…1476+1.9M KARMA
+
+3h@ $0.0₃911
+
+-
+
+0x6287…b390+32.99K KARMA
+
+3h@ $0.0₃8799
+
+-
+
+0x25ae…1e36+188.7K KARMA
+
+3h@ $0.0₃8802
+
+-
+
+0x25ae…1e36+297.58K KARMA
+
+3h@ $0.0₃8742
+
+-
+
+0x5c87…e4d4+196.89K KARMA
+
+3h@ $0.0₃8672
+
+-
+
+0xe49b…7b48+931.51K KARMA
+
+4h@ $0.0₃852
+
+-
+
+0x6e3d…6ce7+35.23K KARMA
+
+4h@ $0.0₃8422
+
+-
+
+0x6e3d…6ce7+35.27K KARMA
+
+4h@ $0.0₃8414
+
+-
+
+0xbd3e…34b5-42.51K KARMA
+
+4h@ $0.0₃8384
+
+-
+
+0x728f…f500+116.77K KARMA
+
+4h@ $0.0₃84
+
+-
+
+0xf70d…dbef+118.4K KARMA
+
+4h@ $0.0₃8424
+
+-
+
+0xd949…e607+211.07K KARMA
+
+4h@ $0.0₃8319
+
+-
+
+0x9199…15ac+124.38K KARMA
+
+4h@ $0.0₃8341
+
+-
+
+0x7d0e…b923+72.06K KARMA
+
+4h@ $0.0₃8321
+
+-
+
+0xf70d…dbef+731.69K KARMA
+
+4h@ $0.0₃8263
+
+-
+
+0x4fd8…ce62-103.21K KARMA
+
+5h@ $0.0₃9268
+
+-
+
+0x8011…3661+12.08K KARMA
+
+5h@ $0.0₃8574
+
+-
+
+0xc921…d126-354.44K KARMA
+
+6h@ $0.0₃9347
+
+-
+
+0xe209…ef08-419.12K KARMA
+
+6h@ $0.0₃9369
+
+-
+
+0x81ad…c13c-419.12K KARMA
+
+6h@ $0.0₃9532
+
+-
+
+0x4337…f038-1.02M KARMA
+
+6h@ $0.0₃9696
+
+-
+
+0x0ec4…038f+775.7K KARMA
+
+6h@ $0.0₃9722
+
+-
+
+0xf134…0025-343.96K KARMA
+
+6h@ $0.0₃9644
+
+-
+
+0x4337…fa00-67.41K KARMA
+
+6h@ $0.0₃9632
+
+-
+
+0x50de…55dd+246.09K KARMA
+
+6h@ $0.0₃9696
+
+-
+
+0x01f2…8a2b-21.37K KARMA
+
+7h@ $0.0₃9686
+
+-
+
+0x0ec4…038f+90.45K KARMA
+
+7h@ $0.0₃9773
+
+-
+
+0x6937…7ef5+50.85K KARMA
+
+7h@ $0.0₃9684
+
+-
+
+0x331d…2466+50.92K KARMA
+
+7h@ $0.0₃9671
+
+-
+
+0xbb0f…4286+494.41K KARMA
+
+7h@ $0.0₃9636
+
+-
+
+0x698d…aaed+24.8K KARMA
+
+7h@ $0.0₃9535
+
+-
+
+0xf70d…dbef+16.66K KARMA
+
+7h@ $0.0₃9534
+
+-
+
+0x8a80…6ca9-440.96K KARMA
+
+7h@ $0.0₃9557
+
+-
+
+0xe46b…a8a4-177.48K KARMA
+
+7h@ $0.0₃9602
+
+-
+
+0xa5a5…a142+109.95K KARMA
+
+7h@ $0.0₃9655
+
+-
+
+0x2a3f…1b4d-1.04M KARMA
+
+7h@ $0.0₃9728
+
+-
+
+0x3a77…193a+23.7K KARMA
+
+7h@ $0.0₃9629
+
+-
+
+0xb66a…a79c+200.21K KARMA
+
+8h@ $0.0₃9954
+
+-
+
+0x4fa8…f2a2+144.19K KARMA
+
+8h@ $0.0₃9938
+
+-
+
+0x4fa8…f2a2+241.65K KARMA
+
+8h@ $0.0₃9884
+
+-
+
+0x344d…51a1+97.19K KARMA
+
+8h@ $0.0₃9818
+
+-
+
+0x9199…15ac-1.97M KARMA
+
+9h@ $0.001005
+
+-
+
+0x7b05…77a6+235.5K KARMA
+
+9h@ $0.001030
+
+-
+
+0xf2a3…1df4-31.88K KARMA
+
+9h@ $0.001018
+
+-
+
+0xf5b7…b9a9+487.72K KARMA
+
+9h@ $0.001025
+
+-
+
+0x8a80…6ca9+117.56K KARMA
+
+9h@ $0.001012
+
+-
+
+0xab65…d4e7+201.12K KARMA
+
+9h@ $0.001009
+
+-
+
+0xab65…d4e7+296.97K KARMA
+
+9h@ $0.001002
+
+-
+
+0xcc4b…7a1a+34.51K KARMA
+
+9h@ $0.0₃9992
+
+-
+
+0xcc4b…7a1a-101.87K KARMA
+
+9h@ $0.0₃9941
+
+-
+
+0x4337…9fb1-732.41K KARMA
+
+9h@ $0.001000
+
+-
+
+0xe49b…7b48+1.24M KARMA
+
+9h@ $0.001006
+
+-
+
+0xf4d7…d36d-9.23K KARMA
+
+10h@ $0.0₃9831
+
+-
+
+0xf8cf…a0f8-1.84K KARMA
+
+10h@ $0.0₃9803
+
+-
+
+0x4337…3063-302.65K KARMA
+
+10h@ $0.0₃9815
+
+-
+
+0x0ca2…8f29-86.07K KARMA
+
+10h@ $0.0₃9891
+
+-
+
+0x0a06…6652-41.55K KARMA
+
+10h@ $0.0₃9891
+
+-
+
+0x99f5…60d3-185.71K KARMA
+
+10h@ $0.0₃9916
+
+-
+
+0xd460…181b+240.33K KARMA
+
+10h@ $0.0₃9972
+
+-
+
+0x728f…f500+199.52K KARMA
+
+10h@ $0.0₃9914
+
+-
+
+0x0d2b…9b4f-20.17K KARMA
+
+10h@ $0.0₃9842
+
+-
+
+0x4f73…5acf+399.68K KARMA
+
+10h@ $0.0₃9904
+
+-
+
+0x7b05…77a6+222.03K KARMA
+
+10h@ $0.0₃9783
+
+-
+
+0x81ad…c13c+255.47K KARMA
+
+10h@ $0.0₃9699
+
+-
+
+0x41bf…e68b-1.28M KARMA
+
+10h@ $0.0₃9777
+
+-
+
+0x0fd2…b1d2-1.23M KARMA
+
+10h@ $0.001014
+
+-
+
+0xce16…7854+46.48K KARMA
+
+10h@ $0.001042
+
+-
+
+0x18dd…8e25+96K KARMA
+
+10h@ $0.001034
+
+-
+
+0xe49b…7b48+1.24M KARMA
+
+10h@ $0.001015
+
+-
+
+0x2a3f…1b4d+1.06M KARMA
+
+11h@ $0.0₃9868
+
+-
+
+0xd07f…14d1-4.86K KARMA
+
+11h@ $0.0₃996
+
+-
+
+0x6c2c…5b00-100.29K KARMA
+
+11h@ $0.0₃9368
+
+-
+
+0x0fd2…b1d2+1.26M KARMA
+
+11h@ $0.0₃9564
+
+-
+
+0x6c2c…5b00+186.09K KARMA
+
+11h@ $0.0₃9414
+
+-
+
+0xca7d…4589-8.03M KARMA
+
+11h@ $0.001038
+
+-
+
+0xa5ab…71f3-1.11M KARMA
+
+11h@ $0.001189
+
+-
+
+0x3e4d…ac35-300.63K KARMA
+
+11h@ $0.001215
+
+-
+
+0x3e4d…ac35-300.63K KARMA
+
+11h@ $0.001227
+
+-
+
+0x698d…aaed+8.17M KARMA
+
+11h@ $0.001103
+
+-
+
+0x2a3f…1b4d-743.6K KARMA
+
+11h@ $0.0₃9833
+
+-
+
+0xd460…181b+2.31M KARMA
+
+11h@ $0.0₃9679
+
+-
+
+0x0fd2…b1d2-1.23M KARMA
+
+11h@ $0.0₃9495
+
+-
+
+0x239b…b565+1.31M KARMA
+
+11h@ $0.0₃9603
+
+-
+
+0xdd50…ca08+10.64K KARMA
+
+11h@ $0.0₃9435
+
+-
+
+0xdd50…ca08+4.74K KARMA
+
+11h@ $0.0₃9383
+
+-
+
+0x1064…a764+53.36K KARMA
+
+11h@ $0.0₃9376
+
+-
+
+0x059d…7b11+1.08M KARMA
+
+11h@ $0.0₃9242
+
+-
+
+0x0ec4…038f+6.52K KARMA
+
+11h@ $0.0₃9118
+
+-
+
+0x6085…fdab+533.08K KARMA
+
+11h@ $0.0₃9098
+
+-
+
+0x6085…fdab-171K KARMA
+
+11h@ $0.0₃9086
+
+-
+
+0x705e…8189+266.27K KARMA
+
+11h@ $0.0₃8949
+
+-
+
+0xd712…6223+34.39K KARMA
+
+11h@ $0.0₃8465
+
+-
+
+0x99ec…2c62+4.87K KARMA
+
+11h@ $0.0₃8988
+
+-
+
+0x2a3f…1b4d+758.7K KARMA
+
+11h@ $0.0₃8828
+
+-
+
+0xe46b…a8a4+132.58K KARMA
+
+11h@ $0.0₃8988
+
+-
+
+0xb365…0856+224.74K KARMA
+
+11h@ $0.0₃903
+
+-
+
+0x0fd2…b1d2+1.26M KARMA
+
+11h@ $0.0₃8605
+
+-
+
+0xd572…68ef-8.16M KARMA
+
+11h@ $0.0₃9369
+
+-
+
+0xd712…cd24+74.49K KARMA
+
+11h@ $0.0₃8465
+
+-
+
+0x2bb2…fbd1+9.11K KARMA
+
+11h@ $0.001046
+
+-
+
+0xf2b2…d61a+1.71K KARMA
+
+11h@ $0.001042
+
+-
+
+0x0296…b704-2.97K KARMA
+
+11h@ $0.001038
+
+-
+
+0x6085…fdab+8.25K KARMA
+
+11h@ $0.001047
+
+-
+
+0x56c2…8a8b+478.72K KARMA
+
+11h@ $0.001040
+
+-
+
+0xdd50…ca08+84.97K KARMA
+
+12h@ $0.001157
+
+-
+
+0x51f2…7035+331.93 KARMA
+
+12h@ $0.001170
+
+-
+
+0x51f2…7035+35.29K KARMA
+
+12h@ $0.001170
+
+-
+
+0x56c2…8a8b-102.71K KARMA
+
+13h@ $0.001153
+
+-
+
+0x4f73…5acf+395.19K KARMA
+
+13h@ $0.001162
+
+-
+
+0x3c1e…255c-12.96K KARMA
+
+13h@ $0.001146
+
+-
+
+0xcc4b…7a1a-88.52K KARMA
+
+13h@ $0.001141
+
+-
+
+0x728f…f500+7.18K KARMA
+
+13h@ $0.001157
+
+-
+
+0xdd50…ca08+791.11 KARMA
+
+13h@ $0.001156
+
+-
+
+0x0296…b704+884.14 KARMA
+
+13h@ $0.001156
+
+-
+
+0xdd50…ca08+1.09K KARMA
+
+13h@ $0.001156
+
+-
+
+0x6580…c516+52.1K KARMA
+
+13h@ $0.001155
+
+-
+
+0xdd50…ca08+1.57K KARMA
+
+13h@ $0.001154
+
+-
+
+0xdd50…ca08+1.84K KARMA
+
+13h@ $0.001154
+
+-
+
+0x05c5…5dd1+104.22K KARMA
+
+13h@ $0.001132
+
+-
+
+0x6eac…60ad-1.65M KARMA
+
+13h@ $0.001150
+
+-
+
+0x0000…efaf+34.63K KARMA
+
+13h@ $0.001135
+
+-
+
+0x477f…2ed3+19.21K KARMA
+
+13h@ $0.001136
+
+-
+
+0xd460…181b+3.18K KARMA
+
+13h@ $0.001201
+
+-
+
+0x18dd…8e25+173.99K KARMA
+
+14h@ $0.001189
+
+-
+
+0x6085…fdab+208.32K KARMA
+
+14h@ $0.001190
+
+-
+
+0xdcd4…718a-474.2K KARMA
+
+14h@ $0.001187
+
+-
+
+0x5c87…e4d4-1.49M KARMA
+
+14h@ $0.001222
+
+-
+
+0x5c87…e4d4-118.8K KARMA
+
+14h@ $0.001256
+
+-
+
+0xce16…7854-11.88K KARMA
+
+14h@ $0.001264
+
+-
+
+0x0296…b704-28.22K KARMA
+
+14h@ $0.001264
+
+-
+
+0x4337…6c92-2.42K KARMA
+
+14h@ $0.001268
+
+-
+
+0xebd3…c11c-168.88K KARMA
+
+14h@ $0.001280
+
+-
+
+0x67d6…60e4-5.45K KARMA
+
+15h@ $0.001284
+
+-
+
+0x7b44…430f-1.25K KARMA
+
+15h@ $0.001280
+
+-
+
+0x5c87…e4d4+8.29K KARMA
+
+15h@ $0.001283
+
+-
+
+0xabb2…cd10+6.46K KARMA
+
+15h@ $0.001281
+
+-
+
+0x5c87…e4d4-49.38K KARMA
+
+15h@ $0.001270
+
+-
+
+0xa5a5…a142+2.96K KARMA
+
+15h@ $0.001276
+
+-
+
+0x5c87…e4d4+40.86K KARMA
+
+15h@ $0.001284
+
+-
+
+0x5c87…e4d4+78.78K KARMA
+
+15h@ $0.001281
+
+-
+
+0x5c87…e4d4+70.43K KARMA
+
+15h@ $0.001277
+
+-
+
+0x0000…f466+47K KARMA
+
+15h@ $0.001278
+
+-
+
+0x5c87…e4d4-386.1K KARMA
+
+15h@ $0.001274
+
+-
+
+0xd572…68ef-1.36M KARMA
+
+16h@ $0.001314
+
+-
+
+0xabb2…cd10+3.82K KARMA
+
+16h@ $0.001358
+
+-
+
+0x4337…8084-1.66K KARMA
+
+16h@ $0.001360
+
+-
+
+0x5c87…e4d4-119.97K KARMA
+
+16h@ $0.001366
+
+-
+
+0x54fa…9cec-13.81K KARMA
+
+17h@ $0.001370
+
+-
+
+0xa5a5…a142+579.58K KARMA
+
+17h@ $0.001358
+
+-
+
+0xe46b…a8a4-35.57K KARMA
+
+17h@ $0.001351
+
+-
+
+0x1d06…b09e-13.94K KARMA
+
+17h@ $0.001353
+
+-
+
+0xdcd4…718a+142.37K KARMA
+
+17h@ $0.001362
+
+-
+
+0x344d…51a1+75.49K KARMA
+
+17h@ $0.001352
+
+-
+
+0xc921…d126+361.63K KARMA
+
+18h@ $0.001337
+
+-
+
+0x56c2…8a8b+74.55K KARMA
+
+18h@ $0.001327
+
+-
+
+0x235b…da69-5.71K KARMA
+
+18h@ $0.001316
+
+-
+
+0xddad…b76f+26.52K KARMA
+
+18h@ $0.001327
+
+-
+
+0x4337…9269-134.54K KARMA
+
+18h@ $0.001315
+
+-
+
+0x595e…bc65-43.57K KARMA
+
+18h@ $0.001320
+
+-
+
+0x4ab9…1ed3-442.97K KARMA
+
+19h@ $0.001327
+
+-
+
+0x4337…ec68-381.49K KARMA
+
+19h@ $0.001346
+
+-
+
+0x3800…5248-363.33K KARMA
+
+19h@ $0.001361
+
+-
+
+0x3a7c…13e5-16.95K KARMA
+
+19h@ $0.001375
+
+-
+
+0xcc4b…7a1a+441.61K KARMA
+
+19h@ $0.001368
+
+-
+
+0xcc4b…7a1a-102.53K KARMA
+
+19h@ $0.001368
+
+-
+
+0x1220…835d+9.68K KARMA
+
+20h@ $0.001382
+
+-
+
+0x4337…beb1-178.47K KARMA
+
+20h@ $0.001383
+
+-
+
+0x05c5…5dd1+87.04K KARMA
+
+20h@ $0.001396
+
+-
+
+0x0db4…c17e+71.4K KARMA
+
+20h@ $0.001393
+
+-
+
+0xbd3e…34b5-247.5K KARMA
+
+21h@ $0.001381
+
+-
+
+0xbd3e…34b5-198K KARMA
+
+21h@ $0.001396
+
+-
+
+0x331d…2466+398.03K KARMA
+
+21h@ $0.001412
+
+-
+
+0x9017…646d+69.77K KARMA
+
+21h@ $0.001392
+
+-
+
+0xf526…413b-56.72K KARMA
+
+21h@ $0.001391
+
+-
+
+0x3a7c…13e5+2.61K KARMA
+
+21h@ $0.001396
+
+-
+
+0xab65…d4e7+4.62K KARMA
+
+21h@ $0.001395
+
+-
+
+0xbd3e…34b5-488.83K KARMA
+
+22h@ $0.001386
+
+-
+
+0x58e6…e995-653.47K KARMA
+
+22h@ $0.001397
+
+-
+
+0xe49b…e926-1.98K KARMA
+
+22h@ $0.001409
+
+-
+
+0xf70d…dbef+451.96K KARMA
+
+22h@ $0.001427
+
+-
+
+0x5284…3cc0-713.07K KARMA
+
+22h@ $0.001407
+
+-
+
+0x9199…15ac+346.48K KARMA
+
+22h@ $0.001427
+
+-
+
+0x311b…2f49-153.83K KARMA
+
+22h@ $0.001417
+
+-
+
+0x370a…12cf+855.26K KARMA
+
+22h@ $0.001406
+
+-
+
+0xa67d…3fbb+17.2K KARMA
+
+22h@ $0.001386
+
+-
+
+0xb71e…fc38-990K KARMA
+
+23h@ $0.001402
+
+-
+
+0x4418…329d-71.79K KARMA
+
+23h@ $0.001431
+
+-
+
+0xb71e…fc38-1.49M KARMA
+
+23h@ $0.001460
+
+-
+
+0xb5b8…a89c-198K KARMA
+
+23h@ $0.001502
+
+-
+
+0x595e…bc65+44.45K KARMA
+
+23h@ $0.001528
+
+-
+
+0x595e…bc65-199.35K KARMA
+
+23h@ $0.001512
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.0₃9277-38.68%
+
+Launched by:0xA61b...38b3
+
+powered by
+
+## About
+
+See more
+
+Trading is becoming social. Assets are becoming universal. Karma is where the two meet: a non-custodial mobile app where communities discover, trade and spend together, and creators earn from the volume they create. Live on the Apple App Store & Google Play with swaps, credit cards and EUR/USD accounts. Swap fees buy $KARMA on-market and nothing bought is ever sold: it funds creator rewards, a locked ecosystem reserve, and a monthly charity donation. Every trade earns good karma. Literally.
+
+## Team
+
+- 0x
+
+0xA61b...38b3Owner
+
+Karma
+
+## Allocation
+
+Next unlock in 45 days
+
+Total1B
+
+Liquidity Pool27.63%
+
+276.3MFixed Supply
+
+Liquidity Pool276.3M27.63%Fixed Supply
+
+Automated Capital Formation25.00%
+
+250MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation250M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+250M · 16 Jul 27Default Team Vesting
+
+Team250M25.00%Default Team Vesting · Unlocks 16 Jul 27
+
+V1 Holders20.00%
+
+200M · 18 Jul 26Reserved for eligible KARMA v1 holders, distributed pro-rata.
+
+V1 Holders200M20.00%Reserved for eligible KARMA v1 holders, distributed pro-rata. · Unlocks 18 Jul 26
+
+Sniper Tax Buyback for Team2.37%
+
+23.7M · 18 Oct 26Locked for 3 months, vesting linearly over 9 months
+
+Sniper Tax Buyback for Team23.7M2.37%Locked for 3 months, vesting linearly over 9 months · Unlocks 18 Oct 26
+
+## Supply
+
+1B750M500M250M0
+
+Today
+
+17 Jul 2622 Nov 2631 Mar 2707 Aug 2713 Dec 27
+
+Liquidity PoolAutomated Capital FormationTeamV1 HoldersSniper Tax Buyback for Team
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $KARMA or 1,000 veVIRTUAL to join the conversation.
+
+Buy $KARMA
+
+0x2cF6…a446· 2 months
+
+wtf is this
+
+## Market Overview
+
+Mechanics
+
+Mcap$927.7K
+
+FDV$927.7K
+
+Liq.$407.3K
+
+Holders1.6K
+
+24h Vol$106.5K
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+KARMA
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (1.6K)
+
+View top 500
+
+Top 1070.8%
+
+Others29.2%
+
+0x2bdf…0561Unlocker273.7M KARMA31.1%
+
+0xe289…ee8aACF Vault189.5M KARMA21.6%
+
+0xc517…d04eLP76.5M KARMA—
+
+0x6129…6f85ACF Pool44.9M KARMA—
+
+0x07cd…675889.5M KARMA10.2%
+
+0x829d…224a15.6M KARMA1.8%
+
+0xf4bc…d2c910M KARMA1.1%
+
+0x05e9…03e99.3M KARMA1.1%
+
+0x8366…09519.1M KARMA1.0%
+
+0xcdf4…76c48.6M KARMA1.0%
+
+0x4b4a…893e8.3M KARMA0.9%
+
+0x82dd…04b58.1M KARMA0.9%
+
+0x33b7…32b97.1M KARMA0.8%
+
+## Twitter Feed
+
+Karma@KarmaWallet
+
+Sep 2
+
+Karma just crossed $6,000,000 in total volume.
+
+Daily volume is up almost 200% in two days. 95% of fees buy back KARMA on the open market, almost $20,000 deployed so far, all on-chain at https://t.co/cD1MPl84R1.
+
+$6M is a nice round number. It's also the smallest number we'll
+
+Karma@KarmaWallet
+
+Aug 31
+
+First look at Karma AI: the intelligence layer for Robinhood Chain.
+
+Your portfolio, onchain history and trading rules become context. Ask a question, analyze a trade and simulate the outcome before risking capital.
+
+Early prototype. Clear direction.
+
+Karma@KarmaWallet
+
+Aug 31
+
+Our founder @amrix_j is live now, sharing how we’re approaching AI agents at Karma, and giving a first look at what we’re building. https://t.co/vCLOfLBwKc
+
+Karma@KarmaWallet
+
+Aug 30
+
+Organic growth got Karma here.
+
+Now, after a long approval process, we can finally begin testing paid distribution on X—using content and UGC to scale what is already working.
+
+Product first. Distribution next.
+
+Karma@KarmaWallet
+
+Aug 30
+
+“All the data we’re bringing in-house is the context for the AI.”
+
+Financial reports. Market data. Social data. Token data. Execution.
+
+An agent is only as good as the context beneath it. Karma is building that foundation before putting agents on top.
+
+Karma@KarmaWallet
+
+Aug 30
+
+One balance. Multiple chains. No bridge UX.
+
+Karma abstracts Robinhood Chain, Base, Solana and other EVM networks into a single trading experience, without making users think about gas or where their balance lives.
+
+Try it: https://t.co/061VZIJvsQ
+
+Karma@KarmaWallet
+
+Aug 29
+
+Karma’s buyback flywheel is not theoretical.
+
+$17K+ deployed in total. $643 that day when this was recorded, and $676 by the end of August 27.
+
+More product usage → more fees → more buybacks.
+
+Track it live: https://t.co/cD1MPl7x1t
+
+Karma@KarmaWallet
+
+Aug 29
+
+Memes were crypto’s first mass onboarding event.
+
+RWAs can be the next: global assets, onchain liquidity and chain abstraction simple enough that users never need to think about bridges or gas.
+
+The market gets bigger when the product gets simpler.
+
+Karma@KarmaWallet
+
+Aug 29
+
+Seven months ago, Karma processed roughly $60–80K per month.
+
+Now we can do that in a day.
+
+The growth is real. The next frontier is acquisition and retention.
+
+Karma@KarmaWallet
+
+Aug 28
+
+We can confirm Karma was not affected, and all user funds remained save during the contract breach. https://t.co/Lm57KnsFGR
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

@@ -1,0 +1,56 @@
+# Bags - About Bags
+
+> Source: https://bags.fm/about
+> Retrieved: 2026-09-02 (agent-browser read; screenshot screenshots/115-app-about.png)
+
+---
+
+-
+
+Home
+
+-
+
+Trade
+
+-
+
+Create
+
+-
+
+Docs
+
+create
+
+log in
+
+# About Bags
+
+## Our Mission
+
+Bags is building the future of creator funding. We believe that great ideas should have the opportunity to get funded without traditional gatekeepers. Our platform empowers creators, developers, and builders to launch projects, build communities, and earn royalties from their work.
+
+## What We Do
+
+Bags provides a simple way for creators to launch tokens that represent their projects. When people trade these tokens, creators earn fees - forever. This creates a sustainable funding model that aligns the interests of creators and their supporters.
+
+- Launch your project in minutes.
+
+- Earn royalties on every trade.
+
+- Build and engage with your community.
+
+- Maintain ownership of your work.
+
+## Why Bags?
+
+Traditional funding models often require giving up equity, control, or creative freedom. Bags offers an alternative - a way to fund your ideas while keeping full ownership. Our platform is built on Solana, providing fast, low-cost transactions that make micro-investments possible.
+
+## Join Us
+
+Whether you're a creator looking to fund your next project or a supporter looking to back ideas you believe in, Bags is the place for you. Join thousands of creators who are already building on Bags.
+
+© 2026 Bags Holdings, Inc.
+
+AboutContactTermsDocsDiscordSupport

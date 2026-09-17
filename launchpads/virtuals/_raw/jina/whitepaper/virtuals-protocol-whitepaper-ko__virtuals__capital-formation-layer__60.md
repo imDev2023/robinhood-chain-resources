@@ -1,0 +1,244 @@
+> For the complete documentation index, see [llms.txt](https://whitepaper.virtuals.io/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/60.md).
+
+# 60일
+
+<figure><img src="/files/bc4ff497068405fb534597c32e7031c820f72cd8" alt="Virtuals Protocol 60 Days founder trial for AI agent token launches"><figcaption></figcaption></figure>
+
+### AI 에이전트 토큰 출시를 위한 60일 창업자 시험 운영
+
+60 Days 모듈은 무료의 선택적 토큰 출시 구성입니다. 창업자가 영구적인 약정을 하기 전에 시장 수요를 검증할 수 있게 해줍니다.
+
+초기 단계의 창업자들은 수요를 검증하기 전에 자본과 평판을 먼저 걸곤 합니다. 전통적인 액셀러레이터, 벤처 자금 조달, 토큰 출시는 약정 전에 제한적인 피드백만 제공합니다.
+
+60 Days 모듈은 공개적인 60일 창업자 시험 운영을 만듭니다. 창업자는 공개적으로 제품을 만들고, 사용자는 그 과정에서 제품을 발견합니다. 자본은 자동 자본 형성(ACF), 토큰 거래 수수료, 그리고 선택적 성장 할당을 통해 축적됩니다.
+
+시험 기간이 끝나면 창업자가 약정할지 여부를 선택합니다. 약정하면 토큰은 계속 유지되고 조달된 자금은 시간이 지나며 해제됩니다. 약정하지 않으면 토큰은 종료되고 조달된 자금은 적격 토큰 보유자에게 반환됩니다.
+
+***
+
+### 창업자 시험 운영 원칙
+
+1. **창업자 자율성:** 창업자는 약정할지 떠날지 스스로 결정합니다. 어떤 것도 자동으로 해제되지 않습니다.
+2. **시장 테스트:** 수요는 사용자 행동과 자발적 지원을 통해 형성됩니다.
+3. **되돌릴 수 있는 토큰 출시:** 모든 출시는 되돌릴 수 있는 상태에서 시작합니다. 종료는 예상되는 결과입니다.
+4. **창업자 신뢰도:** 프로젝트가 종료되더라도 조달된 자금은 지지자에게 반환됩니다. 창업자의 평판은 그대로 유지됩니다.
+5. **위험과 보상의 정합성:** 지지자들은 약속이 아니라 진척을 지지합니다. 창업자는 약정 후에만 자본에 접근할 수 있습니다.
+
+***
+
+### 60 Days 출시 메커니즘은 어떻게 작동하나요
+
+각 창업자는 60일간의 공개 빌드 및 시장 테스트 기간에 들어갑니다.
+
+이 기간 동안 창업자는 다음을 수행해야 합니다:
+
+* 제품 업데이트를 정기적으로 개발하고 배포
+* 사용자와 소통하고 피드백 수집
+* 반복 개선, 방향 전환, 진행 보고서 게시
+* 투명한 지표 유지
+* 커뮤니티 검토에 참여
+
+60일차까지 창업자는 두 가지 토큰 출시 결과 중 하나를 선택합니다:
+
+* **약정:** 프로젝트는 장기 개발 단계로 전환됩니다.
+* **비약정:** 프로젝트는 종료되고 축적된 자금은 환불 절차에 들어갑니다.
+
+***
+
+### 창업자 시험 운영 중 토큰 거래 수수료
+
+모든 토큰 거래에는 1% 거래 수수료가 부과됩니다.
+
+* 30%는 Virtuals Treasury에 배분됩니다
+* 70%는 창업자에게 배분됩니다(창업자 거래세)
+
+창업자 몫은 시험 기간 동안 잠금 상태이며 약정 후에만 해제됩니다. **창업자가 약정하지 않으면, 이 배분분은 환불 풀로 전환됩니다.**
+
+이 메커니즘은 약정한 창업자에게 보상을 주고 약정하지 않은 토큰 출시를 억제합니다.
+
+***
+
+### 자동 자본 형성(ACF)
+
+ACF는 시장 참여와 거래 활동에 따라 창업자에게 자본을 지속적으로 배분하는 자동 자금 조달 메커니즘입니다.
+
+* 해제된 ACF 자금은 운영 자금, 인프라, 초기 확장에 기여합니다.
+* 해제되지 않은 ACF 배분분은 잠금 상태로 유지되며, 공식적으로 해제되기 전까지는 환불 계산에서 제외됩니다.
+
+ACF를 통해 창업자는 전통적인 자금 조달 라운드 없이 점진적으로 자본을 조달할 수 있습니다.
+
+더 알아보기 [자동 자본 형성](/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/automated-capital-formation.md).
+
+***
+
+### 토큰 출시 지지자를 위한 성장 할당
+
+창업자는 팀 할당분의 토큰 판매 수익(최대 5%)으로 자금을 조달하는 성장 할당(GA) 풀을 선택적으로 열 수 있습니다. 참여자는 창업자(들)가 정한 공개 FDV를 기준으로 한 토큰 할당과 교환하여 USDC를 예치합니다.
+
+**GA 자금은 약정 결과가 나올 때까지 에스크로에 보관되며, 창업자가 약정하지 않으면 전액 환불됩니다.**
+
+**성장 할당 베스팅 모델**
+
+성장 할당(GA) 풀의 자금은 창업자(들)가 약정할 경우 6개월의 의무 베스팅 기간이 적용됩니다. 약정 후에는 성장 할당(GA) 토큰이 6개월 베스팅 기간 동안 선형으로 해제됩니다.
+
+**창업자가 약정하지 않으면, 모든 GA 자금은 환불되고 베스팅은 취소됩니다.** 이 구조는 창업자와 초기 지지자 모두를 단기 투기로부터 보호합니다.
+
+***
+
+### 60일 시험 기간 동안의 창업자 스티펜드
+
+60일 동안 창업자를 지원하기 위해 스티펜드가 제공됩니다. 매 30일(30일차와 60일차)마다 창업자(들)는 현재까지 모인 자금(거래세 수익 및 해제된 ACF의 자금)의 10% 또는 최대 5,000 USDC 중 더 낮은 금액의 스티펜드를 받게 됩니다.
+
+**예시:**
+
+30일차 계산:
+
+* 창업자 거래세 수익과 해제된 ACF에서 모인 총자금: 35,000 USDC
+* 10% 계산: 35,000 x 0.10 = 3,500 USDC
+* 상한 확인: 3,500 USDC < 최대 5,000
+* 지급된 창업자 스티펜드: 3,500 USDC
+
+60일차 계산:
+
+* 창업자 거래세 수익과 해제된 ACF에서 모인 총자금: 58,000 USDC
+* 10% 계산: 58,000 x 0.10 = 5,800 USDC
+* 상한 확인: 5,800 USDC > 최대 5,000
+* 지급된 창업자 스티펜드: 5,000 USDC(상한 적용)
+
+***
+
+### 60일 창업자 시험 운영 결과
+
+#### 창업자가 60일차 종료 시 약정
+
+창업자는 60일 시험 운영 중 언제든지 약정할 수 있습니다. 충분한 견인력과 검증이 확보되면 조기 약정이 허용됩니다.
+
+창업자가 약정하면:
+
+* 창업자 거래 수수료 배분분이 즉시 창업자 지갑으로 해제됩니다
+* 해제된 ACF 자금이 잠금 해제됩니다
+* 성장 할당(있는 경우) 베스팅 일정이 시작됩니다
+* 성장 할당 참여자들은 토큰을 받습니다
+* 장기 인프라 및 배포 지원이 활성화됩니다
+* 프로젝트는 지속적 개발 단계로 전환됩니다
+
+약정은 장기 실행과 책임감에 대한 준비가 되었음을 의미합니다.
+
+**성장 할당 분배 메커니즘**
+
+배분은 각 참여자의 성장 할당 풀 기여도에 따라 비례적으로 분배됩니다. 풀이 초과 청약되면 배분은 비례 배정되고 사용되지 않은 USDC는 자동으로 환불됩니다.
+
+**비례 배정 계산**
+
+개인 토큰 할당 = (개인 USDC 약정액 / 총 USDC 약정액) x 사용 가능 풀 규모
+
+개인 USDC 사용액 = 개인 토큰 할당 x 고정 토큰 가격
+
+GA 환불 = 개인 USDC 약정액 - 개인 USDC 사용액
+
+**예시:**
+
+사용 가능한 성장 할당 풀: 50,000 토큰
+
+GA 토큰 가격: 토큰당 0.20 USDC
+
+최대 조달 가능 금액: 50,000 x 0.20달러 = 10,000 USDC
+
+모든 참여자가 약정한 총 USDC: 15,000 USDC
+
+Alice: 5,000 USDC 약정 | 0.20달러 기준 25,000 토큰 요청
+
+Bob: 4,000 USDC 약정 | 0.20달러 기준 20,000 토큰 요청
+
+Carol: 3,500 USDC 약정 | 0.20달러 기준 17,500 토큰 요청
+
+Dave: 2,500 USDC 약정 | 0.20달러 기준 12,500 토큰 요청
+
+합계: 15,000 USDC | 75,000 토큰 요청
+
+참여자들이 75,000 토큰을 요청했지만 사용 가능한 것은 50,000개뿐이므로, 풀은 150% 초과 청약되었습니다.
+
+Alice: 33.33% | 16,667 토큰 | 3,333 USDC 사용 | 1,667 USDC 환불
+
+Bob: 26.67% | 13,333 토큰 | 2,667 USDC 사용 | 1,333 USDC 환불
+
+Carol: 23.33% | 11,667 토큰 | 2,333 USDC 사용 | 1,167 USDC 환불
+
+Dave: 16.67% | 8,333 토큰 | 1,667 USDC 사용 | 833 USDC 환불
+
+***
+
+#### 창업자가 60일차 종료 시까지 약정하지 않음
+
+* 시험 기간이 종료됩니다
+* 유동성 풀이 소진됩니다
+* 토큰 발행이 종료됩니다
+* 환불 메커니즘이 작동합니다
+* 축적된 자금은 적격 보유자에게 분배됩니다
+
+프로젝트는 60 Days 프레임워크 안에서 종료됩니다. 추가 자본은 더 이상 해제되지 않습니다.
+
+**토큰 보유자 환불 메커니즘**
+
+창업자가 약정하지 않으면, 남은 자금은 축적된 자금 풀에서 적격 토큰 보유자에게 분배됩니다.
+
+축적된 자금은 세 가지 출처에서 나옵니다:
+
+축적된 자금 = 해제된 ACF 자금 + 창업자 거래세 + LP의 남은 $VIRTUAL
+
+창업자 거래세 = 징수된 1% 거래 수수료의 70%
+
+**1. 해제된 ACF 자금 및 창업자 거래세에서의 환불**
+
+환불 = (보유 토큰 / 적격 보유량) x (해제된 ACF 자금 + 창업자 거래세)
+
+**2. 유동성 풀($VIRTUAL)에서의 환불**
+
+환불 = (보유 토큰 / 적격 보유량, 프리바이 포함) x LP의 남은 $VIRTUAL
+
+**적격 토큰 보유량**
+
+다음 잔액만 환불 계산에 포함됩니다:
+
+* 공개 토큰 출시를 통해 구매한 토큰
+* 스냅샷 시점까지 보유된 생태계 에어드롭
+
+**환불에서 제외되는 토큰 보유분**
+
+* 팀 예약 토큰
+* 해제되지 않은 ACF 배분분
+* 안티-스나이퍼 세금 바이백으로 얻은 토큰
+
+프리바이로 획득한 토큰은 유동성 풀 부분에서만 환불 대상이며, ACF 또는 거래 수수료 환불은 받지 않습니다.
+
+**중요한 토큰 보유자 환불 안내**
+
+환불은 스냅샷 시점의 상대적 보유 비율에 따라 비례 분배됩니다.
+
+60일 기간 동안 자금 잔액이 변할 수 있으므로 전액 환불이 보장되지는 않습니다.
+
+참여하기 전에 프로젝트 세부 사항과 위험을 검토해 주세요.
+
+**환불은 사용 가능한 자금에 따라 달라지며 전액이 보장되지는 않습니다.**
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/60.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

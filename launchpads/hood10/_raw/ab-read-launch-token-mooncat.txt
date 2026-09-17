@@ -1,0 +1,73 @@
+H10HOOD10LaunchboardvaultprofileLaunchConnect
+
+← boardMoon cat0x25E9…4017
+
+$MOONCATMoon catadd to wallet
+
+priced inHMMmeme1.00% feelocked lp
+
+MEEEOOOOOOOOOOOOOOOOOOOOW TO THE MOON
+
+launched by 0x4B11…0e73·contract 0x25E9…4017
+
+price in HMMcandlesbars1m5m1h1d
+
+market cap186,734.75 HMM$4.5K
+
+24h volume0 HMM
+
+holders1
+
+unswept fee0
+
+## Trades
+
+sideprice$MOONCATHMMtrader
+
+buy0.00186735222,218.5414.03710x1F9c…21A1
+
+sell0.00185906864,896.21,621.90xcfe7…0E02
+
+sell0.001891641,764,6563,398.60xd918…B258
+
+buy0.00196082434,850.2848.87340xd918…B258
+
+buy0.00194343439,260.5849.85360xd918…B258
+
+buy0.00192609890,545.31,699.90xd918…B258
+
+buy0.00189164864,896.21,621.90xcfe7…0E02
+
+sell0.001859061,136,6522,137.40x31D6…8419
+
+buy0.001902051,136,6522,137.40x31D6…8419
+
+## Holders
+
+addressbalanceshare
+
+0x1F9c…21A1222,218.50.22%
+
+BuySell
+
+you paybalance —
+
+ETH
+
+≈ $120.24
+
+0.010.050.251
+
+you receive
+
+2,530,496 MOONCAT≈ $114.49
+
+2.5% of supplyprice +5.3%
+
+route: ETH → HMM → $MOONCAT1.00% fee
+
+max slippage0.5%1%3%10%
+
+connect a wallet to trade
+
+hood10 · launchrobinhood chain · id 4663block 52440657

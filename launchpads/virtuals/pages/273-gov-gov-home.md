@@ -1,0 +1,379 @@
+# Virtuals Protocol - Governance forum home (proposal list)
+
+> Source: https://gov.virtuals.io/
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/45-gov-home.png
+Interactive snapshot: _raw/gov/snapshot-gov-home.txt
+
+Connect Wallet
+
+Virtuals Protocol DAO
+
+Oversees governance, treasury, and crucial ecosystem decisions, ensuring integrity and alignment with community goals.
+
+Proposals will only be considered when it is related to $VIRTUAL tokenomics, treasury management, and adjustments to core contributing teams. Decisions for products and applications within ecosystem is under the mandate of the core contributors.
+
+@virtuals_io
+
+Create new proposal
+
+Proposals
+
+Core Contributors only
+
+ProposalVotes forVotes againstTotal votes
+
+To the virtual team.
+
+Defeated
+
+by 0x391...35aB1
+
+Mar 16th, 2026
+
+0
+
+0
+
+0
+
+Limited One-Time Unstake Option for VeVirtual Stakers
+
+Defeated
+
+by 0x9e1...64BAF
+
+Mar 10th, 2026
+
+897.39
+
+0
+
+897.39
+
+post-bonding trading revenue buyback...
+
+Defeated
+
+by 0x391...35aB1
+
+Dec 25th, 2025
+
+0
+
+0
+
+0
+
+post-bonding trading revenue buyback..
+
+Defeated
+
+by 0x391...35aB1
+
+Dec 25th, 2025
+
+0
+
+0
+
+0
+
+post-bonding trading revenue buyback.
+
+Defeated
+
+by 0x391...35aB1
+
+Dec 25th, 2025
+
+0
+
+0
+
+0
+
+post-bonding trading revenue buyback
+
+Defeated
+
+by 0x391...35aB1
+
+Dec 16th, 2025
+
+0
+
+0
+
+0
+
+veVIRTUAL Unstake
+
+Defeated
+
+by 0xEbA...e8AC6
+
+Nov 24th, 2025
+
+72.43k
+
+0
+
+72.43k
+
+Make VVAP against votes more useful
+
+Defeated
+
+by 0x759...3f430
+
+Aug 19th, 2025
+
+170.99k
+
+0
+
+170.99k
+
+Merge $GAME and $CONVO back to $VIRTUAL
+
+Defeated
+
+by 0x759...3f430
+
+Aug 5th, 2025
+
+122.9k
+
+136.37
+
+123.04k
+
+Change DAB and VVAP weights
+
+Defeated
+
+by 0x759...3f430
+
+Jul 30th, 2025
+
+40.33k
+
+2.64
+
+40.33k
+
+Airdrop to veVIRTUAL Stakers with Fees or Revenue Accrued in the Virtual Treasury
+
+Defeated
+
+by 0xEbA...e8AC6
+
+Jul 21st, 2025
+
+102.11k
+
+0
+
+102.11k
+
+Epoch Ascent: A Gamified, NFT-Driven Loyalty & Governance Tier System for Virtuals Protocol
+
+Defeated
+
+by 0x44F...C45fd
+
+Jul 19th, 2025
+
+96.4k
+
+75
+
+96.48k
+
+I dont understand what is the virtual team is doing
+
+Defeated
+
+by 0x391...35aB1
+
+Jul 16th, 2025
+
+219.86k
+
+0
+
+219.86k
+
+One Time veVIRTUAL Withdrawal
+
+Defeated
+
+by 0xEbA...e8AC6
+
+Jul 15th, 2025
+
+123.21k
+
+0
+
+123.21k
+
+Make "by Virtuals" Official Token Name Tag Optional
+
+Defeated
+
+by 0xc2e...1ddF7
+
+Jul 14th, 2025
+
+82.77k
+
+1.24k
+
+84.01k
+
+Limit of Governance Proposals Per 7-Day Period
+
+Defeated
+
+by 0xc2e...1ddF7
+
+Jul 14th, 2025
+
+82.02k
+
+1.92k
+
+83.94k
+
+Proposal to Increase Virgen Points Allocation to $VIRTUAL Stakers from 20% + Airdrop System. Combined for Quorum,,
+
+Defeated
+
+by 0x391...35aB1
+
+Jul 13th, 2025
+
+135.51k
+
+0
+
+135.51k
+
+Proposal to Increase Virgen Points Allocation to $VIRTUAL Stakers from 20% + Airdrop System. Combined for Quorum,
+
+Defeated
+
+by 0x391...35aB1
+
+Jul 12th, 2025
+
+85.54k
+
+0
+
+85.54k
+
+🔥 Calling All Visionaries: Join Me in Forging the Future of AI Agents Across Web3 🔥
+
+Defeated
+
+by 0x44F...C45fd
+
+Jul 12th, 2025
+
+1.11k
+
+0
+
+1.11k
+
+🟠 Important Note to All Voters
+
+Defeated
+
+by 0x4Dc...2C71a
+
+Jul 11th, 2025
+
+42.02
+
+0
+
+42.02
+
+veVIRTUAL Airdrop Revision
+
+Defeated
+
+by 0xEbA...e8AC6
+
+Jul 11th, 2025
+
+221.46k
+
+0
+
+221.46k
+
+Proposal to Increase Virgen Points Allocation to $VIRTUAL Stakers from 20% + Airdrop System. Combined for Quorum...
+
+Defeated
+
+by 0x391...35aB1
+
+Jul 11th, 2025
+
+149.24k
+
+0
+
+149.24k
+
+Virtuals trade Agents AI
+
+Defeated
+
+by 0xfaf...13F5B
+
+Jul 11th, 2025
+
+164.21
+
+84.24k
+
+84.41k
+
+Abuse of Power: If the Core Team Focuses Only on Fund Extraction, Virtual Protocol Will Be at Risk🤔
+
+Defeated
+
+by 0x4Dc...2C71a
+
+Jul 11th, 2025
+
+82.32k
+
+0
+
+82.32k
+
+Request to Core Team: Implementation of Two Key Community-Proposed Products — VTube and MemePad
+
+Defeated
+
+by 0x4Dc...2C71a
+
+Jul 11th, 2025
+
+54.76
+
+82.83k
+
+82.88k
+
+1

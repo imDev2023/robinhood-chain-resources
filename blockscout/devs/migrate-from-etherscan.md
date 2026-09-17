@@ -1,0 +1,601 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Migrate from Etherscan to Blockscout PRO API
+
+> Move Etherscan API calls to the Blockscout PRO API with matching endpoints, more chains, higher rate limits, and lower pricing in minutes.
+
+<Tip>
+  To get started immediately, see our [blog post with simple migration instructions](https://www.blog.blockscout.com/how-to-migrate-your-etherscan-api-calls-to-blockscout/).
+</Tip>
+
+# Etherscan API Alternative — Migrate to Blockscout PRO API
+
+> Same endpoint structure. More chains. Higher limits. Lower price. Migrate in minutes.
+
+## Why Developers Are Switching
+
+Etherscan has reduced free-tier API access for major chains including Base and Optimism. Developers building production applications need reliable, predictable API access.
+
+Blockscout PRO API provides Etherscan-compatible endpoints across 100+ EVM chains with higher rate limits and more generous usage allowances at every pricing tier. Free-tier access is available on all supported chains.
+
+## Side-by-Side Comparison
+
+| Feature                | Blockscout PRO API | Etherscan API  |
+| ---------------------- | ------------------ | -------------- |
+| Free tier RPS          | 5                  | 3              |
+| Free tier chains       | All supported      | Limited        |
+| \$49/mo RPS            | 15                 | 5              |
+| \$49/mo credits/calls  | 100M credits       | 100K calls     |
+| \$199/mo RPS           | 30                 | 10             |
+| \$199/mo credits/calls | 500M credits       | 200K calls     |
+| Multichain access      | Single API key     | Per-chain keys |
+| API keys per account   | Up to 50           | Limited        |
+| Usage dashboard        | Real-time          | Basic          |
+
+At the \$49/mo tier, Blockscout's 100M monthly credits provide roughly 3× more throughput than Etherscan Lite's 100K daily calls.
+
+## Migration Is a Base URL Swap
+
+Both Etherscan V2 and Blockscout PRO API now use a unified multichain endpoint with a chain ID parameter. The APIs are structurally almost identical — migration is a base URL and key swap.
+
+### Etherscan Route
+
+```text theme={null}
+https://api.etherscan.io/v2/api?chainid=1&module=account&action=balance&address=0x...&apikey=YOUR_ETHERSCAN_KEY
+```
+
+### Blockscout PRO API
+
+```text theme={null}
+https://api.blockscout.com/v2/api?chainid=1&module=account&action=balance&address=0x...&apikey=proapi_YOUR_KEY
+```
+
+The only differences: `api.etherscan.io` → `api.blockscout.com` and your API key. Same modules, same actions, same parameters.
+
+Blockscout also supports path-based routing as an alternative (chainid is 1 in the path):
+
+```text theme={null}
+https://api.blockscout.com/1/api?module=account&action=balance&address=0x...&apikey=proapi_YOUR_KEY
+```
+
+### Chain IDs for Common Networks
+
+| Chain            | Chain ID | Etherscan Status                     |
+| ---------------- | -------- | ------------------------------------ |
+| Ethereum Mainnet | `1`      | Available                            |
+| OP Mainnet       | `10`     | Paid only                            |
+| Base Mainnet     | `8453`   | Paid only                            |
+| Arbitrum One     | `42161`  | Available                            |
+| Scroll Mainnet   | `534352` | Available                            |
+| Soneium Mainnet  | `1868`   | Not available (Blockscout exclusive) |
+| Ink Mainnet      | `57073`  | Not available (Blockscout exclusive) |
+| MegaETH Mainnet  | `4326`   | Available                            |
+| Immutable zkEVM  | `13371`  | Not available (Blockscout exclusive) |
+| World Chain      | `480`    | Available                            |
+| Celo Mainnet     | `42220`  | Available                            |
+
+### Complete Supported Chains Comparison: Blockscout vs Etherscan
+
+<Accordion title="Chains listed by Chain ID">
+  **Legend:** ✅ Supported · ❌ Not supported · ⚠️ Paid tier only (Etherscan)
+
+  **Bold** rows = exclusive to one explorer. \\
+
+  * Blockscout: 117 chains \
+    -  Etherscan: 68 chains \\
+  * Shared: 20 chains. 
+
+  | Chain Name                        | Chain ID    | Blockscout Pro API |   Etherscan API  |
+  | :-------------------------------- | :---------- | :----------------: | :--------------: |
+  | Ethereum Mainnet                  | 1           |          ✅         |         ✅        |
+  | **Goerli Testnet**                | 5           |        **✅**       |         ❌        |
+  | OP Mainnet                        | 10          |          ✅         |   ⚠️ Paid only   |
+  | **Rootstock Mainnet**             | 30          |        **✅**       |         ❌        |
+  | **Rootstock Testnet**             | 31          |        **✅**       |         ❌        |
+  | **XDC Mainnet**                   | 50          |          ❌         |       **✅**      |
+  | **XDC Apothem Testnet**           | 51          |          ❌         |       **✅**      |
+  | **BNB Smart Chain Mainnet**       | 56          |          ❌         | **⚠️ Paid only** |
+  | **Ethereum Classic**              | 61          |        **✅**       |         ❌        |
+  | **ETC Mordor Testnet**            | 63          |        **✅**       |         ❌        |
+  | **Shibuya Testnet**               | 81          |        **✅**       |         ❌        |
+  | **Viction Mainnet**               | 88          |        **✅**       |         ❌        |
+  | **Viction Testnet**               | 89          |        **✅**       |         ❌        |
+  | **BNB Smart Chain Testnet**       | 97          |          ❌         | **⚠️ Paid only** |
+  | Gnosis                            | 100         |          ✅         |         ✅        |
+  | **Fuse Mainnet**                  | 122         |        **✅**       |         ❌        |
+  | **Fuse Spark Testnet**            | 123         |        **✅**       |         ❌        |
+  | Unichain Mainnet                  | 130         |          ✅         |         ✅        |
+  | Polygon Mainnet                   | 137         |          ✅         |         ✅        |
+  | **Monad Mainnet**                 | 143         |          ❌         |       **✅**      |
+  | **Sonic Mainnet**                 | 146         |          ❌         |       **✅**      |
+  | **ShimmerEVM Mainnet**            | 148         |        **✅**       |         ❌        |
+  | **HashKey Chain Mainnet**         | 177         |        **✅**       |         ❌        |
+  | **BitTorrent Chain Mainnet**      | 199         |          ❌         |       **✅**      |
+  | **opBNB Mainnet**                 | 204         |          ❌         |       **✅**      |
+  | **TAC Mainnet**                   | 239         |        **✅**       |         ❌        |
+  | **Fraxtal Mainnet**               | 252         |          ❌         |       **✅**      |
+  | **zkSync Sepolia Testnet**        | 300         |        **✅**       |         ❌        |
+  | **Filecoin Mainnet**              | 314         |        **✅**       |         ❌        |
+  | **zkSync Era Mainnet**            | 324         |        **✅**       |         ❌        |
+  | **Shape Mainnet**                 | 360         |        **✅**       |         ❌        |
+  | **OP Goerli Testnet**             | 420         |        **✅**       |         ❌        |
+  | World Chain Mainnet               | 480         |          ✅         |         ✅        |
+  | **Blackfort Mainnet**             | 488         |        **✅**       |         ❌        |
+  | **Astar Mainnet**                 | 592         |        **✅**       |         ❌        |
+  | **Redstone Mainnet**              | 690         |        **✅**       |         ❌        |
+  | **Matchain Mainnet**              | 698         |        **✅**       |         ❌        |
+  | **Social Network Testnet**        | 749         |        **✅**       |         ❌        |
+  | **Stable Mainnet**                | 988         |          ❌         |       **✅**      |
+  | **HyperEVM Mainnet**              | 999         |          ❌         |       **✅**      |
+  | **BitTorrent Chain Testnet**      | 1029        |          ❌         |       **✅**      |
+  | **ShimmerEVM Testnet**            | 1073        |        **✅**       |         ❌        |
+  | **IOTA EVM Testnet**              | 1076        |        **✅**       |         ❌        |
+  | **Lisk Mainnet**                  | 1135        |        **✅**       |         ❌        |
+  | **Moonbeam Mainnet**              | 1284        |          ❌         |       **✅**      |
+  | **Moonriver Mainnet**             | 1285        |          ❌         |       **✅**      |
+  | **Moonbase Alpha Testnet**        | 1287        |          ❌         |       **✅**      |
+  | Unichain Sepolia Testnet          | 1301        |          ✅         |         ✅        |
+  | **Story Aeneid Testnet**          | 1315        |        **✅**       |         ❌        |
+  | **Sei Testnet**                   | 1328        |          ❌         |       **✅**      |
+  | **Sei Mainnet**                   | 1329        |          ❌         |       **✅**      |
+  | **Story Mainnet**                 | 1514        |        **✅**       |         ❌        |
+  | **Reya Network Mainnet**          | 1729        |        **✅**       |         ❌        |
+  | **PlayBlock Mainnet**             | 1829        |        **✅**       |         ❌        |
+  | **Soneium Mainnet**               | 1868        |        **✅**       |         ❌        |
+  | **LightLink Phoenix Mainnet**     | 1890        |        **✅**       |         ❌        |
+  | **LightLink Pegasus Testnet**     | 1891        |        **✅**       |         ❌        |
+  | **Swellchain Mainnet**            | 1923        |          ❌         |       **✅**      |
+  | **Swellchain Testnet**            | 1924        |          ❌         |       **✅**      |
+  | **Soneium Minato Testnet**        | 1946        |        **✅**       |         ❌        |
+  | **Stable Testnet**                | 2201        |          ❌         |       **✅**      |
+  | **KiteAI Mainnet**                | 2365        |        **✅**       |         ❌        |
+  | **KiteAI Mainnet (alt)**          | 2366        |        **✅**       |         ❌        |
+  | **KiteAI Testnet**                | 2368        |        **✅**       |         ❌        |
+  | **TAC St. Petersburg Testnet**    | 2391        |        **✅**       |         ❌        |
+  | **Fraxtal Hoodi Testnet**         | 2523        |          ❌         |       **✅**      |
+  | **Abstract Mainnet**              | 2741        |          ❌         |       **✅**      |
+  | **Nexus Staging Testnet**         | 3941        |        **✅**       |         ❌        |
+  | **Nexus Testnet**                 | 3945        |        **✅**       |         ❌        |
+  | **Lisk Sepolia Testnet**          | 4202        |        **✅**       |         ❌        |
+  | MegaETH Mainnet                   | 4326        |          ✅         |         ✅        |
+  | **Memecore Mainnet**              | 4352        |          ❌         |       **✅**      |
+  | World Chain Sepolia Testnet       | 4801        |          ✅         |         ✅        |
+  | **Blackfort Testnet**             | 4888        |        **✅**       |         ❌        |
+  | **Blackfort Mainnet (legacy)**    | 4999        |        **✅**       |         ❌        |
+  | **Mantle Mainnet**                | 5000        |          ❌         |       **✅**      |
+  | **Mantle Sepolia Testnet**        | 5003        |          ❌         |       **✅**      |
+  | **opBNB Testnet**                 | 5611        |          ❌         |       **✅**      |
+  | MegaETH Testnet                   | 6342        |          ✅         |         ✅        |
+  | **MegaETH Testnet v2**            | 6343        |        **✅**       |         ❌        |
+  | **Everclear Testnet**             | 6398        |        **✅**       |         ❌        |
+  | **ZetaChain Mainnet**             | 7000        |        **✅**       |         ❌        |
+  | **ZetaChain Testnet**             | 7001        |        **✅**       |         ❌        |
+  | **Numine Mainnet**                | 8021        |        **✅**       |         ❌        |
+  | **Zenchain Mainnet**              | 8408        |        **✅**       |         ❌        |
+  | **Base Mainnet**                  | 8453        |          ❌         | **⚠️ Paid only** |
+  | **IOTA EVM Mainnet**              | 8822        |        **✅**       |         ❌        |
+  | **Plasma Mainnet**                | 9745        |          ❌         |       **✅**      |
+  | **Plasma Testnet**                | 9746        |          ❌         |       **✅**      |
+  | **Monad Testnet**                 | 10143       |          ❌         |       **✅**      |
+  | **Gnosis Chiado Testnet**         | 10200       |        **✅**       |         ❌        |
+  | **Tea Sepolia Testnet**           | 10218       |        **✅**       |         ❌        |
+  | **Shape Sepolia Testnet**         | 11011       |        **✅**       |         ❌        |
+  | **Abstract Sepolia Testnet**      | 11124       |          ❌         |       **✅**      |
+  | **Immutable zkEVM Mainnet**       | 13371       |        **✅**       |         ❌        |
+  | **Immutable zkEVM Testnet**       | 13473       |        **✅**       |         ❌        |
+  | **Sonic Testnet**                 | 14601       |          ❌         |       **✅**      |
+  | **Ethereum Holesky Testnet**      | 17000       |        **✅**       |         ❌        |
+  | **Zilliqa EVM Mainnet**           | 32769       |        **✅**       |         ❌        |
+  | **Zilliqa EVM Testnet**           | 33101       |        **✅**       |         ❌        |
+  | **ApeChain Curtis Testnet**       | 33111       |          ❌         |       **✅**      |
+  | **ApeChain Mainnet**              | 33139       |          ❌         |       **✅**      |
+  | **Mode Mainnet**                  | 34443       |        **✅**       |         ❌        |
+  | **EDU Chain Mainnet**             | 41923       |        **✅**       |         ❌        |
+  | Arbitrum One Mainnet              | 42161       |          ✅         |         ✅        |
+  | **Arbitrum Nova Mainnet**         | 42170       |        **✅**       |         ❌        |
+  | Celo Mainnet                      | 42220       |          ✅         |         ✅        |
+  | **Etherlink Mainnet**             | 42793       |        **✅**       |         ❌        |
+  | **Avalanche Fuji Testnet**        | 43113       |          ❌         | **⚠️ Paid only** |
+  | **Avalanche C-Chain**             | 43114       |          ❌         | **⚠️ Paid only** |
+  | **Memecore Testnet**              | 43521       |          ❌         |       **✅**      |
+  | **Metabased Stratos Testnet**     | 51010       |        **✅**       |         ❌        |
+  | **Ink Mainnet**                   | 57073       |        **✅**       |         ❌        |
+  | **Linea Sepolia Testnet**         | 59141       |          ❌         |       **✅**      |
+  | **Linea Mainnet**                 | 59144       |          ❌         |       **✅**      |
+  | **ICB Testnet**                   | 73114       |        **✅**       |         ❌        |
+  | **ICB Mainnet**                   | 73115       |        **✅**       |         ❌        |
+  | **Polygon Amoy Testnet**          | 80002       |          ❌         |       **✅**      |
+  | **Berachain Bepolia Testnet**     | 80069       |          ❌         |       **✅**      |
+  | **Berachain Mainnet**             | 80094       |          ❌         |       **✅**      |
+  | **Blast Mainnet**                 | 81457       |          ❌         |       **✅**      |
+  | **Base Goerli Testnet**           | 84531       |        **✅**       |         ❌        |
+  | Base Sepolia Testnet              | 84532       |          ✅         |   ⚠️ Paid only   |
+  | **Creditcoin Mainnet**            | 102030      |        **✅**       |         ❌        |
+  | **Creditcoin Testnet**            | 102031      |        **✅**       |         ❌        |
+  | **Creditcoin Devnet**             | 102032      |        **✅**       |         ❌        |
+  | **Etherlink Shadownet**           | 127823      |        **✅**       |         ❌        |
+  | **Etherlink Testnet**             | 128123      |        **✅**       |         ❌        |
+  | **Taiko Mainnet**                 | 167000      |          ❌         |       **✅**      |
+  | **Taiko Hoodi**                   | 167013      |          ❌         |       **✅**      |
+  | **Filecoin Calibration Testnet**  | 314159      |        **✅**       |         ❌        |
+  | **World Mobile Testnet**          | 323432      |        **✅**       |         ❌        |
+  | Arbitrum Sepolia Testnet          | 421614      |          ✅         |         ✅        |
+  | Scroll Sepolia Testnet            | 534351      |          ✅         |         ✅        |
+  | Scroll Mainnet                    | 534352      |          ✅         |         ✅        |
+  | Hoodi Testnet                     | 560048      |          ✅         |         ✅        |
+  | **Crosschain Testnet**            | 612044      |        **✅**       |         ❌        |
+  | **Crosschain Mainnet**            | 612055      |        **✅**       |         ❌        |
+  | **EDU Chain Testnet**             | 656476      |        **✅**       |         ❌        |
+  | **Gensyn Testnet**                | 685685      |        **✅**       |         ❌        |
+  | **Pyrope Chain Mainnet**          | 695569      |        **✅**       |         ❌        |
+  | **Katana Bokuto**                 | 737373      |          ❌         |       **✅**      |
+  | **Katana Mainnet**                | 747474      |          ❌         |       **✅**      |
+  | **Ink Sepolia Testnet**           | 763373      |        **✅**       |         ❌        |
+  | **Arc Testnet**                   | 5042002     |        **✅**       |         ❌        |
+  | **Kaigan Mainnet**                | 5278000     |        **✅**       |         ❌        |
+  | **Zora Mainnet**                  | 7777777     |        **✅**       |         ❌        |
+  | **Fluence Mainnet**               | 9999999     |        **✅**       |         ❌        |
+  | **Spotlight Mainnet**             | 10058111    |        **✅**       |         ❌        |
+  | **Spotlight Sepolia Testnet**     | 10058112    |        **✅**       |         ❌        |
+  | Celo Sepolia Testnet              | 11142220    |          ✅         |         ✅        |
+  | Ethereum Sepolia Testnet          | 11155111    |          ✅         |         ✅        |
+  | OP Sepolia Testnet                | 11155420    |          ✅         |   ⚠️ Paid only   |
+  | **Citronus Testnet**              | 34949059    |        **✅**       |         ❌        |
+  | **Fluence Testnet**               | 52164803    |        **✅**       |         ❌        |
+  | **Reya Cronos Testnet**           | 89346162    |        **✅**       |         ❌        |
+  | **Blast Sepolia Testnet**         | 168587773   |          ❌         |       **✅**      |
+  | **Neon EVM Devnet**               | 245022926   |        **✅**       |         ❌        |
+  | **Neon EVM Mainnet**              | 245022934   |        **✅**       |         ❌        |
+  | **OP Interop Alpha 0 Testnet**    | 420120000   |        **✅**       |         ❌        |
+  | **OP Interop Alpha 1 Testnet**    | 420120001   |        **✅**       |         ❌        |
+  | **Polygon CDK Stavanger Testnet** | 686669576   |        **✅**       |         ❌        |
+  | **Eden Testnet**                  | 3735928814  |        **✅**       |         ❌        |
+  | **Arbitrum Blueberry Testnet**    | 88153591557 |        **✅**       |         ❌        |
+</Accordion>
+
+## Migration Checklist
+
+* Create a free account at [dev.blockscout.com](https://dev.blockscout.com)
+* Generate your API key (format: `proapi_xxxxxxxx`)
+* Look up chain IDs for your target networks
+* Update your API client to use `https://api.blockscout.com/v2/api`
+* Replace your Etherscan API key with your Blockscout PRO API key
+* Test core endpoints (account balance, transaction list, contract ABI)
+* Monitor usage and credits in the [developer portal dashboard](https://dev.blockscout.com)
+
+## Additional Blockscout feature set
+
+<Accordion title="Features available on Blockscout vs Etherscan">
+  An itemized list of over 60 features and views available on Blockscout that are not available on Optimistic Etherscan is [available here](https://docs.google.com/spreadsheets/d/1HGw9bh5Iq3xBZlrnrwVOzD_0844zt7PPakkuxVsiS1g/edit?usp=sharing).
+
+  * **DAppscout** DApp marketplace providing dapp discovery and interaction features.
+  * **BENS in addition to ENS support, protocols can submit their subgraphs to be supported. Blockscout allows multiple protocols to co-exist within a single network.**
+  * **Ads and banner control** - Ability to add, remove and curate your own ads/banners
+  * **Public tagging -** a central microservice allows tags enabled on mainnet to be shown on other chains. This is especially useful for malicious address display.
+  * **Vera and BytecodeDB Bytecode** - works for verification info on multiple chains
+  * **Roadmap, research and rollup-specific features**
+    * Rollup-specific feature support (e.g. Fault proofs)
+    * DA support (e.g. [Celestia](https://github.com/blockscout/blockscout/pull/10199))
+</Accordion>
+
+## API Differences
+
+<Accordion title="Endpoint differences between Blockscout & Etherscan">
+  <Tip>
+    The following details endpoint differences between the Optimistic Etherscan and Blockscout Optimism instances. Endpoints vary slightly for different chains.
+  </Tip>
+
+  ### \\
+
+  **1. Account/Address Endpoints**
+
+  `module=account`
+
+  |                              | Blockscout | Etherscan | Purpose                                                 |
+  | :--------------------------- | :--------- | :-------- | :------------------------------------------------------ |
+  | `action=eth_get_balance`     | ✅          | ❌         | Mimics Ethereum JSON RPC's eth\_getBalance              |
+  | `action=balance`             | ✅          | ✅         | Get Ether Balance for Single Address                    |
+  | `action=balancemulti`        | ✅          | ✅         | Get Ether Balance for Multiple Addresses                |
+  | `action=pendingtxlist`       | ✅          | ❌         | Get Pending Transactions by Address                     |
+  | `action=txlist`              | ✅          | ✅         | Get Normal Transactions by Address                      |
+  | `action=txlistinternal`      | ✅          | ✅         | Get Internal Transactions by Address                    |
+  | `action=tokentx`             | ✅          | ✅         | Get ERC20 Token Transfers                               |
+  | `action=tokennfttx`          | ✅          | ✅         | Get ERC721 Token Transfers                              |
+  | `action=token1155tx`         | ✅          | ✅         | Get ERC1155 Token Transfers                             |
+  | `action=token404tx`          | ✅          | ❌         | Get ERC-404 token transfer events by address            |
+  | `action=tokenbalance`        | ✅          | ❌         | Get Token Balance for Address                           |
+  | `action=tokenlist`           | ✅          | ❌         | Get list of tokens owned by address                     |
+  | `action=getminedblocks`      | ✅          | ✅         | Get list of blocks mined by address                     |
+  | `action=listaccounts`        | ✅          | ❌         | Get a list of accounts and their balances               |
+  | `action=txsBeaconWithdrawal` | ❌          | ✅         | Get Beacon Chain Withdrawals by Address and Block Range |
+  | `action=balancehistory`      | ❌          | ✅ (PRO)   | Get Historical Ether Balance for an Address By BlockNo  |
+
+  ### **2. Contract Endpoints**
+
+  ### `module=contract`
+
+  |                                 | Blockscout | Etherscan | Purpose                                                         |
+  | :------------------------------ | :--------- | :-------- | :-------------------------------------------------------------- |
+  | `action=listcontracts`          | ✅          | ❌         | Get list of any deployed contract                               |
+  | `action=getabi`                 | ✅          | ✅         | Get Contract ABI for verified contracts                         |
+  | `action=getsourcecode`          | ✅          | ✅         | Get contract source code for a verified contract                |
+  | `action=getcontractcreation`    | ✅          | ❌         | Get contract creator address hash and creation transaction hash |
+  | `action=verify`                 | ✅          | ❌         | Verify Contract with Source Code                                |
+  | `action=verifysourcecode`       | ✅          | ✅         | Verify Contract with JSON file                                  |
+  | `action=checkverifystatus`      | ✅          | ✅         | Check Verification Status                                       |
+  | `action=verifyproxycontract`    | ✅          | ✅         | Get Internal Transactions by Address                            |
+  | `action=checkproxyverification` | ✅          | ✅         | Get ERC20 Token Transfers                                       |
+  | `action=verify_via_sourcify`    | ✅          | ❌         | Verify a contract through Sourcify                              |
+  | `action=verify_vyper_contract`  | ✅          | ❌         | Verify a Vyper contract                                         |
+
+  ### **3. Transaction Endpoints**
+
+  ### `module=transaction`
+
+  |                             | Blockscout | Etherscan | Purpose                                                       |
+  | :-------------------------- | :--------- | :-------- | :------------------------------------------------------------ |
+  | `action=gettxinfo`          | ✅          | ❌         | Get Transaction info including block number, sender, gas, +++ |
+  | `action=gettxreceiptstatus` | ✅          | ✅         | Get Transaction Receipt Status                                |
+  | `action=getstatus`          | ✅          | ✅         | Get Transaction Execution Status                              |
+
+  ### **4. Block Endpoints**
+
+  **module=block**
+
+  |                                              | Blockscout | Etherscan | Purpose                                                        |
+  | :------------------------------------------- | :--------- | :-------- | :------------------------------------------------------------- |
+  | `action=getblockreward`                      | ✅          | ✅         | Get Block Rewards                                              |
+  | `action=getblockcountdown`                   | ✅          | ✅         | Get Block Countdown                                            |
+  | `action=getblocknobytime`                    | ✅          | ✅         | Get Block Number by Time                                       |
+  | `action=eth_block_number`                    | ✅          | ❌         | Mimics Ethereum JSON RPC's eth\_blockNumber.                   |
+  | <br /><br /><br />`action=dailyavgblocksize` | ❌          | ✅ (PRO)   | Get Daily Average Block Size                                   |
+  | `action=dailyblkcount`                       | ❌          | ✅ (PRO)   | Get Daily Block Count and Rewards                              |
+  | `action=dailyblockrewards`                   | ❌          | ✅ (PRO)   | Get Daily Block Rewards                                        |
+  | `action=dailyavgblocktime`                   | ❌          | ✅ (PRO)   | Get Daily Average Time for A Block to be Included in the chain |
+  | `action=dailyuncleblkcount`                  | ❌          | ✅ (PRO)   | Get Daily Uncle Block Count and Rewards                        |
+
+  ### **5. Token Endpoints**
+
+  ### `module=token`
+
+  Note other endpoints contain token specific information including `module=stats` and `module=account`.
+
+  |                         | Blockscout | Etherscan | Purpose                       |
+  | :---------------------- | :--------- | :-------- | :---------------------------- |
+  | action=getToken         | ✅          | ❌         | Get Token Information         |
+  | action=getTokenHolders  | ✅          | ❌         | Get Token Holders             |
+  | action=bridgedtokenlist | ✅          | ❌         | Get Bridged Tokens            |
+  | action=tokenholderlist  | ❌          | ✅ (PRO)   | Get Token Holders             |
+  | action=tokenholdercount | ❌          | ✅ (PRO)   | Number of ERC20 token holders |
+  | action=tokeninfo        | ❌          | ✅ (PRO)   | Token project info            |
+
+  ### **6. Logs/Events Endpoints**
+
+  ### `module=logs`
+
+  Both Etherscan and Blockscout use the getLogs endpoint which includes enhanced filtering capabilities.
+
+  * ✅ `action=getLogs` - Get Event Logs by Address/Topics/Block Range
+
+  ### **7. Proxy/ETH RPC Endpoints**
+
+  Etherscan uses the Proxy module `module=proxy` to retrieve standard Ethereum JSON-RPC methods.
+
+  For Blockscout, send post requests to\
+  **api.blockscout.com//json-rpc**
+
+  The following methods are supported:
+
+  * eth\_blockNumber
+  * eth\_getBalance
+  * eth\_getLogs
+  * eth\_gasPrice
+  * eth\_getTransactionByHash
+  * eth\_getTransactionReceipt
+  * eth\_chainId
+  * eth\_maxPriorityFeePerGas
+  * eth\_getTransactionCount
+  * eth\_getCode
+  * eth\_getStorageAt
+  * eth\_estimateGas
+  * eth\_getBlockByNumber
+  * eth\_getBlockByHash
+  * eth\_sendRawTransaction
+  * eth\_call
+
+  ### **8. Stats/Network Information**
+
+  ### `module=stats`
+
+  In addition to these stats, Blockscout provides general chain stats via the [REST API](/devs/apis/rest).
+
+  |                       | Blockscout | Etherscan | Purpose                                                                                                                     |
+  | :-------------------- | :--------- | :-------- | :-------------------------------------------------------------------------------------------------------------------------- |
+  | tokensupply           | ✅          | ✅         | Get Token Information                                                                                                       |
+  | ethsupplyexchange     | ✅          | ❌         | total supply in Wei from exchange                                                                                           |
+  | ethsupply             | ✅          | ✅         | Get total supply in Wei from DB                                                                                             |
+  | ethsupply2            | ❌          | ✅         | Get amount of Ether in circulation, ETH2 Staking rewards, EIP1559 burnt fees, and total withdrawn ETH from the beacon chain |
+  | coinsupply            | ✅          | ❌         | Get total coin supply from DB minus burnt number                                                                            |
+  | ethprice              | ✅          | ✅         | Get latest price of native coin in USD and BTC                                                                              |
+  | coinprice             | ✅          | ❌         | Get latest price of native coin in USD and BTC in more general format                                                       |
+  | totalfees             | ✅          | ❌         | Get total transaction fees in Wei paid by users to validators per day                                                       |
+  | chainsize             | ❌          | ✅         | Get the size of the Ethereum blockchain, in bytes, over a date range.                                                       |
+  | nodecount             | ❌          | ✅ (PRO)   | Get total number of discoverable Ethereum nodes                                                                             |
+  | dailytxnfee           | ❌          | ✅ (PRO)   | Get Daily Network Transaction Fee                                                                                           |
+  | dailynewaddress       | ❌          | ✅ (PRO)   | Get Daily New Address Count                                                                                                 |
+  | dailynetutilization   | ❌          | ✅ (PRO)   | Get Daily Network Utilization                                                                                               |
+  | dailyavghashrate      | ❌          | ✅ (PRO)   | Get Daily Average Network Hash Rate                                                                                         |
+  | dailytx               | ❌          | ✅ (PRO)   | Get Daily Transaction Count                                                                                                 |
+  | dailyavgnetdifficulty | ❌          | ✅ (PRO)   | Get Daily Average Network Difficulty                                                                                        |
+  | ethdailyprice         | ❌          | ✅ (PRO)   | Get Ether Historical Price                                                                                                  |
+
+  ### **9. Gas Tracking**
+
+  **Etherscan Gas Tracker** (`module=gastracker`)
+
+  * ✅ `action=gasoracle` - Get Gas Oracle
+  * ✅ `action=gasestimate` - Get Gas Estimate
+
+  **Blockscout**
+
+  * ✅ Gas information integrated into transaction and block data
+</Accordion>
+
+## Supported Modules
+
+Blockscout supports the core Etherscan-compatible modules:
+
+* **`module=account`** — Balances, transaction lists, token transfers, internal transactions (plus Blockscout extras: `eth_get_balance`, `pendingtxlist`, `tokenbalance`, `tokenlist`, `listaccounts`)
+* **`module=contract`** — ABI retrieval, source code, contract verification (plus: `listcontracts`, `getcontractcreation`, Vyper & Sourcify verification)
+* **`module=transaction`** — Transaction status, receipt status (plus: `gettxinfo`)
+* **`module=logs`** — Event logs by address, topics, and block range
+* **`module=token`** — Token info, holder lists
+* **`module=stats`** — Chain statistics, token supply, coin price
+* **`module=block`** — Block rewards, countdown, block number by time
+* **`module=gastracker`** — Gas oracle, gas estimates
+
+## REST API (Beyond Etherscan Compatibility)
+
+The PRO API also exposes Blockscout's modern REST API at:
+
+```text theme={null}
+https://api.blockscout.com/{chain_id}/api/v2/{endpoint}?apikey=proapi_YOUR_KEY
+```
+
+This provides capabilities not available through the Etherscan-compatible interface, including enriched address metadata, decoded transaction data, NFT details, smart contract read/write, and chain health monitoring.
+
+## ETH RPC API
+
+For standard Ethereum JSON-RPC methods, send POST requests to:
+
+```text theme={null}
+https://api.blockscout.com/{chain_id}/json-rpc
+```
+
+With your API key in the `authorization` header:
+
+```bash theme={null}
+curl -H "content-type: application/json" \
+  -H "authorization: Bearer proapi_YOUR_KEY" \
+  -X POST \
+  --data '{"id":0,"jsonrpc":"2.0","method":"eth_blockNumber","params":[]}' \
+  https://api.blockscout.com/10/json-rpc
+```
+
+Supported methods include `eth_blockNumber`, `eth_getBalance`, `eth_getLogs`, `eth_gasPrice`, `eth_getTransactionByHash`, `eth_getTransactionReceipt`, `eth_call`, `eth_estimateGas`, `eth_getBlockByNumber`, `eth_getBlockByHash`, `eth_sendRawTransaction`, and more.
+
+## Common Migration Patterns
+
+### JavaScript / Node.js
+
+```javascript theme={null}
+// Before (Etherscan V2)
+const api = axios.create({
+  baseURL: "https://api.etherscan.io/v2/api",
+  params: { chainid: 1, apikey: process.env.ETHERSCAN_KEY }
+});
+ 
+// After (Blockscout PRO API — same structure, more chains, higher limits)
+const BLOCKSCOUT_KEY = process.env.BLOCKSCOUT_KEY;
+ 
+async function query(chainId, module, action, params = {}) {
+  const resp = await axios.get("https://api.blockscout.com/v2/api", {
+    params: {
+      chainid: chainId,
+      module,
+      action,
+      apikey: BLOCKSCOUT_KEY,
+      ...params
+    }
+  });
+  return resp.data;
+}
+ 
+// Query Ethereum (chainid=1)
+const ethBalance = await query(1, "account", "balance", { address: "0x..." });
+ 
+// Query Base (chainid=8453) — same function, different chainid
+const baseBalance = await query(8453, "account", "balance", { address: "0x..." });
+```
+
+### Python
+
+```python theme={null}
+import requests
+ 
+# Before (Etherscan V2)
+BASE_URL = "https://api.etherscan.io/v2/api"
+API_KEY = os.environ["ETHERSCAN_KEY"]
+ 
+resp = requests.get(BASE_URL, params={
+    "chainid": 1, "module": "account", "action": "balance",
+    "address": addr, "apikey": API_KEY
+})
+ 
+# After (Blockscout PRO API)
+BLOCKSCOUT_KEY = os.environ["BLOCKSCOUT_KEY"]
+ 
+def query(chainid, module, action, **params):
+    resp = requests.get("https://api.blockscout.com/v2/api", params={
+        "chainid": chainid,
+        "module": module,
+        "action": action,
+        "apikey": BLOCKSCOUT_KEY,
+        **params
+    })
+    return resp.json()
+ 
+# Ethereum
+eth_balance = query(1, "account", "balance", address="0x...")
+ 
+# Optimism (chainid=10)
+op_txns = query(10, "account", "txlist", address="0x...", sort="desc")
+```
+
+### Multichain Setup
+
+```javascript theme={null}
+// Both Etherscan V2 and Blockscout PRO API use the same pattern:
+// unified base URL + chain ID. The switch is trivial.
+ 
+const CHAINS = {
+  ethereum: 1,
+  optimism: 10,
+  base: 8453,
+  arbitrum: 42161,
+  scroll: 534352,
+  soneium: 1868,    // Blockscout exclusive
+  ink: 57073,        // Blockscout exclusive
+};
+ 
+async function getBalance(chainName, address) {
+  const chainId = CHAINS[chainName];
+  const res = await fetch(
+    `https://api.blockscout.com/v2/api?chainid=${chainId}&module=account&action=balance&address=${address}&apikey=${API_KEY}`
+  );
+  return res.json();
+}
+```
+
+## Framework Compatibility
+
+Blockscout works with the tools you already use:
+
+* **Ethers.js** — [ethers.org provider docs](https://docs.ethers.org/v6/api/providers/thirdparty/#providers-blockscout)
+* **Hardhat** — [@ericxstone/hardhat-blockscout-verify](https://www.npmjs.com/package/@ericxstone/hardhat-blockscout-verify)
+* **Foundry** — [Foundry verification guide](https://docs.blockscout.com/devs/verification/foundry-verification)
+* **Remix** — Direct deployment and verification support
+
+## Beyond Etherscan Compatibility
+
+Blockscout also provides a modern REST API with capabilities not available through Etherscan-compatible endpoints, including smart contract read/write interactions, advanced token metadata, NFT details, and chain health monitoring.
+
+**→ [REST API Documentation](https://docs.blockscout.com/devs/apis)**
+
+## Start Free, Scale When Ready
+
+No credit card. No chain restrictions. No surprise cutoffs.
+
+**→ [Get Your API Key](https://dev.blockscout.com)**

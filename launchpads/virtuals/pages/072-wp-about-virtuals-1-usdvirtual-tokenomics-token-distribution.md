@@ -1,0 +1,40 @@
+# Virtuals Protocol - Token Distribution
+
+> Source: https://whitepaper.virtuals.io/about-virtuals-1/usdvirtual-tokenomics/token-distribution
+> Retrieved: 2026-09-02 (GitBook .md endpoint via curl)
+
+---
+
+# Token Distribution
+
+<figure><img src="/files/cu9FARXXIephEEYMnvou" alt=""><figcaption><p>Distribution of $VIRTUAL Tokens (Total: 1,000,000,000)</p></figcaption></figure>
+
+**All tokens are fully unlocked and vested**.
+
+The distribution plan for the total supply of 1,000,000,000 $VIRTUAL tokens, which are to be minted without any future inflation, is allocated among different stakeholders within the DAO. Here's a breakdown of the allocation:
+
+1. Public Distribution: 60% (600,000,000 tokens) are now in public circulation.
+2. Liquidity Pool: 5% (50,000,000 tokens) are set aside for the liquidity pool.
+3. Ecosystem: 35% (350,000,000 tokens) is dedicated to the ecosystem treasury. This allocation is earmarked for community incentives and initiatives that drive growth within the VIRTUAL protocol ecosystem. This will sit in a DAO-controlled multi-sig wallet and will not have more than 10% emission per year for the next 3 years, subject to deployment only after receiving governance approval.
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://whitepaper.virtuals.io/about-virtuals-1/usdvirtual-tokenomics/token-distribution.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -1,0 +1,79 @@
+# Long - Dune query 8237922, LONG widget: stock traders vs LONG traders
+
+> Source: https://dune.com/queries/8237922
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/dune/query-8237922.md`
+
+---
+
+-- Distinct traders: tokenized stocks (all venues) vs LONG
+
+-- stock traders = tx_from of any dex.trades row with a stock side + senders of Rialto venue txs
+
+-- LONG traders = q4 tx senders, protocol buyback legs excluded
+
+WITH stock_tokens AS(
+
+SELECT token_address FROM query_8071980 GROUP BY 1
+
+),
+
+long_assets AS(
+
+SELECT DISTINCT asset FROM query_8032167
+
+),
+
+dex_stock AS(
+
+SELECT d.tx_from AS trader,
+
+MAX(CASE WHEN la_b.asset IS NOT NULL OR la_s.asset IS NOT NULL THEN 1 ELSE 0 END)AS traded_long_pair
+
+FROM dex.trades d
+
+LEFT JOIN stock_tokens sb ON sb.token_address=d.token_bought_address
+
+LEFT JOIN stock_tokens ss ON ss.token_address=d.token_sold_address
+
+LEFT JOIN long_assets la_b ON la_b.asset=d.token_bought_address
+
+LEFT JOIN long_assets la_s ON la_s.asset=d.token_sold_address
+
+WHERE d.blockchain='robinhood'
+
+AND d.block_date>=DATE'2026-06-01'
+
+AND(sb.token_address IS NOT NULL OR ss.token_address IS NOT NULL)
+
+GROUP BY 1
+
+),
+
+rialto AS(
+
+SELECT DISTINCT"from"AS trader
+
+FROM robinhood.transactions
+
+WHERE block_date>=DATE'2026-06-01'
+
+AND"to"= 0x4262efbd176f02824af27010bea218429c33c7e8
+
+),
+
+stock_traders AS(
+
+SELECT trader FROM dex_stock
+
+UNION
+
+SELECT trader FROM rialto
+
+),
+
+long_traders AS(
+
+SELECT DISTINCT trader FROM query_8032229 WHERE NOT is_buyback
+
+)

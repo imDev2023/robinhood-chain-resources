@@ -1,0 +1,63 @@
+# Doppler - Roadmap
+
+> Source: https://docs.doppler.lol/reference/roadmap
+> Retrieved: 2026-09-02 (GitBook .md endpoint, saved as `_raw/jina/docs-reference_roadmap.direct.md`)
+
+---
+
+# Roadmap
+
+<figure><img src="/files/P22I7Z8cD2PxDeAko7fw" alt=""><figcaption></figcaption></figure>
+
+Notably this does not include every designed or planned feature, improvement, nor integration. Rather it aims to provide directional insight to communities interested in building with Doppler so they can make more informed decisions about their own integration roadmaps. Additionally this serves as a vehicle by which teams can request other items they’d love to see prioritized.
+
+***It is entirely subject to change.***
+
+**Completed** :white\_check\_mark:
+
+* ~~Protocol & Unichain Network Launch~~ - [Read the Launch announcement](https://x.com/aadams/status/1889362777791168877)
+* ~~Ink Network Support~~ - [Read the Ink announcement](https://x.com/dopplerprotocol/status/1905273707817316510)
+* ~~Base Network Support~~ - [Read the Base announcement](https://x.com/dopplerprotocol/status/1907810739315761221)
+* ~~Doppler Core~~ - [Read the Core announcement](https://x.com/dopplerprotocol/status/1933169128166334882)
+* ~~Doppler Multicurve~~ - [Read the Multicurve announcement](https://x.com/dopplerprotocol/status/1973770809165639855)
+* ~~Monad Network Support~~ - [Read the Monad announcement](https://x.com/dopplerprotocol/status/1992986760205480204)
+* ~~Doppler 404~~ - [Read the DN404 announcement](https://x.com/dopplerprotocol/status/1963646130732081406)
+* ~~Doppler Optimized for Mainnet Ethereum (DOME)~~ - [Read the Ethereum announcement](https://x.com/dopplerprotocol/status/2020928888671699410)
+* ~~Doppler Hooks~~
+* ~~Fee Rehypothecation Hook~~ - [Read the Rehype announcement](https://x.com/dopplerprotocol/status/2019832104746700846)
+* ~~Doppler Frontend Application~~ - [Read the Doppler App announcement](https://x.com/dopplerprotocol/status/2021305070030053586)
+* ~~Decaying Launch Fees~~ - [Read the Decaying Fees announcement](https://x.com/dopplerprotocol/status/2021989921133830359)
+
+**Coming soon:**
+
+* Fee vesting
+* Multi recipient cliff and vesting management
+* Orchestrator contract(s) to manage assets from other contracts
+* Multiple address vesting and cliff management
+* External authentication hooks
+
+**Always ongoing:**
+
+* Additional application integrations
+* Deployments to popular Layer-1's
+* Deployments to popular Layer-2's
+* Developer experience improvements
+
+{% hint style="info" %}
+If you work on project and are interested in integrations or collaborations with Doppler, such as deploying to your protocol, please get in touch at <contact@whetstone.cc> or to a team member directly.
+{% endhint %}
+
+The [Doppler Airlock](https://docs.doppler.lol/how-it-works/airlock-and-modules) makes it seamless to optionally integrate other other smart contract protocols that benefit the token issuance lifecycle. Some of these may include novel sybil resistance mechanisms that can reduce spam or MEV during the price discovery auction. A significant portion of the Doppler roadmap aims to provide a seamless, programmable experience for the initial distribution of assets, as well as their ongoing governance and long term alignment between ecosystem participants.
+
+**Future plans (not in any particular order):**
+
+* New novel auction dynamics
+* Sybil resistance modules
+* Airdrop protocol modules
+* Lending protocol modules
+* More flexible governance structures
+* Customizable fee & MEV redistribution
+
+{% hint style="info" %}
+If you have questions, feedback, or there are other things you would like to see in the Roadmap, please reach out to <contact@whetstone.cc>, a team member directly, or join the [Doppler Telegram](https://doppler.lol/telegram).
+{% endhint %}

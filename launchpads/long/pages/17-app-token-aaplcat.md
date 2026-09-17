@@ -1,0 +1,57 @@
+# Long - Token page, $AAPLCAT anchored to AAPL
+
+> Source: https://app.long.xyz/tokens/0x73a9999f6e9db138e1ae4595fde049a401161e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0x73a9999f6e9db138e1ae4595fde049a401161e18.md`
+
+---
+
+![Image 1: AAPLCAT](https://storage.long.xyz/tokens/0x73a9999f6e9db138e1ae4595fde049a401161e18.jpg)
+
+$AAPLCAT
+
+Apple Cat
+
+Anchored to![Image 2: AAPL](https://app.long.xyz/robinhood-coins/aapl.png)**AAPL**
+
+$1.5M
+
+$1.5M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x73a9999f6e9db138e1ae4595fde049a401161e18)
+
+Claimed$176,473.43
+
+Unclaimed$18.02
+
+Community mode Active
+
+## AAPLCAT Community Vault
+
+Total value$12,846 in the community vault
+
+Locked in vault 15.9M AAPLCAT
+
+Burned 15.9M AAPLCAT 1.59% of supply
+
+*   ![Image 3: AAPL](https://app.long.xyz/robinhood-coins/aapl.png)
+AAPL Apple
+
+39.5284$12,846
+
+Fees cycle into the vault automatically — anyone can send stock tokens straight to the vault address.
+
+Name Apple Cat
+Ticker$AAPLCAT
+CA 0x73a999...1e18
+Anchored to![Image 4: AAPL](https://app.long.xyz/robinhood-coins/aapl.png)AAPL 0xaf3d76...93f9
+Description-
+Social Links-
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0x719a752f07c591328c94ba2d1cb44f11d0eafb98f3caf67566c33ba74061c5b6)
+
+Links/Buttons:
+- [](https://robinhoodchain.blockscout.com/address/0x73a9999f6e9db138e1ae4595fde049a401161e18)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x73a9999f6e9db138e1ae4595fde049a401161e18)
+- [AAPLCAT Community Vault ↗](https://robinhoodchain.blockscout.com/address/0x519999fa7323F26E6A751757D1eD3a57Fa64a61c)
+- [View chart](https://www.defined.fi/robinhood/0x719a752f07c591328c94ba2d1cb44f11d0eafb98f3caf67566c33ba74061c5b6)

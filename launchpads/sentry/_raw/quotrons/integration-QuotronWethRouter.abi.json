@@ -1,0 +1,109 @@
+[
+  {
+    "type": "function",
+    "name": "buyExactEth",
+    "stateMutability": "payable",
+    "inputs": [
+      { "name": "minQuotronOut", "type": "uint256" },
+      { "name": "recipient", "type": "address" },
+      { "name": "deadline", "type": "uint256" }
+    ],
+    "outputs": [
+      { "name": "quotronOut", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "buyExactQuotron",
+    "stateMutability": "payable",
+    "inputs": [
+      { "name": "quotronOut", "type": "uint256" },
+      { "name": "recipient", "type": "address" },
+      { "name": "deadline", "type": "uint256" }
+    ],
+    "outputs": [
+      { "name": "wethSpent", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "sellExactQuotronForEth",
+    "stateMutability": "nonpayable",
+    "inputs": [
+      { "name": "quotronIn", "type": "uint256" },
+      { "name": "minEthOut", "type": "uint256" },
+      { "name": "recipient", "type": "address" },
+      { "name": "deadline", "type": "uint256" }
+    ],
+    "outputs": [
+      { "name": "ethOut", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "poolManager",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "quotron",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "weth",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "hook",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "wethIsCurrency0",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bool" }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Bought",
+    "anonymous": false,
+    "inputs": [
+      { "name": "payer", "type": "address", "indexed": true },
+      { "name": "recipient", "type": "address", "indexed": true },
+      { "name": "wethSpent", "type": "uint256", "indexed": false },
+      { "name": "quotronOut", "type": "uint256", "indexed": false }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "Sold",
+    "anonymous": false,
+    "inputs": [
+      { "name": "payer", "type": "address", "indexed": true },
+      { "name": "recipient", "type": "address", "indexed": true },
+      { "name": "quotronIn", "type": "uint256", "indexed": false },
+      { "name": "ethOut", "type": "uint256", "indexed": false }
+    ]
+  }
+]

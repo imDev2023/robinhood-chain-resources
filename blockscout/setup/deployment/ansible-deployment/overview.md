@@ -1,0 +1,21 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Ansible + Terraform Deployment Overview
+
+> Overview of the Blockscout Ansible playbooks and Terraform modules used to provision and deploy a production blockchain explorer on AWS.
+
+## Playbook Overview
+
+<Info>
+  The playbook infrastructure currently only supports [AWS](/setup/deployment/ansible-deployment#using-aws-codedeploy-to-monitor-and-manage-a-blockscout-deployment) as a cloud provider. If using another provider, please see [manual deployment](/setup/deployment/manual-old-ui).
+</Info>
+
+We use [Ansible](https://docs.ansible.com/ansible/latest/index.html) & [Terraform](https://www.terraform.io/intro/getting-started/install.html) to build the correct infrastructure to run BlockScout. The playbook repository is located at [https://github.com/poanetwork/blockscout-terraform](https://github.com/poanetwork/blockscout-terraform).
+
+In the root folder you will find Ansible Playbooks to create all necessary infrastructure to deploy BlockScout. The `lambda` folder also contains a set of scripts that may be useful in your BlockScout infrastructure.
+
+1. [Deploying the Infrastructure](/setup/deployment/ansible-deployment/deploying-the-blockscout-infrastructure). This section describes all the steps to deploy the virtual hardware that is required for a production instance of BlockScout. Skip this section if you already have an infrastructure and simply want to install or update your BlockScout.
+2. [Deploying BlockScout](/setup/deployment/ansible-deployment/deploying-blockscout). Follow this section to install or update your BlockScout instance.
+3. [Destroying Provisioned Infrastructure](/setup/deployment/ansible-deployment/destroying-provisioned-infrastructure). Refer to this section if you want to destroy your BlockScout installation.

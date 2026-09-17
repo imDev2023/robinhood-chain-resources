@@ -1,0 +1,4 @@
+- button "Close" [ref=e1]
+- heading "How Instant Launches work" [level=2, ref=e2]
+- button "Continue" [ref=e3]
+- link "Learn more" [ref=e4, url=https://support.uniswap.org/hc/en-us/articles/47943121516685-Launching-and-trading-tokens-on-pools-trade]

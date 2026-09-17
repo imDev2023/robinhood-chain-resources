@@ -1,0 +1,6 @@
+{
+  "url": "https://indexer-prod.doppler.lol/",
+  "postData": "{\"query\":\"\\n  query ScheduledLaunchDateV4PoolConfigQuery($hookAddress: String!) {\\n    v4PoolConfigs(where: { hookAddress: $hookAddress }) {\\n      items {\\n        startingTime\\n        endingTime\\n        hookAddress\\n      }\\n    }\\n  }\\n\",\"variables\":{\"hookAddress\":\"0xa9349400def8a8fb8b96763c52870fcadbc8775361dd49e95291486be5141e0a\"},\"operationName\":\"ScheduledLaunchDateV4PoolConfigQuery\"}",
+  "status": 200,
+  "responseSample": "{\"data\":{\"v4PoolConfigs\":{\"items\":[]}}}"
+}

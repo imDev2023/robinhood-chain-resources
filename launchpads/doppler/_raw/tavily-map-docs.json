@@ -1,0 +1,28 @@
+{
+  "base_url": "https://docs.doppler.lol/",
+  "results": [
+    "https://docs.doppler.lol/",
+    "https://docs.doppler.lol/readme.md",
+    "https://docs.doppler.lol/explainer",
+    "https://docs.doppler.lol/llms.txt",
+    "https://docs.doppler.lol/core-concepts/creation-and-initialization",
+    "https://docs.doppler.lol/reference/api-usage",
+    "https://docs.doppler.lol/advanced-features/rehype-pools",
+    "https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides",
+    "https://docs.doppler.lol/reference/security-and-bug-bounties",
+    "https://docs.doppler.lol/core-concepts/supply-curves",
+    "https://docs.doppler.lol/core-concepts/liquidity-migration-options",
+    "https://docs.doppler.lol/core-concepts/price-discovery-auctions",
+    "https://docs.doppler.lol/reference/roadmap",
+    "https://docs.doppler.lol/reference/examples",
+    "https://docs.doppler.lol/reference/contract-addresses",
+    "https://docs.doppler.lol/reference/overview",
+    "https://docs.doppler.lol/advanced-features/doppler-hooks",
+    "https://docs.doppler.lol/reference/quotes-and-swaps",
+    "https://docs.doppler.lol/advanced-features/doppler404",
+    "https://docs.doppler.lol/reference/metadata-standards",
+    "https://docs.doppler.lol/reference/svm-sdk-examples"
+  ],
+  "response_time": 0.96,
+  "request_id": "fd9d1835-4aeb-4ab0-a1c7-fddea368b154"
+}

@@ -1,0 +1,192 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bags.fm/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Initialize Index Token
+
+> Initialize a Bags V2 token on Robinhood Chain as an index token with a basket of tokens to buy and distribute. The token's on-chain creator wallet must belong to the API key's user, and the token must have the required index-token claimer configured.
+
+
+
+## OpenAPI
+
+````yaml POST /evm/rh/index-token/init
+openapi: 3.1.0
+info:
+  title: Bags Public API v2
+  description: API endpoints for Bags platform
+  version: 2.0.0
+  contact:
+    name: Bags Support
+    url: https://support.bags.fm
+servers:
+  - url: https://public-api-v2.bags.fm/api/v1
+    description: Production server
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: Token Launch
+    description: Endpoints for creating and managing token launches
+  - name: Fee Share
+    description: Endpoints for managing fee sharing configs
+  - name: Fee Share Admin
+    description: >-
+      Endpoints for fee share admin operations including listing, transferring
+      admin authority, and updating configs
+  - name: Analytics
+    description: Endpoints for retrieving token analytics and metadata
+  - name: Fee Claiming
+    description: Endpoints for claiming fees from various sources
+  - name: State
+    description: Endpoints for retrieving on-chain state and derived state
+  - name: Trade
+    description: Endpoints for getting trade quotes and executing token swaps
+  - name: Partner
+    description: Endpoints for managing partner configurations and claiming partner fees
+  - name: Solana
+    description: Endpoints for direct Solana blockchain interactions
+  - name: EVM
+    description: Endpoints for reading Bags EVM token data
+  - name: Robinhood Chain
+    description: Read endpoints for Bags V2 tokens on Robinhood Chain (chain id 4663)
+  - name: Dexscreener
+    description: >-
+      Endpoints for managing Dexscreener token info orders, payments, and image
+      uploads
+  - name: Auth
+    description: Endpoints for retrieving authenticated user information
+  - name: Agent
+    description: Endpoints for AI agent wallet-signature authentication (V2)
+paths:
+  /evm/rh/index-token/init:
+    post:
+      tags:
+        - Robinhood Chain
+      summary: Initialize index token
+      description: >-
+        Initialize a Bags V2 token on Robinhood Chain as an index token with a
+        basket of tokens to buy and distribute. The token's on-chain creator
+        wallet must belong to the API key's user, and the token must have the
+        required index-token claimer configured.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                tokenAddress:
+                  type: string
+                  description: >-
+                    Token address to initialize as an index token. Accepts any
+                    casing; normalized to EIP-55 checksum form.
+                tokens:
+                  type: array
+                  items:
+                    type: string
+                  minItems: 1
+                  maxItems: 10
+                  description: >-
+                    Basket token addresses the index token buys and distributes
+                    (1-10).
+              required:
+                - tokenAddress
+                - tokens
+      responses:
+        '200':
+          description: Index token initialized successfully
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/SuccessResponse'
+                  - type: object
+                    properties:
+                      response:
+                        type: string
+                        example: Index token initialized successfully
+        '400':
+          description: Bad request - Invalid token address or basket tokens
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RhErrorResponse'
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '403':
+          description: >-
+            Forbidden - Token creator wallet does not belong to the
+            authenticated user, or the required claimer is not configured for
+            this token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RhErrorResponse'
+        '404':
+          description: Not found - Token is not a Bags token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RhErrorResponse'
+        '409':
+          description: Conflict - Index token has already been initialized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RhErrorResponse'
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RhErrorResponse'
+      security:
+        - ApiKeyAuth: []
+components:
+  schemas:
+    SuccessResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        response:
+          description: ''
+      required:
+        - success
+    RhErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        response:
+          type: string
+          description: Error message describing why the request failed.
+      required:
+        - success
+        - response
+    ErrorResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: string
+          description: Error message
+      required:
+        - success
+        - error
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: API key authentication. Provide your API key as the header value.
+
+````

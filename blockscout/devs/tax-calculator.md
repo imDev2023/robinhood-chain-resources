@@ -1,0 +1,152 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Build a crypto tax calculator with PRO API
+
+> Fetch full wallet history including transactions, internal txs, and token transfers across chains with the Blockscout PRO API for tax reporting.
+
+## Calculate my taxes — fetching full history with Blockscout PRO API
+
+<Note>
+  This example uses REST methods with the PRO API. See the [PRO API overview](/devs/pro-api) for information on creating and using an API key.
+</Note>
+
+You can use the Blockscout API to collect your activity across multiple chains and feed it into an existing tax tool (or vibe code your own!).
+
+The recommended approach combines pulling transactions from several feeds and combining them into a single data source.
+
+In the typescript example at the end we follow this basic flow:
+
+1. get supported chains
+2. resolve → filter mainnets
+3. fetch 1-year history per chain
+4. merge + dedupe
+5. output rows
+
+## Endpoint Summary
+
+The following REST calls can be used to get tax data. Note that `api/v2` calls require a working PRO API key.
+
+| Handle                                                            | Why                                     |
+| ----------------------------------------------------------------- | --------------------------------------- |
+| `GET /api/json/config`                                            | Get all supported chain IDs             |
+| `GET https://chains.blockscout.com/api/chains?chain_ids=...`      | Resolve + filter mainnets               |
+| `GET /{chainid}/api/v2/addresses/{address}/transactions`          | Top-level txs (fees + native transfers) |
+| `GET /{chainid}/api/v2/addresses/{address}/internal-transactions` | Native value inside contract execution  |
+| `GET /{chainid}/api/v2/addresses/{address}/token-transfers`       | ERC20 / NFT movements                   |
+
+### Pull and Combine 3 feeds
+
+**Transactions**
+
+```text theme={null}
+curl "https://api.blockscout.com/1/api/v2/addresses/0xYOURADDRESS/transactions?apikey=YOUR_KEY"
+```
+
+**Internal transactions**
+
+```text theme={null}
+curl "https://api.blockscout.com/1/api/v2/addresses/0xYOURADDRESS/internal-transactions?apikey=YOUR_KEY"
+```
+
+**Token transfers**
+
+```text theme={null}
+curl "https://api.blockscout.com/1/api/v2/addresses/0xYOURADDRESS/token-transfers?apikey=YOUR_KEY"
+```
+
+Complete the following programmatically.
+
+* join by tx hash
+* deduplicate
+* normalize
+
+## Pagination
+
+REST responses use keyset pagination.
+
+When a response includes `next_page_params`, copy that object and append its fields to the next request.
+
+Example (params may include additional items such as value, hash, and date inserted that you won't use):
+
+```json theme={null}
+{
+  "items": [ ... ],
+  "next_page_params": {
+    "block_number": 24464759,
+    "index": 284,
+    "items_count": 50
+  }
+}
+```
+
+Next request:
+
+```bash theme={null}
+curl "https://api.blockscout.com/1/api/v2/addresses/0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045/transactions?block_number=24464759&index=284&items_count=50&apikey=YOUR_KEY"
+```
+
+Then repeat the same pattern with the new `next_page_params` from that response until empty.
+
+***
+
+## TypeScript example
+
+```ts theme={null}
+const API_KEY = process.env.API_KEY!;
+const ADDRESS = "0x...";
+const PRO = "https://api.blockscout.com";
+
+async function getJson(url: string) {
+  const res = await fetch(url, { headers: { Authorization: API_KEY } });
+  return res.json();
+}
+
+async function* paginate(url: string) {
+  const u = new URL(url);
+
+  while (true) {
+    const data = await getJson(u.toString());
+
+    for (const item of data.items) yield item;
+
+    if (!data.next_page_params || !Object.keys(data.next_page_params).length) break;
+
+    for (const [k, v] of Object.entries(data.next_page_params)) {
+      u.searchParams.set(k, String(v));
+    }
+  }
+}
+
+async function main() {
+  const cfg = await getJson(`${PRO}/api/json/config`);
+  const chainIds = Object.keys(cfg.chains);
+
+  const chains = await getJson(
+    `https://chains.blockscout.com/api/chains?chain_ids=${chainIds.join(",")}`
+  );
+
+  const mainnets = Object.entries(chains)
+    .filter(([, c]: any) => !c.isTestnet)
+    .map(([id]) => id);
+
+  for (const chainId of mainnets) {
+    const base = `${PRO}/${chainId}/api/v2`;
+
+    for await (const tx of paginate(`${base}/addresses/${ADDRESS}/transactions?apikey=${API_KEY}`)) {
+      console.log("TX", chainId, tx.hash);
+    }
+
+    for await (const t of paginate(`${base}/addresses/${ADDRESS}/token-transfers?apikey=${API_KEY}`)) {
+      console.log("TOKEN", chainId, t.transaction_hash);
+    }
+
+    for await (const itx of paginate(`${base}/addresses/${ADDRESS}/internal-transactions?apikey=${API_KEY}`)) {
+      console.log("INTERNAL", chainId, itx.transaction_hash);
+    }
+  }
+}
+
+main();
+```

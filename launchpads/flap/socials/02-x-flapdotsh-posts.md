@@ -1,0 +1,41 @@
+# Flap - X timeline @flapdotsh, 20 most recent posts
+
+> Source: https://x.com/flapdotsh
+> Retrieved: 2026-09-02 (X syndication endpoint plus Bright Data x_posts)
+
+---
+
+The X syndication endpoint returns the latest timeline page as JSON with no API key:
+
+```
+https://syndication.twitter.com/srv/timeline-profile/screen-name/flapdotsh
+```
+
+Raw: `_raw/socials/x-syndication-flapdotsh.html` and `.json`, flattened to `_raw/socials/x-syndication-flapdotsh-summary.txt`.
+
+The 20 most recent posts as of capture, id, date, text:
+
+- 2095160537109987462 | Wed Sep 02 14:42:52 +0000 2026 | From memes, chaos, and community nonsense to  @BinanceWallet.  Another Flap-born token just found its way onto Binance Alpha.  Congrats $FLORK fam — keep drawing, keep memeing, keep being weird. 💗  Build on https://t.co/VkAxjvSzr2🦋  https://t.co/gkAnmbvkOO https://t.co/B452uWrrT1
+- 2095124685788979225 | Wed Sep 02 12:20:25 +0000 2026 | Leveraged bStocks are coming to Flap. 🦋  Flap is expanding the programmable asset layer with two new bStock trading pairs:  SOXLB — Bull Semiconductors 3X ETF SOXSB — Bear Semiconductors 3X ETF  Creators can now launch tokens paired directly against leveraged semiconductor https://t.co/tSFnJti8z0
+- 2094818967756112057 | Tue Sep 01 16:05:36 +0000 2026 | Six years of @BNBCHAIN, still early, keep building 🦋 https://t.co/W6m86dMznN
+- 2094440453643117036 | Mon Aug 31 15:01:31 +0000 2026 | https://t.co/noDoRtOcu0
+- 2094085573682315566 | Sun Aug 30 15:31:21 +0000 2026 | BUIDL! 🦋 https://t.co/e6qIlfOkZr
+- 2093371939809382536 | Fri Aug 28 16:15:38 +0000 2026 | FLAP Quote Token updates on @BNBCHAIN  $NFLXB Netflix is now live on Flap.  Weekend Mode On 🎞️📽️  Explore now on https://t.co/9FwWnFwCAv 🦋 https://t.co/0ergcq2NqJ
+- 2093324523894681821 | Fri Aug 28 13:07:13 +0000 2026 | Trenching szn 🦋 https://t.co/sd8ewTPbcq
+- 2092977092757803159 | Thu Aug 27 14:06:39 +0000 2026 | The $100K Flap x @BNBChain Trading Festival is in its final stretch!  $500 in daily volume = a shot at splitting a $10K prize pool.   Every day. For 3 more days. ⏰  Don't fumble the last one → https://t.co/9FwWnFwCAv🦋
+- 2092931158304842164 | Thu Aug 27 11:04:07 +0000 2026 | New stock assets supported as trading pairs on Robinhood Chain @RobinhoodCrypto .  More room for builders to experiment with what happens when memes meet RWA onchain.  Tokens launched with stock trading pairs on Flap can tap into a variety of programmable mechanics — dividends, https://t.co/xqBMYwTna5
+- 2092595382937378926 | Wed Aug 26 12:49:52 +0000 2026 | FLAP Quote Token updates on @BNBCHAIN   $DJTB Trump Media &amp; Technology Group is now live on Flap.  More launch options. More possibilities.  Explore now on https://t.co/9FwWnFwCAv🦋 https://t.co/1BI2muQYuF
+- 2092189261235937660 | Tue Aug 25 09:56:05 +0000 2026 | 🦋🦋🦋🦋 https://t.co/Fog9Ea2kj0
+- 2091839301810352354 | Mon Aug 24 10:45:28 +0000 2026 | RT @BinanceWallet: Binance Alpha would like to share the latest reward distribution arrangements for Stock Meme Coins holdings:  🔸 Binance…
+- 2091827936244670807 | Mon Aug 24 10:00:18 +0000 2026 | FLAP Quote Token updates on @BNBCHAIN   $MSTRB MicroStrategy is now live on Flap.  One of the boldest Bitcoin stories in public markets.   More launch options. More possibilities.  Explore now on https://t.co/ProzXycTgG 🦋 https://t.co/jglW5s5RSM
+- 2091760943063826896 | Mon Aug 24 05:34:06 +0000 2026 | 🦋 Flap x BNB Chain @BNBCHAIN Trading Festival — Airdrop Checker is LIVE!  3 rounds down. 1,500 winners have already been selected and rewarded. 🎁  👉 Simply click the banner on the Flap homepage to access the Airdrop Checker and check if your wallet made the https://t.co/F5UVDGtZ6N
+- 2091559409621319952 | Sun Aug 23 16:13:17 +0000 2026 | avg flap user’s mind 24/7 https://t.co/owDJKD5zH2
+- 2091413835202941314 | Sun Aug 23 06:34:49 +0000 2026 | 🚨 Security Alert  The official Flap account was temporarily compromised earlier. The account has now been fully recovered and secured.  Do NOT trust or click any links related to staking, airdrops, claiming rewards, or wallet connections posted from this account. Flap has NOT
+- 2091136006741500374 | Sat Aug 22 12:10:50 +0000 2026 | Launching a token on @BNBCHAIN just became as simple as having a chat with your AI agent🤖   Try it now through binance agentic wallet @BinanceWallet :  Step 1 — Install the Binance Agentic Wallet skill Step 2 — Sign in to your Agentic Wallet Step 3 — Configure your wallet's https://t.co/f5CbqpKK7z
+- 2090826380753990093 | Fri Aug 21 15:40:29 +0000 2026 | Flap bStocks-paired memes. 🦋 https://t.co/BlIb9QsbEF
+- 2090637752023081321 | Fri Aug 21 03:10:56 +0000 2026 | Flap never sleeps 🦋 https://t.co/lrdxjBYDxh
+- 2090114688789188865 | Wed Aug 19 16:32:28 +0000 2026 | You can now join the $100K Flap x @BNBCHAIN Trading Festival directly via @fomo 🦋  See what the degen is trading. Find your next play. And get into the draw. 👀  $10K every day. 500 winners daily. $100K total. Join now 👉 @fomo
+
+The post that matters most for this archive is `2092931158304842164` of 2026-08-27, which announces stock tokens as trading pairs on Robinhood Chain.
+It is fetched in full at `_raw/socials/bdata-x-post-2092931158304842164.json`.
+That announcement contradicts the Robinhood integration guide in the docs, which still says native ETH is the only enabled quote token on this chain.

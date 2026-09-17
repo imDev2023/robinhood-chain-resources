@@ -1,0 +1,23 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blockscout architecture overview
+
+> Explore Blockscout architecture and organization including indexer, web app, API modes, umbrella project layout, ShareLock, and EVM versions.
+
+<Tip>
+  🚗 [Autoscout is now available](/using-blockscout/autoscout), providing a simple one-click explorer deployment with Blockscout's optimized hosting infrastructure. Use it for early testing, modifications, and launching a full production-grade explorer. [**Get Started Now**](/using-blockscout/autoscout) **and have your explorer up-and-running in minutes.**
+</Tip>
+
+The following pages detail Blockscout architecture and organization:
+
+* [Indexer, Web App, API](/setup/information-and-settings/separate-indexer-web-app-and-api)
+
+* [Umbrella Project Organization](/setup/information-and-settings/umbrella-project)
+
+* [Indexer Architecture Overview](/setup/information-and-settings/indexer-architecture-overview)
+
+* [ShareLock](/setup/information-and-settings/sharelock)
+
+* [EVM Version Information](/setup/information-and-settings/evm-version-information)

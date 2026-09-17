@@ -1,0 +1,35 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Ansible Deployment Prerequisites
+
+> Required software, AWS credentials, and Terraform/Ansible dependencies to run the Blockscout deployment playbooks from a jumpbox or local machine.
+
+Playbooks rely on Terraform, the stateful infrastructure-as-code software tool. It allows you to modify and recreate single and multiple resources depending on your needs.
+
+This version of playbooks supports the multi-hosts deployment, which means that test BlockScout instances can be built on remote machines. In that case, you will need to have Ansible installed on the jumpbox (controller) and all the prerequisites described below, installed on runners.
+
+### Infrastructure Prerequisites
+
+|                                          |                                                                                          |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Dependency name                          | Installation method                                                                      |
+| Terraform >=0.11.11 \<= 0.11.14          | [Installation guide](https://learn.hashicorp.com/terraform/getting-started/install.html) |
+| Python 3                                 | `apt install python3.7`                                                                  |
+| Python3-pip                              | `apt install python3-pip`                                                                |
+| Ansible >=2.8.x                          | `pip3 install ansible`                                                                   |
+| boto & boto3 & botocore python 3 modules | `pip3 install boto boto3 botocore`                                                       |
+
+### BlockScout Prerequisites
+
+|                                        |                                                                                          |
+| -------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Dependency name                        | Installation method                                                                      |
+| Terraform >=0.11 \<= 0.11.14           | [Installation guide](https://learn.hashicorp.com/terraform/getting-started/install.html) |
+| Python 3                               | `apt install python3.7`                                                                  |
+| Python3-pip                            | `apt install python3-pip`                                                                |
+| Ansible >=2.8.x                        | `pip3 install ansible`                                                                   |
+| boto & boto3 & botocore python modules | `pip3 install boto boto3 botocore`                                                       |
+| AWS CLI                                | `pip3 install awscli`                                                                    |
+| All BlockScout prerequisites           | [See BlockScout Requirements](/setup/requirements/requirements)                          |

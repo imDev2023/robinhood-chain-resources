@@ -1,0 +1,244 @@
+# Flap - Create Tax Token with the Stocks IndexVault selected (Robinhood Chain)
+
+> Source: https://flap.sh/launch?chain=robinhood&lang=en (Enable Vault, Browse, IndexVault, Confirm)
+> Retrieved: 2026-09-02 (agent-browser read, no wallet connected)
+
+---
+
+HOMEStoreDocs
+
+Community
+
+XTelegram
+
+More
+
+AI OracleTerms and ConditionsContact Us
+
+Create TokenCREATE
+
+SearchRobinhoodENConnect Wallet
+
+Create TokenCREATESearchRobinhoodConnect Wallet
+
+# Create Tax Token
+
+Create Token
+
+### Basic Information
+
+Cover Image
+
+//Supported File FormatsClick or drag an image herePNG, JPEG, WebP, SVG, GIF, file size limit 3MB
+
+Token Name*
+
+Token Symbol*
+
+Blockchain Network
+
+Robinhood
+
+Token Description
+
+### Select Vault (Optional)
+
+Browse
+
+Enable VaultVault unlocks advanced token features and more ways to play. You can enable it now or explore it later.
+
+### Configure Stocks
+
+Select 1-10 tokenized-stock assets this vault will buy and distribute.
+
+Select 1-10 supported assetsBasket symbol uses the launch token symbolVault allocation is fixed at 100%Dividend bps fixed at 0Minimum holder balance starts at 10,000 tokens
+
+#### Supported Assets
+
+0/10 selected
+
+AAPL
+
+AppleAAPL · Apple • Robinhood Token0xaF3D...93f9
+
+GOOG
+
+GoogleGOOGL · Alphabet Class A • Robinhood Token0x2e08...4FE3
+
+NVDA
+
+NVIDIANVDA · NVIDIA • Robinhood Token0xd060...9EEC
+
+PLTR
+
+PalantirPLTR · Palantir Technologies • Robinhood Token0x894E...4F2A
+
+SPCX
+
+SpaceXSPCX · Space Exploration Technologies Corp. Class A Common Stock • Robinhood Token0x4a0E...5eEa
+
+SPY
+
+S&P 500 IndexSPY · SPDR S&P 500 ETF Trust • Robinhood Token0x117c...4C0C
+
+QQQ
+
+Nasdaq-100 IndexQQQ · Invesco QQQ • Robinhood Token0xD5f3...de68
+
+MU
+
+MicronMU · Micron Technology • Robinhood Token0xfF08...4afD
+
+AMD
+
+AMDAMD · AMD • Robinhood Token0x8692...3fdC
+
+TSLA
+
+TeslaTSLA · Tesla • Robinhood Token0x322F...3b2d
+
+SNDK
+
+SandiskSNDK · Sandisk Corporation • Robinhood Token0xB90A...6400
+
+USO
+
+US Oil ETFUSO · United States Oil Fund • Robinhood Token0xa30F...D344
+
+AMZN
+
+AmazonAMZN · Amazon • Robinhood Token0x12f1...bF54
+
+MSFT
+
+MicrosoftMSFT · Microsoft • Robinhood Token0xe932...2e74
+
+META
+
+MetaMETA · Meta Platforms • Robinhood Token0xc0D6...2f35
+
+#### Dividend Mode
+
+Diamond-hand dividends
+
+Randomly distributes 1%–100% of pending rewards every 1–6 hours to reward long-term holders.
+
+Instant dividends
+
+Every reward is distributed to the Dividend pool immediately, rewarding all eligible holders in real time.
+
+Minimum share balance: 10000 · You can raise this value in the tax allocation section before launch.
+
+Enter the launch token symbol before confirming this vault.
+
+No assets selected.
+
+CancelConfirm
+
+### Payment token*
+
+ETH
+
+### Select DEX for Migration*
+
+PancakeSwapUniswap
+
+### Creator Token Purchase (Optional)
+
+A small creator buy helps secure your token launch by reducing sniper activity. Maximum purchase amount: 800M tokens. Any overpayment will be refunded. Deploy cost: around 0.001 ETH
+
+Purchase amountBalance: - ETH
+
+25%50%75%MAX
+
+ETH
+
+25%50%75%MAX
+
+Estimated receive: 0 Token
+
+Max: 5.1 ETHMaximum purchase: 5.1 ETH
+
+### Anti-Farmer Protection Duration
+
+Anti-Farmer Protection Duration30 day(s)
+
+During the anti-farmer protection period, users will not be able to add liquidity to some V3 pools. This feature ensures that trades occur primarily in the tax liquidity pool during the protection period, improving the stability of token tax revenue. Set 0 days to disable the protection period.
+
+### Token Setting
+
+Buy Tax Rate
+
+0%10%
+
+Sell Tax Rate
+
+0%10%
+
+Anti-Farmer Protection Duration30 day(s)
+
+During the anti-farmer protection period, users will not be able to add liquidity to some V3 pools. This feature ensures that trades occur primarily in the tax liquidity pool during the protection period, improving the stability of token tax revenue. Set 0 days to disable the protection period.
+
+Min: 0 days · Max: 1 year (365 days) · Default: 30 days
+
+### Tax Allocation
+
+100%
+
+Stocks100%
+
+Burn0%
+
+Dividend0%
+
+Liquidity0%
+
+Unallocated0%
+
+Total: 100%Unallocated: 0%
+
+Reset
+
+Stocks
+
+100%
+
+BurnReduce Supply(Reduce Supply)
+
+0%
+
+DividendRewards to Holders(Rewards to Holders)
+
+0%
+
+This vault manages basket dividends externally. The dividend tracker must be set to 0%.
+
+Liquidityadd to liquidity(add to liquidity)
+
+0%
+
+Minimum Balance for Dividend Eligibility (tokens)
+
+Minimum: 10,000 tokens
+
+### Optional Links
+
+Telegram Link
+
+Twitter Link
+
+GitHub Link
+
+YouTube Link
+
+DeBox Link
+
+Website Link
+
+Create Token
+
+Create Token
+
+HOMEStoreDocsCommunityMoreLanguageEN
+
+See `screenshots/14-create-tax-token-indexvault.png`.

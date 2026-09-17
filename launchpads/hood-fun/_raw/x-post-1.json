@@ -1,0 +1,14 @@
+Triggering pipeline collection for x_posts...
+Triggered collection with snapshot ID:sd_mtjkharg250t7r8cq6
+Status: starting - polling again (attempt 1/600)
+Status: starting - polling again (attempt 2/600)
+Status: starting - polling again (attempt 3/600)
+Status: starting - polling again (attempt 4/600)
+Status: starting - polling again (attempt 5/600)
+Status: starting - polling again (attempt 6/600)
+Status: starting - polling again (attempt 7/600)
+Status: starting - polling again (attempt 8/600)
+Status: starting - polling again (attempt 9/600)
+Status: running - polling again (attempt 10/600)
+Data received after 11 attempts
+[{"id":"2075006200635326937","user_posted":"hooddotfun","name":"HOOD","description":"https://t.co/ZNUAPJoAFn is officially live.\n\nThe first token launchpad built for Robinhood Chain.\n\nLaunch in seconds. Fair distribution. Instant liquidity. No code required.\n\nA new standard for how tokens come to market.\n\nStart launching now","date_posted":"2026-07-08T23:56:44.000Z","photos":["https://pbs.twimg.com/media/HMvnI8sasAAXQAe.jpg"],"url":"https://x.com/hooddotfun/status/2075006200635326937","quoted_post":{},"replies":438,"reposts":569,"likes":923,"views":60475,"external_url":"http://hood.fun/","followers":3976,"biography":"Hood is the official launchpad for the Robinhood chain on the EVM network","posts_count":161,"profile_image_link":"https://pbs.twimg.com/profile_images/2076895679960469504/bNasG_cn_normal.png","following":17,"is_verified":true,"quotes":2,"bookmarks":14,"parent_post_details":{"post_id":"2075006200635326937","profile_id":"1889858138909646848","profile_name":"HOOD","date_posted":"2026-07-08T23:56:44.000Z"},"verification_type":"blue","user_id":"1889858138909646848","is_repost":false,"timestamp":"2026-09-02T03:59:25.781Z","input":{"url":"https://x.com/hooddotfun/status/2075006200635326937","country":""}}]

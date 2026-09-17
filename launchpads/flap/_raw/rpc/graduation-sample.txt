@@ -1,0 +1,5 @@
+sampled pairs 500
+graduated in sample: 1 of 500 => 0.20%
+implied graduated tokens ~ 348
+SAMPLE 3000: graduated 2 => 0.067%; implied 116 of 173798
+UniV2 pairs sampled 3000, with a Flap-vanity token: 27 (0.90%) => implied 364 of 40431

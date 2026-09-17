@@ -1,0 +1,79 @@
+H10HOOD10LaunchboardvaultprofileLaunchConnect
+
+← boardGood Boy Points0x7eDa…197a
+
+$GBPGood Boy Pointsadd to wallet
+
+priced inTENDIESmeme2.00% feelocked lp
+
+launched by 0x1A65…88A3·contract 0x7eDa…197a
+
+price in TENDIEScandlesbars1m5m1h1d
+
+market cap162,706.3 TENDIES$3.8K
+
+24h volume0 TENDIES
+
+holders0
+
+unswept fee0
+
+## Trades
+
+sideprice$GBPTENDIEStrader
+
+sell0.00016270631,730,9045,3320x3c09…fa5a
+
+sell0.00017354530,684,9005,499.50x687d…cF26
+
+sell0.00018509024,900,8734,734.70x2122…a2C2
+
+buy0.00019532824,900,8734,734.70x2122…a2C2
+
+buy0.0001850907,367,0961,352.90x3c09…fa5a
+
+buy0.0001822167,484,2541,3530x687d…cF26
+
+sell0.00017936321,897,8564,020.10xc685…89cB
+
+buy0.00018790421,897,8564,020.10xc685…89cB
+
+buy0.00017936323,200,6464,062.40x687d…cF26
+
+buy0.00017093424,363,8084,063.10x3c09…fa5a
+
+## Holders
+
+addressbalanceshare
+
+nobody holds this yet
+
+BuySell
+
+you paybalance —
+
+ETH
+
+≈ $120.24
+
+0.010.050.251
+
+you receive
+
+29,634,877 GBP≈ $113.17
+
+3.0% of supplyprice +6.2%
+
+route: ETH → TENDIES → $GBP2.00% fee
+
+max slippage0.5%1%3%10%
+
+connect a wallet to trade
+
+pays holderslive
+
+Every trade pays $GBP holders in TENDIES. 375.93617 earned so far.
+
+see how it works →
+
+hood10 · launchrobinhood chain · id 4663block 52440339

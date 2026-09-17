@@ -1,0 +1,1073 @@
+{
+ "file_path": "src/v4/CashCatRevenueSplitter.sol",
+ "creation_status": "success",
+ "source_code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\nimport {Ownable2Step, Ownable} from \"@openzeppelin/contracts/access/Ownable2Step.sol\";\nimport {ReentrancyGuard} from \"@openzeppelin/contracts/utils/ReentrancyGuard.sol\";\nimport {IERC20} from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport {IUniswapV3Pool} from \"@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol\";\nimport {IUniswapV3SwapCallback} from \"@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol\";\nimport {IWETH9} from \"./CashCatBuybackBurner.sol\";\n\n/// @title CashCatRevenueSplitter\n/// @notice Receives the platform's share of every pool's fees and divides it\n///         between two CASHCAT lanes and a set of participants paid in ETH.\n///\n///         Two lanes buy CASHCAT on the canonical pool: one sends it to the\n///         dead address, one sends it to the CashCat treasury. Both are permissionless\n///         cranks paying the caller a bounty, and the pool delivers the tokens\n///         to their destination directly \u2014 this contract never custodies\n///         CASHCAT for a single instruction.\n///\n///         Participants accrue ETH and withdraw it. Their share never routes\n///         through a swap, so a thin or hostile CASHCAT pool cannot delay or\n///         reduce what they are owed.\n///\n///         Splitting is lazy: whatever the balance holds beyond the tanks and\n///         the tabs is fresh revenue, divided on the next touch. `receive` is\n///         empty because a payment in must never revert \u2014 the fee engine\n///         pushes the platform share inside a swap's own sweep, and the launch\n///         fee arrives inside a launch.\n///\n///         **Two different treasuries, and they must not be confused.** This\n///         contract is the launchpad's own treasury: the address the fee engine\n///         pushes every pool's platform share to, and the thing\n///         `CashCatHook.treasury` points at. The CashCat treasury is somewhere\n///         else entirely, controlled by CASHCAT rather than by the launchpad,\n///         and it receives tokens this contract buys for it. Money flows one\n///         way, from here to there, and pointing the fee engine at the CashCat\n///         treasury by mistake would send every pool's platform share to an\n///         address that cannot divide it.\n///\n///         Trust model: this contract only ever holds the platform's own\n///         revenue. No creator earnings, no holder funds and no trader's ETH\n///         ever pass through it.\n///\n///         **A participant's tab is protected; a lane's tank is not.** Once\n///         revenue is allocated to a participant, only that participant can\n///         receive it. No owner call moves it, and that includes migration,\n///         which sends the balance less every tab and so cannot reach one.\n///\n///         The lane tanks carry no such protection, and the difference is\n///         larger than a redirection. `setCashcatTreasury` changes where the\n///         treasury lane delivers CASHCAT its tank has already been funded to\n///         buy. `migrate` sends every unspent wei of both tanks to whatever\n///         address it is given: a successor splitter is the intended\n///         destination, but nothing here requires one, and a plain wallet\n///         receives it as ETH. So the owner can withdraw the lanes outright,\n///         not only move them between platform uses.\n///\n///         What that reaches is the platform's own unspent revenue and nothing\n///         else. Participant tabs are subtracted before it; creator earnings,\n///         holder funds and pool liquidity are not in this contract at all.\ncontract CashCatRevenueSplitter is Ownable2Step, ReentrancyGuard, IUniswapV3SwapCallback {\n    error NotPool();\n    error ZeroAddress();\n    error InvalidShare();\n    error InvalidCap();\n    error TokenMismatch();\n    error FeeTierMismatch();\n    error NothingToBuy();\n    error BoughtThisBlock();\n    error BountyPayFailed();\n    error PayoutFailed();\n    error WethPayFailed();\n    error MigrateFailed();\n    error NoParticipants();\n    error DuplicateParticipant();\n\n    event Allocated(uint256 toBurnTank, uint256 toTreasuryTank, uint256 toParticipants);\n    event Bought(address indexed caller, address indexed destination, uint256 ethSpent, uint256 cashcatOut, uint256 bounty);\n    event Collected(address indexed participant, uint256 amount);\n    event SplitUpdated(uint16 burnBps, uint16 treasuryBps, uint256 participantCount);\n    event CashcatTreasuryUpdated(address indexed oldTreasury, address indexed newTreasury);\n    event MaxBuyPerCallUpdated(uint256 oldCap, uint256 newCap);\n    event Migrated(address indexed to, uint256 amount);\n\n    /// @dev CASHCAT has no burn function, and the dead address is the token's\n    ///      established convention for supply taken out of circulation.\n    address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;\n    /// @notice Share of each buy chunk paid to whoever pulls the trigger.\n    uint256 public constant BOUNTY_BPS = 100; // 1% of the chunk\n    uint256 public constant BPS_DENOMINATOR = 10_000;\n    /// @dev Uniswap v3 sqrt price bounds, pinned because v3-core's TickMath\n    ///      targets an older compiler.\n    uint160 private constant MIN_SQRT_RATIO_PLUS_1 = 4295128740;\n    uint160 private constant MAX_SQRT_RATIO_MINUS_1 =\n        1461446703485210103287273052203988822378723970341;\n\n    /// @notice The canonical CASHCAT/WETH v3 pool both lanes buy on. Immutable:\n    ///         if liquidity migrates venue, deploy a successor and repoint the\n    ///         fee engine's treasury pointer.\n    IUniswapV3Pool public immutable pool;\n    IWETH9 public immutable weth;\n    IERC20 public immutable cashcat;\n    /// @dev Which side of the pool WETH sits on, fixed at construction.\n    bool private immutable _wethIsToken0;\n\n    struct Participant {\n        address account;\n        uint16 shareBps;\n    }\n\n    /// @notice Of each incoming wei, the share bought and burned.\n    uint16 public burnShareBps;\n    /// @notice Of each incoming wei, the share bought and sent to the CashCat\n    ///         treasury.\n    uint16 public cashcatTreasuryShareBps;\n    /// @notice Where the CashCat-treasury lane delivers its CASHCAT. NOT this\n    ///         contract, and not the fee engine's treasury pointer \u2014 see the\n    ///         note on the two treasuries above.\n    address public cashcatTreasury;\n    /// @notice Accounts paid in ETH, and their shares. Together with the two\n    ///         lane shares these always sum to `BPS_DENOMINATOR`.\n    Participant[] private _participants;\n\n    /// @notice Most tank ETH a single buy may spend on one lane. Bounds what a\n    ///         sandwich around one public buy can be worth; backlogs drain\n    ///         across blocks.\n    uint256 public maxBuyPerCall;\n\n    /// @notice ETH allocated to buying and burning, not yet spent.\n    uint256 public burnTank;\n    /// @notice ETH allocated to buying for the CashCat treasury, not yet spent.\n    uint256 public cashcatTreasuryTank;\n    /// @notice ETH a participant has accrued and not yet withdrawn.\n    mapping(address => uint256) public owed;\n    /// @notice Sum of every entry in `owed`, so fresh revenue can be told apart\n    ///         from ETH already spoken for.\n    uint256 public totalOwed;\n\n    uint256 private _lastBurnBuyBlock;\n    uint256 private _lastCashcatTreasuryBuyBlock;\n\n    constructor(\n        IUniswapV3Pool pool_,\n        uint24 poolFee_,\n        IERC20 cashcat_,\n        IWETH9 weth_,\n        address cashcatTreasury_,\n        uint16 burnShareBps_,\n        uint16 cashcatTreasuryShareBps_,\n        Participant[] memory participants_,\n        uint256 maxBuyPerCall_,\n        address owner_\n    ) Ownable(owner_) {\n        if (cashcatTreasury_ == address(0)) revert ZeroAddress();\n        if (maxBuyPerCall_ == 0) revert InvalidCap();\n        // The pool must be exactly the CASHCAT/WETH pair, whichever side each\n        // token sits on, and at the intended fee tier \u2014 several CASHCAT/WETH\n        // pools exist at different tiers and depths, so pinning the tier turns\n        // a mistyped successor address into a construction revert rather than a\n        // splitter quietly routing through thin liquidity.\n        address token0 = pool_.token0();\n        address token1 = pool_.token1();\n        bool wethIsToken0 = token0 == address(weth_) && token1 == address(cashcat_);\n        bool wethIsToken1 = token1 == address(weth_) && token0 == address(cashcat_);\n        if (!wethIsToken0 && !wethIsToken1) revert TokenMismatch();\n        if (pool_.fee() != poolFee_) revert FeeTierMismatch();\n        _wethIsToken0 = wethIsToken0;\n        pool = pool_;\n        cashcat = cashcat_;\n        weth = weth_;\n        cashcatTreasury = cashcatTreasury_;\n        maxBuyPerCall = maxBuyPerCall_;\n        _setSplit(burnShareBps_, cashcatTreasuryShareBps_, participants_);\n    }\n\n    receive() external payable {}\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 allocation \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Fresh revenue not yet divided.\n    function unallocated() public view returns (uint256) {\n        return address(this).balance - burnTank - cashcatTreasuryTank - totalOwed;\n    }\n\n    /// @notice Divides whatever has arrived since the last touch. Callable by\n    ///         anyone; every path that moves money calls it first.\n    function allocate() external {\n        _allocate();\n    }\n\n    /// @dev The two lanes round down and the remainder follows the\n    ///      participants, so the sum of the parts is always the whole.\n    function _allocate() private {\n        uint256 fresh = unallocated();\n        if (fresh == 0) return;\n\n        uint256 toBurn = (fresh * burnShareBps) / BPS_DENOMINATOR;\n        uint256 toTreasury = (fresh * cashcatTreasuryShareBps) / BPS_DENOMINATOR;\n        burnTank += toBurn;\n        cashcatTreasuryTank += toTreasury;\n\n        uint256 remaining = fresh - toBurn - toTreasury;\n        uint256 distributed;\n        uint256 count = _participants.length;\n        for (uint256 i; i < count; i++) {\n            // The last participant takes what is left rather than its own\n            // rounded share, so no wei is stranded unallocated.\n            uint256 cut =\n                i == count - 1 ? remaining - distributed : (fresh * _participants[i].shareBps) / BPS_DENOMINATOR;\n            owed[_participants[i].account] += cut;\n            distributed += cut;\n        }\n        totalOwed += remaining;\n        emit Allocated(toBurn, toTreasury, remaining);\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 the two lanes \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Buys CASHCAT with the burn tank and sends it to the dead\n    ///         address. Callable by anyone; pays the caller the bounty.\n    function buyAndBurn() external nonReentrant returns (uint256 cashcatOut) {\n        return _buy(BURN_ADDRESS, true);\n    }\n\n    /// @notice Buys CASHCAT with its lane's tank and sends it to the CashCat\n    ///         treasury. Callable by anyone; pays the caller the bounty.\n    function buyForCashcatTreasury() external nonReentrant returns (uint256 cashcatOut) {\n        return _buy(cashcatTreasury, false);\n    }\n\n    /// @dev One lane's buy. `destination` receives the CASHCAT from the pool\n    ///      directly.\n    function _buy(address destination, bool fromBurnTank) private returns (uint256 cashcatOut) {\n        // Each lane has its own gate, so neither can block the other.\n        if (fromBurnTank) {\n            if (_lastBurnBuyBlock == block.number) revert BoughtThisBlock();\n            _lastBurnBuyBlock = block.number;\n        } else {\n            if (_lastCashcatTreasuryBuyBlock == block.number) revert BoughtThisBlock();\n            _lastCashcatTreasuryBuyBlock = block.number;\n        }\n\n        _allocate();\n        uint256 fuel = fromBurnTank ? burnTank : cashcatTreasuryTank;\n        if (fuel == 0) revert NothingToBuy();\n        uint256 chunk = fuel > maxBuyPerCall ? maxBuyPerCall : fuel;\n        if (fromBurnTank) burnTank = fuel - chunk;\n        else cashcatTreasuryTank = fuel - chunk;\n\n        // Hold back the most the caller could earn so the buy is sized against\n        // ETH that is certainly free to spend.\n        uint256 buyEth = chunk - (chunk * BOUNTY_BPS) / BPS_DENOMINATOR;\n\n        bool zeroForOne = _wethIsToken0; // WETH in\n        (int256 amount0, int256 amount1) = pool.swap(\n            destination,\n            zeroForOne,\n            int256(buyEth),\n            zeroForOne ? MIN_SQRT_RATIO_PLUS_1 : MAX_SQRT_RATIO_MINUS_1,\n            \"\"\n        );\n        uint256 ethSpent = uint256(zeroForOne ? amount0 : amount1);\n        cashcatOut = uint256(-(zeroForOne ? amount1 : amount0));\n        // No bounty for buying nothing: reverting rolls the tank deduction back\n        // too, so an empty pool cannot be milked for bounties.\n        if (cashcatOut == 0) revert NothingToBuy();\n\n        // Earned on the ETH that actually bought, not on the requested chunk,\n        // so a partial fill pays proportionally. Everything neither spent nor\n        // earned returns to the tank, so the balance and the pots cannot\n        // diverge.\n        uint256 bounty = (ethSpent * BOUNTY_BPS) / BPS_DENOMINATOR;\n        if (fromBurnTank) burnTank += chunk - ethSpent - bounty;\n        else cashcatTreasuryTank += chunk - ethSpent - bounty;\n\n        (bool paid,) = msg.sender.call{value: bounty}(\"\");\n        if (!paid) revert BountyPayFailed();\n        emit Bought(msg.sender, destination, ethSpent, cashcatOut, bounty);\n    }\n\n    /// @dev The pool collects payment for a buy here. Only swaps this contract\n    ///      initiated can reach it, and only the canonical pool may collect.\n    function uniswapV3SwapCallback(int256 amount0Delta, int256 amount1Delta, bytes calldata) external override {\n        if (msg.sender != address(pool)) revert NotPool();\n        uint256 due = uint256(_wethIsToken0 ? amount0Delta : amount1Delta);\n        weth.deposit{value: due}();\n        if (!weth.transfer(address(pool), due)) revert WethPayFailed();\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 participants \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Pays a participant everything they have accrued. Callable by\n    ///         anyone, because the destination is fixed and there is nothing to\n    ///         steer. A recipient that cannot receive ETH blocks only itself.\n    function collect(address participant) external nonReentrant returns (uint256 amount) {\n        _allocate();\n        amount = owed[participant];\n        if (amount == 0) return 0;\n        owed[participant] = 0;\n        totalOwed -= amount;\n        (bool ok,) = participant.call{value: amount}(\"\");\n        if (!ok) revert PayoutFailed();\n        emit Collected(participant, amount);\n    }\n\n    function participants() external view returns (Participant[] memory) {\n        return _participants;\n    }\n\n    function participantCount() external view returns (uint256) {\n        return _participants.length;\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 admin \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Retunes how future revenue divides. Everything received so far\n    ///         is allocated under the outgoing split first, so a new split\n    ///         never re-cuts ETH a tank or a tab already holds, and an account\n    ///         dropped from the set keeps whatever it accrued and can still\n    ///         withdraw it.\n    ///\n    ///         This is a statement about this call only. Migration does move a\n    ///         tank, and a successor divides it under its own split \u2014 see the\n    ///         note on tanks and tabs above.\n    function setSplit(uint16 burnBps, uint16 treasuryBps, Participant[] calldata newParticipants)\n        external\n        onlyOwner\n    {\n        _allocate();\n        _setSplit(burnBps, treasuryBps, newParticipants);\n    }\n\n    /// @dev The shares must account for every wei, so the three parts are\n    ///      required to sum to the denominator exactly rather than merely not\n    ///      exceeding it \u2014 a set summing to less would leave revenue\n    ///      permanently unallocated.\n    function _setSplit(uint16 burnBps, uint16 treasuryBps, Participant[] memory newParticipants) private {\n        if (newParticipants.length == 0) revert NoParticipants();\n        uint256 total = uint256(burnBps) + treasuryBps;\n        for (uint256 i; i < newParticipants.length; i++) {\n            if (newParticipants[i].account == address(0)) revert ZeroAddress();\n            if (newParticipants[i].shareBps == 0) revert InvalidShare();\n            for (uint256 j = i + 1; j < newParticipants.length; j++) {\n                if (newParticipants[i].account == newParticipants[j].account) revert DuplicateParticipant();\n            }\n            total += newParticipants[i].shareBps;\n        }\n        if (total != BPS_DENOMINATOR) revert InvalidShare();\n\n        delete _participants;\n        for (uint256 i; i < newParticipants.length; i++) {\n            _participants.push(newParticipants[i]);\n        }\n        burnShareBps = burnBps;\n        cashcatTreasuryShareBps = treasuryBps;\n        emit SplitUpdated(burnBps, treasuryBps, newParticipants.length);\n    }\n\n    /// @notice Repoints the CashCat treasury the buy lane delivers to. This\n    ///         reaches CASHCAT the tank has already been funded to buy, not\n    ///         only future revenue, because the destination is read when the\n    ///         buy runs rather than when the tank was filled.\n    function setCashcatTreasury(address newTreasury) external onlyOwner {\n        if (newTreasury == address(0)) revert ZeroAddress();\n        emit CashcatTreasuryUpdated(cashcatTreasury, newTreasury);\n        cashcatTreasury = newTreasury;\n    }\n\n    function setMaxBuyPerCall(uint256 newCap) external onlyOwner {\n        if (newCap == 0) revert InvalidCap();\n        emit MaxBuyPerCallUpdated(maxBuyPerCall, newCap);\n        maxBuyPerCall = newCap;\n    }\n\n    /// @notice Sends the two lanes and any undivided revenue to `to`. The route\n    ///         out when the CASHCAT venue changes or the arrangement is\n    ///         restructured: deploy the successor, repoint **both** treasury\n    ///         pointers at it \u2014 `CashCatHook.treasury` for the platform share of\n    ///         every trade and `CashCatFactory.treasury` for every launch fee \u2014\n    ///         then migrate.\n    ///\n    ///         What a participant has already accrued stays here and stays\n    ///         withdrawable: the amount sent is the balance less every tab.\n    ///\n    ///         `to` is not required to be a splitter, or a contract. A successor\n    ///         receives the tanks as undifferentiated ETH and divides it under\n    ///         its own split, so a migration does not preserve which lane the\n    ///         money was sitting in; a plain wallet simply receives it as ETH.\n    ///         This is the owner's withdrawal path for the platform's own\n    ///         unspent revenue, and it is deliberately not restricted, because\n    ///         nothing on chain distinguishes a successor splitter from any\n    ///         other address that could hold the funds while one is built.\n    function migrate(address to) external onlyOwner nonReentrant {\n        if (to == address(0)) revert ZeroAddress();\n        _allocate();\n        uint256 amount = address(this).balance - totalOwed;\n        burnTank = 0;\n        cashcatTreasuryTank = 0;\n        if (amount == 0) return;\n        (bool ok,) = to.call{value: amount}(\"\");\n        if (!ok) revert MigrateFailed();\n        emit Migrated(to, amount);\n    }\n}\n",
+ "deployed_bytecode": "0x6080604052600436106101d3575f3560e01c80638699703d116100fd578063df1c455c11610092578063e964275111610062578063e96427511461052d578063f2fde38b14610541578063fa461e3314610560578063fccc28131461057f575f5ffd5b8063df1c455c146104d2578063e1a45218146104e6578063e30c3978146104fb578063e7fa9f7d14610518575f5ffd5b8063abaa9916116100cd578063abaa99161461045f578063ce5494bb14610473578063d70a890814610492578063df18e047146104a7575f5ffd5b80638699703d146103fb5780638da5cb5b1461041057806397b947df1461042c578063aa6df2991461044b575f5ffd5b80634a1c98ad116101735780636c4470fb116101435780636c4470fb14610391578063715018a6146103b25780637776e38d146103c657806379ba5097146103e7575f5ffd5b80634a1c98ad1461031d5780635d57af8d1461033e57806360aeeff61461035d5780636b60b4131461037c575f5ffd5b806316f0115b116101ae57806316f0115b1461026f578063362f04c0146102a25780633de2271c146102b65780633fc8cef3146102ea575f5ffd5b8063027678f3146101de57806306ec16f8146102055780630822a9d514610224575f5ffd5b366101da57005b5f5ffd5b3480156101e9575f5ffd5b506101f2606481565b6040519081526020015b60405180910390f35b348015610210575f5ffd5b506101f261021f366004611710565b610594565b34801561022f575f5ffd5b506102577f000000000000000000000000020bfc650a365f8bb26819deaabf3e21291018b481565b6040516001600160a01b0390911681526020016101fc565b34801561027a575f5ffd5b506102577f000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e31381565b3480156102ad575f5ffd5b506003546101f2565b3480156102c1575f5ffd5b506001546102d790600160a01b900461ffff1681565b60405161ffff90911681526020016101fc565b3480156102f5575f5ffd5b506102577f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad7381565b348015610328575f5ffd5b5061033c610337366004611730565b6106e0565b005b348015610349575f5ffd5b50600254610257906001600160a01b031681565b348015610368575f5ffd5b5061033c610377366004611710565b610749565b348015610387575f5ffd5b506101f260055481565b34801561039c575f5ffd5b506103a56107d3565b6040516101fc9190611747565b3480156103bd575f5ffd5b5061033c610848565b3480156103d1575f5ffd5b506001546102d790600160b01b900461ffff1681565b3480156103f2575f5ffd5b5061033c61085b565b348015610406575f5ffd5b506101f260045481565b34801561041b575f5ffd5b505f546001600160a01b0316610257565b348015610437575f5ffd5b5061033c6104463660046117b3565b6108a4565b348015610456575f5ffd5b506101f2610916565b34801561046a575f5ffd5b5061033c61095a565b34801561047e575f5ffd5b5061033c61048d366004611710565b610962565b34801561049d575f5ffd5b506101f260065481565b3480156104b2575f5ffd5b506101f26104c1366004611710565b60076020525f908152604090205481565b3480156104dd575f5ffd5b506101f2610aaa565b3480156104f1575f5ffd5b506101f261271081565b348015610506575f5ffd5b506001546001600160a01b0316610257565b348015610523575f5ffd5b506101f260085481565b348015610538575f5ffd5b506101f2610ad8565b34801561054c575f5ffd5b5061033c61055b366004611710565b610af7565b34801561056b575f5ffd5b5061033c61057a366004611840565b610b67565b34801561058a575f5ffd5b5061025761dead81565b5f61059d610d25565b6105a5610d53565b506001600160a01b0381165f90815260076020526040812054908190036105cd57505f6106b2565b6001600160a01b0382165f908152600760205260408120819055600880548392906105f99084906118c2565b90915550506040515f906001600160a01b0384169083908381818185875af1925050503d805f8114610646576040519150601f19603f3d011682016040523d82523d5f602084013e61064b565b606091505b505090508061066d57604051630ec6ac4160e21b815260040160405180910390fd5b826001600160a01b03167f8c22f554c81b54107cd95e734e4ef45767214974a540f34ea4a4f8c3fc7b13c3836040516106a891815260200190565b60405180910390a2505b6106db60017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b919050565b6106e8610f3c565b805f036107085760405163195bab4d60e31b815260040160405180910390fd5b60045460408051918252602082018390527fc0c5d7eb21e90bc7ce4313d80ebf2217af9e4b4266c0aec649a1ad3e50183f30910160405180910390a1600455565b610751610f3c565b6001600160a01b0381166107785760405163d92e233d60e01b815260040160405180910390fd5b6002546040516001600160a01b038084169216907f968b966ea7ec2c572443dc81134ca4d4dd2a562972be9635aa51c0193184a659905f90a3600280546001600160a01b0319166001600160a01b0392909216919091179055565b60606003805480602002602001604051908101604052809291908181526020015f905b8282101561083f575f84815260209081902060408051808201909152908401546001600160a01b0381168252600160a01b900461ffff16818301528252600190920191016107f6565b50505050905090565b610850610f3c565b6108595f610f68565b565b60015433906001600160a01b031681146108985760405163118cdaa760e01b81526001600160a01b03821660048201526024015b60405180910390fd5b6108a181610f68565b50565b6108ac610f3c565b6108b4610d53565b61091084848484808060200260200160405190810160405280939291908181526020015f905b82821015610906576108f7604083028601368190038101906118db565b815260200190600101906108da565b5050505050610f81565b50505050565b5f61091f610d25565b61092c61dead6001611273565b905061095760017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b90565b610859610d53565b61096a610f3c565b610972610d25565b6001600160a01b0381166109995760405163d92e233d60e01b815260040160405180910390fd5b6109a1610d53565b5f600854476109b091906118c2565b5f600581905560068190559091508190036109cb5750610a81565b5f826001600160a01b0316826040515f6040518083038185875af1925050503d805f8114610a14576040519150601f19603f3d011682016040523d82523d5f602084013e610a19565b606091505b5050905080610a3b57604051633422dc4160e01b815260040160405180910390fd5b826001600160a01b03167f8b80bd19aea7b735bc6d75db8d6adbe18b28c30d62b3555245eb67b2340caedc83604051610a7691815260200190565b60405180910390a250505b6108a160017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b5f60085460065460055447610abf91906118c2565b610ac991906118c2565b610ad391906118c2565b905090565b5f610ae1610d25565b60025461092c906001600160a01b03165f611273565b610aff610f3c565b600180546001600160a01b0383166001600160a01b03199091168117909155610b2f5f546001600160a01b031690565b6001600160a01b03167f38d16b8cac22d99fc7c124b9cd0de2d3fa1faef420bfe791d8c362d765e2270060405160405180910390a350565b336001600160a01b037f000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e3131614610bb057604051636f61f64160e01b815260040160405180910390fd5b5f7f0000000000000000000000000000000000000000000000000000000000000000610bdc5783610bde565b845b90507f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad736001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004015f604051808303818588803b158015610c39575f5ffd5b505af1158015610c4b573d5f5f3e3d5ffd5b505060405163a9059cbb60e01b81526001600160a01b037f000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e31381166004830152602482018690527f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad7316935063a9059cbb925060440190506020604051808303815f875af1158015610cdd573d5f5f3e3d5ffd5b505050506040513d601f19601f82011682018060405250810190610d019190611942565b610d1e57604051630b0f275560e21b815260040160405180910390fd5b5050505050565b610d2d611612565b60027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b5f610d5c610aaa565b9050805f03610d685750565b6001545f9061271090610d8690600160a01b900461ffff1684611961565b610d909190611978565b6001549091505f9061271090610db190600160b01b900461ffff1685611961565b610dbb9190611978565b90508160055f828254610dce9190611997565b925050819055508060065f828254610de69190611997565b909155505f905081610df884866118c2565b610e0291906118c2565b6003549091505f90815b81811015610edc575f610e206001846118c2565b8214610e6b5761271060038381548110610e3c57610e3c6119aa565b5f91825260209091200154610e5c90600160a01b900461ffff168a611961565b610e669190611978565b610e75565b610e7584866118c2565b90508060075f60038581548110610e8e57610e8e6119aa565b5f9182526020808320909101546001600160a01b0316835282019290925260400181208054909190610ec1908490611997565b90915550610ed190508185611997565b935050600101610e0c565b508260085f828254610eee9190611997565b909155505060408051868152602081018690529081018490527f2daf7483bd1eea3ef9b7f22119cc10298e3a9eac8950530f9a9bfa2c8689a6189060600160405180910390a1505050505050565b5f546001600160a01b031633146108595760405163118cdaa760e01b815233600482015260240161088f565b600180546001600160a01b03191690556108a18161165c565b80515f03610fa2576040516308b6a47360e41b815260040160405180910390fd5b5f610fb461ffff808516908616611997565b90505f5b8251811015611112575f6001600160a01b0316838281518110610fdd57610fdd6119aa565b60200260200101515f01516001600160a01b03160361100f5760405163d92e233d60e01b815260040160405180910390fd5b828181518110611021576110216119aa565b60200260200101516020015161ffff165f036110505760405163040357dd60e21b815260040160405180910390fd5b5f61105c826001611997565b90505b83518110156110da5783818151811061107a5761107a6119aa565b60200260200101515f01516001600160a01b03168483815181106110a0576110a06119aa565b60200260200101515f01516001600160a01b0316036110d25760405163fbae880560e01b815260040160405180910390fd5b60010161105f565b508281815181106110ed576110ed6119aa565b60200260200101516020015161ffff16826111089190611997565b9150600101610fb8565b5061271081146111355760405163040357dd60e21b815260040160405180910390fd5b61114060035f6116b2565b5f5b82518110156111c157600383828151811061115f5761115f6119aa565b6020908102919091018101518254600181810185555f94855293839020825191018054929093015161ffff16600160a01b0275ffffffffffffffffffffffffffffffffffffffffffff199092166001600160a01b039091161717905501611142565b50600180547fffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffff16600160a01b61ffff8781169182027fffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffffff1692909217600160b01b928716928302179092558351604080519384526020840192909252908201527f73745dad7084007f24a17de30756d3ce097d2f0657887f355f5406afb45e43a89060600160405180910390a150505050565b5f81156112a557436009540361129c576040516336b64e0b60e01b815260040160405180910390fd5b436009556112cc565b43600a54036112c7576040516336b64e0b60e01b815260040160405180910390fd5b43600a555b6112d4610d53565b5f826112e2576006546112e6565b6005545b9050805f036113085760405163b2f5368160e01b815260040160405180910390fd5b5f6004548211611318578161131c565b6004545b905083156113365761132e81836118c2565b600555611344565b61134081836118c2565b6006555b5f612710611353606484611961565b61135d9190611978565b61136790836118c2565b90507f00000000000000000000000000000000000000000000000000000000000000005f806001600160a01b037f000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e3131663128acb088a8587816113dd5773fffd8963efd1fc6a506488495d951d5263988d256113e4565b6401000276a45b60405160e086901b7fffffffff000000000000000000000000000000000000000000000000000000001681526001600160a01b03948516600482015292151560248401526044830191909152909116606482015260a060848201525f60a482015260c40160408051808303815f875af1158015611463573d5f5f3e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061148791906119be565b915091505f836114975781611499565b825b9050836114a657826114a8565b815b6114b1906119e0565b9750875f036114d35760405163b2f5368160e01b815260040160405180910390fd5b5f6127106114e2606484611961565b6114ec9190611978565b9050891561152457806114ff83896118c2565b61150991906118c2565b60055f8282546115199190611997565b9091555061154f9050565b8061152f83896118c2565b61153991906118c2565b60065f8282546115499190611997565b90915550505b6040515f90339083908381818185875af1925050503d805f811461158e576040519150601f19603f3d011682016040523d82523d5f602084013e611593565b606091505b50509050806115b557604051630a6cbdcb60e21b815260040160405180910390fd5b60408051848152602081018c90529081018390526001600160a01b038d169033907f7ce543d1780f3bdc3dac42da06c95da802653cd1b212b8d74ec3e3c33ad7095c9060600160405180910390a350505050505050505092915050565b61163e5f60027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f006116ab565b1561085957604051633ee5aeb560e01b815260040160405180910390fd5b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5414919050565b5080545f8255905f5260205f20908101906108a191905b808211156116f657805475ffffffffffffffffffffffffffffffffffffffffffff191681556001016116c9565b5090565b80356001600160a01b03811681146106db575f5ffd5b5f60208284031215611720575f5ffd5b611729826116fa565b9392505050565b5f60208284031215611740575f5ffd5b5035919050565b602080825282518282018190525f918401906040840190835b8181101561179757835180516001600160a01b0316845260209081015161ffff168185015290930192604090920191600101611760565b509095945050505050565b803561ffff811681146106db575f5ffd5b5f5f5f5f606085870312156117c6575f5ffd5b6117cf856117a2565b93506117dd602086016117a2565b9250604085013567ffffffffffffffff8111156117f8575f5ffd5b8501601f81018713611808575f5ffd5b803567ffffffffffffffff81111561181e575f5ffd5b8760208260061b8401011115611832575f5ffd5b949793965060200194505050565b5f5f5f5f60608587031215611853575f5ffd5b8435935060208501359250604085013567ffffffffffffffff811115611877575f5ffd5b8501601f81018713611887575f5ffd5b803567ffffffffffffffff81111561189d575f5ffd5b876020828401011115611832575f5ffd5b634e487b7160e01b5f52601160045260245ffd5b818103818111156118d5576118d56118ae565b92915050565b5f60408284031280156118ec575f5ffd5b506040805190810167ffffffffffffffff8111828210171561191c57634e487b7160e01b5f52604160045260245ffd5b604052611928836116fa565b8152611936602084016117a2565b60208201529392505050565b5f60208284031215611952575f5ffd5b81518015158114611729575f5ffd5b80820281158282048414176118d5576118d56118ae565b5f8261199257634e487b7160e01b5f52601260045260245ffd5b500490565b808201808211156118d5576118d56118ae565b634e487b7160e01b5f52603260045260245ffd5b5f5f604083850312156119cf575f5ffd5b505080516020909101519092909150565b5f600160ff1b82016119f4576119f46118ae565b505f039056fea26469706673582212208539456cad592a4807cd261d9c8fbab04c3b98ee49dc38c8a22fe17bbf7884fd64736f6c634300081c0033",
+ "optimization_enabled": true,
+ "verified_twin_address_hash": null,
+ "is_verified": true,
+ "github_repository_metadata": null,
+ "compiler_settings": {
+  "evmVersion": "cancun",
+  "libraries": {},
+  "metadata": {
+   "appendCBOR": true,
+   "bytecodeHash": "ipfs",
+   "useLiteralContent": false
+  },
+  "optimizer": {
+   "enabled": true,
+   "runs": 800
+  },
+  "outputSelection": {
+   "*": {
+    "": [
+     "*"
+    ],
+    "*": [
+     "*"
+    ]
+   }
+  },
+  "remappings": [
+   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+   "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+   "@uniswap/v3-core/=lib/v3-core/",
+   "@uniswap/v4-core/=lib/v4-core/",
+   "v4-core/=lib/v4-core/",
+   "v4-periphery/=lib/v4-periphery/",
+   "uniswap-hooks/=lib/uniswap-hooks/src/",
+   "forge-std/=lib/forge-std/src/",
+   "lib/uniswap-hooks:@uniswap/v4-core/=lib/v4-core/",
+   "lib/uniswap-hooks:v4-periphery/=lib/v4-periphery/",
+   "lib/v4-periphery:@uniswap/v4-core/=lib/v4-core/",
+   "@ensdomains/=lib/v4-core/node_modules/@ensdomains/",
+   "@uniswap/v4-periphery/=lib/uniswap-hooks/lib/v4-periphery/",
+   "ds-test/=lib/v4-core/lib/forge-std/lib/ds-test/src/",
+   "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+   "forge-gas-snapshot/=lib/v4-periphery/lib/permit2/lib/forge-gas-snapshot/src/",
+   "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+   "hardhat/=lib/v4-core/node_modules/hardhat/",
+   "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+   "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+   "permit2/=lib/v4-periphery/lib/permit2/",
+   "solmate/=lib/v4-core/lib/solmate/",
+   "v3-core/=lib/v3-core/contracts/"
+  ],
+  "viaIR": false
+ },
+ "optimization_runs": 800,
+ "sourcify_repo_url": null,
+ "decoded_constructor_args": [
+  [
+   "0xA70fc67C9F69da90B63a0e4C05D229954574E313",
+   {
+    "internalType": "contract IUniswapV3Pool",
+    "name": "pool_",
+    "type": "address"
+   }
+  ],
+  [
+   "10000",
+   {
+    "internalType": "uint24",
+    "name": "poolFee_",
+    "type": "uint24"
+   }
+  ],
+  [
+   "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+   {
+    "internalType": "contract IERC20",
+    "name": "cashcat_",
+    "type": "address"
+   }
+  ],
+  [
+   "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+   {
+    "internalType": "contract IWETH9",
+    "name": "weth_",
+    "type": "address"
+   }
+  ],
+  [
+   "0xAb2F34f77b396B6B1DaD6eC2fb1aB5550a3b7903",
+   {
+    "internalType": "address",
+    "name": "cashcatTreasury_",
+    "type": "address"
+   }
+  ],
+  [
+   "2500",
+   {
+    "internalType": "uint16",
+    "name": "burnShareBps_",
+    "type": "uint16"
+   }
+  ],
+  [
+   "2500",
+   {
+    "internalType": "uint16",
+    "name": "cashcatTreasuryShareBps_",
+    "type": "uint16"
+   }
+  ],
+  [
+   [
+    [
+     "0x3EA937589eA5eE0FBcCbcCeF29473E7f957a19a5",
+     "1250"
+    ],
+    [
+     "0xb1C7b62F9B623d23a1401f8849F25E8cE0CB6dF2",
+     "1250"
+    ],
+    [
+     "0xA6DAB37220aC3B74dB0E227e4D520898545F1904",
+     "1250"
+    ],
+    [
+     "0xB9B15eec5Ba6b0582fFe1153d26d54fF6C7a95C6",
+     "1250"
+    ]
+   ],
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "internalType": "uint16",
+      "name": "shareBps",
+      "type": "uint16"
+     }
+    ],
+    "internalType": "struct CashCatRevenueSplitter.Participant[]",
+    "name": "participants_",
+    "type": "tuple[]"
+   }
+  ],
+  [
+   "500000000000000000",
+   {
+    "internalType": "uint256",
+    "name": "maxBuyPerCall_",
+    "type": "uint256"
+   }
+  ],
+  [
+   "0xD2DeFbd13aFF22D6989E8C14B4517Ec308079E91",
+   {
+    "internalType": "address",
+    "name": "owner_",
+    "type": "address"
+   }
+  ]
+ ],
+ "compiler_version": "v0.8.28+commit.7893614a",
+ "is_verified_via_verifier_alliance": false,
+ "verified_at": "2026-08-08T17:30:19.710833Z",
+ "implementations": [],
+ "proxy_type": null,
+ "external_libraries": [],
+ "creation_bytecode": "0x610100604052348015610010575f5ffd5b506040516123a43803806123a483398101604081905261002f916107d0565b806001600160a01b03811661005d57604051631e4fbdf760e01b81525f600482015260240160405180910390fd5b6100668161030f565b5060017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00556001600160a01b0386166100b25760405163d92e233d60e01b815260040160405180910390fd5b815f036100d25760405163195bab4d60e31b815260040160405180910390fd5b5f8a6001600160a01b0316630dfe16816040518163ffffffff1660e01b8152600401602060405180830381865afa15801561010f573d5f5f3e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061013391906108a3565b90505f8b6001600160a01b031663d21220a76040518163ffffffff1660e01b8152600401602060405180830381865afa158015610172573d5f5f3e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061019691906108a3565b90505f896001600160a01b0316836001600160a01b03161480156101cb57508a6001600160a01b0316826001600160a01b0316145b90505f8a6001600160a01b0316836001600160a01b031614801561020057508b6001600160a01b0316846001600160a01b0316145b90508115801561020e575080155b1561022c5760405163936bb5ad60e01b815260040160405180910390fd5b8c62ffffff168e6001600160a01b031663ddca3f436040518163ffffffff1660e01b8152600401602060405180830381865afa15801561026e573d5f5f3e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061029291906108c5565b62ffffff16146102b5576040516372a82dc960e01b815260040160405180910390fd5b81151560e0526001600160a01b038e81166080528c811660c0528b811660a052600280546001600160a01b031916918c1691909117905560048690556102fc89898961032b565b5050505050505050505050505050610917565b600180546001600160a01b0319169055610328816105dc565b50565b80515f0361034c576040516308b6a47360e41b815260040160405180910390fd5b5f61035e61ffff8085169086166108de565b90505f5b82518110156104bc575f6001600160a01b031683828151811061038757610387610903565b60200260200101515f01516001600160a01b0316036103b95760405163d92e233d60e01b815260040160405180910390fd5b8281815181106103cb576103cb610903565b60200260200101516020015161ffff165f036103fa5760405163040357dd60e21b815260040160405180910390fd5b5f6104068260016108de565b90505b83518110156104845783818151811061042457610424610903565b60200260200101515f01516001600160a01b031684838151811061044a5761044a610903565b60200260200101515f01516001600160a01b03160361047c5760405163fbae880560e01b815260040160405180910390fd5b600101610409565b5082818151811061049757610497610903565b60200260200101516020015161ffff16826104b291906108de565b9150600101610362565b5061271081146104df5760405163040357dd60e21b815260040160405180910390fd5b6104ea60035f61062b565b5f5b825181101561055c57600383828151811061050957610509610903565b6020908102919091018101518254600181810185555f94855293839020825191018054929093015161ffff16600160a01b026001600160b01b03199092166001600160a01b0390911617179055016104ec565b506001805463ffffffff60a01b1916600160a01b61ffff87811691820261ffff60b01b191692909217600160b01b928716928302179092558351604080519384526020840192909252908201527f73745dad7084007f24a17de30756d3ce097d2f0657887f355f5406afb45e43a89060600160405180910390a150505050565b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5080545f8255905f5260205f209081019061032891905b808211156106605780546001600160b01b0319168155600101610642565b5090565b6001600160a01b0381168114610328575f5ffd5b805162ffffff8116811461068a575f5ffd5b919050565b805161068a81610664565b805161ffff8116811461068a575f5ffd5b634e487b7160e01b5f52604160045260245ffd5b604080519081016001600160401b03811182821017156106e1576106e16106ab565b60405290565b604051601f8201601f191681016001600160401b038111828210171561070f5761070f6106ab565b604052919050565b5f82601f830112610726575f5ffd5b81516001600160401b0381111561073f5761073f6106ab565b61074e60208260051b016106e7565b8082825260208201915060208360061b86010192508583111561076f575f5ffd5b602085015b838110156107c6576040818803121561078b575f5ffd5b6107936106bf565b815161079e81610664565b81526107ac6020830161069a565b602082015280845250602083019250604081019050610774565b5095945050505050565b5f5f5f5f5f5f5f5f5f5f6101408b8d0312156107ea575f5ffd5b8a516107f581610664565b995061080360208c01610678565b985060408b015161081381610664565b60608c015190985061082481610664565b60808c015190975061083581610664565b955061084360a08c0161069a565b945061085160c08c0161069a565b60e08c01519094506001600160401b0381111561086c575f5ffd5b6108788d828e01610717565b6101008d0151909450925061089290506101208c0161068f565b90509295989b9194979a5092959850565b5f602082840312156108b3575f5ffd5b81516108be81610664565b9392505050565b5f602082840312156108d5575f5ffd5b6108be82610678565b808201808211156108fd57634e487b7160e01b5f52601160045260245ffd5b92915050565b634e487b7160e01b5f52603260045260245ffd5b60805160a05160c05160e051611a306109745f395f8181610bb3015261136b01525f61023501525f81816102fb01528181610be20152610c9301525f818161028001528181610b7201528181610c6401526113960152611a305ff3fe6080604052600436106101d3575f3560e01c80638699703d116100fd578063df1c455c11610092578063e964275111610062578063e96427511461052d578063f2fde38b14610541578063fa461e3314610560578063fccc28131461057f575f5ffd5b8063df1c455c146104d2578063e1a45218146104e6578063e30c3978146104fb578063e7fa9f7d14610518575f5ffd5b8063abaa9916116100cd578063abaa99161461045f578063ce5494bb14610473578063d70a890814610492578063df18e047146104a7575f5ffd5b80638699703d146103fb5780638da5cb5b1461041057806397b947df1461042c578063aa6df2991461044b575f5ffd5b80634a1c98ad116101735780636c4470fb116101435780636c4470fb14610391578063715018a6146103b25780637776e38d146103c657806379ba5097146103e7575f5ffd5b80634a1c98ad1461031d5780635d57af8d1461033e57806360aeeff61461035d5780636b60b4131461037c575f5ffd5b806316f0115b116101ae57806316f0115b1461026f578063362f04c0146102a25780633de2271c146102b65780633fc8cef3146102ea575f5ffd5b8063027678f3146101de57806306ec16f8146102055780630822a9d514610224575f5ffd5b366101da57005b5f5ffd5b3480156101e9575f5ffd5b506101f2606481565b6040519081526020015b60405180910390f35b348015610210575f5ffd5b506101f261021f366004611710565b610594565b34801561022f575f5ffd5b506102577f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020016101fc565b34801561027a575f5ffd5b506102577f000000000000000000000000000000000000000000000000000000000000000081565b3480156102ad575f5ffd5b506003546101f2565b3480156102c1575f5ffd5b506001546102d790600160a01b900461ffff1681565b60405161ffff90911681526020016101fc565b3480156102f5575f5ffd5b506102577f000000000000000000000000000000000000000000000000000000000000000081565b348015610328575f5ffd5b5061033c610337366004611730565b6106e0565b005b348015610349575f5ffd5b50600254610257906001600160a01b031681565b348015610368575f5ffd5b5061033c610377366004611710565b610749565b348015610387575f5ffd5b506101f260055481565b34801561039c575f5ffd5b506103a56107d3565b6040516101fc9190611747565b3480156103bd575f5ffd5b5061033c610848565b3480156103d1575f5ffd5b506001546102d790600160b01b900461ffff1681565b3480156103f2575f5ffd5b5061033c61085b565b348015610406575f5ffd5b506101f260045481565b34801561041b575f5ffd5b505f546001600160a01b0316610257565b348015610437575f5ffd5b5061033c6104463660046117b3565b6108a4565b348015610456575f5ffd5b506101f2610916565b34801561046a575f5ffd5b5061033c61095a565b34801561047e575f5ffd5b5061033c61048d366004611710565b610962565b34801561049d575f5ffd5b506101f260065481565b3480156104b2575f5ffd5b506101f26104c1366004611710565b60076020525f908152604090205481565b3480156104dd575f5ffd5b506101f2610aaa565b3480156104f1575f5ffd5b506101f261271081565b348015610506575f5ffd5b506001546001600160a01b0316610257565b348015610523575f5ffd5b506101f260085481565b348015610538575f5ffd5b506101f2610ad8565b34801561054c575f5ffd5b5061033c61055b366004611710565b610af7565b34801561056b575f5ffd5b5061033c61057a366004611840565b610b67565b34801561058a575f5ffd5b5061025761dead81565b5f61059d610d25565b6105a5610d53565b506001600160a01b0381165f90815260076020526040812054908190036105cd57505f6106b2565b6001600160a01b0382165f908152600760205260408120819055600880548392906105f99084906118c2565b90915550506040515f906001600160a01b0384169083908381818185875af1925050503d805f8114610646576040519150601f19603f3d011682016040523d82523d5f602084013e61064b565b606091505b505090508061066d57604051630ec6ac4160e21b815260040160405180910390fd5b826001600160a01b03167f8c22f554c81b54107cd95e734e4ef45767214974a540f34ea4a4f8c3fc7b13c3836040516106a891815260200190565b60405180910390a2505b6106db60017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b919050565b6106e8610f3c565b805f036107085760405163195bab4d60e31b815260040160405180910390fd5b60045460408051918252602082018390527fc0c5d7eb21e90bc7ce4313d80ebf2217af9e4b4266c0aec649a1ad3e50183f30910160405180910390a1600455565b610751610f3c565b6001600160a01b0381166107785760405163d92e233d60e01b815260040160405180910390fd5b6002546040516001600160a01b038084169216907f968b966ea7ec2c572443dc81134ca4d4dd2a562972be9635aa51c0193184a659905f90a3600280546001600160a01b0319166001600160a01b0392909216919091179055565b60606003805480602002602001604051908101604052809291908181526020015f905b8282101561083f575f84815260209081902060408051808201909152908401546001600160a01b0381168252600160a01b900461ffff16818301528252600190920191016107f6565b50505050905090565b610850610f3c565b6108595f610f68565b565b60015433906001600160a01b031681146108985760405163118cdaa760e01b81526001600160a01b03821660048201526024015b60405180910390fd5b6108a181610f68565b50565b6108ac610f3c565b6108b4610d53565b61091084848484808060200260200160405190810160405280939291908181526020015f905b82821015610906576108f7604083028601368190038101906118db565b815260200190600101906108da565b5050505050610f81565b50505050565b5f61091f610d25565b61092c61dead6001611273565b905061095760017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b90565b610859610d53565b61096a610f3c565b610972610d25565b6001600160a01b0381166109995760405163d92e233d60e01b815260040160405180910390fd5b6109a1610d53565b5f600854476109b091906118c2565b5f600581905560068190559091508190036109cb5750610a81565b5f826001600160a01b0316826040515f6040518083038185875af1925050503d805f8114610a14576040519150601f19603f3d011682016040523d82523d5f602084013e610a19565b606091505b5050905080610a3b57604051633422dc4160e01b815260040160405180910390fd5b826001600160a01b03167f8b80bd19aea7b735bc6d75db8d6adbe18b28c30d62b3555245eb67b2340caedc83604051610a7691815260200190565b60405180910390a250505b6108a160017f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b5f60085460065460055447610abf91906118c2565b610ac991906118c2565b610ad391906118c2565b905090565b5f610ae1610d25565b60025461092c906001600160a01b03165f611273565b610aff610f3c565b600180546001600160a01b0383166001600160a01b03199091168117909155610b2f5f546001600160a01b031690565b6001600160a01b03167f38d16b8cac22d99fc7c124b9cd0de2d3fa1faef420bfe791d8c362d765e2270060405160405180910390a350565b336001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001614610bb057604051636f61f64160e01b815260040160405180910390fd5b5f7f0000000000000000000000000000000000000000000000000000000000000000610bdc5783610bde565b845b90507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031663d0e30db0826040518263ffffffff1660e01b81526004015f604051808303818588803b158015610c39575f5ffd5b505af1158015610c4b573d5f5f3e3d5ffd5b505060405163a9059cbb60e01b81526001600160a01b037f000000000000000000000000000000000000000000000000000000000000000081166004830152602482018690527f000000000000000000000000000000000000000000000000000000000000000016935063a9059cbb925060440190506020604051808303815f875af1158015610cdd573d5f5f3e3d5ffd5b505050506040513d601f19601f82011682018060405250810190610d019190611942565b610d1e57604051630b0f275560e21b815260040160405180910390fd5b5050505050565b610d2d611612565b60027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f0055565b5f610d5c610aaa565b9050805f03610d685750565b6001545f9061271090610d8690600160a01b900461ffff1684611961565b610d909190611978565b6001549091505f9061271090610db190600160b01b900461ffff1685611961565b610dbb9190611978565b90508160055f828254610dce9190611997565b925050819055508060065f828254610de69190611997565b909155505f905081610df884866118c2565b610e0291906118c2565b6003549091505f90815b81811015610edc575f610e206001846118c2565b8214610e6b5761271060038381548110610e3c57610e3c6119aa565b5f91825260209091200154610e5c90600160a01b900461ffff168a611961565b610e669190611978565b610e75565b610e7584866118c2565b90508060075f60038581548110610e8e57610e8e6119aa565b5f9182526020808320909101546001600160a01b0316835282019290925260400181208054909190610ec1908490611997565b90915550610ed190508185611997565b935050600101610e0c565b508260085f828254610eee9190611997565b909155505060408051868152602081018690529081018490527f2daf7483bd1eea3ef9b7f22119cc10298e3a9eac8950530f9a9bfa2c8689a6189060600160405180910390a1505050505050565b5f546001600160a01b031633146108595760405163118cdaa760e01b815233600482015260240161088f565b600180546001600160a01b03191690556108a18161165c565b80515f03610fa2576040516308b6a47360e41b815260040160405180910390fd5b5f610fb461ffff808516908616611997565b90505f5b8251811015611112575f6001600160a01b0316838281518110610fdd57610fdd6119aa565b60200260200101515f01516001600160a01b03160361100f5760405163d92e233d60e01b815260040160405180910390fd5b828181518110611021576110216119aa565b60200260200101516020015161ffff165f036110505760405163040357dd60e21b815260040160405180910390fd5b5f61105c826001611997565b90505b83518110156110da5783818151811061107a5761107a6119aa565b60200260200101515f01516001600160a01b03168483815181106110a0576110a06119aa565b60200260200101515f01516001600160a01b0316036110d25760405163fbae880560e01b815260040160405180910390fd5b60010161105f565b508281815181106110ed576110ed6119aa565b60200260200101516020015161ffff16826111089190611997565b9150600101610fb8565b5061271081146111355760405163040357dd60e21b815260040160405180910390fd5b61114060035f6116b2565b5f5b82518110156111c157600383828151811061115f5761115f6119aa565b6020908102919091018101518254600181810185555f94855293839020825191018054929093015161ffff16600160a01b0275ffffffffffffffffffffffffffffffffffffffffffff199092166001600160a01b039091161717905501611142565b50600180547fffffffffffffffff00000000ffffffffffffffffffffffffffffffffffffffff16600160a01b61ffff8781169182027fffffffffffffffff0000ffffffffffffffffffffffffffffffffffffffffffff1692909217600160b01b928716928302179092558351604080519384526020840192909252908201527f73745dad7084007f24a17de30756d3ce097d2f0657887f355f5406afb45e43a89060600160405180910390a150505050565b5f81156112a557436009540361129c576040516336b64e0b60e01b815260040160405180910390fd5b436009556112cc565b43600a54036112c7576040516336b64e0b60e01b815260040160405180910390fd5b43600a555b6112d4610d53565b5f826112e2576006546112e6565b6005545b9050805f036113085760405163b2f5368160e01b815260040160405180910390fd5b5f6004548211611318578161131c565b6004545b905083156113365761132e81836118c2565b600555611344565b61134081836118c2565b6006555b5f612710611353606484611961565b61135d9190611978565b61136790836118c2565b90507f00000000000000000000000000000000000000000000000000000000000000005f806001600160a01b037f00000000000000000000000000000000000000000000000000000000000000001663128acb088a8587816113dd5773fffd8963efd1fc6a506488495d951d5263988d256113e4565b6401000276a45b60405160e086901b7fffffffff000000000000000000000000000000000000000000000000000000001681526001600160a01b03948516600482015292151560248401526044830191909152909116606482015260a060848201525f60a482015260c40160408051808303815f875af1158015611463573d5f5f3e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061148791906119be565b915091505f836114975781611499565b825b9050836114a657826114a8565b815b6114b1906119e0565b9750875f036114d35760405163b2f5368160e01b815260040160405180910390fd5b5f6127106114e2606484611961565b6114ec9190611978565b9050891561152457806114ff83896118c2565b61150991906118c2565b60055f8282546115199190611997565b9091555061154f9050565b8061152f83896118c2565b61153991906118c2565b60065f8282546115499190611997565b90915550505b6040515f90339083908381818185875af1925050503d805f811461158e576040519150601f19603f3d011682016040523d82523d5f602084013e611593565b606091505b50509050806115b557604051630a6cbdcb60e21b815260040160405180910390fd5b60408051848152602081018c90529081018390526001600160a01b038d169033907f7ce543d1780f3bdc3dac42da06c95da802653cd1b212b8d74ec3e3c33ad7095c9060600160405180910390a350505050505050505092915050565b61163e5f60027f9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f006116ab565b1561085957604051633ee5aeb560e01b815260040160405180910390fd5b5f80546001600160a01b038381166001600160a01b0319831681178455604051919092169283917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e09190a35050565b5414919050565b5080545f8255905f5260205f20908101906108a191905b808211156116f657805475ffffffffffffffffffffffffffffffffffffffffffff191681556001016116c9565b5090565b80356001600160a01b03811681146106db575f5ffd5b5f60208284031215611720575f5ffd5b611729826116fa565b9392505050565b5f60208284031215611740575f5ffd5b5035919050565b602080825282518282018190525f918401906040840190835b8181101561179757835180516001600160a01b0316845260209081015161ffff168185015290930192604090920191600101611760565b509095945050505050565b803561ffff811681146106db575f5ffd5b5f5f5f5f606085870312156117c6575f5ffd5b6117cf856117a2565b93506117dd602086016117a2565b9250604085013567ffffffffffffffff8111156117f8575f5ffd5b8501601f81018713611808575f5ffd5b803567ffffffffffffffff81111561181e575f5ffd5b8760208260061b8401011115611832575f5ffd5b949793965060200194505050565b5f5f5f5f60608587031215611853575f5ffd5b8435935060208501359250604085013567ffffffffffffffff811115611877575f5ffd5b8501601f81018713611887575f5ffd5b803567ffffffffffffffff81111561189d575f5ffd5b876020828401011115611832575f5ffd5b634e487b7160e01b5f52601160045260245ffd5b818103818111156118d5576118d56118ae565b92915050565b5f60408284031280156118ec575f5ffd5b506040805190810167ffffffffffffffff8111828210171561191c57634e487b7160e01b5f52604160045260245ffd5b604052611928836116fa565b8152611936602084016117a2565b60208201529392505050565b5f60208284031215611952575f5ffd5b81518015158114611729575f5ffd5b80820281158282048414176118d5576118d56118ae565b5f8261199257634e487b7160e01b5f52601260045260245ffd5b500490565b808201808211156118d5576118d56118ae565b634e487b7160e01b5f52603260045260245ffd5b5f5f604083850312156119cf575f5ffd5b505080516020909101519092909150565b5f600160ff1b82016119f4576119f46118ae565b505f039056fea26469706673582212208539456cad592a4807cd261d9c8fbab04c3b98ee49dc38c8a22fe17bbf7884fd64736f6c634300081c0033000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e3130000000000000000000000000000000000000000000000000000000000002710000000000000000000000000020bfc650a365f8bb26819deaabf3e21291018b40000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000ab2f34f77b396b6b1dad6ec2fb1ab5550a3b790300000000000000000000000000000000000000000000000000000000000009c400000000000000000000000000000000000000000000000000000000000009c4000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000006f05b59d3b20000000000000000000000000000d2defbd13aff22d6989e8c14b4517ec308079e9100000000000000000000000000000000000000000000000000000000000000040000000000000000000000003ea937589ea5ee0fbccbccef29473e7f957a19a500000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000b1c7b62f9b623d23a1401f8849f25e8ce0cb6df200000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000a6dab37220ac3b74db0e227e4d520898545f190400000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000b9b15eec5ba6b0582ffe1153d26d54ff6c7a95c600000000000000000000000000000000000000000000000000000000000004e2",
+ "name": "CashCatRevenueSplitter",
+ "is_blueprint": false,
+ "license_type": "none",
+ "is_fully_verified": true,
+ "is_verified_via_eth_bytecode_db": false,
+ "language": "solidity",
+ "evm_version": "cancun",
+ "can_be_visualized_via_sol2uml": true,
+ "is_verified_via_sourcify": false,
+ "additional_sources": [
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.0) (access/Ownable.sol)\n\npragma solidity ^0.8.20;\n\nimport {Context} from \"../utils/Context.sol\";\n\n/**\n * @dev Contract module which provides a basic access control mechanism, where\n * there is an account (an owner) that can be granted exclusive access to\n * specific functions.\n *\n * The initial owner is set to the address provided by the deployer. This can\n * later be changed with {transferOwnership}.\n *\n * This module is used through inheritance. It will make available the modifier\n * `onlyOwner`, which can be applied to your functions to restrict their use to\n * the owner.\n */\nabstract contract Ownable is Context {\n    address private _owner;\n\n    /**\n     * @dev The caller account is not authorized to perform an operation.\n     */\n    error OwnableUnauthorizedAccount(address account);\n\n    /**\n     * @dev The owner is not a valid owner account. (eg. `address(0)`)\n     */\n    error OwnableInvalidOwner(address owner);\n\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\n\n    /**\n     * @dev Initializes the contract setting the address provided by the deployer as the initial owner.\n     */\n    constructor(address initialOwner) {\n        if (initialOwner == address(0)) {\n            revert OwnableInvalidOwner(address(0));\n        }\n        _transferOwnership(initialOwner);\n    }\n\n    /**\n     * @dev Throws if called by any account other than the owner.\n     */\n    modifier onlyOwner() {\n        _checkOwner();\n        _;\n    }\n\n    /**\n     * @dev Returns the address of the current owner.\n     */\n    function owner() public view virtual returns (address) {\n        return _owner;\n    }\n\n    /**\n     * @dev Throws if the sender is not the owner.\n     */\n    function _checkOwner() internal view virtual {\n        if (owner() != _msgSender()) {\n            revert OwnableUnauthorizedAccount(_msgSender());\n        }\n    }\n\n    /**\n     * @dev Leaves the contract without owner. It will not be possible to call\n     * `onlyOwner` functions. Can only be called by the current owner.\n     *\n     * NOTE: Renouncing ownership will leave the contract without an owner,\n     * thereby disabling any functionality that is only available to the owner.\n     */\n    function renounceOwnership() public virtual onlyOwner {\n        _transferOwnership(address(0));\n    }\n\n    /**\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\n     * Can only be called by the current owner.\n     */\n    function transferOwnership(address newOwner) public virtual onlyOwner {\n        if (newOwner == address(0)) {\n            revert OwnableInvalidOwner(address(0));\n        }\n        _transferOwnership(newOwner);\n    }\n\n    /**\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\n     * Internal function without access restriction.\n     */\n    function _transferOwnership(address newOwner) internal virtual {\n        address oldOwner = _owner;\n        _owner = newOwner;\n        emit OwnershipTransferred(oldOwner, newOwner);\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.1.0) (access/Ownable2Step.sol)\n\npragma solidity ^0.8.20;\n\nimport {Ownable} from \"./Ownable.sol\";\n\n/**\n * @dev Contract module which provides access control mechanism, where\n * there is an account (an owner) that can be granted exclusive access to\n * specific functions.\n *\n * This extension of the {Ownable} contract includes a two-step mechanism to transfer\n * ownership, where the new owner must call {acceptOwnership} in order to replace the\n * old one. This can help prevent common mistakes, such as transfers of ownership to\n * incorrect accounts, or to contracts that are unable to interact with the\n * permission system.\n *\n * The initial owner is specified at deployment time in the constructor for `Ownable`. This\n * can later be changed with {transferOwnership} and {acceptOwnership}.\n *\n * This module is used through inheritance. It will make available all functions\n * from parent (Ownable).\n */\nabstract contract Ownable2Step is Ownable {\n    address private _pendingOwner;\n\n    event OwnershipTransferStarted(address indexed previousOwner, address indexed newOwner);\n\n    /**\n     * @dev Returns the address of the pending owner.\n     */\n    function pendingOwner() public view virtual returns (address) {\n        return _pendingOwner;\n    }\n\n    /**\n     * @dev Starts the ownership transfer of the contract to a new account. Replaces the pending transfer if there is one.\n     * Can only be called by the current owner.\n     *\n     * Setting `newOwner` to the zero address is allowed; this can be used to cancel an initiated ownership transfer.\n     */\n    function transferOwnership(address newOwner) public virtual override onlyOwner {\n        _pendingOwner = newOwner;\n        emit OwnershipTransferStarted(owner(), newOwner);\n    }\n\n    /**\n     * @dev Transfers ownership of the contract to a new account (`newOwner`) and deletes any pending owner.\n     * Internal function without access restriction.\n     */\n    function _transferOwnership(address newOwner) internal virtual override {\n        delete _pendingOwner;\n        super._transferOwnership(newOwner);\n    }\n\n    /**\n     * @dev The new owner accepts the ownership transfer.\n     */\n    function acceptOwnership() public virtual {\n        address sender = _msgSender();\n        if (pendingOwner() != sender) {\n            revert OwnableUnauthorizedAccount(sender);\n        }\n        _transferOwnership(sender);\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.4.0) (token/ERC20/IERC20.sol)\n\npragma solidity >=0.4.16;\n\n/**\n * @dev Interface of the ERC-20 standard as defined in the ERC.\n */\ninterface IERC20 {\n    /**\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\n     * another (`to`).\n     *\n     * Note that `value` may be zero.\n     */\n    event Transfer(address indexed from, address indexed to, uint256 value);\n\n    /**\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\n     * a call to {approve}. `value` is the new allowance.\n     */\n    event Approval(address indexed owner, address indexed spender, uint256 value);\n\n    /**\n     * @dev Returns the value of tokens in existence.\n     */\n    function totalSupply() external view returns (uint256);\n\n    /**\n     * @dev Returns the value of tokens owned by `account`.\n     */\n    function balanceOf(address account) external view returns (uint256);\n\n    /**\n     * @dev Moves a `value` amount of tokens from the caller's account to `to`.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transfer(address to, uint256 value) external returns (bool);\n\n    /**\n     * @dev Returns the remaining number of tokens that `spender` will be\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\n     * zero by default.\n     *\n     * This value changes when {approve} or {transferFrom} are called.\n     */\n    function allowance(address owner, address spender) external view returns (uint256);\n\n    /**\n     * @dev Sets a `value` amount of tokens as the allowance of `spender` over the\n     * caller's tokens.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\n     * that someone may use both the old and the new allowance by unfortunate\n     * transaction ordering. One possible solution to mitigate this race\n     * condition is to first reduce the spender's allowance to 0 and set the\n     * desired value afterwards:\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\n     *\n     * Emits an {Approval} event.\n     */\n    function approve(address spender, uint256 value) external returns (bool);\n\n    /**\n     * @dev Moves a `value` amount of tokens from `from` to `to` using the\n     * allowance mechanism. `value` is then deducted from the caller's\n     * allowance.\n     *\n     * Returns a boolean value indicating whether the operation succeeded.\n     *\n     * Emits a {Transfer} event.\n     */\n    function transferFrom(address from, address to, uint256 value) external returns (bool);\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.0.1) (utils/Context.sol)\n\npragma solidity ^0.8.20;\n\n/**\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\nabstract contract Context {\n    function _msgSender() internal view virtual returns (address) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view virtual returns (bytes calldata) {\n        return msg.data;\n    }\n\n    function _contextSuffixLength() internal view virtual returns (uint256) {\n        return 0;\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.5.0) (utils/ReentrancyGuard.sol)\n\npragma solidity ^0.8.20;\n\nimport {StorageSlot} from \"./StorageSlot.sol\";\n\n/**\n * @dev Contract module that helps prevent reentrant calls to a function.\n *\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\n * available, which can be applied to functions to make sure there are no nested\n * (reentrant) calls to them.\n *\n * Note that because there is a single `nonReentrant` guard, functions marked as\n * `nonReentrant` may not call one another. This can be worked around by making\n * those functions `private`, and then adding `external` `nonReentrant` entry\n * points to them.\n *\n * TIP: If EIP-1153 (transient storage) is available on the chain you're deploying at,\n * consider using {ReentrancyGuardTransient} instead.\n *\n * TIP: If you would like to learn more about reentrancy and alternative ways\n * to protect against it, check out our blog post\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\n *\n * IMPORTANT: Deprecated. This storage-based reentrancy guard will be removed and replaced\n * by the {ReentrancyGuardTransient} variant in v6.0.\n *\n * @custom:stateless\n */\nabstract contract ReentrancyGuard {\n    using StorageSlot for bytes32;\n\n    // keccak256(abi.encode(uint256(keccak256(\"openzeppelin.storage.ReentrancyGuard\")) - 1)) & ~bytes32(uint256(0xff))\n    bytes32 private constant REENTRANCY_GUARD_STORAGE =\n        0x9b779b17422d0df92223018b32b4d1fa46e071723d6817e2486d003becc55f00;\n\n    // Booleans are more expensive than uint256 or any type that takes up a full\n    // word because each write operation emits an extra SLOAD to first read the\n    // slot's contents, replace the bits taken up by the boolean, and then write\n    // back. This is the compiler's defense against contract upgrades and\n    // pointer aliasing, and it cannot be disabled.\n\n    // The values being non-zero value makes deployment a bit more expensive,\n    // but in exchange the refund on every call to nonReentrant will be lower in\n    // amount. Since refunds are capped to a percentage of the total\n    // transaction's gas, it is best to keep them low in cases like this one, to\n    // increase the likelihood of the full refund coming into effect.\n    uint256 private constant NOT_ENTERED = 1;\n    uint256 private constant ENTERED = 2;\n\n    /**\n     * @dev Unauthorized reentrant call.\n     */\n    error ReentrancyGuardReentrantCall();\n\n    constructor() {\n        _reentrancyGuardStorageSlot().getUint256Slot().value = NOT_ENTERED;\n    }\n\n    /**\n     * @dev Prevents a contract from calling itself, directly or indirectly.\n     * Calling a `nonReentrant` function from another `nonReentrant`\n     * function is not supported. It is possible to prevent this from happening\n     * by making the `nonReentrant` function external, and making it call a\n     * `private` function that does the actual work.\n     */\n    modifier nonReentrant() {\n        _nonReentrantBefore();\n        _;\n        _nonReentrantAfter();\n    }\n\n    /**\n     * @dev A `view` only version of {nonReentrant}. Use to block view functions\n     * from being called, preventing reading from inconsistent contract state.\n     *\n     * CAUTION: This is a \"view\" modifier and does not change the reentrancy\n     * status. Use it only on view functions. For payable or non-payable functions,\n     * use the standard {nonReentrant} modifier instead.\n     */\n    modifier nonReentrantView() {\n        _nonReentrantBeforeView();\n        _;\n    }\n\n    function _nonReentrantBeforeView() private view {\n        if (_reentrancyGuardEntered()) {\n            revert ReentrancyGuardReentrantCall();\n        }\n    }\n\n    function _nonReentrantBefore() private {\n        // On the first call to nonReentrant, _status will be NOT_ENTERED\n        _nonReentrantBeforeView();\n\n        // Any calls to nonReentrant after this point will fail\n        _reentrancyGuardStorageSlot().getUint256Slot().value = ENTERED;\n    }\n\n    function _nonReentrantAfter() private {\n        // By storing the original value once again, a refund is triggered (see\n        // https://eips.ethereum.org/EIPS/eip-2200)\n        _reentrancyGuardStorageSlot().getUint256Slot().value = NOT_ENTERED;\n    }\n\n    /**\n     * @dev Returns true if the reentrancy guard is currently set to \"entered\", which indicates there is a\n     * `nonReentrant` function in the call stack.\n     */\n    function _reentrancyGuardEntered() internal view returns (bool) {\n        return _reentrancyGuardStorageSlot().getUint256Slot().value == ENTERED;\n    }\n\n    function _reentrancyGuardStorageSlot() internal pure virtual returns (bytes32) {\n        return REENTRANCY_GUARD_STORAGE;\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\n// OpenZeppelin Contracts (last updated v5.1.0) (utils/StorageSlot.sol)\n// This file was procedurally generated from scripts/generate/templates/StorageSlot.js.\n\npragma solidity ^0.8.20;\n\n/**\n * @dev Library for reading and writing primitive types to specific storage slots.\n *\n * Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts.\n * This library helps with reading and writing to such slots without the need for inline assembly.\n *\n * The functions in this library return Slot structs that contain a `value` member that can be used to read or write.\n *\n * Example usage to set ERC-1967 implementation slot:\n * ```solidity\n * contract ERC1967 {\n *     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.\n *     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;\n *\n *     function _getImplementation() internal view returns (address) {\n *         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;\n *     }\n *\n *     function _setImplementation(address newImplementation) internal {\n *         require(newImplementation.code.length > 0);\n *         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;\n *     }\n * }\n * ```\n *\n * TIP: Consider using this library along with {SlotDerivation}.\n */\nlibrary StorageSlot {\n    struct AddressSlot {\n        address value;\n    }\n\n    struct BooleanSlot {\n        bool value;\n    }\n\n    struct Bytes32Slot {\n        bytes32 value;\n    }\n\n    struct Uint256Slot {\n        uint256 value;\n    }\n\n    struct Int256Slot {\n        int256 value;\n    }\n\n    struct StringSlot {\n        string value;\n    }\n\n    struct BytesSlot {\n        bytes value;\n    }\n\n    /**\n     * @dev Returns an `AddressSlot` with member `value` located at `slot`.\n     */\n    function getAddressSlot(bytes32 slot) internal pure returns (AddressSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `BooleanSlot` with member `value` located at `slot`.\n     */\n    function getBooleanSlot(bytes32 slot) internal pure returns (BooleanSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Bytes32Slot` with member `value` located at `slot`.\n     */\n    function getBytes32Slot(bytes32 slot) internal pure returns (Bytes32Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Uint256Slot` with member `value` located at `slot`.\n     */\n    function getUint256Slot(bytes32 slot) internal pure returns (Uint256Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `Int256Slot` with member `value` located at `slot`.\n     */\n    function getInt256Slot(bytes32 slot) internal pure returns (Int256Slot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns a `StringSlot` with member `value` located at `slot`.\n     */\n    function getStringSlot(bytes32 slot) internal pure returns (StringSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns an `StringSlot` representation of the string storage pointer `store`.\n     */\n    function getStringSlot(string storage store) internal pure returns (StringSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := store.slot\n        }\n    }\n\n    /**\n     * @dev Returns a `BytesSlot` with member `value` located at `slot`.\n     */\n    function getBytesSlot(bytes32 slot) internal pure returns (BytesSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := slot\n        }\n    }\n\n    /**\n     * @dev Returns an `BytesSlot` representation of the bytes storage pointer `store`.\n     */\n    function getBytesSlot(bytes storage store) internal pure returns (BytesSlot storage r) {\n        assembly (\"memory-safe\") {\n            r.slot := store.slot\n        }\n    }\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/IUniswapV3Pool.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\nimport {IUniswapV3PoolImmutables} from './pool/IUniswapV3PoolImmutables.sol';\nimport {IUniswapV3PoolState} from './pool/IUniswapV3PoolState.sol';\nimport {IUniswapV3PoolDerivedState} from './pool/IUniswapV3PoolDerivedState.sol';\nimport {IUniswapV3PoolActions} from './pool/IUniswapV3PoolActions.sol';\nimport {IUniswapV3PoolOwnerActions} from './pool/IUniswapV3PoolOwnerActions.sol';\nimport {IUniswapV3PoolErrors} from './pool/IUniswapV3PoolErrors.sol';\nimport {IUniswapV3PoolEvents} from './pool/IUniswapV3PoolEvents.sol';\n\n/// @title The interface for a Uniswap V3 Pool\n/// @notice A Uniswap pool facilitates swapping and automated market making between any two assets that strictly conform\n/// to the ERC20 specification\n/// @dev The pool interface is broken up into many smaller pieces\ninterface IUniswapV3Pool is\n    IUniswapV3PoolImmutables,\n    IUniswapV3PoolState,\n    IUniswapV3PoolDerivedState,\n    IUniswapV3PoolActions,\n    IUniswapV3PoolOwnerActions,\n    IUniswapV3PoolErrors,\n    IUniswapV3PoolEvents\n{\n\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Callback for IUniswapV3PoolActions#swap\n/// @notice Any contract that calls IUniswapV3PoolActions#swap must implement this interface\ninterface IUniswapV3SwapCallback {\n    /// @notice Called to `msg.sender` after executing a swap via IUniswapV3Pool#swap.\n    /// @dev In the implementation you must pay the pool tokens owed for the swap.\n    /// The caller of this method must be checked to be a UniswapV3Pool deployed by the canonical UniswapV3Factory.\n    /// amount0Delta and amount1Delta can both be 0 if no tokens were swapped.\n    /// @param amount0Delta The amount of token0 that was sent (negative) or must be received (positive) by the pool by\n    /// the end of the swap. If positive, the callback must send that amount of token0 to the pool.\n    /// @param amount1Delta The amount of token1 that was sent (negative) or must be received (positive) by the pool by\n    /// the end of the swap. If positive, the callback must send that amount of token1 to the pool.\n    /// @param data Any data passed through by the caller via the IUniswapV3PoolActions#swap call\n    function uniswapV3SwapCallback(\n        int256 amount0Delta,\n        int256 amount1Delta,\n        bytes calldata data\n    ) external;\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolActions.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Permissionless pool actions\n/// @notice Contains pool methods that can be called by anyone\ninterface IUniswapV3PoolActions {\n    /// @notice Sets the initial price for the pool\n    /// @dev Price is represented as a sqrt(amountToken1/amountToken0) Q64.96 value\n    /// @param sqrtPriceX96 the initial sqrt price of the pool as a Q64.96\n    function initialize(uint160 sqrtPriceX96) external;\n\n    /// @notice Adds liquidity for the given recipient/tickLower/tickUpper position\n    /// @dev The caller of this method receives a callback in the form of IUniswapV3MintCallback#uniswapV3MintCallback\n    /// in which they must pay any token0 or token1 owed for the liquidity. The amount of token0/token1 due depends\n    /// on tickLower, tickUpper, the amount of liquidity, and the current price.\n    /// @param recipient The address for which the liquidity will be created\n    /// @param tickLower The lower tick of the position in which to add liquidity\n    /// @param tickUpper The upper tick of the position in which to add liquidity\n    /// @param amount The amount of liquidity to mint\n    /// @param data Any data that should be passed through to the callback\n    /// @return amount0 The amount of token0 that was paid to mint the given amount of liquidity. Matches the value in the callback\n    /// @return amount1 The amount of token1 that was paid to mint the given amount of liquidity. Matches the value in the callback\n    function mint(\n        address recipient,\n        int24 tickLower,\n        int24 tickUpper,\n        uint128 amount,\n        bytes calldata data\n    ) external returns (uint256 amount0, uint256 amount1);\n\n    /// @notice Collects tokens owed to a position\n    /// @dev Does not recompute fees earned, which must be done either via mint or burn of any amount of liquidity.\n    /// Collect must be called by the position owner. To withdraw only token0 or only token1, amount0Requested or\n    /// amount1Requested may be set to zero. To withdraw all tokens owed, caller may pass any value greater than the\n    /// actual tokens owed, e.g. type(uint128).max. Tokens owed may be from accumulated swap fees or burned liquidity.\n    /// @param recipient The address which should receive the fees collected\n    /// @param tickLower The lower tick of the position for which to collect fees\n    /// @param tickUpper The upper tick of the position for which to collect fees\n    /// @param amount0Requested How much token0 should be withdrawn from the fees owed\n    /// @param amount1Requested How much token1 should be withdrawn from the fees owed\n    /// @return amount0 The amount of fees collected in token0\n    /// @return amount1 The amount of fees collected in token1\n    function collect(\n        address recipient,\n        int24 tickLower,\n        int24 tickUpper,\n        uint128 amount0Requested,\n        uint128 amount1Requested\n    ) external returns (uint128 amount0, uint128 amount1);\n\n    /// @notice Burn liquidity from the sender and account tokens owed for the liquidity to the position\n    /// @dev Can be used to trigger a recalculation of fees owed to a position by calling with an amount of 0\n    /// @dev Fees must be collected separately via a call to #collect\n    /// @param tickLower The lower tick of the position for which to burn liquidity\n    /// @param tickUpper The upper tick of the position for which to burn liquidity\n    /// @param amount How much liquidity to burn\n    /// @return amount0 The amount of token0 sent to the recipient\n    /// @return amount1 The amount of token1 sent to the recipient\n    function burn(\n        int24 tickLower,\n        int24 tickUpper,\n        uint128 amount\n    ) external returns (uint256 amount0, uint256 amount1);\n\n    /// @notice Swap token0 for token1, or token1 for token0\n    /// @dev The caller of this method receives a callback in the form of IUniswapV3SwapCallback#uniswapV3SwapCallback\n    /// @param recipient The address to receive the output of the swap\n    /// @param zeroForOne The direction of the swap, true for token0 to token1, false for token1 to token0\n    /// @param amountSpecified The amount of the swap, which implicitly configures the swap as exact input (positive), or exact output (negative)\n    /// @param sqrtPriceLimitX96 The Q64.96 sqrt price limit. If zero for one, the price cannot be less than this\n    /// value after the swap. If one for zero, the price cannot be greater than this value after the swap\n    /// @param data Any data to be passed through to the callback\n    /// @return amount0 The delta of the balance of token0 of the pool, exact when negative, minimum when positive\n    /// @return amount1 The delta of the balance of token1 of the pool, exact when negative, minimum when positive\n    function swap(\n        address recipient,\n        bool zeroForOne,\n        int256 amountSpecified,\n        uint160 sqrtPriceLimitX96,\n        bytes calldata data\n    ) external returns (int256 amount0, int256 amount1);\n\n    /// @notice Receive token0 and/or token1 and pay it back, plus a fee, in the callback\n    /// @dev The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallback\n    /// @dev Can be used to donate underlying tokens pro-rata to currently in-range liquidity providers by calling\n    /// with 0 amount{0,1} and sending the donation amount(s) from the callback\n    /// @param recipient The address which will receive the token0 and token1 amounts\n    /// @param amount0 The amount of token0 to send\n    /// @param amount1 The amount of token1 to send\n    /// @param data Any data to be passed through to the callback\n    function flash(\n        address recipient,\n        uint256 amount0,\n        uint256 amount1,\n        bytes calldata data\n    ) external;\n\n    /// @notice Increase the maximum number of price and liquidity observations that this pool will store\n    /// @dev This method is no-op if the pool already has an observationCardinalityNext greater than or equal to\n    /// the input observationCardinalityNext.\n    /// @param observationCardinalityNext The desired minimum number of observations for the pool to store\n    function increaseObservationCardinalityNext(uint16 observationCardinalityNext) external;\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolDerivedState.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Pool state that is not stored\n/// @notice Contains view functions to provide information about the pool that is computed rather than stored on the\n/// blockchain. The functions here may have variable gas costs.\ninterface IUniswapV3PoolDerivedState {\n    /// @notice Returns the cumulative tick and liquidity as of each timestamp `secondsAgo` from the current block timestamp\n    /// @dev To get a time weighted average tick or liquidity-in-range, you must call this with two values, one representing\n    /// the beginning of the period and another for the end of the period. E.g., to get the last hour time-weighted average tick,\n    /// you must call it with secondsAgos = [3600, 0].\n    /// @dev The time weighted average tick represents the geometric time weighted average price of the pool, in\n    /// log base sqrt(1.0001) of token1 / token0. The TickMath library can be used to go from a tick value to a ratio.\n    /// @param secondsAgos From how long ago each cumulative tick and liquidity value should be returned\n    /// @return tickCumulatives Cumulative tick values as of each `secondsAgos` from the current block timestamp\n    /// @return secondsPerLiquidityCumulativeX128s Cumulative seconds per liquidity-in-range value as of each `secondsAgos` from the current block\n    /// timestamp\n    function observe(uint32[] calldata secondsAgos)\n        external\n        view\n        returns (int56[] memory tickCumulatives, uint160[] memory secondsPerLiquidityCumulativeX128s);\n\n    /// @notice Returns a snapshot of the tick cumulative, seconds per liquidity and seconds inside a tick range\n    /// @dev Snapshots must only be compared to other snapshots, taken over a period for which a position existed.\n    /// I.e., snapshots cannot be compared if a position is not held for the entire period between when the first\n    /// snapshot is taken and the second snapshot is taken.\n    /// @param tickLower The lower tick of the range\n    /// @param tickUpper The upper tick of the range\n    /// @return tickCumulativeInside The snapshot of the tick accumulator for the range\n    /// @return secondsPerLiquidityInsideX128 The snapshot of seconds per liquidity for the range\n    /// @return secondsInside The snapshot of seconds per liquidity for the range\n    function snapshotCumulativesInside(int24 tickLower, int24 tickUpper)\n        external\n        view\n        returns (\n            int56 tickCumulativeInside,\n            uint160 secondsPerLiquidityInsideX128,\n            uint32 secondsInside\n        );\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolErrors.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Errors emitted by a pool\n/// @notice Contains all events emitted by the pool\ninterface IUniswapV3PoolErrors {\n    error LOK();\n    error TLU();\n    error TLM();\n    error TUM();\n    error AI();\n    error M0();\n    error M1();\n    error AS();\n    error IIA();\n    error L();\n    error F0();\n    error F1();\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolEvents.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Events emitted by a pool\n/// @notice Contains all events emitted by the pool\ninterface IUniswapV3PoolEvents {\n    /// @notice Emitted exactly once by a pool when #initialize is first called on the pool\n    /// @dev Mint/Burn/Swap cannot be emitted by the pool before Initialize\n    /// @param sqrtPriceX96 The initial sqrt price of the pool, as a Q64.96\n    /// @param tick The initial tick of the pool, i.e. log base 1.0001 of the starting price of the pool\n    event Initialize(uint160 sqrtPriceX96, int24 tick);\n\n    /// @notice Emitted when liquidity is minted for a given position\n    /// @param sender The address that minted the liquidity\n    /// @param owner The owner of the position and recipient of any minted liquidity\n    /// @param tickLower The lower tick of the position\n    /// @param tickUpper The upper tick of the position\n    /// @param amount The amount of liquidity minted to the position range\n    /// @param amount0 How much token0 was required for the minted liquidity\n    /// @param amount1 How much token1 was required for the minted liquidity\n    event Mint(\n        address sender,\n        address indexed owner,\n        int24 indexed tickLower,\n        int24 indexed tickUpper,\n        uint128 amount,\n        uint256 amount0,\n        uint256 amount1\n    );\n\n    /// @notice Emitted when fees are collected by the owner of a position\n    /// @dev Collect events may be emitted with zero amount0 and amount1 when the caller chooses not to collect fees\n    /// @param owner The owner of the position for which fees are collected\n    /// @param tickLower The lower tick of the position\n    /// @param tickUpper The upper tick of the position\n    /// @param amount0 The amount of token0 fees collected\n    /// @param amount1 The amount of token1 fees collected\n    event Collect(\n        address indexed owner,\n        address recipient,\n        int24 indexed tickLower,\n        int24 indexed tickUpper,\n        uint128 amount0,\n        uint128 amount1\n    );\n\n    /// @notice Emitted when a position's liquidity is removed\n    /// @dev Does not withdraw any fees earned by the liquidity position, which must be withdrawn via #collect\n    /// @param owner The owner of the position for which liquidity is removed\n    /// @param tickLower The lower tick of the position\n    /// @param tickUpper The upper tick of the position\n    /// @param amount The amount of liquidity to remove\n    /// @param amount0 The amount of token0 withdrawn\n    /// @param amount1 The amount of token1 withdrawn\n    event Burn(\n        address indexed owner,\n        int24 indexed tickLower,\n        int24 indexed tickUpper,\n        uint128 amount,\n        uint256 amount0,\n        uint256 amount1\n    );\n\n    /// @notice Emitted by the pool for any swaps between token0 and token1\n    /// @param sender The address that initiated the swap call, and that received the callback\n    /// @param recipient The address that received the output of the swap\n    /// @param amount0 The delta of the token0 balance of the pool\n    /// @param amount1 The delta of the token1 balance of the pool\n    /// @param sqrtPriceX96 The sqrt(price) of the pool after the swap, as a Q64.96\n    /// @param liquidity The liquidity of the pool after the swap\n    /// @param tick The log base 1.0001 of price of the pool after the swap\n    event Swap(\n        address indexed sender,\n        address indexed recipient,\n        int256 amount0,\n        int256 amount1,\n        uint160 sqrtPriceX96,\n        uint128 liquidity,\n        int24 tick\n    );\n\n    /// @notice Emitted by the pool for any flashes of token0/token1\n    /// @param sender The address that initiated the swap call, and that received the callback\n    /// @param recipient The address that received the tokens from flash\n    /// @param amount0 The amount of token0 that was flashed\n    /// @param amount1 The amount of token1 that was flashed\n    /// @param paid0 The amount of token0 paid for the flash, which can exceed the amount0 plus the fee\n    /// @param paid1 The amount of token1 paid for the flash, which can exceed the amount1 plus the fee\n    event Flash(\n        address indexed sender,\n        address indexed recipient,\n        uint256 amount0,\n        uint256 amount1,\n        uint256 paid0,\n        uint256 paid1\n    );\n\n    /// @notice Emitted by the pool for increases to the number of observations that can be stored\n    /// @dev observationCardinalityNext is not the observation cardinality until an observation is written at the index\n    /// just before a mint/swap/burn.\n    /// @param observationCardinalityNextOld The previous value of the next observation cardinality\n    /// @param observationCardinalityNextNew The updated value of the next observation cardinality\n    event IncreaseObservationCardinalityNext(\n        uint16 observationCardinalityNextOld,\n        uint16 observationCardinalityNextNew\n    );\n\n    /// @notice Emitted when the protocol fee is changed by the pool\n    /// @param feeProtocol0Old The previous value of the token0 protocol fee\n    /// @param feeProtocol1Old The previous value of the token1 protocol fee\n    /// @param feeProtocol0New The updated value of the token0 protocol fee\n    /// @param feeProtocol1New The updated value of the token1 protocol fee\n    event SetFeeProtocol(uint8 feeProtocol0Old, uint8 feeProtocol1Old, uint8 feeProtocol0New, uint8 feeProtocol1New);\n\n    /// @notice Emitted when the collected protocol fees are withdrawn by the factory owner\n    /// @param sender The address that collects the protocol fees\n    /// @param recipient The address that receives the collected protocol fees\n    /// @param amount0 The amount of token0 protocol fees that is withdrawn\n    /// @param amount0 The amount of token1 protocol fees that is withdrawn\n    event CollectProtocol(address indexed sender, address indexed recipient, uint128 amount0, uint128 amount1);\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolImmutables.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Pool state that never changes\n/// @notice These parameters are fixed for a pool forever, i.e., the methods will always return the same values\ninterface IUniswapV3PoolImmutables {\n    /// @notice The contract that deployed the pool, which must adhere to the IUniswapV3Factory interface\n    /// @return The contract address\n    function factory() external view returns (address);\n\n    /// @notice The first of the two tokens of the pool, sorted by address\n    /// @return The token contract address\n    function token0() external view returns (address);\n\n    /// @notice The second of the two tokens of the pool, sorted by address\n    /// @return The token contract address\n    function token1() external view returns (address);\n\n    /// @notice The pool's fee in hundredths of a bip, i.e. 1e-6\n    /// @return The fee\n    function fee() external view returns (uint24);\n\n    /// @notice The pool tick spacing\n    /// @dev Ticks can only be used at multiples of this value, minimum of 1 and always positive\n    /// e.g.: a tickSpacing of 3 means ticks can be initialized every 3rd tick, i.e., ..., -6, -3, 0, 3, 6, ...\n    /// This value is an int24 to avoid casting even though it is always positive.\n    /// @return The tick spacing\n    function tickSpacing() external view returns (int24);\n\n    /// @notice The maximum amount of position liquidity that can use any tick in the range\n    /// @dev This parameter is enforced per tick to prevent liquidity from overflowing a uint128 at any point, and\n    /// also prevents out-of-range liquidity from being used to prevent adding in-range liquidity to a pool\n    /// @return The max amount of liquidity per tick\n    function maxLiquidityPerTick() external view returns (uint128);\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolOwnerActions.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Permissioned pool actions\n/// @notice Contains pool methods that may only be called by the factory owner\ninterface IUniswapV3PoolOwnerActions {\n    /// @notice Set the denominator of the protocol's % share of the fees\n    /// @param feeProtocol0 new protocol fee for token0 of the pool\n    /// @param feeProtocol1 new protocol fee for token1 of the pool\n    function setFeeProtocol(uint8 feeProtocol0, uint8 feeProtocol1) external;\n\n    /// @notice Collect the protocol fee accrued to the pool\n    /// @param recipient The address to which collected protocol fees should be sent\n    /// @param amount0Requested The maximum amount of token0 to send, can be 0 to collect fees in only token1\n    /// @param amount1Requested The maximum amount of token1 to send, can be 0 to collect fees in only token0\n    /// @return amount0 The protocol fee collected in token0\n    /// @return amount1 The protocol fee collected in token1\n    function collectProtocol(\n        address recipient,\n        uint128 amount0Requested,\n        uint128 amount1Requested\n    ) external returns (uint128 amount0, uint128 amount1);\n}\n"
+  },
+  {
+   "file_path": "lib/v3-core/contracts/interfaces/pool/IUniswapV3PoolState.sol",
+   "source_code": "// SPDX-License-Identifier: GPL-2.0-or-later\npragma solidity >=0.5.0;\n\n/// @title Pool state that can change\n/// @notice These methods compose the pool's state, and can change with any frequency including multiple times\n/// per transaction\ninterface IUniswapV3PoolState {\n    /// @notice The 0th storage slot in the pool stores many values, and is exposed as a single method to save gas\n    /// when accessed externally.\n    /// @return sqrtPriceX96 The current price of the pool as a sqrt(token1/token0) Q64.96 value\n    /// @return tick The current tick of the pool, i.e. according to the last tick transition that was run.\n    /// This value may not always be equal to SqrtTickMath.getTickAtSqrtRatio(sqrtPriceX96) if the price is on a tick\n    /// boundary.\n    /// @return observationIndex The index of the last oracle observation that was written,\n    /// @return observationCardinality The current maximum number of observations stored in the pool,\n    /// @return observationCardinalityNext The next maximum number of observations, to be updated when the observation.\n    /// @return feeProtocol The protocol fee for both tokens of the pool.\n    /// Encoded as two 4 bit values, where the protocol fee of token1 is shifted 4 bits and the protocol fee of token0\n    /// is the lower 4 bits. Used as the denominator of a fraction of the swap fee, e.g. 4 means 1/4th of the swap fee.\n    /// unlocked Whether the pool is currently locked to reentrancy\n    function slot0()\n        external\n        view\n        returns (\n            uint160 sqrtPriceX96,\n            int24 tick,\n            uint16 observationIndex,\n            uint16 observationCardinality,\n            uint16 observationCardinalityNext,\n            uint8 feeProtocol,\n            bool unlocked\n        );\n\n    /// @notice The fee growth as a Q128.128 fees of token0 collected per unit of liquidity for the entire life of the pool\n    /// @dev This value can overflow the uint256\n    function feeGrowthGlobal0X128() external view returns (uint256);\n\n    /// @notice The fee growth as a Q128.128 fees of token1 collected per unit of liquidity for the entire life of the pool\n    /// @dev This value can overflow the uint256\n    function feeGrowthGlobal1X128() external view returns (uint256);\n\n    /// @notice The amounts of token0 and token1 that are owed to the protocol\n    /// @dev Protocol fees will never exceed uint128 max in either token\n    function protocolFees() external view returns (uint128 token0, uint128 token1);\n\n    /// @notice The currently in range liquidity available to the pool\n    /// @dev This value has no relationship to the total liquidity across all ticks\n    /// @return The liquidity at the current price of the pool\n    function liquidity() external view returns (uint128);\n\n    /// @notice Look up information about a specific tick in the pool\n    /// @param tick The tick to look up\n    /// @return liquidityGross the total amount of position liquidity that uses the pool either as tick lower or\n    /// tick upper\n    /// @return liquidityNet how much liquidity changes when the pool price crosses the tick,\n    /// @return feeGrowthOutside0X128 the fee growth on the other side of the tick from the current tick in token0,\n    /// @return feeGrowthOutside1X128 the fee growth on the other side of the tick from the current tick in token1,\n    /// @return tickCumulativeOutside the cumulative tick value on the other side of the tick from the current tick\n    /// @return secondsPerLiquidityOutsideX128 the seconds spent per liquidity on the other side of the tick from the current tick,\n    /// @return secondsOutside the seconds spent on the other side of the tick from the current tick,\n    /// @return initialized Set to true if the tick is initialized, i.e. liquidityGross is greater than 0, otherwise equal to false.\n    /// Outside values can only be used if the tick is initialized, i.e. if liquidityGross is greater than 0.\n    /// In addition, these values are only relative and must be used only in comparison to previous snapshots for\n    /// a specific position.\n    function ticks(int24 tick)\n        external\n        view\n        returns (\n            uint128 liquidityGross,\n            int128 liquidityNet,\n            uint256 feeGrowthOutside0X128,\n            uint256 feeGrowthOutside1X128,\n            int56 tickCumulativeOutside,\n            uint160 secondsPerLiquidityOutsideX128,\n            uint32 secondsOutside,\n            bool initialized\n        );\n\n    /// @notice Returns 256 packed tick initialized boolean values. See TickBitmap for more information\n    function tickBitmap(int16 wordPosition) external view returns (uint256);\n\n    /// @notice Returns the information about a position by the position's key\n    /// @param key The position's key is a hash of a preimage composed by the owner, tickLower and tickUpper\n    /// @return liquidity The amount of liquidity in the position,\n    /// @return feeGrowthInside0LastX128 fee growth of token0 inside the tick range as of the last mint/burn/poke,\n    /// @return feeGrowthInside1LastX128 fee growth of token1 inside the tick range as of the last mint/burn/poke,\n    /// @return tokensOwed0 the computed amount of token0 owed to the position as of the last mint/burn/poke,\n    /// @return tokensOwed1 the computed amount of token1 owed to the position as of the last mint/burn/poke\n    function positions(bytes32 key)\n        external\n        view\n        returns (\n            uint128 liquidity,\n            uint256 feeGrowthInside0LastX128,\n            uint256 feeGrowthInside1LastX128,\n            uint128 tokensOwed0,\n            uint128 tokensOwed1\n        );\n\n    /// @notice Returns data about a specific observation index\n    /// @param index The element of the observations array to fetch\n    /// @dev You most likely want to use #observe() instead of this method to get an observation as of some amount of time\n    /// ago, rather than at a specific index in the array.\n    /// @return blockTimestamp The timestamp of the observation,\n    /// @return tickCumulative the tick multiplied by seconds elapsed for the life of the pool as of the observation timestamp,\n    /// @return secondsPerLiquidityCumulativeX128 the seconds per in range liquidity for the life of the pool as of the observation timestamp,\n    /// @return initialized whether the observation has been initialized and the values are safe to use\n    function observations(uint256 index)\n        external\n        view\n        returns (\n            uint32 blockTimestamp,\n            int56 tickCumulative,\n            uint160 secondsPerLiquidityCumulativeX128,\n            bool initialized\n        );\n}\n"
+  },
+  {
+   "file_path": "src/v4/CashCatBuybackBurner.sol",
+   "source_code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\nimport {Ownable2Step, Ownable} from \"@openzeppelin/contracts/access/Ownable2Step.sol\";\nimport {ReentrancyGuard} from \"@openzeppelin/contracts/utils/ReentrancyGuard.sol\";\nimport {IERC20} from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport {IUniswapV3Pool} from \"@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol\";\nimport {IUniswapV3SwapCallback} from \"@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol\";\n\ninterface IWETH9 is IERC20 {\n    function deposit() external payable;\n    function withdraw(uint256 amount) external;\n}\n\n/// @title CashCatBuybackBurner\n/// @notice The destination of the platform's revenue. Every wei that arrives\n///         is split, at the moment it is first accounted, between two pots:\n///         a burn tank that market-buys CASHCAT on its canonical Uniswap v3\n///         pool and sends it to the dead address, and a team tab pushed to\n///         the team wallet. The split is owner-tunable for FUTURE revenue\n///         only \u2014 ETH already allocated to the burn tank can never be\n///         redirected to the team by flipping the knob afterwards.\n///\n///         Burns are permissionless and bounty-driven, exactly like the\n///         self-burner the rest of the system already uses: anyone may call\n///         `burn()`, earns 1% of the chunk, and exposure to sandwiching is\n///         bounded by a per-call cap and a one-burn-per-block gate instead\n///         of price oracles. The buy's recipient is the dead address itself \u2014\n///         this contract never custodies CASHCAT for even one instruction.\n///\n///         Trust model \u2014 this contract only ever holds the platform's own\n///         revenue. The owner (a Safe) can tune the split, the team wallet,\n///         the per-call cap, and can migrate the funds to a successor (e.g.\n///         if CASHCAT liquidity moves venue) \u2014 the same reach the treasury\n///         pointer already gave it. It cannot touch any pool, any creator's\n///         stream, or any user funds: none ever pass through here.\ncontract CashCatBuybackBurner is Ownable2Step, ReentrancyGuard, IUniswapV3SwapCallback {\n    error NotPool();\n    error ZeroAddress();\n    error InvalidShare();\n    error InvalidCap();\n    error TokenMismatch();\n    error FeeTierMismatch();\n    error NothingToBurn();\n    error BurnedThisBlock();\n    error BountyPayFailed();\n    error TeamPayFailed();\n    error WethPayFailed();\n    error MigrateFailed();\n\n    /// @notice Fresh revenue split into the two pots (burn wei, team wei).\n    event Allocated(uint256 toBurnTank, uint256 toTeamTab);\n    /// @notice A completed buyback: ETH spent on the pool, CASHCAT delivered\n    ///         straight to the dead address, bounty paid to the caller.\n    event Burned(address indexed caller, uint256 ethSpent, uint256 cashcatBurned, uint256 bounty);\n    event TeamCollected(address indexed teamWallet, uint256 amount);\n    event BurnShareUpdated(uint16 oldBps, uint16 newBps);\n    event TeamWalletUpdated(address indexed oldWallet, address indexed newWallet);\n    event MaxBurnPerCallUpdated(uint256 oldCap, uint256 newCap);\n    event Migrated(address indexed to, uint256 amount);\n\n    /// @dev CASHCAT has no burn() \u2014 supply reduction is not possible at the\n    ///      token level, and the dead address is the token's own established\n    ///      burn convention (millions already sit there). Buys are delivered\n    ///      here directly by the pool.\n    address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;\n    /// @notice Share of each burn chunk paid to whoever pulls the trigger \u2014\n    ///         what makes burns self-driving: no operator, no cron, no trust.\n    uint256 public constant BOUNTY_BPS = 100; // 1% of the chunk\n    uint256 public constant BPS_DENOMINATOR = 10_000;\n    /// @dev Uniswap v3 sqrt price bounds (TickMath constants; v3-core's\n    ///      library targets Solidity 0.7 so the two values are pinned here).\n    uint160 private constant MIN_SQRT_RATIO_PLUS_1 = 4295128740;\n    uint160 private constant MAX_SQRT_RATIO_MINUS_1 =\n        1461446703485210103287273052203988822378723970341;\n\n    /// @notice The canonical CASHCAT/WETH v3 pool buys execute on. Immutable:\n    ///         if liquidity ever migrates venue, deploy a successor burner\n    ///         and repoint the treasury \u2014 the pattern the rest of the system\n    ///         already uses for rotations.\n    IUniswapV3Pool public immutable pool;\n    IWETH9 public immutable weth;\n    IERC20 public immutable cashcat;\n    /// @dev Which side of the pool WETH sits on, fixed at construction.\n    bool private immutable _wethIsToken0;\n\n    /// @notice Of each incoming wei, the burn tank's share; the rest is the\n    ///         team's. Applies to revenue allocated AFTER a change, never to\n    ///         what is already sitting in the pots.\n    uint16 public burnShareBps;\n    /// @notice Receives the team's share via permissionless `collectTeam`.\n    address public teamWallet;\n    /// @notice Most burn-tank ETH a single `burn()` may spend. Caps what a\n    ///         sandwich around one public burn can ever be worth; backlogs\n    ///         drain across blocks. Owner-tunable as ETH's price drifts.\n    uint256 public maxBurnPerCall;\n\n    /// @notice ETH allocated to buying and burning CASHCAT, not yet spent.\n    uint256 public burnTank;\n    /// @notice ETH allocated to the team, awaiting `collectTeam`.\n    uint256 public teamTab;\n    uint256 private _lastBurnBlock;\n\n    constructor(\n        IUniswapV3Pool pool_,\n        uint24 poolFee_,\n        IERC20 cashcat_,\n        IWETH9 weth_,\n        address teamWallet_,\n        uint16 burnShareBps_,\n        uint256 maxBurnPerCall_,\n        address owner_\n    ) Ownable(owner_) {\n        if (teamWallet_ == address(0)) revert ZeroAddress();\n        if (burnShareBps_ > BPS_DENOMINATOR) revert InvalidShare();\n        if (maxBurnPerCall_ == 0) revert InvalidCap();\n        // the pool must be exactly the CASHCAT/WETH pair, whichever side\n        // each token sits on...\n        address token0 = pool_.token0();\n        address token1 = pool_.token1();\n        bool wethIsToken0 = token0 == address(weth_) && token1 == address(cashcat_);\n        bool wethIsToken1 = token1 == address(weth_) && token0 == address(cashcat_);\n        if (!wethIsToken0 && !wethIsToken1) revert TokenMismatch();\n        // ...and it must be the intended fee tier. Several CASHCAT/WETH pools\n        // exist at different tiers (and depths); pinning the tier turns a\n        // fat-fingered successor-deploy address into a construction revert\n        // instead of a burner silently routing through thin liquidity.\n        if (pool_.fee() != poolFee_) revert FeeTierMismatch();\n        _wethIsToken0 = wethIsToken0;\n        pool = pool_;\n        cashcat = cashcat_;\n        weth = weth_;\n        teamWallet = teamWallet_;\n        burnShareBps = burnShareBps_;\n        maxBurnPerCall = maxBurnPerCall_;\n    }\n\n    /// @dev Revenue arrives here: the hook's platform sweeps, the factory's\n    ///      launch fees, or anything else. Deliberately empty \u2014 a payment\n    ///      into this contract must never be able to revert (a launch's fee\n    ///      push happens inside the launch transaction itself). Splitting is\n    ///      lazy: whatever the balance holds beyond the two pots is fresh\n    ///      revenue, allocated on the next touch. Force-sent ETH is simply\n    ///      treated as revenue too.\n    receive() external payable {}\n\n    /// @notice Fresh revenue not yet split between the pots.\n    function unallocated() public view returns (uint256) {\n        return address(this).balance - burnTank - teamTab;\n    }\n\n    /// @dev Split all fresh revenue at the current share. Burn share rounds\n    ///      down; the remainder wei goes to the team tab.\n    function _allocate() private {\n        uint256 fresh = unallocated();\n        if (fresh == 0) return;\n        uint256 toBurn = (fresh * burnShareBps) / BPS_DENOMINATOR;\n        burnTank += toBurn;\n        teamTab += fresh - toBurn;\n        emit Allocated(toBurn, fresh - toBurn);\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 the burn \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Buys CASHCAT with the burn tank and sends it straight to the\n    ///         dead address. Callable by anyone; pays the caller the bounty.\n    ///         At most `maxBurnPerCall` of tank per call and one call per\n    ///         block \u2014 larger backlogs drain across blocks, keeping any\n    ///         single burn too small to be worth sandwiching hard.\n    function burn() external nonReentrant returns (uint256 cashcatBurned) {\n        if (_lastBurnBlock == block.number) revert BurnedThisBlock();\n        _lastBurnBlock = block.number;\n\n        _allocate();\n        uint256 fuel = burnTank;\n        if (fuel == 0) revert NothingToBurn();\n        uint256 chunk = fuel > maxBurnPerCall ? maxBurnPerCall : fuel;\n        burnTank = fuel - chunk;\n\n        // hold back a provisional bounty reserve so the buy can never eat the\n        // whole chunk; the real bounty is trued up from what actually bought.\n        uint256 buyEth = chunk - (chunk * BOUNTY_BPS) / BPS_DENOMINATOR;\n\n        // exact-input buy, no price limit on purpose (moving the price up is\n        // the point); exposure is bounded by the cap and the block gate. The\n        // pool pays CASHCAT out to the dead address directly.\n        bool zeroForOne = _wethIsToken0; // WETH in\n        (int256 amount0, int256 amount1) = pool.swap(\n            BURN_ADDRESS,\n            zeroForOne,\n            int256(buyEth),\n            zeroForOne ? MIN_SQRT_RATIO_PLUS_1 : MAX_SQRT_RATIO_MINUS_1,\n            \"\"\n        );\n        uint256 ethSpent = uint256(zeroForOne ? amount0 : amount1);\n        cashcatBurned = uint256(-(zeroForOne ? amount1 : amount0));\n        // no bounty for burning nothing: reverting rolls back the tank\n        // deduction too, so an empty pool can't be milked for bounties\n        if (cashcatBurned == 0) revert NothingToBurn();\n\n        // the bounty scales with the ETH that actually bought CASHCAT, not the\n        // requested chunk \u2014 a partial fill near the price boundary pays a\n        // proportional bounty, never the full 1% of the cap for a tiny buy.\n        // Everything not spent on the buy or the bounty returns to the tank,\n        // so the balance and the pots can never diverge.\n        uint256 bounty = (ethSpent * BOUNTY_BPS) / BPS_DENOMINATOR;\n        burnTank += chunk - ethSpent - bounty;\n\n        (bool paid,) = msg.sender.call{value: bounty}(\"\");\n        if (!paid) revert BountyPayFailed();\n        emit Burned(msg.sender, ethSpent, cashcatBurned, bounty);\n    }\n\n    /// @dev The pool collects payment for the buy here. Only swaps THIS\n    ///      contract initiated can reach it (v3 calls back the swap caller),\n    ///      and only the canonical pool may collect.\n    function uniswapV3SwapCallback(int256 amount0Delta, int256 amount1Delta, bytes calldata)\n        external\n        override\n    {\n        if (msg.sender != address(pool)) revert NotPool();\n        uint256 owed = uint256(_wethIsToken0 ? amount0Delta : amount1Delta);\n        weth.deposit{value: owed}();\n        if (!weth.transfer(address(pool), owed)) revert WethPayFailed();\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 the team \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Pushes the team's accrued share to the team wallet. Callable\n    ///         by anyone \u2014 the destination is fixed, so there is nothing to\n    ///         steer. A reverting team wallet only blocks itself, never the\n    ///         burn lane.\n    function collectTeam() external nonReentrant returns (uint256 amount) {\n        _allocate();\n        amount = teamTab;\n        if (amount == 0) return 0;\n        teamTab = 0;\n        (bool ok,) = teamWallet.call{value: amount}(\"\");\n        if (!ok) revert TeamPayFailed();\n        emit TeamCollected(teamWallet, amount);\n    }\n\n    // \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014 admin \u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\n    /// @notice Retunes how future revenue splits. Everything received so far\n    ///         is allocated under the outgoing share first, so the knob can\n    ///         never reach backwards into ETH the burn tank already owns.\n    function setBurnShareBps(uint16 newBps) external onlyOwner {\n        if (newBps > BPS_DENOMINATOR) revert InvalidShare();\n        _allocate();\n        emit BurnShareUpdated(burnShareBps, newBps);\n        burnShareBps = newBps;\n    }\n\n    function setTeamWallet(address newWallet) external onlyOwner {\n        if (newWallet == address(0)) revert ZeroAddress();\n        emit TeamWalletUpdated(teamWallet, newWallet);\n        teamWallet = newWallet;\n    }\n\n    function setMaxBurnPerCall(uint256 newCap) external onlyOwner {\n        if (newCap == 0) revert InvalidCap();\n        emit MaxBurnPerCallUpdated(maxBurnPerCall, newCap);\n        maxBurnPerCall = newCap;\n    }\n\n    /// @notice Moves the entire balance to a successor \u2014 the escape hatch if\n    ///         CASHCAT liquidity ever migrates venue and a new burner must\n    ///         take over. All-or-nothing so the pot accounting can never be\n    ///         left skewed; only the platform's own revenue is reachable,\n    ///         because nothing else ever enters this contract.\n    function migrate(address to) external onlyOwner nonReentrant {\n        if (to == address(0)) revert ZeroAddress();\n        uint256 amount = address(this).balance;\n        burnTank = 0;\n        teamTab = 0;\n        (bool ok,) = to.call{value: amount}(\"\");\n        if (!ok) revert MigrateFailed();\n        emit Migrated(to, amount);\n    }\n}\n"
+  }
+ ],
+ "certified": false,
+ "conflicting_implementations": null,
+ "abi": [
+  {
+   "inputs": [
+    {
+     "internalType": "contract IUniswapV3Pool",
+     "name": "pool_",
+     "type": "address"
+    },
+    {
+     "internalType": "uint24",
+     "name": "poolFee_",
+     "type": "uint24"
+    },
+    {
+     "internalType": "contract IERC20",
+     "name": "cashcat_",
+     "type": "address"
+    },
+    {
+     "internalType": "contract IWETH9",
+     "name": "weth_",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "cashcatTreasury_",
+     "type": "address"
+    },
+    {
+     "internalType": "uint16",
+     "name": "burnShareBps_",
+     "type": "uint16"
+    },
+    {
+     "internalType": "uint16",
+     "name": "cashcatTreasuryShareBps_",
+     "type": "uint16"
+    },
+    {
+     "components": [
+      {
+       "internalType": "address",
+       "name": "account",
+       "type": "address"
+      },
+      {
+       "internalType": "uint16",
+       "name": "shareBps",
+       "type": "uint16"
+      }
+     ],
+     "internalType": "struct CashCatRevenueSplitter.Participant[]",
+     "name": "participants_",
+     "type": "tuple[]"
+    },
+    {
+     "internalType": "uint256",
+     "name": "maxBuyPerCall_",
+     "type": "uint256"
+    },
+    {
+     "internalType": "address",
+     "name": "owner_",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "constructor"
+  },
+  {
+   "inputs": [],
+   "name": "BoughtThisBlock",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "BountyPayFailed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "DuplicateParticipant",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "FeeTierMismatch",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "InvalidCap",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "InvalidShare",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "MigrateFailed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NoParticipants",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotPool",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NothingToBuy",
+   "type": "error"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "owner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnableInvalidOwner",
+   "type": "error"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "account",
+     "type": "address"
+    }
+   ],
+   "name": "OwnableUnauthorizedAccount",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "PayoutFailed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "ReentrancyGuardReentrantCall",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "TokenMismatch",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "WethPayFailed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "ZeroAddress",
+   "type": "error"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "toBurnTank",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "toTreasuryTank",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "toParticipants",
+     "type": "uint256"
+    }
+   ],
+   "name": "Allocated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "caller",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "destination",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "ethSpent",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "cashcatOut",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "bounty",
+     "type": "uint256"
+    }
+   ],
+   "name": "Bought",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "oldTreasury",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "newTreasury",
+     "type": "address"
+    }
+   ],
+   "name": "CashcatTreasuryUpdated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "participant",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "amount",
+     "type": "uint256"
+    }
+   ],
+   "name": "Collected",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "oldCap",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "newCap",
+     "type": "uint256"
+    }
+   ],
+   "name": "MaxBuyPerCallUpdated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "to",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "amount",
+     "type": "uint256"
+    }
+   ],
+   "name": "Migrated",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "previousOwner",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnershipTransferStarted",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "previousOwner",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnershipTransferred",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "uint16",
+     "name": "burnBps",
+     "type": "uint16"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint16",
+     "name": "treasuryBps",
+     "type": "uint16"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "participantCount",
+     "type": "uint256"
+    }
+   ],
+   "name": "SplitUpdated",
+   "type": "event"
+  },
+  {
+   "inputs": [],
+   "name": "BOUNTY_BPS",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "BPS_DENOMINATOR",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "BURN_ADDRESS",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "acceptOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "allocate",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "burnShareBps",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "burnTank",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "buyAndBurn",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "cashcatOut",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "buyForCashcatTreasury",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "cashcatOut",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "cashcat",
+   "outputs": [
+    {
+     "internalType": "contract IERC20",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "cashcatTreasury",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "cashcatTreasuryShareBps",
+   "outputs": [
+    {
+     "internalType": "uint16",
+     "name": "",
+     "type": "uint16"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "cashcatTreasuryTank",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "participant",
+     "type": "address"
+    }
+   ],
+   "name": "collect",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "amount",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "maxBuyPerCall",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "to",
+     "type": "address"
+    }
+   ],
+   "name": "migrate",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "name": "owed",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "owner",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "participantCount",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "participants",
+   "outputs": [
+    {
+     "components": [
+      {
+       "internalType": "address",
+       "name": "account",
+       "type": "address"
+      },
+      {
+       "internalType": "uint16",
+       "name": "shareBps",
+       "type": "uint16"
+      }
+     ],
+     "internalType": "struct CashCatRevenueSplitter.Participant[]",
+     "name": "",
+     "type": "tuple[]"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "pendingOwner",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "pool",
+   "outputs": [
+    {
+     "internalType": "contract IUniswapV3Pool",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "renounceOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "newTreasury",
+     "type": "address"
+    }
+   ],
+   "name": "setCashcatTreasury",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "uint256",
+     "name": "newCap",
+     "type": "uint256"
+    }
+   ],
+   "name": "setMaxBuyPerCall",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "uint16",
+     "name": "burnBps",
+     "type": "uint16"
+    },
+    {
+     "internalType": "uint16",
+     "name": "treasuryBps",
+     "type": "uint16"
+    },
+    {
+     "components": [
+      {
+       "internalType": "address",
+       "name": "account",
+       "type": "address"
+      },
+      {
+       "internalType": "uint16",
+       "name": "shareBps",
+       "type": "uint16"
+      }
+     ],
+     "internalType": "struct CashCatRevenueSplitter.Participant[]",
+     "name": "newParticipants",
+     "type": "tuple[]"
+    }
+   ],
+   "name": "setSplit",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "totalOwed",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "transferOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "unallocated",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "int256",
+     "name": "amount0Delta",
+     "type": "int256"
+    },
+    {
+     "internalType": "int256",
+     "name": "amount1Delta",
+     "type": "int256"
+    },
+    {
+     "internalType": "bytes",
+     "name": "",
+     "type": "bytes"
+    }
+   ],
+   "name": "uniswapV3SwapCallback",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "weth",
+   "outputs": [
+    {
+     "internalType": "contract IWETH9",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "stateMutability": "payable",
+   "type": "receive"
+  }
+ ],
+ "is_changed_bytecode": false,
+ "is_partially_verified": false,
+ "package_name": null,
+ "constructor_args": "0x000000000000000000000000a70fc67c9f69da90b63a0e4c05d229954574e3130000000000000000000000000000000000000000000000000000000000002710000000000000000000000000020bfc650a365f8bb26819deaabf3e21291018b40000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000ab2f34f77b396b6b1dad6ec2fb1ab5550a3b790300000000000000000000000000000000000000000000000000000000000009c400000000000000000000000000000000000000000000000000000000000009c4000000000000000000000000000000000000000000000000000000000000014000000000000000000000000000000000000000000000000006f05b59d3b20000000000000000000000000000d2defbd13aff22d6989e8c14b4517ec308079e9100000000000000000000000000000000000000000000000000000000000000040000000000000000000000003ea937589ea5ee0fbccbccef29473e7f957a19a500000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000b1c7b62f9b623d23a1401f8849f25e8ce0cb6df200000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000a6dab37220ac3b74db0e227e4d520898545f190400000000000000000000000000000000000000000000000000000000000004e2000000000000000000000000b9b15eec5ba6b0582ffe1153d26d54ff6c7a95c600000000000000000000000000000000000000000000000000000000000004e2"
+}

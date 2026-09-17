@@ -1,0 +1,134 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "airlock_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract UniswapV2MigratorSplit",
+    "name": "migrator_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "MinUnlockDateNotReached",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoBalanceToLock",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolAlreadyInitialized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolNotInitialized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SenderNotMigrator",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "airlock",
+  "outputs": [
+   {
+    "internalType": "contract Airlock",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "name": "claimFeesAndExit",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "name": "getState",
+  "outputs": [
+   {
+    "internalType": "uint112",
+    "name": "amount0",
+    "type": "uint112"
+   },
+   {
+    "internalType": "uint112",
+    "name": "amount1",
+    "type": "uint112"
+   },
+   {
+    "internalType": "uint32",
+    "name": "minUnlockDate",
+    "type": "uint32"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "migrator",
+  "outputs": [
+   {
+    "internalType": "contract UniswapV2MigratorSplit",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "name": "receiveAndLock",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

@@ -1,0 +1,8 @@
+FeesSettled count 258
+   last block 52832770 2026-09-02T19:48:27+00:00
+PlatformCollected count 117
+   last block 52833142 2026-09-02T19:49:06+00:00
+CreatorFeesClaimed count 112
+   last block 52594684 2026-09-02T13:01:19+00:00
+PoolRegistered count 81
+   last block 51757024 2026-09-01T13:31:05+00:00

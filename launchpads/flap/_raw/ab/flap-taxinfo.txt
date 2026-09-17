@@ -1,0 +1,43 @@
+HOMEStoreDocs
+
+Community
+
+XTelegram
+
+More
+
+AI OracleTerms and ConditionsContact Us
+
+Create TokenCREATE
+
+SearchRobinhoodENConnect Wallet
+
+Create TokenCREATESearchRobinhoodConnect Wallet
+
+Tokens›UBER›Tax Info
+
+# UBER
+
+Uber Technologies
+
+CA0x9413...7777
+
+CA0x9413...7777
+
+### Fund Recipient Information
+
+All tax from this token will be sent to the following recipient wallet.
+
+All tax collected will go directly to the fund recipient wallet below. Please verify the recipient address carefully and be aware of the associated risks before trading.
+
+Recipient Address:
+
+0x167e...CB8B
+
+Total Tax
+
+0.538308 ETH
+
+Creator fees accumulate first. Once the balance reaches about $4, it is automatically sent to the configured recipient wallet.
+
+HOMEStoreDocsCommunityMoreLanguageEN

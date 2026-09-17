@@ -1,0 +1,41 @@
+Airlock.create made THROUGH app.doppler.lol itself (integrator = Doppler Safe)
+tx       0x500073f1ed5f772d0a3da567a930a50b54110abfd32c66e45f9fa841c717291e
+from     0xC500dFC8f9EDd29E269a150619E104e8f967Bb45  <- the creator's own wallet; the app does not relay
+to       0xeb7C034704eF8Dcd2D32324c1545f62fB4aD0862 (Airlock, called directly, NOT via Bundler)
+value    0 wei  <- launching costs no ETH beyond gas
+gas used 3,157,452
+
+initialSupply    1,000,000,000
+numTokensToSell  1,000,000,000  (100%)
+numeraire        0x8005d266423c7ea827372c9c864491e5786600ea
+tokenFactory     0x1B37D3a72082029c44B35B604Ea473617580b69a
+governanceFactory 0x85f37f74Ef2478A770318bc810177a9835911aD7
+poolInitializer  0x4e3468951D49f2EEa976eD0D6e75fFCb44a9a544
+liquidityMigrator 0xba2F330EDb16cD8056f5988d8CE19BbC63475A0e
+salt             0x8099ffe7ebe3d3a782105751a4d6198747e05428649fb874a363d4404b1dc4e6
+
+  name                   ily
+  symbol                 ily
+  vestingSchedules       ()
+  vestingBeneficiaries   ()
+  scheduleIds            ()
+  amounts                ()
+  tokenURI               ipfs://bafkreieullrubfzvx76hke2iiuw2kg7vr5l72qd3hdmd5b6orw5mhxbnuq
+  maxBalanceLimit        0
+  balanceLimitEnd        0
+  controller             0x0000000000000000000000000000000000000000
+  excluded               ()
+
+  fee               10000  = 1.00%
+  tickSpacing       200
+  farTick           887000
+  curves            4
+    1: ticks  -192600 ..  -116600  positions= 1  shares=75.0000%
+    2: ticks  -162600 ..  -102600  positions=10  shares=12.5000%
+    3: ticks  -139600 ..   -70400  positions=10  shares=11.5000%
+    4: ticks   -70400 ..   887200  positions= 1  shares= 1.0000%
+    total           100.0000%
+  beneficiaries     2
+    0x21e2ce70511e4fe542a97708e89520471daa7a66  5.0000%
+    0xc500dfc8f9edd29e269a150619e104e8f967bb45  95.0000%
+  dopplerHook       0x0000000000000000000000000000000000000000

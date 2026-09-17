@@ -1,0 +1,44 @@
+# Long - Token page, $CLIPPY anchored to MSFT
+
+> Source: https://app.long.xyz/tokens/0x85856f025bf13b8fd2aae2f6da458318744f1e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0x85856f025bf13b8fd2aae2f6da458318744f1e18.md`
+
+---
+
+![Image 1: CLIPPY](https://storage.long.xyz/tokens/0x85856f025bf13b8fd2aae2f6da458318744f1e18.png)
+
+$CLIPPY
+
+Clippy
+
+Anchored to![Image 2: MSFT](https://app.long.xyz/robinhood-coins/msft.png)**MSFT**
+
+$3.2M
+
+$3.2M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x85856f025bf13b8fd2aae2f6da458318744f1e18)
+
+## Fees
+
+Fee receiver:[0x29ccC8...5C9a](https://robinhoodchain.blockscout.com/address/0x29ccC8F5DCBE0823FA48CcfF0aBA3f3766215C9a)
+
+Claimed$105,229.11
+
+Unclaimed$130,260.14
+
+Name Clippy
+Ticker$CLIPPY
+CA 0x85856f...1e18
+Anchored to![Image 3: MSFT](https://app.long.xyz/robinhood-coins/msft.png)MSFT 0xe93237...2e74
+Description Clippy was Microsoft’s animated Office Assistant introduced in 1997. Before AI there was Clippy...
+Social Links[https://www.youtube.com/watch?v=0xAGUrkDsj4](https://www.youtube.com/watch?v=0xAGUrkDsj4)[https://x.com/ClippyMSFT](https://x.com/ClippyMSFT)
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0xb3e164e6cce432f23a0d553f37091216963010de78c5d3ca80d1d56aadab3e25)
+
+Links/Buttons:
+- [](https://x.com/ClippyMSFT)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x85856f025bf13b8fd2aae2f6da458318744f1e18)
+- [0x29ccC8...5C9a](https://robinhoodchain.blockscout.com/address/0x29ccC8F5DCBE0823FA48CcfF0aBA3f3766215C9a)
+- [View chart](https://www.defined.fi/robinhood/0xb3e164e6cce432f23a0d553f37091216963010de78c5d3ca80d1d56aadab3e25)

@@ -1,0 +1,492 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_launcher",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPositionManager",
+    "name": "_positionManager",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPoolManager",
+    "name": "_poolManager",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IFeeSplitter",
+    "name": "_feeSplitter",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IBeneficiaryVault",
+    "name": "_beneficiaryVault",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "_initialTick",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "totalWeight",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidAllocationWeights",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidConfigData",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "feeBeneficiary",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidFeeBeneficiary",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidPositionRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidPositions",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidSupply",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "offsetLower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "offsetUpper",
+    "type": "int24"
+   }
+  ],
+  "name": "InvalidTickBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTickRange",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTokenDecimals",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlyLauncher",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "mismatchedPositionManager",
+    "type": "address"
+   }
+  ],
+  "name": "PositionManagerMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "received",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "expected",
+    "type": "uint256"
+   }
+  ],
+  "name": "TokenAmountMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint24",
+    "name": "actual",
+    "type": "uint24"
+   },
+   {
+    "internalType": "uint24",
+    "name": "max",
+    "type": "uint24"
+   }
+  ],
+  "name": "TooManyPositions",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "index",
+    "type": "uint256"
+   }
+  ],
+  "name": "ZeroPositionWeight",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "distributor",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   }
+  ],
+  "name": "DistributionInitialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "finalPositionRecipient",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct PoolKey",
+    "name": "key",
+    "type": "tuple"
+   }
+  ],
+  "name": "TokenLaunched",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "LP_FEE",
+  "outputs": [
+   {
+    "internalType": "uint24",
+    "name": "",
+    "type": "uint24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_INITIAL_TICK",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_LAUNCH_TICK",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TICK_SPACING",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TOTAL_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "beneficiaryVault",
+  "outputs": [
+   {
+    "internalType": "contract IBeneficiaryVault",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "feeSplitter",
+  "outputs": [
+   {
+    "internalType": "contract IFeeSplitter",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "initialSqrtPriceX96",
+  "outputs": [
+   {
+    "internalType": "uint160",
+    "name": "",
+    "type": "uint160"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "initialTick",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes",
+    "name": "configData",
+    "type": "bytes"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "initializeDistribution",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launcher",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionLiquidity",
+  "outputs": [
+   {
+    "internalType": "uint128",
+    "name": "",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract IPositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

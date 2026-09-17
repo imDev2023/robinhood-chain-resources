@@ -1,0 +1,28 @@
+{
+  "base_url": "https://docs.bags.fm/",
+  "results": [
+    "https://docs.bags.fm/",
+    "https://docs.bags.fm/llms.txt",
+    "https://docs.bags.fm/index.md",
+    "https://docs.bags.fm/cli/quickstart-token-launch",
+    "https://docs.bags.fm/principles/base-url-versioning",
+    "https://docs.bags.fm/how-to-guides/launch-token-non-sol-quote",
+    "https://docs.bags.fm/how-to-guides/typescript-node-setup",
+    "https://docs.bags.fm/principles/lookup-tables",
+    "https://docs.bags.fm/robinhood/partner-program",
+    "https://docs.bags.fm/how-to-guides/initial-buy-math",
+    "https://docs.bags.fm/robinhood/index-tokens",
+    "https://docs.bags.fm/how-to-guides/trade-tokens",
+    "https://docs.bags.fm/api-reference/introduction",
+    "https://docs.bags.fm/how-to-guides/launch-token",
+    "https://docs.bags.fm/robinhood/setup",
+    "https://docs.bags.fm/robinhood/contracts",
+    "https://docs.bags.fm/how-to-guides/agent-authentication",
+    "https://docs.bags.fm/principles/api-key-management",
+    "https://docs.bags.fm/robinhood/claim-fees",
+    "https://docs.bags.fm/robinhood/trade-tokens",
+    "https://docs.bags.fm/how-to-guides/claim-fees"
+  ],
+  "response_time": 1.15,
+  "request_id": "cae664ee-4030-4cfc-978d-2ab983f90e82"
+}

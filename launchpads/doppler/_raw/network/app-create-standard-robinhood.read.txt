@@ -1,0 +1,1 @@
+"Quick launch\nUse the default pricing, supply, fees, and distribution settings.\nStandard launch\nCustomize details, pricing curves, economics, and launch settings.\nToken image\nDrag and drop or\nUpload image\nToken name\nToken symbol\n$\nNetwork\nRobinhood\nNumeraire\nETH\nSocial links (optional)"

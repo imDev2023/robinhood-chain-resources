@@ -1,0 +1,16 @@
+Triggering pipeline collection for x_posts...
+Triggered collection with snapshot ID:sd_mtjkhmuux7sujg6jz
+Status: starting - polling again (attempt 1/600)
+Status: starting - polling again (attempt 2/600)
+Status: starting - polling again (attempt 3/600)
+Status: starting - polling again (attempt 4/600)
+Status: starting - polling again (attempt 5/600)
+Status: starting - polling again (attempt 6/600)
+Status: starting - polling again (attempt 7/600)
+Status: starting - polling again (attempt 8/600)
+Status: starting - polling again (attempt 9/600)
+Status: starting - polling again (attempt 10/600)
+Status: running - polling again (attempt 11/600)
+Status: running - polling again (attempt 12/600)
+Data received after 13 attempts
+[{"id":"2086775790344048963","user_posted":"hooddotfun","name":"HOOD","description":"Build, build, and keep building","date_posted":"2026-08-10T11:24:53.000Z","url":"https://x.com/hooddotfun/status/2086775790344048963","quoted_post":{"post_id":"2086467538817331271","profile_id":"RobinhoodApp","profile_name":"Robinhood","data_posted":"2026-08-09T15:00:00.000Z","url":"https://x.com/RobinhoodApp/status/2086467538817331271","description":"What's a lesson the market taught you?"},"replies":1,"reposts":1,"likes":3,"views":637,"followers":3976,"biography":"Hood is the official launchpad for the Robinhood chain on the EVM network","posts_count":161,"profile_image_link":"https://pbs.twimg.com/profile_images/2076895679960469504/bNasG_cn_normal.png","following":17,"is_verified":true,"quotes":0,"bookmarks":1,"parent_post_details":{"post_id":"2086775790344048963","profile_id":"1889858138909646848","profile_name":"HOOD","date_posted":"2026-08-10T11:24:53.000Z"},"verification_type":"blue","user_id":"1889858138909646848","is_repost":false,"timestamp":"2026-09-02T03:59:44.054Z","input":{"url":"https://x.com/hooddotfun/status/2086775790344048963","country":""}}]

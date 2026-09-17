@@ -1,0 +1,1433 @@
+auctions.table.filter.placeholder	Filter auctions
+claim.thanks	Thanks for being part of the Uniswap community <heart />
+claim.uni.arrived	UNI has arrived
+common.about	About
+common.accept	Accept
+common.active	Active
+common.activeNetworks	Active networks
+common.activity	Activity
+common.add.label	Add
+common.add.liquidity.canceled	Add liquidity canceled
+common.addLiquidity	Add liquidity
+common.address	Address
+common.address.chain	{{chainName}} address
+common.addressOrENS	Wallet address or ENS name
+common.addresses.count_one	{{count}} address
+common.addresses.count_other	{{count}} addresses
+common.advanced	Advanced
+common.ago	ago
+common.all	All
+common.allTime	All time
+common.amount	Amount
+common.and	and
+common.app	App
+common.approvePending	Approval pending
+common.approvePermitTx	Approve request {{indexText}}
+common.approvePermitTx.active	Approve request{{indexText}} in wallet
+common.approvePermitTx.explainer	What are Permit2 approvals?
+common.approvePermitTx.pending	Approving request {{indexText}}...
+common.approveSpend	Approve {{symbol}}
+common.approved	Approved
+common.approvedSpend	Approved {{symbol}}
+common.approving	Approving
+common.areYouSure	Are you sure?
+common.auctions	Auctions
+common.auto	Auto
+common.availableOnIOSAndroidChrome	Available on iOS, Android, and Chrome
+common.bestRoute	Route
+common.bestRoute.with	Route via {{provider}}
+common.beta	Beta
+common.biometrics.generic	Biometrics
+common.biometrics.touchId	Touch ID
+common.biometrics.windowsHello	Windows Hello
+common.blocked.ifError	If you believe this is an error, please send an email including your address to <emailAddress />
+common.blocked.reason	This address is blocked on the Uniswap Labs interface because it is associated with one or more <link>blocked activities</link>.
+common.blockedAddress	Blocked address
+common.blog	Blog
+common.bought	Bought
+common.brandAssets	Brand assets
+common.browserExtension	Browser extension
+common.bugBounty	Bug bounty
+common.button.accept	Accept
+common.button.back	Back
+common.button.buy	Buy
+common.button.cancel	Cancel
+common.button.close	Close
+common.button.confirm	Confirm
+common.button.connect	Connect
+common.button.continue	Continue
+common.button.copied	Copied
+common.button.copy	Copy
+common.button.create	Create
+common.button.delete	Delete
+common.button.disable	Disable
+common.button.disabling	Disabling
+common.button.disconnect	Disconnect
+common.button.dismiss	Dismiss
+common.button.done	Done
+common.button.edit	Edit
+common.button.enable	Enable
+common.button.finish	Finish
+common.button.goBack	Go back
+common.button.hide	Hide
+common.button.later	Maybe later
+common.button.learn	Learn more
+common.button.next	Next
+common.button.notNow	Not now
+common.button.ok	OK
+common.button.paste	Paste
+common.button.pay	Pay
+common.button.proceed	Proceed
+common.button.receive	Receive
+common.button.reject	Reject
+common.button.remove	Remove
+common.button.reset	Reset
+common.button.resetGas	Reset Gas
+common.button.retry	Retry
+common.button.reveal	Reveal
+common.button.review	Review
+common.button.save	Save
+common.button.scrollDown	Scroll down
+common.button.search	Search
+common.button.sell	Sell
+common.button.send	Send
+common.button.setup	Set up
+common.button.share	Share
+common.button.show	Show
+common.button.showLess	Show less
+common.button.showMore	Show more
+common.button.sign	Sign
+common.button.signOut	Sign out
+common.button.skip	Skip
+common.button.swap	Swap
+common.button.tryAgain	Try again
+common.button.understand	I understand
+common.button.unlock	Unlock
+common.button.view	View
+common.button.viewDetails	View details
+common.button.yes	Yes
+common.buy.label	Buy
+common.buyAndSell	Buy and sell on Uniswap
+common.cancelOrder	Cancel order
+common.cancellationSubmitted	Cancellation submitted
+common.cancellationSuccessful	Cancellation successful
+common.card.error.description	Something went wrong
+common.card.error.title	Oops! Something went wrong.
+common.careers	Careers
+common.chain	Chain
+common.chain.networkCost	{{chain}} network cost
+common.chart	Chart
+common.chromeExtension	Extension
+common.claim.failed	Claim failed
+common.claimUnis	Claim your UNI tokens
+common.claimed	Claimed
+common.claiming	Claiming
+common.clear	Clear
+common.close	Close
+common.closed	Closed
+common.collect.button	Collect
+common.comingSoon	Coming soon
+common.commodities	Commodities
+common.company	Company
+common.confirm	Confirm
+common.confirmCancellation	Confirm cancellation
+common.confirmSend.button	Confirm send
+common.confirmSwap	Confirm swap in wallet
+common.confirmTimedOut	Confirmation timed out. Please retry.
+common.confirmTransfer	Confirm transfer
+common.confirmWallet	Confirm in wallet
+common.conjunction.and	{{first}} and {{second}}
+common.connect.button	Connect
+common.connectAWallet.button	Connect a wallet
+common.connectAWallet.button.evm	Connect Ethereum wallet
+common.connectAWallet.button.evm.switch	Switch Ethereum wallet
+common.connectAWallet.button.svm	Connect Solana wallet
+common.connectAWallet.button.svm.switch	Switch Solana wallet
+common.connectAWallet.button.switch	Switch wallet
+common.connectTo	Connect to {{platform}}
+common.connectWallet.button	Connect wallet
+common.contactUs.button	Contact us
+common.copied	Copied
+common.copy.address	Copy address
+common.copy.poolId	Copy pool ID
+common.copyLink.button	Copy link
+common.createPosition	Create position
+common.created.date	Created {{date}}
+common.currency	Currency
+common.current	Current
+common.currentPrice	Current price
+common.custom	Custom
+common.customRange	Custom range
+common.dataOutdated	Data may be outdated
+common.day	day
+common.day.count_one	{{count}} day
+common.day.count_other	{{count}} days
+common.default	Default
+common.deposit	Deposit
+common.deposit.toNetwork	Deposit tokens to the {{label}} network.
+common.depositTokens	Deposit tokens
+common.depositing	Depositing
+common.description	Description
+common.details	Details
+common.detected	Detected
+common.developers	Developers
+common.device	This device
+common.device.other	Other device
+common.dialog.dontShowAgain	Don’t show again
+common.disclosures	Disclosures
+common.dismiss	Dismiss
+common.docs	Docs
+common.donate	Donate
+common.done	Done
+common.dontShowAgain	Don’t show this again
+common.download	Download
+common.downloadAppStore	Download in the App Store
+common.downloadPlayStore	Download in the Play Store
+common.downloadUniswapApp	Download the Uniswap app
+common.downloadUniswapWallet	Download Uniswap Wallet
+common.dynamic	Dynamic
+common.earning	Earning
+common.edit.button	Edit
+common.ended	Ended
+common.error.details	Error details
+common.error.general	Something went wrong
+common.error.label	Error
+common.error.request	Sorry, an error occured while processing your request. If you request support, be sure to copy the details of this error.
+common.error.requestFailed	Request failed
+common.error.somethingWrong	Something went wrong!
+common.errorConnecting.error	Connection error
+common.errorLoadingData.error	Error loading data
+common.etfs	ETFs
+common.expiry	Expiry
+common.explore	Explore
+common.exploreTokens	Explore tokens
+common.explorer	Explorer
+common.extension	Uniswap Extension
+common.failed	Failed
+common.failedSwitchNetwork	Failed to switch networks
+common.fee	Fee
+common.fees	Fees
+common.feesEarned	Fees earned
+common.flags	Flags
+common.for	For
+common.free	Free
+common.fullRange	Full range
+common.getApp	Get app
+common.getHelp.button	Get help
+common.getStarted	Get started
+common.getSupport.button	Get support
+common.getTheApp	Get the app
+common.getUniswapWallet	Get Uniswap Wallet
+common.governance	Governance
+common.happyHolidays	Happy Holidays from the Uniswap team!
+common.help	Help
+common.helpCenter	Help center
+common.hidden	Hidden
+common.hide.button	Hide
+common.hour.count_one	{{count}} hour
+common.hour.count_other	{{count}} hours
+common.iOSAndroid	iOS and Android
+common.input.noRecipient.error	Select recipient
+common.input.password.confirm	Confirm password
+common.input.password.error.mismatch	Passwords don’t match
+common.input.password.error.same	New password must be different from current password
+common.input.password.error.weak	This password is too weak
+common.input.password.new	New password
+common.input.password.placeholder	Password
+common.input.password.strength.medium	Medium
+common.input.password.strength.strong	Strong
+common.input.password.strength.weak	Weak
+common.input.search.networks	Search networks
+common.insufficient.funds	Insufficient funds
+common.insufficientBalance.error	Insufficient balance
+common.insufficientFundsForNetworkFee.error	Insufficient funds to cover network cost
+common.insufficientTokenBalance.error	Insufficient {{tokenSymbol}} balance
+common.insufficientTokenBalance.error.simple	Not enough {{tokenSymbol}}
+common.invalidRecipient.error	Invalid recipient
+common.language	Language
+common.launches	Launches
+common.learnMoreLiquidity	Learn more about providing liquidity
+common.learnMoreSwap	Learn more about swaps
+common.legalAndPrivacy	Legal & Privacy
+common.less	Less
+common.limit.cancel_one	Cancel limit
+common.limit.cancel_other	Cancel {{count}} limits
+common.limit.canceled	Limit canceled
+common.limit.executed	Limit executed
+common.limit.expired	Limit expired
+common.limit.failed	Limit failed
+common.limit.opened	Limit opened
+common.limit.pending	Limit pending
+common.limits.approachMax	Approaching 100 limit maximum
+common.limits.cancelProceed	Cancel limits to proceed
+common.limits.expiresIn	Expires in {{duration}}
+common.limits.open	Open limits
+common.links	Links
+common.liquidity	Liquidity
+common.liquidity.provision	Liquidity Provision
+common.liquidity.removed	Liquidity removed
+common.loading	Loading
+common.longText.button.less	Read less
+common.longText.button.more	Read more
+common.manage	Manage
+common.market.label	Market
+common.marketPrice	Market price
+common.marketPrice.fetching	Fetching market price...
+common.marketPrice.unavailable	Market price not found. Please do your own research to avoid loss of funds.
+common.max	Max
+common.message	Message
+common.migrate	Migrate
+common.migrate.liquidity.failed	Migrate liquidity failed
+common.migrate.position	Migrate position
+common.migrated.liquidity	Migrated liquidity
+common.migrating.liquidity	Migrating liquidity
+common.min	Min
+common.minutes.lowercase_one	minute
+common.minutes.lowercase_other	minutes
+common.minutes.withCount_one	{{count}} minute
+common.minutes.withCount_other	{{count}} minutes
+common.mobileApp	Mobile app
+common.more	More
+common.moreDetails	More details
+common.navigation.settings	Settings
+common.navigation.systemSettings	Settings
+common.navigationButton	Navigation button
+common.needHelp	Need help?
+common.network	Network
+common.networkCost	Network cost
+common.neverMind	Never mind
+common.new	New
+common.new.exclamation	New!
+common.nft	NFT
+common.noAmount.error	Enter an amount
+common.noResults	No results found.
+common.none	None
+common.notAvailableInRegion.error	Not available in your region
+common.notCreated.label	Not created
+common.notSupported	Not supported
+common.oneDay	1 day
+common.oneDay.short	1D
+common.oneHour.short	1H
+common.oneMonth	1 month
+common.oneWeek	1 week
+common.oneYear	1 year
+common.open	Open
+common.opensea.link	View on OpenSea
+common.optional	(optional)
+common.or	or
+common.orderCanceled	Order canceled
+common.orderExecuted	Order executed
+common.orderExpired	Order expired
+common.orderPending	Order pending
+common.others	Others
+common.outOfRange	Out of range
+common.pageNotFound	Page not found!
+common.passkey.count	Passkey {{number}}
+common.passkeys	Passkeys
+common.passkeys.add	Add a passkey
+common.passkeys.add.description	Choose where to save your new passkey.
+common.pastDay	Past day
+common.pastFiveMinutes	Past five minutes
+common.pastHour	Past hour
+common.pastMonth	Past month
+common.pastWeek	Past week
+common.pastYear	Past year
+common.pending	Pending
+common.pending.cancellation	Pending cancellation
+common.pendingEllipsis	Pending...
+common.permit	Permit
+common.plusMore	+{{number}} more
+common.pool	Pool
+common.pools	Pools
+common.popular	Popular
+common.portfolio	Portfolio
+common.poweredBy	Powered by <name />
+common.price	Price
+common.priceUpdated	Price updated
+common.privacyChoices	Your Privacy Choices
+common.privacyChoices.checkbox.description	When checked, we will not share your data with third-party partners for personalized advertising. You can enable sharing anytime by unchecking this box.
+common.privacyChoices.checkbox.label	Do not share my information
+common.privacyChoices.description	We may share device identifiers with our advertising partners to promote our services on other websites and platforms. Where this qualifies as selling, sharing or targeted advertising under applicable laws, you can opt out by checking the "do not share my information" box. For more information about our privacy practices please review our <privacyLink>Privacy Policy</privacyLink>.
+common.privacyChoices.disclaimer	Please note that your selection will apply only to this browser on this device. You can also opt out by enabling the Global Privacy Control setting within the browser that you use to access our services. To see more options, go to your settings.
+common.privacyPolicy	Privacy Policy
+common.proceed	Proceed
+common.proceedInWallet	Proceed in your wallet
+common.products	Products
+common.protocol	Protocol
+common.protocol.v2	Uniswap v2
+common.protocol.v3	Uniswap v3
+common.protocol.v4	Uniswap v4
+common.purchased	Purchased
+common.range	Range
+common.rate	Rate
+common.readMore	Read more
+common.receive	Receive
+common.received	Received
+common.recent	Recent
+common.recommended	Recommended
+common.refresh	Refresh
+common.reload.label	Reload the app
+common.remove.label	Remove
+common.remove.liquidity.canceled	Remove liquidity canceled
+common.remove.liquidity.failed	Remove liquidity failed
+common.removing.liquidity	Removing liquidity
+common.report	Report
+common.reported	Reported
+common.resetLimit	Reset {{symbol}} limit
+common.resetLimitWallet	Reset {{symbol}} limit in wallet
+common.resettingLimit	Resetting {{symbol}} limit...
+common.revoke.approval.failed	Revoke approval failed
+common.revoked.approval	Revoked approval
+common.revoking.approval	Revoking approval
+common.scanQRDownload	Scan the QR code with your phone to download
+common.selectRegion.label	Select your region
+common.selectToken.label	Select a token
+common.sell.label	Sell
+common.send.button	Send
+common.send.error.message	Transfer failed. Please try again.
+common.send.failed	Send failed
+common.sending	Sending
+common.sent	Sent
+common.session.fail	Your connection needs to be verified. This may resolve with an app restart.
+common.session.fail.browser	Your connection needs to be verified. This may resolve with a page refresh.
+common.session.fail.title	Connection error
+common.settings	Settings
+common.share	Share
+common.share.copyPortfolioLink	Copy portfolio link
+common.share.shareToTwitter	Share to Twitter
+common.share.twitter.token	Check out {{name}}
+common.share.twitter.wallet	Check out this wallet:
+common.show.button	Show
+common.showLess.button	Show less
+common.showMore.button	Show more
+common.signMessage	Sign message
+common.signMessageWallet	Sign message in wallet
+common.signatureExpired	Your signature has expired.
+common.socials	Socials
+common.sold	Sold
+common.stats	Stats
+common.status	Status
+common.step.number	Step {{number}}
+common.step.number.of	Step {{current}} of {{total}}
+common.stocks	Stocks
+common.submit	Submit
+common.swap	Swap
+common.swap.expired	Swap expired
+common.swap.failed	Swap failed
+common.swapPending	Swap pending...
+common.termsOfService	Terms of Service
+common.text.connected	Connected
+common.text.contract	Contract
+common.text.disconnected	Disconnected
+common.text.error	Error
+common.text.notAvailable	N/A
+common.text.recipient	To
+common.text.sender	From
+common.text.unknown	Unknown
+common.thisHour	This hour
+common.thisMonth	This month
+common.thisToken	This token
+common.thisWeek	This week
+common.thisYear	This year
+common.tick	Tick
+common.time	Time
+common.time.justNow	Just now
+common.time.past.days	{{days}} days
+common.time.past.days.short	{{days}}d
+common.time.past.hours	{{hours}} hours
+common.time.past.hours.short	{{hours}}h
+common.time.past.minutes.short	{{minutes}}m
+common.time.past.months.short	{{months}}mo
+common.time.past.seconds.short	{{seconds}}s
+common.to	to
+common.today	Today
+common.token	Token
+common.token.plural	Tokens
+common.tokenA	Token A
+common.tokenAmount	Token amount
+common.tokenB	Token B
+common.total	Total
+common.totalBalance	Total balance
+common.totalUniswapTVL	Total Uniswap TVL
+common.totalValueLocked	TVL
+common.trade	Trade
+common.trademarkPolicy	Trademark Policy
+common.transactionDetails	Transaction details
+common.transactionId	Transaction ID
+common.transactionPending	Transaction pending
+common.transactions	Transactions
+common.transfer_one	transfer
+common.transfer_other	transfers
+common.trending	Trending
+common.tryAgain.error	Try again
+common.twitter	Twitter
+common.type.label	Type
+common.unavailable	Unavailable
+common.unichain	Unichain
+common.uniswapMobile	Uniswap Mobile
+common.uniswapWallet	Uniswap Wallet
+common.uniswapX	UniswapX
+common.unknown	Unknown
+common.unknownError.error	Unknown Error
+common.unwrap.button	Unwrap
+common.unwrap.failed	Unwrap failed
+common.unwrapped	Unwrapped
+common.unwrapping	Unwrapping
+common.value	Value
+common.view.profile	View profile
+common.viewAll	View all
+common.viewOnExplorer	View on Explorer
+common.volume	Volume
+common.vote	Vote
+common.wallet.approve	Approve in wallet
+common.wallet.label	Wallet
+common.walletAddress	Wallet address
+common.warning	Warning
+common.webApp	Web App
+common.website	Website
+common.whyApprove	Why do I have to approve a token?
+common.whySign	Why are signatures required?
+common.whyWrap	Why do I have to wrap my {{symbol}}?
+common.withdraw	Withdraw
+common.withdrawal.amount	Withdrawal amount
+common.withinRange	In range
+common.wrap	Wrap {{symbol}}
+common.wrap.failed	Wrap failed
+common.wrapIn	Wrap  {{symbol}} in wallet
+common.wrapped	Wrapped
+common.wrapping	Wrapping
+common.wrappingToken	Wrapping  {{symbol}}...
+common.yesterday	Yesterday
+common.your.account.had.insufficient.funds	Your account had insufficient funds to complete this swap.
+common.your.account.has.insufficient.funds	Your account has insufficient funds to complete this swap.
+common.your.connected.wallet	Your connected wallet
+common.your.limit.could.not.be.fulfilled	Your limit could not be fulfilled at this time. Please try again.
+common.your.swap.could.not.be.fulfilled	Your swap could not be fulfilled at this time. Please try again.
+common.youreBuying	You’re buying
+common.youreSelling	You’re selling
+home.activity.empty.button	Receive tokens or NFTs
+home.activity.empty.description.default	When you approve, trade, or transfer tokens or NFTs, your transactions will appear here.
+home.activity.empty.description.external	When this wallet makes transactions, they’ll appear here.
+home.activity.empty.title	No activity yet
+home.activity.error.load	Couldn’t load activity
+home.activity.title	Activity
+home.banner.offline	You are in offline mode
+home.banner.testnetMode	You are in testnet mode
+home.banner.testnetMode.nav	You are in testnet mode. Toggle this off in settings.
+home.earn.upToApy	Earn up to <highlight>{{apy}}</highlight>
+home.earning.title	Earning
+home.empty.cexTransfer	Transfer from account
+home.empty.cexTransfer.description	Move funds from a trading platform.
+home.empty.transfer	Transfer from wallet
+home.empty.transfer.description	Move funds from another wallet.
+home.explore.footer	Tap “search” to explore more
+home.explore.title	Explore tokens
+home.extension.error	Error loading accounts
+home.label.for	Buy/Sell
+home.label.receive	Receive
+home.label.send	Send
+home.label.swap	Swap
+home.nfts.title	NFTs
+home.tokens.empty.action.buy.description	Purchase with a debit card or a bank account.
+home.tokens.empty.action.buy.title	Buy crypto
+home.tokens.empty.action.import.description	Enter this wallet’s recovery phrase to begin swapping and sending.
+home.tokens.empty.action.import.title	Import wallet
+home.tokens.empty.action.receive.description	Transfer from another wallet or account.
+home.tokens.empty.action.receive.title	Receive crypto
+home.tokens.empty.description	When this wallet buys or receives tokens, they’ll appear here.
+home.tokens.empty.title	No tokens yet
+home.tokens.empty.welcome.description	Add funds to start trading
+home.tokens.error.fetch	Failed to fetch token balances
+home.tokens.error.load	Couldn’t load token balances
+home.tokens.title	Tokens
+home.upsell.receive.cta	From an account
+home.upsell.receive.title	Receive crypto
+home.warning.viewOnly	This is a view-only wallet
+launches.allLaunches.title	All launches
+launches.card.committedVol	Committed vol.
+launches.card.fdv	FDV
+launches.card.volume24h	24H volume
+launches.disclaimer	Disclaimer: Auctions are sorted by committed volume by default, and Uniswap Labs does not provide valuation, recommendations, or opinions on any token. You should independently evaluate whether to transact in any token.
+launches.filter.allLaunchpads	All launchpads
+launches.filter.launchpadOverflow_one	+{{count}}
+launches.filter.launchpadOverflow_other	+{{count}}
+launches.hero.subtitleWithWordmark	<wordmark>Pools</wordmark> is live: Trade new Robinhood Chain tokens
+launches.hero.title	Launch and trade
+launches.quickSelect.recentlyLaunched	Recently launched
+launches.quickSelect.trending	Trending
+launches.table.age	Age
+launches.table.launchpad	Launchpad
+launches.teaser.badge	Coming soon
+launches.teaser.title	Something new...
+launches.trending.title	Trending launches
+launches.trending.tooltip.criteria.buyers	≥ 5 distinct buyers in the last hour
+launches.trending.tooltip.criteria.fdv	FDV ≥ $30,000
+launches.trending.tooltip.criteria.priceChange	1h price change above -10%
+launches.trending.tooltip.description	Trending tokens are ranked by momentum — growth in trading volume and unique buyers over the past hour — and meet the following criteria:
+nav.createAccount.button	Create account
+nav.logIn.button	Log in
+nav.products.tradingApi	Integrate the protocol
+nav.products.unichain	The DeFi chain
+nav.products.uniswapX	The meta-aggregator
+nav.products.wallet	Swap, store, explore
+nav.signUp.button	Sign up
+nav.tabs.createPosition	Create position
+nav.tabs.viewPositions	View positions
+pools.explore	Explore pools
+portfolio.activity.filters.timePeriod.all	All time
+portfolio.activity.filters.transactionType.addLiquidity	Added liquidity
+portfolio.activity.filters.transactionType.all	All types
+portfolio.activity.filters.transactionType.approvals	Approvals
+portfolio.activity.filters.transactionType.claimFees	Claimed fees
+portfolio.activity.filters.transactionType.createPool	Pools created
+portfolio.activity.filters.transactionType.mints	Mints
+portfolio.activity.filters.transactionType.receives	Receives
+portfolio.activity.filters.transactionType.removeLiquidity	Removed liquidity
+portfolio.activity.filters.transactionType.sends	Sends
+portfolio.activity.filters.transactionType.swaps	Swaps
+portfolio.activity.filters.transactionType.withdrawals	Withdrawals
+portfolio.activity.filters.transactionType.wraps	Wraps
+portfolio.activity.table.column.address	Address
+portfolio.activity.table.column.amount	Amount
+portfolio.activity.table.column.time	Time
+portfolio.activity.table.column.type	Type
+portfolio.balance.change1dUnavailable	1D change unavailable
+portfolio.balanceBreakdown.earnBalance	Earning balance
+portfolio.balanceBreakdown.poolsBalance	Pools balance
+portfolio.balanceBreakdown.tokenBalance	Token balance
+portfolio.balances.unavailable	{{categories}} balances currently unavailable
+portfolio.defi.title	DeFi
+portfolio.description	Track your crypto portfolio across all chains and protocols
+portfolio.disconnected.connectWallet.cta	Track your portfolio
+portfolio.disconnected.demoWallet.description	This is a view-only example. Connect your wallet to manage your portfolio.
+portfolio.disconnected.demoWallet.title	Demo wallet
+portfolio.disconnected.viewYourPortfolio.cta	to view your portfolio
+portfolio.limits.table.column.amount	Amount
+portfolio.limits.table.column.limit	Limit
+portfolio.networkFilter.seeAllNetworks	See all networks
+portfolio.nfts.search.placeholder	Search NFTs
+portfolio.nfts.title	NFTs
+portfolio.nfts.title.yours	Your NFTs
+portfolio.noResults.filters.clear	Clear filters
+portfolio.noResults.filters.title	No results matching your filters
+portfolio.noResults.search.clear	Clear search
+portfolio.noResults.search.title	No results matching your search
+portfolio.overview.activity.seeAllActivity	See activity on all networks
+portfolio.overview.activity.table.empty_one	No recent activity
+portfolio.overview.activity.table.empty_other	No recent activity
+portfolio.overview.activity.table.subtitle_most_recent_one	{{count}} transaction
+portfolio.overview.activity.table.subtitle_most_recent_other	{{count}} transactions
+portfolio.overview.activity.table.subtitle_one	{{count}} transaction in the last 7 days
+portfolio.overview.activity.table.subtitle_other	{{count}} transactions in the last 7 days
+portfolio.overview.activity.table.title	Recent activity
+portfolio.overview.activity.table.title.noRecentActivity	No recent activity
+portfolio.overview.activity.table.viewAllActivity	View all activity
+portfolio.overview.chart.errorText	An error occurred while fetching chart data. Please try again later.
+portfolio.overview.chart.errorTitle	Chart unavailable
+portfolio.overview.earn.errorLoadingBalance	An error occurred loading your balance
+portfolio.overview.earn.lifetimeEarnings	Lifetime earnings
+portfolio.overview.earn.rewards.errorLoading	An error occurred while loading your reward balance. Please wait and try again.
+portfolio.overview.earn.rewards.unavailableTitle	Rewards unavailable
+portfolio.overview.limits.table.openLimits_one	{{count}} open order
+portfolio.overview.limits.table.openLimits_other	{{count}} open orders
+portfolio.overview.miniTokensTable.viewAllTokens	View all tokens
+portfolio.overview.pools.subtitle.openPositions_one	{{numPositions}} open position
+portfolio.overview.pools.subtitle.openPositions_other	{{numPositions}} open positions
+portfolio.overview.pools.table.viewAllPools	View all pools
+portfolio.overview.title	Overview
+portfolio.pools.balance.totalPositions_one	{{count}} position
+portfolio.pools.balance.totalPositions_other	{{count}} positions
+portfolio.pools.unavailable.networks	Pools on {{networks}} currently unavailable
+portfolio.pools.unavailable.otherNetworks_one	{{count}} other network
+portfolio.pools.unavailable.otherNetworks_other	{{count}} other networks
+portfolio.poolsBalance.coachmark.body	Pool positions are now included in your total balance
+portfolio.tokens.balance.totalTokens_one	{{count}} token
+portfolio.tokens.balance.totalTokens_other	{{count}} tokens
+portfolio.tokens.multichainChainRow.tooltip	{{symbol}} on {{networkName}}
+portfolio.tokens.table.balances	Balances
+portfolio.tokens.table.column.allocation	Allocation
+portfolio.tokens.table.column.avgCost	Avg cost
+portfolio.tokens.table.column.balance	Balance
+portfolio.tokens.table.column.change1d	1D change
+portfolio.tokens.table.column.price	Price
+portfolio.tokens.table.column.token	Token
+portfolio.tokens.table.column.unrealizedPnl	Unrealized P/L
+portfolio.tokens.table.column.value	Value
+portfolio.view	View portfolio
+token.balances.chooseNetwork	Choose a network balance
+token.balances.main	Your balance
+token.balances.viewOnly	{{ownerAddress}}’s balance
+token.bridge	{{label}} token bridge
+token.chart.candlestick.unavailable	Candlestick charts are unavailable for this token
+token.chart.tooltip	Fees: {{amount}}
+token.data.unavailable	Token data unavailable
+token.details	Token details
+token.error.unknown	Unknown token
+token.fee.buy.label	buy fee
+token.fee.label	fee
+token.fee.sell.label	sell fee
+token.links.title	Links
+token.links.twitter	Twitter
+token.links.website	Website
+token.notFound.description	Sorry, we can’t find any information for this token. Check the name and address and try again.
+token.notFound.title	Token not found
+token.priceExplorer.error.description	Something went wrong.
+token.priceExplorer.error.title	Couldn’t load price chart
+token.priceExplorer.timeRangeLabel.all	All time
+token.priceExplorer.timeRangeLabel.day	1D
+token.priceExplorer.timeRangeLabel.day.verbose	1 Day
+token.priceExplorer.timeRangeLabel.hour	1H
+token.priceExplorer.timeRangeLabel.month	1M
+token.priceExplorer.timeRangeLabel.month.verbose	1 Month
+token.priceExplorer.timeRangeLabel.week	1W
+token.priceExplorer.timeRangeLabel.week.verbose	1 Week
+token.priceExplorer.timeRangeLabel.year	1Y
+token.priceExplorer.timeRangeLabel.year.verbose	1 Year
+token.safety.blocked.title.tokenNotAvailable	{{tokenSymbol}} is not available
+token.safety.blocked.title.tokensNotAvailable	{{tokenSymbol0}} and {{tokenSymbol1}} are not available
+token.safety.fees.uniswapLabsDoesNotReceive	Uniswap Labs does not receive any of these fees.
+token.safety.warning.alwaysDoYourResearch	Always do your research
+token.safety.warning.blocked.description.default_one	You can’t trade this token using the Uniswap App.
+token.safety.warning.blocked.description.default_other	You can’t trade these tokens using the Uniswap App.
+token.safety.warning.copyContractAddress.message	This is a contract address, which acts as a unique identifier for tokens on the blockchain. Any crypto you send to this address will be lost.
+token.safety.warning.copyContractAddress.title	Do not send crypto to this address
+token.safety.warning.doYourOwnResearch	Always do your own research before proceeding.
+token.safety.warning.dontShowWarningAgain	Don’t show me this warning again
+token.safety.warning.dontShowWarningAgainShort	Don’t show again
+token.safety.warning.feeDescription	Charges a <fee /> when {{action}}
+token.safety.warning.flaggedAsMalicious	Flagged as malicious
+token.safety.warning.flaggedAsSuspicious	Flagged as suspicious
+token.safety.warning.fotHigh.title	High fee detected
+token.safety.warning.fotLow.title	Fee detected
+token.safety.warning.fotVeryHigh.title	Very high fee detected
+token.safety.warning.honeypot.message	{{tokenSymbol}} has been flagged as unsellable. Swapping this token may result in a loss of your funds.
+token.safety.warning.honeypot.title	100% sell fee detected
+token.safety.warning.impersonator	Impersonates another token
+token.safety.warning.impersonator.title	Impersonator token detected
+token.safety.warning.malicious.general.message	{{tokenSymbol}} has been flagged as malicious by Blockaid.
+token.safety.warning.malicious.impersonator.message	{{tokenSymbol}} has been flagged by Blockaid for attempting to copy a different token. It may not be the token you are looking to swap.
+token.safety.warning.malicious.impersonator.message.short	{{tokenSymbol}} may not be the token you are looking to swap.
+token.safety.warning.malicious.title	Malicious token detected
+token.safety.warning.mayResultInLoss	Swapping it may result in a loss of funds.
+token.safety.warning.medium.heading.named	{{tokenSymbol}} isn’t traded on leading U.S. centralized exchanges.
+token.safety.warning.notListedOnExchanges	Not listed on leading U.S. exchanges
+token.safety.warning.potentialHoneypot.card.message	{{tokenSymbol}} has been flagged as suspicious by Blockaid.
+token.safety.warning.potentialHoneypot.modal.message	{{tokenSymbol}} has been flagged as a potential honeypot by Blockaid. Always do your own research before proceeding.
+token.safety.warning.potentialHoneypot.title	Potential honeypot detected
+token.safety.warning.sellFee100.message	{{ tokenSymbol }} has been flagged as unsellable.
+token.safety.warning.sellFee100.title	100% sell fee detected
+token.safety.warning.spam.message	{{tokenSymbol}} has been flagged as spam by Blockaid.
+token.safety.warning.spam.title	Spam token detected
+token.safety.warning.spamsUsers	Spams users
+token.safety.warning.tokenChargesFee.both.message	{{tokenSymbol}} charges a {{buyFeePercent}} fee when bought and {{sellFeePercent}} when sold.
+token.safety.warning.tokenChargesFee.buy.message	{{tokenSymbol}} charges a {{feePercent}} fee when bought.
+token.safety.warning.tokenChargesFee.sell.message	{{tokenSymbol}} charges a {{feePercent}} fee when sold.
+token.safety.warning.tokenChargesFee.unknownFee.message	{{tokenSymbol}} charges a fee when bought or sold.
+token.safetyLevel.blocked.message	You can’t trade this token using the Uniswap Wallet.
+token.safetyLevel.medium.message.plural	These tokens aren’t traded on leading U.S. centralized exchanges. Always do your own research before proceeding.
+token.selector.search.error	Couldn’t load search results
+token.stats.fullyDilutedValuation	Fully Diluted Valuation
+token.stats.marketCap	Market Cap
+token.stats.priceHighYear	52W High
+token.stats.priceLowYear	52W Low
+token.stats.section.about	About {{token}}
+token.stats.title	Stats
+token.stats.translation.original	Show original
+token.stats.translation.translate	Translate to {{language}}
+token.stats.volume	24h Volume
+token.symbol.input.fallback	Input token
+token.symbol.output.fallback	Output token
+token.wrap.fail.message	Swaps on the Uniswap Protocol can start and end with ETH. However, during the swap, ETH is wrapped into WETH.
+token.zeroNativeBalance.description.mainnet	You’ll need to swap a token on Ethereum to get {{ tokenSymbol }}. Swapping requires ETH for network costs.
+token.zeroNativeBalance.description.otherChains	You’ll need to swap a token on {{ chainName }} to get {{ tokenSymbol }}. Swapping requires {{ chainName }} {{ nativeTokenSymbol }} for network costs.
+token.zeroNativeBalance.subtitle	{{ tokenSymbol }} is not available for direct purchase.
+token.zeroNativeBalance.title.mainnet	You need {{ nativeTokenName }}
+token.zeroNativeBalance.title.otherChains	You need {{ nativeTokenName }} on {{ chainName }}
+tokens.action.hide	Hide token
+tokens.action.unhide	Unhide token
+tokens.list.none.button	Receive tokens
+tokens.list.none.description.default	Transfer tokens from another wallet to get started.
+tokens.list.none.title	No tokens yet
+tokens.list.noneOnChain.title	No tokens on {{chainName}}
+tokens.nfts.action.viewOnExplorer	View on {{blockExplorerName}}
+tokens.nfts.error.unavailable	Content not available
+tokens.nfts.hidden.action.hide	Hide NFT
+tokens.nfts.hidden.action.unhide	Unhide NFT
+tokens.nfts.list.error.load.title	Couldn’t load NFTs
+tokens.nfts.list.none.button	Receive NFTs
+tokens.nfts.list.none.description.default	Transfer NFTs from another wallet to get started.
+tokens.nfts.list.none.description.external	When this wallet buys or receives NFTs, they’ll appear here.
+tokens.nfts.list.none.title	No NFTs yet
+tokens.nfts.list.noneOnChain.title	No NFTs on {{chainName}}
+tokens.nfts.list.notSupported.title	{{chainName}} NFTs are not supported
+tokens.selector.button.choose	Select token
+tokens.selector.empty.buy.message	Buy crypto with a card or bank to send tokens.
+tokens.selector.empty.buy.title	Buy crypto
+tokens.selector.empty.receive.title	Receive tokens
+tokens.selector.empty.title	No tokens yet
+tokens.selector.error.load	Couldn’t load tokens
+tokens.selector.search.empty	No results found for <highlight>{{searchText}}</highlight>
+tokens.selector.search.networkError	
+tokens.selector.search.placeholder	Search tokens
+tokens.selector.search.reset	
+tokens.selector.section.bridging	Swap across networks
+tokens.selector.section.favorite	Favorites
+tokens.selector.section.otherNetworksSearchResults	Tokens found on other networks
+tokens.selector.section.otherSearchResults	Other tokens on {{network}}
+tokens.selector.section.recent	Recent searches
+tokens.selector.section.search	Search results
+tokens.selector.section.stocks	Stocks by 24H volume
+tokens.selector.section.trending	Tokens by 24H volume
+tokens.selector.section.yours	Your tokens
+tokens.selectorV2.chips.overflow_one	+{{count}}
+tokens.selectorV2.chips.overflow_other	+{{count}}
+tokens.selectorV2.chips.showMore_one	Show {{count}} more network
+tokens.selectorV2.chips.showMore_other	Show {{count}} more networks
+tokens.selectorV2.myTokens.collapse	Hide my tokens
+tokens.selectorV2.myTokens.disconnected	Connect a wallet to see your tokens
+tokens.selectorV2.myTokens.empty.description	Buy or receive tokens to see them here
+tokens.selectorV2.myTokens.empty.title	No tokens yet
+tokens.selectorV2.myTokens.expand	Show my tokens
+tokens.selectorV2.myTokens.title	My tokens
+tokens.selectorV2.section.recent	Recent
+tokens.selectorV2.section.results	Results
+tokens.selectorV2.section.suggested	Suggested
+tokens.selectorV2.section.trending	Trending
+tokens.table.filter.placeholder.pools	Filter pools
+tokens.table.filter.placeholder.tokens	Filter tokens
+tokens.table.filter.placeholder.transactions	Filter transactions
+tokens.table.search.placeholder.activity	Search activity
+tokens.table.search.placeholder.pools	Search pools
+tokens.table.search.placeholder.tokens	Search tokens
+toucan.action.disableTestnetMode	Disable testnet mode
+toucan.action.enableTestnetMode	Enable testnet mode
+toucan.auction.avgPrice	average price
+toucan.auction.belowClearingPrice	below final auction price
+toucan.auction.bidCount	{{bidCount}} bids
+toucan.auction.bidForm.auctionConcluded	Auction concluded
+toucan.auction.bidForm.auctionConcluded.description	This auction has concluded and bidding is now closed.
+toucan.auction.bidForm.unsupported.description	This auction contains custom elements that may not be compatible with the Uniswap frontend. Please refer to the project’s own website for more details.
+toucan.auction.bidForm.unsupported.title	Auction not supported
+toucan.auction.budgetRefunded	Budget refunded
+toucan.auction.chart.preBiddingEnded	Pre-bidding ended
+toucan.auction.committedVol	Bid volume
+toucan.auction.committedVolume	Bid Volume
+toucan.auction.committedVolume.tooltip	This is the bid volume at or above the floor.
+toucan.auction.completedAgo	Launched {{time}} ago
+toucan.auction.contractAddress	Contract address
+toucan.auction.currentFdv	Current FDV
+toucan.auction.description	Description
+toucan.auction.disclaimer	Disclaimer: Auctions are sorted by committed volume by default, and Uniswap Labs does not provide valuation, recommendations, or opinions on any token. You should independently evaluate whether to transact in any token.
+toucan.auction.disclaimer.recommendations	Disclaimer: Uniswap Labs does not provide an independent valuation, recommendation, endorsement, or any other opinion regarding any token or token project.
+toucan.auction.errorLoading	Error loading auction data
+toucan.auction.fdvAtFloor	FDV at floor
+toucan.auction.fdvAtFloor.tooltip	This is the implied FDV based on the auction floor price set by the creator. It can rise if the auction sells out at the floor.
+toucan.auction.fdvAtLaunch	FDV at launch
+toucan.auction.feeRecipient	Fee recipient
+toucan.auction.header.buyback.tooltip.burned	{{amount}} bought back & burned
+toucan.auction.header.buyback.tooltip.none	No tokens have been bought back and burned yet
+toucan.auction.header.buyback.tooltip.usd	≈{{usdValue}} valued at current price
+toucan.auction.header.buybackEnabled	Buyback enabled
+toucan.auction.header.lockedLiquidity	Locked liquidity
+toucan.auction.header.lockedLiquidity.tooltip	LP position locked until {{date}}
+toucan.auction.header.lockedLiquidity.tooltip.forever	LP position is locked forever
+toucan.auction.hideHiddenAuctions	Hide hidden auctions
+toucan.auction.info	Info
+toucan.auction.introBanner.auctionEndsIn	Auction ends in
+toucan.auction.introBanner.auctionStartsIn	Auction starts in
+toucan.auction.introBanner.generalSaleStartsIn	General sale starts in
+toucan.auction.introBanner.preBiddingEndsIn	Pre-bidding ends in
+toucan.auction.introBanner.seeFullDetails	See full details
+toucan.auction.latestActivity	Activity
+toucan.auction.launchThreshold	Launch threshold
+toucan.auction.launchThreshold.tooltip	The total committed volume required for this auction to graduate and launch, based on the supply being sold at the floor price.
+toucan.auction.launchedBy	Launched by
+toucan.auction.launchedOn	Launched on
+toucan.auction.launchesOn	Launches on
+toucan.auction.loadingBids	Loading bid data...
+toucan.auction.lpLockedUntil	LP locked until
+toucan.auction.lpLockedUntil.forever	Forever
+toucan.auction.lpOwner	LP owner
+toucan.auction.myBids.failedToLaunch	Auction failed to launch
+toucan.auction.myBids.failedToLaunch.description	You will not receive any {{token}}. The funds used in your bids are available to withdraw.
+toucan.auction.myBids.failedToLaunch.description.withdrawn	You have withdrawn your bids.
+toucan.auction.myBids.partialError	Some bids could not be displayed due to an error
+toucan.auction.noBids	No bids have been submitted for this auction yet
+toucan.auction.notFound	Auction not found
+toucan.auction.notStarted	This auction hasn’t started yet
+toucan.auction.ofSupplySold	of supply sold
+toucan.auction.percentMet	{{percent}} met
+toucan.auction.redeem.availableToRedeem	Available to redeem
+toucan.auction.redeem.mustBeRedeemed	{{symbol}} must be redeemed to trade
+toucan.auction.redeem.redeemNow	Redeem now
+toucan.auction.refundUnusedBudget	Refund unused budget
+toucan.auction.showHiddenAuctions	Show hidden auctions
+toucan.auction.showLess	Show less
+toucan.auction.showMore	Show more
+toucan.auction.startingIn	Starting in {{duration}}
+toucan.auction.stats	Stats
+toucan.auction.stats.bids	Bids
+toucan.auction.stats.floorFdv	Floor {{floorFdv}}
+toucan.auction.stats.impliedTokenPrice	Implied token price
+toucan.auction.stats.impliedTokenPrice.tooltip	Auction price and FDV are estimates derived from onchain auction data that may change over time and may not reflect the final auction price. Token supply changes (mint/burn) can also affect FDV.
+toucan.auction.stats.percentLP	% Committed to LP
+toucan.auction.stats.percentLP.locked.tooltip	Liquidity committed to the pool is locked until {{date}}
+toucan.auction.stats.percentLP.locked.tooltip.forever	Liquidity committed to the pool is locked forever
+toucan.auction.stats.percentLP.locked.tooltip.noDate	Liquidity committed to the pool is locked
+toucan.auction.stats.timeRemaining	Time remaining
+toucan.auction.stats.tokensBurned	Tokens bought back & burned
+toucan.auction.stats.tokensBurned.tooltip	Cumulative tokens bought back and burned for this auction. The USD value is estimated at the current token price.
+toucan.auction.stats.totalRaised	Total raised
+toucan.auction.status.bidding	Bidding
+toucan.auction.status.failed	Failed
+toucan.auction.status.liveOnUniswap	Live on Uniswap
+toucan.auction.status.preBid	Pre-bid
+toucan.auction.status.startingSoon	Starting soon
+toucan.auction.timeAgo	{{time}} ago
+toucan.auction.timeRemaining.completed	Launched
+toucan.auction.tokenLaunchedBanner.availableToTrade	{{tokenName}} available to trade
+toucan.auction.tokenLaunchedBanner.availableToTradeIn	Available to trade in
+toucan.auction.tokenLaunchedBanner.availableToTradeSoon	Available to trade soon
+toucan.auction.tokenLaunchedBanner.failedHeading	{{tokenName}} failed to launch
+toucan.auction.tokenLaunchedBanner.failedSubheading	This auction did not reach the minimum sale threshold and failed to launch.
+toucan.auction.tokenLaunchedBanner.restrictedHeading	The auction has ended and a pool has been created.
+toucan.auction.tokenLaunchedBanner.restrictedSubheading	Trading is restricted until TGE
+toucan.auction.tokenLaunchedBanner.tradeAvailableIn	{{time}}
+toucan.auction.tokenLaunchedBanner.tradeNow	Trade now
+toucan.auction.totalSupply	Total Supply
+toucan.auction.twitter	Twitter
+toucan.auction.viewAllStats	View all stats
+toucan.auction.website	Website
+toucan.auction.withdrawAvailableIn	Withdrawal available in {{time}}
+toucan.auction.withdrawFunds	Withdraw funds
+toucan.auction.withdrawTokens	Withdraw tokens
+toucan.auction.withdrawTokens.fundsWithdrawn	Funds withdrawn
+toucan.auction.withdrawTokens.tokensWithdrawn	Tokens withdrawn
+toucan.auction.withdrawTokens.withdrawingFunds	Withdrawing funds
+toucan.auction.withdrawTokens.withdrawingTokens	Withdrawing tokens
+toucan.auction.withdrawalPeriodNotOpen	Withdrawal period is not yet open
+toucan.auction.youReceived	You received
+toucan.auction.yourBids	Your bids
+toucan.auction.yourBids.tooltip	These are the bids you have placed in this auction. You can view details or withdraw by selecting a bid.
+toucan.auctions	Auctions
+toucan.bid.belowClearing	{{percent}} below
+toucan.bid.filled	filled
+toucan.bid.fundsAvailable	Funds available
+toucan.bid.inRange	In range
+toucan.bid.outOfRange	Out of range
+toucan.bid.pending	Pending
+toucan.bid.refunded	Refunded
+toucan.bid.withdrawn	Withdrawn
+toucan.bidActivities.bid	Bid
+toucan.bidActivities.newBids_one	{{count}} new bid
+toucan.bidActivities.newBids_other	{{count}} new bids
+toucan.bidDetails.belowClearing	{{percentage}} below auction price
+toucan.bidDetails.description.completeClaimed	Your order successfully filled and you have withdrawn your tokens.
+toucan.bidDetails.description.completeInProgress	Your order successfully filled. You can withdraw the tokens you’ve received once the auction completes.
+toucan.bidDetails.description.completeOver	Your order successfully filled. You can withdraw the tokens you’ve received now.
+toucan.bidDetails.description.completePreClaim	Your order successfully filled. You can withdraw the tokens you’ve received once the claim period begins.
+toucan.bidDetails.description.inRangeInProgress	Your order will evenly fill as the auction continues. If the FDV of <highlight>{{tokenSymbol}}</highlight> goes over <highlight>{{valuationSummary}}</highlight>, you won’t spend all your budget and your order will be partially filled.
+toucan.bidDetails.description.inRangeOutOfRangeClaimed	Your order partially filled and you have withdrawn your tokens.
+toucan.bidDetails.description.inRangeOver	Your order partially filled. You can withdraw the tokens you’ve received now.
+toucan.bidDetails.description.inRangePreClaim	Your order partially filled. You can withdraw the tokens you’ve received once the claim period begins.
+toucan.bidDetails.description.outOfRangeInProgress	This order stopped filling because the price exceeded your maximum FDV of <highlight>{{valuationSummary}}</highlight>. You can withdraw tokens you’ve received at the end of the auction.
+toucan.bidDetails.description.outOfRangeOver	Your order partially filled. You can withdraw the tokens you’ve received and unused funds now.
+toucan.bidDetails.description.outOfRangeOverExited	Your order partially filled. You can withdraw the tokens you’ve received now.
+toucan.bidDetails.description.outOfRangePreClaim	Your order partially filled. You can refund unused funds now, and withdraw the tokens you’ve received once the claim period begins.
+toucan.bidDetails.description.outOfRangePreClaimExited	Your order partially filled and your unused funds have been refunded. You can withdraw the tokens you’ve received once the claim period begins.
+toucan.bidDetails.description.overNotGraduated	This auction did not reach the currency threshold, so you can withdraw all your funds now.
+toucan.bidDetails.description.overNotGraduatedExited	This auction did not reach the currency threshold, and your funds have been withdrawn.
+toucan.bidDetails.filledPercent	{{percentage}} filled
+toucan.bidDetails.label.averagePricePerToken	Average price per token
+toucan.bidDetails.label.budgetOf	of {{amount}}
+toucan.bidDetails.label.currentFdv	Current FDV
+toucan.bidDetails.label.currentSpend	Current spend
+toucan.bidDetails.label.fdvAtLaunch	FDV at launch
+toucan.bidDetails.label.maxBudget	Max budget
+toucan.bidDetails.label.maxFdv	Max FDV
+toucan.bidDetails.label.refundedBudget	Refunded budget
+toucan.bidDetails.label.totalReceived	Total {{symbol}} received
+toucan.bidDetails.label.totalSpent	Total spent
+toucan.bidDetails.label.totalWouldHaveReceived	Total {{symbol}} you would have received
+toucan.bidDetails.label.unusedBudget	Unused budget
+toucan.bidDetails.status.complete	Complete
+toucan.bidDetails.status.fundsAvailable	Funds available to withdraw
+toucan.bidDetails.status.inRange	In range
+toucan.bidDetails.status.outOfRange	Out of range
+toucan.bidDetails.status.withdrawn	Withdrawn
+toucan.bidDetails.title	Bid details
+toucan.bidDetails.unavailable	Bid details unavailable.
+toucan.bidDistribution.bidVol	Bid vol.
+toucan.bidDistribution.fillPercent	{{value}}% filled
+toucan.bidDistribution.legend.bidConcentration	Bid Concentration
+toucan.bidDistribution.legend.bidDistribution	Bids
+toucan.bidDistribution.legend.filled	Filled
+toucan.bidDistribution.legend.inRange	In range
+toucan.bidDistribution.legend.outOfRange	Out of range
+toucan.bidDistribution.legend.preBidPrice	Pre-bid price
+toucan.bidDistribution.legend.remaining	Remaining
+toucan.bidDistribution.legend.tokenPrice	Price
+toucan.bidDistribution.percentOfVolume	{{percent}}% of volume
+toucan.bidDistribution.remaining	{{value}} remaining
+toucan.bidDistribution.tabs.clearingPriceChart	Price
+toucan.bidDistribution.tabs.demandChart	Demand
+toucan.bidDistribution.volumeInBids	{{value}} in bids
+toucan.bidDistribution.volumeShare	{{value}} of volume
+toucan.bidDistribution.yAxis.committedVolume	Committed volume
+toucan.bidDistribution.yourBid	Your bid
+toucan.bidForm.enterBudget	Enter a budget
+toucan.bidForm.enterBudgetMaxFdv	Enter a budget and a max FDV
+toucan.bidForm.isBelowMinimumOf	is below the minimum of
+toucan.bidForm.maxBudget	Max budget
+toucan.bidForm.minValuationError	Minimum FDV is {{value}}{{symbol}}
+toucan.bidForm.placeABid	Place a bid
+toucan.bidForm.placeABid.tooltip	Place a bid on the auction by entering a budget and a max FDV.
+toucan.bidForm.placeABid.tooltip.quickLaunch	Place a bid on the auction by entering a budget.
+toucan.bidForm.receive	Receive
+toucan.bidForm.reviewBid	Review bid
+toucan.bidForm.swapToBid	Swap to {{tokenSymbol}} on {{chainName}} to bid
+toucan.bidForm.yourFdvOf	Your FDV of
+toucan.bidMarker.moreNum	+{{num}} more
+toucan.bidReview.belowClearingDescription	Your bid has fallen below the minimum bid threshold due to auction price movement.
+toucan.bidReview.belowClearingTitle	Bid Below Minimum Threshold
+toucan.bidReview.confirmationError	Bid failed to submit. Please try again.
+toucan.bidReview.fillsAtClearingPrice	Your order will fill at the auction’s final clearing price.
+toucan.bidReview.headerTitle	You’re bidding on
+toucan.bidReview.maxBudget	Max budget
+toucan.bidReview.maxFdv	Max FDV
+toucan.bidReview.partialFillExplanation	Your order will evenly fill as the auction continues. If the FDV of {{symbol}} goes over <highlight>{{maxFdv}}</highlight> <fiat>({{maxFdvFiat}})</fiat>, you won’t spend all your budget and your order will only be partially filled.
+toucan.bidReview.perToken	{{amount}} per token
+toucan.bidReview.perTokenSuffix	per token
+toucan.bidReview.placeBid	Place bid
+toucan.bidReview.preparationError	Error
+toucan.bidReview.preparationErrorDescription	An unknown error occurred. Please try again.
+toucan.bidReview.priceExceededCta	Price exceeded max
+toucan.bidReview.priceExceededDescription	The current clearing price of {{symbol}} exceeded your max valuation. Increase your max price to place a bid.
+toucan.bidReview.priceExceededTitle	Max price is at or below current auction price
+toucan.bidReview.processingError	Error processing bid, please try again.
+toucan.bidReview.setMinBid	Click here to set the minimum bid
+toucan.bidReview.simulating	Verifying bid...
+toucan.createAuction.calendar.time.hour	Hour
+toucan.createAuction.calendar.time.minute	Minute
+toucan.createAuction.calendar.time.period	AM or PM
+toucan.createAuction.calendar.time.timezone	Time zone offset
+toucan.createAuction.datePlaceholder	Choose a date
+toucan.createAuction.invalidAddressError	Please enter a valid Ethereum address
+toucan.createAuction.launchAuction	Launch auction
+toucan.createAuction.launchError.description	The auction for {{tokenSymbol}} could not be launched due to {{reason}}.
+toucan.createAuction.launchError.genericReason	an unexpected error
+toucan.createAuction.launchError.insufficientBalance	The auction for {{tokenSymbol}} could not be launched due to insufficient {{tokenSymbol}} balance in your wallet. Lower the deposit amount to proceed.
+toucan.createAuction.launchError.startTimePassed	The auction for {{tokenSymbol}} could not be launched because its start time has already passed. Choose a new start time and try again.
+toucan.createAuction.launchError.title	Launch failed
+toucan.createAuction.launchError.windowTooShort	The auction for {{tokenSymbol}} could not be launched because the window is now too short. Extend the end time and try again.
+toucan.createAuction.launchError.withReason	The auction for {{tokenSymbol}} could not be launched.
+toucan.createAuction.launchError.xWalletMismatch	The auction for {{tokenSymbol}} could not be launched because your X account was verified with a different wallet. Go back and verify your X account again with the connected wallet.
+toucan.createAuction.launchSuccess.title	Auction launched
+toucan.createAuction.launchSuccess.viewAuction	View auction
+toucan.createAuction.launchToken	Launch token
+toucan.createAuction.quickLaunch.duration.fourHours	4 hours
+toucan.createAuction.quickLaunch.hideAllParameters	Hide all parameters
+toucan.createAuction.quickLaunch.howItWorks	How quick launches work
+toucan.createAuction.quickLaunch.params.bidPricing	Bid pricing
+toucan.createAuction.quickLaunch.params.bidPricing.hint	Bidders choose their size and max valuation; clearing price is discovered continuously.
+toucan.createAuction.quickLaunch.params.bidPricing.value	Open CCA bidding
+toucan.createAuction.quickLaunch.params.duration	Duration
+toucan.createAuction.quickLaunch.params.floor	Floor / graduation
+toucan.createAuction.quickLaunch.params.floor.hint	Launch threshold = floor price × tokens sold. Below it the auction does not launch and bids are reclaimable.
+toucan.createAuction.quickLaunch.params.floor.value	{{floorFdv}} FDV floor
+toucan.createAuction.quickLaunch.params.lpFeeHandling	LP fee handling
+toucan.createAuction.quickLaunch.params.lpFeeHandling.value	Buyback & burn
+toucan.createAuction.quickLaunch.params.proceeds	Proceeds
+toucan.createAuction.quickLaunch.params.proceeds.hint	Full range + concentrated liquidity, timelocked permanently.
+toucan.createAuction.quickLaunch.params.proceeds.value	100% → 0.3% v4 LP
+toucan.createAuction.quickLaunch.params.raiseDenomination	Raise denomination
+toucan.createAuction.quickLaunch.params.raiseDenomination.value	ETH / native
+toucan.createAuction.quickLaunch.params.startTime	Start time
+toucan.createAuction.quickLaunch.params.startTime.hint	The chain needs the start to be slightly in the future; quick launch uses a 1-minute lead.
+toucan.createAuction.quickLaunch.params.startTime.value	Now + 1 min
+toucan.createAuction.quickLaunch.params.totalSupply	Total supply
+toucan.createAuction.quickLaunch.params.totalSupply.hint	Minted by the token factory at launch.
+toucan.createAuction.quickLaunch.params.totalSupply.value	1B
+toucan.createAuction.quickLaunch.reviewAndLaunch	Review and launch
+toucan.createAuction.quickLaunch.step.title	Configure token & duration
+toucan.createAuction.quickLaunch.story.auction.description	<highlight>500M</highlight> of your <highlight>1B</highlight> tokens are auctioned in a <highlight>{{duration}}</highlight> auction. Everyone pays the same clearing price, set by real demand.
+toucan.createAuction.quickLaunch.story.auction.title	Auction launches
+toucan.createAuction.quickLaunch.story.duration.fourHours	4-hour
+toucan.createAuction.quickLaunch.story.pool.description	When the auction ends, the ETH raised and remaining tokens are locked <highlight>forever</highlight> into a Uniswap v4 pool so that liquidity can never be pulled.
+toucan.createAuction.quickLaunch.story.pool.title	Pool is seeded and locked
+toucan.createAuction.quickLaunch.story.postLaunch.description	A share of trading fees automatically <highlight>buys back and burns</highlight> your token over time.
+toucan.createAuction.quickLaunch.story.postLaunch.title	After launch
+toucan.createAuction.quickLaunch.title	Quick launch
+toucan.createAuction.quickLaunch.toggle.description	Launch a quick auction using Uniswap’s fair-launch presets.
+toucan.createAuction.quickLaunch.viewAllParameters	View all parameters
+toucan.createAuction.review.title	Review auction
+toucan.createAuction.reviewLaunch	Review launch
+toucan.createAuction.reviewModal.auctionEnds	Auction ends
+toucan.createAuction.reviewModal.auctionStarts	Auction starts
+toucan.createAuction.reviewModal.creating	Creating
+toucan.createAuction.reviewModal.launchThresholdDescription	If your auction does not reach {{thresholdAmount}} {{raiseCurrency}} in bid volume, the token will not launch and all bids will be refunded.
+toucan.createAuction.reviewModal.legalDisclaimer	The auction creator, not Uniswap Labs, is solely responsible for the auction’s legal compliance in all relevant jurisdictions. I understand that Uniswap Labs does not review, endorse, or advise on any token or auction.
+toucan.createAuction.reviewModal.postAuctionLiquidityDescription	After the auction completes, a {{feeTier}} fee tier {{tokenSymbol}}/{{raiseCurrency}} pool will be seeded with {{tokenAmount}} {{tokenSymbol}}.
+toucan.createAuction.step.configureAuction	Configure auction
+toucan.createAuction.step.configureAuction.auctionSupply	Supply
+toucan.createAuction.step.configureAuction.auctionSupply.description	Input the amount of tokens you wish to deposit.
+toucan.createAuction.step.configureAuction.auctionSupply.description.newToken	Input the total supply of your token and the amount you wish to deposit into the auction.
+toucan.createAuction.step.configureAuction.depositAmount	Deposit amount
+toucan.createAuction.step.configureAuction.distribution	Auction supply breakdown
+toucan.createAuction.step.configureAuction.distribution.fundraiseSold	sold for {{raiseToken}}
+toucan.createAuction.step.configureAuction.distribution.tokenLpReservedTokenSide	reserved for {{token}} side of LP
+toucan.createAuction.step.configureAuction.distribution.tokenLpSoldRaiseSide	sold for {{token}} side of LP
+toucan.createAuction.step.configureAuction.duration	Duration
+toucan.createAuction.step.configureAuction.duration.description	Longer duration reduces volatility but takes more time.
+toucan.createAuction.step.configureAuction.duration.emissionOvershoot.error	This window is too short to release the supply gradually. Extend the auction and try again.
+toucan.createAuction.step.configureAuction.duration.endDate	End date
+toucan.createAuction.step.configureAuction.duration.endDate.placeholder	Choose an end date
+toucan.createAuction.step.configureAuction.duration.endTime	End
+toucan.createAuction.step.configureAuction.duration.range.error	End date must be after start date
+toucan.createAuction.step.configureAuction.duration.startDate	Start date
+toucan.createAuction.step.configureAuction.duration.startDate.placeholder	Choose a start date
+toucan.createAuction.step.configureAuction.duration.startTime	Start
+toucan.createAuction.step.configureAuction.duration.startTime.error	Start time must be at least {{time}} from now
+toucan.createAuction.step.configureAuction.duration.windowTooShort.error	This window is too short for the chosen network. Extend the auction and try again.
+toucan.createAuction.step.configureAuction.floorPrice.fdv	Floor price (FDV)
+toucan.createAuction.step.configureAuction.floorPrice.token	Floor price (per token)
+toucan.createAuction.step.configureAuction.hideAdvancedSettings	Hide advanced settings
+toucan.createAuction.step.configureAuction.kyc.advanced	(Advanced)
+toucan.createAuction.step.configureAuction.kyc.card.enabledBadge	Enabled
+toucan.createAuction.step.configureAuction.kyc.description	Enable identity verification to help support compliance requirements.
+toucan.createAuction.step.configureAuction.kyc.learnMore	Learn more
+toucan.createAuction.step.configureAuction.kyc.modal.cta.validate	Validate
+toucan.createAuction.step.configureAuction.kyc.modal.description	To enable identity verification, add the address for your validation hook from your provider below.
+toucan.createAuction.step.configureAuction.kyc.modal.error.validationFailed	This address could not be verified as a valid identity verification hook. Check the address and try again.
+toucan.createAuction.step.configureAuction.kyc.modal.helpLink	Get help with setting up identity verification
+toucan.createAuction.step.configureAuction.kyc.modal.interfaceId	Interface id
+toucan.createAuction.step.configureAuction.kyc.modal.title	Add identity verification hook
+toucan.createAuction.step.configureAuction.kyc.modal.validating	Verifying hook…
+toucan.createAuction.step.configureAuction.kyc.setUp	Set up identity verification
+toucan.createAuction.step.configureAuction.launchThreshold	Launch threshold
+toucan.createAuction.step.configureAuction.launchThreshold.description	in bid volume must be reached in order to launch. If the threshold is not reached, the token will not be launched and bids will be refunded.
+toucan.createAuction.step.configureAuction.launchThreshold.helpDescription	The launch threshold is your floor price multiplied by the number of tokens being sold in the auction.
+toucan.createAuction.step.configureAuction.launchThreshold.helpLink	How is launch threshold calculated?
+toucan.createAuction.step.configureAuction.participation	Participation (optional)
+toucan.createAuction.step.configureAuction.participation.description	Enable additional features to manage who can participate in your auction.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.addTier	Add tier
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.description	Input the percentage of {{raiseCurrency}} proceeds you wish to contribute to the post-auction liquidity pool. An equal portion of {{tokenSymbol}} will be reserved to match this amount.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.helpDescription	The post-auction liquidity pool requires an equal balance of {{raiseCurrency}} and {{tokenSymbol}}. The more {{raiseCurrency}} you allocate to the LP, the more tokens must be reserved to match it — meaning fewer tokens are available for sale in the auction.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.helpLink	How does post-auction liquidity affect my auction supply?
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.label	Percentage of {{raiseCurrency}} proceeds to liquidity pool
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.minTooltip	A minimum of 25% of auction amount must be reserved for the liquidity pool.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.noLimit	No limit
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.percentOfRaiseMilestoneToLiquidityPool	% of proceed threshold to liquidity pool
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.raiseMilestone	Proceed threshold
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.singleAllocation	Single allocation
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.singleAllocationDescription	Choose a percentage of {{raiseCurrency}} proceeds to contribute to the liquidity pool.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.subtitle	{{amount}} {{raiseCurrency}} at floor price*
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.subtitleFloorPriceTooltip	Assuming all supply sold
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.tieredAllocation	Tiered allocation
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.tieredAllocationDescription	Distribute the percentage of {{raiseCurrency}} proceeds across different proceed thresholds.
+toucan.createAuction.step.configureAuction.postAuctionLiquidity.tieredLabel	Percent of proceed threshold to liquidity pool
+toucan.createAuction.step.configureAuction.priceSettings	Price settings
+toucan.createAuction.step.configureAuction.priceSettings.description	Choose the token you want to receive bids in and set a floor price for your auction.
+toucan.createAuction.step.configureAuction.raiseCurrency.helpLink	How to choose your raise currency?
+toucan.createAuction.step.configureAuction.raiseCurrency.native.description	Offers native exposure to crypto markets.
+toucan.createAuction.step.configureAuction.raiseCurrency.stablecoin.description	Reduces volatility and price uncertainty.
+toucan.createAuction.step.configureAuction.showAdvancedSettings	Show advanced settings
+toucan.createAuction.step.configureAuction.title	Auction details
+toucan.createAuction.step.configureAuction.tokenPrice	token price
+toucan.createAuction.step.configureAuction.totalSupply.maxError	Total supply must be at most {{max}}
+toucan.createAuction.step.configureAuction.totalSupply.minError	Total supply must be at least {{min}}
+toucan.createAuction.step.customizePool	Customize pool
+toucan.createAuction.step.customizePool.buybackAndBurn	Buyback and burn tokens
+toucan.createAuction.step.customizePool.buybackAndBurn.description.beforeLink	Enables an automatic buyback and burn mechanism for liquidity positions locked in the Uniswap Timelock contract. For more info, 
+toucan.createAuction.step.customizePool.buybackAndBurn.description.link	see here
+toucan.createAuction.step.customizePool.feeClaim	Fee claim address
+toucan.createAuction.step.customizePool.feeClaim.description	Enables fee collection by a specified wallet while the liquidity position is locked in the Uniswap timelock contract. If no address is entered, the pool owner address will be used.
+toucan.createAuction.step.customizePool.feeClaim.recipientAddress	Recipient address
+toucan.createAuction.step.customizePool.feeTier.createDescription	Create a custom fee tier for your token’s liquidity pool.
+toucan.createAuction.step.customizePool.feeTier.existingPoolWarning	A pool with this fee tier already exists. CCA proceeds cannot be added to an existing pool. To proceed, select a tier with no existing pool.
+toucan.createAuction.step.customizePool.poolOwner	Pool owner
+toucan.createAuction.step.customizePool.poolOwner.address	Owner address
+toucan.createAuction.step.customizePool.poolOwner.description	Set an address as the owner of the post-auction LP. If no address is entered, the currently connected wallet will be used.
+toucan.createAuction.step.customizePool.priceRange.advanced	Advanced
+toucan.createAuction.step.customizePool.priceRange.concentratedFullRange	Full range (excess in LP)
+toucan.createAuction.step.customizePool.priceRange.concentratedFullRange.description	Your liquidity will be evenly distributed. Excess auction tokens will be inserted into the LP as a one-sided position starting at the clearing price.
+toucan.createAuction.step.customizePool.priceRange.concentratedFullRange.menuDescription	Your liquidity will be evenly distributed.
+toucan.createAuction.step.customizePool.priceRange.custom	Custom price range
+toucan.createAuction.step.customizePool.priceRange.custom.addRange	Add range
+toucan.createAuction.step.customizePool.priceRange.custom.description	Concentrate your liquidity across custom ranges of the pool.
+toucan.createAuction.step.customizePool.priceRange.custom.liquidityPercent	% of liquidity
+toucan.createAuction.step.customizePool.priceRange.custom.maxRangesReached_one	You can add up to {{count}} price range
+toucan.createAuction.step.customizePool.priceRange.custom.maxRangesReached_other	You can add up to {{count}} price ranges
+toucan.createAuction.step.customizePool.priceRange.custom.maximumPrice	Maximum price
+toucan.createAuction.step.customizePool.priceRange.custom.menuDescription	Concentrate your liquidity across multiple ranges of the pool.
+toucan.createAuction.step.customizePool.priceRange.custom.minimumPrice	Minimum price
+toucan.createAuction.step.customizePool.priceRange.custom.percentFromClearingHint	 (% from clearing)
+toucan.createAuction.step.customizePool.priceRange.custom.totalMustEqual100	The sum of all ranges must equal 100%
+toucan.createAuction.step.customizePool.priceRange.description	Choose a strategy to distribute your liquidity across price points in the pool.
+toucan.createAuction.step.customizePool.priceRange.fullRange	Full range (excess withdrawn)
+toucan.createAuction.step.customizePool.priceRange.fullRange.description	Your liquidity will be evenly distributed across a full range V4 position. Any excess auction tokens will be withdrawable after the auction concludes.
+toucan.createAuction.step.customizePool.priceRange.fullRange.menuDescription	Your liquidity will be evenly distributed across a full range V4 position.
+toucan.createAuction.step.customizePool.priceRange.title	Price range
+toucan.createAuction.step.customizePool.timeLock	Liquidity timelock (optional)
+toucan.createAuction.step.customizePool.timeLock.description	The post-auction LP can be locked via Uniswap’s Timelock contract for any duration. Participants in the auction will be able to see locked liquidity position and its duration.
+toucan.createAuction.step.customizePool.timeLock.dropdownLabel	Timelock
+toucan.createAuction.step.customizePool.timeLock.preset.custom	Custom
+toucan.createAuction.step.customizePool.timeLock.preset.oneYear	1 year
+toucan.createAuction.step.customizePool.timeLock.preset.permanent	Permanent
+toucan.createAuction.step.customizePool.timeLock.preset.sixMonths	6 months
+toucan.createAuction.step.customizePool.timeLock.preset.thirtyDays	30 days
+toucan.createAuction.step.customizePool.timeLock.unlockDate	Unlock date
+toucan.createAuction.step.customizePool.title	Pool details
+toucan.createAuction.step.reviewLaunch.auctionAmount	Auction amount
+toucan.createAuction.step.reviewLaunch.buybackAndBurn	Buyback and burn
+toucan.createAuction.step.reviewLaunch.enabled	Enabled
+toucan.createAuction.step.reviewLaunch.poolDetails	Pool details
+toucan.createAuction.step.reviewLaunch.poolOwner	Pool owner
+toucan.createAuction.step.reviewLaunch.sendFees	Send fees
+toucan.createAuction.step.reviewLaunch.startDate	Start date
+toucan.createAuction.step.reviewLaunch.timeLock	Time lock
+toucan.createAuction.step.tokenInfo	Add token info
+toucan.createAuction.step.tokenInfo.createNew	Launch with new token
+toucan.createAuction.step.tokenInfo.createNew.description	Create a new token and launch an auction for it.
+toucan.createAuction.step.tokenInfo.descriptionField	Description
+toucan.createAuction.step.tokenInfo.descriptionPlaceholder	Briefly describe your token
+toucan.createAuction.step.tokenInfo.existing	Launch with existing token
+toucan.createAuction.step.tokenInfo.existing.description	Utilize tokens already in your wallet to launch a new auction.
+toucan.createAuction.step.tokenInfo.fetchError	Unable to load token data. Please try again.
+toucan.createAuction.step.tokenInfo.image.error.failed	Something went wrong uploading your image. Please try again.
+toucan.createAuction.step.tokenInfo.image.error.invalidType	Choose a PNG, JPG, WebP, or GIF image.
+toucan.createAuction.step.tokenInfo.image.error.rejected	That image cannot be used. Please choose another.
+toucan.createAuction.step.tokenInfo.image.error.tooLarge	Image must be 2 MB or smaller.
+toucan.createAuction.step.tokenInfo.image.upload	Upload token image
+toucan.createAuction.step.tokenInfo.invalidTokenSelected	This token is not supported. Please select a different token.
+toucan.createAuction.step.tokenInfo.name	Name
+toucan.createAuction.step.tokenInfo.namePlaceholder	Untitled Token
+toucan.createAuction.step.tokenInfo.network	Network
+toucan.createAuction.step.tokenInfo.noWallet	No wallet detected
+toucan.createAuction.step.tokenInfo.noWallet.createNew	Connect your wallet to create a new token
+toucan.createAuction.step.tokenInfo.noWallet.existing	Connect your wallet to select a token to use.
+toucan.createAuction.step.tokenInfo.optional	(optional)
+toucan.createAuction.step.tokenInfo.selectToken	Select token
+toucan.createAuction.step.tokenInfo.subtitleCreateNew	Input information about your new token. These details cannot be changed after creation.
+toucan.createAuction.step.tokenInfo.subtitleExisting	Select an existing token and input additional information.
+toucan.createAuction.step.tokenInfo.ticker	Ticker symbol
+toucan.createAuction.step.tokenInfo.tickerPlaceholder	$TICKER
+toucan.createAuction.step.tokenInfo.title	Token info
+toucan.createAuction.step.tokenInfo.websiteLink	Website link
+toucan.createAuction.step.tokenInfo.xProfile	X Profile
+toucan.createAuction.step.tokenInfo.xProfile.connect	Connect to verify ownership
+toucan.createAuction.step.tokenInfo.xProfile.connecting	Connecting...
+toucan.createAuction.step.tokenInfo.xProfile.disconnect	Disconnect
+toucan.createAuction.step.tokenInfo.xProfile.error	Failed to connect X. Please try again.
+toucan.createAuction.step.tokenInfo.xProfile.failedToInitiate	Failed to initiate X verification.
+toucan.createAuction.step.tokenInfo.xProfile.popupBlocked	Popup blocked. Please allow popups for this site.
+toucan.createAuction.step.tokenInfo.xProfile.walletChanged	Your wallet changed. Reconnect X to verify ownership.
+toucan.createAuction.title	Launch auction
+toucan.createAuction.tokenSummaryCard.auctioning	Depositing {{amount}} tokens
+toucan.createAuction.tokenSummaryCard.launchingWithDuration	Launching on {{date}} for {{duration}}
+toucan.createAuction.transaction.canceled	Auction launch canceled
+toucan.createAuction.transaction.canceling	Canceling auction launch
+toucan.createAuction.transaction.failed	Auction launch failed
+toucan.createAuction.transaction.pending	Launching auction
+toucan.createAuction.transaction.success	Auction launched
+toucan.createAuction.walletRequired	Connect a wallet to launch the auction
+toucan.creator.migrate.availableIn	Migration available in {{time}}
+toucan.creator.migrate.button	Create trading pool
+toucan.creator.migrate.complete	Trading pool created
+toucan.creator.migrate.description	This auction met its funding goal. A one-time migration moves the raised funds into a Uniswap v4 pool so the token can be traded. Anyone can trigger it.
+toucan.creator.migrate.notYetAvailable	Migration not yet available
+toucan.creator.migrate.title	Finalize the token launch
+toucan.creator.sweep.availableToWithdraw	Available to withdraw
+toucan.creator.sweep.confirm.failed.description	You’ll receive the full token supply you deposited into the auction.
+toucan.creator.sweep.confirm.graduated.description	You’ll receive the tokens that weren’t sold in the auction.
+toucan.creator.sweep.failed.description	This auction failed to launch. You may now withdraw the tokens you deposited into the auction.
+toucan.creator.sweep.failed.title	Withdraw your tokens
+toucan.creator.sweep.graduated.description	Excess tokens from your auction can now be withdrawn to your wallet {{address}}
+toucan.creator.sweep.graduated.title	Recover unsold tokens
+toucan.creator.sweep.graduated.withdrawn.description	You have withdrawn the excess tokens from your auction.
+toucan.creator.sweep.youWithdrew	You withdrew
+toucan.details.auction	Auction
+toucan.details.auctionSupply	Auction supply
+toucan.details.clearingPrice	Clearing price
+toucan.details.duration	Duration
+toucan.details.kyc	Identity verification
+toucan.details.no	No
+toucan.details.now	Now
+toucan.details.postAuctionLiquidity	Post-auction liquidity
+toucan.details.projected	Projected
+toucan.details.projectedSupplyNote	Amounts after now are projected and depend on future demand.
+toucan.details.raiseCurrency	Raise currency
+toucan.details.seeFullDetails	See full details
+toucan.details.startDate	Start date
+toucan.details.supplySchedule	Supply schedule
+toucan.details.tab.details	Details
+toucan.details.tab.howItWorks	How it works
+toucan.details.tokensReleased	Tokens released:
+toucan.details.totalReleased	Total released:
+toucan.details.whitelist	Whitelist
+toucan.details.yes	Yes
+toucan.filter.active	Active
+toucan.filter.quickLaunches	Quick launches
+toucan.filter.quickLaunches.tooltip	Quick launches use Uniswap’s preset auction: fixed supply, one clearing price for everyone, liquidity locked forever.
+toucan.filter.status	Status
+toucan.filter.verified	Verified
+toucan.filter.verifiedLaunch.tooltip	Verified Launch means the launch has met certain objective, verifiable criteria. It is not an endorsement or recommendation. Top auctions are sorted by total committed volume and may include ongoing and completed auctions.
+toucan.geoRestriction.button	{{tokenSymbol}} is unavailable in your region
+toucan.geoRestriction.buttonGeneric	This token is unavailable in your region
+toucan.geoRestriction.someRegions.description	{{tokenSymbol}} is not tradable in some regions. Bypassing this restriction is prohibited.
+toucan.geoRestriction.someRegions.descriptionGeneric	This token is not tradable in some regions. Bypassing this restriction is prohibited.
+toucan.helpModal.continue	Continue
+toucan.helpModal.description	This auction is powered by Uniswap’s CCA protocol which enables fair token auctions. Everyone pays the same price for tokens as the auction progresses.
+toucan.helpModal.disclaimer.collapsed	Disclaimer: Uniswap Labs has not independently reviewed or verified any token or project displayed.
+toucan.helpModal.disclaimer.expanded1	The appearance of a token on this interface does not constitute a recommendation, endorsement, or solicitation.
+toucan.helpModal.disclaimer.expanded2	All token information is provided by third-party sources and is displayed for informational purposes only.
+toucan.helpModal.disclaimer.seeMore	See more
+toucan.helpModal.learnMore	Learn how Uniswap Token Auctions work
+toucan.helpModal.step1	Set your max budget
+toucan.helpModal.step2	Bid the price you want to pay
+toucan.helpModal.step3	Start receiving tokens
+toucan.helpModal.title	This is a Continuous Clearing Auction.
+toucan.kyc.failed.contactSupport	Contact {{provider}} support for assistance
+toucan.kyc.failed.description	{{provider}} was not able to verify your identity. If you believe this is an error or want to appeal, contact {{provider}} support.
+toucan.kyc.failed.title	Identity verification failed
+toucan.kyc.generalSaleStartsSoon	General sale starts soon
+toucan.kyc.interstitial.continue	Proceed to verification
+toucan.kyc.interstitial.description	{{teamName}} requires identity verification to place a bid. Verification is completed directly with {{provider}} and only needs to be done once for this auction. Uniswap Labs does not perform identity verification or collect your verification information.
+toucan.kyc.interstitial.disclaimer	By continuing, you acknowledge that you’ll be subject to {{providerName}} <termsLink>Terms of Service</termsLink> and <privacyLink>Privacy Policy</privacyLink>, as applicable.
+toucan.kyc.interstitial.title	Identity verification required
+toucan.kyc.requiredByTeam	Required by {{teamName}}
+toucan.kyc.verificationFailed	Verification failed
+toucan.kyc.verificationInProgress	Verification in progress
+toucan.kyc.verificationRetry	Retry verification
+toucan.kyc.verifyIdentity	Verify identity to bid
+toucan.kyc.verifyIdentity.notVerified	You have not verified your identity and cannot participate in this auction
+toucan.kyc.verifyIdentity.notWhitelisted	This auction is in pre-bidding and is only open to allowlisted wallets
+toucan.kyc.verifyIdentity.pending	Verification is in progress
+toucan.kyc.verifyIdentity.verified	You have successfully verified your identity and can participate in this auction
+toucan.kyc.verifyIdentity.whitelisted	You are whitelisted to participate in this auction
+toucan.launchToken.custom.description	Run a fully configurable token auction built for fair price discovery
+toucan.launchToken.custom.feature.durations	Custom durations
+toucan.launchToken.custom.feature.kyc	KYC capabilities
+toucan.launchToken.custom.feature.liquidity	Advanced liquidity configurations
+toucan.launchToken.custom.title	Custom Launch
+toucan.launchToken.modal.subtitle	Select the option that best suits your project.
+toucan.launchToken.modal.title	Launch a token
+toucan.launchToken.pools.description	Launch memecoins quickly with default presets for fast, fair distribution.
+toucan.launchToken.pools.feature.creatorFees	Optional creator fees
+toucan.launchToken.pools.feature.crowdfund	4-hour crowd funding or instant launch
+toucan.launchToken.pools.feature.presets	Default presets
+toucan.launchToken.pools.poweredBy	Powered by
+toucan.launchToken.pools.title	Pools.trade
+toucan.liquidityLockedBadge.label	Liquidity locked forever
+toucan.liquidityLockedBadge.tooltip	The auction proceeds and paired tokens sit in a permanently locked Uniswap v4 position. Liquidity can never be pulled.
+toucan.poolsTradeBadge.tooltip	This token was launched on {{launchpad}}
+toucan.simulation.budgetSpent	Budget spent
+toucan.simulation.description	Continuous Clearing Auctions, or CCAs, spread token distribution over time through gradual batch releases.
+toucan.simulation.exampleBid	{{budget}} @ {{maxFdv}} max FDV
+toucan.simulation.step1.description	Input the total amount of tokens you want to spend, and the maximum price you are willing to pay for the bid.
+toucan.simulation.step1.title	Set your max budget and max price
+toucan.simulation.step2.description	As each batch drops, you receive tokens if your max price is within the current price range. Everyone in each batch pays the same price. You stop receiving tokens once the price exceeds your limit.
+toucan.simulation.step2.title	Start receiving tokens
+toucan.simulation.step3.description	At the end of the auction, you can claim any tokens you received through your bids. Any unused budget will be refunded to you.
+toucan.simulation.step3.title	Claim your tokens and remaining budget
+toucan.simulation.title	Example
+toucan.simulation.tokensReceived	Total tokens received
+toucan.simulation.tooltipTokensReceived	Tokens received:
+toucan.statsBanner.aboveFloor	above floor
+toucan.statsBanner.bidsConcentratedAt	Bids concentrated at
+toucan.statsBanner.clearingPrice	Current clearing price
+toucan.statsBanner.committed.cancelDisclaimer	This auction requires {{amount}} of committed volume to launch. Otherwise, all bids will be refunded.
+toucan.statsBanner.committed.cancelDisclaimerCompleted	This auction required {{amount}} of committed volume to launch. All bids are refundable.
+toucan.statsBanner.committed.filled	Filled
+toucan.statsBanner.committed.highFloorInfo	This auction has a high floor price with a minimum FDV of {{fdv}}. It currently has {{committed}} in bid volume, out of {{required}} required to launch. If the auction ends below that amount, all bids will be refunded.
+toucan.statsBanner.committed.inRange	In range
+toucan.statsBanner.committed.lowVolumeHighFdv	This CCA auction has low bid volume and a high FDV.
+toucan.statsBanner.committed.outOfRange	Out of range
+toucan.statsBanner.committed.total	Total committed
+toucan.statsBanner.currentValuation	Current FDV
+toucan.statsBanner.finalClearingPrice	Final clearing price
+toucan.statsBanner.pastHour	past hour
+toucan.swap.returnTo	Return to {{tokenName}}
+toucan.swap.returnToAuction	Return to auction
+toucan.timeline.allowlistOnly	Allowlist only
+toucan.timeline.auctionEnds	Auction ends
+toucan.timeline.auctionEnds.description	Token emission is complete and the final clearing price is set. Bidders above the clearing price can now exit their bids to receive tokens and any currency refunds. Bids below the clearing price can be fully refunded.
+toucan.timeline.auctionEnds.description.future	Token emission will be complete and the final clearing price will be set. Bidders above the clearing price will be able to exit their bids to receive tokens and any currency refunds. Bids below the clearing price will be fully refunded.
+toucan.timeline.auctionFailed	Auction failed to launch.
+toucan.timeline.auctionFailed.description	This auction did not raise the required amount ({{requiredAmount}}) and no tokens will be distributed. All funds used in bids can now be withdrawn.
+toucan.timeline.auctionStarted	Auction started
+toucan.timeline.auctionStarted.allowlist.description	The auction is live for allowlisted users. Tokens are being released according to the supply schedule and the clearing price adjusts in real-time as bids are submitted. Place bids above the current clearing price to participate.
+toucan.timeline.auctionStarted.allowlist.description.future	The auction will go live for allowlisted users. Tokens will be released according to the supply schedule and the clearing price will adjust in real-time as bids are submitted. Place bids above the clearing price to participate.
+toucan.timeline.auctionStarted.description	The auction is live. Tokens are being released according to the supply schedule and the clearing price adjusts in real-time as bids are submitted. Place bids above the current clearing price to participate.
+toucan.timeline.auctionStarted.description.future	The auction will go live. Tokens will be released according to the supply schedule and the clearing price will adjust in real-time as bids are submitted. Place bids above the clearing price to participate.
+toucan.timeline.generalSaleStarts	General sale starts
+toucan.timeline.generalSaleStarts.description	The allowlist period is over. Anyone can now place bids. Tokens continue to be released according to the supply schedule and the clearing price adjusts in real-time as bids are submitted.
+toucan.timeline.generalSaleStarts.description.future	The allowlist period will end. Anyone will be able to place bids. Tokens continue to be released according to the supply schedule and the clearing price adjusts in real-time as bids are submitted.
+toucan.timeline.preSaleEnds	Pre-sale ends
+toucan.timeline.preSaleEnds.description	The early access phase is over. Token emission begins, bidding opens to all participants, and the clearing price will start adjusting based on accumulated and incoming bid demand.
+toucan.timeline.preSaleEnds.description.future	The early access phase will end. Token emission will begin, bidding will open to all participants, and the clearing price will start adjusting based on accumulated and incoming bid demand.
+toucan.timeline.preSaleStarts	Pre-sale starts
+toucan.timeline.preSaleStarts.description	The auction is open for early bidding but no tokens are being released yet. This phase may be restricted to whitelisted participants — a valid proof or credential may be required to place a bid. Check with the token team for specific eligibility requirements. Bids can be submitted at any price above the floor price to establish your position before token emission begins.
+toucan.timeline.preSaleStarts.description.future	The auction will open for early bidding but no tokens will be released yet. This phase may be restricted to whitelisted participants — a valid proof or credential may be required to place a bid. Check with the token team for specific eligibility requirements. Bids will be submittable at any price above the floor price to establish your position before token emission begins.
+toucan.timeline.title	Timeline
+toucan.timeline.tokensClaimable	Token available to trade
+toucan.timeline.tokensClaimable.description	The claim window is open. Bidders who have exited their bids can now claim their tokens. Once claimed, tokens are freely transferable and available to trade.
+toucan.timeline.tokensClaimable.description.future	The claim window will open. Bidders who have exited their bids will be able to claim their tokens. Once claimed, tokens will be freely transferable and available to trade.
+toucan.timeline.tokensClaimable.restricted	Token available to claim
+toucan.timeline.tokensClaimable.restricted.description	The claim window is open. Bidders who have exited their bids can now claim their tokens. Trading is restricted until the Token Generation Event (TGE).
+toucan.timeline.tokensClaimable.restricted.description.future	The claim window will open. Bidders who have exited their bids will be able to claim their tokens. Trading will be restricted until the Token Generation Event (TGE).
+toucan.topVerifiedAuctions.seeAll	See all auctions
+toucan.topVerifiedAuctions.title	Top verified auctions
+toucan.withdraw.avgCost	Avg cost: {{cost}} {{symbol}}
+toucan.withdraw.noTokens	No tokens available to withdraw
+toucan.withdraw.partialFillInfo	Some of your bids did not fully fill. You will be refunded the unused portion of your bid.
+toucan.withdraw.title	Withdraw balance
+wallet.appSignIn	Sign in with the app
+wallet.connecting.description	Complete connection in your wallet
+wallet.connecting.solanaPrompt	Use Solana on Uniswap
+wallet.connecting.solanaPrompt.button	Use Solana
+wallet.connecting.solanaPrompt.description	You’ll be asked to connect again in MetaMask
+wallet.connecting.solanaPrompt.noWalletDetected.description	Install a Solana-compatible wallet to continue
+wallet.connecting.solanaPrompt.noWalletDetected.header	No Solana wallet detected
+wallet.connecting.title.evm	Connect to {{walletName}}
+wallet.connecting.title.svm	Connect to {{walletName}} on Solana
+wallet.connectingAgreement	By connecting a wallet, you agree to Uniswap Labs’ <termsLink>Terms of Service</termsLink> and consent to its <privacyLink>Privacy Policy</privacyLink>.
+wallet.connectionFailed.message	Connection attempt failed. Please try again, following the steps to connect in your wallet.
+wallet.mismatch.popup.description	Some features are not supported by your connected wallet.
+wallet.mismatch.popup.title	Limited wallet support
+wallet.other	Other wallets
+wallet.scanToConnect	Scan QR code to connect
+wallet.wrongNet	Your wallet is connected to the wrong network.
+walletConnect.dapps.empty.description	Connect to an app by scanning a code via WalletConnect
+walletConnect.dapps.manage.empty.title	No apps connected
+walletConnect.dapps.manage.title	Connections
+walletConnect.error.connection.message	{{dappName}} has requested only unsupported chains. Uniswap Wallet currently supports the following chains: {{chainNames}}.
+walletConnect.error.connection.title	Connection Error
+walletConnect.error.general.message	There was an issue with WalletConnect. Please try again
+walletConnect.error.general.title	WalletConnect Error
+walletConnect.error.scantastic.message	There was an issue with your QR code. Please try again
+walletConnect.error.scantastic.title	Invalid QR Code
+walletConnect.error.unsupported.message	Make sure that you’re scanning a valid WalletConnect, Ethereum address, or Uniswap Extension QR code before trying again.
+walletConnect.error.unsupported.title	Invalid QR Code
+walletConnect.error.unsupportedV1.message	WalletConnect v1 is no longer supported. The application you’re trying to connect to needs to upgrade to WalletConnect v2.
+walletConnect.error.unsupportedV1.title	Invalid QR Code
+walletConnect.error.uwu.scan	There was an issue scanning this QR code.
+walletConnect.error.uwu.title	UwU Link error
+walletConnect.error.uwu.unsupported	This QR code is not supported.
+walletConnect.pending.button.connect	Connect
+walletConnect.pending.button.reject	Reject
+walletConnect.pending.button.scrollDown	Scroll down to connect
+walletConnect.request.bundledTransactions.label_one	Single bundled transaction
+walletConnect.request.bundledTransactions.label_other	{{count}} bundled transactions
+walletConnect.request.button.scrollDown	Scroll down to sign
+walletConnect.request.button.sign	Sign
+walletConnect.request.details.label.sending	Sending
+walletConnect.request.details.label.token	Token
+walletConnect.request.details.label.tokens	Tokens
+walletConnect.request.error.insufficientFunds	You don’t have enough {{currencySymbol}} to complete this transaction.
+walletConnect.request.error.network	Internet or network connection error
+walletConnect.request.warning.batch.message	Be careful: this request contains multiple transactions and could transfer assets
+walletConnect.request.warning.general.message	Be careful: this message may transfer assets
+walletConnect.request.warning.message	In order to sign messages or transactions, you’ll need to import the wallet’s recovery phrase.
+walletConnect.request.warning.title	This wallet is in view-only mode
+{{reason}}

@@ -1,0 +1,57 @@
+# Long - Token page, $MOO anchored to MU
+
+> Source: https://app.long.xyz/tokens/0xd9db30bb0d2b8d2eae3826a1372117e058791e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0xd9db30bb0d2b8d2eae3826a1372117e058791e18.md`
+
+---
+
+![Image 1: MOO](https://storage.long.xyz/tokens/0xd9db30bb0d2b8d2eae3826a1372117e058791e18.png)
+
+$MOO
+
+Memory cow Moo
+
+Anchored to![Image 2: MU](https://app.long.xyz/robinhood-coins/mu.png)**MU**
+
+$27.7M
+
+$27.7M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xd9db30bb0d2b8d2eae3826a1372117e058791e18)
+
+Claimed$2,279,300.17
+
+Unclaimed$2,968.32
+
+Community mode Active
+
+## MOO Community Vault
+
+Total value$42,682 in the community vault
+
+Locked in vault 9.7M MOO
+
+Burned 9.7M MOO 0.97% of supply
+
+*   ![Image 3: MU](https://app.long.xyz/robinhood-coins/mu.png)
+MU Micron
+
+46.1681$42,682
+
+Fees cycle into the vault automatically — anyone can send stock tokens straight to the vault address.
+
+Name Memory cow Moo
+Ticker$MOO
+CA 0xd9db30...1e18
+Anchored to![Image 4: MU](https://app.long.xyz/robinhood-coins/mu.png)MU 0xff080c...4afd
+Description-
+Social Links[https://x.com/memorycowmoo](https://x.com/memorycowmoo)
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1)
+
+Links/Buttons:
+- [](https://x.com/memorycowmoo)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xd9db30bb0d2b8d2eae3826a1372117e058791e18)
+- [MOO Community Vault ↗](https://robinhoodchain.blockscout.com/address/0x31A3edF92b49407C04215d4B744F231460a2DA32)
+- [View chart](https://www.defined.fi/robinhood/0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1)

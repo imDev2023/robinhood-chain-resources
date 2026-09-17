@@ -1,0 +1,44 @@
+# Long - Token page, $AGI anchored to AI
+
+> Source: https://app.long.xyz/tokens/0x5a8625d314fdd298101d87932a784b756a401e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0x5a8625d314fdd298101d87932a784b756a401e18.md`
+
+---
+
+![Image 1: AGI](https://storage.long.xyz/tokens/0x5a8625d314fdd298101d87932a784b756a401e18.png)
+
+$AGI
+
+AGI Frog
+
+Anchored to![Image 2: AI](https://app.long.xyz/robinhood-coins/ai.png)**AI**
+
+$1.6M
+
+$1.6M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x5a8625d314fdd298101d87932a784b756a401e18)
+
+## Fees
+
+Fee receiver:[0x6070B1...8E4B](https://robinhoodchain.blockscout.com/address/0x6070B172f5b06398455be5981962Fd009C8F8E4B)
+
+Claimed$200,446.27
+
+Unclaimed$2,461.57
+
+Name AGI Frog
+Ticker$AGI
+CA 0x5a8625...1e18
+Anchored to![Image 3: AI](https://app.long.xyz/robinhood-coins/ai.png)AI 0x2e8c31...1e18
+Description Meet Amphibian Giga Intelligence — The frog that's paired to $AI. Pairing: $AGI → $AI → NVDA.
+Social Links[https://x.com/AGIfrog](https://x.com/AGIfrog)
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0x056b42e26a9ffa9d09684ab2ed95f60a113d152881ac5b0c65e71205658a7ab9)
+
+Links/Buttons:
+- [](https://x.com/AGIfrog)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x5a8625d314fdd298101d87932a784b756a401e18)
+- [0x6070B1...8E4B](https://robinhoodchain.blockscout.com/address/0x6070B172f5b06398455be5981962Fd009C8F8E4B)
+- [View chart](https://www.defined.fi/robinhood/0x056b42e26a9ffa9d09684ab2ed95f60a113d152881ac5b0c65e71205658a7ab9)

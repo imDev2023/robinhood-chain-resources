@@ -1,0 +1,1115 @@
+[
+ {
+  "inputs": [],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "AirdropBipsExceedsMax",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAntiSniperType",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidInitialization",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidReserveBips",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotInitializing",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "acfFakeInitialVirtualLiq",
+    "type": "uint256"
+   }
+  ],
+  "name": "AcfFakeInitialVirtualLiqUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "fakeInitialVirtualLiq",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetRealVirtual",
+      "type": "uint256"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct BondingConfig.BondingCurveParams",
+    "name": "params",
+    "type": "tuple"
+   }
+  ],
+  "name": "BondingCurveParamsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "initialSupply",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "feeTo",
+    "type": "address"
+   }
+  ],
+  "name": "CommonParamsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "bytes32",
+      "name": "tbaSalt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "tbaImplementation",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "daoVotingPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "daoThreshold",
+      "type": "uint256"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct BondingConfig.DeployParams",
+    "name": "params",
+    "type": "tuple"
+   }
+  ],
+  "name": "DeployParamsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "wallet",
+    "type": "address"
+   }
+  ],
+  "name": "GraduationExcessBurnWalletUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "version",
+    "type": "uint64"
+   }
+  ],
+  "name": "Initialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "legacyInitialVirtualLiq",
+    "type": "uint256"
+   }
+  ],
+  "name": "LegacyInitialVirtualLiqUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "launcher",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "allowed",
+    "type": "bool"
+   }
+  ],
+  "name": "PrivilegedLauncherUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint16",
+      "name": "maxAirdropBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxTotalReservedBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "acfReservedBips",
+      "type": "uint16"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct BondingConfig.ReserveSupplyParams",
+    "name": "params",
+    "type": "tuple"
+   }
+  ],
+  "name": "ReserveSupplyParamsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "wallet",
+    "type": "address"
+   }
+  ],
+  "name": "TeamTokenReservedWalletUpdated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "ANTI_SNIPER_60S",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ANTI_SNIPER_98M",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ANTI_SNIPER_NONE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "LAUNCH_MODE_ACP_SKILL",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "LAUNCH_MODE_NORMAL",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "LAUNCH_MODE_X_LAUNCH",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acfFakeInitialVirtualLiq",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bondingCurveParams",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "fakeInitialVirtualLiq",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "targetRealVirtual",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint16",
+    "name": "airdropBips_",
+    "type": "uint16"
+   },
+   {
+    "internalType": "bool",
+    "name": "needAcf_",
+    "type": "bool"
+   }
+  ],
+  "name": "calculateBondingCurveSupply",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "bondingCurveSupplyWei_",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "needAcf_",
+    "type": "bool"
+   }
+  ],
+  "name": "calculateGradThreshold",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "isScheduledLaunch_",
+    "type": "bool"
+   },
+   {
+    "internalType": "bool",
+    "name": "needAcf_",
+    "type": "bool"
+   }
+  ],
+  "name": "calculateLaunchFee",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "deployParams",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "tbaSalt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "tbaImplementation",
+    "type": "address"
+   },
+   {
+    "internalType": "uint32",
+    "name": "daoVotingPeriod",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "daoThreshold",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "feeTo",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "antiSniperType_",
+    "type": "uint8"
+   }
+  ],
+  "name": "getAntiSniperDuration",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getDeployParams",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "bytes32",
+      "name": "tbaSalt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "tbaImplementation",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "daoVotingPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "daoThreshold",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.DeployParams",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getFakeInitialVirtualLiq",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "needAcf_",
+    "type": "bool"
+   }
+  ],
+  "name": "getFakeInitialVirtualLiq",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getLegacyInitialVirtualLiq",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getScheduledLaunchParams",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "startTimeDelay",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "normalLaunchFee",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "acfFee",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.ScheduledLaunchParams",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getTargetRealVirtual",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "graduationExcessBurnWallet",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "initialSupply",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "initialSupply_",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "feeTo_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "teamTokenReservedWallet_",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint16",
+      "name": "maxAirdropBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxTotalReservedBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "acfReservedBips",
+      "type": "uint16"
+     }
+    ],
+    "internalType": "struct BondingConfig.ReserveSupplyParams",
+    "name": "reserveSupplyParams_",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "startTimeDelay",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "normalLaunchFee",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "acfFee",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.ScheduledLaunchParams",
+    "name": "scheduledLaunchParams_",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "bytes32",
+      "name": "tbaSalt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "tbaImplementation",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "daoVotingPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "daoThreshold",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.DeployParams",
+    "name": "deployParams_",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "fakeInitialVirtualLiq",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetRealVirtual",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.BondingCurveParams",
+    "name": "bondingCurveParams_",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "acfFakeInitialVirtualLiq_",
+    "type": "uint256"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "isPrivilegedLauncher",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "antiSniperType_",
+    "type": "uint8"
+   }
+  ],
+  "name": "isValidAntiSniperType",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacyInitialVirtualLiq",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "reserveSupplyParams",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "maxAirdropBips",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "maxTotalReservedBips",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "acfReservedBips",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "scheduledLaunchParams",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "startTimeDelay",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "normalLaunchFee",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "acfFee",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "fakeInitialVirtualLiq",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetRealVirtual",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.BondingCurveParams",
+    "name": "params_",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "acfFakeInitialVirtualLiq_",
+    "type": "uint256"
+   }
+  ],
+  "name": "setBondingCurveParams",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "initialSupply_",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "feeTo_",
+    "type": "address"
+   }
+  ],
+  "name": "setCommonParams",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "bytes32",
+      "name": "tbaSalt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "tbaImplementation",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "daoVotingPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "daoThreshold",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.DeployParams",
+    "name": "params_",
+    "type": "tuple"
+   }
+  ],
+  "name": "setDeployParams",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "wallet_",
+    "type": "address"
+   }
+  ],
+  "name": "setGraduationExcessBurnWallet",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "legacyInitialVirtualLiq_",
+    "type": "uint256"
+   }
+  ],
+  "name": "setLegacyInitialVirtualLiq",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "launcher_",
+    "type": "address"
+   },
+   {
+    "internalType": "bool",
+    "name": "allowed_",
+    "type": "bool"
+   }
+  ],
+  "name": "setPrivilegedLauncher",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint16",
+      "name": "maxAirdropBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxTotalReservedBips",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "acfReservedBips",
+      "type": "uint16"
+     }
+    ],
+    "internalType": "struct BondingConfig.ReserveSupplyParams",
+    "name": "params_",
+    "type": "tuple"
+   }
+  ],
+  "name": "setReserveSupplyParams",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "startTimeDelay",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "normalLaunchFee",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "acfFee",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct BondingConfig.ScheduledLaunchParams",
+    "name": "params_",
+    "type": "tuple"
+   }
+  ],
+  "name": "setScheduledLaunchParams",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "wallet_",
+    "type": "address"
+   }
+  ],
+  "name": "setTeamTokenReservedWallet",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "teamTokenReservedWallet",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

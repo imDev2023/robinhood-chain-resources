@@ -1,0 +1,143 @@
+AI Agents | Virtuals Protocol | virtuals-protocol | 24h=27497 | 7d=150634 | 30d=438465 | allTime=2556217
+Bridge Aggregator | LI.FI Bridge Aggregator | li.fi-bridge-aggregator | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Chain | Robinhood Chain | robinhood-chain | 24h=3751220 | 7d=8122834 | 30d=10304589 | allTime=13992172.42
+Cross Chain Bridge | Across | across | 24h=246 | 7d=0 | 30d=1176 | allTime=2136.4300000000003
+Cross Chain Bridge | fly.trade | fly.trade | 24h=6129 | 7d=4605 | 30d=4605 | allTime=10734
+DePIN | prism | prism | 24h=0 | 7d=3.48 | 30d=23.700000000000003 | allTime=23.700000000000003
+Derivatives | Arcus Perps | arcus-perps | 24h=12003 | 7d=78736 | 30d=326050 | allTime=326050
+Derivatives | Lighter Robinhood Perps | lighter-robinhood-perps | 24h=43569 | 7d=240309 | 30d=741328 | allTime=748557
+Derivatives | Mesha | mesha | 24h=0 | 7d=0 | 30d=2962.29 | allTime=2986.89
+DEX Aggregator | Definitive | definitive | 24h=26699 | 7d=105250 | 30d=124329 | allTime=124329
+DEX Aggregator | DropSwap | dropswap | 24h=0.02 | 7d=0.08 | 30d=0.09000000000000001 | allTime=0.5400000000000001
+DEX Aggregator | Epsilon | epsilon | 24h=11.62 | 7d=11.91 | 30d=11.92 | allTime=23.54
+DEX Aggregator | House of Joshi | house-of-joshi | 24h=0 | 7d=0 | 30d=0 | allTime=0
+DEX Aggregator | KyberSwap Aggregator | kyberswap-aggregator | 24h=7381 | 7d=201551 | 30d=304693 | allTime=459606
+DEX Aggregator | Rialto Aggregator | rialto-aggregator | 24h=1591 | 7d=7262 | 30d=16871 | allTime=35712.39
+Dexs | 1inch Aqua | 1inch-aqua | 24h=361 | 7d=4916 | 30d=27840.96 | allTime=33451.94
+Dexs | Alandale V3 | alandale-v3 | 24h=9547 | 7d=40047 | 30d=45545.49 | allTime=55092.49
+Dexs | BrownFi V3 | brownfi-v3 | 24h=null | 7d=305.24 | 30d=346.23 | allTime=346.23
+Dexs | Catnip | catnip | 24h=4.34 | 7d=54.85 | 30d=1188.2599999999998 | allTime=1724.38
+Dexs | Clutch Anvil AMM | clutch-anvil-amm | 24h=55698 | 7d=143727 | 30d=279311 | allTime=335009
+Dexs | Curve DEX | curve-dex | 24h=199 | 7d=221.45 | 30d=483870.64 | allTime=490061.09
+Dexs | Deepstate | deepstate | 24h=193 | 7d=32245 | 30d=162165 | allTime=162358
+Dexs | Ekubo | ekubo | 24h=1885 | 7d=11114 | 30d=34005 | allTime=38411
+Dexs | Fables | fables | 24h=15776 | 7d=50186 | 30d=51154.16 | allTime=66930.16
+Dexs | FrothSwap | frothswap | 24h=0 | 7d=0 | 30d=0 | allTime=7335.4800000000005
+Dexs | Gate Swap Spot | gate-swap-spot | 24h=23.45 | 7d=123.27 | 30d=646.47 | allTime=1010.0799999999997
+Dexs | GIGA V2 | giga-v2 | 24h=1613 | 7d=3054.4300000000003 | 30d=4289.63 | allTime=6613.610000000001
+Dexs | GIGA V3 | giga-v3 | 24h=21189 | 7d=58898 | 30d=115976 | allTime=174105.05
+Dexs | Hoodit | hoodit | 24h=1.2 | 7d=12.569999999999999 | 30d=30.979999999999997 | allTime=592.4799999999999
+Dexs | KOLSwap | kolswap | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Dexs | LiquidCore | liquidcore | 24h=0 | 7d=0 | 30d=8.04 | allTime=11246.91
+Dexs | Morpheus | morpheus | 24h=0.07 | 7d=0.56 | 30d=1.8000000000000003 | allTime=1.8000000000000003
+Dexs | Orvex | orvex | 24h=2786 | 7d=10329 | 30d=22333 | allTime=22599.73
+Dexs | PancakeSwap AMM | pancakeswap-amm | 24h=6.27 | 7d=11.389999999999999 | 30d=35.34 | allTime=1027.7
+Dexs | PancakeSwap AMM V3 | pancakeswap-amm-v3 | 24h=275 | 7d=1656 | 30d=4633.530000000001 | allTime=68087.55
+Dexs | ParitySwap V2 | parityswap-v2 | 24h=0.75 | 7d=6.68 | 30d=30.149999999999995 | allTime=31.409999999999997
+Dexs | ParitySwap V3 | parityswap-v3 | 24h=0.01 | 7d=12.06 | 30d=1488.34 | allTime=2373.420000000001
+Dexs | Ramses CL V2 | ramses-cl-v2 | 24h=137023 | 7d=582771 | 30d=747944 | allTime=747944
+Dexs | Ramses DLMM | ramses-dlmm | 24h=33173 | 7d=121094 | 30d=197464 | allTime=213540
+Dexs | Ramses Legacy V2 | ramses-legacy-v2 | 24h=1840 | 7d=16354.05 | 30d=16585.8 | allTime=18425.8
+Dexs | Raphael Exchange | raphael-exchange | 24h=491 | 7d=487 | 30d=487 | allTime=978
+Dexs | RobinSwap V2 | robinswap-v2 | 24h=4.79 | 7d=77.41 | 30d=158.5 | allTime=168.30999999999997
+Dexs | RobinSwap V3 | robinswap-v3 | 24h=217 | 7d=1286 | 30d=2324.96 | allTime=4038.01
+Dexs | SectorOne DLMM | sectorone-dlmm | 24h=139 | 7d=1186.18 | 30d=2302.41 | allTime=2302.41
+Dexs | Sheriff V2 | sheriff-v2 | 24h=0.55 | 7d=8.540000000000001 | 30d=14.89 | allTime=25.5
+Dexs | Sheriff V3 | sheriff-v3 | 24h=50.8 | 7d=435.40999999999997 | 30d=3509.8800000000006 | allTime=11852.74
+Dexs | STONX | stonx | 24h=1538 | 7d=9704 | 30d=34685 | allTime=38509
+Dexs | SushiSwap V3 | sushiswap-v3 | 24h=4136 | 7d=97092 | 30d=612091 | allTime=727377
+Dexs | SwapHood V2 | swaphood-v2 | 24h=11.11 | 7d=54.11 | 30d=328.2700000000001 | allTime=15693.78
+Dexs | SwapHood V3 | swaphood-v3 | 24h=28.46 | 7d=270.60999999999996 | 30d=1718.8700000000003 | allTime=18507.050000000003
+Dexs | Uniswap V2 | uniswap-v2 | 24h=147665 | 7d=1149638 | 30d=2740715 | allTime=10283226
+Dexs | Uniswap V3 | uniswap-v3 | 24h=2241102 | 7d=9579107 | 30d=23229746 | allTime=61364709
+Dexs | Uniswap V4 | uniswap-v4 | 24h=6589804 | 7d=22255271 | 30d=44706237 | allTime=72620127
+Dexs | up v2 | up-v2 | 24h=4226 | 7d=17469 | 30d=68668.22 | allTime=74345
+Dexs | up v3 | up-v3 | 24h=192097 | 7d=711505 | 30d=1519155 | allTime=1834640
+Domains | Robin | robin | 24h=0 | 7d=1542.51 | 30d=1545 | allTime=1545
+Foundation | Arbitrum Nitro | arbitrum-nitro | 24h=377206 | 7d=820644 | 30d=1037008 | allTime=1403806.21
+Gamified Mining | flowr | flowr | 24h=0 | 7d=0 | 30d=0 | allTime=92450
+Gamified Mining | LUNA | luna | 24h=0 | 7d=0 | 30d=0 | allTime=201904
+Gamified Mining | MinePea | minepea | 24h=55.38 | 7d=6037.38 | 30d=118822.38 | allTime=4476311.76
+Gamified Mining | Orchard | orchard | 24h=2.26 | 7d=909.02 | 30d=6640.249999999999 | allTime=17355.399999999998
+Gamified Mining | ROAR | roar | 24h=0 | 7d=0 | 30d=11193 | allTime=31968
+Gamified Mining | Robhood | robhood | 24h=0 | 7d=0 | 30d=0 | allTime=2785.7700000000004
+Gamified Mining | SLVR | slvr | 24h=82079 | 7d=250689 | 30d=617390 | allTime=3568115
+Gamified Mining | STEEL | steel | 24h=0 | 7d=0 | 30d=0 | allTime=172894.68
+Gamified Mining | StockRip | stockrip | 24h=7190 | 7d=44483 | 30d=209110.52 | allTime=1441032.52
+Indexes | The Index | the-index | 24h=14370 | 7d=123080 | 30d=496866 | allTime=1667391
+Interface | Tread.fi Perps | tread.fi-perps | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Launchpad | Aaro Trade | aaro-trade | 24h=0 | 7d=0 | 30d=0 | allTime=846.61
+Launchpad | Agen.space | agen.space | 24h=357 | 7d=10763 | 30d=16726.010000000002 | allTime=17083.010000000002
+Launchpad | AgentRanking | agentranking | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Launchpad | AGNT | agnt | 24h=1330 | 7d=5626.47 | 30d=5627.58 | allTime=9176.66
+Launchpad | ArrowPad | arrowpad | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Launchpad | ArrowPad.fun | arrowpad.fun | 24h=0.99 | 7d=10.100000000000001 | 30d=97.94 | allTime=347.3300000000001
+Launchpad | AvaLove | avalove | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Launchpad | Bags | bags | 24h=22155 | 7d=66882 | 30d=203850 | allTime=585729
+Launchpad | Based Alpha | based-alpha | 24h=0 | 7d=0 | 30d=2.93 | allTime=5919.390000000004
+Launchpad | basedbid | basedbid | 24h=1063 | 7d=4238.01 | 30d=12142.050000000001 | allTime=23206.66999999999
+Launchpad | Boardwalk | boardwalk | 24h=0 | 7d=177.85000000000002 | 30d=301.28999999999996 | allTime=301.28999999999996
+Launchpad | bow.fun | bow.fun | 24h=458 | 7d=3142 | 30d=31264 | allTime=431612
+Launchpad | BowYard | bowyard | 24h=0 | 7d=0 | 30d=0 | allTime=0.51
+Launchpad | Coinbarrel | coinbarrel | 24h=10498 | 7d=108291 | 30d=124515.35 | allTime=164215.91999999998
+Launchpad | DexLaunch | dexlaunch | 24h=0.71 | 7d=25.58 | 30d=39.14 | allTime=40.660000000000004
+Launchpad | Diggers | diggers | 24h=0 | 7d=0 | 30d=2.02 | allTime=85.81000000000002
+Launchpad | DOTT | dott | 24h=0 | 7d=0 | 30d=0 | allTime=4.34
+Launchpad | Flap sh | flap-sh | 24h=9177 | 7d=58950 | 30d=179570 | allTime=1077783
+Launchpad | Frontier | frontier | 24h=55 | 7d=2000.3600000000001 | 30d=3093.55 | allTime=3866.64
+Launchpad | Goon | goon | 24h=null | 7d=null | 30d=2.3200000000000003 | allTime=9.459999999999999
+Launchpad | HoloLaunch | hololaunch | 24h=0 | 7d=1.43 | 30d=54.79 | allTime=8438.589999999998
+Launchpad | HoodMint | hoodmint | 24h=0 | 7d=0.56 | 30d=8.51 | allTime=11.139999999999999
+Launchpad | HoodPump | hoodpump | 24h=0 | 7d=0 | 30d=0 | allTime=20.72
+Launchpad | Hookers | hookers | 24h=819 | 7d=7013 | 30d=10697 | allTime=10697
+Launchpad | HookOS | hookos | 24h=0 | 7d=0 | 30d=160.74 | allTime=160.74
+Launchpad | IMF | imf | 24h=0 | 7d=0 | 30d=0 | allTime=393.19
+Launchpad | LetsCash | letscash | 24h=40841 | 7d=454683 | 30d=1613786 | allTime=1970583.1
+Launchpad | MerryForge | merryforge | 24h=0 | 7d=0 | 30d=240.3 | allTime=240.3
+Launchpad | NOXA Fun | noxa-fun | 24h=142924 | 7d=933642 | 30d=4069455 | allTime=20894770
+Launchpad | o1 Launchpad | o1-launchpad | 24h=463085 | 7d=622238.9 | 30d=656777.1 | allTime=1164954.73
+Launchpad | PAIR | pair | 24h=22522 | 7d=24987 | 30d=24987 | allTime=47509
+Launchpad | Peeps | peeps | 24h=0 | 7d=0 | 30d=0.23 | allTime=115.85
+Launchpad | pmav | pmav | 24h=2.73 | 7d=5.75 | 30d=897.71 | allTime=38925.01
+Launchpad | Pons V1 | pons-v1 | 24h=335884 | 7d=2533267 | 30d=8300755 | allTime=23887250
+Launchpad | Pons V2 | pons-v2 | 24h=4221588 | 7d=21826857 | 30d=26939684 | allTime=26939684
+Launchpad | Pools | pools | 24h=32451 | 7d=260828 | 30d=1514075 | allTime=1546609
+Launchpad | Prynt | prynt | 24h=0.07 | 7d=0.13 | 30d=0.13 | allTime=52.24
+Launchpad | Quiver | quiver | 24h=0 | 7d=0 | 30d=0 | allTime=0.56
+Launchpad | RH.fun | rh.fun | 24h=0.14 | 7d=0.94 | 30d=188.44000000000003 | allTime=7677.880000000002
+Launchpad | Robin Labs | robin-labs | 24h=0 | 7d=0 | 30d=11.93 | allTime=13.59
+Launchpad | Sentry | sentry | 24h=4698 | 7d=49243 | 30d=75790 | allTime=102063
+Launchpad | Solauncher | solauncher | 24h=99 | 7d=131 | 30d=131 | allTime=230
+Launchpad | Squeeze | squeeze | 24h=55.37 | 7d=1409.37 | 30d=16221.86 | allTime=23856.229999999996
+Launchpad | StonkBrokers | stonkbrokers | 24h=32076 | 7d=192563 | 30d=2542956 | allTime=3490561
+Launchpad | Sushi Launchpad | sushi-launchpad | 24h=1584 | 7d=6412.1900000000005 | 30d=104799.13 | allTime=377176.13
+Launchpad | token.select | token.select | 24h=2804 | 7d=48093 | 30d=101969.83 | allTime=104773.83
+Launchpad | ZNS Launchpad | zns-launchpad | 24h=0 | 7d=2.44 | 30d=30.25 | allTime=1191.9600000000005
+Lending | Morpho Blue | morpho-blue | 24h=43835 | 7d=321090 | 30d=1089219 | allTime=1556609.82
+Lending | Native Credit Pool | native-credit-pool | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Liquidity Automation | LP Agent | lp-agent | 24h=1603 | 7d=4298.43 | 30d=5909.6900000000005 | allTime=5909.6900000000005
+Liquidity Automation | What The Hook | what-the-hook | 24h=1425 | 7d=5930 | 30d=51969 | allTime=53394
+Liquidity Manager | Quiver Protocol | quiver-protocol | 24h=70.67 | 7d=298.24 | 30d=1614.6500000000003 | allTime=4311.68
+Liquidity Manager | Snuggle | snuggle | 24h=124309 | 7d=657955 | 30d=1320944 | allTime=1545526
+Liquidity Manager | Tirelire | tirelire | 24h=0 | 7d=0 | 30d=4.109999999999999 | allTime=110.71000000000001
+Luck Games | Astro | astro | 24h=70.18 | 7d=182.15 | 30d=3581.1499999999996 | allTime=3651.3299999999995
+Luck Games | Fake Wall Street | fake-wall-street | 24h=5.1 | 7d=42.1 | 30d=9592.45 | allTime=9592.45
+Luck Games | Wildcard Games | wildcard-games | 24h=0 | 7d=0 | 30d=597 | allTime=597
+NFT Marketplace | Opensea Seaport | opensea-seaport | 24h=88528 | 7d=831614 | 30d=2226303 | allTime=2606536.38
+Onchain Capital Allocator | T3tris Finance | t3tris-finance | 24h=0 | 7d=598 | 30d=820 | allTime=913
+Payments | Sablier Legacy | sablier-legacy | 24h=0 | 7d=3.97 | 30d=40.63 | allTime=40.63
+Prediction Market | Meridian Predict | meridian-predict | 24h=0 | 7d=0 | 30d=0 | allTime=0
+Privacy | Privacy Cash | privacy-cash | 24h=474 | 7d=1872 | 30d=3356.79 | allTime=3356.79
+Privacy | Sherwood | sherwood | 24h=22.59 | 7d=294.86999999999995 | 30d=431.06999999999994 | allTime=464.62999999999994
+Risk Curators | Steakhouse Financial | steakhouse-financial | 24h=44214 | 7d=319222 | 30d=1011461 | allTime=1011461
+RWA | Midas RWA | midas-rwa | 24h=0 | 7d=0 | 30d=0 | allTime=0
+SoFi | GreenTown | greentown | 24h=1.88 | 7d=286.12 | 30d=493.68000000000006 | allTime=4286.089999999999
+SoFi | HoodFrens | hoodfrens | 24h=447 | 7d=1145.53 | 30d=10144.970000000001 | allTime=23552.139999999996
+Telegram Bot | GMGN | gmgn | 24h=1465738 | 7d=5219501 | 30d=12637119 | allTime=27202008
+Telegram Bot | Maestro | maestro | 24h=76565 | 7d=284438 | 30d=584755 | allTime=1634908
+Token Locker | RobinFlow | robinflow | 24h=0 | 7d=0 | 30d=0 | allTime=437.9299999999999
+Trading App | o1.exchange Trading Terminal | o1.exchange-trading-terminal | 24h=130 | 7d=484 | 30d=536 | allTime=536
+Uncollateralized Lending | Accountable | accountable | 24h=0 | 7d=4176 | 30d=10810.34 | allTime=10810.949999999999
+Volume Boosting | Ravenhood | ravenhood | 24h=7994 | 7d=8455.86 | 30d=10622.130000000001 | allTime=25209.879999999997
+Wallets | Rainbow Wallet | rainbow-wallet | 24h=6328 | 7d=29608 | 30d=57743 | allTime=87338
+Yield Aggregator | DexFi Aggregator | dexfi-aggregator | 24h=1091 | 7d=7435 | 30d=15913 | allTime=28462

@@ -1,0 +1,890 @@
+[
+ {
+  "file": "01-overview.md",
+  "src": "chain_index.mdx",
+  "fact_delta": {},
+  "ratio": 0.9771,
+  "sent_only_source": [
+   "start building import { cardgrid, card } from '../../components/card' import { icon } from '../../components/icon' } title=\"connect to the network\" href=\"/chain/connecting\" learn how to connect to robinhood chain } title=\"deploy a smart contract\" href=\"/chain/deploy smart contracts\" get your first contract live on robinhood chain using foundry or hardhat } title=\"run a full node\" href=\"/chain/run a full node\" spin up your own robinhood chain node for full data access and independence built for real world assets at its core, robinhood chain is optimized for tokenized real world assets (rwas) \u2014 including equities, etfs, private assets, and other financial instruments \u2014 allowing them to be represented and traded onchain."
+  ],
+  "sent_only_archive": [
+   "start building connect to the network learn how to connect to robinhood chaindeploy a smart contract get your first contract live on robinhood chain using foundry or hardhatrun a full node spin up your own robinhood chain node for full data access and independence built for real world assets at its core, robinhood chain is optimized for tokenized real world assets (rwas) \u2014 including equities, etfs, private assets, and other financial instruments \u2014 allowing them to be represented and traded onchain."
+  ],
+  "counts": {
+   "src_sent": 24,
+   "arc_sent": 24,
+   "src_only": 1,
+   "arc_only": 1
+  }
+ },
+ {
+  "file": "02-connecting.md",
+  "src": "chain_connecting_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 15,
+   "arc_sent": 15,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "03-add-network-to-wallet.md",
+  "src": "chain_add-network-to-wallet_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "https://apps.apple.com/us/app/robinhood-wallet-swap-crypto/id1634080733",
+     "https://play.google.com/store/apps/details?id=com.robinhood.gateway"
+    ]
+   }
+  },
+  "ratio": 0.9186,
+  "sent_only_source": [
+   "download robinhood wallet (requires ios or android) 2.",
+   "import { appstorebuttons } from '../../../components/appstorebuttons' add network to your wallet robinhood wallet robinhood wallet provides support for robinhood chain.",
+   "import { connectbutton } from '../../../components/connectbutton' to add manually to metamask 1."
+  ],
+  "sent_only_archive": [
+   "add network to your wallet robinhood wallet robinhood wallet provides support for robinhood chain.",
+   "download robinhood wallet (requires ios or android) 1.",
+   "loading wallet connection...",
+   "to add manually to metamask 1."
+  ],
+  "counts": {
+   "src_sent": 7,
+   "arc_sent": 8,
+   "src_only": 3,
+   "arc_only": 4
+  }
+ },
+ {
+  "file": "04-bridging.md",
+  "src": "chain_bridging_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 18,
+   "arc_sent": 18,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "06-stock-tokens.md",
+  "src": "chain_stock-tokens_index.mdx",
+  "fact_delta": {},
+  "ratio": 0.9948,
+  "sent_only_source": [
+   "a full list of the jurisdictions in which offers or sales are restricted or prohibited is available here http //docs.robinhood.com/rhj robinhood assets (jersey) limited is a private limited company incorporated in jersey, with its registered address at first floor, la chasse chambers, ten la chasse, st.",
+   "eligible investors should carefully review the base prospectus (together with any supplements) and the applicable final terms, available here http //docs.robinhood.com/rhj stock tokens are not registered under u.s."
+  ],
+  "sent_only_archive": [
+   "a full list of the jurisdictions in which offers or sales are restricted or prohibited is available here robinhood assets (jersey) limited is a private limited company incorporated in jersey, with its registered address at first floor, la chasse chambers, ten la chasse, st.",
+   "eligible investors should carefully review the base prospectus (together with any supplements) and the applicable final terms, available here stock tokens are not registered under u.s."
+  ],
+  "counts": {
+   "src_sent": 43,
+   "arc_sent": 43,
+   "src_only": 2,
+   "arc_only": 2
+  }
+ },
+ {
+  "file": "07-building-with-stock-tokens.md",
+  "src": "chain_building-with-stock-tokens_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 45,
+   "arc_sent": 45,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "08-stock-token-apis.md",
+  "src": "chain_stock-token-apis_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://cdn.robinhood.com/ncw_assets/logos/<address"
+    ],
+    "in_archive_not_source": [
+     "https://cdn.robinhood.com/ncw_assets/logos/.png"
+    ]
+   }
+  },
+  "ratio": 0.9994,
+  "sent_only_source": [
+   "boolean \\ null whether fractional trading is enabled during extended hours.",
+   "field type notes string \\ null fractional share tradability of the underlier.",
+   "string \\ null rh all day / overnight (24/5) trading flag for the underlier."
+  ],
+  "sent_only_archive": [
+   "boolean null whether fractional trading is enabled during extended hours.",
+   "field type notes string null fractional share tradability of the underlier.",
+   "string null rh all day / overnight (24/5) trading flag for the underlier."
+  ],
+  "counts": {
+   "src_sent": 59,
+   "arc_sent": 59,
+   "src_only": 3,
+   "arc_only": 3
+  }
+ },
+ {
+  "file": "12-differences-from-ethereum.md",
+  "src": "chain_differences-from-ethereum_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 32,
+   "arc_sent": 32,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "13-gas-and-fees.md",
+  "src": "chain_gas-and-fees_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 12,
+   "arc_sent": 12,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "14-transaction-finality.md",
+  "src": "chain_transaction-finality_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 16,
+   "arc_sent": 16,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "16-token-contracts.md",
+  "src": "chain_contracts_index.mdx",
+  "fact_delta": {
+   "addr": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "0x00000000000000000000000000000000022015c2",
+     "0x0000000000000000000000000000000002c4d1ce",
+     "0x0000000000000000000000000000000003bd94e0",
+     "0x000000000000000000000000000000000467fac1",
+     "0x0000000000000000000000000000000004a960b4",
+     "0x000000000000000000000000000000000747a258",
+     "0x0000000000000000000000000000000007a45659",
+     "0x000000000000000000000000000000000a924e0d",
+     "0x000000000000000000000000000000000b2d487c",
+     "0x000000000000000000000000000000000ca816dd",
+     "0x000000000000000000000000000000000cd0e8a5",
+     "0x000000000000000000000000000000000cfe4102",
+     "0x0000000000000000000000000000000014eaef73",
+     "0x0000000000000000000000000000000014f96c01",
+     "0x00000000000000000000000000000000159fb9b1",
+     "0x000000000000000000000000000000001805c8a4",
+     "0x000000000000000000000000000000001aa9c9cc",
+     "0x000000000000000000000000000000001acf6eee",
+     "0x000000000000000000000000000000001adecf2c",
+     "0x000000000000000000000000000000001bbb4562",
+     "0x000000000000000000000000000000001c6f27a6",
+     "0x000000000000000000000000000000001cf204e4",
+     "0x000000000000000000000000000000001db61e88",
+     "0x0000000000000000000000000000000020872394",
+     "0x0000000000000000000000000000000021d84025",
+     "0x0000000000000000000000000000000022d137a6",
+     "0x000000000000000000000000000000002470b933",
+     "0x0000000000000000000000000000000025191a13",
+     "0x000000000000000000000000000000002850ddf4",
+     "0x00000000000000000000000000000000289ac6c3",
+     "0x000000000000000000000000000000002993bb34",
+     "0x000000000000000000000000000000002b98fc38",
+     "0x000000000000000000000000000000002e030d9b",
+     "0x000000000000000000000000000000002e3b9846",
+     "0x000000000000000000000000000000002e890a08",
+     "0x000000000000000000000000000000002ea76ec4",
+     "0x000000000000000000000000000000002eb75a2c",
+     "0x00000000000000000000000000000000307bb011",
+     "0x00000000000000000000000000000000311078f2",
+     "0x0000000000000000000000000000000031a6c09d",
+     "0x0000000000000000000000000000000032d0504f",
+     "0x00000000000000000000000000000000343e7bec",
+     "0x0000000000000000000000000000000034a1e548",
+     "0x0000000000000000000000000000000036e64f28",
+     "0x000000000000000000000000000000003bc66ed8",
+     "0x0000000000000000000000000000000040b2153b",
+     "0x00000000000000000000000000000000413cbb2a",
+     "0x00000000000000000000000000000000423f62d0",
+     "0x00000000000000000000000000000000441407e9",
+     "0x00000000000000000000000000000000450b2a43",
+     "0x0000000000000000000000000000000046e46cc6",
+     "0x0000000000000000000000000000000047129a8e",
+     "0x00000000000000000000000000000000482927a4",
+     "0x000000000000000000000000000000004ed544ce",
+     "0x000000000000000000000000000000004f508d5e",
+     "0x00000000000000000000000000000000500f14b2",
+     "0x000000000000000000000000000000005047f8f8",
+     "0x0000000000000000000000000000000051d8408e",
+     "0x0000000000000000000000000000000051fd963e",
+     "0x0000000000000000000000000000000052b1bd28",
+     "0x0000000000000000000000000000000053906f8d",
+     "0x0000000000000000000000000000000053b69e20",
+     "0x0000000000000000000000000000000055177485",
+     "0x00000000000000000000000000000000551774b7",
+     "0x000000000000000000000000000000005756ed74",
+     "0x0000000000000000000000000000000059499b68",
+     "0x000000000000000000000000000000005b0a5739",
+     "0x000000000000000000000000000000005cca09f0",
+     "0x000000000000000000000000000000005d650181",
+     "0x000000000000000000000000000000005f7e82ad",
+     "0x0000000000000000000000000000000060d13e35",
+     "0x00000000000000000000000000000000612c7fa7",
+     "0x00000000000000000000000000000000645f1b5c",
+     "0x0000000000000000000000000000000065968801",
+     "0x000000000000000000000000000000006604af6b",
+     "0x0000000000000000000000000000000068576a5b",
+     "0x0000000000000000000000000000000069bc82da",
+     "0x000000000000000000000000000000006ae9a2c6",
+     "0x000000000000000000000000000000006b598b91",
+     "0x000000000000000000000000000000006d5054df",
+     "0x000000000000000000000000000000006e6855f0",
+     "0x000000000000000000000000000000006ef9da60",
+     "0x000000000000000000000000000000006f1951b0",
+     "0x000000000000000000000000000000007001c595",
+     "0x00000000000000000000000000000000730835cf",
+     "0x000000000000000000000000000000007454a90b",
+     "0x0000000000000000000000000000000077574151",
+     "0x00000000000000000000000000000000778bc606",
+     "0x00000000000000000000000000000000794a2985",
+     "0x000000000000000000000000000000007bf2fcc6",
+     "0x000000000000000000000000000000007cacd0cd",
+     "0x000000000000000000000000000000007dadfeb7",
+     "0x000000000000000000000000000000007f48cdbf",
+     "0x00000000000000000000000000000000819d5f21",
+     "0x000000000000000000000000000000008616857c",
+     "0x0000000000000000000000000000000086aeaac3",
+     "0x000000000000000000000000000000008a8710f2",
+     "0x000000000000000000000000000000008a8af357",
+     "0x000000000000000000000000000000008e29de42",
+     "0x000000000000000000000000000000008f38b46a",
+     "0x000000000000000000000000000000008f9ceee3",
+     "0x000000000000000000000000000000008fcfbfc7",
+     "0x000000000000000000000000000000008ffcea95",
+     "0x000000000000000000000000000000009148f90c",
+     "0x00000000000000000000000000000000915f4774",
+     "0x0000000000000000000000000000000092891cbd",
+     "0x000000000000000000000000000000009448faa0",
+     "0x00000000000000000000000000000000949bd039",
+     "0x0000000000000000000000000000000094e84a86",
+     "0x00000000000000000000000000000000952cedaa",
+     "0x00000000000000000000000000000000968cee5f",
+     "0x00000000000000000000000000000000970b46db",
+     "0x0000000000000000000000000000000098d98333",
+     "0x00000000000000000000000000000000994b82ab",
+     "0x000000000000000000000000000000009cc71272",
+     "0x00000000000000000000000000000000a1286040",
+     "0x00000000000000000000000000000000a153b608",
+     "0x00000000000000000000000000000000a20e50a9",
+     "0x00000000000000000000000000000000a2726692",
+     "0x00000000000000000000000000000000a47bbc4c",
+     "0x00000000000000000000000000000000a5fc7b0a",
+     "0x00000000000000000000000000000000a705ceea",
+     "0x00000000000000000000000000000000a8a9aa61",
+     "0x00000000000000000000000000000000a98d1e2f",
+     "0x00000000000000000000000000000000aa33b104",
+     "0x00000000000000000000000000000000aad6874f",
+     "0x00000000000000000000000000000000ac7debdd",
+     "0x00000000000000000000000000000000ad4edb65",
+     "0x00000000000000000000000000000000b1ab18e0",
+     "0x00000000000000000000000000000000b3a0668c",
+     "0x00000000000000000000000000000000b423c47a",
+     "0x00000000000000000000000000000000b5fe9845",
+     "0x00000000000000000000000000000000b6231b1f",
+     "0x00000000000000000000000000000000b6f6e756",
+     "0x00000000000000000000000000000000b7d8350c",
+     "0x00000000000000000000000000000000b82496d6",
+     "0x00000000000000000000000000000000b9e9686f",
+     "0x00000000000000000000000000000000ba4c7482",
+     "0x00000000000000000000000000000000bb970311",
+     "0x00000000000000000000000000000000be23b7c5",
+     "0x00000000000000000000000000000000bf2748d1",
+     "0x00000000000000000000000000000000bf86ec8b",
+     "0x00000000000000000000000000000000c0c36a7e",
+     "0x00000000000000000000000000000000c0d3fe37",
+     "0x00000000000000000000000000000000c1fbbd1f",
+     "0x00000000000000000000000000000000c2382004",
+     "0x00000000000000000000000000000000c2425be3",
+     "0x00000000000000000000000000000000c40c1aab",
+     "0x00000000000000000000000000000000c4aa88df",
+     "0x00000000000000000000000000000000c5ac9420",
+     "0x00000000000000000000000000000000c5e6650e",
+     "0x00000000000000000000000000000000c6257ac3",
+     "0x00000000000000000000000000000000c8325c5c",
+     "0x00000000000000000000000000000000c89bb960",
+     "0x00000000000000000000000000000000c8fa21fd",
+     "0x00000000000000000000000000000000c91ba6e5",
+     "0x00000000000000000000000000000000cbe64873",
+     "0x00000000000000000000000000000000cdf9557e",
+     "0x00000000000000000000000000000000cfece324",
+     "0x00000000000000000000000000000000d198f900",
+     "0x00000000000000000000000000000000d246e0e1",
+     "0x00000000000000000000000000000000d2ef3f28",
+     "0x00000000000000000000000000000000d3de17a5",
+     "0x00000000000000000000000000000000d44f85ce",
+     "0x00000000000000000000000000000000d491ee29",
+     "0x00000000000000000000000000000000d4bd5196",
+     "0x00000000000000000000000000000000d6571fe1",
+     "0x00000000000000000000000000000000d73a53e4",
+     "0x00000000000000000000000000000000d8a566c7",
+     "0x00000000000000000000000000000000d9dd6bf7",
+     "0x00000000000000000000000000000000da64fede",
+     "0x00000000000000000000000000000000dceece67",
+     "0x00000000000000000000000000000000ddf030d4",
+     "0x00000000000000000000000000000000df2cb137",
+     "0x00000000000000000000000000000000dfb6ab4d",
+     "0x00000000000000000000000000000000e0c9d26f",
+     "0x00000000000000000000000000000000e0e44220",
+     "0x00000000000000000000000000000000e2f73266",
+     "0x00000000000000000000000000000000e42a6668",
+     "0x00000000000000000000000000000000e56a9632",
+     "0x00000000000000000000000000000000e5c73eb6",
+     "0x00000000000000000000000000000000eed53333",
+     "0x00000000000000000000000000000000eefd305f",
+     "0x00000000000000000000000000000000efb0e40b",
+     "0x00000000000000000000000000000000f1469aaa",
+     "0x00000000000000000000000000000000f379ff90",
+     "0x00000000000000000000000000000000f6e01312",
+     "0x00000000000000000000000000000000f759d1fc",
+     "0x00000000000000000000000000000000f7eed20d",
+     "0x00000000000000000000000000000000f87aee91",
+     "0x00000000000000000000000000000000f92f6096",
+     "0x00000000000000000000000000000000fb3ae5fa",
+     "0x00000000000000000000000000000000fb93cee6",
+     "0x00000000000000000000000000000000ff561794",
+     "0x03bc731ffb162cdd7b98d3c6542bfc291126075d",
+     "0x03dfbbe0ac4e7bcdafd08ed41a400326b77d8c80",
+     "0x045477bf65aef6f4f2386ad0164579e48381cc74",
+     "0x0594134df3f171a354d9c85ebd65b7a6148f6d09",
+     "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+     "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+     "0x072f979c2cac8e1391b0162a87fee094bf8744a0",
+     "0x0b5fb4031cae9163db10b169ee72685f0edc8545",
+     "0x0c3260af4b8f13a69c4c2dfb84fd667890cdfa14",
+     "0x0e6a64a2b58a6693a531e6c555f3a5d042eea844",
+     "0x0e6e67ba88e7b5d9b67636a215c76779b948de79",
+     "0x0f17206447090e464c277571124dd2688e48aea9",
+     "0x116f00968269b7bfbad4109ce591d6e74c0601d4",
+     "0x117cc2133c37b721f49de2a7a74833232b3b4c0c",
+     "0x12e3c047bf9aecaf9ddc98c05c31bfd1dd043993",
+     "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+     "0x141eea040c2250eec0314e336975e81f85f6585e",
+     "0x156e175dd063a8ce274c50654ef40e0032b3fbcf",
+     "0x15cd20759ce7f3285c29a319de2d1a2e098c6f43",
+     "0x1af6446f07eb1d97c546afc8c9544cbdf3ad5137",
+     "0x1b0e319c6a659f002271b69db8a7df2f911c153e",
+     "0x1c690498150252222c275a5ced69d3a6b1f52d5e",
+     "0x1c6c8cadbe02e19129c39ddb92281ce4c0bf206b",
+     "0x1cdad396db64bda184d5182a97dd9b3c62100b7d",
+     "0x1d11f0496982706c5e14a514d4e79f2e6bde4516",
+     "0x1eebee7f74517e0279dfb09d25b0407beec3fdd6",
+     "0x209b73908e92ae021826ed79609845451ecba2ce",
+     "0x22efec4919baf55f360e0edee4abeb26de4971eb",
+     "0x232b8ed6377be97813853b0ac104c4cda8378d1b",
+     "0x237c16d66590f67b886d978acd362eaead8b18c7",
+     "0x25c288e6d899b9bc30160965ad9644c67e73be0c",
+     "0x26dcbfb34fc83cabd6990f449674efdc6097ff85",
+     "0x2778c5024d5ca2cdb0f8ead671ffc69963adcd9c",
+     "0x27c71df6a64fb476468edf256cf72c038bab5b67",
+     "0x27c99fbde9d0d2aa4f4bfb4943f237843ddf6958",
+     "0x282e87451e10fa6679bc7d76c69be44cd3fc777c",
+     "0x284358abc07f9359f19f4b5b4ac91901be2597ba",
+     "0x285b231728c7e4333799183df1094d775246a535",
+     "0x28babd556b60e53663b8615036479a29c2cdd1bf",
+     "0x2a045cf1c49c61c166c036d2f06fa2d2d984f765",
+     "0x2d427692e928fa156ec22acfabafa0447c5805b7",
+     "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+     "0x2f62fc9fabb470c690f141c28340ed832bb27020",
+     "0x3139d77ace0cbaa5bdfd38bd1f1911a794af0b0e",
+     "0x319724394d3a0e3669269846abe664cd621f9f6a",
+     "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+     "0x329fcaceb9ad6f9580dd5f643fed0646900d043c",
+     "0x348be1a8663f15edde5cdf8a96bb69078f7ab6fd",
+     "0x36046893810a7e7fce501229d57dc3fc8c8716d0",
+     "0x373c06c4f7bde527d7dae4ba169e42b55e393ced",
+     "0x379ec4f7c378f34a1b47e4f3cbebcbac3e8e9f15",
+     "0x396118bdfb181e6240e74d243f266b061c0edc3d",
+     "0x39ec44bee4f6a116c6f9b8de566848a985c53c60",
+     "0x3b14c39e89d60d627b42a1a4ca45b5bb45fc12e2",
+     "0x3f390c5c24628ac7c489515402235fead71d1913",
+     "0x3fb8976980d486084b2eb4a404bd12e72823958f",
+     "0x408c14038a04f7bd235329e26d2bf569ee20e250",
+     "0x40e7a279850e443f582059ae5dc1c3b6563e6395",
+     "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+     "0x4189f0c66ebbb0bfef1c31f763131361ef32f77c",
+     "0x41f4267525a8aff329540ef24fd83d9044758b33",
+     "0x425eefdcf05ed6526c3ce61af99429a228a6d596",
+     "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+     "0x44c4f142009036cf477ed2d09932051843137cf1",
+     "0x44f6d488021f8233b9416294d1fe9b1fee28382d",
+     "0x45c3c877c15e6ba2ebb19ea114ea508d14c1af2e",
+     "0x47f93d52cbec7c6d2cfc080e154002370a60daea",
+     "0x48961813349333209994750ffa89b3c5c22ec969",
+     "0x48d60243c66437c6ac3c2495be94747aed5dfe25",
+     "0x48e39e56acdba37b09020c0b734a613c9a2f100a",
+     "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+     "0x4a1166a659a55625345e9515b32adecea5547c38",
+     "0x4d21483a44bf67a86b77e3da301411880797d452",
+     "0x4d67253bc223e6b0e104f1084c1fb2b669ddc41b",
+     "0x4e62068525ab11fe768e29dfd00ef909b9803016",
+     "0x4ea005168d7f09a7a0ba9d1def21a479950e44c2",
+     "0x521cf887e6531c6f667b5bc4d896e5d9bfe8eb2e",
+     "0x52d50d0280ad1054b43f052bd70a49a212a1b128",
+     "0x558378e000d634a36593e338ebacdd6207640efe",
+     "0x561e2a49212b7ccf47f2744ccb83e200722fadbc",
+     "0x56d23bee5f41a7120170b0c603dae30128e460e9",
+     "0x57b0030166db0c31690d1a5aa167e2e26e2c29a4",
+     "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+     "0x59818904ab4ce163b3ce4ffb64f2d6ca02c434b4",
+     "0x59dd09d4900c2e4b5f75b7c0d4e6796fcc234cb1",
+     "0x5b97476b922f3305131b8f0b9d333172e87f4aae",
+     "0x5c90450bbb4273d7b2f17cf6917aeb237a569679",
+     "0x5e81213613b6b86eab4c6c50d718d34359459786",
+     "0x5f10a1c971b69e47e059e1dc91901b59b3fb49c3",
+     "0x5f604fba1162193a4388a5dfa56f556f3e133cc2",
+     "0x6006ed4b2f94110851ff7509d97d034f0eed9226",
+     "0x62200915e7deab1ec7f79fb246dadbb80eacddd0",
+     "0x62cc8f9b5f56a33c9c8a60c8b92779f523c4e984",
+     "0x62fd0668e10d8b72339be2dcf7643001688ff13b",
+     "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+     "0x63b814ddbd6bf339f25fed8c36158a008d5b373e",
+     "0x63d5a3b6939a33f1e75d8bcd85759858239600db",
+     "0x6652edf64ba3731c4f2d3ce821a0fb1f1f6b482a",
+     "0x6b22a786baa607d76728168703a39ea9c99f2cd0",
+     "0x6e3dfd9f7e1649baa14d25cac18c94d62db10a54",
+     "0x7066a64c24e4206cd62e83bf198c1e7eb361f51e",
+     "0x748c32c3ca24edf31ea597db1f3d330a7a6da3dc",
+     "0x756bc80af765c82da966a788858d65adf14f3793",
+     "0x75742c18bc1f1c5c5f448f4c9d9c6f66dafaaa38",
+     "0x75a9c76ef439e2c7c2e5a34ab105ecfe3766431c",
+     "0x77e655e37f4d913fb9540e0d541d824171a60e81",
+     "0x7c04e6a3368f2a1de3874f0e80d2e0a1a9915da6",
+     "0x7c148f74ac7445d1f28366b7fcdc6792a9fcd0cf",
+     "0x7c38c00c30bee9378381e7b6135d7283356d71b1",
+     "0x7dc013eb55e436f30d7ed1afe4e36d6e45e3c3f7",
+     "0x7f0abef0c07280f82c6a08ead09ded6bae2c13fc",
+     "0x7fd06a4d81ccfa3f351394e144d5191874c31313",
+     "0x8005d266423c7ea827372c9c864491e5786600ea",
+     "0x80901d846d5d7b030f26b480776ee3b29374c2ae",
+     "0x810c12d3a554bc47fd39597fe3b3aac4941f50ef",
+     "0x820abedff239034956b7a9d2f0a331f9f075eb4c",
+     "0x822cc93ffd030293e9842c30bbd678f530701867",
+     "0x82da4646242e1d962e96e932269dc644c94a9caa",
+     "0x84cab63bc87912e71ad199ff14a0ba45de68fef8",
+     "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+     "0x874cf94aa8ec88fd9560094dd065f2fb3e41fc2f",
+     "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+     "0x89776d4cd68193597a2fc132cfac1fde36ccea8a",
+     "0x8b2f88497f15a18e9d4ffa1a8ffb8538399ae774",
+     "0x8cf07c5a878945185d327aaa6e33faa95f95e7bf",
+     "0x8ef20885f94e3d9bc7eb3080279188bd5ed7c08c",
+     "0x8ff63eaeee3fe54ba450c4f5538064ec5a893aef",
+     "0x92ef19e82bd8ff36661de838d5eae7e5cef0effe",
+     "0x92f9f459f1a9a5ad266b182be7bffd1c6c666894",
+     "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+     "0x93dbb1d2dc5d63f4abacff30485273f538df68ac",
+     "0x941ae714ec6d8130c7b75d67160ca08f1e7d11dd",
+     "0x943a29e7ae51a4798823ca9eed2ed533b2a22c72",
+     "0x94b8aae43a1ccc08aa64b7d1f29b4d920af4a0c9",
+     "0x95052ddcd5dc25641657424a8cf04834997e1730",
+     "0x9651342cea770ae9a2969ba2a52611523146aef9",
+     "0x96b933c74ecb4a0926b9210cef7b743ef46be2e9",
+     "0x980dcf6766fa79f5cf0c4aadb3ab477ff15a9619",
+     "0x98e75885157c80992a8d41b696d8c9c6fb30a926",
+     "0x99d9d8663545151603863c5acbd6fc3218899009",
+     "0x9ab02ead789b6903c3c44d0ed32f9c707cdf12fd",
+     "0x9b23573b156b52565012f5ce02cdf60afbaa70be",
+     "0x9d9c6684f596f66a64c030b93a886d51fd4d7931",
+     "0x9e7abd3c9139d14e4c86dce0e455aab7a0c2fb3e",
+     "0x9ece29a4a2397c0a35fb5fa8ee2b9509130a98cc",
+     "0xa0df4ee0fff975306345875e3548fcc519577a11",
+     "0xa249baf1063af884807c1e1400aef7784836917e",
+     "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+     "0xa3a468a452940b7d6b69991207b508c609a98ef2",
+     "0xa48f22a46c0f1c46ca7d111cb6c137c271987180",
+     "0xa4f319104089fe321dc8093c6e707d4fe190a988",
+     "0xa5d4968421ba94814be3b136b15cf422101ac1a3",
+     "0xa8eb3bccbf2017ee7cbfb652eb51cf2e1b153289",
+     "0xa994d3684e8400a6c8078226925779fdee682dd9",
+     "0xaa4d64474c172010ab57719cb9951e6142a100d3",
+     "0xacef2e09adb47ad6abebad9ff06689e60615c2b6",
+     "0xad25ac6c84d497db898fa1e8387bf6af3532a1c4",
+     "0xad622320e520de39e72d41ef07438c3fd3354875",
+     "0xae517a2903e68bd929dfd15be875f8369d53e94a",
+     "0xaea445c5f3db1a462998ccc422a875a361ee5d99",
+     "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+     "0xb039597ed45cba7b6e2fb9e8be51802969cee5be",
+     "0xb0992820e760d836549ba69bc7598b4af75dee03",
+     "0xb1969f6604ca1ae7a2cd3f1827876e914594ca2d",
+     "0xb1bf26c1d20ff267a4f93550d1e0d06ac40a114b",
+     "0xb1cc0ec7db69cf43539119814df40071b9d61793",
+     "0xb265810950ba6c5c0ff821c9963014a56fd8bffb",
+     "0xb334c5ce741b80b5b671f47f5c269cb193fe8e24",
+     "0xb4106147e8cce40b7d46124090d373a71b70f87d",
+     "0xb853bc83a753342a4f8320ea680b4b1e84118d21",
+     "0xb8dbf92f9741c9ac1c32115e78581f23509916fd",
+     "0xb90a19ff0af67f7779aff50a882a9cff42446400",
+     "0xba0cab75495255d0cb58e22b648bfed4ecd1f47e",
+     "0xbbd09f72b025360fee5c928053dca6248d35be54",
+     "0xbe274710bf3d9567e1b290ef6a5f9f90ca016fd8",
+     "0xbe6702d7b70315376dc48a3293f24f0982f86386",
+     "0xbef75684c43c4ea7bd18dd532a2244674ee8b926",
+     "0xbf449977089c718c004a66c554b26b94ef3ad4de",
+     "0xc01aa1fecec0605b13bc84874ff7256c0f5f562a",
+     "0xc02f12b9fe9e707079ec0d546f3050d3f6c1f8bd",
+     "0xc0d6457c16cc70d6790dd43521c899c87ce02f35",
+     "0xc27dbd474af5181c5a8777903690d8d262d12648",
+     "0xc583c60aef9dc401da72cec1b404743a93cea1cc",
+     "0xc6cbad1016b38b797610c25e1dc7d95988b1f362",
+     "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+     "0xc93f4d80e268ab922e871bd169156c3cc41894e6",
+     "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+     "0xcbb95bbf36099d34da091dc6fa6f49efa257cee3",
+     "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+     "0xcef9027c7d6985b85f0ba431125073529a947a68",
+     "0xcf364ea52787e289de6f32077834056e3e70d6a8",
+     "0xcf6b2d875361be807eafa57458c80f28521f9333",
+     "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+     "0xd5a1508ced74c084ebf3cbe853e2c968fb2a651c",
+     "0xd5f3879160bc7c32ebb4dc785f8a4f505888de68",
+     "0xd63abb2c13d7a8421a8017a712802053568e3c1d",
+     "0xd917b029c761d264c6a312bbbcda868658ef86a6",
+     "0xd95b44124e475743a7589e68f3d74008a5536d44",
+     "0xdd356aa38f40a7b7076755ac854b6fbb1f0d305b",
+     "0xddf2266b79abf0b48898959b0ed6e6adf512be74",
+     "0xdf0992e440dd0be65bd8439b609d6d4366bf1cb5",
+     "0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8",
+     "0xe1b3aabcafad1c94708dc1367dcff8aa4407487c",
+     "0xe1d87b116ba0fe898998f1d140339d1fa1e09705",
+     "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+     "0xea72ecca2d0f6bfa1394dbbcff85b52cd4233931",
+     "0xeaf2512dfc1beac608f8794b3793cd4e02894aa6",
+     "0xeb30663bdff0622ef4e4e5cbb4e975f19f33f51d",
+     "0xeb61c0ed490a367d4e3631ccf8a74b3bfc7e775d",
+     "0xec262a75e413fafd0df80480274532c79d42da09",
+     "0xefdf54610b62a7753ec30bdc380847c12d32e1d1",
+     "0xf0ab0c93be6f41369d302e55db1a96b3c430212d",
+     "0xf0c4bf4c582cb3836e98394b1d4e7b7281101be8",
+     "0xf1953dab6fad537488d5a022361ffaa8b4c95ec6",
+     "0xf23250dac154d05bb671cb0d0ebef3c635c79ce2",
+     "0xf52597345a8edf418bc4071b4a35112472277d3e",
+     "0xf53f66751b1eff985311b693531e3290f600c410",
+     "0xf543967eebb6f1917992ef0e68de63ab07a5a0da",
+     "0xf6290b5e7c26502e2da514c31509849718ea76a5",
+     "0xf6589f11bc40b669e584073f428b05562f568733",
+     "0xf6f373a037c30f0e5010d854385ca89185ae638b",
+     "0xf7181b63fdb858558a74ba96bc42732684cd7965",
+     "0xf9b46d3d1b22199d4d1025a9cedb540a33f1a2d5",
+     "0xfa78c12e6488814a0262e4e802749a4a737d5fb7",
+     "0xfaf9cb261b5fcc1f404bb10cd39c5c6c1974e612",
+     "0xfb133fa4b7b385802b693a293606682df47109a3",
+     "0xfb2664f07b6aadd29ea7a59d8859b1aeb8645cda",
+     "0xfde6b5d9bb419b10c23268c74e369abff39c0460",
+     "0xff080c8ce2e5feadaca0da81314ae59d232d4afd"
+    ]
+   },
+   "url": {
+    "in_source_not_archive": [
+     "https://robinhoodchain.blockscout.com/address/0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+     "https://robinhoodchain.blockscout.com/address/0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168"
+    ],
+    "in_archive_not_source": []
+   },
+   "num": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "18 decimals"
+    ]
+   }
+  },
+  "ratio": 0.0641,
+  "sent_only_source": [
+   "each symbol links to the token's contract on blockscout.",
+   "robinhood chain token contracts token smart contracts the following contracts are deployed on robinhood chain.",
+   "symbol contract weth usdg stock tokens & tokenized etfs import { assetstable } from '../../../components/assetstable' the table below is generated live from the on chain asset registry.",
+   "use the addresses on this page to identify the canonical robinhood stock token for each underlying \u2014 a token with a matching name/ticker but a different contract address is not a robinhood stock token."
+  ],
+  "sent_only_archive": [
+   "american depositary shares \u2022 robinhood token 1.000000000000 4,111.0000 sls sellas life sciences \u2022 robinhood token 1.000000000000 241.0000 slv ishares silver trust \u2022 robinhood token 1.000000000000 15,412.8010 smci super micro computer \u2022 robinhood token 1.000000000000 493.7520 smh vaneck semiconductor etf \u2022 robinhood token 1.000000000000 15.8180 smr nuscale power \u2022 robinhood token 1.000000000000 1,661.3360 snap snap \u2022 robinhood token 1.000000000000 60,532.4130 sndk sandisk corporation \u2022 robinhood token 1.000000000000 1,045.1430 snow snowflake \u2022 robinhood token 1.000000000000 52.6470 sofi sofi technologies \u2022 robinhood token 1.000000000000 5,949.2350 soun soundhound ai \u2022 robinhood token 1.000000000000 20,982.7100 soxx ishares semiconductor etf \u2022 robinhood token 1.000000000000 53.9320 spcx space exploration technologies corp.",
+   "base tokens symbol contract notes weth canonical wrapped eth on robinhood chain (l2 weth) usdg global dollar stablecoin (paxos) stock tokens and tokenized etfs (194 active) all are erc 20, 18 decimals, deployed on robinhood chain (chain id 4663), status .",
+   "beauty \u2022 robinhood token 1.000000000000 326.2170 ewt ishares msci taiwan capped etf \u2022 robinhood token 1.000000000000 26.1990 ewy ishares msci south korea fund \u2022 robinhood token 1.000000000000 31.1880 f ford motor \u2022 robinhood token 1.000000000000 5,411.9290 fico fair isaac \u2022 robinhood token 1.000000000000 4.8350 fig figma \u2022 robinhood token 1.000000000000 9,931.9390 fisv fiserv \u2022 robinhood token 1.000000000000 153.8640 fix comfort systems \u2022 robinhood token 1.000000000000 4.3210 flnc fluence energy \u2022 robinhood token 1.000000000000 1,151.6050 fly firefly aerospace inc.",
+   "class a common stock \u2022 robinhood token 1.000000000000 167.6410 nflx netflix \u2022 robinhood token 1.000000000000 4,451.5590 nne nano nuclear energy \u2022 robinhood token 1.000000000000 1,275.5740 now servicenow \u2022 robinhood token 1.000000000000 203.7040 nu nu \u2022 robinhood token 1.000000000000 8,049.8960 nvda nvidia \u2022 robinhood token 1.000000000000 63,052.2860 nvts navitas semiconductor \u2022 robinhood token 1.000000000000 400.7200 oklo oklo \u2022 robinhood token 1.000000000000 188.3410 on on semiconductor \u2022 robinhood token 1.000000000000 405.2280 onto onto innovation \u2022 robinhood token 1.000000000000 6.9820 orcl oracle \u2022 robinhood token 1.002210914971 3,666.1462 oust ouster \u2022 robinhood token 1.000000000000 128.1690 p everpure \u2022 robinhood token 1.000000000000 280.5610 panw palo alto networks \u2022 robinhood token 1.000000000000 16.4080 path uipath \u2022 robinhood token 1.000000000000 667.4300 peng penguin solutions \u2022 robinhood token 1.000000000000 1,389.6700 pfe pfizer \u2022 robinhood token 1.000000000000 5,178.7510 pl planet labs \u2022 robinhood token 1.000000000000 513.8700 pltr palantir technologies \u2022 robinhood token 1.000000000000 7,344.1200 poet poet technologies \u2022 robinhood token 1.000000000000 820.5200 powl powell industries \u2022 robinhood token 1.000000000000 29.3580 pr permian resources \u2022 robinhood token 1.000000000000 201.8770 pwr quanta \u2022 robinhood token 1.000000000000 2.3150 qbts d wave quantum inc.",
+   "class a common stock \u2022 robinhood token 1.000000000000 42,082.7440 spmo invesco s&p 500 momentum etf \u2022 robinhood token 1.000000000000 168.8580 spy spdr s&p 500 etf trust \u2022 robinhood token 1.000000000000 15,450.7170 te t1 energy \u2022 robinhood token 1.000000000000 4,284.1370 team atlassian corporation \u2022 robinhood token 1.000000000000 67.6060 tem tempus ai \u2022 robinhood token 1.000000000000 144.6970 ter teradyne \u2022 robinhood token 1.000000000000 27.9650 tsem tower semiconductor \u2022 robinhood token 1.000000000000 17.6930 tsla tesla \u2022 robinhood token 1.000000000000 7,943.3730 tsm taiwan semiconductor manufacturing \u2022 robinhood token 1.000000000000 3,509.7840 ttd trade desk \u2022 robinhood token 1.000000000000 1,963.6990 ttwo take two interactive software \u2022 robinhood token 1.000000000000 7,143.2680 umc united microelectronics \u2022 robinhood token 1.000000000000 231.0300 unh unitedhealth \u2022 robinhood token 1.000000000000 109.3070 ups ups \u2022 robinhood token 1.000000000000 900.6760 usar usa rare earth \u2022 robinhood token 1.000000000000 31,712.2420 uso united states oil fund \u2022 robinhood token 1.000000000000 7,146.4990 vicr vicor \u2022 robinhood token 1.000000000000 20.2760 vrt vertiv \u2022 robinhood token 1.000000000000 23.4770 vsat viasat \u2022 robinhood token 1.000000000000 81.7240 vst vistra \u2022 robinhood token 1.000000000000 121.4100 vti vanguard morningstar total stock market etf \u2022 robinhood token 1.000000000000 7.7270 wday workday \u2022 robinhood token 1.000000000000 47.4490 wdc western digital \u2022 robinhood token 1.000000000000 31.4580 wulf terawulf \u2022 robinhood token 1.000000000000 1,066.4410 wyfi whitefiber, inc.",
+   "common stock \u2022 robinhood token 1.000000000000 1,090.4500 qcom qualcomm \u2022 robinhood token 1.000000000000 116.5290 qqq invesco qqq \u2022 robinhood token 1.000000000000 3,423.4730 qubt quantum computing \u2022 robinhood token 1.000000000000 66,038.2620 rblx roblox \u2022 robinhood token 1.000000000000 13,344.2620 rcat red cat \u2022 robinhood token 1.000000000000 19,617.7900 rddt reddit \u2022 robinhood token 1.000000000000 12,030.6120 rdw redwire \u2022 robinhood token 1.000000000000 1,034.0110 rgti rigetti computing \u2022 robinhood token 1.000000000000 762.2550 rivn rivian automotive \u2022 robinhood token 1.000000000000 8,363.1490 rklb rocket lab corporation \u2022 robinhood token 1.000000000000 848.5790 run sunrun \u2022 robinhood token 1.000000000000 3,878.8670 sats echostar \u2022 robinhood token 1.000000000000 0.1030 schd schwab us dividend equity etf \u2022 robinhood token 1.000000000000 80.5390 sgov ishares 0 3 month treasury bond \u2022 robinhood token 1.005101770003 12,940.6719 shop shopify \u2022 robinhood token 1.000000000000 147.1800 shy ishares 1 3 year treasury bond etf \u2022 robinhood token 1.000000000000 18.2680 simo silicon motion \u2022 robinhood token 1.000000000000 15.3910 skhy sk hynix inc.",
+   "is the chainlink price feed proxy; blank means no chainlink feed was published for that token at the time of capture.",
+   "is the on chain (erc 8056), 1.0 = one token represents one underlying share.",
+   "isin and asset uid the rest registry also returns an isin and a 32 byte asset (matching the on chain ), stable across chains.",
+   "symbol isin uid aaoi us03823u1025 aapl us0378331005 abcl ca00288u1066 adbe us00724f1012 aehr us00760j1088 aeis us0079731008 alab us04626a1034 amat us0382221051 amba kyg037ax1015 amc us00165c3025 amd us0079031078 amkr us0316521006 amzn us0231351067 anet us0404132054 apld us0381692070 app us03831w1080 asml usn070592100 asts us00217d1000 aur us0517741072 avav us0080731088 avgo us11135f1012 axon us05464c1018 axti us00246w1036 ba us0970231058 baba us01609w1027 bb ca09228f1036 be us0937121079 bnd us9219378356 bull kyg9572d1034 cbrs us15675d1037 ccl bmg2004j1036 ceg us21037t1097 celh us15118v2079 cien us1717793095 clov us18914f1030 cls ca15101q2071 clsk us18452b2097 cohr us19247g1076 coin us19260q1076 cost us22160k1051 crcl us1725731079 crdo kyg254571055 crm us79466l3024 crwd us22788c1053 crwv us21873s1087 csco us17275r1023 ctsh us1924461023 cvna us1468691027 ddog us23804l1035 dell us24703l2025 djt us25400q1058 docn us25402d1028 elf us26856l1035 ewt us46434g7723 ewy us4642867729 f us3453708600 fico us3032501047 fig us3168411052 fisv us3377381088 fix us1999081045 flnc us34379v1035 fly us31816x1063 ftnt us34959e1091 futu us36118l1061 ge us3696043013 gev us36828a1016 gld us78463v1070 glw us2193501051 glxy us36317j2096 gme us36467w1099 googl us02079k3059 hii us4464131063 hims us4330001060 hpe us42824c1099 hwm us4432011082 ibm us4592001014 ibrx us45256x1037 inda us46429b5984 infq us45676k1034 inod us4576422053 intc us4581401001 intu us4612021034 ionq us46222l1089 iren au0000185993 jbl us4663131039 jnj us4781601046 joby kyg651631007 klac us4824801009 kss us5002551043 ktos us50077b2079 lhx us5024311095 lite us55024u1097 lly us5324571083 lmt us5398301094 lrcx us5128073062 lulu us5500211090 lunr us46125a1007 mdb us60937p1066 meta us30303m1027 mod us6078281002 mpwr us6098391054 mrna us60770k1079 mrvl us5738741041 msft us5949181045 mstr us5949724083 mtsi us55405y1001 mu us5951121038 mxl us57776j1007 navn us6391931010 nbis nl0009805522 net us18915m1071 nflx us64110l1061 nne us63010h1086 now us81762p1021 nu kyg6683n1034 nvda us67066g1040 nvts us63942x1063 oklo us02156v1098 on us6821891057 onto us6833441057 orcl us68389x1054 oust us68989m2026 p us74624m1027 panw us6974351057 path us90364p1057 peng us7069151055 pfe us7170811035 pl us72703x1063 pltr us69608a1088 poet ca73044w3021 powl us7391281067 pr us71424f1057 pwr us74762e1029 qbts us26740w1099 qcom us7475251036 qqq us46090e1038 qubt us74766w1080 rblx us7710491033 rcat us75644t1007 rddt us75734b1008 rdw us75776w1036 rgti us76655k1034 rivn us76954a1034 rklb us7731211089 run us86771w1053 sats us2787681061 schd us8085247976 sgov us46436e7186 shop ca82509l1076 shy us4642874576 simo us82706c1080 skhy us78392b2060 sls us81642t2096 slv us46428q1094 smci us86800u3023 smh us92189f6768 smr us67079k1007 snap us83304a1060 sndk us80004c2008 snow us8334451098 sofi us83406f1021 soun us8361001071 soxx us4642875235 spcx us84615q1031 spmo us46138e3392 spy us78462f1030 te us35834f1049 team us0494681010 tem us88023b1035 ter us8807701029 tsem il0010823792 tsla us88160r1014 tsm us8740391003 ttd us88339j1051 ttwo us8740541094 umc us9108734057 unh us91324p1021 ups us9113121068 usar us91733p1075 uso us91232n2071 vicr us9258151029 vrt us92537n1081 vsat us92552v1008 vst us92840m1027 vti us9229087690 wday us98138h1014 wdc us9581021055 wulf us88080t1043 wyfi kyg961151035 xlk us81369y8030 xndu ca98390r1029 xom us30233q1085 zm us98980l1017 zs us98980g1022",
+   "symbol name contract multiplier total supply chainlink feed proxy aaoi applied optoelectronics \u2022 robinhood token 1.000000000000 137.7070 aapl apple \u2022 robinhood token 1.000566080061 12,562.3966 abcl abcellera biologics \u2022 robinhood token 1.000000000000 317.8150 adbe adobe \u2022 robinhood token 1.000000000000 175.9300 aehr aehr \u2022 robinhood token 1.000000000000 74.4390 aeis advanced energy \u2022 robinhood token 1.000000000000 15.1120 alab astera labs, inc.",
+   "tokens with multiplier != 1.0 aapl (1.000566080), asml (1.000101323), ccl (1.021486445), cost (1.000612040), crwd (4.000000000), dell (1.000063709), mu (1.000074823), orcl (1.002210915), sgov (1.005101770).",
+   "total supply is the raw divided by 1e18 at block 52,437,900 on 2026 09 02.",
+   "\u2022 robinhood token 1.000000000000 11,851.2690 mtsi macom \u2022 robinhood token 1.000000000000 17.1910 mu micron technology \u2022 robinhood token 1.000074823219 3,093.6552 mxl maxlinear \u2022 robinhood token 1.000000000000 251.1950 navn navan \u2022 robinhood token 1.000000000000 200.3910 nbis nebius group \u2022 robinhood token 1.000000000000 56.8300 net cloudflare, inc.",
+   "\u2022 robinhood token 1.000000000000 18.1970 jnj johnson & johnson \u2022 robinhood token 1.000000000000 618.6510 joby joby aviation \u2022 robinhood token 1.000000000000 2,471.8160 klac kla \u2022 robinhood token 1.000000000000 12.8870 kss kohls corporation \u2022 robinhood token 1.000000000000 2,542.8430 ktos kratos defense & security solutions \u2022 robinhood token 1.000000000000 100.6820 lhx l3harris \u2022 robinhood token 1.000000000000 18.6060 lite lumentum \u2022 robinhood token 1.000000000000 17.2330 lly eli lilly \u2022 robinhood token 1.000000000000 435.6760 lmt lockheed \u2022 robinhood token 1.000000000000 104.2270 lrcx lam research corp \u2022 robinhood token 1.000000000000 33.7210 lulu lululemon \u2022 robinhood token 1.000000000000 1,593.4310 lunr intuitive machines \u2022 robinhood token 1.000000000000 975.6650 mdb mongodb \u2022 robinhood token 1.000000000000 16.2200 meta meta platforms \u2022 robinhood token 1.000000000000 2,113.8570 mod modine \u2022 robinhood token 1.000000000000 28.8010 mpwr monolithic power systems \u2022 robinhood token 1.000000000000 3.1270 mrna moderna \u2022 robinhood token 1.000000000000 2,252.4250 mrvl marvell technology \u2022 robinhood token 1.000000000000 683.5270 msft microsoft \u2022 robinhood token 1.000000000000 3,314.6800 mstr strategy inc.",
+   "\u2022 robinhood token 1.000000000000 24.6110 amat applied materials \u2022 robinhood token 1.000000000000 27.9930 amba ambarella \u2022 robinhood token 1.000000000000 178.3490 amc amc entertainment \u2022 robinhood token 1.000000000000 116,206.9050 amd amd \u2022 robinhood token 1.000000000000 3,340.7970 amkr amkor technology \u2022 robinhood token 1.000000000000 158.1030 amzn amazon \u2022 robinhood token 1.000000000000 7,254.1270 anet arista \u2022 robinhood token 1.000000000000 27.6340 apld applied digital \u2022 robinhood token 1.000000000000 1,172.0600 app applovin \u2022 robinhood token 1.000000000000 87.6600 asml asml holding nv \u2022 robinhood token 1.000101323251 72.9429 asts ast spacemobile \u2022 robinhood token 1.000000000000 1,511.2120 aur aurora innovation \u2022 robinhood token 1.000000000000 1,011.8040 avav aerovironment \u2022 robinhood token 1.000000000000 54.0680 avgo broadcom \u2022 robinhood token 1.000000000000 64.5370 axon axon \u2022 robinhood token 1.000000000000 11.6410 axti axt \u2022 robinhood token 1.000000000000 97.5760 ba boeing \u2022 robinhood token 1.000000000000 748.7410 baba alibaba \u2022 robinhood token 1.000000000000 2,420.3520 bb blackberry \u2022 robinhood token 1.000000000000 43,300.1340 be bloom energy \u2022 robinhood token 1.000000000000 2,284.9080 bnd vanguard total bond market etf \u2022 robinhood token 1.000000000000 0.0000 bull webull \u2022 robinhood token 1.000000000000 9,092.8330 cbrs cerebras systems \u2022 robinhood token 1.000000000000 28.5560 ccl carnival corporation \u2022 robinhood token 1.021486444855 1,739.4210 ceg constellation energy \u2022 robinhood token 1.000000000000 35.5700 celh celsius \u2022 robinhood token 1.000000000000 602.3320 cien ciena \u2022 robinhood token 1.000000000000 21.6430 clov clover health investments \u2022 robinhood token 1.000000000000 3,521.4450 cls celestica \u2022 robinhood token 1.000000000000 21.1960 clsk cleanspark \u2022 robinhood token 1.000000000000 949.7830 cohr coherent \u2022 robinhood token 1.000000000000 24.9880 coin coinbase \u2022 robinhood token 1.000000000000 6,814.3900 cost costco \u2022 robinhood token 1.000612040296 560.7144 crcl circle internet group \u2022 robinhood token 1.000000000000 11,680.2560 crdo credo technology group \u2022 robinhood token 1.000000000000 30.3740 crm salesforce \u2022 robinhood token 1.000000000000 27.3630 crwd crowdstrike holdings \u2022 robinhood token 4.000000000000 17.0057 crwv coreweave \u2022 robinhood token 1.000000000000 6,574.3280 csco cisco systems \u2022 robinhood token 1.000000000000 84.7970 ctsh cognizant \u2022 robinhood token 1.000000000000 52.1250 cvna carvana \u2022 robinhood token 1.000000000000 146.4280 ddog datadog \u2022 robinhood token 1.000000000000 201.4980 dell dell \u2022 robinhood token 1.000063708620 591.8165 djt trump media & technology group \u2022 robinhood token 1.000000000000 94,197.2060 docn digitalocean \u2022 robinhood token 1.000000000000 59.0290 elf e.l.f.",
+   "\u2022 robinhood token 1.000000000000 30,469.0000 xlk state street technology select sector spdr etf \u2022 robinhood token 1.000000000000 60.5950 xndu xanadu quantum \u2022 robinhood token 1.000000000000 389.0000 xom exxonmobil holdings corporation \u2022 robinhood token 1.000000000000 247.2270 zm zoom \u2022 robinhood token 1.000000000000 479.7260 zs zscaler \u2022 robinhood token 1.000000000000 38.1180 tokens with a chainlink feed 35 of 194.",
+   "\u2022 robinhood token 1.000000000000 756.3370 ftnt fortinet \u2022 robinhood token 1.000000000000 63.4820 futu futu holdings \u2022 robinhood token 1.000000000000 260.5600 ge general electric \u2022 robinhood token 1.000000000000 216.7190 gev ge vernova \u2022 robinhood token 1.000000000000 2.9020 gld spdr gold trust \u2022 robinhood token 1.000000000000 9,064.3150 glw corning \u2022 robinhood token 1.000000000000 54.6510 glxy galaxy digital inc.",
+   "\u2022 robinhood token 1.000000000000 782.2520 gme gamestop \u2022 robinhood token 1.000000000000 101,721.5930 googl alphabet class a \u2022 robinhood token 1.000000000000 5,208.3340 hii huntington ingalls \u2022 robinhood token 1.000000000000 11.3950 hims hims & hers health \u2022 robinhood token 1.000000000000 81,496.3500 hpe hp enterprise \u2022 robinhood token 1.000000000000 929.1360 hwm howmet aerospace \u2022 robinhood token 1.000000000000 17.8050 ibm ibm \u2022 robinhood token 1.000000000000 512.0280 ibrx immunitybio, \u2022 robinhood token 1.000000000000 3,001.9280 inda ishares msci india etf \u2022 robinhood token 1.000000000000 341.4630 infq infleqtion \u2022 robinhood token 1.000000000000 1,830.6650 inod innodata \u2022 robinhood token 1.000000000000 87.6220 intc intel \u2022 robinhood token 1.000000000000 11,851.1570 intu intuit \u2022 robinhood token 1.000000000000 19.2720 ionq ionq \u2022 robinhood token 1.000000000000 242.9640 iren iren limited \u2022 robinhood token 1.000000000000 384.9590 jbl jabil inc."
+  ],
+  "counts": {
+   "src_sent": 4,
+   "arc_sent": 19,
+   "src_only": 4,
+   "arc_only": 19
+  }
+ },
+ {
+  "file": "17-protocol-contracts.md",
+  "src": "chain_protocol-contracts_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 7,
+   "arc_sent": 7,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "18-deploy-smart-contracts.md",
+  "src": "chain_deploy-smart-contracts_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://robinhoodchain.blockscout.com/address/<contract_address"
+    ],
+    "in_archive_not_source": [
+     "https://robinhoodchain.blockscout.com/address"
+    ]
+   }
+  },
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 17,
+   "arc_sent": 17,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "19-account-abstraction.md",
+  "src": "chain_account-abstraction_index.mdx",
+  "fact_delta": {},
+  "ratio": 0.9995,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 12,
+   "arc_sent": 12,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "20-cross-chain-messaging.md",
+  "src": "chain_cross-chain-messaging_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 19,
+   "arc_sent": 19,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "21-oracles-and-price-feeds.md",
+  "src": "chain_oracles-and-price-feeds_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 41,
+   "arc_sent": 41,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "22-data-streams.md",
+  "src": "chain_data-streams_index.mdx",
+  "fact_delta": {},
+  "ratio": 0.9907,
+  "sent_only_source": [
+   "benefits sub second latency for high frequency updates pull based architecture that reduces unnecessary onchain costs cryptographic verification for trust minimized data usage multi region, high availability infrastructure flexible integration for both onchain and offchain processes key developer tools data visualization dashboards at https //data.chain.link/streams sdks in go, typescript, and rust rest and websocket data access endpoints onchain verifier contract for report validation robinhood chain implementation the data streams verifier proxy facilitates on chain verification for data streams reports."
+  ],
+  "sent_only_archive": [
+   "benefits sub second latency for high frequency updates pull based architecture that reduces unnecessary onchain costs cryptographic verification for trust minimized data usage multi region, high availability infrastructure flexible integration for both onchain and offchain processes key developer tools data visualization dashboards at sdks in go, typescript, and rust rest and websocket data access endpoints onchain verifier contract for report validation robinhood chain implementation the data streams verifier proxy facilitates on chain verification for data streams reports."
+  ],
+  "counts": {
+   "src_sent": 9,
+   "arc_sent": 9,
+   "src_only": 1,
+   "arc_only": 1
+  }
+ },
+ {
+  "file": "26-run-a-full-node.md",
+  "src": "chain_run-a-full-node_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "https://docs.robinhood.com/chain/run-a-full-node#running-the-node",
+     "https://globalstake.io"
+    ]
+   }
+  },
+  "ratio": 0.9939,
+  "sent_only_source": [
+   "if you just need an rpc endpoint, use the public endpoints or a provider public mainnet alchemy import { asset prefix } from '../../../components/constants'; download the config files for your target network mainnet chain info robinhood chain info.json and genesis robinhood genesis.json testnet chain info robinhood chain testnet info.json testnet does not use a custom genesis file, so its start command omits the flag."
+  ],
+  "sent_only_archive": [
+   "if you just need an rpc endpoint, use the public endpoints or a provider public mainnet alchemy download the config files for your target network mainnet chain info robinhood chain info.json and genesis robinhood genesis.json testnet chain info robinhood chain testnet info.json testnet does not use a custom genesis file, so its start command omits the flag."
+  ],
+  "counts": {
+   "src_sent": 45,
+   "arc_sent": 45,
+   "src_only": 1,
+   "arc_only": 1
+  }
+ },
+ {
+  "file": "27-governance.md",
+  "src": "chain_governance_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 9,
+   "arc_sent": 9,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "28-notices-and-upgrades.md",
+  "src": "chain_notices-and-upgrades_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 9,
+   "arc_sent": 9,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "29-terms-of-service.md",
+  "src": "chain_terms-of-service_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "http://www.adr.org"
+    ]
+   }
+  },
+  "ratio": 0.9999,
+  "sent_only_source": [
+   "developers may use the robinhood chain marks in (i) documentation, readme files, and technical specifications for open source software, sdks, developer tools, libraries, or apis designed to interact with or build on the robinhood chain network; (ii) github repository names, package names, or similar identifiers, provided the name clearly reflects the purpose of the repository (e.g., \"\\[project name\\] robinhoodchain sdk\") and is not solely \"robinhood chain\" or a confusingly similar identifier standing alone; and (iii) code comments and inline documentation for accuracy and technical clarity.",
+   "permitted \"\\[your brand\\] \u2014 powered by robinhood chain.\" not permitted \"robinhood chain finance\" or \"robinhood chain exchange\" as a primary product or company name.",
+   "permitted examples \"our dapp is deployed on robinhood chain\"; \"\\[protocol name\\] \u2014 compatible with robinhood chain\"; \"this wallet supports robinhood chain.\" (b) developer tools, libraries, and open source projects.",
+   "robinhood's election to pursue any claim in court pursuant to this section 12.14 shall not constitute a waiver of robinhood's right to arbitrate any other claim that is otherwise subject to arbitration under this section 12\\.",
+   "specifically (i) authorized users must not use the robinhood chain marks in a manner that could reasonably suggest that the authorized user's product, service, or organization is robinhood or is officially endorsed, sponsored, certified, or approved by robinhood, unless robinhood has separately granted such authorization in writing; (ii) community operated channels, websites, or initiatives must include a prominent disclaimer such as \"this \\[community/project/initiative\\] is not affiliated with, endorsed by, or officially connected with robinhood markets, inc.\"; and (iii) the authorized user's own name, logo, or brand must be clearly displayed and must be more prominent than any use of the robinhood chain marks in the authorized user's materials."
+  ],
+  "sent_only_archive": [
+   "developers may use the robinhood chain marks in (i) documentation, readme files, and technical specifications for open source software, sdks, developer tools, libraries, or apis designed to interact with or build on the robinhood chain network; (ii) github repository names, package names, or similar identifiers, provided the name clearly reflects the purpose of the repository (e.g., \"[project name] robinhoodchain sdk\") and is not solely \"robinhood chain\" or a confusingly similar identifier standing alone; and (iii) code comments and inline documentation for accuracy and technical clarity.",
+   "permitted \"[your brand] \u2014 powered by robinhood chain.\" not permitted \"robinhood chain finance\" or \"robinhood chain exchange\" as a primary product or company name.",
+   "permitted examples \"our dapp is deployed on robinhood chain\"; \"[protocol name] \u2014 compatible with robinhood chain\"; \"this wallet supports robinhood chain.\" (b) developer tools, libraries, and open source projects.",
+   "robinhood's election to pursue any claim in court pursuant to this section 12.14 shall not constitute a waiver of robinhood's right to arbitrate any other claim that is otherwise subject to arbitration under this section 12.",
+   "specifically (i) authorized users must not use the robinhood chain marks in a manner that could reasonably suggest that the authorized user's product, service, or organization is robinhood or is officially endorsed, sponsored, certified, or approved by robinhood, unless robinhood has separately granted such authorization in writing; (ii) community operated channels, websites, or initiatives must include a prominent disclaimer such as \"this [community/project/initiative] is not affiliated with, endorsed by, or officially connected with robinhood markets, inc.\"; and (iii) the authorized user's own name, logo, or brand must be clearly displayed and must be more prominent than any use of the robinhood chain marks in the authorized user's materials."
+  ],
+  "counts": {
+   "src_sent": 340,
+   "arc_sent": 340,
+   "src_only": 5,
+   "arc_only": 5
+  }
+ },
+ {
+  "file": "30-report-issue.md",
+  "src": "chain_report-issue_index.mdx",
+  "fact_delta": {},
+  "ratio": 1.0,
+  "sent_only_source": [],
+  "sent_only_archive": [],
+  "counts": {
+   "src_sent": 4,
+   "arc_sent": 4,
+   "src_only": 0,
+   "arc_only": 0
+  }
+ },
+ {
+  "file": "33-brand-guidelines.md",
+  "src": "chain_brand-guidelines_index.mdx",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "https://docs.robinhood.com/chain/terms-of-service"
+    ]
+   }
+  },
+  "ratio": 0.9961,
+  "sent_only_source": [
+   "robinhood chain brand guidelines import { asset prefix } from '../../../components/constants' logo the robinhood chain logo represents our dedicated blockchain ecosystem."
+  ],
+  "sent_only_archive": [
+   "robinhood chain brand guidelines logo the robinhood chain logo represents our dedicated blockchain ecosystem."
+  ],
+  "counts": {
+   "src_sent": 65,
+   "arc_sent": 65,
+   "src_only": 1,
+   "arc_only": 1
+  }
+ }
+]

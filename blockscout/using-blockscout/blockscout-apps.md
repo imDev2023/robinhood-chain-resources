@@ -1,0 +1,74 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Dappscout Apps Marketplace
+
+> Dappscout is a curated in-explorer marketplace of embedded dapps letting users connect a wallet once and interact across supported chains.
+
+<Check>
+  💡 Submit your dapp now [with this quick form](https://airtable.com/appiy5yijZpMMSKjT/paggtimMHyz0AsOCC/form)!
+</Check>
+
+Dappscout Apps Marketplace provides a curated list of apps available to on-chain users. Projects can submit their project for review, and once accepted, the project is listed in the marketplace.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/00c11b7f-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=8f9e89885bd98073306ea42049115659" alt="" width="2304" height="1282" data-path="images/00c11b7f-image.jpeg" />
+</Frame>
+
+## Direct Interface
+
+Dapps are either embedded into the interface directly (like this [Uniswap example](https://optimism.blockscout.com/apps/uniswap)) or added as 3rd party links. When embedded, a user can connect their web3 wallet once to Blockscout, then use it with all of the supported Dapps. This saves time and makes for a seamless user experience when switching between multiple applications.
+
+<Frame caption="Press the Connect wallet button to connect your web3 wallet using WalletConnect or MetaMask.">
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/18808513-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=732a3f321882cfeac353b90dead6f1f0" alt="" width="2304" height="1146" data-path="images/18808513-image.jpeg" />
+</Frame>
+
+<Frame caption="Wallet is connected and ready to use in DAppscout.">
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/87ff7479-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=4d052e77f790c49c3463fb1c73ae56b5" alt="" width="2304" height="657" data-path="images/87ff7479-image.jpeg" />
+</Frame>
+
+<Info>
+  To enable direct embedding, Dapps need to:
+
+  1. Support iframe embedding on 3rd party domains.
+  2. Integrate the [Safe Apps SDK](https://docs.safe.global/apps-sdk-overview).
+
+  [***See Dapp integration for more details.***](/using-blockscout/blockscout-apps/dapp-integration)
+</Info>
+
+## Dapps you can Trust
+
+Dappscout marketplace provides additional security and peace of mind when interacting with various Dapps on a chain. Rather than accessing potentially fake links, scam sites or compromised interfaces, all Dapps in Blockscout are vetted and added by the curation team. Dappscout Dapps are safe and secure for users.
+
+## Dappscout Submissions
+
+There are several ways to submit a DApp. You will fill out a form with basic information to get started.
+
+* Use this form to [submit directly](https://airtable.com/appiy5yijZpMMSKjT/paggtimMHyz0AsOCC/form).
+* Use the submit app button within the marketplace.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/5j9ATJZuQuk5LMJq/images/4ad90b4a-image.jpeg?fit=max&auto=format&n=5j9ATJZuQuk5LMJq&q=85&s=8e3463b6f04c7d2fae1074b5bade91b7" alt="" width="2266" height="1364" data-path="images/4ad90b4a-image.jpeg" />
+</Frame>
+
+## Blockscout Native Dapps
+
+In addition to 3rd party apps, Blockscout is developing native apps for the Marketplace. These include:
+
+* [Swap](/using-blockscout/essential-dapps/swap): Swapping and bridging application.
+* Revokescout: Manage and revoke contract approvals.
+
+## Dapp Star Ratings
+
+Users can rate dapps on a 1-5 star basis. A user must connect their wallet to the explorer, and that wallet must have at least 5 transactions on the chain in order to rate a dapp. Dapps can be sorted by rating score and the number of ratings.
+
+A full rundown on the process is available in this blog post:
+
+<Card href="https://www.blog.blockscout.com/star-ratings-come-to-dappscout/" title="Rate dapps with Blockscout">
+  Blockscout | Multichain Block Explorer For EVM Chains
+</Card>
+
+<Info>
+  Please note: The star rating system is currently experimental. This feature was released in beta testing to assess user interest in ratings and reviews. Current results may be affected by rating biases, including automated or mass submissions. We're actively improving the system based on user feedback.
+</Info>

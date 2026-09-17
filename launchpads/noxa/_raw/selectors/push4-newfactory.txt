@@ -1,0 +1,125 @@
+PUSH4 selector scan of newfactory runtime bytecode, resolved via api.openchain.xyz, 2026-09-03
+
+0x04e45aaf  exactInputSingle((address,address,uint24,address,uint256,uint256,uint160))
+0x06fdde03  name()
+0x089fe6aa  poolFee()
+0x095ea7b3  approve(address,uint256)
+0x118cdaa7  OwnableUnauthorizedAccount(address)
+0x12f16a07  maxWalletBps()
+0x1584ccf3  launchingEnabled()
+0x18160ddd  totalSupply()
+0x1e4fbdf7  OwnableInvalidOwner(address)
+0x22afcccb  feeAmountTickSpacing(uint24)
+0x23b872dd  transferFrom(address,address,uint256)
+0x2556fe03  ZeroBps()
+0x28ff1d4c  MAX_LAUNCH_FEE()
+0x313ce567  decimals()
+0x32148f67  increaseObservationCardinalityNext(uint16)
+0x3220fbda  restrictionEndTime()
+0x3850c7bd  slot0()
+0x3cf28b5a  getLaunchedToken(address)
+0x3de35b79  pairToken()
+0x3ee5aeb5  ReentrancyGuardReentrantCall()
+0x3fc8cef3  weth()
+0x4e487b71  Panic(uint256)
+0x536dac9b  launchFactory()
+0x53cd512a  socials()
+0x61d027b3  treasury()
+0x634282af  allTokens(uint256)
+0x665a11ca  liquidityPool()
+0x66a88d96  maxWalletLimit()
+0x70a08231  balanceOf(address)
+0x715018a6  renounceOwnership()
+0x7284e416  description()
+0x72d852ed  lockPosition(address)
+0x762cd3a3  LowCardinality()
+0x790ca413  launchTime()
+0x791b98bc  positionManager()
+0x7983c051  PoolAlreadyInitialized()
+0x799fe343  setLaunchingEnabled(bool)
+0x8036d590  maxTxLimit()
+0x8c0b5e22  maxTxAmount()
+0x8c70ba13  restrictionSeconds()
+0x8da5cb5b  owner()
+0x95d89b41  symbol()
+0xa1671295  createPool(address,address,uint24)
+0xa9059cbb  transfer(address,uint256)
+0xaa4bde28  maxWalletAmount()
+0xaaeb763d  MIN_OBSERVATION_CARDINALITY()
+0xabb1dc44  getTokenInfo()
+0xb8d8fbb4  dexFactory()
+0xbbad007e  dexConfigs(uint256)
+0xbbf4268d  BpsTooHigh()
+0xbfeab6e5  launchedTokens(address)
+0xc16f3a93  ZeroSupply()
+0xc31c9c07  swapRouter()
+0xc7e13a01  TickOutOfRange()
+0xd05b49eb  launchConfigs(uint256)
+0xd5f39488  deployer()
+0xd7b96d4e  locker()
+0xd92e233d  ZeroAddress()
+0xdbb80e42  allTokensLength()
+0xdd62ed3e  allowance(address,address)
+0xe602df05  ERC20InvalidApprover(address)
+0xec442f05  ERC20InvalidReceiver(address)
+0xf0f44260  setTreasury(address)
+0xf2fde38b  transferOwnership(address); _SIMONdotBLACK_(int8[],uint256,address,bytes8,int96)
+0xf637731d  initialize(uint160)
+0xfb7f21eb  logo()
+0xff8ea3e5  maxTxBps()
+0xffffffff  LOCK8605463013(); test266151307(); selfCallSimulateExecute565348489(); uWjK9(uint256)
+
+unresolved:
+0x02a52067
+0x044b4bff
+0x04a43e8b
+0x0a8023ff
+0x0b4c7741
+0x0d0e30db
+0x0f0055d7
+0x11e4d8cd
+0x156adcfd
+0x19f4db0f
+0x21421707
+0x268b6213
+0x303612d8
+0x31415610
+0x34e5f8b7
+0x391434e3
+0x3af9aa2f
+0x3c178bc5
+0x4190fb85
+0x4300081e
+0x4418b22b
+0x4a1406b1
+0x4a29b9a3
+0x4b637e8f
+0x51c1cf70
+0x565b9091
+0x575b5050
+0x575f80fd
+0x588c3699
+0x61ffff87
+0x63360a81
+0x6ee3601f
+0x72fdc663
+0x7dc7a0d9
+0x7edb534f
+0x8427703f
+0x85704cef
+0x8610db95
+0x89e00a3a
+0x96040519
+0x96127af5
+0xa0142f2e
+0xaf2e740e
+0xb15610f4
+0xb156111d
+0xb4fb8eea
+0xc4a11628
+0xc57601f0
+0xc5760405
+0xc5784936
+0xd9a4add3
+0xffff0000
+0xffffff00

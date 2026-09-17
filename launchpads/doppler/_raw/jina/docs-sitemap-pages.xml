@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+			<url>
+				<loc>https://docs.doppler.lol</loc>
+				<priority>1</priority>
+				<lastmod>2026-04-02T15:35:59.489Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/explainer</loc>
+				<priority>1</priority>
+				<lastmod>2026-07-17T01:16:45.283Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/core-concepts/creation-and-initialization</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-17T00:18:35.054Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/core-concepts/price-discovery-auctions</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-17T00:21:59.849Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/core-concepts/supply-curves</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-17T00:27:19.923Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/core-concepts/liquidity-migration-options</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-01-14T00:50:36.204Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/core-concepts/fees-and-economics</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/advanced-features/doppler-hooks</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-01-23T19:38:07.144Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/advanced-features/rehype-pools</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-08-21T19:45:52.813Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/advanced-features/doppler404</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-01-14T00:50:36.204Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/api-reference</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-07-16T05:10:56.347Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/examples</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/examples/multicurve</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-31T19:49:43.581Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/examples/static-auctions</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-16T23:09:03.425Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/examples/dynamic-auctions</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-16T23:09:03.425Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/examples/quoting-monitoring-and-metrics</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-16T23:09:03.425Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/svm-sdk-examples</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-08-28T18:42:38.677Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/svm-sdk-examples/launch</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-16T05:10:56.347Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/svm-sdk-examples/dynamic-fee-launch</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-08-28T18:42:38.677Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/svm-sdk-examples/swap</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-06-11T22:07:09.346Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/svm-sdk-examples/launch-monitor-and-e2e</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-16T05:10:56.347Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/overview</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-06-24T17:18:39.276Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/api-usage</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-06-11T22:14:55.043Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/quotes-and-swaps</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-07-23T22:03:10.185Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/contract-addresses</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-08-17T16:17:15.840Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/metadata-standards</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-16T23:43:23.037Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3</loc>
+				<priority>0.7</priority>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-11T21:25:46.042Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-10T21:19:52.337Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-10T15:45:52.646Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/token</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-04T23:48:45.241Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/quoter</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-04T23:48:45.241Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-27T22:36:58.125Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-27T22:31:15.779Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/streamable-v3</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-16T17:17:43.227Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4</loc>
+				<priority>0.7</priority>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-14T19:13:17.814Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-14T19:13:17.814Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-09-11T13:25:55.907Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-07-14T19:13:17.814Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/quoter</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-04T23:48:45.241Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/lens</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-04T23:48:45.241Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-27T22:36:58.125Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/governance-options</loc>
+				<priority>0.59</priority>
+				<lastmod>2025-06-27T22:32:43.643Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/overview</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-16T23:44:56.817Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/sdk-migration-guide</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-01-14T00:50:36.204Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/security-and-bug-bounties</loc>
+				<priority>0.84</priority>
+				<lastmod>2025-04-23T21:48:32.900Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.doppler.lol/reference/roadmap</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-16T22:43:32.666Z</lastmod>
+</url>
+
+
+</urlset>

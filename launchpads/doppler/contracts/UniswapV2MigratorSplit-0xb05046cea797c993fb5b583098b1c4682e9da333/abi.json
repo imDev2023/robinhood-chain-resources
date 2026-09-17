@@ -1,0 +1,251 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "airlock_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IUniswapV2Factory",
+    "name": "factory_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract TopUpDistributor",
+    "name": "topUpDistributor",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "weth_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidSplitRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SenderNotAirlock",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "actual",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maximum",
+    "type": "uint256"
+   }
+  ],
+  "name": "SplitShareTooHigh",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token0",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token1",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "DistributeSplit",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "TOP_UP_DISTRIBUTOR",
+  "outputs": [
+   {
+    "internalType": "contract TopUpDistributor",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "airlock",
+  "outputs": [
+   {
+    "internalType": "contract Airlock",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "factory",
+  "outputs": [
+   {
+    "internalType": "contract IUniswapV2Factory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "locker",
+  "outputs": [
+   {
+    "internalType": "contract UniswapV2Locker",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint160",
+    "name": "sqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "internalType": "address",
+    "name": "token0",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "token1",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "name": "migrate",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "liquidity",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token0",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "token1",
+    "type": "address"
+   }
+  ],
+  "name": "splitConfigurationOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "bool",
+    "name": "isToken0",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "share",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "contract WETH",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

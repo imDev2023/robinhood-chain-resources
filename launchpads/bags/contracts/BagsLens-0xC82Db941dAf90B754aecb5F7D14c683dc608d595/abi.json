@@ -1,0 +1,227 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "factory",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "BagsLens_ZeroAddressFactory",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "FACTORY",
+  "outputs": [
+   {
+    "internalType": "contract IBagsFactory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   }
+  ],
+  "name": "claimableOf",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "getTokenState",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "bool",
+      "name": "exists",
+      "type": "bool"
+     },
+     {
+      "internalType": "bool",
+      "name": "migrated",
+      "type": "bool"
+     },
+     {
+      "internalType": "address",
+      "name": "curve",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "feeShare",
+      "type": "address"
+     },
+     {
+      "internalType": "PoolId",
+      "name": "poolId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "thresholdQuote",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "realQuoteReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "realTokenReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "virtualTokenReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "virtualQuoteReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "priceQuotePerToken",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bondingProgressPct",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "totalRaised",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct IBagsLens.TokenState",
+    "name": "state",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "tokens",
+    "type": "address[]"
+   }
+  ],
+  "name": "getTokenStates",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "bool",
+      "name": "exists",
+      "type": "bool"
+     },
+     {
+      "internalType": "bool",
+      "name": "migrated",
+      "type": "bool"
+     },
+     {
+      "internalType": "address",
+      "name": "curve",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "feeShare",
+      "type": "address"
+     },
+     {
+      "internalType": "PoolId",
+      "name": "poolId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "thresholdQuote",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "realQuoteReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "realTokenReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "virtualTokenReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "virtualQuoteReserves",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "priceQuotePerToken",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bondingProgressPct",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "totalRaised",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct IBagsLens.TokenState[]",
+    "name": "states",
+    "type": "tuple[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

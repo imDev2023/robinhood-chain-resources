@@ -1,0 +1,8 @@
+version()             ('v5.21.2',)
+getFeeRate()          (100, 100)
+SALT_LOCK_FEE()       (3000000000000000,)
+flapCurvePairFactory  ('0x0d1ebb179cdbca88d74c923c4255cb2b17474afd',)
+VAULT_PORTAL()        ('0xe9f7ab7de8fb8756acbb6a1cd13316a43308197b',)
+newFeatureSwitch()    (True,)
+DEFAULT_V4_NORMAL_FEE (12500,)
+DEFAULT_V4_TICK_SPAC  (250,)

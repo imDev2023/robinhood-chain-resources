@@ -1,0 +1,511 @@
+https://docs.doppler.lol/	Doppler	https://doppler.lol	pages/01-docs-home.md
+https://docs.doppler.lol/	price discovery auctions	https://aada.ms/pdfs/pda.pdf	pages/01-docs-home.md
+https://docs.doppler.lol/	Zora	https://zora.co	pages/01-docs-home.md
+https://docs.doppler.lol/	Paragraph	https://paragraph.com	pages/01-docs-home.md
+https://docs.doppler.lol/	Noice	https://noice.so	pages/01-docs-home.md
+https://docs.doppler.lol/	Bankr	https://bankr.bot/	pages/01-docs-home.md
+https://docs.doppler.lol/	SDK examples	/reference/svm-sdk-examples.md	pages/01-docs-home.md
+https://docs.doppler.lol/	Doppler Multicurve	https://doppler.lol/multicurve.pdf	pages/01-docs-home.md
+https://docs.doppler.lol/	learning more about Doppler	/explainer.md	pages/01-docs-home.md
+https://docs.doppler.lol/	examples	/reference/examples.md	pages/01-docs-home.md
+https://docs.doppler.lol/explainer	Doppler	https://doppler.lol	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	price discovery auctions	https://aada.ms/pdfs/pda.pdf	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	smart contracts	https://github.com/whetstoneresearch/doppler	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	SDK	https://github.com/whetstoneresearch/doppler-sdk	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	indexing API	/reference/api-usage.md	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	security review &/or audited	/reference/security-and-bug-bounties.md	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	Airlock	https://github.com/whetstoneresearch/doppler/blob/main/src/Airlock.sol	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	Doppler Hooks	/advanced-features/doppler-hooks.md	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	Governor	https://docs.openzeppelin.com/contracts/4.x/api/governance#governor	pages/02-docs-explainer.md
+https://docs.doppler.lol/explainer	Doppler Application	https://app.doppler.lol	pages/02-docs-explainer.md
+https://docs.doppler.lol/advanced-features/doppler404	ERC-7631 for “Dual Nature Token Pairs"	https://ethereum-magicians.org/t/erc-7631-dual-nature-token-pair/18796	pages/10-docs-advanced-features-doppler404.md
+https://docs.doppler.lol/advanced-features/doppler404	DN404	https://github.com/Vectorized/dn404	pages/10-docs-advanced-features-doppler404.md
+https://docs.doppler.lol/reference/examples	Multicurve	https://docs.doppler.lol/reference/examples/multicurve.md	pages/12-docs-reference-examples.md
+https://docs.doppler.lol/reference/examples	Static auctions	https://docs.doppler.lol/reference/examples/static-auctions.md	pages/12-docs-reference-examples.md
+https://docs.doppler.lol/reference/examples	Dynamic auctions	https://docs.doppler.lol/reference/examples/dynamic-auctions.md	pages/12-docs-reference-examples.md
+https://docs.doppler.lol/reference/examples	Quoting, monitoring, and metrics	https://docs.doppler.lol/reference/examples/quoting-monitoring-and-metrics.md	pages/12-docs-reference-examples.md
+https://docs.doppler.lol/reference/svm-sdk-examples	Dynamic fee launch	/reference/svm-sdk-examples/dynamic-fee-launch.md	pages/17-docs-reference-svm-sdk-examples.md
+https://docs.doppler.lol/reference/svm-sdk-examples	Launch	/reference/svm-sdk-examples/launch.md	pages/17-docs-reference-svm-sdk-examples.md
+https://docs.doppler.lol/reference/svm-sdk-examples	Swap	/reference/svm-sdk-examples/swap.md	pages/17-docs-reference-svm-sdk-examples.md
+https://docs.doppler.lol/reference/svm-sdk-examples	Launch, monitor, and e2e	/reference/svm-sdk-examples/launch-monitor-and-e2e.md	pages/17-docs-reference-svm-sdk-examples.md
+https://docs.doppler.lol/reference/overview	Ponder	https://ponder.sh/	pages/22-docs-reference-overview.md
+https://docs.doppler.lol/reference/overview	Development Guide	broken://pages/VZBnc78XqauN19pCmwWr	pages/22-docs-reference-overview.md
+https://docs.doppler.lol/reference/api-usage	Whetstone Research	https://whetstone.cc	pages/23-docs-reference-api-usage.md
+https://docs.doppler.lol/reference/quotes-and-swaps	Universal Router SDK	https://github.com/Uniswap/sdks/tree/main/sdks/universal-router-sdk	pages/24-docs-reference-quotes-and-swaps.md
+https://docs.doppler.lol/reference/contract-addresses	0xde35...9dfa	https://etherscan.io/address/0xde3599a2ec440b296373a983c85c365da55d9dfa	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7542...eb79	https://etherscan.io/tx/0x7542807009d53ce3fb34710c6025c690617183a27247fddca95ff3fdaf6ceb79	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	afc1226	https://github.com/whetstoneresearch/doppler/commit/afc1226	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf455...357c	https://etherscan.io/address/0xf45588e8e0b1df9db9ae7e20ece5726ae931357c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4073...4830	https://etherscan.io/tx/0x407337f92ef133cee88fd192f6c5ff5957ecdf1b06c14c5ddf669d359bf24830	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	c333674f	https://github.com/whetstoneresearch/doppler/commit/c333674f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1030...9b83	https://etherscan.io/address/0x103004e50bed65dfba30dd9c264b6bdf5e529b83	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb22d...148d	https://etherscan.io/tx/0xb22dbf1620d402f161fab9e8baa44caea7cfd4c66b01db104622e9999f29148d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	9b60ad7d	https://github.com/whetstoneresearch/doppler/commit/9b60ad7d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb354...e421	https://etherscan.io/address/0xb35469ee64a87afd19b31615094fe3962d73e421	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0234...cd37	https://etherscan.io/tx/0x0234f396ddf05e6385ed323f9b0c7ca850af8d9111f99adc5d94b52bdfcecd37	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	5aa31e1	https://github.com/whetstoneresearch/doppler/commit/5aa31e1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb7b...be87	https://etherscan.io/address/0xdb7b520bb5c3a2c5d4871198081911359f93be87	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9739...9ea3	https://etherscan.io/tx/0x973953be41cb739225752d5360e45e722c1db956c677cf83d92d75bd633a9ea3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	fce45321	https://github.com/whetstoneresearch/doppler/commit/fce45321	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x89c2...5292	https://etherscan.io/address/0x89c261c05b5f9b6bcba07c199b8dee7cfad45292	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xbdf9...6544	https://etherscan.io/address/0xbdf938149ac6a781f94faa0ed45e6a0e984c6544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1bdc...d761	https://etherscan.io/tx/0x1bdcb1656ed4f1db504f35bd0c3cd56cfa2c3cf4f8705edd7a9b72b6b7fdd761	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0154a5f	https://github.com/whetstoneresearch/doppler/commit/0154a5f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1e40...60c4	https://etherscan.io/address/0x1e40b0875dda35f41e15cfb475403859b8c860c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x37a7...4fa7	https://etherscan.io/tx/0x37a718f132ed55a9726f5af7a048a89db0f64f124021dd241f6b4bf522e64fa7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	5fe4eb1	https://github.com/whetstoneresearch/doppler/commit/5fe4eb1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9f30...8f61	https://etherscan.io/address/0x9f309d79bee3e8b2f56facf74b7195df176c8f61	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x78e8...9329	https://etherscan.io/tx/0x78e8ab7e241f65ceb91277e1882787a68abf5b5759419e735b9c1f2974d19329	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	f136b8e	https://github.com/whetstoneresearch/doppler/commit/f136b8e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2a8d...8175	https://etherscan.io/address/0x2a8da67f277442cff7dc2143e52fdd0cbf5a8175	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x36ea...c758	https://etherscan.io/tx/0x36ea6ede06c9278d94fd6568532e1c727f74cbc450568e57e2a805cc157ac758	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	63dc78fe	https://github.com/whetstoneresearch/doppler/commit/63dc78fe	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xa2e0...56d7	https://etherscan.io/address/0xa2e0435225d52a8b950122752978007d758056d7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x474b...2235	https://etherscan.io/tx/0x474bf89ff79a2a3d93051c80c3245499450a84f9c5e47ec7bdf1059907b62235	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xddae...b638	https://etherscan.io/address/0xddae8b3ed08184682f7bc32b74d943ceefeab638	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf243...b557	https://etherscan.io/tx/0xf2433fc6c439311f49e728aca9406c0f94eb10a16a3547012905971b2bb5b557	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	074a3b8	https://github.com/whetstoneresearch/doppler/commit/074a3b8	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x233a...a5b5	https://etherscan.io/address/0x233a71a7bb928b1357a1ebf454298320989ca5b5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2425...7652	https://etherscan.io/tx/0x2425c8b9f7c4fe9cea80e2cc09d424c5b3c92f6af9407bfb1d3f872923c47652	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	bc477e4	https://github.com/whetstoneresearch/doppler/commit/bc477e4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce6c...8f0d	https://etherscan.io/address/0xce6cd4e35447e05a39a50a4bcf61f2dcd93a8f0d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x776b...6696	https://etherscan.io/tx/0x776b6192c4396d7646e3afef0ff13608e241a148669e3314ff0501d91ee26696	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f9e...3215	https://etherscan.io/address/0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6607...c84b	https://etherscan.io/address/0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd309...c7ab	https://etherscan.io/tx/0xd309d4718e9717bcf2dae1933a0c2440695663f49860177dc6fbdbac2c57c7ab	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	6a0ff821	https://github.com/whetstoneresearch/doppler/commit/6a0ff821	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce32...3d47	https://etherscan.io/address/0xce3212e6536f33cd6fbfee265224131353ca3d47	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc072...6d5e	https://etherscan.io/tx/0xc072af8a79aac8be66466753a84067cd69bf82482d14291e1d318f76ac4e6d5e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	4ef84c4	https://github.com/whetstoneresearch/doppler/commit/4ef84c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9fd4...6ea0	https://etherscan.io/address/0x9fd40af2baafaf03513f091444e821c0d5b06ea0	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4353...d814	https://etherscan.io/address/0x435312320c0330b1999746753551cdfbd83ad814	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8025...6b21	https://etherscan.io/tx/0x8025107f901ac3fff7bb741e5a3fc03b9dea4ba5722bb0b9bce203edcc426b21	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	a4390e7	https://github.com/whetstoneresearch/doppler/commit/a4390e7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0673...e495	https://etherscan.io/address/0x06731e30df4b0209ed19c39ba8ed253e17b0e495	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdf49...7d39	https://etherscan.io/tx/0xdf49d87fab5b221c45a60fbe890a00360a5500a861942952fb36c30d5b117d39	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd7ab...12d3	https://etherscan.io/address/0xd7aba5f1d80a330a6fe9e96f7ba122710e0912d3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x53b4...e8ad	https://etherscan.io/address/0x53b4c21a6cb61d64f636abbfa6e8e90e6558e8ad	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9fbc...7a38	https://etherscan.io/tx/0x9fbc00d98616b60f482beb8c94aa13cd08077fd8fb56099a15dd91f807b97a38	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x660e...8d12	https://monadscan.com/address/0x660eaaedebc968f8f3694354fa8ec0b4c5ba8d12	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x758e...c1fd	https://monadscan.com/tx/0x758eec05f2ffe6ebcc1a8d20c0daa3cb30a0c3e14aa615a68f9bbbce43f3c1fd	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	cc6efe5	https://github.com/whetstoneresearch/doppler/commit/cc6efe5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf455...357c	https://monadscan.com/address/0xf45588e8e0b1df9db9ae7e20ece5726ae931357c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5bda...87f1	https://monadscan.com/tx/0x5bdadf92f88e929e89b29bfa8f93bdaa3437a268b62e8f0f7379eda8552a87f1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1030...9b83	https://monadscan.com/address/0x103004e50bed65dfba30dd9c264b6bdf5e529b83	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xfe87...111a	https://monadscan.com/tx/0xfe8752cdd0c659940fb1e59c1a50399fdc7a1476d303ce0db938fbfecd21111a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb354...e421	https://monadscan.com/address/0xb35469ee64a87afd19b31615094fe3962d73e421	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb03...dcfb	https://monadscan.com/tx/0xdb03841932dcfadf966752ec380cd5313146275281d8c42e306c8f68fa58dcfb	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	d223428	https://github.com/whetstoneresearch/doppler/commit/d223428	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb7b...be87	https://monadscan.com/address/0xdb7b520bb5c3a2c5d4871198081911359f93be87	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf79a...4a30	https://monadscan.com/tx/0xf79a36ac5ff846649b9b7b7c647a99e0d1a5296fc43e016ce7d9527a36b04a30	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x89c2...5292	https://monadscan.com/address/0x89c261c05b5f9b6bcba07c199b8dee7cfad45292	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x56ea...a544	https://monadscan.com/address/0x56ea13da5f39863d3b3d54826187306af7ada544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0aaa...214f	https://monadscan.com/tx/0x0aaab65903a463331520579c6ea1c1f06df0486bcd29220cd05964165966214f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	6b9fb9ea	https://github.com/whetstoneresearch/doppler/commit/6b9fb9ea	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1e40...60c4	https://monadscan.com/address/0x1e40b0875dda35f41e15cfb475403859b8c860c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xe43d...01bf	https://monadscan.com/tx/0xe43ddc777ed5ae6d9967441fd0f68c6ad0661dae4788ea2859857f6a825601bf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xfaaf...6f45	https://monadscan.com/address/0xfaafde6a5b658684cc5eb0c5c2c755b00a246f45	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7a40...3bc1	https://monadscan.com/tx/0x7a40bce8a81472208242ac04f4e3ff50c9bd005b036cd014038bad8db4653bc1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5fbe...b76d	https://monadscan.com/address/0x5fbe931dc4b923a7abe4c47ad68d5bf9eda5b76d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x72d9...a79b	https://monadscan.com/tx/0x72d936f51838751594f9eef0337872c16f42fc4b92bda38fe974a5082392a79b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8b4c...c2a0	https://monadscan.com/address/0x8b4c7db9121fc885689c0a50d5a1429f15aec2a0	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x86b4...6f41	https://monadscan.com/tx/0x86b46a7780fbf246e65fc8174483a3c5abc5be8f1d5d5d40d5212a5dd5c76f41	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb4de...14d9	https://monadscan.com/address/0xb4dee32eb70a5e55f3d2d861f49fb3d79f7a14d9	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5b1c...f180	https://monadscan.com/tx/0x5b1cb51919dca25735d638c5521853efb85f88917f80ea6133f18c1b6cdef180	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f3b...e731	https://monadscan.com/address/0x5f3ba43d44375286296cb85f1ea2ebfa25dde731	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3abd...ce34	https://monadscan.com/tx/0x3abd3022d8aa480228a31690013ba67a15ffdc4d393964a0c65c90737facce34	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce6c...8f0d	https://monadscan.com/address/0xce6cd4e35447e05a39a50a4bcf61f2dcd93a8f0d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1b37...c940	https://monadscan.com/tx/0x1b371405506c93463b2a3820115c0a0b5bc1804eb4595e49274921609788c940	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f9e...3215	https://monadscan.com/address/0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6607...c84b	https://monadscan.com/address/0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x688c...bc1e	https://monadscan.com/tx/0x688cba7f4df84eaedcf4ee3e0fe31741baefb6dd4197b37b35241a678696bc1e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce32...3d47	https://monadscan.com/address/0xce3212e6536f33cd6fbfee265224131353ca3d47	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x64c8...ba72	https://monadscan.com/tx/0x64c8ed9531b6c37a977c1fc5a7546e81e3f9241c16c10b69a4fff2de7a6cba72	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4461...59b2	https://monadscan.com/address/0x44610355465c1f5914c8b8ea0e7c887cc67459b2	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4353...d814	https://monadscan.com/address/0x435312320c0330b1999746753551cdfbd83ad814	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xda50...9dd6	https://monadscan.com/tx/0xda50497dfa0fe8c07a1c47172ab50e18bd1f62f2b20e234e124a76a906c09dd6	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0673...e495	https://monadscan.com/address/0x06731e30df4b0209ed19c39ba8ed253e17b0e495	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8c40...de93	https://monadscan.com/tx/0x8c4049fc6120e7bb15dab0aa63d48f1efa03d9ca8fd0779b19fc05799d26de93	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd7ab...12d3	https://monadscan.com/address/0xd7aba5f1d80a330a6fe9e96f7ba122710e0912d3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x53b4...e8ad	https://monadscan.com/address/0x53b4c21a6cb61d64f636abbfa6e8e90e6558e8ad	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x57f2...7399	https://monadscan.com/tx/0x57f219b998a0a1f73ae2a3f7bca002f3e5a4f4b8db8de8f55976a96ff8447399	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xeb7c...0862	https://robinhoodchain.blockscout.com/address/0xeb7c034704ef8dcd2d32324c1545f62fb4ad0862	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8ffd...291a	https://robinhoodchain.blockscout.com/tx/0x8ffd957b1985578fd9bfb8ce651bf546cb262f3b157f02f93b26c585046b291a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	bda077cf	https://github.com/whetstoneresearch/doppler/commit/bda077cf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf455...357c	https://robinhoodchain.blockscout.com/address/0xf45588e8e0b1df9db9ae7e20ece5726ae931357c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x24d3...8b2b	https://robinhoodchain.blockscout.com/tx/0x24d3b8fabbf32f49e3b3dfecc39a70d2fc4f32d9ed4f66620773f22454398b2b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x37a9...bc9d	https://robinhoodchain.blockscout.com/address/0x37a9fa204a4d3a429fded7e3469ab076c854bc9d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x33f9...da99	https://robinhoodchain.blockscout.com/tx/0x33f9d082518878262898a9c2e11d146516fddd7bc1ae3674b623f5854c09da99	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1030...9b83	https://robinhoodchain.blockscout.com/address/0x103004e50bed65dfba30dd9c264b6bdf5e529b83	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2499...1a6a	https://robinhoodchain.blockscout.com/tx/0x24996e26139cad95831f3112ed727ed9fd2f5b9b8b057916df166ba291cf1a6a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4389...573f	https://robinhoodchain.blockscout.com/address/0x4389ad34938b14f25cff7ed983c53f5a42a2573f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xa87d...34bf	https://robinhoodchain.blockscout.com/tx/0xa87d3dfffd1c96d9c6a94b20ff2a758c7e3182cd78dd3ca0c0b91c19279834bf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3be8...c599	https://robinhoodchain.blockscout.com/address/0x3be8b97fd0e713b5abe0649fa830223b6b4bc599	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb53e...f7c9	https://robinhoodchain.blockscout.com/tx/0xb53eb8261ef8e76f3bb89c08dd5ca742408ec9911ed5cb0a32ac3a92dc59f7c9	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1b37...b69a	https://robinhoodchain.blockscout.com/address/0x1b37d3a72082029c44b35b604ea473617580b69a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4e34...a544	https://robinhoodchain.blockscout.com/address/0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd32e...00b1	https://robinhoodchain.blockscout.com/tx/0xd32e8ebbb51adc6b05d0608e3eaf289d8d648f4df42175990bbba2fcfbe700b1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7bf3...e0c4	https://robinhoodchain.blockscout.com/address/0x7bf319d8e969f7596b1bc171da9ce322f67ae0c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7e76...bbac	https://robinhoodchain.blockscout.com/tx/0x7e76a2e3198ecc5aa710e634ff9fcffc443cb1a5ad084e29268341a9c836bbac	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf4c2...5c04	https://robinhoodchain.blockscout.com/address/0xf4c22465532f64777ffcd7770831aeca38f35c04	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc846...7819	https://robinhoodchain.blockscout.com/tx/0xc846bbac30cb2f7a7e39667f48311b6faa97c3cda5fcf1bfcc1eb2fe5dc37819	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdeb0...b7ef	https://robinhoodchain.blockscout.com/address/0xdeb0447dae3eb177c4dba8bbccca25c8f273b7ef	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x56eb...de8d	https://robinhoodchain.blockscout.com/tx/0x56ebbebad4f242cae43515c2008f37b53720b143dd260df408b4d475ba5cde8d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb03...37cf	https://robinhoodchain.blockscout.com/address/0xdb036746d65dd52126b1915f1adf555e6c5237cf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb76e...4d4d	https://robinhoodchain.blockscout.com/tx/0xb76ed227716e9dfbb00cf273739418a86356d15609746a78293da488ebe94d4d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xde88...29a3	https://robinhoodchain.blockscout.com/address/0xde8886a0019ea060b8378ee37b8a23b8117f29a3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6506...34ea	https://robinhoodchain.blockscout.com/tx/0x6506158f635a07a87b010d5326f0b87a4e920448d8ae1d57f3bee8e12c0934ea	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x85f3...1ad7	https://robinhoodchain.blockscout.com/address/0x85f37f74ef2478a770318bc810177a9835911ad7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1a14...0b05	https://robinhoodchain.blockscout.com/tx/0x1a1494e76f22da363bcfedb3c2d2027c6e13e341c256666667e1ec62b9050b05	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xba2f...5a0e	https://robinhoodchain.blockscout.com/address/0xba2f330edb16cd8056f5988d8ce19bbc63475a0e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3ba7...ebd0	https://robinhoodchain.blockscout.com/tx/0x3ba7683099adcaa4853867a49214d5e6e5d88850b9f267dda4d17a2117d9ebd0	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce6c...8f0d	https://robinhoodchain.blockscout.com/address/0xce6cd4e35447e05a39a50a4bcf61f2dcd93a8f0d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x016c...6220	https://robinhoodchain.blockscout.com/tx/0x016c882499e7f06df6cd5cd58a0685657c4f8300d238bd0f3a2da737b8fe6220	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f9e...3215	https://robinhoodchain.blockscout.com/address/0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6607...c84b	https://robinhoodchain.blockscout.com/address/0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x17f0...ef08	https://robinhoodchain.blockscout.com/tx/0x17f08a11b651c80e55bd33e493b70d1f7f18bf4f38d64563838be3cfc460ef08	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7b61...63b8	https://robinhoodchain.blockscout.com/address/0x7b6147ac3f615bdb764e7ebd5f517dac1ad163b8	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8ff7...01c5	https://robinhoodchain.blockscout.com/tx/0x8ff7d1d8b10b4c5f9531976d7b9a7c49e84790e41f197362be47708772c201c5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc16c...aba2	https://robinhoodchain.blockscout.com/address/0xc16c826f75338a5ea626f94f8992191b4ce5aba2	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0116...09f6	https://robinhoodchain.blockscout.com/tx/0x011656381ef7dc14e6afce43d301332374c3d2bd0b23a4d458048f8ea6bf09f6	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6076...c578	https://robinhoodchain.blockscout.com/address/0x6076fddfcac0dd980e0350dff5239fec3f86c578	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x46ad...ef06	https://robinhoodchain.blockscout.com/address/0x46adee7595d48b1ec53090e9bc78e1e69fa0ef06	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb652...5b4f	https://robinhoodchain.blockscout.com/tx/0xb65238e8206ff35da3bb8c90dc95deecd46912806b4d351b68339ab632f65b4f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x63f6...42a5	https://robinhoodchain.blockscout.com/address/0x63f6efe03f25a8c6650b38d05c5a454051d642a5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6bb5...f428	https://robinhoodchain.blockscout.com/tx/0x6bb59b4e221005e7121eee0e79fddd0967c230d03d0e108c7dcbd8b9a2b6f428	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb050...a333	https://robinhoodchain.blockscout.com/address/0xb05046cea797c993fb5b583098b1c4682e9da333	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6cce...57ea	https://robinhoodchain.blockscout.com/address/0x6cce158b6d1747617fc218592b4d60b239b957ea	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2ad4...b0b6	https://robinhoodchain.blockscout.com/tx/0x2ad4f96e1b3110da078167813b4f3f47db3c0b7719747df5674bdc468189b0b6	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x660e...8D12	https://basescan.org/address/0x660eAaEdEBc968f8f3694354FA8EC0b4c5Ba8D12	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x029b...5d24	https://basescan.org/tx/0x029b03e1549bf6a8e115b9d961c62a75ba4869a912c0f13bdaa2da7d1f0a5d24	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	9b23399	https://github.com/whetstoneresearch/doppler/commit/9b23399	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf455...357c	https://basescan.org/address/0xf45588e8e0b1df9db9ae7e20ece5726ae931357c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb881...b431	https://basescan.org/tx/0xb881cd43f77cd9ccc867f0d9ed6d443282a6863d26f193436419fb5ea458b431	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x37a9...bc9d	https://basescan.org/address/0x37a9fa204a4d3a429fded7e3469ab076c854bc9d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6810...2298	https://basescan.org/tx/0x68103197c1244927826f46839f5bba9d96721ab647e1da2575fbc627f52a2298	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	d0be38dd	https://github.com/whetstoneresearch/doppler/commit/d0be38dd	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1030...9b83	https://basescan.org/address/0x103004e50bed65dfba30dd9c264b6bdf5e529b83	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8fd8...cc73	https://basescan.org/tx/0x8fd8df0a77483f11239a223abb8c202cc1c2e849323bf448213cae8bcfcfcc73	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb354...e421	https://basescan.org/address/0xb35469ee64a87afd19b31615094fe3962d73e421	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0965...949a	https://basescan.org/tx/0x096551fca6b6f418132fb5ae240a82d58f86ab5f6958a00614058a8a1d48949a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb7b...be87	https://basescan.org/address/0xdb7b520bb5c3a2c5d4871198081911359f93be87	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x946a...a605	https://basescan.org/tx/0x946a639a88335b575180cc50384e7c5fb476d47ccbf5892527a4db67f223a605	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x89c2...5292	https://basescan.org/address/0x89c261c05b5f9b6bcba07c199b8dee7cfad45292	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xbdf9...6544	https://basescan.org/address/0xbdf938149ac6a781f94faa0ed45e6a0e984c6544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc5d2...cb77	https://basescan.org/tx/0xc5d2fff42e46e9006e0e4d2411a48964c698e95d9f936df30fa4c910f694cb77	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1e40...60c4	https://basescan.org/address/0x1e40b0875dda35f41e15cfb475403859b8c860c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8922...f781	https://basescan.org/tx/0x89227eaee3f00b545c38de6c43479b310472f4accd9a985fa6c0368821ebf781	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x43d0...f2b3	https://basescan.org/address/0x43d0d97ec9241a8f05a264f94b82a1d2e600f2b3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4901...3297	https://basescan.org/tx/0x49017fe92ee9c62f3b812c949a812dcd3f44fc26fd75a5d955beae7c9baa3297	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	6e368f4	https://github.com/whetstoneresearch/doppler/commit/6e368f4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xa82c...2d4b	https://basescan.org/address/0xa82c66b6ddeb92089015c3565e05b5c9750b2d4b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2ccf...4aa7	https://basescan.org/tx/0x2ccf65a48cf57faac39f96950367775d3e36f110b21f4421e6b5667333094aa7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	c7388da	https://github.com/whetstoneresearch/doppler/commit/c7388da	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x40bc...ddca	https://basescan.org/address/0x40bcb4dda3bcf7dba30c5d10c31ee2791ed9ddca	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xe202...16a3	https://basescan.org/tx/0xe202eb08fbd6b9b8364c9286706ba7b01e91fc395a96932ba02a6608b22016a3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	7c4e720	https://github.com/whetstoneresearch/doppler/commit/7c4e720	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xe0dc...58d0	https://basescan.org/address/0xe0dc4012ac9c868f09c6e4b20d66ed46d6f258d0	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb7e3...3cee	https://basescan.org/tx/0xb7e38496562c905cf6937a2678ac435f29d4078c53210a2cc8c633c2dbbf3cee	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	3d77e8f	https://github.com/whetstoneresearch/doppler/commit/3d77e8f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xe7df...090e	https://basescan.org/address/0xe7dfbd5b0a2c3b4464653a9becdc489229ef090e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9cb7...a8f5	https://basescan.org/tx/0x9cb74f0eecbe92fb1f45aa1fcba39d95f3e9416dfcb778da10b4238cb88ea8f5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	509b88a	https://github.com/whetstoneresearch/doppler/commit/509b88a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6ddf...5c33	https://basescan.org/address/0x6ddfed58d238ca3195e49d8ac3d4cea6386e5c33	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2e33...14c8	https://basescan.org/tx/0x2e33041fcf31503872054e93a9ed97265758916de747d561267c4f58fb9814c8	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	6a2dbfd	https://github.com/whetstoneresearch/doppler/commit/6a2dbfd	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce6c...8f0d	https://basescan.org/address/0xce6cd4e35447e05a39a50a4bcf61f2dcd93a8f0d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x01a4...de2d	https://basescan.org/tx/0x01a435db0951b844e75f85da6ea1225bf67d9ad52640318378b2d8f1cf2cde2d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f9e...3215	https://basescan.org/address/0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6607...c84b	https://basescan.org/address/0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6ddc...788c	https://basescan.org/tx/0x6ddc84b295914a84f04903f77221fe329b15e393dd3039e1f33fed6afc4a788c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xce32...3d47	https://basescan.org/address/0xce3212e6536f33cd6fbfee265224131353ca3d47	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xbe4b...b857	https://basescan.org/tx/0xbe4b618372426b8a31c8f0b79803ffbd129ce8ff8403a7ff86db29304bffb857	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xa636...CB33	https://basescan.org/address/0xa636bD5F9179E80e9EdB371Ed90956fA5ebdCB33	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	92c5ec4	https://github.com/whetstoneresearch/doppler/commit/92c5ec4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4353...d814	https://basescan.org/address/0x435312320c0330b1999746753551cdfbd83ad814	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xa80b...d3dd	https://basescan.org/tx/0xa80bc61388efdf2172a1f2996764798319eab1cf6336aabc366d26e995b4d3dd	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0673...e495	https://basescan.org/address/0x06731e30df4b0209ed19c39ba8ed253e17b0e495	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x05dc...7209	https://basescan.org/tx/0x05dc33d6047800ef0d103fb39cfe0cb92ab92621cbb33ffdc006ab1e49b17209	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd7ab...12d3	https://basescan.org/address/0xd7aba5f1d80a330a6fe9e96f7ba122710e0912d3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x53b4...e8ad	https://basescan.org/address/0x53b4c21a6cb61d64f636abbfa6e8e90e6558e8ad	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2c65...213d	https://basescan.org/tx/0x2c65e338366c8eedf942438b8183389527b0ef368aac782e5fb30f941b44213d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xeb7c...0862	https://arbiscan.io/address/0xeb7c034704ef8dcd2d32324c1545f62fb4ad0862	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5310...e4e8	https://arbiscan.io/tx/0x5310d839481c40bb4b0ee1ddf355d442b971d18d1c40d060a104ab180328e4e8	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	8b1fe7b1	https://github.com/whetstoneresearch/doppler/commit/8b1fe7b1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf455...357c	https://arbiscan.io/address/0xf45588e8e0b1df9db9ae7e20ece5726ae931357c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4fb7...cd5c	https://arbiscan.io/tx/0x4fb707960c109ca32039bb78a0489bb360cfa6b720d3e2bb426342a0a092cd5c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x37a9...bc9d	https://arbiscan.io/address/0x37a9fa204a4d3a429fded7e3469ab076c854bc9d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2f3d...502f	https://arbiscan.io/tx/0x2f3d7fc73196c7458511cd9317594f1fd14bcd62846a1fa02d92f747f159502f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1030...9b83	https://arbiscan.io/address/0x103004e50bed65dfba30dd9c264b6bdf5e529b83	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3cd3...4ef2	https://arbiscan.io/tx/0x3cd33b3df9036733fd32eb60182cd9afd8adcddcb581fb6ea097d632fff34ef2	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	d7e35957	https://github.com/whetstoneresearch/doppler/commit/d7e35957	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4389...573f	https://arbiscan.io/address/0x4389ad34938b14f25cff7ed983c53f5a42a2573f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x986b...4aaf	https://arbiscan.io/tx/0x986b70205ce1bd063c3a22b0f64a3258a347c9f72370f5366f5bd2b5d0b74aaf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3be8...c599	https://arbiscan.io/address/0x3be8b97fd0e713b5abe0649fa830223b6b4bc599	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd543...b5e5	https://arbiscan.io/tx/0xd54318a31703125c5d2b7c2bfe12cbbbb509b41ad13a875e31c9b14914a3b5e5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1b37...b69a	https://arbiscan.io/address/0x1b37d3a72082029c44b35b604ea473617580b69a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xaa7f...6544	https://arbiscan.io/address/0xaa7f809bb3752f715fa2e418230667c382a56544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xef7e...f82f	https://arbiscan.io/tx/0xef7e94b99692faee0c2e45494e77c6ea4b177b98298e378402a0787259baf82f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7bf3...e0c4	https://arbiscan.io/address/0x7bf319d8e969f7596b1bc171da9ce322f67ae0c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb6d5...4b3d	https://arbiscan.io/tx/0xb6d5ec95acf21522cedd1428089896da22f2192e3a37ddea09780b6b71ee4b3d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf4c2...5c04	https://arbiscan.io/address/0xf4c22465532f64777ffcd7770831aeca38f35c04	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xe9d7...0b99	https://arbiscan.io/tx/0xe9d741158c1466e911b512b89a116be6dc8addfc3ab099b72abd6649313c0b99	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdeb0...b7ef	https://arbiscan.io/address/0xdeb0447dae3eb177c4dba8bbccca25c8f273b7ef	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1986...56ff	https://arbiscan.io/tx/0x1986fdb47670fb30e4c5eaabf51db7efbfbf353daf61f6a79a9ba5091db256ff	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb03...37cf	https://arbiscan.io/address/0xdb036746d65dd52126b1915f1adf555e6c5237cf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xeba6...958e	https://arbiscan.io/tx/0xeba6f7aeee36ab65f2fe85fd9d6b2847efb801c0d6a03667618a24186df1958e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xde88...29a3	https://arbiscan.io/address/0xde8886a0019ea060b8378ee37b8a23b8117f29a3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xcc0e...0d7c	https://arbiscan.io/tx/0xcc0e82494b6d0aa65e7b360b8547b0224b44b800f85c3a2fc5bebb0c71ca0d7c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x85f3...1ad7	https://arbiscan.io/address/0x85f37f74ef2478a770318bc810177a9835911ad7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4a84...5a21	https://arbiscan.io/tx/0x4a844936e30f18fe69acba8fabcecbdc0e1a9ba77a52039a17e11d3e42b75a21	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xba2f...5a0e	https://arbiscan.io/address/0xba2f330edb16cd8056f5988d8ce19bbc63475a0e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb2dd...ca70	https://arbiscan.io/tx/0xb2dde36b3fc885f1fdf9c1d7161bc3b98f85edfcc51df88c55ef2b29e44cca70	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc9be...0567	https://arbiscan.io/address/0xc9be59b344ec66547a4c697aa374e959d59b0567	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6bb6...7de1	https://arbiscan.io/tx/0x6bb6d2edc08cff62a25856cb60cb63c3a65e20812981b51cf9770cad25d97de1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5f9e...3215	https://arbiscan.io/address/0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc17a...8201	https://arbiscan.io/tx/0xc17af5adf9ea4ee8dd9871435d358b251f5eb0e82298eccd9c646759cc628201	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6607...c84b	https://arbiscan.io/address/0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xed82...64f5	https://arbiscan.io/address/0xed822828b6109d16a9d362b8146a35789e0064f5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd299...b90e	https://arbiscan.io/tx/0xd299c101a8e2b4c8fbe3f6dd880ab11a4cf98337cc806f22d979630e72c7b90e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc16c...aba2	https://arbiscan.io/address/0xc16c826f75338a5ea626f94f8992191b4ce5aba2	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6dfe...9c91	https://arbiscan.io/tx/0x6dfe8643fc244e8f5f75563d201b71ab0dcec87047c86c8ebc46fafdcb669c91	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6076...c578	https://arbiscan.io/address/0x6076fddfcac0dd980e0350dff5239fec3f86c578	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x46ad...ef06	https://arbiscan.io/address/0x46adee7595d48b1ec53090e9bc78e1e69fa0ef06	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x283e...1409	https://arbiscan.io/tx/0x283e6e57f825edb9eafbee8e3aaeed4a39b4824be1c8c04390bc03867bc11409	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x63f6...42a5	https://arbiscan.io/address/0x63f6efe03f25a8c6650b38d05c5a454051d642a5	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb072...2b89	https://arbiscan.io/tx/0xb07266bb98ee8b0a5d3910d734a1eb973561cd0159b8a82fbd8b676157a82b89	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb050...a333	https://arbiscan.io/address/0xb05046cea797c993fb5b583098b1c4682e9da333	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6cce...57ea	https://arbiscan.io/address/0x6cce158b6d1747617fc218592b4d60b239b957ea	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4d7f...91d8	https://arbiscan.io/tx/0x4d7f9bcff4624e9558f1ae65baa30d4022c34ec3305b6d74e18da4ff8ab291d8	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`4carc9eePfE7jKUXdCAYMhcPf4awEFpZPrz1sTykdss1`	https://explorer.solana.com/address/4carc9eePfE7jKUXdCAYMhcPf4awEFpZPrz1sTykdss1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`5pXzd9UiWrVxATCYWmgo5EbfxzXqHYhfSKGdCPXPz7vK`	https://explorer.solana.com/address/5pXzd9UiWrVxATCYWmgo5EbfxzXqHYhfSKGdCPXPz7vK	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`H71WD4tsiCCipro4urykWHySH1ryvLTmqEdNbHTGwb3o`	https://explorer.solana.com/address/H71WD4tsiCCipro4urykWHySH1ryvLTmqEdNbHTGwb3o	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`BeyqffXEVgLpM3fQ1zjk8YnZzQN9sMVrCKtNKwSxNATr`	https://explorer.solana.com/address/BeyqffXEVgLpM3fQ1zjk8YnZzQN9sMVrCKtNKwSxNATr	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x3411...1c6e	https://sepolia.basescan.org/address/0x3411306ce66c9469bff1535ba955503c4bde1c6e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5508...1b5a	https://sepolia.basescan.org/tx/0x550857ce00eb6b050fbd0a089bbd516226b88ee05a052792c7d380acd7a61b5a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	68b9f34	https://github.com/whetstoneresearch/doppler/commit/68b9f34	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0abc...4426	https://sepolia.basescan.org/address/0x0abcf819fd57c9f0141628410ffc273405e44426	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb2c5...12a4	https://sepolia.basescan.org/tx/0xb2c5e7493f5da21edd21baeaf5c68b09075bd0722811ac3b5fe849385bd112a4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	ee35a52	https://github.com/whetstoneresearch/doppler/commit/ee35a52	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdddd...613a	https://sepolia.basescan.org/address/0xdddddd67579b73fddff301db92fd4a01afd4613a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8990...fc8c	https://sepolia.basescan.org/tx/0x89906b88339fa4b5f05cf925953da34007ca50ed0b08941d5202d962f8fdfc8c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x98b0...243a	https://sepolia.basescan.org/address/0x98b0aa2e0f134dbb3eb157b5646d387e6d55243a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x31ef...433d	https://sepolia.basescan.org/tx/0x31effe0091f029a5696b34ece79d38c7396e8cb5e4b08f214f4c953fb1f5433d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	4c89651f	https://github.com/whetstoneresearch/doppler/commit/4c89651f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0000...be60	https://sepolia.basescan.org/address/0x0000000000f13ab5b685f03a412a26719ab6be60	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1729...70b1	https://sepolia.basescan.org/tx/0x1729dd8ed52904596144ee17f4c417d08e5aee22672fa258deb8a530bcdc70b1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	9b99b8cf	https://github.com/whetstoneresearch/doppler/commit/9b99b8cf	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb354...e421	https://sepolia.basescan.org/address/0xb35469ee64a87afd19b31615094fe3962d73e421	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4457...a383	https://sepolia.basescan.org/tx/0x44576f889d9c6701ec89a1c044130ba9d3a9c17ed76ee30ef2087d59d08aa383	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xdb7b...be87	https://sepolia.basescan.org/address/0xdb7b520bb5c3a2c5d4871198081911359f93be87	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x2f93...6edc	https://sepolia.basescan.org/tx/0x2f93faf612ccc94dddfb9d1d2a6971f42479bcb0b14ace4ac48efc54715b6edc	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x89c2...5292	https://sepolia.basescan.org/address/0x89c261c05b5f9b6bcba07c199b8dee7cfad45292	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xbdf9...6544	https://sepolia.basescan.org/address/0xbdf938149ac6a781f94faa0ed45e6a0e984c6544	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xb7b3...7779	https://sepolia.basescan.org/tx/0xb7b3768a41620e2a46319093291897da1494d5be9f81081412f37250dac77779	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x1e40...60c4	https://sepolia.basescan.org/address/0x1e40b0875dda35f41e15cfb475403859b8c860c4	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc36d...4d7a	https://sepolia.basescan.org/tx/0xc36dec51ef6fcac957c1644e7d565afa756d887ee228ff53b7cf2ecb3cbf4d7a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4a8d...47a7	https://sepolia.basescan.org/address/0x4a8d81db741248a36d9eb3bc6ef648bf798b47a7	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x403a...dc6d	https://sepolia.basescan.org/tx/0x403a8a37966866e14fa673221f07b770a764bf8fcae238882021e6e76912dc6d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x9dbf...2e20	https://sepolia.basescan.org/address/0x9dbfaadc8c0cb2c34ba698dd9426555336992e20	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xfb4b...c2cc	https://sepolia.basescan.org/tx/0xfb4b43d9ed92a62705b497a48668673ee0b5d35ea02075066a44a8e2d4bcc2cc	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0902...fbfa	https://sepolia.basescan.org/address/0x0902e7c7207df8ed6303aef4382bcab181b5fbfa	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5b43...fc0f	https://sepolia.basescan.org/tx/0x5b43dfaf894e810839407622f0f68404677ead0f1d8d4713a6766e68e754fc0f	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	74867435	https://github.com/whetstoneresearch/doppler/commit/74867435	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x16ad...d53c	https://sepolia.basescan.org/address/0x16ada5be50c3c2d94af5feae6b539c40a78ad53c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x029d...1c2e	https://sepolia.basescan.org/tx/0x029d8d87e753b383fc5afa33a8639bf28e32144dd8de519a38bde94e8b0b1c2e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x7bd7...5ea1	https://sepolia.basescan.org/address/0x7bd798fafc99a3b17e261f8308a8c11b56935ea1	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf89e...d650	https://sepolia.basescan.org/tx/0xf89e9f684ba171864ec0bce988f5971732d7650e258f824c2294f5b8df1cd650	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	51f9aec	https://github.com/whetstoneresearch/doppler/commit/51f9aec	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xf110...2eb0	https://sepolia.basescan.org/address/0xf11066abbd329ac4bba39455340539322c222eb0	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc184...95df	https://sepolia.basescan.org/tx/0xc184a1d61256f247e7ec65390c65056a4f3179adcde70c304702f7ca465895df	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xc203...ec0a	https://sepolia.basescan.org/address/0xc20347a97646ed6e2b45dbfece372f68d928ec0a	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x29a0...6532	https://sepolia.basescan.org/tx/0x29a0454b020a5adca94d88761f174b77ac9e9eb0042b80571974673058136532	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xadb9...7606	https://sepolia.basescan.org/address/0xadb90ef4dc001cfb81ecaded2cdbda7d18487606	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x5e2a...e90d	https://sepolia.basescan.org/address/0x5e2a91f8ebe288e0aa76a0c1a47877ded801e90d	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x8b6b...ca2c	https://sepolia.basescan.org/tx/0x8b6b1fc85539c591ea1b1ed6bb774408d85758ecc99457385b6a7f5c85e5ca2c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xcE32...3D47	https://sepolia.basescan.org/address/0xcE3212e6536F33cD6fbFEE265224131353Ca3D47	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xbb9a...eb0b	https://sepolia.basescan.org/tx/0xbb9a6e9cc49d7f03afa05a440f187dac6098ebbd9981ba70474a37642aabeb0b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	534c659	https://github.com/whetstoneresearch/doppler/commit/534c659	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x80F4...86a2	https://sepolia.basescan.org/address/0x80F42ECCc91177D39E20f1A88A54D231c1b086a2	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x4353...d814	https://sepolia.basescan.org/address/0x435312320c0330b1999746753551cdfbd83ad814	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x6ace...8a0b	https://sepolia.basescan.org/tx/0x6aceb9b087abd9b08b758afc52446cc4dd9ccd6cbe7a63cfd18055f26a308a0b	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0673...e495	https://sepolia.basescan.org/address/0x06731e30df4b0209ed19c39ba8ed253e17b0e495	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd404...327c	https://sepolia.basescan.org/tx/0xd404fbf58189140785b11684c95a028d6d1d90e162cba2ff7ef3533ff706327c	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0xd7ab...12d3	https://sepolia.basescan.org/address/0xd7aba5f1d80a330a6fe9e96f7ba122710e0912d3	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x53b4...e8ad	https://sepolia.basescan.org/address/0x53b4c21a6cb61d64f636abbfa6e8e90e6558e8ad	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	0x0575...002e	https://sepolia.basescan.org/tx/0x0575286dfae7502987918a569f1bba9e118649c3883dc523af9b2d34a3cf002e	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`4h3Dqyo5qmteJoMxXt3tdtfXELDB6pdRTPU9mWruiKp1`	https://explorer.solana.com/address/4h3Dqyo5qmteJoMxXt3tdtfXELDB6pdRTPU9mWruiKp1?cluster=devnet	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`9PSxVPoPfnbZ8Q1uQhgS6ZxvBjFboZtebNsu34umxkgQ`	https://explorer.solana.com/address/9PSxVPoPfnbZ8Q1uQhgS6ZxvBjFboZtebNsu34umxkgQ?cluster=devnet	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`7WMUTNC41eMCo6eGH5Sy2xbgE3AycvLbFPo95AU9CSUd`	https://explorer.solana.com/address/7WMUTNC41eMCo6eGH5Sy2xbgE3AycvLbFPo95AU9CSUd?cluster=devnet	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/contract-addresses	`HVsPNZh98TgChUXHwKrUG47SUqvGQHxUy5wZwcQLFD4i`	https://explorer.solana.com/address/HVsPNZh98TgChUXHwKrUG47SUqvGQHxUy5wZwcQLFD4i?cluster=devnet	pages/25-docs-reference-contract-addresses.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	v3	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Token	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/token.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/quoter.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Streamable V3	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/streamable-v3.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	v4	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Examples	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/quoter.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Lens	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/lens.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/governance-options.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Historical context	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/overview.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	Legacy SDK migration guide	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/sdk-migration-guide.md	pages/27-docs-reference-legacy-sdks-and-migration-guides.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Token	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/token.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/quoter.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	Streamable V3	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/streamable-v3.md	pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview	Drift	https://delvtech.github.io/drift/	pages/29-docs-reference-legacy-sdks-and-migration-guides-v3-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview	**Configuration Types**	#default-configurations-and-customization	pages/29-docs-reference-legacy-sdks-and-migration-guides-v3-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview	Getting Started Guide	/reference/legacy-sdks-and-migration-guides/v3/getting-started.md	pages/29-docs-reference-legacy-sdks-and-migration-guides-v3-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview	Factory Reference	/reference/legacy-sdks-and-migration-guides/v3/factory.md	pages/29-docs-reference-legacy-sdks-and-migration-guides-v3-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Drift	https://github.com/delvtech/drift	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Contract Addresses	/reference/contract-addresses.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Base Sepolia faucet	https://docs.base.org/tools/network-faucets	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Factory Reference	/reference/legacy-sdks-and-migration-guides/v3/factory.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Token Operations	/reference/legacy-sdks-and-migration-guides/v3/token.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Quoter Usage	/reference/legacy-sdks-and-migration-guides/v3/quoter.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	V4 Migration	/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Token Launch Examples	/reference/legacy-sdks-and-migration-guides/v4/examples.md	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	Implementation Guide	broken://pages/2xkvOvHSEt9zfaWDOv5z	pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory	Streamable V3 documentation	https://github.com/whetstoneresearch/doppler-docs/blob/main/v3-sdk/streamable-v3.md	pages/31-docs-reference-legacy-sdks-and-migration-guides-v3-factory.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory	V4 Migrator documentation	/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md	pages/31-docs-reference-legacy-sdks-and-migration-guides-v3-factory.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees	StreamableFeesLocker Reference	/reference/legacy-sdks-and-migration-guides/v4/custom-fees.md	pages/34-docs-reference-legacy-sdks-and-migration-guides-v3-custom-fees.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees	Factory Reference	/reference/legacy-sdks-and-migration-guides/v3/factory.md	pages/34-docs-reference-legacy-sdks-and-migration-guides-v3-custom-fees.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees	V4 SDK Documentation	/reference/legacy-sdks-and-migration-guides/v4/factory.md	pages/34-docs-reference-legacy-sdks-and-migration-guides-v3-custom-fees.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options	V4 Migrator Guide	/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md	pages/35-docs-reference-legacy-sdks-and-migration-guides-v3-governance-options.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options	Token Launch Examples	https://github.com/whetstoneresearch/doppler-docs/blob/main/doppler-v3-sdk-reference/token-launch-examples.md	pages/35-docs-reference-legacy-sdks-and-migration-guides-v3-governance-options.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options	Contract Addresses	https://github.com/whetstoneresearch/doppler-docs/blob/main/doppler-v3-sdk-reference/contract-addresses.md	pages/35-docs-reference-legacy-sdks-and-migration-guides-v3-governance-options.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Examples	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/quoter.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Lens	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/lens.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/governance-options.md	pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	Drift	https://delvtech.github.io/drift/	pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	**Pre-deployment Configuration**	#doppler-predeployment-configuration-parameters	pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	Getting Started Guide	/reference/legacy-sdks-and-migration-guides/v4/getting-started.md	pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	Factory Reference	/reference/legacy-sdks-and-migration-guides/v4/factory.md	pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	Doppler Lens Documentation	/reference/legacy-sdks-and-migration-guides/v4/lens.md	pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Drift	https://github.com/delvtech/drift	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Contract Addresses	/reference/contract-addresses.md	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Base Sepolia faucet	https://docs.base.org/tools/network-faucets	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Factory Reference	/reference/legacy-sdks-and-migration-guides/v4/factory.md	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Doppler Lens Usage	/reference/legacy-sdks-and-migration-guides/v4/lens.md	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Quoter Usage	/reference/legacy-sdks-and-migration-guides/v4/quoter.md	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Token Launch Examples	/reference/legacy-sdks-and-migration-guides/v4/examples.md	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	Implementation Guide	broken://pages/2xkvOvHSEt9zfaWDOv5z	pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples	Doppler Multicurve	https://doppler.lol/multicurve.pdf	pages/40-docs-reference-legacy-sdks-and-migration-guides-v4-examples.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory	DopplerPreDeploymentConfig	/reference/legacy-sdks-and-migration-guides/v4/overview.md#doppler-predeployment-configuration-parameters	pages/41-docs-reference-legacy-sdks-and-migration-guides-v4-factory.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees	**Token Launch Examples**	/reference/legacy-sdks-and-migration-guides/v4/examples.md	pages/44-docs-reference-legacy-sdks-and-migration-guides-v4-custom-fees.md
+https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/overview	https://github.com/whetstoneresearch/doppler-sdk	https://github.com/whetstoneresearch/doppler-sdk	pages/46-docs-reference-legacy-sdks-and-migration-guides-overview.md
+https://docs.doppler.lol/reference/security-and-bug-bounties	OpenZeppelin Audit	https://drive.google.com/drive/folders/1cgY4UDtQ9j2v1t4XvFBraJqNCUfrdFxq?dmr=1\&ec=wgc-drive-globalnav-goto	pages/48-docs-reference-security-and-bug-bounties.md
+https://docs.doppler.lol/reference/security-and-bug-bounties	Doppler Cantina Audit Contest	https://cantina.xyz/competitions/57b00aab-8f8b-4d62-9378-41b6460ce6aa	pages/48-docs-reference-security-and-bug-bounties.md
+https://docs.doppler.lol/reference/roadmap	Read the Launch announcement	https://x.com/aadams/status/1889362777791168877	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Ink announcement	https://x.com/dopplerprotocol/status/1905273707817316510	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Base announcement	https://x.com/dopplerprotocol/status/1907810739315761221	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Core announcement	https://x.com/dopplerprotocol/status/1933169128166334882	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Multicurve announcement	https://x.com/dopplerprotocol/status/1973770809165639855	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Monad announcement	https://x.com/dopplerprotocol/status/1992986760205480204	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the DN404 announcement	https://x.com/dopplerprotocol/status/1963646130732081406	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Ethereum announcement	https://x.com/dopplerprotocol/status/2020928888671699410	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Rehype announcement	https://x.com/dopplerprotocol/status/2019832104746700846	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Doppler App announcement	https://x.com/dopplerprotocol/status/2021305070030053586	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Read the Decaying Fees announcement	https://x.com/dopplerprotocol/status/2021989921133830359	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Doppler Airlock	https://docs.doppler.lol/how-it-works/airlock-and-modules	pages/49-docs-reference-roadmap.md
+https://docs.doppler.lol/reference/roadmap	Doppler Telegram	https://doppler.lol/telegram	pages/49-docs-reference-roadmap.md
+https://app.doppler.lol/ (snapshot)	Doppler	https://app.doppler.lol/	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View AIAIAI AAArtificial Inu	https://app.doppler.lol/tokens/robinhood/0x3c3bfd57cc0e3d0b20c3cf4c3d5ad1e861666019	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View ruru Rururemon	https://app.doppler.lol/tokens/robinhood/0x0bab65bfda4211d23b89083da27996057b204a0e	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View I i	https://app.doppler.lol/tokens/robinhood/0xe9ae0b4ee3afc555cca8c54a974c06f4f0a41e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View EEE ElonElonElon	https://app.doppler.lol/tokens/robinhood/0x6b70c135ac60f32edbf02784729c5f6574a31e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View FLIPPY FLIPPY	https://app.doppler.lol/tokens/robinhood/0x8ddafc5add5330ba340b68386dc849132ae11e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MEOWDANI The Reddit Cat	https://app.doppler.lol/tokens/robinhood/0xe6bf884240dae13c16fe936264f5abebc1671e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View A Adell	https://app.doppler.lol/tokens/robinhood/0x05d73a652529f0b1a6dd2b89de26b449ec9f1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BLOW BLOWING	https://app.doppler.lol/tokens/robinhood/0xe2d8c5cb328b81d7c3c62bc2b8c970caf3031e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View JINQIA Money Mushroom	https://app.doppler.lol/tokens/robinhood/0x87de86c26fa03010a55e149ccdeba6e01d291e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BP Blackpurry	https://app.doppler.lol/tokens/robinhood/0xfe3e385071ca88f6027c2f0d3814dc7bf9321e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View HESOYAM Money Glitch	https://app.doppler.lol/tokens/robinhood/0x9385ac2ab396c3b7f48c9d422d7b4d28e2ef1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View JOHNDOG John Dog	https://app.doppler.lol/tokens/robinhood/0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View DEBTCOIN Debtcoin	https://app.doppler.lol/tokens/robinhood/0x55d9bc094c032ce0f4c57cb09e6ab8f225531e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View CUM Cummingtonite	https://app.doppler.lol/tokens/robinhood/0x7a6a3b93cb3ffead8b180b5f537e0ce7832d1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View KOLI KOLI	https://app.doppler.lol/tokens/robinhood/0xb8d9f969db56bb57353e36fd0015d98e3a761e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MEOW AMD	https://app.doppler.lol/tokens/robinhood/0x7235cf5ea4674fe09531706954b5f1ad6e0a1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View AAPLDOG Apple Dog	https://app.doppler.lol/tokens/robinhood/0x06e52e5fddf0d8a6d10b963c753a8ef3e1161e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BOMBA Bombardilo	https://app.doppler.lol/tokens/robinhood/0x525f24bf41f178174788c3297af9c0af1ba01e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MONITOR The Situation	https://app.doppler.lol/tokens/robinhood/0x1a911bb954daa9cb38513423075be74450351e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BALD BALD	https://app.doppler.lol/tokens/robinhood/0x7ccc7e87ca902ab764cf359edef0fb0386221e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View APU Ape Program Inu	https://app.doppler.lol/tokens/robinhood/0xc11023b79bb3d29354fc3b3a5a184066199e1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PLTITS Palantits	https://app.doppler.lol/tokens/robinhood/0x5c9f9a42310541a24dc5cee4cc96345feaea1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View ZEPBOUND Zepbound	https://app.doppler.lol/tokens/robinhood/0x0cf0122188a12868e2c38aef8d6f65ff5e441e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View AW AWTSM GREG	https://app.doppler.lol/tokens/robinhood/0xe87843419a1e6863f8952b27f56ee3afb1af1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View GIST Gist	https://app.doppler.lol/tokens/robinhood/0xd61240ce35601fe0f057387116762ad9c1cf5ba3	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View ENEH Embrace Nature, Embrace Health	https://app.doppler.lol/tokens/robinhood/0x49958e16e6e80219703a919ee055771abad01e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MOUNJARO Mounjaro	https://app.doppler.lol/tokens/robinhood/0x403872caa231a60df3761f49102a5c007b921e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View LOOONGSHOT Longshot	https://app.doppler.lol/tokens/robinhood/0x3a7c76d02f1863c3e324cb3862a59e59a34f1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PEPEPO PEPEPO	https://app.doppler.lol/tokens/robinhood/0xeba562a89c1d40cd9e284fac05e9cb6b96c31e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View vested vested	https://app.doppler.lol/tokens/robinhood/0xc90d15e1788aedd50b8fcd7fcf41c59fa4b41e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View CHILLICATS chilli cats	https://app.doppler.lol/tokens/robinhood/0x36fddaa296c44483ef7444c8286df46762081e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View LOO Left on Opened	https://app.doppler.lol/tokens/robinhood/0x3283a25ad4f3e61ceb055ccd5090e1115c6e1e18	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	X.com	https://x.com/dopplerprotocol	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	Telegram	https://t.me/pure_markets	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	Docs	https://docs.doppler.lol/	_raw/network/app-create-standard-step3.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MUSHROOMCOIN Mushroom Coin	https://app.doppler.lol/tokens/robinhood/0xa333b57f0de9b169cbc91f51d9680af719161e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View FORASEN Forasen	https://app.doppler.lol/tokens/robinhood/0x9fbc430b96b8f24adab5dff9506e56b6e1561e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View GTAVI GTAVI	https://app.doppler.lol/tokens/robinhood/0xed6a6fed25a5d1303bd3a1a4d8405a32edb41e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View LUCIA LUCIA	https://app.doppler.lol/tokens/robinhood/0xae12303bd73442d3c8dba9a58b164070d78a1e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BONER Boner Coin	https://app.doppler.lol/tokens/robinhood/0x98096d17e191b3da1d5f99a6d7b3584351b11e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View KUAMI FAMI DOG	https://app.doppler.lol/tokens/robinhood/0x9eb74ed0183457b16314fdc66655044a16901e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View LIBTARD LIBTARD	https://app.doppler.lol/tokens/robinhood/0xf0d8832157bc028381b471dc7611f33259111e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BENEFITS BENEFITS	https://app.doppler.lol/tokens/robinhood/0x442dbde8ec66743380f2266e755c4a00116f6d6d	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PEPTIDES Peptides	https://app.doppler.lol/tokens/robinhood/0x52f380a513112428723abf8afed125824e4a1e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View VACCINU VACCINU	https://app.doppler.lol/tokens/robinhood/0xcf1968747bc573294e468fd0cdab0dc61b971e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View YEFANG Yefang Zhang	https://app.doppler.lol/tokens/robinhood/0x27b8893db175ff04acfe2342bc45bc6dc6b41e18	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View QOTTA QOTTA	https://app.doppler.lol/tokens/robinhood/0xf2c71c7e20f87314395c092d51c8daa89bab22e4	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	Doppler Protocol	https://docs.doppler.lol/explainer#fees	_raw/network/app-create-standard-step4.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View CASHBIRD cashbird	https://app.doppler.lol/tokens/robinhood/0x38c8f642a04feac9899990276b4207fe4f621e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View NOOB NOOB	https://app.doppler.lol/tokens/robinhood/0xe2057489f5039dcf1b56897aca44c0a41ad71e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View CHILL Netflix n Chill	https://app.doppler.lol/tokens/robinhood/0x57ffde6eafb5dc2d5d596b6502edebe982ff1e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View CHI CHINESE INU	https://app.doppler.lol/tokens/robinhood/0x95487fd15e863dec1b42b8b95bd080511c9f1e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View SCHIFFY SCHIFFY	https://app.doppler.lol/tokens/robinhood/0x42afa2124ca5a2b83898e46b2da9a190995b1e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View TRUMPCOIN Trump Coin	https://app.doppler.lol/tokens/robinhood/0x0fe4c2e0360cba9491748fa63c6bf7e7cf916198	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View TOWERS 911	https://app.doppler.lol/tokens/robinhood/0xa4650b541df2a68509bb9684771d9c8b790f1e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View gubby gubby	https://app.doppler.lol/tokens/robinhood/0xec6e5194610de2246aa248a459db910511901e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View TRUTHCOIN TRUTH COIN	https://app.doppler.lol/tokens/robinhood/0x488aebd810e4e4ea9844b98dc1e5826346741e18	_raw/network/app-create-standard-step2.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View RING BANG MY LINE	https://app.doppler.lol/tokens/robinhood/0xce5afd3d1509cdeb73b9aa631f8152bdf76a1e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View SELFIE Selfie Cat	https://app.doppler.lol/tokens/robinhood/0x1aef5c181c5130786c54e3b7a5d347fd36361e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View JASON Jason Duval	https://app.doppler.lol/tokens/robinhood/0xb870d0b5618133c22cf4396bf0d8a9c0a8651e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View MOGU Mushroom	https://app.doppler.lol/tokens/robinhood/0x51582fb934df7c7898949857da635a3f17551e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View QUANTUMCAT Quantum Cat	https://app.doppler.lol/tokens/robinhood/0x5edf59a6a6f207aaaf0fc60b0c972c6d044e1e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View NUBTC Unvaxxed Sperm	https://app.doppler.lol/tokens/robinhood/0xb6263a8d8d418af67f8bbfa6d86888d5b91b1e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PLUMBERS plumbers	https://app.doppler.lol/tokens/robinhood/0x812720c5bfc6ec5f01ceeefdf3efd9faf1591e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View RETATRUTIDE Retatrutide	https://app.doppler.lol/tokens/robinhood/0x2571f6697c247e547bf22fbc86ecf787952e1e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View RUNECRYPTO RuneCrypto	https://app.doppler.lol/tokens/robinhood/0x8c856ecf41e8ace24045074cc8fb6e229fa01e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PLUM PLUMBER	https://app.doppler.lol/tokens/robinhood/0x0ae634d26e9d56ca1ddaccc97de49b8768521e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View BOMBS BOMBS	https://app.doppler.lol/tokens/robinhood/0x7254b529ecfb1d3b2711fc3fd3ecf5da66a01e18	_raw/network/app-create-mode.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View SETZ SETZ	https://app.doppler.lol/tokens/base/0x020eaeee24bcad37cb9a01aa1f8c591c47341ba3	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View Delu Delu	https://app.doppler.lol/tokens/base/0x7b0ee9dcb5c1d4d7cd630c652959951936512ba3	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View bored bored	https://app.doppler.lol/tokens/base/0xed07f4baffda18d9acbbdcee067884f2f42e05e7	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View VVVeity Venice Deity	https://app.doppler.lol/tokens/base/0x85635006d808030e97f3174c8ea1b4aa1f1feba3	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View zoracr zoracr	https://app.doppler.lol/tokens/base/0xb76aae9dc42a486c72031a210e9e4dfcef04bb90	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View nikitaolay nikitaolay	https://app.doppler.lol/tokens/base/0x19acf7237ba3213a0cdd8735c66b027ac0328b85	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View spx48d spx48d	https://app.doppler.lol/tokens/base/0xbc552cb20d18164acc95355e55e31a5bb8f338f5	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View IPOD iPod	https://app.doppler.lol/tokens/base/0xa6af0cea8fbc93e1eccc00f1fdd9a0bba251fee1	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View EARENDEL Earendel	https://app.doppler.lol/tokens/base/0x62bcefd446f97526ecc1375d02e014cfb8b48ba3	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View airdropbase airdropbase	https://app.doppler.lol/tokens/base/0x4d79331b3df54f569a9e0da2526619de926dd93e	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View Brain Brain	https://app.doppler.lol/tokens/base/0x7ff2b3a09755fb38bc8334c2c05173f75fd4dba3	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View PEYE PrizeEye	https://app.doppler.lol/tokens/base/0xf26e7eb9edea30728689abe7a24f0bfdf6becec8	_raw/network/app-filters.snapshot.txt
+https://app.doppler.lol/ (snapshot)	View FPK Fuelpunk	https://app.doppler.lol/tokens/base/0x7a2661972e3f9c9badbbd19c9fbfa3e13179c468	_raw/network/app-filters.snapshot.txt

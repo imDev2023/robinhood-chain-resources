@@ -1,0 +1,3 @@
+AI community deployment: splitter 0x4f6c50a87bf234c45191f88ed4cbb9f021b7dc67 governor 0xfd73a919639ac340b07225a3595b5d701f790f64 timelock 0xd14d2eeb9648f53fa153a218eeed908789c28630 originalReceiver 0x4a0cb7eef4b4dc31c75eac705e03463cfc3c5cb2 poolId 0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27 deployedAt 1785182394
+TIMELOCK_MIN_DELAY (172800,) MIN_DEPLOY_SHARES (500000000000000000,)
+MOO vault ADMIN ('0x8aa7a1dfa6635af2979da4d2bdd51780842e3f99',) isActive (True,) pendingFees (0, 0)

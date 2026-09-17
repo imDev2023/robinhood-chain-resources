@@ -1,0 +1,118 @@
+# Bags - Launch wizard step 4, launch (Login to launch gate)
+
+> Source: https://bags.fm/launch
+> Retrieved: 2026-09-02 (agent-browser read; screenshot screenshots/111-app-launch-step4-launch.png. The archive did not log in and nothing was submitted.)
+
+---
+
+-
+
+Home
+
+-
+
+Trade
+
+-
+
+Create
+
+-
+
+Docs
+
+log in
+
+Steps
+
+- Coin details
+
+- Mode
+
+- Fee sharing
+
+- Launch
+
+# Launch a coin
+
+- Coin details
+
+-
+
+Mode
+
+-
+
+Fee sharing
+
+-
+
+Launch
+
+Coin details
+
+read-only archive walkthrough, not submitted
+
+UPLOAD IMAGE
+
+Social links (optional)
+
+Chain
+
+Choose where your coin launches.
+
+Solana
+
+Launch on Solana
+
+Robinhood
+
+Launch on Robinhood Chain
+
+Mode
+
+Choose how your coin's trading fees work.
+
+Normal
+
+Earn 1% of total trading volume
+
+Stock dividends
+
+Use fees to buy stocks and pay dividends to holders
+
+FEE SHARING
+
+Add claimers to share fees with social accounts or EVM wallets. Anything you don't share stays with you.
+
+Loading your wallet…
+
+Total: 100.00%
+
+Dev buy
+
+Buy your coin before anyone else.
+
+$
+
+‌
+
+Login to launch
+
+copy launch settings link
+
+Preview
+
+Robinhood Chain
+
+$ARCHVArchive Test
+
+read-only archive walkthrough, not submitted
+
+Fee distribution
+
+You100%
+
+© 2026 Bags Holdings, Inc.
+
+AboutContactTermsDocsDiscordSupport

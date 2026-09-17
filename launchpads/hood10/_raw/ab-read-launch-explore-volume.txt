@@ -1,0 +1,924 @@
+H10HOOD10LaunchboardvaultprofileLaunchConnect
+
+$ISPY+0.0%$NVDASWETH-17.1%$PONSINUPONS-6.3%$MONEYWETH-1.9%$SHITCOIN$LOUDERWETH$OOFRBLX-1.6%$WTERBLX$WIREDWETH-33.8%$WIREDWETH$PRINTERNVDA$PONSCPONS$CASHDOGWETH$NOOTPENGU$PTHIGHSPONS$GBPTENDIES$NIHILISTPENGU$LETSRIDEHOOD10$HOUDINIHOOD10$WEEEEEEWETH$HOODINIUSDG$FAAAHWETH$CRISPY-1.2%$10XWETH$LIPSWETH$WRERWETH+0.0%$PONZIPONS$PONDYWETH$CAT10HOOD10$BOBOPENGU$ADAYAAPL-0.0%$POHPENGU$LESHYIndex$RETSBAPENGU$PENGUSPENGU$MICRODICKmicroduck$H10HOOD10$DUMBPHONEPONS$YALAYOLO$NIETZSCHEANPENGU$CATLESSCASHCAT$P4096WETH$HOODSTERPENGU$ATLASPENGU$HOOD10HOOD10$HODSTERWETH$ABSTERPENGU$FEFICASHCAT$POLLYPENGU+0.0%$GOONERPENGU-46.8%$TESTINGPENGU+0.0%$TESTERPENGU+0.0%$PONS20PONS+0.0%$PONSFRIENDSPONS-4.8%$FROGFRONG$HODLHOOD10$QUACKmicroduck$AI2AI$INDEXIndex$INDEX2Index$ZUCKERBERGMETA$EPOCHHOOD10$KARPPLTR$HEEHEEWETH$GGCASHCAT$SPYSPY$ELONTSLA$HCROCHOOD10$JENSENNVDA$TIMCOOKSWETH$MOONCATHMM$GOLDENCATCASHCAT$TOP10HOOD10$6HOOD10$TIANGONGNVDA$TIANGONGNVDA$AGINVDA$H11WETH$AAPLCATAAPL$FLYWHEELHOOD10-45.7%$TESTHOOD10+0.0%$ISPY+0.0%$NVDASWETH-17.1%$PONSINUPONS-6.3%$MONEYWETH-1.9%$SHITCOIN$LOUDERWETH$OOFRBLX-1.6%$WTERBLX$WIREDWETH-33.8%$WIREDWETH$PRINTERNVDA$PONSCPONS$CASHDOGWETH$NOOTPENGU$PTHIGHSPONS$GBPTENDIES$NIHILISTPENGU$LETSRIDEHOOD10$HOUDINIHOOD10$WEEEEEEWETH$HOODINIUSDG$FAAAHWETH$CRISPY-1.2%$10XWETH$LIPSWETH$WRERWETH+0.0%$PONZIPONS$PONDYWETH$CAT10HOOD10$BOBOPENGU$ADAYAAPL-0.0%$POHPENGU$LESHYIndex$RETSBAPENGU$PENGUSPENGU$MICRODICKmicroduck$H10HOOD10$DUMBPHONEPONS$YALAYOLO$NIETZSCHEANPENGU$CATLESSCASHCAT$P4096WETH$HOODSTERPENGU$ATLASPENGU$HOOD10HOOD10$HODSTERWETH$ABSTERPENGU$FEFICASHCAT$POLLYPENGU+0.0%$GOONERPENGU-46.8%$TESTINGPENGU+0.0%$TESTERPENGU+0.0%$PONS20PONS+0.0%$PONSFRIENDSPONS-4.8%$FROGFRONG$HODLHOOD10$QUACKmicroduck$AI2AI$INDEXIndex$INDEX2Index$ZUCKERBERGMETA$EPOCHHOOD10$KARPPLTR$HEEHEEWETH$GGCASHCAT$SPYSPY$ELONTSLA$HCROCHOOD10$JENSENNVDA$TIMCOOKSWETH$MOONCATHMM$GOLDENCATCASHCAT$TOP10HOOD10$6HOOD10$TIANGONGNVDA$TIANGONGNVDA$AGINVDA$H11WETH$AAPLCATAAPL$FLYWHEELHOOD10-45.7%$TESTHOOD10+0.0%
+
+v1.0
+
+# Bond it
+to anything.
+
+Launch a coin on Robinhood Chain and price it in whatever you like — a stock, a stable, another meme, or $HOOD10 itself. One transaction opens the pool and locks the liquidity forever. A cut of every trade feeds the index.
+
+Launch a coinExplore pairsThe vault
+
+1
+
+## Launchpad summary
+
+every coin bonded on Robinhood Chain
+
+LIVE · CHAIN 4663
+
+coins bonded
+
+81
+
+all of them still trading
+
+trades
+
+1,340
+
+across 81 pools
+
+HOOD10 Buyback & Burn
+
+$39,371
+
+70% of $56,244 in fees
+
+liquidity locked
+
+100%
+
+of every pool, forever
+
+70% of every fee feeds the index, 30% funds the protocolblock 52441641
+
+2
+
+## Leading
+
+most traded on the pad
+
+4 COINS
+
+bonded
+
+GOONER2.00% feelocked lp
+
+$GOONERPurgy Pengoon
+
+$600.4Kmarket cap72.08M PENGU
+
+priced inPENGUmeme
+
+24h vol $222.9Ktrades 920
+
+FLYWHEEL2.00% feelocked lp
+
+$FLYWHEELFLYWHEEL
+
+$69.5Kmarket cap28.54M HOOD10
+
+priced inHOOD10index
+
+24h vol $26.5Ktrades 244
+
+WIRED2.00% feelocked lp
+
+$WIREDWired Finance
+
+$28.5Kmarket cap11.85 WETH
+
+priced inWETHcrypto
+
+24h vol $8.2Ktrades 101
+
+PONSINU2.00% feelocked lp
+
+$PONSINUPons Inu
+
+$5.6Kmarket cap14.4K PONS
+
+priced inPONSmeme
+
+24h vol $3.6Ktrades 46
+
+3
+
+## Explore
+
+everything on the pad · newest first
+
+81 COINS
+
+market capnewestvolumemost traded
+
+all pairsSPYWETHPONSCOINRBLXNVDAPENGUTENDIESHOOD10USDGAAPLIndexmicroduckYOLOCASHCATFRONGAIMETAPLTRTSLAHMM
+
+bonded
+
+GOONER2.00% feelocked lp
+
+$GOONERPurgy Pengoon
+
+$600.4Kmarket cap72.08M PENGU
+
+priced inPENGUmeme
+
+24h vol $222.9Ktrades 920
+
+FLYWHEEL2.00% feelocked lp
+
+$FLYWHEELFLYWHEEL
+
+$69.5Kmarket cap28.54M HOOD10
+
+priced inHOOD10index
+
+24h vol $26.5Ktrades 244
+
+WIRED2.00% feelocked lp
+
+$WIREDWired Finance
+
+$28.5Kmarket cap11.85 WETH
+
+priced inWETHcrypto
+
+24h vol $8.2Ktrades 101
+
+AI21.00% feelocked lp
+
+$AI2AI AI
+
+$8.2Kmarket cap31.9K AI
+
+priced inAImeme
+
+24h vol $0no trades yet
+
+FROG1.00% feelocked lp
+
+$FROGFROG
+
+$7.1Kmarket cap679.4K FRONG
+
+priced inFRONGmeme
+
+24h vol $0no trades yet
+
+PONSFRIENDS1.00% feelocked lp
+
+$PONSFRIENDSPONS.FRIENDS
+
+$7.0Kmarket cap18.0K PONS
+
+priced inPONSmeme
+
+24h vol $163.22trades 5
+
+QUACK1.00% feelocked lp
+
+$QUACKQUACK
+
+$6.5Kmarket cap203.3K microduck
+
+priced inmicroduckmeme
+
+24h vol $0no trades yet
+
+MICRODICK5.00% feelocked lp
+
+$MICRODICKMICRODICK
+
+$6.3Kmarket cap197.1K microduck
+
+priced inmicroduckmeme
+
+24h vol $0no trades yet
+
+PONS202.00% feelocked lp
+
+$PONS20PONS2.0
+
+$5.6Kmarket cap14.5K PONS
+
+priced inPONSmeme
+
+24h vol $106.26trades 1
+
+DUMBPHONE2.00% feelocked lp
+
+$DUMBPHONEDumbphone
+
+$5.6Kmarket cap14.4K PONS
+
+priced inPONSmeme
+
+24h vol $0no trades yet
+
+PONSINU2.00% feelocked lp
+
+$PONSINUPons Inu
+
+$5.6Kmarket cap14.4K PONS
+
+priced inPONSmeme
+
+24h vol $3.6Ktrades 46
+
+PONZI2.00% feelocked lp
+
+$PONZIPONZI
+
+$5.6Kmarket cap14.4K PONS
+
+priced inPONSmeme
+
+24h vol $0no trades yet
+
+LESHY5.00% feelocked lp
+
+$LESHYLESHY
+
+$5.4Kmarket cap148.7K Index
+
+priced inIndexmeme
+
+24h vol $0no trades yet
+
+INDEX22.00% feelocked lp
+
+$INDEX2INDEXINDEX
+
+$5.4Kmarket cap148.3K Index
+
+priced inIndexmeme
+
+24h vol $0no trades yet
+
+YALA5.00% feelocked lp
+
+$YALAYALA
+
+$5.4Kmarket cap414.8K YOLO
+
+priced inYOLOmeme
+
+24h vol $0no trades yet
+
+OOF2.00% feelocked lp
+
+$OOFOOF
+
+$5.2Kmarket cap128.49 RBLX
+
+priced inRBLXstock
+
+24h vol $64.61trades 7
+
+MOONCAT1.00% feelocked lp
+
+$MOONCATMoon cat
+
+$4.5Kmarket cap186.7K HMM
+
+priced inHMMmeme
+
+24h vol $0no trades yet
+
+ADAY2.00% feelocked lp
+
+$ADAYApple A Day
+
+$4.4Kmarket cap13.52 AAPL
+
+priced inAAPLstock
+
+24h vol $21.31trades 2
+
+GOLDENCAT1.00% feelocked lp
+
+$GOLDENCATGOLDEN CAT
+
+$4.0Kmarket cap14.6K CASHCAT
+
+priced inCASHCATmeme
+
+24h vol $0no trades yet
+
+GG1.00% feelocked lp
+
+$GGGolden Goose
+
+$4.0Kmarket cap14.5K CASHCAT
+
+priced inCASHCATmeme
+
+24h vol $0no trades yet
+
+WRER2.00% feelocked lp
+
+$WRERrewr
+
+$3.9Kmarket cap1.6 WETH
+
+priced inWETHcrypto
+
+24h vol $0.53trades 1
+
+GBP2.00% feelocked lp
+
+$GBPGood Boy Points
+
+$3.8Kmarket cap162.7K TENDIES
+
+priced inTENDIESmeme
+
+24h vol $0no trades yet
+
+CRI2.00% feelocked lp
+
+$CRICRI
+
+$3.6Kmarket cap4.77 SPY
+
+priced inSPYstock
+
+24h vol $24.2trades 4
+
+AAPLCAT2.00% feelocked lp
+
+$AAPLCATAAPLCAT
+
+$3.6Kmarket cap10.97 AAPL
+
+priced inAAPLstock
+
+24h vol $0no trades yet
+
+ELON1.00% feelocked lp
+
+$ELONELON MUSK
+
+$3.5Kmarket cap9.87 TSLA
+
+priced inTSLAstock
+
+24h vol $0no trades yet
+
+WTE10.00% feelocked lp
+
+$WTEWTE
+
+$3.4Kmarket cap84.27 RBLX
+
+priced inRBLXstock
+
+24h vol $0no trades yet
+
+I5.00% feelocked lp
+
+$II
+
+$3.4Kmarket cap4.46 SPY
+
+priced inSPYstock
+
+24h vol $1.15trades 1
+
+HOODINI2.00% feelocked lp
+
+$HOODINIHOODINI
+
+$3.4Kmarket cap3.4K USDG
+
+priced inUSDGstable
+
+24h vol $0no trades yet
+
+SPY1.00% feelocked lp
+
+$SPYSPY/SPY
+
+$3.4Kmarket cap4.46 SPY
+
+priced inSPYstock
+
+24h vol $0no trades yet
+
+TIANGONG2.00% feelocked lp
+
+$TIANGONGTIANG GONG ROBOT
+
+$3.3Kmarket cap15.27 NVDA
+
+priced inNVDAstock
+
+24h vol $0no trades yet
+
+PRINTER5.00% feelocked lp
+
+$PRINTERPrinter.exe
+
+$3.3Kmarket cap15.24 NVDA
+
+priced inNVDAstock
+
+24h vol $0no trades yet
+
+TIANGONG1.00% feelocked lp
+
+$TIANGONGTIANG GONG HUMANOID
+
+$3.3Kmarket cap15.24 NVDA
+
+priced inNVDAstock
+
+24h vol $0no trades yet
+
+AGI1.00% feelocked lp
+
+$AGIAGI
+
+$3.3Kmarket cap15.24 NVDA
+
+priced inNVDAstock
+
+24h vol $0no trades yet
+
+NVDAS5.00% feelocked lp
+
+$NVDASNVDAS
+
+$3.3Kmarket cap1.38 WETH
+
+priced inWETHcrypto
+
+24h vol $662.72trades 2
+
+LIPS2.00% feelocked lp
+
+$LIPSLIPS
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+HODSTER2.00% feelocked lp
+
+$HODSTERHODSTER
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+MONEY2.00% feelocked lp
+
+$MONEYMONEY FOLLOWS
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $63.43trades 2
+
+CASHDOG2.00% feelocked lp
+
+$CASHDOGCASHDOG
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+WEEEEEE2.00% feelocked lp
+
+$WEEEEEEweeeeee
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+10X2.00% feelocked lp
+
+$10X10x TOKEN
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+H1110.00% feelocked lp
+
+$H11H11 Token
+
+$3.3Kmarket cap1.37 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+HEEHEE1.00% feelocked lp
+
+$HEEHEEHEEHEE
+
+$3.3Kmarket cap1.36 WETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+POLLY5.00% feelocked lp
+
+$POLLYPengus Wife
+
+$3.1Kmarket cap374.0K PENGU
+
+priced inPENGUmeme
+
+24h vol $2.37trades 1
+
+POH2.00% feelocked lp
+
+$POHPENGU IN HOOD
+
+$2.8Kmarket cap337.6K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+TESTER1.00% feelocked lp
+
+$TESTERTESTER
+
+$2.8Kmarket cap331.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $28.28trades 1
+
+ATLAS2.00% feelocked lp
+
+$ATLASATLAS
+
+$2.7Kmarket cap329.4K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+NIHILIST5.00% feelocked lp
+
+$NIHILISTNihilist Pengu
+
+$2.7Kmarket cap328.6K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+HOODSTER5.00% feelocked lp
+
+$HOODSTERHOODSTER
+
+$2.7Kmarket cap328.4K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+RETSBA5.00% feelocked lp
+
+$RETSBARED PENGU
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+NOOT5.00% feelocked lp
+
+$NOOTNoot Noot
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+BOBO2.00% feelocked lp
+
+$BOBOBOBO THE BEAR
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+PENGUS5.00% feelocked lp
+
+$PENGUSTHE HUDDLE
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+NIETZSCHEAN5.00% feelocked lp
+
+$NIETZSCHEANNietzschean Penguin
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+ABSTER5.00% feelocked lp
+
+$ABSTERABSTER
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $0no trades yet
+
+TESTING2.00% feelocked lp
+
+$TESTINGTesting
+
+$2.7Kmarket cap328.3K PENGU
+
+priced inPENGUmeme
+
+24h vol $27.73trades 1
+
+TEST2.00% feelocked lp
+
+$TESTTEST
+
+$2.5Kmarket cap1.02M HOOD10
+
+priced inHOOD10index
+
+24h vol $50.27trades 1
+
+EPOCH2.00% feelocked lp
+
+$EPOCHEpoch Cat
+
+$2.4Kmarket cap979.5K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+HOUDINI2.00% feelocked lp
+
+$HOUDINIHOUDINI
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+LETSRIDE2.00% feelocked lp
+
+$LETSRIDELets Ride
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+H102.00% feelocked lp
+
+$H10h10
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+HOOD102.00% feelocked lp
+
+$HOOD10HOOD10
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+HODL2.00% feelocked lp
+
+$HODLHODL
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+HCROC2.00% feelocked lp
+
+$HCROCHOODCROCO
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+TOP105.00% feelocked lp
+
+$TOP10Top10
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+62.00% feelocked lp
+
+$6six
+
+$2.4Kmarket cap978.3K HOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+SHIT5.00% feelocked lp
+
+$SHITSHIT
+
+—market capCOIN
+
+priced inCOINstock
+
+24h vol $0no trades yet
+
+LOUDER2.00% feelocked lp
+
+$LOUDERYou hear that? Saxophones Getting Louder
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+WIRED2.00% feelocked lp
+
+$WIREDWired Finance
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+PONSC5.00% feelocked lp
+
+$PONSCPons Cycle
+
+—market capPONS
+
+priced inPONSmeme
+
+24h vol $0no trades yet
+
+PTHIGHS2.00% feelocked lp
+
+$PTHIGHSPons & Thighs
+
+—market capPONS
+
+priced inPONSmeme
+
+24h vol $0no trades yet
+
+FAAAH2.00% feelocked lp
+
+$FAAAHfaaah
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+PONDY2.00% feelocked lp
+
+$PONDYPondy
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+CAT102.00% feelocked lp
+
+$CAT10HOODCAT
+
+—market capHOOD10
+
+priced inHOOD10index
+
+24h vol $0no trades yet
+
+CATLESS10.00% feelocked lp
+
+$CATLESSCATLESS
+
+—market capCASHCAT
+
+priced inCASHCATmeme
+
+24h vol $0no trades yet
+
+P40962.00% feelocked lp
+
+$P4096Protocol 4096
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+FEFI5.00% feelocked lp
+
+$FEFIFeline Finance
+
+—market capCASHCAT
+
+priced inCASHCATmeme
+
+24h vol $0no trades yet
+
+INDEX1.00% feelocked lp
+
+$INDEXDOUBLE INDEX
+
+—market capIndex
+
+priced inIndexmeme
+
+24h vol $0no trades yet
+
+ZUCKERBERG1.00% feelocked lp
+
+$ZUCKERBERGMark Zuckerberg
+
+—market capMETA
+
+priced inMETAstock
+
+24h vol $0no trades yet
+
+KARP1.00% feelocked lp
+
+$KARPAlex Karp
+
+—market capPLTR
+
+priced inPLTRstock
+
+24h vol $0no trades yet
+
+JENSEN1.00% feelocked lp
+
+$JENSENJENSEN HUANG
+
+—market capNVDA
+
+priced inNVDAstock
+
+24h vol $0no trades yet
+
+TIMCOOKS1.00% feelocked lp
+
+$TIMCOOKSTim Cooks
+
+—market capWETH
+
+priced inWETHcrypto
+
+24h vol $0no trades yet
+
+every pool is a real Uniswap v4 pool, liquidity locked at the factorybonded to stocks, stables, memes or the index
+
+hood10 · launchrobinhood chain · id 4663block 52441641

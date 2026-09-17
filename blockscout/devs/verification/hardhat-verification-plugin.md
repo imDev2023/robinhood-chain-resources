@@ -1,0 +1,392 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Verify contracts with the Hardhat plugin on Blockscout
+
+> Verify smart contracts on Blockscout with the hardhat-verify plugin, including setup steps for Hardhat 3 native support and Hardhat 2 configuration.
+
+> ## Documentation Index
+>
+> Fetch the complete documentation index at: [https://docs.blockscout.com/llms.txt](https://docs.blockscout.com/llms.txt) Use this file to discover all available pages before exploring further.
+
+# Verify contracts with the Hardhat plugin
+
+> Verify smart contracts on Blockscout from your Hardhat project using the hardhat-verify plugin, on either Hardhat 3 (native Blockscout support, Pro API key optional) or Hardhat 2 (per-instance API).
+
+[Hardhat](https://hardhat.org/) is a full-featured development environment for contract compilation, deployment and verification. The [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) supports contract verification on Blockscout. The setup differs depending on which major version of Hardhat your project uses, since the plugin's config format changed between Hardhat 2 and Hardhat 3.
+
+<Warning>
+  A plain `npm install @nomicfoundation/hardhat-verify` installs v3, which targets **Hardhat 3**. If your project is using Hardhat 2, install with the `@hh2` tag instead (`@nomicfoundation/hardhat-verify@hh2`). Check which version applies to you before following the steps below.
+</Warning>
+
+## Hardhat 3
+
+Hardhat 3's hardhat-verify plugin (v3.1.0+) has built-in Blockscout support. As of v3.1.0, it also supports an `apiKey` to use the Blockscout [Pro API](https://docs.blockscout.com/devs/pro-api).
+
+1. Install Hardhat and the plugin
+
+```sh theme={null}
+npm install --save-dev hardhat @nomicfoundation/hardhat-verify
+```
+
+### 2) Register the plugin
+
+```ts theme={null}
+import { defineConfig } from "hardhat/config";
+import hardhatVerify from "@nomicfoundation/hardhat-verify";
+
+export default defineConfig({
+  plugins: [hardhatVerify],
+  // ...rest of your config
+});
+```
+
+### 3) Configure Blockscout (if your instance needs an API key)
+
+Singular Blockscout instances don't currently require a key. However, if you are using the recommended Pro API setup, add your key under `verify.blockscout`:
+
+```ts theme={null}
+import { configVariable, defineConfig } from "hardhat/config";
+import hardhatVerify from "@nomicfoundation/hardhat-verify";
+
+export default defineConfig({
+  plugins: [hardhatVerify],
+  verify: {
+    blockscout: {
+      // For Pro API interface.
+      // Obtain at https://dev.blockscout.com/
+      apiKey: configVariable("BLOCKSCOUT_API_KEY"),
+    },
+  },
+  // ...rest of your config
+});
+```
+
+<Info>
+  We recommend using a [configuration variable](https://hardhat.org/docs/learn-more/configuration-variables) (as shown above) rather than hardcoding the key in your config file.
+</Info>
+
+You can disable Blockscout verification entirely by setting `enabled: false` under `verify.blockscout`.
+
+### 4) Verify
+
+```sh theme={null}
+npx hardhat verify blockscout --network <network> DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```
+
+Omitting `blockscout` runs verification against every configured provider (Etherscan, Blockscout, Sourcify); passing it explicitly scopes the run to Blockscout only.
+
+### Programmatic verification
+
+```ts theme={null}
+import hre from "hardhat";
+import { verifyContract } from "@nomicfoundation/hardhat-verify/verify";
+
+await verifyContract(
+  {
+    address: "DEPLOYED_CONTRACT_ADDRESS",
+    constructorArgs: ["Constructor argument 1"],
+    provider: "blockscout",
+  },
+  hre,
+);
+```
+
+<Info>
+  `verifyContract` isn't re-exported from the Hardhat toolboxes — install the plugin directly and import from `@nomicfoundation/hardhat-verify/verify`.
+</Info>
+
+## Hardhat 2
+
+<Warning>
+  This is Hardhat 2 syntax — install with `@nomicfoundation/hardhat-verify@hh2`. This path uses the **per-instance API** (no key required); it cannot reach the Pro API. If you need Pro API verification, migrate to Hardhat 3 (see above).
+</Warning>
+
+### **1) Install Hardhat**
+
+If you are starting from scratch, create an npm project by going to an empty folder, running `npm init`, and following the instructions. Recommend npm 7 or higher.
+
+Once your project is ready:
+
+**npm instructions**
+
+```sh theme={null}
+npm install --save-dev hardhat
+```
+
+**yarn instructions**
+
+```sh theme={null}
+yarn add --dev hardhat
+```
+
+### **2) Create a project**
+
+Run `npx hardhat` in your project folder and follow the instructions to create ([more info here](https://hardhat.org/getting-started/#quick-start)).
+
+### 3) Install plugin
+
+Install the [hardhat-verify plugin](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify)
+
+**npm**
+
+```sh theme={null}
+npm install --save-dev @nomicfoundation/hardhat-verify@hh2
+```
+
+**yarn**
+
+```sh theme={null}
+yarn add --dev @nomicfoundation/hardhat-verify@hh2
+```
+
+Note the `@hh2` tag above — plain `npm install @nomicfoundation/hardhat-verify` now installs v3 (Hardhat 3), which uses a different config format entirely (see the Hardhat 3 section above).
+
+### 4) Add plugin reference to config file
+
+Add the following statement to your `hardhat.config.js`.
+
+```javascript theme={null}
+require("@nomicfoundation/hardhat-verify");
+```
+
+If using TypeScript, add this to your `hardhat.config.ts`. [More info on using typescript with hardhat available here](https://hardhat.org/guides/typescript.html#typescript-support).
+
+```ts theme={null}
+import "@nomicfoundation/hardhat-verify";
+```
+
+## Config File and Unsupported Networks
+
+Your basic [Hardhat config file](https://hardhat.org/config/) (`hardhat.config.js` or `hardhat.config.ts`) will be setup to support the network you are working on. In this example we use the Optimism Sepolia test network and a `.ts` file.
+
+Here we add an RPC url without an API key, however some value is still required. You can use any arbitrary string. [More info](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify#multiple-api-keys-and-alternative-block-explorers).
+
+In order to use Blockscout explorer for the verification, you have to specify the explorer details under a `customChains` object. It includes:
+
+* `chainId` - Network chain ID
+* `apiURL` - Block explorer API URL
+* `browserURL` - Block explorer URL
+
+<Info>
+  Find an extensive list of ChainIDs at [https://chainlist.org/](https://chainlist.org/).
+</Info>
+
+Note the network name in `customChains` must match the network name in the `apiKey` object.
+
+```ts theme={null}
+import { HardhatUserConfig, vars } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-verify";
+
+const PRIVATE_KEY = vars.get("PRIVATE_KEY");
+
+const config: HardhatUserConfig = {
+  solidity: "0.8.24",
+  networks: {
+    'optimism-sepolia': {
+      url: 'https://sepolia.optimism.io',
+      accounts: [PRIVATE_KEY],
+    },
+  },
+  etherscan: {
+    apiKey: {
+      // Is not required by blockscout. Can be any non-empty string
+      'optimism-sepolia': "abc"
+    },
+    customChains: [
+      {
+        network: "optimism-sepolia",
+        chainId: 11155420,
+        urls: {
+          apiURL: "https://optimism-sepolia.blockscout.com/api",
+          browserURL: "https://optimism-sepolia.blockscout.com/",
+        }
+      }
+    ]
+  },
+  sourcify: {
+    enabled: false
+  }
+};
+
+export default config;
+```
+
+### Verifying on multiple chains?
+
+If you deploy to more than one network, you don't need a separate config block per chain. Define your chains once in an array and generate `networks`, `etherscan.apiKey`, and `customChains` from it:
+
+```ts theme={null}
+import { HardhatUserConfig, vars } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+import "@nomicfoundation/hardhat-verify";
+
+const PRIVATE_KEY = vars.get("PRIVATE_KEY");
+
+// Single source of truth for every chain you deploy to.
+// Add a new chain by adding one line here — no need to touch
+// `networks` or `customChains` separately.
+const CHAINS = [
+  { network: "optimism-sepolia", chainId: 11155420, rpc: "https://sepolia.optimism.io", explorer: "optimism-sepolia" },
+  { network: "base-sepolia", chainId: 84532, rpc: "https://sepolia.base.org", explorer: "base-sepolia" },
+  { network: "optimism", chainId: 10, rpc: "https://mainnet.optimism.io", explorer: "optimism" },
+  { network: "base", chainId: 8453, rpc: "https://mainnet.base.org", explorer: "base" },
+  { network: "arbitrum-one", chainId: 42161, rpc: "https://arb1.arbitrum.io/rpc", explorer: "arbitrum" },
+];
+
+const config: HardhatUserConfig = {
+  solidity: "0.8.24",
+  networks: Object.fromEntries(
+    CHAINS.map(({ network, chainId, rpc }) => [
+      network,
+      { url: rpc, accounts: [PRIVATE_KEY], chainId },
+    ])
+  ),
+  etherscan: {
+    // Not required by Blockscout, but the plugin needs *some* non-empty
+    // string per network — the network name in this object must match
+    // the network name used in `customChains` below.
+    apiKey: Object.fromEntries(
+      CHAINS.map(({ network }) => [network, "abc"])
+    ),
+    customChains: CHAINS.map(({ network, chainId, explorer }) => ({
+      network,
+      chainId,
+      urls: {
+        apiURL: `https://${explorer}.blockscout.com/api`,
+        browserURL: `https://${explorer}.blockscout.com/`,
+      },
+    })),
+  },
+  sourcify: {
+    enabled: false,
+  },
+};
+
+export default config;
+```
+
+<Info>
+  Run `npx hardhat verify --list-networks` at any time to confirm which network identifiers are registered in your config.
+</Info>
+
+## Deploy and Verify
+
+For deployment we will use [Hardhat Ignition](https://hardhat.org/ignition/docs/getting-started#overview) - built-in Hardhat deployment system.
+
+### Deploy
+
+```txt theme={null}
+> npx hardhat ignition deploy ./ignition/modules/Lock.ts --network optimism-sepolia
+✔ Confirm deploy to network optimism-sepolia (11155420)? … yes
+Compiled 1 Solidity file successfully (evm target: paris).
+Hardhat Ignition 🚀
+
+Deploying [ LockModule ]
+
+Batch #1
+  Executed LockModule#Lock
+
+[ LockModule ] successfully deployed 🚀
+
+Deployed Addresses
+
+LockModule#Lock - 0xFE826b33e425f99ce962ACB91752DB41F302EFEA
+```
+
+### Verify
+
+The plugin requires you to include constructor arguments with the verify task and ensures that they correspond to expected ABI signature. However, Blockscout ignores those arguments, so you may specify any values that correspond to the ABI.
+
+```sh theme={null}
+npx hardhat verify --network <network> DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+```
+
+Optimism Sepolia example.
+
+```sh theme={null}
+> npx hardhat verify --network optimism-sepolia 0xFE826b33e425f99ce962ACB91752DB41F302EFEA 1234
+Successfully submitted source code for contract
+contracts/Lock.sol:Lock at 0xFE826b33e425f99ce962ACB91752DB41F302EFEA
+for verification on the block explorer. Waiting for verification result...
+
+Successfully verified contract Lock on the block explorer.
+https://optimism-sepolia.blockscout.com/address/0xFE826b33e425f99ce962ACB91752DB41F302EFEA#code
+```
+
+If you're using the multi-chain config, the same command works unchanged for any chain in your `CHAINS` array — just swap `--network optimism-sepolia` for `--network base`, `--network arbitrum-one`, etc.
+
+### Automatically verified contracts
+
+Sometimes the contract may be automatically verified via [Ethereum Bytecode Database](https://docs.blockscout.com/about/features/ethereum-bytecode-database-microservice#solution-ethereum-bytecode-database-blockscout-ebd) service. In that case you may see the following response:
+
+```txt theme={null}
+The contract 0xFE826b33e425f99ce962ACB91752DB41F302EFEA has already been verified on Etherscan.
+https://optimism-sepolia.blockscout.com/address/0xFE826b33e425f99ce962ACB91752DB41F302EFEA#code
+```
+
+In that case, you may try to enforce using `--force` flag\*.
+
+It prevents Hardhat from checking if the contract is already verified, and forces it to send a verification request anyway. Notice, that it is helpful only if the contract was automatically verified **partially**. That way, new verification sources would be saved. If the contract was **fully** verified already, that just returns an error.
+
+```sh theme={null}
+npx hardhat verify --network <network> DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1" --force
+```
+
+* The flag is available starting from `@nomicfoundation/hardhat-verify@2.0.7`
+
+## Confirm Verification on BlockScout
+
+Go to your BlockScout instance and paste the contract address into the search bar.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/GHvuDaE4gRKuNH6O/images/fc3fb8d9-image.jpeg?fit=max&auto=format&n=GHvuDaE4gRKuNH6O&q=85&s=2fc1cecaf730ea7fbf4fd566fd413e83" width="2304" height="769" data-path="images/fc3fb8d9-image.jpeg" />
+</Frame>
+
+Scroll down to see verified status. A green checkmark ✅ means the contract is verified.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/GHvuDaE4gRKuNH6O/images/d9dab800-image.jpeg?fit=max&auto=format&n=GHvuDaE4gRKuNH6O&q=85&s=ee2eb70382b67af5ff3b2c25c88ab45a" width="2304" height="1265" data-path="images/d9dab800-image.jpeg" />
+</Frame>
+
+If your screen size is limited, you may need to click the 3 dots to view and click through to the contract.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/5j9ATJZuQuk5LMJq/images/47a3a81c-image.jpeg?fit=max&auto=format&n=5j9ATJZuQuk5LMJq&q=85&s=2bd1af7338892a842cfc74d0e8c25a01" width="1960" height="338" data-path="images/47a3a81c-image.jpeg" />
+</Frame>
+
+Scroll down to see and interact with the contract code.
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/9ae7288e-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=bb40b3bb2184da91894d59d91af2d268" width="2304" height="1468" data-path="images/9ae7288e-image.jpeg" />
+</Frame>
+
+## Video example
+
+Community video created by Carlos Rodriguez for the Soneium Minato testnet, but can be applicable to any chain.
+
+<Frame>
+  <iframe width="744" height="419" src="https://www.youtube.com/embed/eNzGoPkNAkU" title="VERIFY a SMART CONTRACT on SONEIUM's TESTNET: MINATO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen />
+</Frame>
+
+## FAQ
+
+<Accordion title="I am using an OpenZeppelin upgrades plugin implementation and receive an error on proxy contract verification. What should I do?">
+  Although you receive an error, the contracts should be verified during the previous steps and you can ignore. Check in the explorer to make sure the contracts have been verified.
+</Accordion>
+
+<Accordion title="Do I need a real API key for each chain?">
+  On Hardhat 2 (per-instance route), no, any non-empty string works, and each network still needs its own entry in the `apiKey` object since the network name in `customChains` must match a key in `apiKey`. On Hardhat 3, use a key if your Blockscout instance requires one (e.g. the Pro API); most instances don't.
+</Accordion>
+
+<Accordion title="Can I use the Pro API with hardhat-verify?">
+  Yes, as of `@nomicfoundation/hardhat-verify@3.1.0` on Hardhat 3 — pass your key via `verify.blockscout.apiKey`. This isn't available on the Hardhat 2 path (`@hh2`), which only reaches keyless, per-instance Blockscout APIs; migrate to Hardhat 3 if you need Pro API verification through this plugin.
+</Accordion>
+
+## Resources
+
+<Info>
+  Learn more about plugin configs, troubleshooting etc. at [https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-verify) (Hardhat 2) or [https://hardhat.org/docs/plugins/hardhat-verify](https://hardhat.org/docs/plugins/hardhat-verify) (Hardhat 3).
+</Info>

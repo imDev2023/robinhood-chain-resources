@@ -1,0 +1,3069 @@
+Title: DeepFuckingValue ($DFV) · hood.fun
+
+URL Source: https://hood.fun/coin/0xe584d4b1bb5bbbfc2cc63a9be5a59a871f8f600d
+
+Markdown Content:
+[![Image 1](https://hood.fun/logo.png)HOOD fun](https://hood.fun/)[Create](https://hood.fun/create)[Swap](https://hood.fun/swap)[Bridge](https://hood.fun/bridge)[Profile](https://hood.fun/portfolio)
+
+/
+
+[Launch a coin](https://hood.fun/create)Connect wallet
+
+![Image 2: DeepFuckingValue banner](https://hood.fun/_next/image?url=%2Fapi%2Fcoin-banner%2F0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d%3Fv%3D2&w=1920&q=75)
+
+![Image 3: DFV logo](https://hood.fun/_next/image?url=%2Fapi%2Ftoken-image%2F0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d%3Fv%3D2&w=256&q=75)![Image 4: DFV logo](https://hood.fun/_next/image?url=%2Fapi%2Ftoken-image%2F0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d%3Fv%3D2&w=256&q=75)
+
+# DeepFuckingValue
+
+$DFV
+
+![Image 5](https://hood.fun/community-badge.png)Community
+
+Robinhood[![Image 6](https://hood.fun/pfp/5.jpg)0x92b5…24ff](https://hood.fun/creator/0x92b5444e95e163c3e740bD4D0eBa93D482a524ff)37d ago On Uniswap
+
+Share 0xE5…600d
+
+Share 0xE5…600d
+
+Price
+
+$0.0₅285
+
+0.0₈119 ETH
+
+Market cap
+
+$2.9k
+
+1.19 ETH
+
+Supply
+
+1B
+
+1,000,000,000 tokens
+
+Bonded
+
+100.0%
+
+$2,851 MC-51.7%
+
+1s 1m 5m 15m 1h$ETH mcap price
+
+buy sell
+
+Graduated — now trading on its Uniswap v3 pool
+
+You pay (ETH)bal -
+
+ 
+
+0.01 0.05 0.1 0.5
+
+You receive-
+
+Fee (1.00%)-
+
+Max slippage
+
+1%5%25%100%
+
+%
+
+Connect wallet
+
+![Image 7](https://hood.fun/community-badge.png)Holder rewards Auto
+
+Paid to holders
+
+$820
+
+10 sends so far
+
+In the pot
+
+$5
+
+next in 0h 00m 00s
+
+Trading fees go straight to holders, pro-rata, into your wallet — nothing to claim. It stops when you sell.
+
+See who's earned
+
+### $DFV community
+
+0 posts in the last 24h · 1 total
+
+[![Image 8](https://hood.fun/pfp/9.jpg) 0x07c1…534a·20d Man just let this run please, I need an effin miracle. How is this not on the robinhood crypto app yet? $96](https://hood.fun/communities/0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d)[Visit community](https://hood.fun/communities/0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d)
+
+trades holders
+
+Sell 0.0001 ETH
+
+$0.27 707.58 DFV 5d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.05 ETH
+
+$120 304.4K DFV 6d[0x55Cf…15DA](https://hood.fun/creator/0x55Cf363A0Ade610bb0724F5A8bD938d4F14015DA)
+Buy 0.1 ETH
+
+$240 615.4K DFV 8d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 62.0K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.05 ETH
+
+$120 311.6K DFV 8d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.1 ETH
+
+$240 630.0K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 190.8K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 191.7K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 192.5K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 193.4K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 194.2K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.01 ETH
+
+$24 64.9K DFV 8d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.01 ETH
+
+$24 65.0K DFV 8d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.05 ETH
+
+$120 326.7K DFV 8d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.05 ETH
+
+$120 329.1K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.1 ETH
+
+$240 665.7K DFV 8d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.05 ETH
+
+$120 336.7K DFV 8d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.05 ETH
+
+$120 339.2K DFV 8d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.05 ETH
+
+$120 341.8K DFV 8d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1 ETH
+
+$240 691.6K DFV 8d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1 ETH
+
+$240 702.4K DFV 8d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.1 ETH
+
+$240 713.4K DFV 8d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0042 ETH
+
+$10 31.0K DFV 9d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Sell 0.3882 ETH
+
+$933 2.76M DFV 12d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.198 ETH
+
+$476 1.36M DFV 12d[0x83a8…2277](https://hood.fun/creator/0x83a81AEb69019A4d8bb0B2F21A20a945C3f92277)
+Buy 0.198 ETH
+
+$476 1.40M DFV 12d[0x83a8…2277](https://hood.fun/creator/0x83a81AEb69019A4d8bb0B2F21A20a945C3f92277)
+Buy 0.1 ETH
+
+$240 724.7K DFV 12d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.2 ETH
+
+$481 1.48M DFV 12d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.5425 ETH
+
+$1.3k 4.00M DFV 12d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2681 ETH
+
+$644 1.85M DFV 12d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.02 ETH
+
+$48 135.2K DFV 12d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.01 ETH
+
+$24 66.2K DFV 13d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.05 ETH
+
+$120 332.6K DFV 13d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 66.8K DFV 13d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.01 ETH
+
+$24 66.9K DFV 13d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.001 ETH
+
+$2 6.6K DFV 14d[0x80eF…3d99](https://hood.fun/creator/0x80eFCeD0d87469dCD4477064eF937d14c07D3d99)
+Buy 0.05 ETH
+
+$120 336.2K DFV 14d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 67.6K DFV 14d[0x55Cf…15DA](https://hood.fun/creator/0x55Cf363A0Ade610bb0724F5A8bD938d4F14015DA)
+Buy 0.01 ETH
+
+$24 67.7K DFV 14d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.01 ETH
+
+$24 67.8K DFV 14d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0099 ETH
+
+$24 68.5K DFV 14d[0x2Ca3…125F](https://hood.fun/creator/0x2Ca37ff95caF25366eF16fc2E655b78a165D125F)
+Sell 0.0982 ETH
+
+$236 673.2K DFV 14d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0774 ETH
+
+$186 523.6K DFV 15d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0₄741 ETH
+
+$0.18 498.01 DFV 15d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Buy 0.02 ETH
+
+$48 132.0K DFV 16d[0xFE50…7cFF](https://hood.fun/creator/0xFE5064f2273daAF0411AcFEA4de3BA7E43AE7cFF)
+Buy 0.02 ETH
+
+$48 132.4K DFV 16d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.02 ETH
+
+$48 132.8K DFV 16d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.05 ETH
+
+$120 333.8K DFV 16d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.05 ETH
+
+$120 336.4K DFV 16d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0491 ETH
+
+$118 337.1K DFV 17d[0x2Ca3…125F](https://hood.fun/creator/0x2Ca37ff95caF25366eF16fc2E655b78a165D125F)
+Buy 0.05 ETH
+
+$120 336.4K DFV 17d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.05 ETH
+
+$120 339.0K DFV 17d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0₄432 ETH
+
+$0.10 300 DFV 18d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄99 ETH
+
+$0.24 673.69 DFV 18d[0x80eF…3d99](https://hood.fun/creator/0x80eFCeD0d87469dCD4477064eF937d14c07D3d99)
+Buy 0.0028 ETH
+
+$7 19.1K DFV 18d[0x48A0…e13F](https://hood.fun/creator/0x48A097DF16c7844a33B1c3d11aB353457846e13F)
+Buy 0.1 ETH
+
+$240 686.0K DFV 18d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.05 ETH
+
+$120 347.0K DFV 18d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.1 ETH
+
+$240 702.1K DFV 18d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0001 ETH
+
+$0.24 707.58 DFV 18d[0x912f…Df25](https://hood.fun/creator/0x912f0402c005ef43a1d5202deB9c6e7d8178Df25)
+Buy 0.1 ETH
+
+$240 713.1K DFV 18d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.05 ETH
+
+$120 360.8K DFV 18d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 72.5K DFV 18d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.01 ETH
+
+$24 72.6K DFV 18d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.01 ETH
+
+$24 72.7K DFV 18d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.05 ETH
+
+$120 365.4K DFV 18d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄1 ETH
+
+$0.024 73.36 DFV 19d[0x8Ad6…fdF2](https://hood.fun/creator/0x8Ad60fAE44DD6aaFD8A98B7f25EaD026013efdF2)
+Buy 0.05 ETH
+
+$120 368.3K DFV 19d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.211 ETH
+
+$507 1.57M DFV 19d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.1063 ETH
+
+$255 768.7K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1136 ETH
+
+$273 807.8K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1218 ETH
+
+$293 850.3K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1172 ETH
+
+$282 803.5K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0007 ETH
+
+$2 4.7K DFV 19d[0x48A0…e13F](https://hood.fun/creator/0x48A097DF16c7844a33B1c3d11aB353457846e13F)
+Sell 0.0091 ETH
+
+$22 61.8K DFV 19d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Buy 0.01 ETH
+
+$24 66.5K DFV 19d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.1143 ETH
+
+$275 770.2K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1225 ETH
+
+$295 810.7K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₅281 ETH
+
+$0.0068 18.45 DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1145 ETH
+
+$275 744.0K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1325 ETH
+
+$319 845.8K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1424 ETH
+
+$342 890.3K DFV 19d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.05 ETH
+
+$120 304.4K DFV 20d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.05 ETH
+
+$120 306.6K DFV 20d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0039 ETH
+
+$9 24.2K DFV 20d[0x48A0…e13F](https://hood.fun/creator/0x48A097DF16c7844a33B1c3d11aB353457846e13F)
+Buy 0.021 ETH
+
+$50 129.4K DFV 20d[0x48A0…e13F](https://hood.fun/creator/0x48A097DF16c7844a33B1c3d11aB353457846e13F)
+Buy 0.0263 ETH
+
+$63 162.7K DFV 20d[0x48A0…e13F](https://hood.fun/creator/0x48A097DF16c7844a33B1c3d11aB353457846e13F)
+Sell 0.0315 ETH
+
+$76 198.5K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.051 ETH
+
+$122 319.7K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0409 ETH
+
+$98 255.0K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0446 ETH
+
+$107 275.9K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.052 ETH
+
+$125 319.8K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0594 ETH
+
+$143 362.5K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0395 ETH
+
+$95 239.0K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0465 ETH
+
+$112 275.9K DFV 21d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0052 ETH
+
+$12 31.0K DFV 21d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Buy 0.0426 ETH
+
+$102 255.0K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0728 ETH
+
+$175 443.2K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0371 ETH
+
+$89 223.9K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0404 ETH
+
+$97 239.0K DFV 21d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.0608 ETH
+
+$146 362.5K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0373 ETH
+
+$90 223.9K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0327 ETH
+
+$79 200.7K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0476 ETH
+
+$114 289.9K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0333 ETH
+
+$80 198.5K DFV 21d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0483 ETH
+
+$116 289.9K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0529 ETH
+
+$127 319.7K DFV 21d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0525 ETH
+
+$126 319.8K DFV 21d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Sell 0.0682 ETH
+
+$164 423.4K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0346 ETH
+
+$83 213.4K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0699 ETH
+
+$168 423.4K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0329 ETH
+
+$79 200.7K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.0721 ETH
+
+$173 443.2K DFV 21d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0345 ETH
+
+$83 213.4K DFV 21d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0426 ETH
+
+$102 269.0K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0435 ETH
+
+$104 269.0K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0388 ETH
+
+$93 245.1K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0396 ETH
+
+$95 245.1K DFV 21d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0435 ETH
+
+$105 271.2K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.065 ETH
+
+$156 408.5K DFV 21d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0669 ETH
+
+$161 424.4K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.0423 ETH
+
+$102 274.0K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0624 ETH
+
+$150 401.5K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0701 ETH
+
+$168 446.3K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0653 ETH
+
+$157 411.6K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0536 ETH
+
+$129 335.0K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0727 ETH
+
+$175 446.3K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0589 ETH
+
+$142 365.1K DFV 21d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.01 ETH
+
+$24 62.3K DFV 21d[0x3Cea…0d45](https://hood.fun/creator/0x3Cea2Eb56fb09647dB0b8e151848A3737e7C0d45)
+Buy 0.0641 ETH
+
+$154 401.5K DFV 21d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.0434 ETH
+
+$104 274.0K DFV 21d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.0527 ETH
+
+$127 335.0K DFV 21d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0504 ETH
+
+$121 326.8K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0573 ETH
+
+$138 368.6K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0442 ETH
+
+$106 281.9K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0589 ETH
+
+$141 368.6K DFV 21d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.0518 ETH
+
+$124 326.8K DFV 21d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0646 ETH
+
+$155 411.6K DFV 21d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0439 ETH
+
+$106 281.9K DFV 21d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0504 ETH
+
+$121 325.8K DFV 21d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.0443 ETH
+
+$107 288.5K DFV 21d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0451 ETH
+
+$108 299.5K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0409 ETH
+
+$98 270.2K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0496 ETH
+
+$119 325.1K DFV 21d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0506 ETH
+
+$122 325.1K DFV 22d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0418 ETH
+
+$100 270.2K DFV 22d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.05 ETH
+
+$120 325.7K DFV 22d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0456 ETH
+
+$110 299.5K DFV 22d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0686 ETH
+
+$165 453.7K DFV 22d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.0914 ETH
+
+$220 612.3K DFV 22d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Sell 0.1039 ETH
+
+$250 709.3K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1638 ETH
+
+$394 1.10M DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1842 ETH
+
+$443 1.20M DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0964 ETH
+
+$232 615.1K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2163 ETH
+
+$520 1.35M DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2107 ETH
+
+$506 1.27M DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1852 ETH
+
+$445 1.10M DFV 22d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.1974 ETH
+
+$474 1.20M DFV 22d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.2035 ETH
+
+$489 1.27M DFV 22d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.0961 ETH
+
+$231 615.1K DFV 22d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.2062 ETH
+
+$496 1.35M DFV 22d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.1059 ETH
+
+$254 709.3K DFV 22d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.107 ETH
+
+$257 731.1K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1129 ETH
+
+$271 758.5K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1151 ETH
+
+$277 758.5K DFV 22d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.1091 ETH
+
+$262 731.1K DFV 22d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0957 ETH
+
+$230 655.2K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1427 ETH
+
+$343 958.7K DFV 22d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1466 ETH
+
+$352 963.8K DFV 23d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.102 ETH
+
+$245 655.2K DFV 23d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.1473 ETH
+
+$354 963.8K DFV 23d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1319 ETH
+
+$317 881.3K DFV 23d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1462 ETH
+
+$352 958.7K DFV 23d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.1317 ETH
+
+$316 881.3K DFV 23d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.2106 ETH
+
+$506 1.43M DFV 23d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.2149 ETH
+
+$516 1.43M DFV 23d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.3575 ETH
+
+$859 2.40M DFV 23d[0x4A86…6f60](https://hood.fun/creator/0x4A86009A36FceC5Aa341ffCEB3205a911FcF6f60)
+Buy 0.2196 ETH
+
+$528 1.43M DFV 23d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.1242 ETH
+
+$298 829.6K DFV 23d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.1892 ETH
+
+$455 1.29M DFV 23d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.11 ETH
+
+$264 772.9K DFV 23d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1493 ETH
+
+$359 1.03M DFV 23d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1235 ETH
+
+$297 832.8K DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1551 ETH
+
+$373 1.03M DFV 24d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.1143 ETH
+
+$275 772.9K DFV 24d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.1402 ETH
+
+$337 966.4K DFV 24d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.1907 ETH
+
+$458 1.35M DFV 24d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.115 ETH
+
+$276 832.8K DFV 24d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.2019 ETH
+
+$485 1.48M DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2181 ETH
+
+$524 1.55M DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1373 ETH
+
+$330 948.6K DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0057 ETH
+
+$14 38.7K DFV 24d[0x8F10…f996](https://hood.fun/creator/0x8F10B468b06c6FD214B65F87778827F7D113f996)
+Buy 0.2177 ETH
+
+$523 1.48M DFV 24d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.22 ETH
+
+$529 1.55M DFV 24d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1311 ETH
+
+$315 948.6K DFV 24d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.1539 ETH
+
+$370 1.13M DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0623 ETH
+
+$150 446.6K DFV 24d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0692 ETH
+
+$166 501.4K DFV 24d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0731 ETH
+
+$176 535.2K DFV 24d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1521 ETH
+
+$365 1.13M DFV 24d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0051 ETH
+
+$12 38.7K DFV 24d[0x8F10…f996](https://hood.fun/creator/0x8F10B468b06c6FD214B65F87778827F7D113f996)
+Sell 0.1442 ETH
+
+$347 1.10M DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1471 ETH
+
+$354 1.10M DFV 24d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0926 ETH
+
+$223 708.8K DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1991 ETH
+
+$479 1.49M DFV 24d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.2032 ETH
+
+$488 1.49M DFV 24d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0755 ETH
+
+$181 565.3K DFV 24d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0838 ETH
+
+$202 636.2K DFV 24d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.5269 ETH
+
+$1.3k 3.94M DFV 25d[0x4A86…6f60](https://hood.fun/creator/0x4A86009A36FceC5Aa341ffCEB3205a911FcF6f60)
+Sell 0.0071 ETH
+
+$17 50.5K DFV 25d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.1003 ETH
+
+$241 708.8K DFV 25d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.2228 ETH
+
+$536 1.62M DFV 25d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Sell 0.1587 ETH
+
+$382 1.18M DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1393 ETH
+
+$335 1.01M DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1776 ETH
+
+$427 1.26M DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1109 ETH
+
+$267 767.9K DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0075 ETH
+
+$18 50.5K DFV 25d[0x3a40…7e31](https://hood.fun/creator/0x3a407c76CF815b57c5a6fbdE9feD1EBEb7fC7e31)
+Buy 0.0006 ETH
+
+$1 3.8K DFV 25d[0xd522…896E](https://hood.fun/creator/0xd522251E118E2C855Fe58fd1Ee464A78b834896E)
+Buy 0.113 ETH
+
+$272 767.9K DFV 25d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.181 ETH
+
+$435 1.26M DFV 25d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.1652 ETH
+
+$397 1.18M DFV 25d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.0935 ETH
+
+$225 681.6K DFV 25d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.1363 ETH
+
+$328 1.01M DFV 25d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.1039 ETH
+
+$250 786.3K DFV 25d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.3464 ETH
+
+$833 2.72M DFV 25d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.225 ETH
+
+$541 1.82M DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.6149 ETH
+
+$1.5k 4.65M DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0587 ETH
+
+$141 419.9K DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1214 ETH
+
+$292 856.7K DFV 25d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0001 ETH
+
+$0.33 934.47 DFV 25d[0xAa67…4458](https://hood.fun/creator/0xAa67Eb7985d93BEeb215b3E6C006544B09374458)
+Sell 0.1203 ETH
+
+$289 833.5K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1347 ETH
+
+$324 914.9K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1374 ETH
+
+$330 914.9K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0621 ETH
+
+$149 419.9K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.0672 ETH
+
+$162 463.5K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.127 ETH
+
+$305 862.7K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0699 ETH
+
+$168 463.5K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.1239 ETH
+
+$298 833.5K DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.125 ETH
+
+$300 856.7K DFV 26d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.1235 ETH
+
+$297 862.7K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.1157 ETH
+
+$278 824.8K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄479 ETH
+
+$0.12 338.17 DFV 26d[0xB055…D71d](https://hood.fun/creator/0xB05500000Fb581817143BD4D0369828DA0EFD71d)
+Sell 0.129 ETH
+
+$310 902.5K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1316 ETH
+
+$316 902.5K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.5445 ETH
+
+$1.3k 3.94M DFV 26d[0xFD48…0a52](https://hood.fun/creator/0xFD4866De238B377eCc46B1d98A875d6CCB9f0a52)
+Buy 0.1083 ETH
+
+$260 824.8K DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.1279 ETH
+
+$307 991.9K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0491 ETH
+
+$118 375.5K DFV 26d[0x4A86…6f60](https://hood.fun/creator/0x4A86009A36FceC5Aa341ffCEB3205a911FcF6f60)
+Buy 0.1193 ETH
+
+$287 898.8K DFV 26d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Sell 0.0923 ETH
+
+$222 711.4K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1002 ETH
+
+$241 756.9K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.1378 ETH
+
+$331 1.06M DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Sell 0.0819 ETH
+
+$197 646.6K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1042 ETH
+
+$250 809.9K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0495 ETH
+
+$119 375.5K DFV 26d[0xFD48…0a52](https://hood.fun/creator/0xFD4866De238B377eCc46B1d98A875d6CCB9f0a52)
+Buy 0.1289 ETH
+
+$310 991.9K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.198 ETH
+
+$476 1.57M DFV 26d[0xa703…5785](https://hood.fun/creator/0xa703660ac565F73D64e5B8Eb6d85426aE2395785)
+Buy 0.1 ETH
+
+$240 809.9K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Sell 0.1335 ETH
+
+$321 1.10M DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1374 ETH
+
+$330 1.11M DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1393 ETH
+
+$335 1.10M DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0884 ETH
+
+$212 711.4K DFV 26d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Sell 0.1151 ETH
+
+$277 942.8K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1353 ETH
+
+$325 1.09M DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.138 ETH
+
+$332 1.09M DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.0757 ETH
+
+$182 610.7K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1394 ETH
+
+$335 1.11M DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0799 ETH
+
+$192 646.6K DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.0745 ETH
+
+$179 610.7K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.1114 ETH
+
+$268 929.0K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1005 ETH
+
+$241 822.6K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1228 ETH
+
+$295 987.2K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1046 ETH
+
+$251 822.6K DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.1232 ETH
+
+$296 987.2K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.1137 ETH
+
+$273 929.0K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Sell 0.146 ETH
+
+$351 1.21M DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1059 ETH
+
+$255 862.6K DFV 26d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0187 ETH
+
+$45 150.6K DFV 26d[0x53BF…6F77](https://hood.fun/creator/0x53BF6B0684Ec7eF91e1387Da3D1a1769bC5A6F77)
+Buy 0.297 ETH
+
+$714 2.40M DFV 26d[0x97Ed…d4bc](https://hood.fun/creator/0x97Ed961B68A8C51E5356FD138F0dfd1859D7d4bc)
+Buy 0.1127 ETH
+
+$271 942.8K DFV 26d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.1013 ETH
+
+$243 862.6K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.099 ETH
+
+$238 857.9K DFV 26d[0xd681…9D45](https://hood.fun/creator/0xd681fCFcdd48E155db29E2FaC991B7238fBb9D45)
+Buy 0.099 ETH
+
+$238 872.8K DFV 26d[0xd681…9D45](https://hood.fun/creator/0xd681fCFcdd48E155db29E2FaC991B7238fBb9D45)
+Buy 0.198 ETH
+
+$476 1.79M DFV 26d[0xd681…9D45](https://hood.fun/creator/0xd681fCFcdd48E155db29E2FaC991B7238fBb9D45)
+Buy 0.1691 ETH
+
+$406 1.58M DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.1265 ETH
+
+$304 1.21M DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0502 ETH
+
+$121 489.4K DFV 26d[0xd9AD…c78F](https://hood.fun/creator/0xd9AD6b75a0f7952Ed47Be22e71dBbeE00569c78F)
+Buy 0.0702 ETH
+
+$169 692.1K DFV 26d[0x66a7…62BF](https://hood.fun/creator/0x66a7dB04B1a73122A629c406487e3d74f11262BF)
+Buy 0.0759 ETH
+
+$182 759.0K DFV 26d[0x7c02…F330](https://hood.fun/creator/0x7c02A12188bfAE7EA6481f3795Aeb52Ae900F330)
+Buy 0.0773 ETH
+
+$186 784.4K DFV 26d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.179 ETH
+
+$430 1.86M DFV 27d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.052 ETH
+
+$125 551.9K DFV 27d[0x09B3…60e9](https://hood.fun/creator/0x09B331beE58D54d17fD79C2D05983aE1824860e9)
+Buy 0.0398 ETH
+
+$96 426.0K DFV 27d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0984 ETH
+
+$237 1.07M DFV 27d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1312 ETH
+
+$315 1.46M DFV 27d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1326 ETH
+
+$319 1.51M DFV 27d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.139 ETH
+
+$334 1.61M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1513 ETH
+
+$364 1.71M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1751 ETH
+
+$421 1.94M DFV 27d[0x09B3…60e9](https://hood.fun/creator/0x09B331beE58D54d17fD79C2D05983aE1824860e9)
+Sell 0.1575 ETH
+
+$379 1.78M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1809 ETH
+
+$435 1.98M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2086 ETH
+
+$501 2.20M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0562 ETH
+
+$135 578.8K DFV 27d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.1772 ETH
+
+$426 1.79M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.1639 ETH
+
+$394 1.60M DFV 27d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1415 ETH
+
+$340 1.35M DFV 28d[0x0145…ab9d](https://hood.fun/creator/0x01452BCED23eC42f8150Db470B53A09D56F4ab9d)
+Buy 0.566 ETH
+
+$1.4k 5.77M DFV 28d[0x0145…ab9d](https://hood.fun/creator/0x01452BCED23eC42f8150Db470B53A09D56F4ab9d)
+Buy 0.0114 ETH
+
+$27 122.1K DFV 28d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.0141 ETH
+
+$34 154.3K DFV 28d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0536 ETH
+
+$129 578.8K DFV 28d[0x09B3…60e9](https://hood.fun/creator/0x09B331beE58D54d17fD79C2D05983aE1824860e9)
+Buy 0.001 ETH
+
+$2 11.1K DFV 28d[0x79a0…06C0](https://hood.fun/creator/0x79a0AbEF79CE5dFbA868277724A31Fb8308e06C0)
+Sell 0.003 ETH
+
+$7 32.7K DFV 28d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0256 ETH
+
+$62 278.7K DFV 28d[0x19E0…fF7a](https://hood.fun/creator/0x19E033feaa265DD1fc4E7149398feBde0835fF7a)
+Buy 0.0471 ETH
+
+$113 515.4K DFV 28d[0x4dAB…5ce2](https://hood.fun/creator/0x4dABF4789001A945F78E4b338d5409Dc0c475ce2)
+Buy 0.003 ETH
+
+$7 32.7K DFV 28d[0xb15c…B0FD](https://hood.fun/creator/0xb15c8CD380C068c8283E02d5231b32D55F06B0FD)
+Sell 0.0104 ETH
+
+$25 116.2K DFV 29d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.1246 ETH
+
+$299 1.39M DFV 29d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.1661 ETH
+
+$399 1.90M DFV 29d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0341 ETH
+
+$82 398.5K DFV 29d[0x6AA5…637D](https://hood.fun/creator/0x6AA5b09d409724b2DBd6516A900B5D7C7e0d637D)
+Buy 0.0424 ETH
+
+$102 499.4K DFV 29d[0xa42B…327C](https://hood.fun/creator/0xa42B3567f6d15ba462141F46c90F0Aa0A26e327C)
+Buy 0.0098 ETH
+
+$24 116.2K DFV 29d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0009 ETH
+
+$2 10.3K DFV 29d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Buy 0.013 ETH
+
+$31 154.3K DFV 29d[0xe412…fBA7](https://hood.fun/creator/0xe41257cAB4Dd31B19E8Cd7d98658C07F8772fBA7)
+Buy 0.0478 ETH
+
+$115 569.8K DFV 29d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1508 ETH
+
+$363 1.84M DFV 29d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0105 ETH
+
+$25 129.8K DFV 29d[0xBDE7…2634](https://hood.fun/creator/0xBDE717a319523d50df986C271AB332dC6A552634)
+Buy 0.01 ETH
+
+$24 123.8K DFV 29d[0x3Fd2…27e9](https://hood.fun/creator/0x3Fd2113e24705D478984bFb9835E84Cf913127e9)
+Buy 0.0359 ETH
+
+$86 447.7K DFV 29d[0x6AA5…637D](https://hood.fun/creator/0x6AA5b09d409724b2DBd6516A900B5D7C7e0d637D)
+Buy 0.0314 ETH
+
+$75 394.2K DFV 29d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Buy 0.032 ETH
+
+$77 403.8K DFV 29d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Buy 0.0882 ETH
+
+$212 1.13M DFV 30d[0x5AC1…04EC](https://hood.fun/creator/0x5AC1AC9533A2a237151CD589282353DbF96A04EC)
+Buy 0.0933 ETH
+
+$224 1.22M DFV 30d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0059 ETH
+
+$14 78.8K DFV 30d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.0177 ETH
+
+$42 236.5K DFV 30d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.0079 ETH
+
+$19 105.1K DFV 30d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.0105 ETH
+
+$25 140.2K DFV 30d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.0093 ETH
+
+$22 121.8K DFV 30d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0299 ETH
+
+$72 391.8K DFV 30d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0958 ETH
+
+$230 1.27M DFV 30d[0xa950…BA4C](https://hood.fun/creator/0xa9502F776009a1D46dA2fecDCFCdAa984f84BA4C)
+Sell 0.32 ETH
+
+$769 4.24M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.072 ETH
+
+$173 914.5K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0955 ETH
+
+$229 1.19M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0388 ETH
+
+$93 477.6K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0409 ETH
+
+$98 499.1K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0106 ETH
+
+$25 128.7K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0142 ETH
+
+$34 171.7K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.019 ETH
+
+$46 228.9K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0254 ETH
+
+$61 305.2K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0341 ETH
+
+$82 406.9K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0005 ETH
+
+$1 5.8K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0542 ETH
+
+$130 642.0K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0699 ETH
+
+$168 818.1K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0989 ETH
+
+$238 1.14M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0313 ETH
+
+$75 350.9K DFV 30d[0x5AC1…04EC](https://hood.fun/creator/0x5AC1AC9533A2a237151CD589282353DbF96A04EC)
+Buy 0.1003 ETH
+
+$241 1.14M DFV 30d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Sell 0.0476 ETH
+
+$114 553.1K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0485 ETH
+
+$117 553.1K DFV 30d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Sell 0.0817 ETH
+
+$196 947.5K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0834 ETH
+
+$200 947.5K DFV 30d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0709 ETH
+
+$170 818.1K DFV 30d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.0549 ETH
+
+$132 642.0K DFV 30d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Sell 0.054 ETH
+
+$130 643.8K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0551 ETH
+
+$132 643.8K DFV 30d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0702 ETH
+
+$169 835.7K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0716 ETH
+
+$172 835.7K DFV 30d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1039 ETH
+
+$250 1.23M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.106 ETH
+
+$255 1.23M DFV 30d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Buy 0.2042 ETH
+
+$491 2.45M DFV 30d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 1.2252 ETH
+
+$2.9k 17.17M DFV 30d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 1.3892 ETH
+
+$3.3k 19.51M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0783 ETH
+
+$188 936.7K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0799 ETH
+
+$192 936.7K DFV 30d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0997 ETH
+
+$240 1.19M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1017 ETH
+
+$244 1.19M DFV 30d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.073 ETH
+
+$176 874.2K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0745 ETH
+
+$179 874.2K DFV 30d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.0979 ETH
+
+$235 1.17M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0999 ETH
+
+$240 1.17M DFV 30d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0665 ETH
+
+$160 797.4K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0679 ETH
+
+$163 797.4K DFV 30d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Sell 0.1003 ETH
+
+$241 1.20M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0497 ETH
+
+$120 585.2K DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0809 ETH
+
+$195 936.1K DFV 30d[0x19E0…fF7a](https://hood.fun/creator/0x19E033feaa265DD1fc4E7149398feBde0835fF7a)
+Buy 0.0₅923 ETH
+
+$0.022 107.65 DFV 30d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0₄308 ETH
+
+$0.074 366.1 DFV 30d[0xB055…BF9c](https://hood.fun/creator/0xB055000000D36A3289527FD7dd962841e7f9BF9c)
+Buy 0.3237 ETH
+
+$778 3.90M DFV 30d[0x19E0…fF7a](https://hood.fun/creator/0x19E033feaa265DD1fc4E7149398feBde0835fF7a)
+Buy 0.0953 ETH
+
+$229 1.20M DFV 30d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.0146 ETH
+
+$35 185.9K DFV 30d[0xA4b1…f7EF](https://hood.fun/creator/0xA4b1057623E48f954A0578F3ecE3840DAc43f7EF)
+Buy 0.0003 ETH
+
+$0.76 4.0K DFV 30d[0x5240…c934](https://hood.fun/creator/0x5240c207f32310CDF816EA4CAE4103487888c934)
+Buy 0.0001 ETH
+
+$0.34 1.8K DFV 30d[0x5240…c934](https://hood.fun/creator/0x5240c207f32310CDF816EA4CAE4103487888c934)
+Buy 0.0457 ETH
+
+$110 585.2K DFV 30d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Sell 0.0986 ETH
+
+$237 1.28M DFV 30d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.03 ETH
+
+$72 379.2K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 381.6K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 384.0K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 386.4K DFV 31d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.03 ETH
+
+$72 388.8K DFV 31d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.03 ETH
+
+$72 391.3K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 393.8K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 396.3K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 398.9K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 401.4K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 404.0K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 406.7K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 409.3K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.2075 ETH
+
+$499 2.83M DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.2927 ETH
+
+$704 3.79M DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0313 ETH
+
+$75 386.9K DFV 31d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Sell 0.1045 ETH
+
+$251 1.31M DFV 31d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0035 ETH
+
+$8 42.7K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0117 ETH
+
+$28 145.1K DFV 31d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0001 ETH
+
+$0.24 1.2K DFV 31d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0038 ETH
+
+$9 45.9K DFV 31d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0013 ETH
+
+$3 15.6K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0043 ETH
+
+$10 52.9K DFV 31d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.0₄227 ETH
+
+$0.055 275.18 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄621 ETH
+
+$0.15 750.98 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄57 ETH
+
+$0.14 689.52 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄942 ETH
+
+$0.23 1.1K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₅356 ETH
+
+$0.0085 43.02 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄253 ETH
+
+$0.061 306.17 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₅524 ETH
+
+$0.013 63.45 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄354 ETH
+
+$0.085 427.97 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄124 ETH
+
+$0.030 149.9 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄263 ETH
+
+$0.063 318.17 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄318 ETH
+
+$0.076 384.89 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄25 ETH
+
+$0.060 303.03 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₅735 ETH
+
+$0.018 88.96 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄507 ETH
+
+$0.12 613.26 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄142 ETH
+
+$0.034 171.47 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄222 ETH
+
+$0.053 268.4 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₅817 ETH
+
+$0.020 98.89 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0₄758 ETH
+
+$0.18 935.97 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0002 ETH
+
+$0.50 2.6K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0002 ETH
+
+$0.46 2.3K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0003 ETH
+
+$0.75 3.9K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄119 ETH
+
+$0.028 146.31 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄196 ETH
+
+$0.047 237.53 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₅25 ETH
+
+$0.0060 30.22 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0₄843 ETH
+
+$0.20 1.0K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄622 ETH
+
+$0.15 752.22 DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Sell 0.0₄175 ETH
+
+$0.042 215.76 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄868 ETH
+
+$0.21 1.1K DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Buy 0.0₄427 ETH
+
+$0.10 516.46 DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Buy 0.0₄869 ETH
+
+$0.21 1.1K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0₄435 ETH
+
+$0.10 526.74 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄289 ETH
+
+$0.070 349.95 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄503 ETH
+
+$0.12 608.18 DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Sell 0.0001 ETH
+
+$0.28 1.5K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄413 ETH
+
+$0.099 509.75 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄33 ETH
+
+$0.079 399.15 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄442 ETH
+
+$0.11 535.13 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄881 ETH
+
+$0.21 1.1K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0₄998 ETH
+
+$0.24 1.2K DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Buy 0.0₄657 ETH
+
+$0.16 795.31 DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Sell 0.0₄876 ETH
+
+$0.21 1.1K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄489 ETH
+
+$0.12 591.77 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0001 ETH
+
+$0.25 1.3K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄835 ETH
+
+$0.20 1.0K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄245 ETH
+
+$0.059 302.54 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄958 ETH
+
+$0.23 1.2K DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Buy 0.0₄173 ETH
+
+$0.041 208.81 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0001 ETH
+
+$0.36 1.8K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Sell 0.0002 ETH
+
+$0.41 2.1K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₅621 ETH
+
+$0.015 75.2 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0₄472 ETH
+
+$0.11 583.11 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄739 ETH
+
+$0.18 912.73 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₅765 ETH
+
+$0.018 92.57 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Sell 0.0₄272 ETH
+
+$0.065 336.27 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄255 ETH
+
+$0.061 308.05 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄33 ETH
+
+$0.079 399.69 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄842 ETH
+
+$0.20 1.0K DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Buy 0.0₅615 ETH
+
+$0.015 74.41 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0₄649 ETH
+
+$0.16 785.64 DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Sell 0.0₄654 ETH
+
+$0.16 807.91 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄316 ETH
+
+$0.076 381.99 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄117 ETH
+
+$0.028 141.55 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄123 ETH
+
+$0.029 148.37 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Sell 0.0₅833 ETH
+
+$0.020 102.8 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄964 ETH
+
+$0.23 1.2K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0001 ETH
+
+$0.26 1.4K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0002 ETH
+
+$0.39 2.0K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄233 ETH
+
+$0.056 281.41 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0₄319 ETH
+
+$0.077 386.24 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄971 ETH
+
+$0.23 1.2K DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Sell 0.0₄207 ETH
+
+$0.050 255.73 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄107 ETH
+
+$0.026 129.49 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0001 ETH
+
+$0.24 1.2K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0₄387 ETH
+
+$0.093 468.76 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Sell 0.0001 ETH
+
+$0.26 1.4K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0₄39 ETH
+
+$0.094 481.41 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄325 ETH
+
+$0.078 393.48 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄839 ETH
+
+$0.20 1.0K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0₄376 ETH
+
+$0.090 454.86 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0₄187 ETH
+
+$0.045 226.74 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄578 ETH
+
+$0.14 699.29 DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Sell 0.0001 ETH
+
+$0.26 1.3K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄171 ETH
+
+$0.041 206.82 DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.0₄887 ETH
+
+$0.21 1.1K DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Buy 0.0₄404 ETH
+
+$0.097 488.97 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0₄535 ETH
+
+$0.13 647.22 DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Sell 0.0001 ETH
+
+$0.26 1.3K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄299 ETH
+
+$0.072 362.29 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄551 ETH
+
+$0.13 667.13 DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0₄546 ETH
+
+$0.13 660.5 DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Sell 0.0₄57 ETH
+
+$0.14 703.42 DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0₄593 ETH
+
+$0.14 717.51 DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄781 ETH
+
+$0.19 944.49 DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0001 ETH
+
+$0.25 1.2K DFV 31d[0xC8C3…46D9](https://hood.fun/creator/0xC8C3e591b51F646531De8213A0b57CeA7F5F46D9)
+Buy 0.0₄772 ETH
+
+$0.19 934.07 DFV 31d[0x67B2…dda6](https://hood.fun/creator/0x67B29e0fb3cb9DB5ea732b6716Ce82370c81dda6)
+Buy 0.0001 ETH
+
+$0.24 1.2K DFV 31d[0x0981…0f88](https://hood.fun/creator/0x09813D103DB10494D1fA10C203fD4d8E49bd0f88)
+Buy 0.0001 ETH
+
+$0.27 1.4K DFV 31d[0x8349…c9b6](https://hood.fun/creator/0x834934c94f1A286Df8b146d6ed57B9832D22c9b6)
+Buy 0.0001 ETH
+
+$0.31 1.6K DFV 31d[0x36A3…2FC1](https://hood.fun/creator/0x36A38fE871D4C0EB900C3Ea6523051e606d62FC1)
+Buy 0.0003 ETH
+
+$0.70 3.5K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.001 ETH
+
+$2 12.0K DFV 31d[0x39b3…BE5f](https://hood.fun/creator/0x39b38686A19836Ac10162c490E4558e120CbBE5f)
+Buy 0.001 ETH
+
+$2 12.1K DFV 31d[0x90Ba…c1ec](https://hood.fun/creator/0x90BaB13b96949Ed5141E5827Cb186B6CCCC0c1ec)
+Buy 0.0044 ETH
+
+$10 52.9K DFV 31d[0x91f8…841d](https://hood.fun/creator/0x91f83E7E03393036aB2f3286E612BA50345E841d)
+Buy 0.0495 ETH
+
+$119 602.2K DFV 31d[0xE64F…02C4](https://hood.fun/creator/0xE64F0db77562d928f0E872ff469aa837E96C02C4)
+Buy 0.0015 ETH
+
+$4 17.9K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0049 ETH
+
+$12 60.7K DFV 31d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Buy 0.0154 ETH
+
+$37 188.9K DFV 31d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0514 ETH
+
+$124 640.0K DFV 31d[0x2a7F…BB4F](https://hood.fun/creator/0x2a7F3d7486641C77600b9b9256132755c8AEBB4F)
+Buy 0.005 ETH
+
+$12 60.7K DFV 31d[0xb587…9Dee](https://hood.fun/creator/0xb5878FdF6C4E026908650501D063B6B7fCA39Dee)
+Buy 0.0524 ETH
+
+$126 640.0K DFV 31d[0xe614…F0AA](https://hood.fun/creator/0xe614eF634a8925aC16eFda497c25683D298BF0AA)
+Buy 0.0294 ETH
+
+$71 362.2K DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.098 ETH
+
+$236 1.22M DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.1 ETH
+
+$240 1.22M DFV 31d[0xE5c3…2C7C](https://hood.fun/creator/0xE5c3bC19aaCF1E32178dC875ABf02255495F2C7C)
+Buy 0.5054 ETH
+
+$1.2k 6.59M DFV 31d[0xFE50…7cFF](https://hood.fun/creator/0xFE5064f2273daAF0411AcFEA4de3BA7E43AE7cFF)
+Buy 0.0409 ETH
+
+$98 564.3K DFV 31d[0x9E05…042B](https://hood.fun/creator/0x9E056f7e9e180d5a21EE3dc339cC145D83C6042B)
+Buy 0.048 ETH
+
+$115 669.3K DFV 31d[0xbEd9…d93b](https://hood.fun/creator/0xbEd9342d2E45ab249aAd5f9c8d46Daf36C96d93b)
+Buy 0.0456 ETH
+
+$110 642.7K DFV 31d[0xa950…BA4C](https://hood.fun/creator/0xa9502F776009a1D46dA2fecDCFCdAa984f84BA4C)
+Buy 0.043 ETH
+
+$103 611.3K DFV 31d[0xE5B1…D9F9](https://hood.fun/creator/0xE5B1e5F66e5e70D1115927982548Dd315E59D9F9)
+Buy 0.048 ETH
+
+$115 689.9K DFV 31d[0x2C10…f665](https://hood.fun/creator/0x2C103784E3010416816F37D4D4F9b94C73Fef665)
+Buy 0.2022 ETH
+
+$486 2.99M DFV 31d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.3668 ETH
+
+$882 5.79M DFV 31d[0x48A6…3A83](https://hood.fun/creator/0x48A65Ad5C2b6a4F210ed4B302E69508173023A83)
+Buy 0.1287 ETH
+
+$309 2.15M DFV 31d[0x48A6…3A83](https://hood.fun/creator/0x48A65Ad5C2b6a4F210ed4B302E69508173023A83)
+Buy 0.0011 ETH
+
+$3 18.1K DFV 31d[0xf670…C5CB](https://hood.fun/creator/0xf670B5e91333Dda7FE858C6C25422A6365eDC5CB)
+Sell 0.3737 ETH
+
+$898 6.20M DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0208 ETH
+
+$50 328.3K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0278 ETH
+
+$67 437.7K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.2099 ETH
+
+$504 3.30M DFV 31d[0xBDE7…2634](https://hood.fun/creator/0xBDE717a319523d50df986C271AB332dC6A552634)
+Buy 0.2591 ETH
+
+$623 4.31M DFV 31d[0xc356…54DB](https://hood.fun/creator/0xc356DFBb8e754BCA2F46683768d5deE0f79554DB)
+Buy 0.0584 ETH
+
+$140 1.01M DFV 31d[0xA4b1…f7EF](https://hood.fun/creator/0xA4b1057623E48f954A0578F3ecE3840DAc43f7EF)
+Buy 0.2338 ETH
+
+$562 4.19M DFV 31d[0xA4b1…f7EF](https://hood.fun/creator/0xA4b1057623E48f954A0578F3ecE3840DAc43f7EF)
+Sell 0.0591 ETH
+
+$142 1.10M DFV 31d[0x8876…0904](https://hood.fun/creator/0x8876789976dEcBfCbBbe364623C63652db8C0904)
+Sell 0.0₄319 ETH
+
+$0.077 592.4 DFV 31d[0xB055…656f](https://hood.fun/creator/0xB055000055e116FE69EF4a00C5292133b29e656f)
+Buy 0.0602 ETH
+
+$145 1.10M DFV 31d[0xF4Fe…7D66](https://hood.fun/creator/0xF4Fe309383519dE4ece24C87a68B56F024787D66)
+Buy 0.2407 ETH
+
+$579 4.58M DFV 31d[0xF4Fe…7D66](https://hood.fun/creator/0xF4Fe309383519dE4ece24C87a68B56F024787D66)
+Buy 0.1289 ETH
+
+$310 2.57M DFV 31d[0x9E05…042B](https://hood.fun/creator/0x9E056f7e9e180d5a21EE3dc339cC145D83C6042B)
+Buy 0.0988 ETH
+
+$238 2.03M DFV 31d[0x5AC1…04EC](https://hood.fun/creator/0x5AC1AC9533A2a237151CD589282353DbF96A04EC)
+Buy 0.1355 ETH
+
+$326 2.87M DFV 31d[0xE5B1…D9F9](https://hood.fun/creator/0xE5B1e5F66e5e70D1115927982548Dd315E59D9F9)
+Buy 0.1514 ETH
+
+$364 3.34M DFV 31d[0x2C10…f665](https://hood.fun/creator/0x2C103784E3010416816F37D4D4F9b94C73Fef665)
+Buy 0.1513 ETH
+
+$364 3.48M DFV 31d[0xbEd9…d93b](https://hood.fun/creator/0xbEd9342d2E45ab249aAd5f9c8d46Daf36C96d93b)
+Sell 0.0057 ETH
+
+$14 135.6K DFV 31d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0058 ETH
+
+$14 135.6K DFV 31d[0x49E5…3A29](https://hood.fun/creator/0x49E5344B11d97762a1CD1653a5Df9BE69C6D3A29)
+Buy 0.0125 ETH
+
+$30 295.4K DFV 31d[0x1b58…14D9](https://hood.fun/creator/0x1b58013694596Dc367213CA6745447084BDC14D9)
+Buy 0.0132 ETH
+
+$32 312.2K DFV 31d[0x532C…EF70](https://hood.fun/creator/0x532C6442034Ad6Dc0FF86D732F9c149C5120EF70)
+Buy 0.088 ETH
+
+$212 2.11M DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.1174 ETH
+
+$282 2.90M DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.2348 ETH
+
+$564 6.11M DFV 31d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1465 ETH
+
+$352 3.94M DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0485 ETH
+
+$117 1.27M DFV 32d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0495 ETH
+
+$119 1.27M DFV 32d[0x047F…143D](https://hood.fun/creator/0x047FEe4D00c273fe4d791c93893AA29f1481143D)
+Sell 0.0508 ETH
+
+$122 1.33M DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0014 ETH
+
+$3 36.9K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.1315 ETH
+
+$316 3.34M DFV 32d[0xC86A…2535](https://hood.fun/creator/0xC86Ab5Dcfb71544cFacbb7cCd53D2926bC152535)
+Sell 0.0015 ETH
+
+$4 36.9K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.045 ETH
+
+$108 1.10M DFV 32d[0x6810…06C6](https://hood.fun/creator/0x68109B2bAbFEd51e906a741972897e70758b06C6)
+Buy 0.0002 ETH
+
+$0.47 4.9K DFV 32d[0xbd3f…765a](https://hood.fun/creator/0xbd3fEeD822984527E58cC6872C28536Ce15d765a)
+Buy 0.0149 ETH
+
+$36 368.9K DFV 32d[0x3299…cFDa](https://hood.fun/creator/0x32991741A6c8654CA4BC6874134DCf36D576cFDa)
+Buy 0.0195 ETH
+
+$47 485.8K DFV 32d[0xF573…c51C](https://hood.fun/creator/0xF573942AF15A12017D386639cfbD8f7DC81Fc51C)
+Buy 0.0492 ETH
+
+$118 1.24M DFV 32d[0x1b58…14D9](https://hood.fun/creator/0x1b58013694596Dc367213CA6745447084BDC14D9)
+Buy 0.0518 ETH
+
+$125 1.32M DFV 32d[0x532C…EF70](https://hood.fun/creator/0x532C6442034Ad6Dc0FF86D732F9c149C5120EF70)
+Buy 0.0311 ETH
+
+$75 803.7K DFV 32d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.0414 ETH
+
+$100 1.08M DFV 32d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Sell 0.0191 ETH
+
+$46 509.8K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0028 ETH
+
+$7 73.8K DFV 32d[0x9c95…4223](https://hood.fun/creator/0x9c95cdeE6541F5f6eAbD43858A098890FE0B4223)
+Sell 0.0028 ETH
+
+$7 73.8K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0028 ETH
+
+$7 73.8K DFV 32d[0x9c95…4223](https://hood.fun/creator/0x9c95cdeE6541F5f6eAbD43858A098890FE0B4223)
+Sell 0.0645 ETH
+
+$155 1.70M DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0099 ETH
+
+$24 254.5K DFV 32d[0xCD3D…C2f3](https://hood.fun/creator/0xCD3D7D39253e87FC24bCB48AF15c6A2B42e2C2f3)
+Buy 0.0099 ETH
+
+$24 255.3K DFV 32d[0xCD3D…C2f3](https://hood.fun/creator/0xCD3D7D39253e87FC24bCB48AF15c6A2B42e2C2f3)
+Buy 0.0495 ETH
+
+$119 1.29M DFV 32d[0x02c7…2D03](https://hood.fun/creator/0x02c771f18709AcD7A2DdF43c1E5C096b29e62D03)
+Buy 0.0495 ETH
+
+$119 1.31M DFV 32d[0x02c7…2D03](https://hood.fun/creator/0x02c771f18709AcD7A2DdF43c1E5C096b29e62D03)
+Buy 0.0495 ETH
+
+$119 1.33M DFV 32d[0xDCbe…5Df0](https://hood.fun/creator/0xDCbeAefdb4F0a06F6f31e00c585f6188A7815Df0)
+Buy 0.0495 ETH
+
+$119 1.35M DFV 32d[0x02c7…2D03](https://hood.fun/creator/0x02c771f18709AcD7A2DdF43c1E5C096b29e62D03)
+Sell 0.01 ETH
+
+$24 280.2K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0101 ETH
+
+$24 281.1K DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0693 ETH
+
+$167 1.91M DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Sell 0.0809 ETH
+
+$194 2.17M DFV 32d[0xf2c6…2839](https://hood.fun/creator/0xf2c69dB0311B3DEd8ec7F39E80f555a200cc2839)
+Sell 0.2335 ETH
+
+$561 5.99M DFV 32d[0x6505…40Dc](https://hood.fun/creator/0x65050A9b7E5075A2bA5cED7b1b64EE66262c40Dc)
+Buy 0.0568 ETH
+
+$136 1.39M DFV 32d[0x3299…cFDa](https://hood.fun/creator/0x32991741A6c8654CA4BC6874134DCf36D576cFDa)
+Buy 0.0757 ETH
+
+$182 1.89M DFV 32d[0xF573…c51C](https://hood.fun/creator/0xF573942AF15A12017D386639cfbD8f7DC81Fc51C)
+Buy 0.0201 ETH
+
+$48 508.3K DFV 32d[0x9150…a6F7](https://hood.fun/creator/0x915028dcCfB2BA24e3A75B7Ab1f23a6d8Fe2a6F7)
+Buy 0.0743 ETH
+
+$178 1.91M DFV 32d[0x14e3…7F92](https://hood.fun/creator/0x14e3C7432C7095C0F86017512A968122B9877F92)
+Buy 0.0803 ETH
+
+$193 2.11M DFV 32d[0x9150…a6F7](https://hood.fun/creator/0x915028dcCfB2BA24e3A75B7Ab1f23a6d8Fe2a6F7)
+Buy 0.07 ETH
+
+$168 1.88M DFV 32d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.1 ETH
+
+$240 2.76M DFV 32d[0x02c7…2D03](https://hood.fun/creator/0x02c771f18709AcD7A2DdF43c1E5C096b29e62D03)
+Buy 0.2802 ETH
+
+$673 8.20M DFV 32d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Sell 0.2486 ETH
+
+$598 7.46M DFV 32d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Buy 0.0099 ETH
+
+$24 280.2K DFV 32d[0x9AB8…1a3c](https://hood.fun/creator/0x9AB81cfdb4a8c2b0d1f8173513C4D2874D851a3c)
+Buy 0.0099 ETH
+
+$24 281.1K DFV 32d[0x6143…9c13](https://hood.fun/creator/0x61435de8961424Cc48999329d396713AF7169c13)
+Buy 0.0594 ETH
+
+$143 1.70M DFV 32d[0x047F…143D](https://hood.fun/creator/0x047FEe4D00c273fe4d791c93893AA29f1481143D)
+Buy 0.2475 ETH
+
+$595 7.46M DFV 32d[0x681B…421A](https://hood.fun/creator/0x681B35c1b97f0aa37a3a9547750b6a14E0e4421A)
+Sell 0.0297 ETH
+
+$71 947.1K DFV 32d[0xCaf6…5cb2](https://hood.fun/creator/0xCaf681a66D020601342297493863E78C959E5cb2)
+Sell 0.0354 ETH
+
+$85 1.12M DFV 32d[0x2FAF…01fC](https://hood.fun/creator/0x2FAF57AC798367775ada4743fD947C18561a01fC)
+Buy 0.07 ETH
+
+$168 2.17M DFV 32d[0x82E2…2138](https://hood.fun/creator/0x82E2AB3E2844d315609181b0154a3D30C69B2138)
+Buy 0.03 ETH
+
+$72 947.1K DFV 32d[0x72E7…273f](https://hood.fun/creator/0x72E788F293a509870C59B66e8BcD442ca53e273f)
+Buy 0.035 ETH
+
+$84 1.12M DFV 32d[0x2FAF…01fC](https://hood.fun/creator/0x2FAF57AC798367775ada4743fD947C18561a01fC)
+Buy 0.099 ETH
+
+$238 3.23M DFV 32d[0x02c7…2D03](https://hood.fun/creator/0x02c771f18709AcD7A2DdF43c1E5C096b29e62D03)
+Buy 0.099 ETH
+
+$238 3.34M DFV 32d[0xdf38…aD99](https://hood.fun/creator/0xdf3841a8f36Ef5436e58217AEBA5D50B36F5aD99)
+Buy 0.0494 ETH
+
+$119 1.82M DFV 32d[0x9150…a6F7](https://hood.fun/creator/0x915028dcCfB2BA24e3A75B7Ab1f23a6d8Fe2a6F7)
+Buy 0.0522 ETH
+
+$125 1.94M DFV 32d[0x9150…a6F7](https://hood.fun/creator/0x915028dcCfB2BA24e3A75B7Ab1f23a6d8Fe2a6F7)
+Buy 0.0227 ETH
+
+$55 851.9K DFV 32d[0x532C…EF70](https://hood.fun/creator/0x532C6442034Ad6Dc0FF86D732F9c149C5120EF70)
+Buy 0.0123 ETH
+
+$30 463.9K DFV 32d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.0027 ETH
+
+$6 100.2K DFV 33d[0x9d75…6307](https://hood.fun/creator/0x9d75cf88bc00968d96De62181f7e4b2fbcC66307)
+Buy 0.0027 ETH
+
+$6 100.3K DFV 33d[0x9d75…6307](https://hood.fun/creator/0x9d75cf88bc00968d96De62181f7e4b2fbcC66307)
+Sell 0.0626 ETH
+
+$150 2.39M DFV 34d[0xdc94…CE81](https://hood.fun/creator/0xdc94C5bcab3D7085A554Fee8a3B83439113FCE81)
+Sell 0.0753 ETH
+
+$181 2.84M DFV 34d[0x8bAd…7893](https://hood.fun/creator/0x8bAdCC40004C977bf24c39f2983a5d25D4A07893)
+Buy 0.0215 ETH
+
+$52 789.2K DFV 35d[0x1b58…14D9](https://hood.fun/creator/0x1b58013694596Dc367213CA6745447084BDC14D9)
+Buy 0.0757 ETH
+
+$182 2.81M DFV 35d[0x3299…cFDa](https://hood.fun/creator/0x32991741A6c8654CA4BC6874134DCf36D576cFDa)
+Buy 0.0411 ETH
+
+$99 1.55M DFV 35d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Buy 0.086 ETH
+
+$207 3.27M DFV 35d[0x1b58…14D9](https://hood.fun/creator/0x1b58013694596Dc367213CA6745447084BDC14D9)
+Buy 0.0908 ETH
+
+$218 3.53M DFV 35d[0x532C…EF70](https://hood.fun/creator/0x532C6442034Ad6Dc0FF86D732F9c149C5120EF70)
+Buy 0.0202 ETH
+
+$48 793.0K DFV 35d[0x532C…EF70](https://hood.fun/creator/0x532C6442034Ad6Dc0FF86D732F9c149C5120EF70)
+Buy 0.0504 ETH
+
+$121 2.00M DFV 35d[0x3299…cFDa](https://hood.fun/creator/0x32991741A6c8654CA4BC6874134DCf36D576cFDa)
+Buy 0.1009 ETH
+
+$243 4.06M DFV 35d[0xF573…c51C](https://hood.fun/creator/0xF573942AF15A12017D386639cfbD8f7DC81Fc51C)
+Buy 0.03 ETH
+
+$72 1.23M DFV 35d[0x1b58…14D9](https://hood.fun/creator/0x1b58013694596Dc367213CA6745447084BDC14D9)
+Buy 0.02 ETH
+
+$48 822.0K DFV 35d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.03 ETH
+
+$72 1.24M DFV 35d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0461 ETH
+
+$111 1.94M DFV 35d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.02 ETH
+
+$48 822.6K DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.02 ETH
+
+$48 826.3K DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Sell 0.034 ETH
+
+$82 1.43M DFV 36d[0x2d7b…0502](https://hood.fun/creator/0x2d7bB16306DA9BaD1eC3cA8D793aA745a8980502)
+Sell 0.0606 ETH
+
+$146 2.52M DFV 36d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Sell 0.0388 ETH
+
+$93 1.60M DFV 36d[0x5848…D070](https://hood.fun/creator/0x58485645d6D65A99A4Ac4fC100684d5320f3D070)
+Sell 0.0876 ETH
+
+$210 3.55M DFV 36d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Sell 0.0714 ETH
+
+$172 2.85M DFV 36d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Sell 0.0443 ETH
+
+$106 1.74M DFV 36d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Sell 0.0918 ETH
+
+$221 3.56M DFV 36d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Sell 0.1172 ETH
+
+$282 4.44M DFV 36d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.02 ETH
+
+$48 734.7K DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.01 ETH
+
+$24 368.5K DFV 36d[0xAA72…Ed56](https://hood.fun/creator/0xAA72928833e4e084c9Ba9dFB6393c48c7a6CEd56)
+Buy 0.01 ETH
+
+$24 369.3K DFV 36d[0x08Dd…e8a9](https://hood.fun/creator/0x08Dd1ca9dA1a938EeAA8953C9cD24e9b7F48e8a9)
+Buy 0.02 ETH
+
+$48 741.0K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0561 ETH
+
+$135 2.11M DFV 36d[0x64D6…4292](https://hood.fun/creator/0x64D61fc046B1DB877d151814c330951cE9054292)
+Sell 0.001 ETH
+
+$2 36.7K DFV 36d[0x2d42…d973](https://hood.fun/creator/0x2d428DA810a6Ac4DDc07936Ef9D81f5BdD25d973)
+Buy 0.001 ETH
+
+$2 36.7K DFV 36d[0x2d42…d973](https://hood.fun/creator/0x2d428DA810a6Ac4DDc07936Ef9D81f5BdD25d973)
+Buy 0.01 ETH
+
+$24 367.2K DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.01 ETH
+
+$24 367.9K DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.05 ETH
+
+$120 1.85M DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.01 ETH
+
+$24 372.7K DFV 36d[0xebC7…C7dD](https://hood.fun/creator/0xebC7fB949d4DE0F4aDFA1Bf59136f870BDFDC7dD)
+Buy 0.01 ETH
+
+$24 373.5K DFV 36d[0x71d2…4ca2](https://hood.fun/creator/0x71d258c21d0EA52549B2b14f9C4E27be2a114ca2)
+Buy 0.01 ETH
+
+$24 374.3K DFV 36d[0xa950…BA4C](https://hood.fun/creator/0xa9502F776009a1D46dA2fecDCFCdAa984f84BA4C)
+Buy 0.01 ETH
+
+$24 375.1K DFV 36d[0xe85e…8FD6](https://hood.fun/creator/0xe85ec79F09e0aa02278111Ebac682Bc0D3208FD6)
+Buy 0.01 ETH
+
+$24 375.9K DFV 36d[0xf670…C5CB](https://hood.fun/creator/0xf670B5e91333Dda7FE858C6C25422A6365eDC5CB)
+Buy 0.01 ETH
+
+$24 376.7K DFV 36d[0x02E1…753F](https://hood.fun/creator/0x02E1dF2843a986E629F9aB7Fe01513CB63e4753F)
+Buy 0.01 ETH
+
+$24 377.5K DFV 36d[0x413F…ED19](https://hood.fun/creator/0x413F585626F66d7A13e1641D10323EA36dEAED19)
+Buy 0.01 ETH
+
+$24 378.3K DFV 36d[0x00D5…A396](https://hood.fun/creator/0x00D5e3dbf6D698Ce0F1451cBad44C8a0a108A396)
+Buy 0.01 ETH
+
+$24 379.2K DFV 36d[0x6AA5…637D](https://hood.fun/creator/0x6AA5b09d409724b2DBd6516A900B5D7C7e0d637D)
+Buy 0.01 ETH
+
+$24 380.0K DFV 36d[0x6A4B…109E](https://hood.fun/creator/0x6A4BD6Ea6103751530EaDB782d1c83A67379109E)
+Buy 0.2 ETH
+
+$481 7.78M DFV 36d[0x55Cf…15DA](https://hood.fun/creator/0x55Cf363A0Ade610bb0724F5A8bD938d4F14015DA)
+Sell 0.016 ETH
+
+$38 646.4K DFV 36d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.01 ETH
+
+$24 396.4K DFV 36d[0x0c2C…DeeD](https://hood.fun/creator/0x0c2Cb2C5F24314B1B045a2DD29d7209CE878DeeD)
+Buy 0.1 ETH
+
+$240 4.01M DFV 36d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.2 ETH
+
+$481 8.30M DFV 36d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.0495 ETH
+
+$119 2.11M DFV 36d[0x64D6…4292](https://hood.fun/creator/0x64D61fc046B1DB877d151814c330951cE9054292)
+Buy 0.01 ETH
+
+$24 429.9K DFV 36d[0x66e9…2358](https://hood.fun/creator/0x66e99bE7b4B079032b5E91c7fa760cEa25aF2358)
+Buy 0.01 ETH
+
+$24 430.9K DFV 36d[0x6a39…30bc](https://hood.fun/creator/0x6a39a077660C651B52F38eCF4dFEB329fFD230bc)
+Buy 0.2 ETH
+
+$481 8.83M DFV 36d[0x3aA9…3010](https://hood.fun/creator/0x3aA9C3E1aAa479b8f0DCeb4964DEFAc20A673010)
+Buy 0.2 ETH
+
+$481 9.26M DFV 36d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Buy 0.0594 ETH
+
+$143 2.84M DFV 36d[0x8bAd…7893](https://hood.fun/creator/0x8bAdCC40004C977bf24c39f2983a5d25D4A07893)
+Buy 0.0495 ETH
+
+$119 2.39M DFV 36d[0xdc94…CE81](https://hood.fun/creator/0xdc94C5bcab3D7085A554Fee8a3B83439113FCE81)
+Buy 0.0297 ETH
+
+$71 1.45M DFV 36d[0x9Bbe…88d7](https://hood.fun/creator/0x9Bbe514F16A0086094E6Addb4bA2B0d67E7b88d7)
+Buy 0.01 ETH
+
+$24 490.9K DFV 36d[0x6349…0077](https://hood.fun/creator/0x634997E87b1f9b813e49A8D9D024493Bbb7a0077)
+Buy 0.01 ETH
+
+$24 492.1K DFV 36d[0x0753…77C7](https://hood.fun/creator/0x0753b0cB4701b2494DB8a722A49A80e7Cf2177C7)
+Buy 0.01 ETH
+
+$24 493.3K DFV 36d[0x3D5B…7d08](https://hood.fun/creator/0x3D5BdbE704bd416048F752B7dBa9421A59627d08)
+Buy 0.01 ETH
+
+$24 494.6K DFV 36d[0x89d3…8F39](https://hood.fun/creator/0x89d3a1AC974fEF4293EE8a1E7eE15DDB66028F39)
+Buy 0.01 ETH
+
+$24 495.8K DFV 36d[0xBBA5…b211](https://hood.fun/creator/0xBBA58f126080799eE4dF2DBCa7861Beb4E2Fb211)
+Buy 0.01 ETH
+
+$24 497.0K DFV 36d[0x7E01…CCA3](https://hood.fun/creator/0x7E0153cDc744aD08b217cC205a72309935f3CCA3)
+Buy 0.01 ETH
+
+$24 498.2K DFV 36d[0x3aA9…3010](https://hood.fun/creator/0x3aA9C3E1aAa479b8f0DCeb4964DEFAc20A673010)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0₄98 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0002 ETH
+
+$0.47 10.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Buy 0.0001 ETH
+
+$0.24 5.0K DFV 36d[0xfa3c…D2eF](https://hood.fun/creator/0xfa3caCe583be90439239667be1abac71352AD2eF)
+Sell 0.0892 ETH
+
+$214 4.49M DFV 36d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Sell 0.096 ETH
+
+$231 4.72M DFV 36d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.1317 ETH
+
+$317 6.30M DFV 36d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Sell 0.1604 ETH
+
+$385 7.40M DFV 36d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Sell 0.1246 ETH
+
+$299 5.56M DFV 36d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Sell 0.0831 ETH
+
+$200 3.62M DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1134 ETH
+
+$273 4.83M DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1559 ETH
+
+$375 6.43M DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.1867 ETH
+
+$449 7.41M DFV 36d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 381.4K DFV 36d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.01 ETH
+
+$24 382.2K DFV 36d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 383.1K DFV 36d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.01 ETH
+
+$24 383.9K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0097 ETH
+
+$23 380.6K DFV 36d[0xc704…c988](https://hood.fun/creator/0xc70430c767E575B484775dba03784c4aBD33c988)
+Sell 0.0726 ETH
+
+$174 2.82M DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0852 ETH
+
+$205 3.25M DFV 36d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 370.8K DFV 36d[0xb0f1…050b](https://hood.fun/creator/0xb0f1EFf83349724682068Afe4fa5C02B1aF0050b)
+Buy 0.01 ETH
+
+$24 371.6K DFV 36d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.01 ETH
+
+$24 372.4K DFV 36d[0x0226…D2a6](https://hood.fun/creator/0x02264D81a8e600766ADca1C25Ebe8a1a4633D2a6)
+Buy 0.01 ETH
+
+$24 373.2K DFV 36d[0x0FcB…033A](https://hood.fun/creator/0x0FcB3fA8e7e60090e821D57d7Fbf2d5405f3033A)
+Buy 0.01 ETH
+
+$24 374.0K DFV 36d[0x0Ad3…073f](https://hood.fun/creator/0x0Ad31977D3E4D94E1EaffB4Bb1619e7a6020073f)
+Buy 0.01 ETH
+
+$24 374.8K DFV 36d[0x4fbb…36EA](https://hood.fun/creator/0x4fbb6E30240FB0A245214B77D0741935132E36EA)
+Buy 0.01 ETH
+
+$24 375.6K DFV 36d[0x418a…67dd](https://hood.fun/creator/0x418aE92569b6508438982Cae49E4dF3c229c67dd)
+Buy 0.01 ETH
+
+$24 376.4K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 377.2K DFV 36d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.01 ETH
+
+$24 378.1K DFV 36d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Buy 0.01 ETH
+
+$24 378.9K DFV 36d[0xf264…1522](https://hood.fun/creator/0xf2645eb6669265505148e922F96b2881847B1522)
+Buy 0.01 ETH
+
+$24 379.7K DFV 36d[0xC38a…4D32](https://hood.fun/creator/0xC38a5643a015495d1e0fd0FbE9E5090864814D32)
+Buy 0.01 ETH
+
+$24 380.5K DFV 36d[0x5417…0DA4](https://hood.fun/creator/0x5417ADa456c695c4744f9B5fCb145e7996570DA4)
+Buy 0.01 ETH
+
+$24 381.3K DFV 36d[0x02f5…40CE](https://hood.fun/creator/0x02f53b82D6B65759F07658e5a2da352b1B8e40CE)
+Buy 0.01 ETH
+
+$24 382.2K DFV 36d[0xC808…0DE0](https://hood.fun/creator/0xC80849b5dB2a5f905Df378dDdAC55FD535DB0DE0)
+Buy 0.01 ETH
+
+$24 383.0K DFV 36d[0xA6D9…c497](https://hood.fun/creator/0xA6D9c8921E597b3305192a2FEd9FFB0CA8bFc497)
+Buy 0.01 ETH
+
+$24 383.8K DFV 36d[0xCfdE…0109](https://hood.fun/creator/0xCfdEdf2fb246A0eaa2c9b9fe4A2c74F0978b0109)
+Buy 0.01 ETH
+
+$24 384.7K DFV 36d[0x6238…a1e7](https://hood.fun/creator/0x623851E67ec99E27c684EAcBa7d7Ee03a8f9a1e7)
+Buy 0.01 ETH
+
+$24 385.5K DFV 36d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Buy 0.01 ETH
+
+$24 386.4K DFV 36d[0xa0B7…F0FA](https://hood.fun/creator/0xa0B7C98BeDF22AdCce7E48DF69AdFD623E0FF0FA)
+Buy 0.01 ETH
+
+$24 387.2K DFV 36d[0xa42B…327C](https://hood.fun/creator/0xa42B3567f6d15ba462141F46c90F0Aa0A26e327C)
+Buy 0.01 ETH
+
+$24 388.0K DFV 36d[0xF48E…8416](https://hood.fun/creator/0xF48E8728495E9Cfe961F48d4B4d46c0bF0968416)
+Buy 0.01 ETH
+
+$24 388.9K DFV 36d[0x05F7…4f91](https://hood.fun/creator/0x05F73B5D8F069394e1D5D901d73dFe85c6b64f91)
+Buy 0.01 ETH
+
+$24 389.7K DFV 36d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.01 ETH
+
+$24 390.6K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Sell 0.0183 ETH
+
+$44 730.4K DFV 36d[0xF91e…C8b4](https://hood.fun/creator/0xF91eaCc9FC2fC546300C5E1Ab575Ec39d560C8b4)
+Sell 0.0206 ETH
+
+$49 815.5K DFV 36d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Sell 0.0065 ETH
+
+$16 256.1K DFV 36d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Buy 0.01 ETH
+
+$24 387.5K DFV 36d[0x180a…C23A](https://hood.fun/creator/0x180a7Fee04F8F27B2e4980b6b70B9A54999AC23A)
+Buy 0.01 ETH
+
+$24 388.4K DFV 36d[0x523e…2382](https://hood.fun/creator/0x523e1E8741D20F038aadeeeB3cF2055C589d2382)
+Buy 0.01 ETH
+
+$24 389.2K DFV 36d[0x184B…993f](https://hood.fun/creator/0x184B5bc7B81aD0CEe80Aa977D5BC41a0aE16993f)
+Buy 0.01 ETH
+
+$24 390.1K DFV 36d[0x9d06…1012](https://hood.fun/creator/0x9d068082EE9B1fbc515bF21C50a64a4ce0fC1012)
+Buy 0.01 ETH
+
+$24 390.9K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 391.8K DFV 36d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.01 ETH
+
+$24 392.6K DFV 36d[0xfb8c…bA76](https://hood.fun/creator/0xfb8cDe0936c4A03148C70DF436596f4d6AeEbA76)
+Buy 0.01 ETH
+
+$24 393.5K DFV 36d[0xE711…31D6](https://hood.fun/creator/0xE7118F11B754796710a2680837035886449231D6)
+Buy 0.01 ETH
+
+$24 394.4K DFV 36d[0x043F…E7d5](https://hood.fun/creator/0x043FA044270907D141FC69f32a266ed304EfE7d5)
+Buy 0.01 ETH
+
+$24 395.2K DFV 36d[0x458B…b468](https://hood.fun/creator/0x458BD47F0a9D953F71d3453f793E622D0b85b468)
+Buy 0.01 ETH
+
+$24 396.1K DFV 36d[0xD942…2a7a](https://hood.fun/creator/0xD94293ad1B93217d060c0bb6125CA1f8B8E22a7a)
+Buy 0.01 ETH
+
+$24 397.0K DFV 36d[0x9801…a350](https://hood.fun/creator/0x98010540032E94b019C9DDfFBE08a85dbE4ba350)
+Buy 0.01 ETH
+
+$24 397.9K DFV 36d[0x04ea…DA0b](https://hood.fun/creator/0x04ea6405508D2ccB95DFD6C672a4151416b2DA0b)
+Buy 0.01 ETH
+
+$24 398.7K DFV 36d[0x3290…7E7e](https://hood.fun/creator/0x32907c6a24f7D7F06d60865C7Be96E044d647E7e)
+Buy 0.01 ETH
+
+$24 399.6K DFV 36d[0xAA72…Ed56](https://hood.fun/creator/0xAA72928833e4e084c9Ba9dFB6393c48c7a6CEd56)
+Buy 0.01 ETH
+
+$24 400.5K DFV 36d[0x9d75…6307](https://hood.fun/creator/0x9d75cf88bc00968d96De62181f7e4b2fbcC66307)
+Buy 0.01 ETH
+
+$24 401.4K DFV 36d[0xebC7…C7dD](https://hood.fun/creator/0xebC7fB949d4DE0F4aDFA1Bf59136f870BDFDC7dD)
+Buy 0.01 ETH
+
+$24 402.3K DFV 36d[0x4dAB…5ce2](https://hood.fun/creator/0x4dABF4789001A945F78E4b338d5409Dc0c475ce2)
+Buy 0.01 ETH
+
+$24 403.2K DFV 36d[0xf791…0132](https://hood.fun/creator/0xf791225a0195843dA5EFfc38635F71156b570132)
+Buy 0.01 ETH
+
+$24 404.1K DFV 36d[0xe85e…8FD6](https://hood.fun/creator/0xe85ec79F09e0aa02278111Ebac682Bc0D3208FD6)
+Buy 0.01 ETH
+
+$24 405.0K DFV 36d[0xf670…C5CB](https://hood.fun/creator/0xf670B5e91333Dda7FE858C6C25422A6365eDC5CB)
+Buy 0.02 ETH
+
+$48 812.7K DFV 36d[0x55Cf…15DA](https://hood.fun/creator/0x55Cf363A0Ade610bb0724F5A8bD938d4F14015DA)
+Buy 0.01 ETH
+
+$24 407.7K DFV 36d[0x02E1…753F](https://hood.fun/creator/0x02E1dF2843a986E629F9aB7Fe01513CB63e4753F)
+Buy 0.02 ETH
+
+$48 818.2K DFV 36d[0x37dC…4D60](https://hood.fun/creator/0x37dC8b3B0dd8078289713Bc76E6cc926ebBd4D60)
+Buy 0.02 ETH
+
+$48 821.9K DFV 36d[0x55AB…8Bd1](https://hood.fun/creator/0x55AB204244E10be18C3729221Efb6aFe765e8Bd1)
+Buy 0.02 ETH
+
+$48 825.6K DFV 36d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Buy 0.02 ETH
+
+$48 829.3K DFV 36d[0x1563…25d9](https://hood.fun/creator/0x15635d695c6D2Ab7eBA30062dc08576aB38925d9)
+Buy 0.01 ETH
+
+$24 416.1K DFV 36d[0xa950…BA4C](https://hood.fun/creator/0xa9502F776009a1D46dA2fecDCFCdAa984f84BA4C)
+Buy 0.02 ETH
+
+$48 835.0K DFV 36d[0xd3FA…547C](https://hood.fun/creator/0xd3FA83CE55f3e6677d09acFC6809d42Bc027547C)
+Buy 0.01 ETH
+
+$24 418.9K DFV 36d[0x89d3…8F39](https://hood.fun/creator/0x89d3a1AC974fEF4293EE8a1E7eE15DDB66028F39)
+Buy 0.01 ETH
+
+$24 419.9K DFV 36d[0x08Dd…e8a9](https://hood.fun/creator/0x08Dd1ca9dA1a938EeAA8953C9cD24e9b7F48e8a9)
+Buy 0.01 ETH
+
+$24 420.8K DFV 36d[0xBBA5…b211](https://hood.fun/creator/0xBBA58f126080799eE4dF2DBCa7861Beb4E2Fb211)
+Buy 0.01 ETH
+
+$24 421.8K DFV 36d[0x6A4B…109E](https://hood.fun/creator/0x6A4BD6Ea6103751530EaDB782d1c83A67379109E)
+Buy 0.02 ETH
+
+$48 846.5K DFV 36d[0xd149…195c](https://hood.fun/creator/0xd149ae26368CC6D83d4389d97ac47E666e55195c)
+Buy 0.02 ETH
+
+$48 850.3K DFV 36d[0x2d84…7986](https://hood.fun/creator/0x2d8499deC0D3f2A6cbce870509cCC9Fd28c67986)
+Buy 0.01 ETH
+
+$24 426.6K DFV 36d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.01 ETH
+
+$24 427.6K DFV 36d[0x0FcB…033A](https://hood.fun/creator/0x0FcB3fA8e7e60090e821D57d7Fbf2d5405f3033A)
+Buy 0.02 ETH
+
+$48 858.2K DFV 36d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.02 ETH
+
+$48 862.1K DFV 36d[0xfcdc…42aC](https://hood.fun/creator/0xfcdc3D8a0a186d063B4C333E8e1a2446155A42aC)
+Buy 0.02 ETH
+
+$48 866.1K DFV 36d[0x8860…B711](https://hood.fun/creator/0x88609a9735192d2557515E421Dd182973166B711)
+Buy 0.01 ETH
+
+$24 434.6K DFV 36d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.01 ETH
+
+$24 435.6K DFV 36d[0x0753…77C7](https://hood.fun/creator/0x0753b0cB4701b2494DB8a722A49A80e7Cf2177C7)
+Buy 0.02 ETH
+
+$48 874.2K DFV 36d[0x9869…5E2F](https://hood.fun/creator/0x98699ab2543Fe92865217e98444FaD94CF455E2F)
+Buy 0.01 ETH
+
+$24 438.6K DFV 36d[0xC808…0DE0](https://hood.fun/creator/0xC80849b5dB2a5f905Df378dDdAC55FD535DB0DE0)
+Buy 0.02 ETH
+
+$48 880.3K DFV 36d[0xAAD5…6167](https://hood.fun/creator/0xAAD51E5303d0CeFeFA451B30d8496D677bD56167)
+Buy 0.01 ETH
+
+$24 441.7K DFV 36d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Buy 0.01 ETH
+
+$24 442.7K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 443.7K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 444.8K DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.01 ETH
+
+$24 445.8K DFV 36d[0x5e01…1221](https://hood.fun/creator/0x5e0164A93F7fA6949BCFd8f37e64CD726d1f1221)
+Buy 0.01 ETH
+
+$24 446.9K DFV 36d[0x5e01…1221](https://hood.fun/creator/0x5e0164A93F7fA6949BCFd8f37e64CD726d1f1221)
+Buy 0.01 ETH
+
+$24 447.9K DFV 36d[0xF48E…8416](https://hood.fun/creator/0xF48E8728495E9Cfe961F48d4B4d46c0bF0968416)
+Buy 0.01 ETH
+
+$24 449.0K DFV 36d[0x523e…2382](https://hood.fun/creator/0x523e1E8741D20F038aadeeeB3cF2055C589d2382)
+Buy 0.01 ETH
+
+$24 450.0K DFV 36d[0x9d06…1012](https://hood.fun/creator/0x9d068082EE9B1fbc515bF21C50a64a4ce0fC1012)
+Buy 0.01 ETH
+
+$24 451.1K DFV 36d[0xE711…31D6](https://hood.fun/creator/0xE7118F11B754796710a2680837035886449231D6)
+Buy 0.02 ETH
+
+$48 905.4K DFV 36d[0x38c3…5581](https://hood.fun/creator/0x38c333CF8d7692C07Dcdd9959e33Bcb630745581)
+Buy 0.02 ETH
+
+$48 909.7K DFV 36d[0x9eb6…808A](https://hood.fun/creator/0x9eb680F5BfEdbF577dF9ec66495A8ef92E14808A)
+Buy 0.02 ETH
+
+$48 914.0K DFV 36d[0x737a…F572](https://hood.fun/creator/0x737aA55A39fC02b09EE2ec46083BaC4B901aF572)
+Buy 0.02 ETH
+
+$48 918.4K DFV 36d[0xb0fF…aD6c](https://hood.fun/creator/0xb0fF44c021c2dc49c00c294b78EC319E3913aD6c)
+Buy 0.02 ETH
+
+$48 922.7K DFV 36d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.02 ETH
+
+$48 927.1K DFV 36d[0x2d7b…0502](https://hood.fun/creator/0x2d7bB16306DA9BaD1eC3cA8D793aA745a8980502)
+Buy 0.02 ETH
+
+$48 931.6K DFV 36d[0xa6dA…2C92](https://hood.fun/creator/0xa6dA7b11Bb730e607470b513cEf02a5C40982C92)
+Sell 0.0932 ETH
+
+$224 4.39M DFV 36d[0x4813…32bd](https://hood.fun/creator/0x4813A4eb3f5BeB4Cb940DEee2f81471FFdD132bd)
+Sell 0.188 ETH
+
+$452 8.56M DFV 36d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.02 ETH
+
+$48 874.8K DFV 36d[0x3Fd2…27e9](https://hood.fun/creator/0x3Fd2113e24705D478984bFb9835E84Cf913127e9)
+Buy 0.099 ETH
+
+$238 4.39M DFV 36d[0x4813…32bd](https://hood.fun/creator/0x4813A4eb3f5BeB4Cb940DEee2f81471FFdD132bd)
+Buy 0.03 ETH
+
+$72 1.35M DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Sell 0.0634 ETH
+
+$152 2.90M DFV 36d[0x4813…32bd](https://hood.fun/creator/0x4813A4eb3f5BeB4Cb940DEee2f81471FFdD132bd)
+Buy 0.0078 ETH
+
+$19 349.5K DFV 36d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.0057 ETH
+
+$14 256.1K DFV 36d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Buy 0.0062 ETH
+
+$15 277.6K DFV 36d[0xF91e…C8b4](https://hood.fun/creator/0xF91eaCc9FC2fC546300C5E1Ab575Ec39d560C8b4)
+Buy 0.02 ETH
+
+$48 896.3K DFV 36d[0x3D5B…7d08](https://hood.fun/creator/0x3D5BdbE704bd416048F752B7dBa9421A59627d08)
+Buy 0.02 ETH
+
+$48 900.5K DFV 36d[0xBC6b…B4d0](https://hood.fun/creator/0xBC6bf956266Fe83F3329dDD668A5F1a3741cB4d0)
+Buy 0.02 ETH
+
+$48 904.8K DFV 36d[0x5848…D070](https://hood.fun/creator/0x58485645d6D65A99A4Ac4fC100684d5320f3D070)
+Buy 0.02 ETH
+
+$48 909.1K DFV 36d[0x6a39…30bc](https://hood.fun/creator/0x6a39a077660C651B52F38eCF4dFEB329fFD230bc)
+Buy 0.02 ETH
+
+$48 913.4K DFV 36d[0xb0f1…050b](https://hood.fun/creator/0xb0f1EFf83349724682068Afe4fa5C02B1aF0050b)
+Buy 0.03 ETH
+
+$72 1.38M DFV 36d[0x613f…c9eD](https://hood.fun/creator/0x613faF78b41fc3BdA2C9b744D204De1A6e4Dc9eD)
+Buy 0.03 ETH
+
+$72 1.39M DFV 36d[0x6912…6F74](https://hood.fun/creator/0x69123Ff51EDe8E3a46F4F454926CA6622dDa6F74)
+Buy 0.02 ETH
+
+$48 931.0K DFV 36d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Buy 0.03 ETH
+
+$72 1.40M DFV 36d[0x411c…27eF](https://hood.fun/creator/0x411cCb033cE48Cc47a9D15c6a576d34C357027eF)
+Buy 0.02 ETH
+
+$48 942.2K DFV 36d[0x04ea…DA0b](https://hood.fun/creator/0x04ea6405508D2ccB95DFD6C672a4151416b2DA0b)
+Buy 0.03 ETH
+
+$72 1.42M DFV 36d[0x381F…bC52](https://hood.fun/creator/0x381Ffc1803d9164ad03AFA5D8F97b75c093CbC52)
+Buy 0.03 ETH
+
+$72 1.43M DFV 36d[0x71d2…4ca2](https://hood.fun/creator/0x71d258c21d0EA52549B2b14f9C4E27be2a114ca2)
+Buy 0.02 ETH
+
+$48 960.6K DFV 36d[0xa950…BA4C](https://hood.fun/creator/0xa9502F776009a1D46dA2fecDCFCdAa984f84BA4C)
+Buy 0.03 ETH
+
+$72 1.45M DFV 36d[0x6AA5…637D](https://hood.fun/creator/0x6AA5b09d409724b2DBd6516A900B5D7C7e0d637D)
+Buy 0.03 ETH
+
+$72 1.46M DFV 36d[0x5DB1…2aa4](https://hood.fun/creator/0x5DB187adf0c5CD59898bEaA1301663C35F1c2aa4)
+Buy 0.03 ETH
+
+$72 1.47M DFV 36d[0x66e9…2358](https://hood.fun/creator/0x66e99bE7b4B079032b5E91c7fa760cEa25aF2358)
+Buy 0.02 ETH
+
+$48 986.8K DFV 36d[0x3c26…C941](https://hood.fun/creator/0x3c26D4A85040eEE6487f26B43EdC63A8990AC941)
+Buy 0.03 ETH
+
+$72 1.49M DFV 36d[0xCfdE…0109](https://hood.fun/creator/0xCfdEdf2fb246A0eaa2c9b9fe4A2c74F0978b0109)
+Buy 0.04 ETH
+
+$96 2.00M DFV 36d[0xb7dF…3093](https://hood.fun/creator/0xb7dFB86a406c2a50bd22f2d9898A0Ba682Fb3093)
+Buy 0.02 ETH
+
+$48 1.01M DFV 36d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Buy 0.03 ETH
+
+$72 1.52M DFV 36d[0xa42B…327C](https://hood.fun/creator/0xa42B3567f6d15ba462141F46c90F0Aa0A26e327C)
+Buy 0.02 ETH
+
+$48 1.02M DFV 36d[0x5e01…1221](https://hood.fun/creator/0x5e0164A93F7fA6949BCFd8f37e64CD726d1f1221)
+Buy 0.02 ETH
+
+$48 1.03M DFV 36d[0xb0fF…aD6c](https://hood.fun/creator/0xb0fF44c021c2dc49c00c294b78EC319E3913aD6c)
+Buy 0.04 ETH
+
+$96 2.07M DFV 36d[0xe6ab…6206](https://hood.fun/creator/0xe6abd4691b88f5e3882265A497C06EB3a3F46206)
+Buy 0.03 ETH
+
+$72 1.57M DFV 36d[0x9d75…6307](https://hood.fun/creator/0x9d75cf88bc00968d96De62181f7e4b2fbcC66307)
+Buy 0.04 ETH
+
+$96 2.11M DFV 36d[0x0ac7…89Ab](https://hood.fun/creator/0x0ac70988d251C934cCF40Ecc6a77ce752e2589Ab)
+Buy 0.03 ETH
+
+$72 1.59M DFV 36d[0x4dAB…5ce2](https://hood.fun/creator/0x4dABF4789001A945F78E4b338d5409Dc0c475ce2)
+Buy 0.04 ETH
+
+$96 2.14M DFV 36d[0x3aA9…3010](https://hood.fun/creator/0x3aA9C3E1aAa479b8f0DCeb4964DEFAc20A673010)
+Buy 0.03 ETH
+
+$72 1.62M DFV 36d[0x1563…25d9](https://hood.fun/creator/0x15635d695c6D2Ab7eBA30062dc08576aB38925d9)
+Buy 0.02 ETH
+
+$48 1.09M DFV 36d[0x3D5B…7d08](https://hood.fun/creator/0x3D5BdbE704bd416048F752B7dBa9421A59627d08)
+Buy 0.03 ETH
+
+$72 1.64M DFV 36d[0xd3FA…547C](https://hood.fun/creator/0xd3FA83CE55f3e6677d09acFC6809d42Bc027547C)
+Buy 0.02 ETH
+
+$48 1.10M DFV 36d[0xBC6b…B4d0](https://hood.fun/creator/0xBC6bf956266Fe83F3329dDD668A5F1a3741cB4d0)
+Buy 0.03 ETH
+
+$72 1.67M DFV 36d[0x89d3…8F39](https://hood.fun/creator/0x89d3a1AC974fEF4293EE8a1E7eE15DDB66028F39)
+Buy 0.03 ETH
+
+$72 1.68M DFV 36d[0xBBA5…b211](https://hood.fun/creator/0xBBA58f126080799eE4dF2DBCa7861Beb4E2Fb211)
+Buy 0.04 ETH
+
+$96 2.26M DFV 36d[0x7E01…CCA3](https://hood.fun/creator/0x7E0153cDc744aD08b217cC205a72309935f3CCA3)
+Buy 0.04 ETH
+
+$96 2.28M DFV 36d[0xe715…1610](https://hood.fun/creator/0xe71567D5d84AF428A3F2F17608eFc5A178bB1610)
+Buy 0.03 ETH
+
+$72 1.73M DFV 36d[0x55AB…8Bd1](https://hood.fun/creator/0x55AB204244E10be18C3729221Efb6aFe765e8Bd1)
+Buy 0.008 ETH
+
+$19 466.0K DFV 36d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.0078 ETH
+
+$19 452.9K DFV 36d[0xF91e…C8b4](https://hood.fun/creator/0xF91eaCc9FC2fC546300C5E1Ab575Ec39d560C8b4)
+Buy 0.0065 ETH
+
+$16 380.6K DFV 36d[0xc704…c988](https://hood.fun/creator/0xc70430c767E575B484775dba03784c4aBD33c988)
+Buy 0.02 ETH
+
+$48 1.17M DFV 36d[0xb0f1…050b](https://hood.fun/creator/0xb0f1EFf83349724682068Afe4fa5C02B1aF0050b)
+Buy 0.03 ETH
+
+$72 1.76M DFV 36d[0xd149…195c](https://hood.fun/creator/0xd149ae26368CC6D83d4389d97ac47E666e55195c)
+Buy 0.03 ETH
+
+$72 1.78M DFV 36d[0x2d84…7986](https://hood.fun/creator/0x2d8499deC0D3f2A6cbce870509cCC9Fd28c67986)
+Buy 0.04 ETH
+
+$96 2.39M DFV 36d[0x0226…D2a6](https://hood.fun/creator/0x02264D81a8e600766ADca1C25Ebe8a1a4633D2a6)
+Sell 0.054 ETH
+
+$130 3.29M DFV 36d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Sell 0.0624 ETH
+
+$150 3.74M DFV 36d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.0495 ETH
+
+$119 2.90M DFV 36d[0x4813…32bd](https://hood.fun/creator/0x4813A4eb3f5BeB4Cb940DEee2f81471FFdD132bd)
+Buy 0.04 ETH
+
+$96 2.37M DFV 36d[0x0Ad3…073f](https://hood.fun/creator/0x0Ad31977D3E4D94E1EaffB4Bb1619e7a6020073f)
+Buy 0.03 ETH
+
+$72 1.80M DFV 36d[0x8860…B711](https://hood.fun/creator/0x88609a9735192d2557515E421Dd182973166B711)
+Buy 0.03 ETH
+
+$72 1.81M DFV 36d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.02 ETH
+
+$48 1.22M DFV 36d[0x613f…c9eD](https://hood.fun/creator/0x613faF78b41fc3BdA2C9b744D204De1A6e4Dc9eD)
+Buy 0.04 ETH
+
+$96 2.45M DFV 36d[0x03D8…EBF9](https://hood.fun/creator/0x03D8C8528b2E1Ce38ab2e981F63A6b6ba9FeEBF9)
+Buy 0.04 ETH
+
+$96 2.48M DFV 36d[0x02f5…40CE](https://hood.fun/creator/0x02f53b82D6B65759F07658e5a2da352b1B8e40CE)
+Buy 0.04 ETH
+
+$96 2.51M DFV 36d[0xa0B7…F0FA](https://hood.fun/creator/0xa0B7C98BeDF22AdCce7E48DF69AdFD623E0FF0FA)
+Buy 0.04 ETH
+
+$96 2.53M DFV 36d[0x6238…a1e7](https://hood.fun/creator/0x623851E67ec99E27c684EAcBa7d7Ee03a8f9a1e7)
+Buy 0.04 ETH
+
+$96 2.56M DFV 36d[0x180a…C23A](https://hood.fun/creator/0x180a7Fee04F8F27B2e4980b6b70B9A54999AC23A)
+Buy 0.03 ETH
+
+$72 1.94M DFV 36d[0x523e…2382](https://hood.fun/creator/0x523e1E8741D20F038aadeeeB3cF2055C589d2382)
+Buy 0.04 ETH
+
+$96 2.61M DFV 36d[0x458B…b468](https://hood.fun/creator/0x458BD47F0a9D953F71d3453f793E622D0b85b468)
+Buy 0.03 ETH
+
+$72 1.98M DFV 36d[0x38c3…5581](https://hood.fun/creator/0x38c333CF8d7692C07Dcdd9959e33Bcb630745581)
+Buy 0.04 ETH
+
+$96 2.67M DFV 36d[0x184B…993f](https://hood.fun/creator/0x184B5bc7B81aD0CEe80Aa977D5BC41a0aE16993f)
+Buy 0.04 ETH
+
+$96 2.70M DFV 36d[0xfb8c…bA76](https://hood.fun/creator/0xfb8cDe0936c4A03148C70DF436596f4d6AeEbA76)
+Buy 0.03 ETH
+
+$72 2.04M DFV 36d[0x737a…F572](https://hood.fun/creator/0x737aA55A39fC02b09EE2ec46083BaC4B901aF572)
+Buy 0.02 ETH
+
+$48 1.37M DFV 36d[0x381F…bC52](https://hood.fun/creator/0x381Ffc1803d9164ad03AFA5D8F97b75c093CbC52)
+Buy 0.04 ETH
+
+$96 2.77M DFV 36d[0xD942…2a7a](https://hood.fun/creator/0xD94293ad1B93217d060c0bb6125CA1f8B8E22a7a)
+Buy 0.03 ETH
+
+$72 2.10M DFV 36d[0x2d7b…0502](https://hood.fun/creator/0x2d7bB16306DA9BaD1eC3cA8D793aA745a8980502)
+Buy 0.04 ETH
+
+$96 2.83M DFV 36d[0x3290…7E7e](https://hood.fun/creator/0x32907c6a24f7D7F06d60865C7Be96E044d647E7e)
+Sell 0.5579 ETH
+
+$1.3k 37.31M DFV 36d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.03 ETH
+
+$72 1.82M DFV 36d[0x3Fd2…27e9](https://hood.fun/creator/0x3Fd2113e24705D478984bFb9835E84Cf913127e9)
+Buy 0.04 ETH
+
+$96 2.45M DFV 36d[0xe85e…8FD6](https://hood.fun/creator/0xe85ec79F09e0aa02278111Ebac682Bc0D3208FD6)
+Buy 0.04 ETH
+
+$96 2.48M DFV 36d[0xf791…0132](https://hood.fun/creator/0xf791225a0195843dA5EFfc38635F71156b570132)
+Buy 0.04 ETH
+
+$96 2.51M DFV 36d[0x02E1…753F](https://hood.fun/creator/0x02E1dF2843a986E629F9aB7Fe01513CB63e4753F)
+Buy 0.04 ETH
+
+$96 2.53M DFV 36d[0x2D9F…EF13](https://hood.fun/creator/0x2D9F8cdb8d2605E4B43F9d512119DC63b45DEF13)
+Buy 0.03 ETH
+
+$72 1.92M DFV 36d[0x7ba8…6bE3](https://hood.fun/creator/0x7ba84860f1aaa70941d7ee4377201012E6936bE3)
+Buy 0.03 ETH
+
+$72 1.94M DFV 36d[0x5848…D070](https://hood.fun/creator/0x58485645d6D65A99A4Ac4fC100684d5320f3D070)
+Buy 0.03 ETH
+
+$72 1.95M DFV 36d[0x6a39…30bc](https://hood.fun/creator/0x6a39a077660C651B52F38eCF4dFEB329fFD230bc)
+Buy 0.04 ETH
+
+$96 2.63M DFV 36d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.04 ETH
+
+$96 2.66M DFV 36d[0xfcdc…42aC](https://hood.fun/creator/0xfcdc3D8a0a186d063B4C333E8e1a2446155A42aC)
+Buy 0.04 ETH
+
+$96 2.69M DFV 36d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.04 ETH
+
+$96 2.72M DFV 36d[0x9869…5E2F](https://hood.fun/creator/0x98699ab2543Fe92865217e98444FaD94CF455E2F)
+Buy 0.04 ETH
+
+$96 2.75M DFV 36d[0xC808…0DE0](https://hood.fun/creator/0xC80849b5dB2a5f905Df378dDdAC55FD535DB0DE0)
+Buy 0.04 ETH
+
+$96 2.79M DFV 36d[0xAAD5…6167](https://hood.fun/creator/0xAAD51E5303d0CeFeFA451B30d8496D677bD56167)
+Buy 0.03 ETH
+
+$72 2.11M DFV 36d[0x6912…6F74](https://hood.fun/creator/0x69123Ff51EDe8E3a46F4F454926CA6622dDa6F74)
+Buy 0.02 ETH
+
+$48 1.42M DFV 36d[0xb7dF…3093](https://hood.fun/creator/0xb7dFB86a406c2a50bd22f2d9898A0Ba682Fb3093)
+Buy 0.03 ETH
+
+$72 2.14M DFV 36d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Buy 0.02 ETH
+
+$48 1.44M DFV 36d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Buy 0.03 ETH
+
+$72 2.17M DFV 36d[0x411c…27eF](https://hood.fun/creator/0x411cCb033cE48Cc47a9D15c6a576d34C357027eF)
+Buy 0.04 ETH
+
+$96 2.93M DFV 36d[0xF48E…8416](https://hood.fun/creator/0xF48E8728495E9Cfe961F48d4B4d46c0bF0968416)
+Buy 0.04 ETH
+
+$96 2.96M DFV 36d[0x9d06…1012](https://hood.fun/creator/0x9d068082EE9B1fbc515bF21C50a64a4ce0fC1012)
+Buy 0.04 ETH
+
+$96 3.00M DFV 36d[0xE711…31D6](https://hood.fun/creator/0xE7118F11B754796710a2680837035886449231D6)
+Buy 0.04 ETH
+
+$96 3.04M DFV 36d[0x9eb6…808A](https://hood.fun/creator/0x9eb680F5BfEdbF577dF9ec66495A8ef92E14808A)
+Buy 0.04 ETH
+
+$96 3.08M DFV 36d[0x4879…6AE8](https://hood.fun/creator/0x487900751a940Ef09D34D43415acAc158ed36AE8)
+Buy 0.03 ETH
+
+$72 2.33M DFV 36d[0x04ea…DA0b](https://hood.fun/creator/0x04ea6405508D2ccB95DFD6C672a4151416b2DA0b)
+Buy 0.04 ETH
+
+$96 3.14M DFV 36d[0xa6dA…2C92](https://hood.fun/creator/0xa6dA7b11Bb730e607470b513cEf02a5C40982C92)
+Buy 0.03 ETH
+
+$72 2.38M DFV 36d[0x71d2…4ca2](https://hood.fun/creator/0x71d258c21d0EA52549B2b14f9C4E27be2a114ca2)
+Buy 0.02 ETH
+
+$48 1.60M DFV 36d[0x613f…c9eD](https://hood.fun/creator/0x613faF78b41fc3BdA2C9b744D204De1A6e4Dc9eD)
+Buy 0.07 ETH
+
+$168 5.68M DFV 20699d[0xe8bd…F5A5](https://hood.fun/creator/0xe8bd343dEfB421eDD8EB05A0585c51546fB2F5A5)
+Buy 0.01 ETH
+
+$24 822.3K DFV 20699d[0x6912…6F74](https://hood.fun/creator/0x69123Ff51EDe8E3a46F4F454926CA6622dDa6F74)
+Buy 0.01 ETH
+
+$24 824.9K DFV 20699d[0x9eb6…808A](https://hood.fun/creator/0x9eb680F5BfEdbF577dF9ec66495A8ef92E14808A)
+Buy 0.01 ETH
+
+$24 827.5K DFV 20699d[0xa6dA…2C92](https://hood.fun/creator/0xa6dA7b11Bb730e607470b513cEf02a5C40982C92)
+Buy 0.07 ETH
+
+$168 5.87M DFV 20699d[0x413F…ED19](https://hood.fun/creator/0x413F585626F66d7A13e1641D10323EA36dEAED19)
+Buy 0.07 ETH
+
+$168 6.00M DFV 20699d[0x00D5…A396](https://hood.fun/creator/0x00D5e3dbf6D698Ce0F1451cBad44C8a0a108A396)
+Buy 0.07 ETH
+
+$168 6.14M DFV 20699d[0x0c2C…DeeD](https://hood.fun/creator/0x0c2Cb2C5F24314B1B045a2DD29d7209CE878DeeD)
+Buy 0.07 ETH
+
+$168 6.28M DFV 20699d[0x6349…0077](https://hood.fun/creator/0x634997E87b1f9b813e49A8D9D024493Bbb7a0077)
+Buy 0.07 ETH
+
+$168 6.43M DFV 20699d[0x4fbb…36EA](https://hood.fun/creator/0x4fbb6E30240FB0A245214B77D0741935132E36EA)
+Buy 0.07 ETH
+
+$168 6.59M DFV 20699d[0x418a…67dd](https://hood.fun/creator/0x418aE92569b6508438982Cae49E4dF3c229c67dd)
+Buy 0.07 ETH
+
+$168 6.75M DFV 20699d[0xC38a…4D32](https://hood.fun/creator/0xC38a5643a015495d1e0fd0FbE9E5090864814D32)
+Buy 0.07 ETH
+
+$168 6.91M DFV 20699d[0x5417…0DA4](https://hood.fun/creator/0x5417ADa456c695c4744f9B5fCb145e7996570DA4)
+Buy 0.07 ETH
+
+$168 7.08M DFV 20699d[0xf264…1522](https://hood.fun/creator/0xf2645eb6669265505148e922F96b2881847B1522)
+Buy 0.07 ETH
+
+$168 7.26M DFV 20699d[0xA6D9…c497](https://hood.fun/creator/0xA6D9c8921E597b3305192a2FEd9FFB0CA8bFc497)
+Buy 0.07 ETH
+
+$168 7.45M DFV 20699d[0x05F7…4f91](https://hood.fun/creator/0x05F73B5D8F069394e1D5D901d73dFe85c6b64f91)
+Buy 0.07 ETH
+
+$168 7.64M DFV 20699d[0x043F…E7d5](https://hood.fun/creator/0x043FA044270907D141FC69f32a266ed304EfE7d5)
+Buy 0.07 ETH
+
+$168 7.84M DFV 20699d[0x9801…a350](https://hood.fun/creator/0x98010540032E94b019C9DDfFBE08a85dbE4ba350)
+Buy 0.07 ETH
+
+$168 8.05M DFV 20699d[0xAA72…Ed56](https://hood.fun/creator/0xAA72928833e4e084c9Ba9dFB6393c48c7a6CEd56)
+Buy 0.07 ETH
+
+$168 8.26M DFV 20699d[0xebC7…C7dD](https://hood.fun/creator/0xebC7fB949d4DE0F4aDFA1Bf59136f870BDFDC7dD)
+Buy 0.07 ETH
+
+$168 8.49M DFV 20699d[0x55Cf…15DA](https://hood.fun/creator/0x55Cf363A0Ade610bb0724F5A8bD938d4F14015DA)
+Buy 0.07 ETH
+
+$168 8.72M DFV 20699d[0xf670…C5CB](https://hood.fun/creator/0xf670B5e91333Dda7FE858C6C25422A6365eDC5CB)
+Buy 0.07 ETH
+
+$168 8.97M DFV 20699d[0x37dC…4D60](https://hood.fun/creator/0x37dC8b3B0dd8078289713Bc76E6cc926ebBd4D60)
+Buy 0.07 ETH
+
+$168 9.22M DFV 20699d[0x08Dd…e8a9](https://hood.fun/creator/0x08Dd1ca9dA1a938EeAA8953C9cD24e9b7F48e8a9)
+Buy 0.07 ETH
+
+$168 9.49M DFV 20699d[0x6A4B…109E](https://hood.fun/creator/0x6A4BD6Ea6103751530EaDB782d1c83A67379109E)
+Buy 0.07 ETH
+
+$168 9.77M DFV 20699d[0x0FcB…033A](https://hood.fun/creator/0x0FcB3fA8e7e60090e821D57d7Fbf2d5405f3033A)
+Buy 0.07 ETH
+
+$168 10.05M DFV 20699d[0x0753…77C7](https://hood.fun/creator/0x0753b0cB4701b2494DB8a722A49A80e7Cf2177C7)
+Buy 0.05 ETH
+
+$120 7.37M DFV 20699d[0xCfdE…0109](https://hood.fun/creator/0xCfdEdf2fb246A0eaa2c9b9fe4A2c74F0978b0109)
+Buy 0.05 ETH
+
+$120 7.53M DFV 20699d[0x5e01…1221](https://hood.fun/creator/0x5e0164A93F7fA6949BCFd8f37e64CD726d1f1221)
+Buy 0.05 ETH
+
+$120 7.69M DFV 20699d[0xb0fF…aD6c](https://hood.fun/creator/0xb0fF44c021c2dc49c00c294b78EC319E3913aD6c)
+Buy 0.05 ETH
+
+$120 7.86M DFV 20699d[0xe6ab…6206](https://hood.fun/creator/0xe6abd4691b88f5e3882265A497C06EB3a3F46206)
+Buy 0.05 ETH
+
+$120 8.04M DFV 20699d[0x9d75…6307](https://hood.fun/creator/0x9d75cf88bc00968d96De62181f7e4b2fbcC66307)
+Buy 0.05 ETH
+
+$120 8.22M DFV 20699d[0x0ac7…89Ab](https://hood.fun/creator/0x0ac70988d251C934cCF40Ecc6a77ce752e2589Ab)
+Buy 0.05 ETH
+
+$120 8.41M DFV 20699d[0x1563…25d9](https://hood.fun/creator/0x15635d695c6D2Ab7eBA30062dc08576aB38925d9)
+Buy 0.05 ETH
+
+$120 8.60M DFV 20699d[0xd3FA…547C](https://hood.fun/creator/0xd3FA83CE55f3e6677d09acFC6809d42Bc027547C)
+Buy 0.05 ETH
+
+$120 8.80M DFV 20699d[0xBC6b…B4d0](https://hood.fun/creator/0xBC6bf956266Fe83F3329dDD668A5F1a3741cB4d0)
+Buy 0.05 ETH
+
+$120 9.01M DFV 20699d[0xe715…1610](https://hood.fun/creator/0xe71567D5d84AF428A3F2F17608eFc5A178bB1610)
+Buy 0.05 ETH
+
+$120 9.23M DFV 20699d[0x2d84…7986](https://hood.fun/creator/0x2d8499deC0D3f2A6cbce870509cCC9Fd28c67986)
+Buy 0.05 ETH
+
+$120 9.45M DFV 20699d[0x0226…D2a6](https://hood.fun/creator/0x02264D81a8e600766ADca1C25Ebe8a1a4633D2a6)
+Buy 0.05 ETH
+
+$120 9.68M DFV 20699d[0x03D8…EBF9](https://hood.fun/creator/0x03D8C8528b2E1Ce38ab2e981F63A6b6ba9FeEBF9)
+Buy 0.05 ETH
+
+$120 9.92M DFV 20699d[0xa0B7…F0FA](https://hood.fun/creator/0xa0B7C98BeDF22AdCce7E48DF69AdFD623E0FF0FA)
+Buy 0.05 ETH
+
+$120 10.17M DFV 20699d[0x38c3…5581](https://hood.fun/creator/0x38c333CF8d7692C07Dcdd9959e33Bcb630745581)
+Buy 0.05 ETH
+
+$120 10.43M DFV 20699d[0x458B…b468](https://hood.fun/creator/0x458BD47F0a9D953F71d3453f793E622D0b85b468)
+Buy 0.05 ETH
+
+$120 10.70M DFV 20699d[0xD942…2a7a](https://hood.fun/creator/0xD94293ad1B93217d060c0bb6125CA1f8B8E22a7a)
+Buy 0.05 ETH
+
+$120 10.98M DFV 20699d[0x381F…bC52](https://hood.fun/creator/0x381Ffc1803d9164ad03AFA5D8F97b75c093CbC52)
+Buy 0.05 ETH
+
+$120 11.27M DFV 20699d[0x2d7b…0502](https://hood.fun/creator/0x2d7bB16306DA9BaD1eC3cA8D793aA745a8980502)
+Buy 0.05 ETH
+
+$120 11.58M DFV 20699d[0xe85e…8FD6](https://hood.fun/creator/0xe85ec79F09e0aa02278111Ebac682Bc0D3208FD6)
+Buy 0.014 ETH
+
+$34 3.29M DFV 20699d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Buy 0.0157 ETH
+
+$38 3.74M DFV 20699d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.05 ETH
+
+$120 12.08M DFV 20699d[0x02E1…753F](https://hood.fun/creator/0x02E1dF2843a986E629F9aB7Fe01513CB63e4753F)
+Buy 0.1 ETH
+
+$240 25.19M DFV 20699d[0x9eC6…e3Ce](https://hood.fun/creator/0x9eC6a8D1E6dBfb0B184E344d40021B9Aaf56e3Ce)
+Buy 0.05 ETH
+
+$120 13.14M DFV 20699d[0x5848…D070](https://hood.fun/creator/0x58485645d6D65A99A4Ac4fC100684d5320f3D070)
+Buy 0.05 ETH
+
+$120 13.52M DFV 20699d[0x631B…3382](https://hood.fun/creator/0x631B356bDFDEeD4B9b0A7C5cfD953A4f38f73382)
+Buy 0.05 ETH
+
+$120 13.92M DFV 20699d[0xb6A0…685C](https://hood.fun/creator/0xb6A03D4B5Af1f81E605DcecaFC70d77D3Cee685C)
+Buy 0.05 ETH
+
+$120 14.33M DFV 20699d[0x97D0…f985](https://hood.fun/creator/0x97D04d178639Af15B76A8C3B907E14f7626af985)
+Sell 0.0208 ETH
+
+$50 6.12M DFV 20699d[0x4294…0880](https://hood.fun/creator/0x42948e785eca81ff74aBa0502Aa6385f9B6A0880)
+Sell 0.0366 ETH
+
+$88 10.61M DFV 20699d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Sell 0.02 ETH
+
+$48 5.70M DFV 20699d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.05 ETH
+
+$120 14.09M DFV 20699d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.0198 ETH
+
+$48 5.70M DFV 20699d[0x0e18…5fcC](https://hood.fun/creator/0x0e18A801322bA76378Af2d779aA05CD2e0A35fcC)
+Buy 0.05 ETH
+
+$120 14.69M DFV 37d[0xD4C9…e395](https://hood.fun/creator/0xD4C9ad6Ba6A61c6c2B77e42e31767382657fe395)
+Buy 0.05 ETH
+
+$120 15.14M DFV 20699d[0xdf25…ABAB](https://hood.fun/creator/0xdf259eb06df844C31D7b383b5f637C7b0461ABAB)
+Buy 0.0198 ETH
+
+$48 6.12M DFV 20699d[0x4294…0880](https://hood.fun/creator/0x42948e785eca81ff74aBa0502Aa6385f9B6A0880)
+Buy 0.1 ETH
+
+$240 32.12M DFV 37d[0x1A90…3b1B](https://hood.fun/creator/0x1A904008A4f4Ca97113593B2F4A7537AA52D3b1B)
+Buy 0.1 ETH
+
+$240 34.24M DFV 20699d[0x385b…0Df4](https://hood.fun/creator/0x385b19682c997Eb9118d0f4D8e66C09c98780Df4)
+Buy 0.0297 ETH
+
+$71 10.61M DFV 20699d[0x034c…bD23](https://hood.fun/creator/0x034c9e0B1cD8B3B4779828A23b1017fd6d69bD23)
+Buy 0.1 ETH
+
+$240 37.31M DFV 37d[0x4C83…5429](https://hood.fun/creator/0x4C83a70431edB60Be21160e0208dB22dF3475429)
+Buy 0.0634 ETH
+
+$152 25.00M DFV 37d[0x92b5…24ff](https://hood.fun/creator/0x92b5444e95e163c3e740bD4D0eBa93D482a524ff)
+
+Holders 0
+
+List Bubbles
+
+No holders yet.
+
+### $DFV community
+
+0 posts in the last 24h · 1 total
+
+[![Image 9](https://hood.fun/pfp/9.jpg) 0x07c1…534a·20d Man just let this run please, I need an effin miracle. How is this not on the robinhood crypto app yet? $96](https://hood.fun/communities/0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d)[Visit community](https://hood.fun/communities/0xE584d4b1BB5BbBfc2Cc63a9bE5a59a871f8F600d)
+
+### Bonding curve progress
+
+100.0%
+
+Coin has graduated — now trading on a locked Uniswap v3 pool. 🎓 997.06M $DFV are in the locked Uniswap pair.
+
+[@hooddotfun on X](https://x.com/hooddotfun)[t.me/hooddotfun](https://t.me/hooddotfun)
+
+[Whitepaper](https://hood.fun/whitepaper)[Terms](https://hood.fun/terms)[contact@hood.fun](mailto:contact@hood.fun)
+
+![Image 10](https://hood.fun/logo.png)×Built on Robinhood Chain· LP locked forever on graduation · not financial advice
+
+[Tokens](https://hood.fun/)[Create](https://hood.fun/create)[Swap](https://hood.fun/swap)[Bridge](https://hood.fun/bridge)[Profile](https://hood.fun/portfolio)
+
+## Welcome to hood.fun
+
+hood.fun is one of many interfaces to a permissionless, decentralized protocol on Robinhood Chain. Smart contracts execute exactly as written and are experimental technology.
+
+Tokens here are created by users, not by hood.fun. Nothing listed is endorsed, vetted, or financial advice.
+
+Trading tokens is highly volatile. Never put in more than you can afford to lose.
+
+Market data is provided by an indexer, as-is, and may occasionally lag the chain.
+
+By continuing you confirm you are not located in a jurisdiction where using hood.fun is prohibited, and that you are of legal age to use it where you live.
+
+Read the full Terms of Use- [x] I have read, understand, and accept the Terms of Use. Enter hood.fun

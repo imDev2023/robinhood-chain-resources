@@ -1,0 +1,271 @@
+# Stock Token APIs
+
+Robinhood provides a set of read-only REST endpoints under `https://api.robinhood.com/rhj/` for offchain access to Stock Token data — live prices, corporate actions, and asset metadata (including the corporate-action multiplier).
+
+All endpoints are rate-limited to 60 requests/second and cached; respect the per-endpoint cache window to avoid stale reads.
+
+Prices differ between surfaces. The REST `/prices` endpoint returns the raw underlying-equity bid/ask (not multiplier-adjusted). The onchain Chainlink feed returns the multiplier-adjusted value. If you mix the two, apply `currentMultiplier` from `/assets` to convert. See [Building with Stock Tokens](/chain/building-with-stock-tokens) for the onchain multiplier details.
+
+## /assets
+
+**Endpoint:** `GET https://api.robinhood.com/rhj/assets`
+
+Asset metadata for Stock Tokens, including the current corporate-action multiplier and per-chain deployments.
+
+### Schema
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `id` | string | Onchain `uid()`, `0x` + 66-char lowercase hex. Same across all chains for one asset. |
+| `tokenSymbol` | string | e.g. `AAPL`. |
+| `tokenName` | string | Display name. |
+| `deployments[]` | array | One entry per chain. |
+| `deployments[].contractAddress` | string | EIP-55 checksummed address. |
+| `deployments[].chainId` | integer | EIP-155 chain id. |
+| `currentMultiplier` | string (decimal) | 18-dp shares-per-token. |
+| `pendingMultiplier` | string (decimal) | `""` when none pending. |
+| `pendingMultiplierEffectiveTime` | string (RFC-3339) | Present only when a multiplier change is pending; omitted otherwise. |
+| `logoUrl` | string | Public CDN logo, derived from the representative deployment's address (lowercased): `https://cdn.robinhood.com/ncw_assets/logos/<address>.png`. |
+| `tradingCapabilities` | object | Underlying-equity trading capabilities, echoed from the underlier verbatim. Omitted when the underlier can't be resolved. |
+| `status` | enum | `AssetStatus`. |
+
+#### AssetStatus
+
+`status` is one of:
+
+| Value |
+| --- |
+| `ASSET_STATUS_UNSPECIFIED` |
+| `ASSET_STATUS_ACTIVE` |
+| `ASSET_STATUS_INACTIVE` |
+
+#### tradingCapabilities
+
+An object echoing the underlying equity's Source tradability fields verbatim. The whole object is omitted / null when the tokenized asset's underlying equity can't be resolved in Source (no active asset-mapping, or the equity lookup returns nothing). When present, each sub-field is independently nullable — `null` on a sub-field means Source has that equity but has not set that particular field (distinct from the value `untradable`, which is an affirmative "not tradable" state).
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `fractionalTradability` | string \| null | Fractional-share tradability of the underlier. |
+| `allDayTradability` | string \| null | RH all-day / overnight (24/5) trading flag for the underlier. |
+| `extendedHoursFractionalTradability` | boolean \| null | Whether fractional trading is enabled during extended hours. |
+
+**`fractionalTradability`**
+
+| Value | Meaning |
+| --- | --- |
+| `tradable` | Fractional trading allowed. |
+| `untradable` | Fractional trading not allowed. |
+| `position_closing_only` | Existing positions may only be closed; no new fractional opens. |
+| `position_opening_only` | Fractional opens only; no fractional closes. |
+| `null` | Source has not set this field on the underlier. |
+
+**`allDayTradability`**
+
+| Value | Meaning |
+| --- | --- |
+| `tradable` | Underlier is enabled for all-day / 24-5 trading. |
+| `untradable` | Not enabled for all-day trading. |
+| `position_closing_only` | All-day session may only close existing positions. |
+| `""` (empty string) | Source explicit "blank" state for this field (distinct from `null`). |
+| `null` | Source has not set this field on the underlier. |
+
+**`extendedHoursFractionalTradability`**
+
+| Value | Meaning |
+| --- | --- |
+| `true` | Fractional trading enabled during extended hours. |
+| `false` | Fractional trading disabled during extended hours. |
+| `null` | Source has not set this field on the underlier. |
+
+### Example
+
+```json
+{
+  "assets": [
+    {
+      "id": "0x0000000000000000000000000000000002c4d1ce31ec4310b2c507c921a52b70",
+      "tokenSymbol": "P",
+      "tokenName": "Everpure • Robinhood Token",
+      "deployments": [
+        {
+          "contractAddress": "0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D",
+          "chainId": 4663
+        }
+      ],
+      "currentMultiplier": "1.000000000000000000",
+      "pendingMultiplier": "",
+      "logoUrl": "https://cdn.robinhood.com/ncw_assets/logos/0x1cdad396db64bda184d5182a97dd9b3c62100b7d.png",
+      "tradingCapabilities": {
+        "fractionalTradability": "tradable",
+        "allDayTradability": "tradable",
+        "extendedHoursFractionalTradability": true
+      },
+      "status": "ASSET_STATUS_ACTIVE"
+    },
+    {
+      "id": "0x0000000000000000000000000000000004a960b45163413698f0f69b5454785d",
+      "tokenSymbol": "APLD",
+      "tokenName": "Applied Digital • Robinhood Token",
+      "deployments": [
+        {
+          "contractAddress": "0xb8DBf92F9741c9ac1c32115E78581f23509916FD",
+          "chainId": 4663
+        }
+      ],
+      "currentMultiplier": "1.000000000000000000",
+      "pendingMultiplier": "",
+      "logoUrl": "https://cdn.robinhood.com/ncw_assets/logos/0xb8dbf92f9741c9ac1c32115e78581f23509916fd.png",
+      "tradingCapabilities": {
+        "fractionalTradability": "tradable",
+        "allDayTradability": "untradable",
+        "extendedHoursFractionalTradability": false
+      },
+      "status": "ASSET_STATUS_ACTIVE"
+    }
+  ]
+}
+```
+
+## /prices
+
+**Endpoint:** `GET https://api.robinhood.com/rhj/prices/{symbol}`
+
+| Cache | Rate Limit |
+| --- | --- |
+| 15s | 60 req/s |
+
+Please use `/{symbol}` whenever applicable to prevent additional latency.
+
+Live token-denominated USD bid/ask. Prices are the raw underlying-equity bid/ask passed through as-is — they are **not** multiplier-adjusted. Apply `currentMultiplier` from `/assets` if you need the token-equivalent value.
+
+### Schema
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `tokenSymbol` | string | No `X` prefix. |
+| `deployments[]` | array | Same shape as `/assets`. |
+| `bid` | string (decimal) | Raw underlying-equity bid, passed through as-is (not multiplier-adjusted). |
+| `ask` | string (decimal) | Raw underlying-equity ask. Same semantics as `bid`. |
+| `currency` | string | `"USD"` at launch. |
+| `dailyTradingVolume` | string (decimal) | Underlying daily trading volume. `"0"` when unavailable. |
+| `isTradingHalt` | boolean | `true` when the asset has an active trading halt. |
+| `generatedAt` | string (ISO-8601) | Server time the quote was generated. |
+
+### Example
+
+```json
+{
+  "quotes": [
+    {
+      "tokenSymbol": "AAPL",
+      "deployments": [
+        { "contractAddress": "0xAbCdEf0123456789AbCdEf0123456789AbCdEf01", "chainId": 4663 }
+      ],
+      "bid": "213.45",
+      "ask": "213.47",
+      "currency": "USD",
+      "dailyTradingVolume": "48293710",
+      "isTradingHalt": false,
+      "generatedAt": "2026-06-23T15:53:30Z"
+    }
+  ]
+}
+```
+
+## /corporate-actions
+
+**Endpoint:** `GET https://api.robinhood.com/rhj/corporate-actions`
+
+| Cache | Rate Limit |
+| --- | --- |
+| 1 hour | 60 req/s |
+
+Processed corporate actions for Stock Tokens, most-recent `processDate` first. Each entry's `details` object has exactly one key present, determined by `type`; all `*Rate` fields are decimal strings. Use this endpoint to reconcile why a token's multiplier changed onchain — for example, a `FORWARD_SPLIT` entry with `oldRate`/`newRate` explains a corresponding `uiMultiplier()` update.
+
+### Schema
+
+| Field | Type | Notes |
+| --- | --- | --- |
+| `id` | string | Onchain `uid()`, `0x` + 66-char hex. Stable for dedup across chains. |
+| `type` | enum | `CorporateActionType`. |
+| `status` | enum | `CorporateActionStatus`. |
+| `processDate` | object `{year,month,day}` | `ctok` scheduling date; for splits, the multiplier-effective date. Omitted/null on in-progress rows with no scheduled date. Not the dividend payable date. |
+| `tokenSymbol` | string | No `X` prefix. |
+| `deployments[]` | array | Same shape as `/assets`. |
+| `details` | object | Exactly one key set, matching `type`. See Details variants. |
+
+#### CorporateActionType
+
+| Value | Active at launch |
+| --- | --- |
+| `CORPORATE_ACTION_TYPE_UNSPECIFIED` | — |
+| `CORPORATE_ACTION_TYPE_FORWARD_SPLIT` | yes |
+| `CORPORATE_ACTION_TYPE_REVERSE_SPLIT` | yes |
+| `CORPORATE_ACTION_TYPE_CASH_DIVIDEND` | yes |
+| `CORPORATE_ACTION_TYPE_STOCK_DIVIDEND` | yes |
+| `CORPORATE_ACTION_TYPE_SPIN_OFF` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_CASH_MERGER` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_STOCK_MERGER` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_STOCK_AND_CASH_MERGER` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_REDEMPTION` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_NAME_CHANGE` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_WORTHLESS_REMOVAL` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_RIGHTS_DISTRIBUTION` | no (forward-compat) |
+| `CORPORATE_ACTION_TYPE_UNIT_SPLIT` | no (forward-compat) |
+
+#### CorporateActionStatus
+
+| Value | On the wire |
+| --- | --- |
+| `CORPORATE_ACTION_STATUS_UNSPECIFIED` | never |
+| `CORPORATE_ACTION_STATUS_IN_PROGRESS` | yes (Source PENDING + READY) |
+| `CORPORATE_ACTION_STATUS_COMPLETED` | yes |
+
+#### Details variants
+
+Exactly one key is present, determined by `type`. All `*Rate` fields are decimal strings.
+
+| `type` | `details` key | Fields |
+| --- | --- | --- |
+| `..._FORWARD_SPLIT` | `forwardSplit` | `underlyingSymbol`, `oldRate`, `newRate` |
+| `..._REVERSE_SPLIT` | `reverseSplit` | `underlyingSymbol`, `oldRate`, `newRate` |
+| `..._CASH_DIVIDEND` | `cashDividend` | `underlyingSymbol`, `rate` (USD per share) |
+| `..._STOCK_DIVIDEND` | `stockDividend` | `underlyingSymbol`, `rate` (shares per share) |
+| `..._SPIN_OFF` | `spinOff` | `sourceUnderlyingSymbol`, `sourceRate`, `newUnderlyingSymbol`, `newRate` |
+| `..._CASH_MERGER` | `cashMerger` | `acquireeUnderlyingSymbol`, `cashRate` |
+| `..._STOCK_MERGER` | `stockMerger` | `acquirerUnderlyingSymbol`, `acquirerRate`, `acquireeUnderlyingSymbol`, `acquireeRate` |
+| `..._STOCK_AND_CASH_MERGER` | `stockAndCashMerger` | `acquirerUnderlyingSymbol`, `acquirerRate`, `acquireeUnderlyingSymbol`, `acquireeRate`, `cashRate` |
+| `..._REDEMPTION` | `redemption` | `underlyingSymbol`, `rate` |
+| `..._NAME_CHANGE` | `nameChange` | `oldUnderlyingSymbol`, `newUnderlyingSymbol` |
+| `..._WORTHLESS_REMOVAL` | `worthlessRemoval` | `underlyingSymbol` |
+| `..._RIGHTS_DISTRIBUTION` | `rightsDistribution` | `sourceUnderlyingSymbol`, `newUnderlyingSymbol`, `rate` |
+| `..._UNIT_SPLIT` | `unitSplit` | `oldUnderlyingSymbol`, `oldRate`, `newUnderlyingSymbol`, `newRate`, `alternateUnderlyingSymbol`, `alternateRate` |
+
+### Example
+
+```json
+{
+  "corpActions": [
+    {
+      "id": "0x00000000000000000000000000000000c2425be3658540dd8e2424cbf3c5c649",
+      "type": "CORPORATE_ACTION_TYPE_FORWARD_SPLIT",
+      "status": "CORPORATE_ACTION_STATUS_COMPLETED",
+      "processDate": { "year": 2026, "month": 6, "day": 15 },
+      "tokenSymbol": "AAPL",
+      "deployments": [
+        { "contractAddress": "0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9", "chainId": 4663 }
+      ],
+      "details": {
+        "forwardSplit": { "underlyingSymbol": "AAPL", "oldRate": "1", "newRate": "4" }
+      }
+    }
+  ]
+}
+```
+
+## Next steps
+
+- [Stock Tokens](/chain/stock-tokens) — overview of Robinhood Stock Tokens
+- [Building with Stock Tokens](/chain/building-with-stock-tokens) — onchain integration patterns and the multiplier
+- [Token Contracts](/chain/contracts) — all stock token & ETF addresses
+- [Oracles & Price Feeds](/chain/oracles-and-price-feeds) — onchain price feed integration

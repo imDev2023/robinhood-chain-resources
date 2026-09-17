@@ -1,0 +1,99 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Activity Pass
+
+> The Blockscout Activity Pass unlocks extra Merits for contract verification, dapp usage, and everyday explorer activity, with weekly ranks.
+
+<Info>
+  Read more about the Activity Pass in this [blog post.](https://www.blog.blockscout.com/earn-rewards-for-block-explorer-routine-activity-pass/)
+</Info>
+
+The Activity Pass opens up new opportunities for Blockscout power users! Activity Pass holders can:
+
+* Earn Merits through various activities such as contract verification, contract interaction, using Blockscout apps like [Revoke](/using-blockscout/essential-dapps/revoke) and [Swap](/using-blockscout/essential-dapps/swap), and just using Blockscout for exploring the chain.
+* Compete against other Activity Pass holders for Performance Rank status and benefits
+* Access exclusive offers available only to Activity Pass holders.
+
+<img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/activity-pass.png?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=accd0c3058e41404c338697879313401" alt="Activity Pass Pn" width="1600" height="800" data-path="images/activity-pass.png" />
+
+### How it works
+
+Get an Activity Pass, then regular Blockscout usage earns you extra Merits.
+
+1. Activity passes become available periodically on the [Merits hub](https://merits.blockscout.com/). They are available in the **Spend Merits** tab.
+2. Purchase a pass using your Merits.
+3. Login to Blockscout with your Merits wallet.
+4. Complete various actions on Blockscout. Your Merits will increase weekly based on your activity and other users' activity.
+
+Bonus: Activity Pass holders can mint an exclusive NFT on the [Blockscout Badges site](https://app.gitbook.com/s/-MjSwkv4zokqCUebt-98/).
+
+### Activity Pass Actions
+
+The following actions will earn you additional Merits when you have an Activity Pass. You need to be **logged into Blockscout with your Merits address** and **hold an Activity Pass on that address** to qualify.
+
+1. Regular Blockscout usage. Checking addresses, balances, tokens, etc. All the things you normally do on Blockscout earn you more Merits.
+2. Using Blockscout-related apps like [Swap](/using-blockscout/essential-dapps/swap) and [Revoke](/using-blockscout/essential-dapps/revoke).
+3. Verifying contracts through the Blockscout UI. [This guide](https://www.blog.blockscout.com/how-to-verify-your-smart-contract-with-the-blockscout-ui/) shows a simple example using hardhat.
+4. Interacting with contracts on the Blockscout UI. [Use Read and Write methods directly from Blockscout](https://docs.blockscout.com/devs/verification/interacting-with-smart-contracts) to interact with contracts.
+
+### Amount of Merits Earned
+
+Merit earnings for Activity Pass holders are based on your effort vs other Pass holders! The higher you rank in the activity, the more Merits you receive. Here is the breakdown of **Merits earned per week** for various activities.
+
+* **Blockscout Usage**: Regular usage when logged into Blockscout
+* **Contract Verification**: Verifying contracts with the Blockscout UI
+* **Interactions**: Swapscout, Revokescout, and Contract Read/Write
+
+|         | Blockscout Usage | Contract Verification | Interactions |
+| ------- | ---------------- | --------------------- | ------------ |
+| 90%+    | 200              | 400                   | 300          |
+| 75%-90% | 160              | 320                   | 240          |
+| 50%-75% | 120              | 240                   | 180          |
+| 25%-50% | 80               | 160                   | 120          |
+| 5%-25%  | 40               | 80                    | 60           |
+| \<5%    | 10               | 20                    | 15           |
+
+### FAQs
+
+<AccordionGroup>
+  <Accordion title="What is an Activity Pass">
+    An Activity Pass is an add-on that allows you to earn additional Merits when using Blockscout.
+  </Accordion>
+
+  <Accordion title="How do I get my Activity Pass?">
+    Activity Passes are available in limited batches via the Merits website. Check back regularly and follow [Blockscout on X ](https://x.com/blockscout) to be informed of new Activity Pass drops.
+  </Accordion>
+
+  <Accordion title="Where can I use my Activity Pass? What chains are supported?">
+    You can find the full list of Blockscout Explorers eligible for earning Merits by clicking the “Earn” button on an activity card. At the beginning of the program the following instances are supported:
+
+    1. Ethereum Sepolia
+    2. Ethereum mainnet
+    3. Gnosis Chiado
+    4. Gnosis mainnet
+    5. Ink mainnet
+    6. Soneium mainnet
+  </Accordion>
+
+  <Accordion title="What should I do after getting an Activity Pass? Where do I start?">
+    Click the “Earn” button to see the list of Blockscout Explorers where you can earn Merits just by using them. You can also check our documentation for details on specific activities that grant Merits.
+  </Accordion>
+
+  <Accordion title="How do I receive my earned Merits?">
+    Activity Pass Merits are automatically distributed to your account on a **weekly basis.**
+
+    Every Monday, all earned Merits are automatically distributed. At the start of each new week, Performance Ranks and previously earned Merits are reset. New week, new achievements!
+  </Accordion>
+
+  <Accordion title="What is Performance Rank?">
+    Performance Rank is your position among all users with Activity Passes who are earning Merits. A higher rank means you are among the top users who have earned the most Merits. The higher your Performance Rank, the more Merits you receive.
+  </Accordion>
+
+  <Accordion title="How does Performance Rank influence the Merits I receive? ">
+    Different Performance Ranks result in different amounts of Merits received on a weekly basis. Completing different activities will also earn you different Merit amounts.
+
+    ***Note: The Merits distribution per Performance Rank may change based on program participation, please stay tuned!***
+  </Accordion>
+</AccordionGroup>

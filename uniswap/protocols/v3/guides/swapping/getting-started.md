@@ -1,0 +1,14 @@
+<!-- source: https://developers.uniswap.org/docs/protocols/v3/guides/swapping/getting-started | captured: 2026-08-22 | via: https://developers.uniswap.org/docs/protocols/v3/guides/swapping/getting-started.md (native markdown) -->
+# Get Started (/docs/protocols/v3/guides/swapping/getting-started)
+
+Start Uniswap v3 swap integrations with single-hop and multi-hop guide paths and implementation references.
+
+Use this page to choose the right swapping path for Uniswap v3 integrations.
+
+## Choose Your Swapping Path
+* Use a single-hop flow when your swap uses one pool and one fee tier.
+* Use a multi-hop flow when your route crosses multiple pools or intermediary tokens.
+
+## Where to Go Next
+* [Single Swaps](/docs/protocols/v3/guides/swapping/single-hop-swapping)
+* [Multi-hop Swapping](/docs/protocols/v3/guides/swapping/multi-hop-swapping)

@@ -1,0 +1,3 @@
+- link "Bags home" [ref=e3, url=https://bags.fm/]
+- heading "@THEGIVINGBLOCK" [level=1, ref=e1]
+- button "Copy to clipboard" [ref=e2]

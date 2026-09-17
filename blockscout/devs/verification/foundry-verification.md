@@ -1,0 +1,108 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Verify smart contracts with Foundry Forge
+
+> Verify Solidity smart contracts on Blockscout directly from the Foundry toolchain using Forge's built-in verification support and CLI flags.
+
+[Foundry](https://github.com/foundry-rs/foundry/) is a smart contract development toolchain. Foundry manages your dependencies, compiles your project, runs tests, deploys, and lets you interact with the chain from the command line and via Solidity scripts.
+
+Forge is a command-line tool that ships with Foundry. Forge tests, builds, and deploys your smart contracts. Forge supports contract verification out of the box ([https://www.getfoundry.sh/reference/forge/verify-contract](https://www.getfoundry.sh/reference/forge/verify-contract)).
+
+## Verify contract
+
+In forge, contracts can be verified at the time of deployment (e.g. using `forge script` or `forge create`), or later if the contracts are already deployed (e.g. using `forge verify-contract`).
+
+<Info>
+  This guide uses the Blockscout PRO API, which covers every Blockscout-supported chain with a single key. Swap the `chain_id` value to move between chains, no per-chain setup required. Get a free key at [dev.blockscout.com](https://dev.blockscout.com/).
+</Info>
+
+#### Tips:
+
+1. Specify the `--verifier=blockscout` flag to use the Blockscout verification provider.
+2. Specify `--verifier-url="https://api.blockscout.com/v2/api?chain_id=<chain_id>"`, swapping `<chain_id>` for the chain you deployed to (e.g. `chain_id=1` for Ethereum mainnet, `chain_id=8453` for Base). See the full list of supported chains at [dev.blockscout.com](https://dev.blockscout.com/).
+3. Pass your PRO API key with `--etherscan-api-key <your_pro_api_key>`. Forge uses this flag name for all Etherscan-compatible verifiers, including Blockscout.
+4. You can specify most configuration options (e.g., evm version, disabling optimizations) via the usual [Forge configuration](https://www.getfoundry.sh/config/compiler).
+
+### Example (Deploy and verify)
+
+Verify a contract with Blockscout right after deployment:
+
+```sh theme={null}
+forge create \
+  --rpc-url <rpc_https_endpoint> \
+  --private-key $PRIVATE_KEY \
+  <contract_file>:<contract_name> \
+  --verify \
+  --verifier blockscout \
+  --verifier-url "https://api.blockscout.com/v2/api?chain_id=<chain_id>" \
+  --etherscan-api-key <your_pro_api_key>
+```
+
+Or if using Foundry scripts:
+
+```sh theme={null}
+forge script <script_file> \
+  --rpc-url <rpc_https_endpoint> \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --verify \
+  --verifier blockscout \
+  --verifier-url "https://api.blockscout.com/v2/api?chain_id=<chain_id>" \
+  --etherscan-api-key <your_pro_api_key>
+```
+
+### Example (Verify already deployed contract)
+
+```sh theme={null}
+forge verify-contract \
+  --rpc-url <rpc_https_endpoint> \
+  <address> \
+  <contract_file>:<contract_name> \
+  --verifier blockscout \
+  --verifier-url "https://api.blockscout.com/v2/api?chain_id=<chain_id>" \
+  --etherscan-api-key <your_pro_api_key>
+```
+
+Or if using Foundry scripts for the last executed script run:
+
+```sh theme={null}
+forge script <script_file> \
+  --rpc-url <rpc_https_endpoint> \
+  --private-key $PRIVATE_KEY \
+  --resume \
+  --verify \
+  --verifier blockscout \
+  --verifier-url "https://api.blockscout.com/v2/api?chain_id=<chain_id>" \
+  --etherscan-api-key <your_pro_api_key>
+```
+
+## Verifying against a specific instance
+
+If you're running a self-hosted Blockscout instance, or verifying on a chain the PRO API doesn't cover yet, point Forge at that instance's own API instead. No API key is required for this route.
+
+```sh theme={null}
+forge verify-contract \
+  --rpc-url <rpc_https_endpoint> \
+  <address> \
+  <contract_file>:<contract_name> \
+  --verifier blockscout \
+  --verifier-url <blockscout_homepage_explorer_url>/api/
+```
+
+Make sure to add `/api/` to the end of the Blockscout homepage explorer URL (e.g., `--verifier-url=https://eth-sepolia.blockscout.com/api/`). The same `--verify` flag works with `forge create` and `forge script`, following the patterns above.
+
+<Accordion title="Do I need a real API key?">
+  For the PRO API, yes. Get a free key at [dev.blockscout.com](https://dev.blockscout.com/). For the per-instance route, no: any non-empty string works, or you can drop `--etherscan-api-key` entirely.
+</Accordion>
+
+<Accordion title="Which chains does the PRO API cover?">
+  Every Blockscout-indexed mainnet and testnet, under one key. Check the current list at [dev.blockscout.com](https://dev.blockscout.com/).
+</Accordion>
+
+## Resources
+
+<Info>
+  Learn more about Forge's verification flags at [https://www.getfoundry.sh/reference/forge/verify-contract](https://www.getfoundry.sh/reference/forge/verify-contract)
+</Info>

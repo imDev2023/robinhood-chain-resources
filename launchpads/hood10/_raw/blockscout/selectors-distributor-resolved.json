@@ -1,0 +1,144 @@
+{
+ "0x01461171": [],
+ "0x118cdaa7": [
+  "OwnableUnauthorizedAccount(address)"
+ ],
+ "0x095ea7b3": [
+  "approve(address,uint256)"
+ ],
+ "0x0407b05b": [],
+ "0x25665411": [],
+ "0x09bde339": [
+  "InvalidProof()"
+ ],
+ "0x249d39e9": [
+  "BPS()"
+ ],
+ "0x1d84ed0d": [],
+ "0x2e7ba6ef": [
+  "claim(uint256,address,uint256,bytes32[])"
+ ],
+ "0x3ee5aeb5": [
+  "ReentrancyGuardReentrantCall()"
+ ],
+ "0x12d37ee5": [],
+ "0x4b2c0706": [
+  "getPeriod(uint256)"
+ ],
+ "0x03103c8d": [
+  "previewClaim(uint256,address,uint256)"
+ ],
+ "0x5274afe7": [
+  "SafeERC20FailedOperation(address)"
+ ],
+ "0x13b7731d": [],
+ "0x647846a5": [
+  "feeToken()"
+ ],
+ "0x79ba5097": [
+  "acceptOwnership()"
+ ],
+ "0x30361141": [],
+ "0x64df049e": [
+  "protocolFeeRecipient()"
+ ],
+ "0x1fa170d3": [],
+ "0x43000818": [],
+ "0x70a08231": [
+  "balanceOf(address)"
+ ],
+ "0x42185e29": [],
+ "0x507a7328": [
+  "closePeriod()"
+ ],
+ "0x504570e3": [
+  "InvalidRoot()"
+ ],
+ "0x7b4bd983": [],
+ "0x8da5cb5b": [
+  "owner()"
+ ],
+ "0x6f28507c": [
+  "TOTAL_FEE_BPS()"
+ ],
+ "0x067e28df": [
+  "ClaimWindowStillOpen()"
+ ],
+ "0x79358507": [
+  "UnknownPeriod()"
+ ],
+ "0x8c9b72d7": [],
+ "0x4e487b71": [
+  "Panic(uint256)"
+ ],
+ "0x62c06767": [
+  "sweep(address,address,uint256)"
+ ],
+ "0x89051165": [
+  "RenounceDisabled()"
+ ],
+ "0x715018a6": [
+  "renounceOwnership()"
+ ],
+ "0x221bdf5a": [
+  "MAX_BASKET_ASSETS()"
+ ],
+ "0x8cc719ff": [
+  "commitRoot(uint256,bytes32,uint256)"
+ ],
+ "0x97f4cd45": [],
+ "0x87641eb2": [
+  "settleExpired(uint256)"
+ ],
+ "0x4ff799c5": [
+  "InvalidBasket()"
+ ],
+ "0xf77b6f8f": [],
+ "0xbeccfd97": [],
+ "0xe521cb92": [
+  "setProtocolFeeRecipient(address)"
+ ],
+ "0x9f34fc80": [
+  "CLAIM_WINDOW()"
+ ],
+ "0xf2fde38b": [
+  "transferOwnership(address)",
+  "_SIMONdotBLACK_(int8[],uint256,address,bytes8,int96)"
+ ],
+ "0xe30c3978": [
+  "pendingOwner()"
+ ],
+ "0xaed694d9": [],
+ "0xfeb79f9c": [],
+ "0xda9425e2": [
+  "reserved(address)"
+ ],
+ "0x9fab988d": [],
+ "0xd92e233d": [
+  "ZeroAddress()"
+ ],
+ "0xc4fd817a": [],
+ "0xcb46ffa3": [],
+ "0xb182cdaf": [
+  "getPeriodRewards(uint256)"
+ ],
+ "0x988e6595": [
+  "currentPeriodId()"
+ ],
+ "0xb7c1140d": [
+  "ArrayMismatch()"
+ ],
+ "0xbaf3f0f7": [
+  "InvalidState()"
+ ],
+ "0xcd6ef2b0": [
+  "getBasket()"
+ ],
+ "0xc89fcb69": [],
+ "0xa9059cbb": [
+  "transfer(address,uint256)"
+ ],
+ "0xb2f53681": [
+  "NothingToBuy()"
+ ]
+}

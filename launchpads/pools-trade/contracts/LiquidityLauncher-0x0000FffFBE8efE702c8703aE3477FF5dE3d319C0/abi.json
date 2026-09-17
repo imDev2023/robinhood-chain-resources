@@ -1,0 +1,326 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IAllowanceTransfer",
+    "name": "_permit2",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "AllowanceNotFullyConsumed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RecipientCannotBeZeroAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "name": "TokenCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "strategy",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "TokenDistributed",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "factory",
+    "type": "address"
+   },
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "uint8",
+    "name": "decimals",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint128",
+    "name": "initialSupply",
+    "type": "uint128"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "tokenData",
+    "type": "bytes"
+   }
+  ],
+  "name": "createToken",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint160",
+    "name": "amount",
+    "type": "uint160"
+   }
+  ],
+  "name": "depositToken",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "strategy",
+      "type": "address"
+     },
+     {
+      "internalType": "uint128",
+      "name": "amount",
+      "type": "uint128"
+     },
+     {
+      "internalType": "bytes",
+      "name": "configData",
+      "type": "bytes"
+     }
+    ],
+    "internalType": "struct Distribution",
+    "name": "distribution",
+    "type": "tuple"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   }
+  ],
+  "name": "distributeToken",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "strategy",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "configData",
+    "type": "bytes"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "nativeAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "distributeWithNative",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "originalCreator",
+    "type": "address"
+   }
+  ],
+  "name": "getGraffiti",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "graffiti",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes[]",
+    "name": "data",
+    "type": "bytes[]"
+   }
+  ],
+  "name": "multicall",
+  "outputs": [
+   {
+    "internalType": "bytes[]",
+    "name": "results",
+    "type": "bytes[]"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+       },
+       {
+        "internalType": "uint160",
+        "name": "amount",
+        "type": "uint160"
+       },
+       {
+        "internalType": "uint48",
+        "name": "expiration",
+        "type": "uint48"
+       },
+       {
+        "internalType": "uint48",
+        "name": "nonce",
+        "type": "uint48"
+       }
+      ],
+      "internalType": "struct IAllowanceTransfer.PermitDetails",
+      "name": "details",
+      "type": "tuple"
+     },
+     {
+      "internalType": "address",
+      "name": "spender",
+      "type": "address"
+     },
+     {
+      "internalType": "uint256",
+      "name": "sigDeadline",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct IAllowanceTransfer.PermitSingle",
+    "name": "permitSingle",
+    "type": "tuple"
+   },
+   {
+    "internalType": "bytes",
+    "name": "signature",
+    "type": "bytes"
+   }
+  ],
+  "name": "permit",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "err",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "permit2",
+  "outputs": [
+   {
+    "internalType": "contract IAllowanceTransfer",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

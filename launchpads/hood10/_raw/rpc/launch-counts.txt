@@ -1,0 +1,4 @@
+Launched events: 81
+first: 2026-08-29T17:20:21+00:00 block 49327749
+last : 2026-09-01T13:31:05+00:00 block 51757024
+health launches: 81 block 52846471 ethUsd 2397.55

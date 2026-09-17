@@ -1,0 +1,12 @@
+POST /quote (native->NVDA, 4663): 200
+POST /check_approval (NVDA, 4663): 200
+POST /swap (from the quote above): 200
+  swap.to=0x8876789976dEcBfCbBbe364623C63652db8C0904 chainId=4663
+POST /quote (WETH->NVDA, 4663): 200
+POST /quote with x-universal-router-version: 2.0: 404
+POST /quote with x-universal-router-version: 2.1.1: 200
+POST /quote with a bad x-api-key: 401
+GET /api.json (OpenAPI spec): 200
+GET /swaps: 200
+POST /lp/approve: 404
+POST /indicative_quote: 404

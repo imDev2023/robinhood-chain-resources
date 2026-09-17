@@ -1,0 +1,29 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Using an Explorer
+
+> Use the Blockscout explorer to search blocks, transactions, addresses, and verified contracts, plus set up My Account and access API endpoints.
+
+An explorer acts as a comprehensive frontend to the blockchain backend. It indexes, fetches, and organizes onchain data along with relevant metadata regarding transactions, blocks, tokens and addresses. Explorers provide all of this information in an organized, human readable format.
+
+Included in the data that explorers provide is smart contract information, the code and methods as well as interaction capabilities. Contract transparency and interaction is only available once a contract is verified.
+
+Direct access to blockchain data is available via the explorer UI as well as through various API endpoints. Blockscout provides both JSON RPC and REST APIs for projects who need direct access to data via API calls.
+
+* **Explorer Basics**
+  * Searching [blocks](/using-blockscout/overviews/blocks)
+  * [Transaction](/using-blockscout/overviews/transaction-fields) details
+  * [Address](/using-blockscout/overviews/address-page) information
+  * [Contract](/devs/verification/interacting-with-smart-contracts) interactions
+  * [Menu](/using-blockscout/overviews/top-menu) and [Glossary](/using-blockscout/overviews/glossary-of-terms)
+* **Account Features**
+  * [My Account setup](/using-blockscout/my-account) and features
+  * [API keys](/using-blockscout/my-account/api-keys) for personal use (an API key is not needed, but can be freely added for additional limits)
+  * [Watchlists](/using-blockscout/my-account/watchlist) and notifications
+* **Scout Apps**
+  * [Swapscout](/using-blockscout/essential-dapps/swap) cross-chain swaps/bridging
+  * [Revokescout](/using-blockscout/essential-dapps/revoke) revoke token approvals
+  * [Dappscout](/using-blockscout/blockscout-apps) apps marketplace
+  * [Autoscout](/using-blockscout/autoscout) self-service explorer launchpad

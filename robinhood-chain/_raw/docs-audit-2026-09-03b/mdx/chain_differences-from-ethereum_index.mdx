@@ -1,0 +1,62 @@
+# Differences from Ethereum
+
+Robinhood Chain is EVM-compatible — contracts written in Solidity or Vyper deploy without modification, and standard tooling works out of the box. However, as an Arbitrum Nitro Layer-2, a few behaviors differ from Ethereum mainnet. Understanding these prevents subtle bugs.
+
+## Block numbers
+
+`block.number` returns an estimate of the L1 (Ethereum) block number, not the Robinhood Chain block number, and updates only periodically. Do not use it to measure L2 time precisely or as a per-block counter.
+
+To get the actual Robinhood Chain block number, use the **ArbSys** precompile:
+
+```solidity
+uint256 l2Block = ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber();
+```
+
+## Randomness
+
+`block.prevrandao` / `block.difficulty` return a constant value on Robinhood Chain and are not a source of randomness. Never use them for randomness — use a dedicated oracle (e.g. Chainlink VRF) instead.
+
+## Block hashes
+
+`blockhash(n)` is supported but is only reliable for recent blocks. Do not rely on it for older blocks or as a randomness source.
+
+## block.coinbase
+
+`block.coinbase` returns the network fee account, not a miner/validator address.
+
+## Gas & fees
+
+Transaction fees have two components: L2 execution gas plus an L1 data (calldata) fee for posting the transaction to Ethereum. Gas estimation and `gasleft()` behave differently than on Ethereum as a result. Query gas pricing via the ArbGasInfo precompile. See [Gas & Fees](/chain/gas-and-fees) for details.
+
+## Address aliasing
+
+When an L1 contract sends a message to a contract on Robinhood Chain, the `msg.sender` seen on L2 is the aliased L1 address (the original address plus a fixed offset), not the original. Account for this in access-control logic. See [Cross-Chain Messaging](/chain/cross-chain-messaging).
+
+## Contract size limit
+
+Robinhood Chain allows larger contracts than Ethereum — a maximum code size of 96 KB (vs. Ethereum's 24 KB) and a max init code size of 192 KB. Contracts that exceed Ethereum's limit can deploy here.
+
+## Arbitrum precompiles
+
+Robinhood Chain provides Arbitrum-specific precompiles (ArbSys, ArbGasInfo, ArbAddressTable, and others) for L2-specific functionality. See the [Protocol Contracts](/chain/protocol-contracts) page for the full list and addresses.
+
+## Transaction finality
+
+Transactions receive a fast soft confirmation from the sequencer, then achieve hard finality once posted to and confirmed on Ethereum. See [Transaction Finality](/chain/transaction-finality) for the full model.
+
+## Transaction screening
+
+Robinhood Chain maintains compliance standards through sequencer-level screening. While rare, this mechanism can influence smart-contract execution; for instance, any transaction associated with a sanctioned address will be excluded from inclusion. Standard read operations—such as `eth_call`, `eth_getLogs`, or balance queries—remain fully accessible and unaffected. Since a blocked transfer is never processed, it simply appears as though the event never occurred, ensuring indexers remain synchronized with the actual state.
+
+Read more here: [Advanced Compliance Filtering](https://docs.arbitrum.io/launch-arbitrum-chain/configure-your-chain/advanced/compliance-filtering)
+
+## Transaction ordering
+
+On Ethereum, miners or validators order transactions based on priority fees, where higher payments typically secure earlier inclusion. Robinhood Chain employs a **first-come, first-served** model based on sequencer arrival time. Priority gas auctions do not exist here; consequently, increasing your fee will not shift your transaction ahead of others already in the queue.
+
+## Further reading
+
+- [Gas & Fees](/chain/gas-and-fees)
+- [Transaction Finality](/chain/transaction-finality)
+- [Cross-Chain Messaging](/chain/cross-chain-messaging)
+- [Arbitrum: Solidity differences](https://docs.arbitrum.io/build-decentralized-apps/arbitrum-vs-ethereum/solidity-support)

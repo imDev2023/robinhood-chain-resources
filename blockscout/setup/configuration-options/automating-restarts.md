@@ -1,0 +1,11 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Automating Blockscout Restarts with HEART_COMMAND
+
+> Configure Blockscout to auto-restart on crash using the HEART_COMMAND env variable, heart beat timeouts, and Erlang crash dump settings.
+
+By default `BlockScout` does not restart if it crashes. To enable automated restarts, set the [environment variable](/setup/env-variables) `HEART_COMMAND` to whatever command you run to start `BlockScout`. Configure the heart beat timeout to change how long it waits before considering the application unresponsive.
+
+At that point, it will kill the current blockscout instance and execute the `HEART_COMMAND`. By default a crash dump is not written unless you set `ERL_CRASH_DUMP_SECONDS` to a positive or negative integer. See the [heart](http://erlang.org/doc/man/heart.html) documentation for more information.

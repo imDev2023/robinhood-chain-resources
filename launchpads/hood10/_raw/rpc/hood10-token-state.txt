@@ -1,0 +1,21 @@
+name() = ('Robinhood10 Index',)
+symbol() = ('HOOD10',)
+totalSupply() = (1000000000000000000000000000,)
+creator() = {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+factory() = ('0x5bd1fbe78a78fe8236fa00cf48fbeba74ae34661',)
+feeBps() = {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+buyTaxRate() = (500,)
+sellTaxRate() = (500,)
+taxRatePips() = (50000,)
+poolId() = (b'.\x15+\xc1/0\xbdF\xeb9\xf0\xea\xd26}\xf6+\x95r\xba:-T\xea>:\xcaC\xc0\n\xe9\xf6',)
+feeEngine() = {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+hook() = ('0x75a54357d9c78a2db19004a5fdc76c50f9242aec',)
+tokenURI() = ('ipfs://bafkreie5flhu3xfz4j5qrw4r3pgs6pqz5db4scc5dtdp72piwfsu4zqbbu',)
+currentFeeRate(bytes32,address) (50000,)
+PROTOCOL_FEE_PIPS() = {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+protocolFeeRecipient() = {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+owner() = ('0xd2defbd13aff22d6989e8c14b4517ec308079e91',)
+treasury() = ('0x67ccbfb238047d62736265b3093a5989836794b0',)
+MAX_FEE_RATE() = (100000,)
+poolConfigs ['(address,address,uint16,uint24,bool,bool)'] fail Tried to read 32 bytes, only got 0 bytes.
+poolConfigs ['address', 'address', 'uint16', 'uint24'] ('0x639d6faa4daf85d4ccc4291d1134c83867df5d82', '0x00000000000000000000000000000000000024b8', 50000, 1)

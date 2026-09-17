@@ -1,0 +1,292 @@
+[
+ [
+  "01-app-home.md",
+  "App home, app.long.xyz",
+  "https://app.long.xyz/"
+ ],
+ [
+  "02-app-tokens.md",
+  "Tokens list, the Robinhood Chain leaderboard",
+  "https://app.long.xyz/tokens"
+ ],
+ [
+  "03-app-create-wallet-gate.md",
+  "Create, the wallet gate",
+  "https://app.long.xyz/create"
+ ],
+ [
+  "04-app-longx.md",
+  "LongX Vaults",
+  "https://app.long.xyz/longx"
+ ],
+ [
+  "05-app-base-home.md",
+  "App home, Base chain variant",
+  "https://app.long.xyz/base"
+ ],
+ [
+  "06-app-base-tokens.md",
+  "Tokens list, Base chain variant",
+  "https://app.long.xyz/base/tokens"
+ ],
+ [
+  "07-app-token-ai.md",
+  "Token page, $AI anchored to NVDA",
+  "https://app.long.xyz/tokens/0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"
+ ],
+ [
+  "08-app-token-boner.md",
+  "Token page, $BONER anchored to HIMS",
+  "https://app.long.xyz/tokens/0x98096d17e191b3da1d5f99a6d7b3584351b11e18"
+ ],
+ [
+  "09-app-token-hiai.md",
+  "Token page, $HIAI anchored to RDDT",
+  "https://app.long.xyz/tokens/0x9d65690e811dbf4d269f53e522b4771dfe8e1e18"
+ ],
+ [
+  "10-app-token-demothree.md",
+  "Token page, $DEMOTHREE anchored to NVDAx3L",
+  "https://app.long.xyz/tokens/0xcc3dc6fc9918b9846d1ad5aaea740f8bed9a1e18"
+ ],
+ [
+  "11-app-token-incel.md",
+  "Token page, $INCEL anchored to INTC",
+  "https://app.long.xyz/tokens/0x12d834f0780c367909319c73f42310dc0b201e18"
+ ],
+ [
+  "12-app-token-goybeam.md",
+  "Token page, $GOYBEAM anchored to PLTR",
+  "https://app.long.xyz/tokens/0x1fe2abf68aad1d5b7a0339fbbfdbad8e2b1d1e18"
+ ],
+ [
+  "13-app-token-schiffy.md",
+  "Token page, $SCHIFFY anchored to GLD",
+  "https://app.long.xyz/tokens/0x42afa2124ca5a2b83898e46b2da9a190995b1e18"
+ ],
+ [
+  "14-app-token-agi.md",
+  "Token page, $AGI anchored to AI",
+  "https://app.long.xyz/tokens/0x5a8625d314fdd298101d87932a784b756a401e18"
+ ],
+ [
+  "15-app-token-johndog.md",
+  "Token page, $JOHNDOG anchored to SGOV",
+  "https://app.long.xyz/tokens/0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18"
+ ],
+ [
+  "16-app-token-chips.md",
+  "Token page, $CHIPS anchored to AI",
+  "https://app.long.xyz/tokens/0x68281919e022b0fef78e4a6181a9050fd6131e18"
+ ],
+ [
+  "17-app-token-aaplcat.md",
+  "Token page, $AAPLCAT anchored to AAPL",
+  "https://app.long.xyz/tokens/0x73a9999f6e9db138e1ae4595fde049a401161e18"
+ ],
+ [
+  "18-app-token-clippy.md",
+  "Token page, $CLIPPY anchored to MSFT",
+  "https://app.long.xyz/tokens/0x85856f025bf13b8fd2aae2f6da458318744f1e18"
+ ],
+ [
+  "19-app-token-sit.md",
+  "Token page, $SIT anchored to AI",
+  "https://app.long.xyz/tokens/0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18"
+ ],
+ [
+  "20-app-token-doggie.md",
+  "Token page, $DOGGIE anchored to TSLA",
+  "https://app.long.xyz/tokens/0xa9efe2fc94de79734c03051515f48f254ce61e18"
+ ],
+ [
+  "21-app-token-lucia.md",
+  "Token page, $LUCIA anchored to TTWO",
+  "https://app.long.xyz/tokens/0xae12303bd73442d3c8dba9a58b164070d78a1e18"
+ ],
+ [
+  "22-app-token-cache.md",
+  "Token page, $CACHE anchored to SNDK",
+  "https://app.long.xyz/tokens/0xafe41f4356c24f716111de1fbbc84e061d291e18"
+ ],
+ [
+  "23-app-token-saylormoon.md",
+  "Token page, $SAYLORMOON anchored to MSTR",
+  "https://app.long.xyz/tokens/0xd18528b39da6464b3662c331a52181ecb15b1e18"
+ ],
+ [
+  "24-app-token-clanker.md",
+  "Token page, $CLANKER anchored to AI",
+  "https://app.long.xyz/tokens/0xd24688a1d530f648aed86a835aca8ad6a7e61e18"
+ ],
+ [
+  "25-app-token-au.md",
+  "Token page, $AU anchored to TSM",
+  "https://app.long.xyz/tokens/0xd4aae326ddd1a2537a92c00e6576e4605e5d1e18"
+ ],
+ [
+  "26-app-token-moo.md",
+  "Token page, $MOO anchored to MU",
+  "https://app.long.xyz/tokens/0xd9db30bb0d2b8d2eae3826a1372117e058791e18"
+ ],
+ [
+  "27-app-token-asteroid.md",
+  "Token page, $ASTEROID anchored to SPCX",
+  "https://app.long.xyz/tokens/0xfd82d8db539b6ace0d50815845133767e24f1e18"
+ ],
+ [
+  "28-app-token-spacehood.md",
+  "Token page, $SPACEHOOD anchored to SPCX",
+  "https://app.long.xyz/tokens/0xfe7e19cbce2f896c6c528bc355baf5a768291e18"
+ ],
+ [
+  "29-app-token-nvdax3l-loading.md",
+  "Token page for the NVDAx3L vault token, loading stub",
+  "https://app.long.xyz/tokens/0xF51fb54DE60f6e16252E852A5Ed0E60B8307606A"
+ ],
+ [
+  "30-app-catch-all-routes.md",
+  "Routes that render the home page, and llms.txt",
+  "https://app.long.xyz/{docs,faq,leaderboard,portfolio,privacy,profile,rewards,settings,terms,llms.txt}"
+ ],
+ [
+  "31-long-xyz-home.md",
+  "long.xyz apex domain",
+  "https://long.xyz/"
+ ],
+ [
+  "32-long-xyz-other-domains.md",
+  "Other long.xyz hosts and paths: docs, www, join",
+  "https://long.xyz/docs, https://long.xyz/llms.txt, https://www.long.xyz/, https://docs.long.xyz/, https://join.long.xyz/"
+ ],
+ [
+  "33-dune-dashboard-long-on-robinhood-chain.md",
+  "Dune dashboard, LONG on Robinhood Chain, by natan_benish2001",
+  "https://dune.com/natan_benish2001/long-on-robinhood-chain"
+ ],
+ [
+  "34-dune-query-7979183-launchpad-logic-robinhood.md",
+  "Dune query 7979183, launchpad_logic -- robinhood",
+  "https://dune.com/queries/7979183"
+ ],
+ [
+  "35-dune-query-8032167-long-launches-foundation.md",
+  "Dune query 8032167, LONG: launches (foundation)",
+  "https://dune.com/queries/8032167"
+ ],
+ [
+  "36-dune-query-8032178-long-pools-foundation.md",
+  "Dune query 8032178, LONG: pools (foundation)",
+  "https://dune.com/queries/8032178"
+ ],
+ [
+  "37-dune-query-8032188-long-numeraire-prices-hourly-foundation.md",
+  "Dune query 8032188, LONG: numeraire prices hourly (foundation)",
+  "https://dune.com/queries/8032188"
+ ],
+ [
+  "38-dune-query-8032229-long-swaps-foundation.md",
+  "Dune query 8032229, LONG: swaps (foundation)",
+  "https://dune.com/queries/8032229"
+ ],
+ [
+  "39-dune-query-8032287-long-headline-counters.md",
+  "Dune query 8032287, LONG: headline counters",
+  "https://dune.com/queries/8032287"
+ ],
+ [
+  "40-dune-query-8032289-long-daily-volume-by-stock.md",
+  "Dune query 8032289, LONG: daily volume by stock",
+  "https://dune.com/queries/8032289"
+ ],
+ [
+  "41-dune-query-8032290-long-volume-per-stock.md",
+  "Dune query 8032290, LONG: volume per stock",
+  "https://dune.com/queries/8032290"
+ ],
+ [
+  "42-dune-query-8032291-long-top-assets.md",
+  "Dune query 8032291, LONG: top assets",
+  "https://dune.com/queries/8032291"
+ ],
+ [
+  "43-dune-query-8032293-long-supply-share-per-stock.md",
+  "Dune query 8032293, LONG: supply share per stock",
+  "https://dune.com/queries/8032293"
+ ],
+ [
+  "44-dune-query-8032324-long-stock-tvl-counter.md",
+  "Dune query 8032324, LONG: stock TVL counter",
+  "https://dune.com/queries/8032324"
+ ],
+ [
+  "45-dune-query-8071940-rwa-on-chain-trading-volume.md",
+  "Dune query 8071940, RWA on-chain trading volume",
+  "https://dune.com/queries/8071940"
+ ],
+ [
+  "46-dune-query-8071980-rwa-token-registry-robinhood.md",
+  "Dune query 8071980, rwa_token_registry (robinhood)",
+  "https://dune.com/queries/8071980"
+ ],
+ [
+  "47-dune-query-8076065-stock-prices-robinhood.md",
+  "Dune query 8076065, stock_prices (robinhood)",
+  "https://dune.com/queries/8076065"
+ ],
+ [
+  "48-dune-query-8237276-long-widget-stock-pair-share.md",
+  "Dune query 8237276, LONG widget: stock-pair share",
+  "https://dune.com/queries/8237276"
+ ],
+ [
+  "49-dune-query-8237922-long-widget-stock-traders-vs-long-traders.md",
+  "Dune query 8237922, LONG widget: stock traders vs LONG traders",
+  "https://dune.com/queries/8237922"
+ ],
+ [
+  "50-dune-query-8391616-long-numeraire-prices-derived-foundation-3b.md",
+  "Dune query 8391616, LONG: numeraire prices derived (foundation 3b)",
+  "https://dune.com/queries/8391616"
+ ],
+ [
+  "51-x-longdotxyz-launch-thread.md",
+  "X post, the Robinhood Chain launch announcement of 2026-07-14",
+  "https://x.com/longdotxyz/status/2077073135233609923"
+ ],
+ [
+  "52-rootdata-long.md",
+  "RootData project page, blocked by a CAPTCHA",
+  "https://www.rootdata.com/projects/detail/Long?k=MTgwMDQ%3D"
+ ],
+ [
+  "53-mexc-what-is-long-xyz.md",
+  "MEXC Learn, What Is Long.xyz? How Stock-Paired Memecoins Are Reshaping Robinhood Chain",
+  "https://www.mexc.com/learn/article/what-is-long-xyz-how-stock-paired-memecoins-are-reshaping-robinhood-chain/1"
+ ],
+ [
+  "54-htx-blockbeats-longx-expansion.md",
+  "HTX feed, BlockBeats note on the LongX Expansion",
+  "https://www.htx.com/feed/community/21758366/?back=1"
+ ],
+ [
+  "55-matcha-meta-trade-ai.md",
+  "Matcha Meta DEX, the Trade link from every token page",
+  "https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x2e8c31162b855a2ffa90f6f8634643ad6f111e18"
+ ],
+ [
+  "56-defined-fi-chart-blocked.md",
+  "Defined.fi chart, the View chart link from every token page",
+  "https://www.defined.fi/robinhood/0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27"
+ ],
+ [
+  "57-app-litepaper-longx.md",
+  "LongX litepaper",
+  "https://app.long.xyz/litepaper"
+ ],
+ [
+  "58-dune-dashboard-ai-pairing-mode.md",
+  "Dune dashboard, AI Pairing Mode on LONG",
+  "https://dune.com/natan_benish2001/ai-pairing-mode-on-long"
+ ]
+]

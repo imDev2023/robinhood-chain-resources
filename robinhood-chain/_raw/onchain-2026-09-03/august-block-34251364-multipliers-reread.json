@@ -1,0 +1,56 @@
+{
+ "block": 34251364,
+ "note": "archive re-read of the 2026-08-12 capture block",
+ "rows": [
+  {
+   "symbol": "CRWD",
+   "uiMultiplier": "4000000000000000000",
+   "effectiveAt": 1782999000
+  },
+  {
+   "symbol": "SGOV",
+   "uiMultiplier": "1002981519346766532",
+   "effectiveAt": 1786115424
+  },
+  {
+   "symbol": "ORCL",
+   "uiMultiplier": "1002210914971013375",
+   "effectiveAt": 1785165023
+  },
+  {
+   "symbol": "COST",
+   "uiMultiplier": "1000612040296259656",
+   "effectiveAt": 1786374624
+  },
+  {
+   "symbol": "ASML",
+   "uiMultiplier": "1000101323251417769",
+   "effectiveAt": 1786029025
+  },
+  {
+   "symbol": "MU",
+   "uiMultiplier": "1000074823219171086",
+   "effectiveAt": 1784905824
+  },
+  {
+   "symbol": "DELL",
+   "uiMultiplier": "1000063708620124549",
+   "effectiveAt": 1785769823
+  },
+  {
+   "symbol": "CCL",
+   "uiMultiplier": "1000000000000000000",
+   "effectiveAt": 0
+  },
+  {
+   "symbol": "AAPL",
+   "uiMultiplier": "1000000000000000000",
+   "effectiveAt": 0
+  },
+  {
+   "symbol": "F",
+   "uiMultiplier": "1000000000000000000",
+   "effectiveAt": 0
+  }
+ ]
+}

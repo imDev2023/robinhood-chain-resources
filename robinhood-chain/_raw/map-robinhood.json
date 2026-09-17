@@ -1,0 +1,28 @@
+{
+  "base_url": "https://docs.robinhood.com/chain",
+  "results": [
+    "https://docs.robinhood.com/chain",
+    "https://docs.robinhood.com/chain/gas-and-fees",
+    "https://docs.robinhood.com/chain/oracles-and-price-feeds",
+    "https://docs.robinhood.com/chain/connecting",
+    "https://docs.robinhood.com/chain/transaction-finality",
+    "https://docs.robinhood.com/chain/stock-tokens",
+    "https://docs.robinhood.com/chain/differences-from-ethereum",
+    "https://docs.robinhood.com/chain/stock-token-apis",
+    "https://docs.robinhood.com/chain/deploy-smart-contracts",
+    "https://docs.robinhood.com/chain/notices-and-upgrades",
+    "https://docs.robinhood.com/chain/protocol-contracts",
+    "https://docs.robinhood.com/chain/run-a-full-node",
+    "https://docs.robinhood.com/chain/bridging",
+    "https://docs.robinhood.com/chain/building-with-stock-tokens",
+    "https://docs.robinhood.com/chain/contracts",
+    "https://docs.robinhood.com/chain/terms-of-service",
+    "https://docs.robinhood.com/chain/report-issue",
+    "https://docs.robinhood.com/chain/data-streams",
+    "https://docs.robinhood.com/chain/account-abstraction",
+    "https://docs.robinhood.com/chain/governance",
+    "https://docs.robinhood.com/chain/cross-chain-messaging"
+  ],
+  "response_time": 14.85,
+  "request_id": "e71bc38a-90ee-4055-93d1-e988b225648f"
+}

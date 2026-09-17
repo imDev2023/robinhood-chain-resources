@@ -1,0 +1,35 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blockscout Logger Configs and Log Rotation
+
+> Tune Blockscout log level, rotation, max file size, and file count per umbrella app to control disk usage in indexer, explorer, and web logs.
+
+Each [umbrella app](/setup/information-and-settings/umbrella-project) (indexer, explorer, block\_scout\_web, ethereum\_json\_rpc) contains a log rotation config in the `prod.exs` file.
+
+<Info>
+  *Example:* [*https://github.com/blockscout/blockscout/blob/master/apps/explorer/config/prod.exs#L36-L51*](https://github.com/blockscout/blockscout/blob/master/apps/explorer/config/prod.exs#L36-L51)
+</Info>
+
+```ruby theme={null}
+config :logger, :explorer,
+  level: :info,
+  path: Path.absname("logs/prod/explorer.log"),
+  rotate: %{max_bytes: 52_428_800, keep: 19}
+
+config :logger, :reading_token_functions,
+  level: :debug,
+  path: Path.absname("logs/prod/explorer/tokens/reading_functions.log"),
+  metadata_filter: [fetcher: :token_functions],
+  rotate: %{max_bytes: 52_428_800, keep: 19}
+```
+
+`config :logger` defines several variables including:
+
+* **level**: (`info`, `debug`, `error`) *log level of detail*
+* **rotate**: \{max bytes: `52,428,800` *max size in bytes for each file*, keep: `19` *max number of files to store*}
+
+If you are having issues with disc space, change the level, default number of files, and max bytes to consume less space with logs.
+
+Additional log rotation configs for `ecto.log` (DB interactions wrapper) and `error.log` are located in the common config file [https://github.com/blockscout/blockscout/blob/master/config/config.exs#L47-L61](https://github.com/blockscout/blockscout/blob/master/config/config.exs#L47-L61)

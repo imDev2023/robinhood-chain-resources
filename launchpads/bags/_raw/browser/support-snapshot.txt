@@ -1,0 +1,6 @@
+- link "Skip to main content" [ref=e1, url=https://support.bags.fm/en/#main-content]
+- link "Bags Help Center" [ref=e5, url=https://support.bags.fm/en/]
+- heading "How can we help?" [level=1, ref=e3]
+- textbox "Search for articles..." [ref=e6]
+- link "FAQs Answers to frequently asked questions. By bags support 18 articles" [ref=e4, url=https://support.bags.fm/en/collections/18014326-faqs]
+- link "Bags Help Center" [ref=e2, url=https://support.bags.fm/en/]

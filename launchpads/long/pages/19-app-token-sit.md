@@ -1,0 +1,44 @@
+# Long - Token page, $SIT anchored to AI
+
+> Source: https://app.long.xyz/tokens/0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18.md`
+
+---
+
+![Image 1: SIT](https://storage.long.xyz/tokens/0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18.png)
+
+$SIT
+
+Board Sit
+
+Anchored to![Image 2: AI](https://app.long.xyz/robinhood-coins/ai.png)**AI**
+
+$4.2M
+
+$4.2M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18)
+
+## Fees
+
+Fee receiver:[0x143300...4c21](https://robinhoodchain.blockscout.com/address/0x1433000769ae631a72D75fF6F240832E91464c21)
+
+Claimed$176,096.36
+
+Unclaimed$5,606.49
+
+Name Board Sit
+Ticker$SIT
+CA 0x89da51...1e18
+Anchored to![Image 3: AI](https://app.long.xyz/robinhood-coins/ai.png)AI 0x2e8c31...1e18
+Description study AI lore
+Social Links[https://x.com/supercontraa/status/2092845386713166223?s=46&t=0pDLuHNaZSk6fhqi1F4Z4w](https://x.com/supercontraa/status/2092845386713166223?s=46&t=0pDLuHNaZSk6fhqi1F4Z4w)[https://x.com/yonicombinator/status/2092744297116226002?s=46&t=0pDLuHNaZSk6fhqi1F4Z4w](https://x.com/yonicombinator/status/2092744297116226002?s=46&t=0pDLuHNaZSk6fhqi1F4Z4w)
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0x6d6e25a50843dad7cd400f43ea3f4ab52d1c0d4871e9adf6d4cae58645f31d07)
+
+Links/Buttons:
+- [](https://x.com/yonicombinator/status/2092744297116226002?s=46&t=0pDLuHNaZSk6fhqi1F4Z4w)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0x89da5167eb1a0067f9b3e39a544ef8d4b9c41e18)
+- [0x143300...4c21](https://robinhoodchain.blockscout.com/address/0x1433000769ae631a72D75fF6F240832E91464c21)
+- [View chart](https://www.defined.fi/robinhood/0x6d6e25a50843dad7cd400f43ea3f4ab52d1c0d4871e9adf6d4cae58645f31d07)

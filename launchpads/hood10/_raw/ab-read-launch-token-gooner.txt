@@ -1,0 +1,91 @@
+H10HOOD10LaunchboardvaultprofileLaunchConnect
+
+← boardPurgy Pengoon0x51E7…11F2
+
+$GOONERPurgy Pengoonadd to wallet
+
+priced inPENGUmeme2.00% feelocked lpXTelegram
+
+The unhinged mascot of The Igloo | Billions will goon
+
+launched by 0xE070…E543·contract 0x51E7…11F2
+
+price in PENGUcandlesbars1m5m1h1d
+
+market cap83,442,903.03 PENGU$697.6K
+
+24h volume31,235,055 PENGU
+
+holders399
+
+unswept fee31,919.2
+
+## Trades
+
+sideprice$GOONERPENGUtrader
+
+sell0.0834429321,266.126,945.40x4337…f2e1
+
+sell0.084304329,416.42,481.10xf70d…dbEF
+
+buy0.0843838202,887.417,064.90xCC4b…7a1A
+
+sell0.083837512,204.91,023.40x4337…6C92
+
+buy0.0838702692,904.557,477.50x6937…7ef5
+
+buy0.0820429186,80215,280.70x67D6…60E4
+
+buy0.081560568,8645,610.50xca7d…4589
+
+buy0.08138378,478.9689.95340x0a0F…7Ab6
+
+buy0.081362037,942.93,085.30x344d…51A1
+
+buy0.0812649171,30813,883.90x2A37…43b1
+
+## Holders
+
+addressbalanceshare
+
+0x8E54…90ff24,805,6952.48%
+
+0x2408…F5a021,383,1192.14%
+
+0xA44D…7bf318,853,9451.89%
+
+0x5D3c…5BD518,755,1001.88%
+
+0x5A0a…3c0117,739,7081.77%
+
+0x08fD…527112,172,3191.22%
+
+0xfdFb…5B1a11,167,4071.12%
+
+0x343B…67c311,022,9261.10%
+
+0x755B…a48410,514,5241.05%
+
+0x12e5…259210,054,8581.01%
+
+BuySell
+
+you paybalance —
+
+ETH
+
+≈ $120.67
+
+0.010.050.251
+
+you receive
+
+The contract function "quoteExactInput" returned no data ("0x").
+
+route: ETH → PENGU → $GOONER2.00% fee
+
+max slippage0.5%1%3%10%
+
+connect a wallet to trade
+
+hood10 · launchrobinhood chain · id 4663block 52270716

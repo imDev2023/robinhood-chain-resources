@@ -1,0 +1,4539 @@
+[
+ {
+  "inputs": [],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "AccountAlreadyOpened",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AccountNotOpened",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "baseAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "AmountExceedsUint48",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AmountExceedsUint64",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "parkAnchor",
+    "type": "uint64"
+   }
+  ],
+  "name": "AnchorNotAfterPark",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "cap",
+    "type": "uint64"
+   }
+  ],
+  "name": "AnchorPastLiabilityCap",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "clearedAtBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "AnchorPredatesBridgeOps",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "clearedAtBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "AnchorPredatesRebalance",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "committed",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "required",
+    "type": "uint64"
+   }
+  ],
+  "name": "BridgeOpsInFlight",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newCap",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "currentCap",
+    "type": "uint256"
+   }
+  ],
+  "name": "CapNotRaised",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "deadlineBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "ChallengeWindowClosed",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "head",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "deadlineBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "ChallengeWindowOpen",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "spender",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "allowance",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "needed",
+    "type": "uint256"
+   }
+  ],
+  "name": "ERC20InsufficientAllowance",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "sender",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "balance",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "needed",
+    "type": "uint256"
+   }
+  ],
+  "name": "ERC20InsufficientBalance",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "approver",
+    "type": "address"
+   }
+  ],
+  "name": "ERC20InvalidApprover",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   }
+  ],
+  "name": "ERC20InvalidReceiver",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "sender",
+    "type": "address"
+   }
+  ],
+  "name": "ERC20InvalidSender",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "spender",
+    "type": "address"
+   }
+  ],
+  "name": "ERC20InvalidSpender",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "EnforcedPause",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "projectedEquity6",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cap6",
+    "type": "uint256"
+   }
+  ],
+  "name": "EquityCapExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExpectedPause",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ForeignOpeningMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "bucketIndex",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint8",
+    "name": "slot",
+    "type": "uint8"
+   }
+  ],
+  "name": "ForeignPositionInBucket",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "forwarded",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minimum",
+    "type": "uint256"
+   }
+  ],
+  "name": "GenesisTooSmall",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InsufficientBond",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InsufficientPayoutBalance",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidBand",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidConfig",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidInitialization",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidNav",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidParkKey",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "committed",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "required",
+    "type": "uint64"
+   }
+  ],
+  "name": "KeyChangeNotCommitted",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "head",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "expiryBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "LeaseNotExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   }
+  ],
+  "name": "LeverageInBand",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "infinite",
+    "type": "bool"
+   }
+  ],
+  "name": "LeverageNotInBand",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LimbRangeExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int256",
+    "name": "provenSize",
+    "type": "int256"
+   },
+   {
+    "internalType": "int128",
+    "name": "snapshotSize",
+    "type": "int128"
+   }
+  ],
+  "name": "NoDivergence",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoForeignPosition",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoForeignPositionAtSlot",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoLesseeToSlash",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoOpenPark",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int256",
+    "name": "equity6",
+    "type": "int256"
+   }
+  ],
+  "name": "NonPositiveEquity",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotAForeignBucket",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "caller",
+    "type": "address"
+   }
+  ],
+  "name": "NotAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotInitializing",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "caller",
+    "type": "address"
+   }
+  ],
+  "name": "NotLessee",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "caller",
+    "type": "address"
+   }
+  ],
+  "name": "NotPendingAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotSettled",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotUnwound",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "wantNotional6",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minNotional6",
+    "type": "uint256"
+   }
+  ],
+  "name": "OrderTooSmall",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "price",
+    "type": "uint256"
+   }
+  ],
+  "name": "PriceExceedsUint32",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "lastProven",
+    "type": "uint64"
+   }
+  ],
+  "name": "ProofNotNewer",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "committedHead",
+    "type": "uint64"
+   }
+  ],
+  "name": "ProofNotRecent",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "committed",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "required",
+    "type": "uint64"
+   }
+  ],
+  "name": "RebalanceInFlight",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SettlesToZero",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int256",
+    "name": "positionSize",
+    "type": "int256"
+   }
+  ],
+  "name": "ShortPosition",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SlotOutOfRange",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint16",
+    "name": "remainingMask",
+    "type": "uint16"
+   }
+  ],
+  "name": "UnclearedForeignBucket",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "VaultUnwound",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "enum LongXVaultUpgradeable.KeyState",
+    "name": "current",
+    "type": "uint8"
+   }
+  ],
+  "name": "WrongKeyState",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroMarkPrice",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pendingAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "AdminTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousAdmin",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "AdminTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "spender",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "Approval",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "BondReleased",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   }
+  ],
+  "name": "BondSlashed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldCap",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newCap",
+    "type": "uint256"
+   }
+  ],
+  "name": "CapRaised",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "Claimed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "DepositForwarded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "ExecutorBountyPaid",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "to",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "FeesWithdrawn",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "closePrice",
+    "type": "uint32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "withdrawAmount6",
+    "type": "uint64"
+   }
+  ],
+  "name": "ForceUnwound",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint16",
+    "name": "market",
+    "type": "uint16"
+   },
+   {
+    "indexed": false,
+    "internalType": "int256",
+    "name": "positionSize",
+    "type": "int256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   }
+  ],
+  "name": "ForeignPositionChallenged",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint16",
+    "name": "market",
+    "type": "uint16"
+   },
+   {
+    "indexed": false,
+    "internalType": "int256",
+    "name": "positionSize",
+    "type": "int256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "price",
+    "type": "uint32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "isAsk",
+    "type": "uint8"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "serial",
+    "type": "uint64"
+   }
+  ],
+  "name": "ForeignPositionClosed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgForwarded",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "accountIndex",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "deadShares",
+    "type": "uint256"
+   }
+  ],
+  "name": "GenesisSettled",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "version",
+    "type": "uint64"
+   }
+  ],
+  "name": "Initialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "anchorBatch",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "int128",
+    "name": "positionSize",
+    "type": "int128"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "deadlineBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "KeyParked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes",
+    "name": "pubKey",
+    "type": "bytes"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "stateRoot",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "bond",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "leaseStartBatch",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "leaseExpiryBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "LeaseAcquired",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "slashed",
+    "type": "bool"
+   }
+  ],
+  "name": "LeaseExpired",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "fee",
+    "type": "uint256"
+   }
+  ],
+  "name": "MintFeeTaken",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "sender",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgIn",
+    "type": "uint256"
+   }
+  ],
+  "name": "MintRequested",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "navPerToken",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "int256",
+    "name": "equity6",
+    "type": "int256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "supply",
+    "type": "uint256"
+   }
+  ],
+  "name": "NAVProven",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "Paused",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "lessee",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "int128",
+    "name": "snapshotSize",
+    "type": "int128"
+   },
+   {
+    "indexed": false,
+    "internalType": "int256",
+    "name": "provenSize",
+    "type": "int256"
+   }
+  ],
+  "name": "PositionDiverged",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "clearedAtBatch",
+    "type": "uint64"
+   }
+  ],
+  "name": "RebalanceOpConfirmed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "infinite",
+    "type": "bool"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "baseAmount",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "price",
+    "type": "uint32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "isAsk",
+    "type": "uint8"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "serial",
+    "type": "uint64"
+   }
+  ],
+  "name": "Rebalanced",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "baseAmount",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "price",
+    "type": "uint32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "wantNotional6",
+    "type": "uint256"
+   }
+  ],
+  "name": "RedeemReduce",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "sender",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "tokensIn",
+    "type": "uint256"
+   }
+  ],
+  "name": "RedeemRequested",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "navPerToken",
+    "type": "uint256"
+   }
+  ],
+  "name": "RequestSettled",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "rescuer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "RescuerBountyPaid",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "SlashDepositForwarded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint128",
+    "name": "amount",
+    "type": "uint128"
+   }
+  ],
+  "name": "Swept",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "from",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "to",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "Transfer",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "Unpaused",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "holder",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "tokens",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "payout",
+    "type": "uint256"
+   }
+  ],
+  "name": "UnwoundRedemption",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "batchNumber",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "baseAmount",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "isAsk",
+    "type": "uint8"
+   }
+  ],
+  "name": "VaultOrderRecorded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "wantedUsdg",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "sentUsdg",
+    "type": "uint256"
+   }
+  ],
+  "name": "WithdrawClamped",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "baseAmount",
+    "type": "uint64"
+   }
+  ],
+  "name": "WithdrawInitiated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "DEAD_ADDRESS",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "DEAD_SHARES",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "DEFAULT_CHALLENGE_BATCHES",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "DEFAULT_EXECUTION_BATCHES",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_GENESIS_USDG",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ORDER_TYPE_MARKET",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptAdmin",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "accountIndex",
+  "outputs": [
+   {
+    "internalType": "uint48",
+    "name": "",
+    "type": "uint48"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "accountOpened",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "pubKey",
+    "type": "bytes"
+   },
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "bucketIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "funding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "size",
+      "type": "int128[16]"
+     }
+    ],
+    "internalType": "struct LighterProofV2.ForeignClearing[]",
+    "name": "clearings",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "acquireLease",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "admin",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "spender",
+    "type": "address"
+   }
+  ],
+  "name": "allowance",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "apiKeyIndex",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "spender",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "approve",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "assetIndex",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "balanceOf",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bandHi1e18",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bandLo1e18",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bondBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bondHeld",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bondReleaseBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bridge",
+  "outputs": [
+   {
+    "internalType": "contract ILighterBridge",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bridgeOpsClearedAtBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   }
+  ],
+  "name": "challenge",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "challengeBatches",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint8",
+    "name": "bucketIndex",
+    "type": "uint8"
+   },
+   {
+    "internalType": "int128[16]",
+    "name": "opFunding",
+    "type": "int128[16]"
+   },
+   {
+    "internalType": "int128[16]",
+    "name": "opSize",
+    "type": "int128[16]"
+   },
+   {
+    "internalType": "uint8",
+    "name": "slot",
+    "type": "uint8"
+   }
+  ],
+  "name": "challengeForeignPosition",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "challengeOpen",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   }
+  ],
+  "name": "claim",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "confirmBridgeOps",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "confirmRebalanceOp",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   }
+  ],
+  "name": "currentLeverage1e18",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "leverage1e18",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "infinite",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "decimals",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "equityCapUsdg",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "escrowedMintUsdg",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "estimatedBond",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "executionBatches",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "executorBountyBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "exitHaircutBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "expectedL1Owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "bucketIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "funding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "size",
+      "type": "int128[16]"
+     }
+    ],
+    "internalType": "struct LighterProofV2.ForeignClearing[]",
+    "name": "clearings",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "expireLease",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "feePoolUsdg",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint8",
+    "name": "bucketIndex",
+    "type": "uint8"
+   },
+   {
+    "internalType": "int128[16]",
+    "name": "opFunding",
+    "type": "int128[16]"
+   },
+   {
+    "internalType": "int128[16]",
+    "name": "opSize",
+    "type": "int128[16]"
+   },
+   {
+    "internalType": "uint8",
+    "name": "slot",
+    "type": "uint8"
+   }
+  ],
+  "name": "forceCloseForeign",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint32",
+    "name": "closePrice",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint64",
+    "name": "withdrawAmount6",
+    "type": "uint64"
+   }
+  ],
+  "name": "forceUnwind",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract IERC20",
+    "name": "usdg_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract ILighterBridge",
+    "name": "bridge_",
+    "type": "address"
+   },
+   {
+    "internalType": "uint16",
+    "name": "assetIndex_",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint8",
+    "name": "routeType_",
+    "type": "uint8"
+   },
+   {
+    "components": [
+     {
+      "internalType": "contract IVerifierRouter",
+      "name": "router",
+      "type": "address"
+     },
+     {
+      "internalType": "uint16",
+      "name": "targetMarket",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "sizeDecimals",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint8",
+      "name": "priceDecimals",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bandLo1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bandHi1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetLeverage1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxSlippageBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minOrderNotional6",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint16",
+      "name": "exitHaircutBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "address",
+      "name": "expectedL1Owner",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "apiKeyIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes",
+      "name": "parkKey",
+      "type": "bytes"
+     },
+     {
+      "internalType": "uint64",
+      "name": "challengeBatches",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "executionBatches",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint16",
+      "name": "bondBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "mintFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "rescuerBountyBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "executorBountyBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint256",
+      "name": "equityCapUsdg",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "admin",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct LongXVaultUpgradeable.VaultConfig",
+    "name": "cfg",
+    "type": "tuple"
+   },
+   {
+    "internalType": "string",
+    "name": "name_",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol_",
+    "type": "string"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "keyState",
+  "outputs": [
+   {
+    "internalType": "enum LongXVaultUpgradeable.KeyState",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lastBridgeOpSerial",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lastNavTimestamp",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lastProvenBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lastRedeemWithdrawSerial",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "leaseBond",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "leaseExpiryBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "leaseStartBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "leasedKey",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lessee",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "liabilityAnchorCap",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "maxSlippageBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "minOrderNotional6",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "mintFeeBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "name",
+  "outputs": [
+   {
+    "internalType": "string",
+    "name": "",
+    "type": "string"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "navPerToken",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "nextRequestId",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "nextSettleId",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owedRedeemUsdg",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owedShortfall",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkAnchorBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkBond",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "bucketIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "funding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "size",
+      "type": "int128[16]"
+     }
+    ],
+    "internalType": "struct LighterProofV2.ForeignClearing[]",
+    "name": "clearings",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "parkKey",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkKeySerial",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkLessee",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkPositionSize",
+  "outputs": [
+   {
+    "internalType": "int128",
+    "name": "",
+    "type": "int128"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "parkPubKey",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pause",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "paused",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingAdmin",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingSlashDeposit",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "priceDecimals",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxSettle",
+    "type": "uint256"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "bucketIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "funding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "size",
+      "type": "int128[16]"
+     }
+    ],
+    "internalType": "struct LighterProofV2.ForeignClearing[]",
+    "name": "clearings",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "proveState",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newCap",
+    "type": "uint256"
+   }
+  ],
+  "name": "raiseCap",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int128[64]",
+      "name": "balances",
+      "type": "int128[64]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketFunding",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "bucketSize",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "uint64[16]",
+      "name": "poolIndices",
+      "type": "uint64[16]"
+     },
+     {
+      "internalType": "int128[16]",
+      "name": "poolShareAmounts",
+      "type": "int128[16]"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolTotalShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "int128",
+      "name": "poolOperatorShares",
+      "type": "int128"
+     },
+     {
+      "internalType": "uint8",
+      "name": "accountType",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32[16]",
+      "name": "bucketDigests",
+      "type": "bytes32[16]"
+     },
+     {
+      "internalType": "bytes32[48]",
+      "name": "merklePath",
+      "type": "bytes32[48]"
+     },
+     {
+      "internalType": "uint32[255]",
+      "name": "markPrices",
+      "type": "uint32[255]"
+     },
+     {
+      "internalType": "int128[255]",
+      "name": "marketFundings",
+      "type": "int128[255]"
+     },
+     {
+      "internalType": "uint16[255]",
+      "name": "quoteMultipliers",
+      "type": "uint16[255]"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct LighterProofV2.AccountWitness",
+    "name": "w",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "batchNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endBlockNumber",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "batchSize",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint64",
+      "name": "startTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "endTimestamp",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "priorityRequestCount",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "prefixPriorityRequestHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "onChainOperationsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "stateRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "validiumRoot",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "commitment",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct StoredBatchInfo",
+    "name": "batch",
+    "type": "tuple"
+   }
+  ],
+  "name": "rebalance",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "rebalanceClearedAtBatch",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "rebalanceOpSerial",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "tokens",
+    "type": "uint256"
+   }
+  ],
+  "name": "redeemUnwound",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "payout",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "releaseBond",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgIn",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   }
+  ],
+  "name": "requestMint",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "tokensIn",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   }
+  ],
+  "name": "requestRedeem",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "requestId",
+    "type": "uint256"
+   }
+  ],
+  "name": "requestStatus",
+  "outputs": [
+   {
+    "internalType": "enum LongXVaultUpgradeable.RequestKind",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "enum LongXVaultUpgradeable.RequestStatus",
+    "name": "status",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amountIn",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "claimable",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "requests",
+  "outputs": [
+   {
+    "internalType": "enum LongXVaultUpgradeable.RequestKind",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "enum LongXVaultUpgradeable.RequestStatus",
+    "name": "status",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "receiver",
+    "type": "address"
+   },
+   {
+    "internalType": "uint128",
+    "name": "amountIn",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "amountOut",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint64",
+    "name": "requestedAt",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "acceptedAtBatch",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "rescuerBountyBps",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "routeType",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "router",
+  "outputs": [
+   {
+    "internalType": "contract IVerifierRouter",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "maxSettle",
+    "type": "uint256"
+   }
+  ],
+  "name": "settleGenesis",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "sizeDecimals",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint128",
+    "name": "amount",
+    "type": "uint128"
+   }
+  ],
+  "name": "sweepWithdrawals",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "symbol",
+  "outputs": [
+   {
+    "internalType": "string",
+    "name": "",
+    "type": "string"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "syncAccountIndex",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "targetLeverage1e18",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "targetMarket",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "totalSupply",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "to",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "transfer",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "transferAdmin",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "from",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "to",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "transferFrom",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "unpause",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "unwound",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "usdg",
+  "outputs": [
+   {
+    "internalType": "contract IERC20",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vaultBuyAllowance",
+  "outputs": [
+   {
+    "internalType": "uint48",
+    "name": "",
+    "type": "uint48"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vaultFullCloseIssued",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vaultSellAllowance",
+  "outputs": [
+   {
+    "internalType": "uint48",
+    "name": "",
+    "type": "uint48"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "withdrawFees",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

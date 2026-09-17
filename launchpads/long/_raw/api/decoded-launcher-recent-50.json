@@ -1,0 +1,2788 @@
+[
+ {
+  "ts": "2026-09-02T03:54:37",
+  "frm": "0x4ef489fd4250dc1f1323228da497028160e5b691",
+  "sym": "INTER",
+  "name": "Internet",
+  "uri": "ipfs://bafkreidgeuh2iawxm2yfnw4kjo42qdxl",
+  "numeraire": "0x116f00968269b7bfbad4109ce591d6e74c0601d4",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -164896,
+    -51608,
+    1,
+    99.1
+   ],
+   [
+    -51608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9adf17b7d91731ed74c2502695794ec95b8f2a26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x9adf17b7d91731ed74c2502695794ec95b8f2a26",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1828715",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:54:13",
+  "frm": "0x4be370ad2a9440fd501228474ec5623da5b65913",
+  "sym": "AIANTIVAX",
+  "name": "AI is Antivax",
+  "uri": "ipfs://bafkreicb37blzlan6obw4t26qgrrbc35",
+  "numeraire": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -159456,
+    -49024,
+    1,
+    99.1
+   ],
+   [
+    -49024,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x4be370ad2a9440fd501228474ec5623da5b65913": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1848452",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:54:08",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "CAPPLE",
+  "name": "Capybara Apple",
+  "uri": "ipfs://bafkreigxdozfnezuywp75xhgizpnfvop",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93920,
+    16520,
+    1,
+    99.1
+   ],
+   [
+    16520,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1785476",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:54:06",
+  "frm": "0xa4c0238f7976031afa424259e9123e0188438f68",
+  "sym": "CLAPCOIN",
+  "name": "Clap Coin",
+  "uri": "ipfs://bafkreic3ezyspeusimabkwtjj7nxjqdi",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93912,
+    16520,
+    1,
+    99.1
+   ],
+   [
+    16520,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xa4c0238f7976031afa424259e9123e0188438f68": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1786436",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:53:30",
+  "frm": "0xe0d432e1e450f312182924dbf2ef72b7738e6813",
+  "sym": "MICRON",
+  "name": "MICRON",
+  "uri": "ipfs://bafkreihh4uhif2ug74xmg4jlkw34s63h",
+  "numeraire": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -176552,
+    -66120,
+    1,
+    99.1
+   ],
+   [
+    -66120,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xe0d432e1e450f312182924dbf2ef72b7738e6813": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1851413",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:53:24",
+  "frm": "0xe88e342053b05547fea94e8a872ceacbd4e2295e",
+  "sym": "PICKDT",
+  "name": "pickdotfun",
+  "uri": "ipfs://bafkreicni4abpq5ugepkjyngonqbrlhs",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93832,
+    16608,
+    1,
+    99.1
+   ],
+   [
+    16608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xe88e342053b05547fea94e8a872ceacbd4e2295e": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1785428",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:53:21",
+  "frm": "0x79f0fc2b86d9ea0daed605a0f5e89e5e5f2c56af",
+  "sym": "MEERKAT",
+  "name": "Meerkat",
+  "uri": "ipfs://bafkreic7htg5y24mew44zru2sgziass5",
+  "numeraire": "0x116f00968269b7bfbad4109ce591d6e74c0601d4",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -164600,
+    -54168,
+    1,
+    99.1
+   ],
+   [
+    -54168,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x79f0fc2b86d9ea0daed605a0f5e89e5e5f2c56af": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1830215",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:53:13",
+  "frm": "0x370d8e07deb815cefe7b51345bd0ed8cdc05e8fd",
+  "sym": "NEVERFORGET",
+  "name": "9/11",
+  "uri": "ipfs://bafkreigeq73wqwptv5ukivkwnidna3y3",
+  "numeraire": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -161552,
+    -51112,
+    1,
+    99.1
+   ],
+   [
+    -51112,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x370d8e07deb815cefe7b51345bd0ed8cdc05e8fd": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1849087",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:53:12",
+  "frm": "0xa32ffffd1f93a0c535fa084449d3eac1e0c84fa0",
+  "sym": "WONI",
+  "name": "Like Woni",
+  "uri": "ipfs://bafkreiecg2on4nl5xoip3l3fuzrmsudi",
+  "numeraire": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -166048,
+    -55608,
+    1,
+    99.1
+   ],
+   [
+    -55608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xa32ffffd1f93a0c535fa084449d3eac1e0c84fa0": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1867785",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:52:54",
+  "frm": "0x8790676b9c4d9b7fe2df5099b20edfd73768180b",
+  "sym": "SILVERS",
+  "name": "Silver INU",
+  "uri": "ipfs://bafkreihj7ehcll6xmedbz5amlivimcs3",
+  "numeraire": "0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -148736,
+    -38304,
+    1,
+    99.1
+   ],
+   [
+    -38304,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x8790676b9c4d9b7fe2df5099b20edfd73768180b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1846595",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:52:45",
+  "frm": "0x018615b3e5f30944dc769ce8882d61b66f31dda3",
+  "sym": "SOLC",
+  "name": "Solc",
+  "uri": "ipfs://bafkreig6dsop4t34wlgwij2mhxsi66ye",
+  "numeraire": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -162048,
+    -51608,
+    1,
+    99.1
+   ],
+   [
+    -51608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x018615b3e5f30944dc769ce8882d61b66f31dda3": 95.0,
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1867701",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:52:33",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "CASHLESS",
+  "name": "CASHLESS",
+  "uri": "ipfs://bafkreiewlcgl6a3jxqqohhnai6bgqatz",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93792,
+    16648,
+    1,
+    99.1
+   ],
+   [
+    16648,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1786168",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:52:27",
+  "frm": "0x4eedcb693eed68c555539f88f1803e4f2ac49f29",
+  "sym": "IC",
+  "name": "InternetCulture",
+  "uri": "ipfs://bafkreid6fc2hlishhdxmryd7q555j5zc",
+  "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -157928,
+    -47496,
+    1,
+    99.1
+   ],
+   [
+    -47496,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x4eedcb693eed68c555539f88f1803e4f2ac49f29": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1827977",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:50:50",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "CATECOMP",
+  "name": "Cate Company",
+  "uri": "ipfs://bafkreihrtp6w23o62usufzj5lourr3nb",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93632,
+    16800,
+    1,
+    99.1
+   ],
+   [
+    16800,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1786344",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:50:35",
+  "frm": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "sym": "OILNU",
+  "name": "Oilnu",
+  "uri": "ipfs://QmdmvAxyQH9U1jQGWNiG76dttkHxEpgQX",
+  "numeraire": "0xa30fa36db767ad9ed3f7a60fc79526fb4d56d344",
+  "supply": 1000000000.0,
+  "sell": 900000000.0,
+  "fee": 10000,
+  "tickSpacing": 8,
+  "farTick": 887264,
+  "curves": [
+   [
+    -182376,
+    -71944,
+    1,
+    99.1
+   ],
+   [
+    -71944,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "startFee": 500000,
+  "endFee": 10000,
+  "dur": 15,
+  "mode": 1,
+  "dist": [
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0
+  ],
+  "vest": [
+   [
+    0,
+    0
+   ]
+  ],
+  "grantBens": [
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f"
+  ],
+  "amounts": [
+   100000000.0
+  ],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1977363",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:49:54",
+  "frm": "0xc69681d5b0c499126ecbd8cf5500b50e6c821306",
+  "sym": "USNATIONALDEBT",
+  "name": "$40000000000000",
+  "uri": "ipfs://bafkreia5tjbb4eqjuwk2rza2ohd7eqrn",
+  "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -154352,
+    -43912,
+    1,
+    99.1
+   ],
+   [
+    -43912,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xc69681d5b0c499126ecbd8cf5500b50e6c821306": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1872689",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:49:24",
+  "frm": "0x9eb2ce33c08a8187131774b866fa14f91dca5cd2",
+  "sym": "AIDOGE",
+  "name": "NVDIA DOGE",
+  "uri": "ipfs://bafkreiftlyogzdyqc5zowgaxxyapbflc",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93584,
+    16848,
+    1,
+    99.1
+   ],
+   [
+    16848,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9eb2ce33c08a8187131774b866fa14f91dca5cd2": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1768456",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:49:14",
+  "frm": "0x4ef489fd4250dc1f1323228da497028160e5b691",
+  "sym": "ALEXA",
+  "name": "Alexa",
+  "uri": "ipfs://bafkreieqvrjudc3c2nuptzcqi2vwc7il",
+  "numeraire": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -163792,
+    -51560,
+    1,
+    99.1
+   ],
+   [
+    -51560,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9adf17b7d91731ed74c2502695794ec95b8f2a26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x9adf17b7d91731ed74c2502695794ec95b8f2a26",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1829579",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:47:57",
+  "frm": "0x79e660623a3fff90f8233200160eef40a1133b12",
+  "sym": "HIAI",
+  "name": "Human Intel",
+  "uri": "ipfs://bafkreig37duwng3ch64ser2p4ogqiifw",
+  "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -157944,
+    -47504,
+    1,
+    99.1
+   ],
+   [
+    -47504,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x79e660623a3fff90f8233200160eef40a1133b12": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1846037",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:47:43",
+  "frm": "0x370d8e07deb815cefe7b51345bd0ed8cdc05e8fd",
+  "sym": "RETARDATIDE",
+  "name": "Retardatide",
+  "uri": "ipfs://bafkreid37nnuzr46fuzvmvwyvqhveqpr",
+  "numeraire": "0x8005d266423c7ea827372c9c864491e5786600ea",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -178856,
+    -68416,
+    1,
+    99.1
+   ],
+   [
+    -68416,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x370d8e07deb815cefe7b51345bd0ed8cdc05e8fd": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1871035",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:47:28",
+  "frm": "0xdadca49e762abb5c904223d73388eb9dcceba21c",
+  "sym": "QRABBIT",
+  "name": "Quantum Rabbit",
+  "uri": "ipfs://bafkreihrr6on3wdh6bgzbswkznmvtzv6",
+  "numeraire": "0x59818904ab4ce163b3ce4ffb64f2d6ca02c434b4",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -128864,
+    -18424,
+    1,
+    99.1
+   ],
+   [
+    -18424,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xdadca49e762abb5c904223d73388eb9dcceba21c": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1847807",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:47:15",
+  "frm": "0x79f0fc2b86d9ea0daed605a0f5e89e5e5f2c56af",
+  "sym": "TINA",
+  "name": "Tina23664722279",
+  "uri": "ipfs://bafkreiahok7rgzh7bwy7gjtxvmgbn42l",
+  "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -154352,
+    -43912,
+    1,
+    99.1
+   ],
+   [
+    -43912,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x79f0fc2b86d9ea0daed605a0f5e89e5e5f2c56af": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1868229",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:46:18",
+  "frm": "0x4ef489fd4250dc1f1323228da497028160e5b691",
+  "sym": "GRANDMA",
+  "name": "Intel Grandma",
+  "uri": "ipfs://bafkreidbjsle556fpee3ehv3q2l5y5en",
+  "numeraire": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -153232,
+    -51560,
+    1,
+    99.1
+   ],
+   [
+    -51560,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9adf17b7d91731ed74c2502695794ec95b8f2a26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x9adf17b7d91731ed74c2502695794ec95b8f2a26",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1852187",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:45:47",
+  "frm": "0xc257ac85b099c40b3a8ddd8ec5ee0b7cb7faa73a",
+  "sym": "CADABRA",
+  "name": "Cadabra",
+  "uri": "ipfs://bafkreibtytlw7klex2mz5v3yaxunyzcn",
+  "numeraire": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -163624,
+    -53192,
+    1,
+    99.1
+   ],
+   [
+    -53192,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xc257ac85b099c40b3a8ddd8ec5ee0b7cb7faa73a": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1830623",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:45:03",
+  "frm": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "sym": "PIXR",
+  "name": "Pixr",
+  "uri": "ipfs://QmTAnvc9QHxXWL7QRh9Sk4h6wDvVp5rNt",
+  "numeraire": "0x0bd7d308f8e1639fab988df18a8011f41eacad73",
+  "supply": 1000000000.0,
+  "sell": 900000000.0,
+  "fee": 10000,
+  "tickSpacing": 8,
+  "farTick": 887264,
+  "curves": [
+   [
+    -182376,
+    -71944,
+    1,
+    99.1
+   ],
+   [
+    -71944,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "startFee": 500000,
+  "endFee": 10000,
+  "dur": 15,
+  "mode": 1,
+  "dist": [
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0
+  ],
+  "vest": [
+   [
+    0,
+    0
+   ]
+  ],
+  "grantBens": [
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f"
+  ],
+  "amounts": [
+   100000000.0
+  ],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1954761",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:44:03",
+  "frm": "0xe54569ce7bc86f6dc88ba80476ca4efa8e0a34f6",
+  "sym": "JEWS",
+  "name": "Jews did 911",
+  "uri": "ipfs://bafkreihoc2dquuulvllsbiqlfxn477zk",
+  "numeraire": "0x4d21483a44bf67a86b77e3da301411880797d452",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -161304,
+    -50872,
+    1,
+    99.1
+   ],
+   [
+    -50872,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xe54569ce7bc86f6dc88ba80476ca4efa8e0a34f6": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1828961",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:43:59",
+  "frm": "0x2f56061d889afaa1d5b897d4b129fac58877ade8",
+  "sym": "PIKACHU",
+  "name": "Pikachu",
+  "uri": "ipfs://bafkreidyky4vu2hvkg7raehdnaat4fb7",
+  "numeraire": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -157768,
+    -47336,
+    1,
+    99.1
+   ],
+   [
+    -47336,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x2f56061d889afaa1d5b897d4b129fac58877ade8": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1829983",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:43:59",
+  "frm": "0x91e758bea19c65a7fbfd10d78810d38456945908",
+  "sym": "ZOOMER",
+  "name": "Zoomer",
+  "uri": "ipfs://bafybeidoo7kc46kxgern4kydvyeafmc5",
+  "numeraire": "0x44c4f142009036cf477ed2d09932051843137cf1",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -161192,
+    -50760,
+    1,
+    99.1
+   ],
+   [
+    -50760,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x91e758bea19c65a7fbfd10d78810d38456945908": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x91e758bea19c65a7fbfd10d78810d38456945908",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1829693",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:43:42",
+  "frm": "0x4ef489fd4250dc1f1323228da497028160e5b691",
+  "sym": "GRANNY",
+  "name": "Intel Granny",
+  "uri": "ipfs://bafkreidbjsle556fpee3ehv3q2l5y5en",
+  "numeraire": "0xc72b96e0e48ecd4dc75e1e45396e26300bc39681",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -153232,
+    -51560,
+    1,
+    99.1
+   ],
+   [
+    -51560,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9adf17b7d91731ed74c2502695794ec95b8f2a26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x9adf17b7d91731ed74c2502695794ec95b8f2a26",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1851741",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:41:13",
+  "frm": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "sym": "VI",
+  "name": "Volatility isolation",
+  "uri": "ipfs://QmSwVQZZGCvP9dhSogRsBpZgSHu8ffc96",
+  "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "supply": 1000000000.0,
+  "sell": 900000000.0,
+  "fee": 15000,
+  "tickSpacing": 8,
+  "farTick": 887264,
+  "curves": [
+   [
+    -182376,
+    -71944,
+    1,
+    99.1
+   ],
+   [
+    -71944,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "startFee": 500000,
+  "endFee": 15000,
+  "dur": 15,
+  "mode": 1,
+  "dist": [
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0
+  ],
+  "vest": [
+   [
+    0,
+    0
+   ]
+  ],
+  "grantBens": [
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f"
+  ],
+  "amounts": [
+   100000000.0
+  ],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1959105",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:41:05",
+  "frm": "0x42a4f43da761b786c169a0347ce8c36c0956da26",
+  "sym": "SNACKER",
+  "name": "Snacker",
+  "uri": "ipfs://bafkreiex3tb5d5zm5ygnfy2tgepyfody",
+  "numeraire": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -384528,
+    -274088,
+    1,
+    99.1
+   ],
+   [
+    -274088,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x42a4f43da761b786c169a0347ce8c36c0956da26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1847467",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:40:55",
+  "frm": "0xa57e4a900e5c52d7b61ae24edcb1e8abef5547ba",
+  "sym": "BARS",
+  "name": "Gold Bars",
+  "uri": "ipfs://bafkreiaisbivlcfxxj2nrqge557mq4br",
+  "numeraire": "0xc9a981fee1f9dec688bb123ccdecc63d0debfc4e",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -168000,
+    -57568,
+    1,
+    99.1
+   ],
+   [
+    -57568,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xa57e4a900e5c52d7b61ae24edcb1e8abef5547ba": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1850301",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:40:47",
+  "frm": "0xef3e0a2d797beaebbfefff7162575e5d6ba1a59a",
+  "sym": "NATEHIGGS",
+  "name": "Nate Higgs",
+  "uri": "ipfs://bafkreihzqd5w5qzxqowq5lor4toe2dsu",
+  "numeraire": "0x2e0847e8910a9732eb3fb1bb4b70a580adad4fe3",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -166424,
+    -55992,
+    1,
+    99.1
+   ],
+   [
+    -55992,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xef3e0a2d797beaebbfefff7162575e5d6ba1a59a": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1848139",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:40:42",
+  "frm": "0xcb958cb1f89ae9c0761d7c93afd4446ed1aba289",
+  "sym": "TIKTOK",
+  "name": "TikTok Coin",
+  "uri": "ipfs://bafkreicvnvkcxfwaqng5sqhffnz3fxic",
+  "numeraire": "0xb0992820e760d836549ba69bc7598b4af75dee03",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -157688,
+    -47248,
+    1,
+    99.1
+   ],
+   [
+    -47248,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb958cb1f89ae9c0761d7c93afd4446ed1aba289": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1852113",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:40:38",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "XLIFE",
+  "name": "XLIFE",
+  "uri": "ipfs://bafkreicvikkf2af53bpqgjj73o5xfuts",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93592,
+    16840,
+    1,
+    99.1
+   ],
+   [
+    16840,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1768078",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:39:40",
+  "frm": "0x4c9df1ecf4bf708a5c62f94e285aa4055e76222f",
+  "sym": "SNOO",
+  "name": "SNOO",
+  "uri": "ipfs://bafkreicgneriusdpe5u5gu7liagp4p6w",
+  "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -157952,
+    -47520,
+    1,
+    99.1
+   ],
+   [
+    -47520,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x4c9df1ecf4bf708a5c62f94e285aa4055e76222f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1828341",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:39:04",
+  "frm": "0xfb8ca793323b04a5d724a3e02815e906a2eebccd",
+  "sym": "TESTLAXL",
+  "name": "TESTLAx3L",
+  "uri": "ipfs://bafkreiamnh2fq2iqjcdg2fjkamsknlbu",
+  "numeraire": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -166952,
+    -56520,
+    1,
+    99.1
+   ],
+   [
+    -56520,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xfb8ca793323b04a5d724a3e02815e906a2eebccd": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1847529",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:39:00",
+  "frm": "0x4ef489fd4250dc1f1323228da497028160e5b691",
+  "sym": "MEMESTONKS",
+  "name": "memestonks",
+  "uri": "ipfs://bafkreigxxmp7ezkucmtpxalozxt736s5",
+  "numeraire": "0x05a3d1cd21d0c88145e82600e62e7e496e0f222b",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -117824,
+    -51608,
+    1,
+    99.1
+   ],
+   [
+    -51608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x9adf17b7d91731ed74c2502695794ec95b8f2a26": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x9adf17b7d91731ed74c2502695794ec95b8f2a26",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1831205",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:38:59",
+  "frm": "0xbfc90b941a1e0bc9168fb4a09a6ce67f85e58b37",
+  "sym": "COC",
+  "name": "Clash Of Cat",
+  "uri": "ipfs://bafkreidf5qld3qaptjs6ikobupg26hyz",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93528,
+    16904,
+    1,
+    99.1
+   ],
+   [
+    16904,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xbfc90b941a1e0bc9168fb4a09a6ce67f85e58b37": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1784114",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:38:49",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "REVOLUT",
+  "name": "AIR",
+  "uri": "ipfs://bafkreie2qtzstv6raja5tu45onc5v6g2",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93520,
+    16912,
+    1,
+    99.1
+   ],
+   [
+    16912,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1785662",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:37:06",
+  "frm": "0xe81cfcafc24afea0a4e733a81d5d8ed0e8a60122",
+  "sym": "TESTME",
+  "name": "test",
+  "uri": "ipfs://bafkreicesefbg6h7ohhrxy5picat5npk",
+  "numeraire": "0x822cc93ffd030293e9842c30bbd678f530701867",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -161672,
+    -51240,
+    1,
+    99.1
+   ],
+   [
+    -51240,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xe81cfcafc24afea0a4e733a81d5d8ed0e8a60122": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1868745",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:36:32",
+  "frm": "0xa5251433b5f2e961d5618daba10154288a60fb2c",
+  "sym": "FUCKSLANDER",
+  "name": "FUCK SLANDER",
+  "uri": "ipfs://bafkreier7pa42hfwyfa4zc3ddk3zwsup",
+  "numeraire": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -158480,
+    -48048,
+    1,
+    99.1
+   ],
+   [
+    -48048,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xa5251433b5f2e961d5618daba10154288a60fb2c": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1849183",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:36:27",
+  "frm": "0x997add12b4967870e6f2857cfe313ffe5be51aea",
+  "sym": "DIAMONDPEPE",
+  "name": "DiamondPepe69",
+  "uri": "ipfs://bafkreifevoikjqu66d4z2r2sfapeapin",
+  "numeraire": "0x6330d8c3178a418788df01a47479c0ce7ccf450b",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -160000,
+    -49568,
+    1,
+    99.1
+   ],
+   [
+    -49568,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x997add12b4967870e6f2857cfe313ffe5be51aea": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1848415",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:36:21",
+  "frm": "0x79b069112df103f28be2012a52ecef0f4a5106f2",
+  "sym": "PRINTER",
+  "name": "PRINTER",
+  "uri": "ipfs://bafkreigozycerkeq6wpj5mkomtbyfsrj",
+  "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -154352,
+    -43912,
+    1,
+    99.1
+   ],
+   [
+    -43912,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x79b069112df103f28be2012a52ecef0f4a5106f2": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1852383",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:36:05",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "PHASEONE",
+  "name": "PHASEONE\uff62big\uff63",
+  "uri": "ipfs://bafkreieux4ogn3af4ayktwgyxp5yel5t",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93536,
+    16904,
+    1,
+    99.1
+   ],
+   [
+    16904,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1769176",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:34:23",
+  "frm": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "sym": "CAMELTOEE",
+  "name": "Cameltoe",
+  "uri": "ipfs://QmTBYjnNLFmhkus7GTjpc7KQaDKKuzP7j",
+  "numeraire": "0x4e62068525ab11fe768e29dfd00ef909b9803016",
+  "supply": 1000000000.0,
+  "sell": 900000000.0,
+  "fee": 30000,
+  "tickSpacing": 8,
+  "farTick": 887264,
+  "curves": [
+   [
+    -182376,
+    -71944,
+    1,
+    99.1
+   ],
+   [
+    -71944,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x6495687de156e602befd0cc9716dc4aed92ae23f",
+  "startFee": 500000,
+  "endFee": 30000,
+  "dur": 15,
+  "mode": 1,
+  "dist": [
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0
+  ],
+  "vest": [
+   [
+    0,
+    0
+   ]
+  ],
+  "grantBens": [
+   "0x6495687de156e602befd0cc9716dc4aed92ae23f"
+  ],
+  "amounts": [
+   100000000.0
+  ],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1979183",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:34:16",
+  "frm": "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b",
+  "sym": "DEBTDOG",
+  "name": "DEBTDOG",
+  "uri": "ipfs://bafkreieevang2uswguocngdysm4syvjb",
+  "numeraire": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 5000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -93480,
+    16960,
+    1,
+    99.1
+   ],
+   [
+    16960,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0xcb20f26aac6f12e2b93b879dfa0573d0e0b96f1b": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x35d217b10f974a49f1bfd369fc5c85b597ae09a1",
+  "startFee": 800000,
+  "endFee": 4000,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   100.0,
+   0.0,
+   0.0,
+   0.0,
+   100.0,
+   0.0,
+   0.0
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1768610",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:33:20",
+  "frm": "0x91e758bea19c65a7fbfd10d78810d38456945908",
+  "sym": "CAMERA",
+  "name": "i like the camera",
+  "uri": "ipfs://bafybeihmr2wtibnh6c7mcjpzdghet3vm",
+  "numeraire": "0xbc269b6148bb3166286815bc70e994b85d9a6ba6",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -119120,
+    -8688,
+    1,
+    99.1
+   ],
+   [
+    -8688,
+    887272,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x91e758bea19c65a7fbfd10d78810d38456945908": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x91e758bea19c65a7fbfd10d78810d38456945908",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1846693",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:33:14",
+  "frm": "0x2af8c4653d017ce4b59073e3489920a2ea6cd61f",
+  "sym": "STAR",
+  "name": "Starman Optical",
+  "uri": "ipfs://bafkreibtrhpzuef6j5ewypiyjfosdpt6",
+  "numeraire": "0x5fc5360d0400a0fd4f2af552add042d716f1d168",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -384528,
+    -274088,
+    1,
+    99.1
+   ],
+   [
+    -274088,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0,
+   "0x2af8c4653d017ce4b59073e3489920a2ea6cd61f": 95.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1829113",
+  "value": "0"
+ },
+ {
+  "ts": "2026-09-02T03:33:09",
+  "frm": "0x16cfa7ca52268cfc6d701b0d47f86bfc152694f3",
+  "sym": "FOLD",
+  "name": "iPhone FOLD",
+  "uri": "ipfs://bafkreifyqvw462s6pmclcxmn46ucrya5",
+  "numeraire": "0xaf3d76f1834a1d425780943c99ea8a608f8a93f9",
+  "supply": 1000000000.0,
+  "sell": 1000000000.0,
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   [
+    -166048,
+    -55608,
+    1,
+    99.1
+   ],
+   [
+    -55608,
+    887264,
+    1,
+    0.9
+   ]
+  ],
+  "bens": {
+   "0x16cfa7ca52268cfc6d701b0d47f86bfc152694f3": 95.0,
+   "0x21e2ce70511e4fe542a97708e89520471daa7a66": 5.0
+  },
+  "hook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+  "startFee": 800000,
+  "endFee": 11200,
+  "dur": 10,
+  "mode": 0,
+  "dist": [
+   0.0,
+   71.4,
+   0.0,
+   28.6,
+   14.3,
+   71.4,
+   0.0,
+   14.3
+  ],
+  "vest": [],
+  "grantBens": [],
+  "amounts": [],
+  "maxBal": 0,
+  "balEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "gas": "1850709",
+  "value": "0"
+ }
+]

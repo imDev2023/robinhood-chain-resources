@@ -1,0 +1,1400 @@
+[
+ {
+  "inputs": [],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "BaseTokenExists",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "BaseTokenMissing",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "CreatorTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAddresses",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidBaseToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidCreatorFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidHook",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidParamSource",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTreasury",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidVault",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MigrateTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoPosition",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotFeeAuthorized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotFeeRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPendingVault",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotStockBase",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrant",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TickNotAligned",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TreasuryTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnknownToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "VaultFundingFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "VaultNotSet",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "paramSource",
+    "type": "address"
+   }
+  ],
+  "name": "BaseTokenAdded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   }
+  ],
+  "name": "BaseTokenRemoved",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldCreatorFeeBps",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newCreatorFeeBps",
+    "type": "uint256"
+   }
+  ],
+  "name": "CreatorFeeBpsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldRecipient",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newRecipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "setBy",
+    "type": "address"
+   }
+  ],
+  "name": "FeeRecipientUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "oldHook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newHook",
+    "type": "address"
+   }
+  ],
+  "name": "HookUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "poolManager",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "treasury",
+    "type": "address"
+   }
+  ],
+  "name": "Initialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint128",
+    "name": "liquidity",
+    "type": "uint128"
+   }
+  ],
+  "name": "LiquidityLocked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint128",
+    "name": "liquidity",
+    "type": "uint128"
+   }
+  ],
+  "name": "MigratedToVault",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "oldSource",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newSource",
+    "type": "address"
+   }
+  ],
+  "name": "ParamSourceUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "oldHook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newHook",
+    "type": "address"
+   }
+  ],
+  "name": "ReflectionHookUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "paramSource",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "stockHook",
+    "type": "address"
+   }
+  ],
+  "name": "StockBaseTokenAdded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "TokenDeployed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "oldTreasury",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newTreasury",
+    "type": "address"
+   }
+  ],
+  "name": "TreasuryUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "candidate",
+    "type": "address"
+   }
+  ],
+  "name": "VaultProposed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "oldVault",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newVault",
+    "type": "address"
+   }
+  ],
+  "name": "VaultUpdated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "TICK_SPACING",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptVault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "paramSource",
+    "type": "address"
+   }
+  ],
+  "name": "addBaseToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "paramSource",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "stockHook",
+    "type": "address"
+   }
+  ],
+  "name": "addStockBaseToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "newRecipient",
+    "type": "address"
+   }
+  ],
+  "name": "adminSetFeeRecipient",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "baseTokenToHook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "baseTokenToPoolManager",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "baseTokens",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "creatorFeeBps",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "creatorTokens",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "feeRecipientMigrated",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "feeRecipientOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "feeRecipients",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "getCreator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   }
+  ],
+  "name": "getCreatorTokenCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   }
+  ],
+  "name": "getCreatorTokens",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   }
+  ],
+  "name": "getParamSource",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getSupportedBaseTokens",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getTotalTokensDeployed",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "hook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_poolManager",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_hook",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_initialBaseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_initialParamSource",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_treasury",
+    "type": "address"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "isReflectionToken",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "isStockBase",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "_name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "_symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   }
+  ],
+  "name": "launch",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "_name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "_symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feeRecipient",
+    "type": "address"
+   }
+  ],
+  "name": "launchWithFeeRecipient",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "_name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "_symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feeRecipient",
+    "type": "address"
+   },
+   {
+    "internalType": "address[]",
+    "name": "whitelist",
+    "type": "address[]"
+   }
+  ],
+  "name": "launchWithReflections",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "_name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "_symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feeRecipient",
+    "type": "address"
+   },
+   {
+    "internalType": "address[]",
+    "name": "whitelist",
+    "type": "address[]"
+   }
+  ],
+  "name": "launchWithWhitelist",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "launches",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickLower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickUpper",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "newRecipient",
+    "type": "address"
+   }
+  ],
+  "name": "migrateFeeRecipient",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "migrateToVault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "migratedToVault",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "poolIdOf",
+  "outputs": [
+   {
+    "internalType": "PoolId",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "poolKeyOf",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct PoolKey",
+    "name": "key",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newVault",
+    "type": "address"
+   }
+  ],
+  "name": "proposeVault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "reflectionHook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   }
+  ],
+  "name": "removeBaseToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newCreatorFeeBps",
+    "type": "uint256"
+   }
+  ],
+  "name": "setCreatorFeeBps",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newHook",
+    "type": "address"
+   }
+  ],
+  "name": "setReflectionHook",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "totalTokensDeployed",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "treasury",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "rawData",
+    "type": "bytes"
+   }
+  ],
+  "name": "unlockCallback",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newHook",
+    "type": "address"
+   }
+  ],
+  "name": "updateHook",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "baseToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "newSource",
+    "type": "address"
+   }
+  ],
+  "name": "updateParamSource",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newTreasury",
+    "type": "address"
+   }
+  ],
+  "name": "updateTreasury",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

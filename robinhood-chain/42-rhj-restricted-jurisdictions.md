@@ -1,0 +1,12 @@
+# Robinhood RHJ - Restricted Jurisdictions
+
+> Source: <https://docs.robinhood.com/rhj/restricted-jurisdictions/>
+> Retrieved: 2026-09-03 (page MDX source extracted from the rhj docs bundle `index-BHBqPiOr.js`, cross-checked against the server-rendered HTML of the live page)
+
+---
+
+# Restricted Jurisdictions
+
+The offer, sale, distribution and delivery of the Products are subject to restrictions in certain jurisdictions, including, without limitation, the U.S., Canada, the United Kingdom, and Switzerland, as set out in the Base Prospectus and applicable Final Terms.
+
+The Products may not be offered, sold or delivered, directly or indirectly, in the United States or to, or for the account or benefit of, U.S. Persons or to Prohibited Investors. Prohibited Investors currently include investors in the following jurisdictions (which may be subject to change): Cuba, Belarus, Iran, North Korea, Russia, Syria, Ukraine, South Sudan, Sudan, Myanmar, and Venezuela.

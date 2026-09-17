@@ -1,0 +1,29 @@
+0x1f770d5e 
+0x398102a4 
+0x5074830a 
+0x7353f3af 
+0x7ed63b55 
+0xbc9589fd 
+0xa217fddf DEFAULT_ADMIN_ROLE()
+0x53f10a4b defaultThreshold()
+0x248a9ca3 getRoleAdmin(bytes32)
+0xae39ecfc getSwapInfo(address,address)
+0x278f3b7a getTrustStatus(address)
+0x2f2ff15d grantRole(bytes32,address)
+0x91d14854 hasRole(bytes32,address)
+0xc4d66de8 initialize(address)
+0x235fec98 isAllowedQuoteToken(address)
+0xfe575a87 isBlacklisted(address)
+0xad8221ab isSwapSupported(address,address)
+0x69f5c601 isSwapSupportedWithDetailedErrors(address,address)
+0x952b8901 multiDexRouter()
+0xbf584c4b REGISTRY_ADMIN_ROLE()
+0x5f45eec5 removeSwapPath(address,address)
+0x36568abe renounceRole(bytes32,address)
+0xd547741f revokeRole(bytes32,address)
+0xa90db408 setAllowedQuoteToken(address,bool)
+0x8bb171bc setBlacklisted(address)
+0x3a2f3557 setWhitelisted(address)
+0x01ffc9a7 supportsInterface(bytes4)
+0xb4b57c39 v2Factory()
+0x3fc8cef3 weth()

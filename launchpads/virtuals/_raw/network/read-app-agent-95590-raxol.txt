@@ -1,0 +1,1652 @@
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# RAXOL
+
+RAXOL
+
+ProjectAgent
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+-
+
+0xd460…181b-179.8K RAXOL
+
+17m@ $0.002836
+
+-
+
+0xa11e…2728+8.47K RAXOL
+
+23m@ $0.002843
+
+-
+
+0x91db…46d0-57.82K RAXOL
+
+25m@ $0.002846
+
+-
+
+0x9bc4…1083+112.79K RAXOL
+
+28m@ $0.002848
+
+-
+
+0xb7b5…6a2d-31.56K RAXOL
+
+32m@ $0.002838
+
+-
+
+0x0296…b704+5.21K RAXOL
+
+33m@ $0.002852
+
+-
+
+0xf70d…dbef+306.72K RAXOL
+
+34m@ $0.002821
+
+-
+
+0xf3c8…93be+4.29K RAXOL
+
+34m@ $0.002818
+
+-
+
+0x4337…f5ac-33.74K RAXOL
+
+10h@ $0.002488
+
+-
+
+0x4337…b6c2-104.92K RAXOL
+
+10h@ $0.002489
+
+-
+
+0xdd10…d8e0+47.64K RAXOL
+
+10h@ $0.002502
+
+-
+
+0x81ad…c13c+45.52K RAXOL
+
+13h@ $0.002237
+
+-
+
+0xdd10…d8e0+213.53K RAXOL
+
+13h@ $0.002234
+
+-
+
+0x18dd…8e25+176.01K RAXOL
+
+13h@ $0.002208
+
+-
+
+0x8e11…022c+39.53K RAXOL
+
+13h@ $0.002209
+
+-
+
+0xe209…ef08+1.93K RAXOL
+
+13h@ $0.002192
+
+-
+
+0xe601…0d08+561.08K RAXOL
+
+13h@ $0.002166
+
+-
+
+0x4038…4840-46.21K RAXOL
+
+13h@ $0.002130
+
+-
+
+0x4337…ec26-515.01K RAXOL
+
+13h@ $0.002167
+
+-
+
+0x0296…b704-158.5K RAXOL
+
+13h@ $0.002197
+
+-
+
+0x4337…9fb1-584.29K RAXOL
+
+13h@ $0.002230
+
+-
+
+0x7471…6b19-16.13K RAXOL
+
+13h@ $0.002258
+
+-
+
+0x1e8d…d72c+5.82K RAXOL
+
+13h@ $0.002271
+
+-
+
+0x564b…6dc1+1.01K RAXOL
+
+13h@ $0.002256
+
+-
+
+0xdd50…ca08+865.86 RAXOL
+
+13h@ $0.002269
+
+-
+
+0x8d4b…2be7+317.15K RAXOL
+
+13h@ $0.002246
+
+-
+
+0x7dc1…aeff-206.47 RAXOL
+
+13h@ $0.002211
+
+-
+
+0xba50…d87a-52.19K RAXOL
+
+13h@ $0.002218
+
+-
+
+0xc878…c3a2+27.1K RAXOL
+
+13h@ $0.002233
+
+-
+
+0xd5b7…1ea8-303.97K RAXOL
+
+14h@ $0.002225
+
+-
+
+0x0bee…d82d+7.27K RAXOL
+
+14h@ $0.002248
+
+-
+
+0xe601…0d08+370.75K RAXOL
+
+14h@ $0.002243
+
+-
+
+0x125b…070f-55.06K RAXOL
+
+14h@ $0.002215
+
+-
+
+0x2bb2…fbd1+82.38K RAXOL
+
+14h@ $0.002230
+
+-
+
+0x81ad…c13c+4.14K RAXOL
+
+14h@ $0.002210
+
+-
+
+0x4b98…457d+673.47 RAXOL
+
+14h@ $0.002223
+
+-
+
+0x4337…44cc-58.16K RAXOL
+
+14h@ $0.002372
+
+-
+
+0x0000…374b-86.73K RAXOL
+
+14h@ $0.002379
+
+-
+
+0x6d5d…47a6-19.8K RAXOL
+
+14h@ $0.002367
+
+-
+
+0xca7d…4589+123.78K RAXOL
+
+14h@ $0.002391
+
+-
+
+0x2bb2…fbd1+61.98K RAXOL
+
+14h@ $0.002382
+
+-
+
+0xe601…0d08+156.41K RAXOL
+
+14h@ $0.002371
+
+-
+
+0x0ec4…038f+41.6K RAXOL
+
+14h@ $0.002361
+
+-
+
+0xd782…0db8+20.69K RAXOL
+
+14h@ $0.002358
+
+-
+
+0x4337…2838-371.44K RAXOL
+
+14h@ $0.002365
+
+-
+
+0xd721…9fe6+36.01K RAXOL
+
+14h@ $0.002382
+
+-
+
+0x4337…1b62-92.34K RAXOL
+
+14h@ $0.002371
+
+-
+
+0x0442…13b4+68.27K RAXOL
+
+15h@ $0.002486
+
+-
+
+0x0442…13b4+192.73K RAXOL
+
+15h@ $0.002480
+
+-
+
+0xf70d…dbef+424.51K RAXOL
+
+15h@ $0.002442
+
+-
+
+0xe5a0…e083+827.1K RAXOL
+
+15h@ $0.002375
+
+-
+
+0x698d…aaed+209.12K RAXOL
+
+15h@ $0.002324
+
+-
+
+0xee3f…ed19+43.25K RAXOL
+
+15h@ $0.002311
+
+-
+
+0x0442…13b4+773.52K RAXOL
+
+15h@ $0.002271
+
+-
+
+0x0442…13b4-12.8K RAXOL
+
+15h@ $0.002222
+
+-
+
+0xf42b…acec+19.22K RAXOL
+
+15h@ $0.002233
+
+-
+
+0x7254…40c7+21.69K RAXOL
+
+15h@ $0.002228
+
+-
+
+0x4337…663c-100.49K RAXOL
+
+15h@ $0.002206
+
+-
+
+0x1cac…4e02-388.07K RAXOL
+
+15h@ $0.002234
+
+-
+
+0x0743…c1bb+14.04K RAXOL
+
+15h@ $0.002260
+
+-
+
+0x4b98…457d+828.76 RAXOL
+
+15h@ $0.002268
+
+-
+
+0xf2aa…d633+236.58K RAXOL
+
+15h@ $0.002254
+
+-
+
+0x5083…c344-2.78M RAXOL
+
+15h@ $0.002382
+
+-
+
+0xa67d…3fbb+541.81 RAXOL
+
+16h@ $0.002551
+
+-
+
+0x7411…36d4-61.48K RAXOL
+
+16h@ $0.002728
+
+-
+
+0x5903…7e44-50.31K RAXOL
+
+16h@ $0.002754
+
+-
+
+0x235b…da69+2.85K RAXOL
+
+16h@ $0.002768
+
+-
+
+0xe46b…a8a4-50.25K RAXOL
+
+16h@ $0.002755
+
+-
+
+0x4337…a4ab-586.03K RAXOL
+
+17h@ $0.002843
+
+-
+
+0xe601…0d08-149.01K RAXOL
+
+17h@ $0.002908
+
+-
+
+0x4337…6ef9-16.93K RAXOL
+
+17h@ $0.002902
+
+-
+
+0x7c49…7dc9-570.23 RAXOL
+
+17h@ $0.002910
+
+-
+
+0x4337…51e0-25.81K RAXOL
+
+17h@ $0.002899
+
+-
+
+0x1539…e019+8.28K RAXOL
+
+17h@ $0.002929
+
+-
+
+0x4337…d6af-1.24K RAXOL
+
+17h@ $0.002912
+
+-
+
+0xf2aa…d633-297K RAXOL
+
+17h@ $0.002929
+
+-
+
+0x4337…2d79-8.7K RAXOL
+
+17h@ $0.002976
+
+-
+
+0x7a27…f238-1.46K RAXOL
+
+17h@ $0.002967
+
+-
+
+0x4337…1131-14.31K RAXOL
+
+17h@ $0.002969
+
+-
+
+0xd949…e607-26.45K RAXOL
+
+17h@ $0.002978
+
+-
+
+0x3eca…1e20+807.9 RAXOL
+
+17h@ $0.002997
+
+-
+
+0x37d4…b492+4.85K RAXOL
+
+17h@ $0.002997
+
+-
+
+0x235b…da69+775.16K RAXOL
+
+18h@ $0.002950
+
+-
+
+0x4b98…457d+772.49 RAXOL
+
+18h@ $0.002884
+
+-
+
+0xdd50…ca08+266.44K RAXOL
+
+18h@ $0.002857
+
+-
+
+0xb172…9760-1.57M RAXOL
+
+18h@ $0.002930
+
+-
+
+0x4337…f038-42.54K RAXOL
+
+18h@ $0.003043
+
+-
+
+0x698d…aaed+15.63K RAXOL
+
+18h@ $0.003061
+
+-
+
+0x1e8d…d72c+74.15K RAXOL
+
+18h@ $0.003072
+
+-
+
+0x9ee8…3309-100.1K RAXOL
+
+18h@ $0.003051
+
+-
+
+0xdd50…ca08-101.29K RAXOL
+
+18h@ $0.003073
+
+-
+
+0x18dd…8e25+160.57K RAXOL
+
+18h@ $0.003071
+
+-
+
+0xe3de…dfcd+181.68K RAXOL
+
+18h@ $0.003052
+
+-
+
+0x54af…af44-5.8K RAXOL
+
+18h@ $0.003029
+
+-
+
+0x0296…b704+110.82K RAXOL
+
+18h@ $0.003029
+
+-
+
+0x4454…498f+81.79K RAXOL
+
+18h@ $0.003015
+
+-
+
+0xdc1a…2c53+1.03K RAXOL
+
+18h@ $0.003016
+
+-
+
+0x56d8…027e+115.37K RAXOL
+
+18h@ $0.003007
+
+-
+
+0x4c12…da0a-22.2K RAXOL
+
+18h@ $0.002965
+
+-
+
+0xabb2…cd10+37.67K RAXOL
+
+18h@ $0.002991
+
+-
+
+0x4337…03f5-3.33K RAXOL
+
+18h@ $0.002951
+
+-
+
+0x4337…e061-10.97K RAXOL
+
+18h@ $0.002977
+
+-
+
+0xe852…0af9+41.67K RAXOL
+
+18h@ $0.002992
+
+-
+
+0x509d…85de+188.1K RAXOL
+
+18h@ $0.002974
+
+-
+
+0x012b…ad98+15.36K RAXOL
+
+18h@ $0.002959
+
+-
+
+0x4585…1838+19.54K RAXOL
+
+18h@ $0.002948
+
+-
+
+0xf42b…acec+9.83K RAXOL
+
+18h@ $0.002940
+
+-
+
+0xabb2…cd10+12.02K RAXOL
+
+18h@ $0.002918
+
+-
+
+0x4b98…457d-1K RAXOL
+
+18h@ $0.002910
+
+-
+
+0x0442…13b4+891.69K RAXOL
+
+18h@ $0.002860
+
+-
+
+0xf2aa…d633-179.39K RAXOL
+
+19h@ $0.002802
+
+-
+
+0xdc1a…2c53+858.71 RAXOL
+
+19h@ $0.002819
+
+-
+
+0xa464…7b94-56.52K RAXOL
+
+19h@ $0.002808
+
+-
+
+0x0442…13b4+321.73K RAXOL
+
+19h@ $0.002834
+
+-
+
+0x54af…af44+5.92K RAXOL
+
+19h@ $0.002533
+
+-
+
+0x4b98…457d+1.03K RAXOL
+
+19h@ $0.002524
+
+-
+
+0x4337…51e0-744.91K RAXOL
+
+19h@ $0.002544
+
+-
+
+0xf2aa…d633+172.6K RAXOL
+
+19h@ $0.002593
+
+-
+
+0x268f…61b3+59.86K RAXOL
+
+19h@ $0.002586
+
+-
+
+0x698d…aaed+10.88K RAXOL
+
+19h@ $0.002582
+
+-
+
+0xdccd…fcd9-86.13K RAXOL
+
+19h@ $0.002576
+
+-
+
+0xd782…0db8+75.03K RAXOL
+
+19h@ $0.002593
+
+-
+
+0xa464…7b94+57.84K RAXOL
+
+19h@ $0.002588
+
+-
+
+0x18dd…8e25+2.14K RAXOL
+
+20h@ $0.002589
+
+-
+
+0x698d…aaed+15.05K RAXOL
+
+20h@ $0.002588
+
+-
+
+0x5118…6f72+192.17K RAXOL
+
+20h@ $0.002602
+
+-
+
+0xe46b…a8a4+46.94K RAXOL
+
+20h@ $0.002578
+
+-
+
+0xd847…fe01-685.96K RAXOL
+
+20h@ $0.002599
+
+-
+
+0xe47b…5c75+10.64K RAXOL
+
+20h@ $0.002734
+
+-
+
+0xabb2…cd10-102.46K RAXOL
+
+20h@ $0.002712
+
+-
+
+0xabb2…cd10+1.33K RAXOL
+
+20h@ $0.002735
+
+-
+
+0x9a55…3b76-395.08K RAXOL
+
+20h@ $0.002746
+
+-
+
+0xf70d…dbef+1.31K RAXOL
+
+20h@ $0.002800
+
+-
+
+0x012b…ad98+26.64K RAXOL
+
+20h@ $0.002799
+
+-
+
+0xca7d…4589+618.86 RAXOL
+
+20h@ $0.002797
+
+-
+
+0x0639…325f+43.93K RAXOL
+
+20h@ $0.002794
+
+-
+
+0x0ec4…038f+34.63K RAXOL
+
+20h@ $0.002848
+
+-
+
+0x4337…ec68-3.21M RAXOL
+
+20h@ $0.003046
+
+-
+
+0x268f…61b3-58.29K RAXOL
+
+21h@ $0.003297
+
+-
+
+0xca7d…4589+7.81K RAXOL
+
+21h@ $0.003315
+
+-
+
+0xc2bc…a659+303.36K RAXOL
+
+21h@ $0.003308
+
+-
+
+0xa11e…2728+32.52K RAXOL
+
+21h@ $0.003254
+
+-
+
+0x8f50…b116-9.9K RAXOL
+
+21h@ $0.003248
+
+-
+
+0xdd50…ca08-25.63K RAXOL
+
+21h@ $0.003253
+
+-
+
+0x0296…b704-25.63K RAXOL
+
+21h@ $0.003256
+
+-
+
+0x4337…d6af-4.66K RAXOL
+
+21h@ $0.003243
+
+-
+
+0x0a25…7ed7+74.17K RAXOL
+
+21h@ $0.003268
+
+-
+
+0x39b6…5f68+1.88K RAXOL
+
+21h@ $0.003272
+
+-
+
+0x3131…aab6+8.41K RAXOL
+
+21h@ $0.003251
+
+-
+
+0xa11e…2728+15.31K RAXOL
+
+21h@ $0.003248
+
+-
+
+0xcfd1…4ee7-539.99 RAXOL
+
+21h@ $0.003250
+
+-
+
+0x698d…aaed+7.08K RAXOL
+
+21h@ $0.003288
+
+-
+
+0xe9b3…a4ce+1.55M RAXOL
+
+21h@ $0.003167
+
+-
+
+0xe601…0d08+67.71K RAXOL
+
+21h@ $0.003040
+
+-
+
+0xa67d…3fbb+3.9K RAXOL
+
+21h@ $0.003035
+
+-
+
+0x9199…15ac+2.89K RAXOL
+
+21h@ $0.003022
+
+-
+
+0x4337…a93d-4.92K RAXOL
+
+21h@ $0.003019
+
+-
+
+0x268f…61b3+52.37K RAXOL
+
+21h@ $0.003037
+
+-
+
+0xcd6b…9799-7.49K RAXOL
+
+21h@ $0.003013
+
+-
+
+0x4337…5e7d-11.25K RAXOL
+
+21h@ $0.002996
+
+-
+
+0x1f47…ef63-48.74K RAXOL
+
+21h@ $0.003019
+
+-
+
+0x4337…c271-4.55K RAXOL
+
+21h@ $0.003006
+
+-
+
+0xf70d…dbef-42.97K RAXOL
+
+21h@ $0.003025
+
+-
+
+0x0e2a…2f4c+1.63K RAXOL
+
+21h@ $0.003027
+
+-
+
+0xb486…3336+23.29K RAXOL
+
+21h@ $0.003026
+
+-
+
+0x4337…f965-7.68K RAXOL
+
+21h@ $0.003024
+
+-
+
+0xf2aa…d633+44.39K RAXOL
+
+21h@ $0.003040
+
+-
+
+0xf2aa…d633+269.07K RAXOL
+
+21h@ $0.003016
+
+-
+
+0x4337…fa00-34.86K RAXOL
+
+21h@ $0.002964
+
+-
+
+0x4b98…457d+1K RAXOL
+
+21h@ $0.002993
+
+-
+
+0x4a4e…d858-987.52K RAXOL
+
+21h@ $0.003056
+
+-
+
+0x4a4e…d858-987.53K RAXOL
+
+21h@ $0.003206
+
+-
+
+0x4337…9f26-3.01K RAXOL
+
+21h@ $0.003264
+
+-
+
+0x4a4e…d858-395.01K RAXOL
+
+21h@ $0.003317
+
+-
+
+0x1354…e81c+30.15K RAXOL
+
+22h@ $0.003369
+
+-
+
+0x9906…4cd9-14.85K RAXOL
+
+22h@ $0.003337
+
+-
+
+0x916f…f221-3.29K RAXOL
+
+22h@ $0.003319
+
+-
+
+0x331d…2466+74.79K RAXOL
+
+22h@ $0.003303
+
+-
+
+0x698d…aaed+2.61K RAXOL
+
+22h@ $0.003296
+
+-
+
+0x3a7c…13e5+3.31K RAXOL
+
+22h@ $0.003289
+
+-
+
+0x4b98…457d+934.92 RAXOL
+
+22h@ $0.003286
+
+-
+
+0xa297…abe1+51.12K RAXOL
+
+22h@ $0.003288
+
+-
+
+0x1c2e…0cee-263.21K RAXOL
+
+22h@ $0.003279
+
+-
+
+0x21b5…dd0e-16.08K RAXOL
+
+22h@ $0.003325
+
+-
+
+0x4337…32a4-6.61K RAXOL
+
+22h@ $0.003314
+
+-
+
+0x0ec4…038f+29.31K RAXOL
+
+22h@ $0.003345
+
+-
+
+0xf695…48ba-47.67K RAXOL
+
+22h@ $0.003326
+
+-
+
+0xa4a2…10ff-59.4K RAXOL
+
+22h@ $0.003312
+
+-
+
+0x4337…9ffe-2.46K RAXOL
+
+22h@ $0.003336
+
+-
+
+0xe209…ef08+94.91K RAXOL
+
+22h@ $0.003331
+
+-
+
+0x4a0c…6b09-103.96K RAXOL
+
+23h@ $0.003319
+
+-
+
+0x4a0c…6b09+184.82K RAXOL
+
+23h@ $0.003332
+
+-
+
+0xf2aa…d633-278.36K RAXOL
+
+23h@ $0.003340
+
+-
+
+0x344d…51a1+160.83K RAXOL
+
+23h@ $0.003372
+
+-
+
+0x9574…25cd+55.44K RAXOL
+
+23h@ $0.003334
+
+-
+
+0x74dd…2d7c-743.07K RAXOL
+
+23h@ $0.003374
+
+-
+
+0x4337…f965-11.87K RAXOL
+
+23h@ $0.003438
+
+-
+
+0x0296…b704-25.31K RAXOL
+
+23h@ $0.003441
+
+-
+
+0x36d0…f87e+6.55K RAXOL
+
+23h@ $0.003483
+
+-
+
+0x0d56…9a18+14.32K RAXOL
+
+23h@ $0.003471
+
+-
+
+0x18dd…8e25+28.43K RAXOL
+
+23h@ $0.003467
+
+-
+
+0xc783…3f7a-11.83K RAXOL
+
+23h@ $0.003423
+
+-
+
+0x4337…b6c2-25.83K RAXOL
+
+23h@ $0.003438
+
+-
+
+0x8d9a…3f25-99K RAXOL
+
+23h@ $0.003423
+
+-
+
+0x0442…13b4-495K RAXOL
+
+23h@ $0.003504
+
+-
+
+0x7254…40c7-42.76K RAXOL
+
+23h@ $0.003533
+
+-
+
+0xd6a5…67d8-495.1K RAXOL
+
+23h@ $0.003607
+
+-
+
+0xf70d…dbef+3.54K RAXOL
+
+23h@ $0.003678
+
+-
+
+0x183e…ebc4-11.88K RAXOL
+
+23h@ $0.003652
+
+-
+
+0x4337…d6af-2.46K RAXOL
+
+23h@ $0.003664
+
+-
+
+0x344d…51a1+26.99K RAXOL
+
+23h@ $0.003684
+
+-
+
+0x728f…f500+7.51K RAXOL
+
+23h@ $0.003659
+
+-
+
+0x183e…ebc4-62.52K RAXOL
+
+23h@ $0.003656
+
+-
+
+0x29c0…f999+40.11K RAXOL
+
+23h@ $0.003691
+
+-
+
+0x4337…6ef9-12.27K RAXOL
+
+23h@ $0.003667
+
+-
+
+0x183e…ebc4-108.73K RAXOL
+
+23h@ $0.003665
+
+-
+
+0x4337…c487-22.36K RAXOL
+
+23h@ $0.003678
+
+-
+
+0x4b98…457d-966.85 RAXOL
+
+23h@ $0.003684
+
+-
+
+0xa67d…3fbb+374.24K RAXOL
+
+23h@ $0.003680
+
+-
+
+0x4b98…457d-1.1K RAXOL
+
+23h@ $0.003610
+
+-
+
+0xa5a5…a142+2.91M RAXOL
+
+23h@ $0.003356
+
+-
+
+0xca5b…3638-6.53K RAXOL
+
+23h@ $0.003099
+
+-
+
+0xe46b…a8a4+15.46K RAXOL
+
+23h@ $0.003126
+
+-
+
+0x331d…2466+15.44K RAXOL
+
+23h@ $0.003121
+
+-
+
+0xd847…fe01+220.47K RAXOL
+
+23h@ $0.003102
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.002836-8.36%
+
+Launched by:0xF1C3...096d
+
+powered by
+
+## About
+
+See more
+
+Tldr; All Raxol agent revenue goes back into buying Raxol token forever.
+Shared revenue strategy, simple games.
+
+Raxol Agent takes a 1-8 Bps fee when routing orders through Riddler, the initial protocol solver for the Xochi Dark Pool.
+
+See https://xochi.fi/whitepaper for further delineation.
+--
+
+Raxol is the FOSS agent runtime that transacts on Virtuals ACP through Xochi.fi where the execution happens. Xochi is essentially a privacy Cowswap available across 5 EVM chains, and now also on Robinhood Chain.
+
+It is the first bridge for private swaps native to Robinhood Chain.
+
+@Axol_io is the team building the Raxol agent and underlying infra.
+
+https://github.com/DROOdotFOO/raxol
+
+### How It Works
+
+1. Sign an intent. You say what you want.
+
+2. Solvers compete. Filled from 6* chains in ~2s (P95 &lt;6 seconds).
+
+3. Settle privately. Stealth by default. Your keys, your crypto.
+
+*We will keep adding chains
+
+### Roadmap
+
+6 Chains Live: ETH, BASE, OP, ARB, POLY, Robinhood Chain L3
+
+SOON: TRON, SOL
+
+Supported Assets: USDC, USDT, USDG (Paxos/RobinHood), WETH/ETH
+
+We will be adding more stables to allow your agents to trade FX through our Agentic Dark Pool.
+
+### Additional Details
+
+All L1 transactions have stealth addresses, we will enable through our [PXE-Bridge](https://github.com/xochi-fi/pxe-bridge) post audit.
+This will enable L2-privacy crosschain.
+
+We are accepted into Ethereum Subsidy Program and undergoing auditor selection.
+
+View the code here, Raxol will always be FOSS: https://github.com/DROOdotFOO/raxol
+
+Longer form reasoning: https://droo.foo/posts/raxol-terminal-for-the-gundam
+
+### Token Utility
+
+Tldr; All Raxol agent revenue goes back into buying Raxol token forever.
+Shared revenue strategy, simple games.
+
+Raxol Agent takes a 1-8 Bps fee when routing orders through Riddler, the initial protocol solver for the Xochi Dark Pool.
+
+See https://xochi.fi/whitepaper for further delineation.
+
+## Team
+
+-
+
+@axol_ioOwner
+
+DROO
+
+## Allocation
+
+Next unlock in 303 days
+
+Total1B
+
+Liquidity Pool50.00%
+
+500MFixed Supply
+
+Liquidity Pool500M50.00%Fixed Supply
+
+Automated Capital Formation25.00%
+
+250MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation250M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+250M · 02 Jul 27Default Team Vesting
+
+Team250M25.00%Default Team Vesting · Unlocks 02 Jul 27
+
+## Supply
+
+1B750M500M250M0
+
+Today
+
+02 Jul 2608 Nov 2617 Mar 2723 Jul 2729 Nov 27
+
+Liquidity PoolAutomated Capital FormationTeam
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $RAXOL or 1,000 veVIRTUAL to join the conversation.
+
+Buy $RAXOL
+
+0x7c51…e426· 2 months
+
+Still highly undervalued
+
+0x244F…f177· 2 months
+
+Easily Achieve a Market Capitalization of $10 Million
+
+0xb4F3…391f· 2 months
+
+hopefully the first private agent to reach 100M
+
+## Market Overview
+
+Mechanics
+
+Mcap$2.8M
+
+FDV$2.8M
+
+Liq.$3B
+
+Holders2.2K
+
+24h Vol$106.2K
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+RAXOL
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (2.2K)
+
+View top 500
+
+Top 1061.6%
+
+Others38.4%
+
+0xbef5…1104Unlocker250M RAXOL27.5%
+
+0xe289…ee8aACF Vault189.5M RAXOL20.8%
+
+0x3f35…c6b0ACF Pool47.5M RAXOL—
+
+0xa20b…5a48LP43.1M RAXOL—
+
+0x829d…224a44.7M RAXOL4.9%
+
+0xed5f…613413.4M RAXOL1.5%
+
+0x0e17…b27e12.8M RAXOL1.4%
+
+0x5eea…6fbc11M RAXOL1.2%
+
+0x5638…919210.7M RAXOL1.2%
+
+0x133b…ed6310.4M RAXOL1.1%
+
+0x29b6…398a9.1M RAXOL1.0%
+
+0xb3f6…8c468.8M RAXOL1.0%
+
+0x2dc3…27258.2M RAXOL0.9%
+
+## Twitter Feed
+
+axol.io@axol_io
+
+Sep 2
+
+Xochi's TRON route hands every Raxol agent the deepest USDT corridor in crypto, live now! https://t.co/whDrVh8t6M
+
+axol.io@axol_io
+
+Sep 1
+
+How's @RobinhoodApp chain doing?
+All built on @arbitrum Orbit. https://t.co/CcuuW1fXh8
+
+axol.io@axol_io
+
+Sep 1
+
+ai agents are just getting started on Robinhood https://t.co/ntyIztXE7Z
+
+axol.io@axol_io
+
+Aug 31
+
+ICYMI: Raxol utility breakdown, and how it will work with @xochi_fi! https://t.co/dTeJAqWSTs
+
+axol.io@axol_io
+
+Aug 28
+
+Live now w/ @MCGlive! https://t.co/IkCrqLb1W0
+
+axol.io@axol_io
+
+Aug 28
+
+We'll be live with @MCGlive in ~1 hour! https://t.co/Em6IbUikCr
+
+axol.io@axol_io
+
+Aug 28
+
+Catch us live today at ~1700/5pm UTC with @MCGlive, @DROOdotFOO, and @0xblooberries! https://t.co/z88VFom5n3
+
+axol.io@axol_io
+
+Aug 26
+
+If you missed our live space yesterday, catch us again on Friday with @MCGlive: 1700/5pm UTC!
+
+We'll be chatting updates for Axol, @xochi_fi, Raxol! https://t.co/RXvWcH4OGx
+
+axol.io@axol_io
+
+Aug 25
+
+We're live now! https://t.co/rfeWgl4Xec
+
+axol.io@axol_io
+
+Aug 25
+
+Reminder, we're going live at 1500 UTC with @mikashi, @Stargazer_did, @DROOdotFOO, and @0xblooberries! https://t.co/rfeWgl4Xec
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

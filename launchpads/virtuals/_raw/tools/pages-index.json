@@ -1,0 +1,1976 @@
+[
+ {
+  "file": "001-wp-whitepaper-home.md",
+  "url": "https://whitepaper.virtuals.io/",
+  "title": "About Virtuals Protocol",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/index.md"
+ },
+ {
+  "file": "002-wp-about-virtuals.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals",
+  "title": "ABOUT VIRTUALS",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals.md"
+ },
+ {
+  "file": "003-wp-about-virtuals-about-virtuals-protocol.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol",
+  "title": "About Virtuals Protocol",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__about-virtuals-protocol.md"
+ },
+ {
+  "file": "004-wp-about-virtuals-about-virtuals-protocol-what-is-virtuals-protocol-a-non.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/about-virtuals-protocol/what-is-virtuals-protocol-a-non-crypto-guide-to-ai-agents",
+  "title": "What Is Virtuals Protocol? A Non-Crypto Guide to AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__about-virtuals-protocol__what-is-virtuals-protocol-a-non-crypto-guide-to-ai-agents.md"
+ },
+ {
+  "file": "005-wp-about-virtuals-ai-agent-identity-and-banking-layer.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/ai-agent-identity-and-banking-layer",
+  "title": "AI Agent Identity and Banking Layer",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__ai-agent-identity-and-banking-layer.md"
+ },
+ {
+  "file": "006-wp-about-virtuals-ai-agent-identity-and-banking-layer-agent-console.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/ai-agent-identity-and-banking-layer/agent-console",
+  "title": "Agent Console",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__ai-agent-identity-and-banking-layer__agent-console.md"
+ },
+ {
+  "file": "007-wp-about-virtuals-ai-agent-identity-and-banking-layer-agent-console-build.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/ai-agent-identity-and-banking-layer/agent-console/build-an-ai-trading-agent-on-hyperliquid",
+  "title": "Build an AI Trading Agent on Hyperliquid",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__ai-agent-identity-and-banking-layer__agent-console__build-an-ai-trading-agent-on-hyperliquid.md"
+ },
+ {
+  "file": "008-wp-about-virtuals-commerce-layer.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/commerce-layer",
+  "title": "Commerce Layer",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__commerce-layer.md"
+ },
+ {
+  "file": "009-wp-about-virtuals-commerce-layer-technical-deep-dive.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/commerce-layer/technical-deep-dive",
+  "title": "Technical Deep Dive",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__commerce-layer__technical-deep-dive.md"
+ },
+ {
+  "file": "010-wp-about-virtuals-capital-formation-layer.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer",
+  "title": "Capital Formation Layer",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer.md"
+ },
+ {
+  "file": "011-wp-about-virtuals-capital-formation-layer-virtuals-launch-mechanics.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/virtuals-launch-mechanics",
+  "title": "Virtuals Launch Mechanics",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__virtuals-launch-mechanics.md"
+ },
+ {
+  "file": "012-wp-about-virtuals-capital-formation-layer-anti-sniper-protection-for-toke.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/anti-sniper-protection-for-token-launches",
+  "title": "Anti-Sniper Protection for Token Launches",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__anti-sniper-protection-for-token-launches.md"
+ },
+ {
+  "file": "013-wp-about-virtuals-capital-formation-layer-60-days.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/60-days",
+  "title": "60 Days",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__60-days.md"
+ },
+ {
+  "file": "014-wp-about-virtuals-capital-formation-layer-automated-capital-formation.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/automated-capital-formation",
+  "title": "Automated Capital Formation",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__automated-capital-formation.md"
+ },
+ {
+  "file": "015-wp-about-virtuals-capital-formation-layer-airdrop-distribution.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/airdrop-distribution",
+  "title": "Airdrop Distribution",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__airdrop-distribution.md"
+ },
+ {
+  "file": "016-wp-about-virtuals-capital-formation-layer-launch-radar.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/launch-radar",
+  "title": "Launch Radar",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__launch-radar.md"
+ },
+ {
+  "file": "017-wp-about-virtuals-capital-formation-layer-launch-as-an-existing-token.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/launch-as-an-existing-token",
+  "title": "Launch as an Existing Token",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__launch-as-an-existing-token.md"
+ },
+ {
+  "file": "018-wp-about-virtuals-capital-formation-layer-fee-delegation-for-ai-agent-tok.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/fee-delegation-for-ai-agent-token-launches",
+  "title": "Fee Delegation for AI Agent Token Launches",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__fee-delegation-for-ai-agent-token-launches.md"
+ },
+ {
+  "file": "019-wp-about-virtuals-capital-formation-layer-pre-buy-tokens-for-ai-agent-lau.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/capital-formation-layer/pre-buy-tokens-for-ai-agent-launches",
+  "title": "Pre-buy Tokens for AI Agent Launches",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__capital-formation-layer__pre-buy-tokens-for-ai-agent-launches.md"
+ },
+ {
+  "file": "020-wp-about-virtuals-physical-labor-layer-robotics-and-embodied-ai.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/physical-labor-layer-robotics-and-embodied-ai",
+  "title": "Physical Labor Layer: Robotics and Embodied AI",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__physical-labor-layer-robotics-and-embodied-ai.md"
+ },
+ {
+  "file": "021-wp-about-virtuals-law-and-governance-layer.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/law-and-governance-layer",
+  "title": "Law & Governance Layer",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__law-and-governance-layer.md"
+ },
+ {
+  "file": "022-wp-about-virtuals-builders-resources-for-ai-agents.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals/builders-resources-for-ai-agents",
+  "title": "Builders' Resources for AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals__builders-resources-for-ai-agents.md"
+ },
+ {
+  "file": "023-wp-acp-butler-onboarding.md",
+  "url": "https://whitepaper.virtuals.io/acp/butler-onboarding",
+  "title": "Butler Onboarding",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__butler-onboarding.md"
+ },
+ {
+  "file": "024-wp-acp-butler-onboarding-a-builders-guide-to-the-butler-agent.md",
+  "url": "https://whitepaper.virtuals.io/acp/butler-onboarding/a-builders-guide-to-the-butler-agent",
+  "title": "A Builder's Guide to the Butler Agent",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__butler-onboarding__a-builders-guide-to-the-butler-agent.md"
+ },
+ {
+  "file": "025-wp-acp-butler-onboarding-introducing-butler-pro-mode.md",
+  "url": "https://whitepaper.virtuals.io/acp/butler-onboarding/introducing-butler-pro-mode",
+  "title": "Introducing Butler Pro Mode",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__butler-onboarding__introducing-butler-pro-mode.md"
+ },
+ {
+  "file": "026-wp-acp-butler-onboarding-introducing-butler-on-base-app.md",
+  "url": "https://whitepaper.virtuals.io/acp/butler-onboarding/introducing-butler-on-base-app",
+  "title": "Introducing Butler on Base App",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__butler-onboarding__introducing-butler-on-base-app.md"
+ },
+ {
+  "file": "027-wp-acp-butler-onboarding-base-app-acp-butler-release.md",
+  "url": "https://whitepaper.virtuals.io/acp/butler-onboarding/base-app-acp-butler-release",
+  "title": "Base App ACP Butler Release",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__butler-onboarding__base-app-acp-butler-release.md"
+ },
+ {
+  "file": "028-wp-acp-acp-glossary.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-glossary",
+  "title": "ACP Glossary",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__acp-glossary.md"
+ },
+ {
+  "file": "029-wp-acp-acp-changelogs.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-changelogs",
+  "title": "ACP Changelogs",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/acp__acp-changelogs.md"
+ },
+ {
+  "file": "030-wp-info-hub-virtuals-builder-and-agent-token-launch-faq.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-builder-and-agent-token-launch-faq",
+  "title": "Virtuals Builder & Agent Token Launch FAQ",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-builder-and-agent-token-launch-faq.md"
+ },
+ {
+  "file": "031-wp-info-hub-usdvirtual-token-base-asset-for-ai-agents.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual-token-base-asset-for-ai-agents",
+  "title": "$VIRTUAL Token: Base Asset for AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__usdvirtual-token-base-asset-for-ai-agents.md"
+ },
+ {
+  "file": "032-wp-info-hub-usdvirtual-token-base-asset-for-ai-agents-usdvirtual-token-di.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual-token-base-asset-for-ai-agents/usdvirtual-token-distribution-and-tokenomics",
+  "title": "$VIRTUAL Token Distribution and Tokenomics",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__usdvirtual-token-base-asset-for-ai-agents__usdvirtual-token-distribution-and-tokenomics.md"
+ },
+ {
+  "file": "033-wp-info-hub-usdvirtual-token-base-asset-for-ai-agents-usdvirtual-staking-.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual-token-base-asset-for-ai-agents/usdvirtual-staking-and-vevirtual",
+  "title": "$VIRTUAL Staking and veVIRTUAL",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__usdvirtual-token-base-asset-for-ai-agents__usdvirtual-staking-and-vevirtual.md"
+ },
+ {
+  "file": "034-wp-info-hub-usdvirtual-token-base-asset-for-ai-agents-virtuals-protocol-g.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/usdvirtual-token-base-asset-for-ai-agents/virtuals-protocol-governance-with-vevirtual",
+  "title": "Virtuals Protocol Governance with veVIRTUAL",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__usdvirtual-token-base-asset-for-ai-agents__virtuals-protocol-governance-with-vevirtual.md"
+ },
+ {
+  "file": "035-wp-info-hub-virtuals-protocol-metrics-dashboard.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-protocol-metrics-dashboard",
+  "title": "Virtuals Protocol Metrics Dashboard",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-protocol-metrics-dashboard.md"
+ },
+ {
+  "file": "036-wp-info-hub-security.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/security",
+  "title": "Security",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__security.md"
+ },
+ {
+  "file": "037-wp-info-hub-security-virtuals-protocol-smart-contract-security-audits.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/security/virtuals-protocol-smart-contract-security-audits",
+  "title": "Virtuals Protocol Smart Contract Security Audits",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__security__virtuals-protocol-smart-contract-security-audits.md"
+ },
+ {
+  "file": "038-wp-info-hub-security-virtuals-protocol-security-policy-and-vulnerability-.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/security/virtuals-protocol-security-policy-and-vulnerability-disclosure",
+  "title": "Virtuals Protocol Security Policy and Vulnerability Disclosure",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__security__virtuals-protocol-security-policy-and-vulnerability-disclosure.md"
+ },
+ {
+  "file": "039-wp-info-hub-virtuals-protocol-core-contributors.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-protocol-core-contributors",
+  "title": "Virtuals Protocol Core Contributors",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-protocol-core-contributors.md"
+ },
+ {
+  "file": "040-wp-info-hub-virtuals-protocol-core-contributors-select-research-work.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-protocol-core-contributors/select-research-work",
+  "title": "Select Research Work",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-protocol-core-contributors__select-research-work.md"
+ },
+ {
+  "file": "041-wp-info-hub-important-links-and-resources.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/important-links-and-resources",
+  "title": "Important Links & Resources",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__important-links-and-resources.md"
+ },
+ {
+  "file": "042-wp-info-hub-important-links-and-resources-security-audits.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/important-links-and-resources/security-audits",
+  "title": "Security Audits",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__important-links-and-resources__security-audits.md"
+ },
+ {
+  "file": "043-wp-info-hub-important-links-and-resources-virtuals-protocol-contract-addr.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/important-links-and-resources/virtuals-protocol-contract-addresses",
+  "title": "Virtuals Protocol Contract Addresses",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__important-links-and-resources__virtuals-protocol-contract-addresses.md"
+ },
+ {
+  "file": "044-wp-info-hub-important-links-and-resources-virtuals-protocol-research-and-.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/important-links-and-resources/virtuals-protocol-research-and-further-reading",
+  "title": "Virtuals Protocol Research and Further Reading",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__important-links-and-resources__virtuals-protocol-research-and-further-reading.md"
+ },
+ {
+  "file": "045-wp-info-hub-virtuals-protocol-editorial-style-guide-and-brand-kit.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-protocol-editorial-style-guide-and-brand-kit",
+  "title": "Virtuals Protocol Editorial Style Guide and Brand Kit",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-protocol-editorial-style-guide-and-brand-kit.md"
+ },
+ {
+  "file": "046-wp-info-hub-virtuals-protocol-editorial-style-guide-and-brand-kit-butler-.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/virtuals-protocol-editorial-style-guide-and-brand-kit/butler-amplification-guideline",
+  "title": "Butler Amplification Guideline",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/info-hub__virtuals-protocol-editorial-style-guide-and-brand-kit__butler-amplification-guideline.md"
+ },
+ {
+  "file": "047-wp-about-virtuals-1-virtuals-protocol-building-a-nation-of-ai-agents.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/virtuals-protocol-building-a-nation-of-ai-agents",
+  "title": "Virtuals Protocol: Building a Nation of AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__virtuals-protocol-building-a-nation-of-ai-agents.md"
+ },
+ {
+  "file": "048-wp-about-virtuals-1-virtuals-protocol-building-a-nation-of-ai-agents-our-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/virtuals-protocol-building-a-nation-of-ai-agents/our-vision-and-belief",
+  "title": "Our vision and belief",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__virtuals-protocol-building-a-nation-of-ai-agents__our-vision-and-belief.md"
+ },
+ {
+  "file": "049-wp-about-virtuals-1-what-are-virtual-agents-autonomous-ai-agents.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents",
+  "title": "What Are VIRTUAL Agents? Autonomous AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__what-are-virtual-agents-autonomous-ai-agents.md"
+ },
+ {
+  "file": "050-wp-about-virtuals-1-what-are-virtual-agents-autonomous-ai-agents-ip-agent.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents/ip-agents-vs-functional-agents",
+  "title": "IP Agents vs Functional Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__what-are-virtual-agents-autonomous-ai-agents__ip-agents-vs-functional-agents.md"
+ },
+ {
+  "file": "051-wp-about-virtuals-1-what-are-virtual-agents-autonomous-ai-agents-ip-agent.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents/ip-agents-vs-functional-agents/luna-virtuals-protocol-ip-ai-agent",
+  "title": "Luna: Virtuals Protocol IP AI Agent",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__what-are-virtual-agents-autonomous-ai-agents__ip-agents-vs-functional-agents__luna-virtuals-protocol-ip-ai-agent.md"
+ },
+ {
+  "file": "052-wp-about-virtuals-1-what-are-virtual-agents-autonomous-ai-agents-ip-agent.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents/ip-agents-vs-functional-agents/g.a.m.e.-functional-ai-agent-framework",
+  "title": "G.A.M.E.: Functional AI Agent Framework",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__what-are-virtual-agents-autonomous-ai-agents__ip-agents-vs-functional-agents__g.a.m.e.-functional-ai-agent-framework.md"
+ },
+ {
+  "file": "053-wp-about-virtuals-1-the-protocol.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol",
+  "title": "The Protocol",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol.md"
+ },
+ {
+  "file": "054-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities",
+  "title": "VIRTUAL Agents as Programmable Decentralized Entities",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities.md"
+ },
+ {
+  "file": "055-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/initial-agent-offering-iao-for-ai-agent-token-launches",
+  "title": "Initial Agent Offering (IAO) for AI Agent Token Launches",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__initial-agent-offering-iao-for-ai-agent-token-launches.md"
+ },
+ {
+  "file": "056-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-inference-payments",
+  "title": "Agent Inference Payments",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__agent-inference-payments.md"
+ },
+ {
+  "file": "057-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agentfi-incentives-and-usdvirtual-emissions",
+  "title": "AgentFi Incentives and $VIRTUAL Emissions",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__agentfi-incentives-and-usdvirtual-emissions.md"
+ },
+ {
+  "file": "058-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/ip-owners-incentives",
+  "title": "IP Owners Incentives",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__ip-owners-incentives.md"
+ },
+ {
+  "file": "059-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance",
+  "title": "Agent SubDAO governance",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__agent-subdao-governance.md"
+ },
+ {
+  "file": "060-wp-about-virtuals-1-the-protocol-virtual-agents-as-programmable-decentral.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance/token-delegation-via-dpos",
+  "title": "Token Delegation via DPos",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__virtual-agents-as-programmable-decentralized-entities__agent-subdao-governance__token-delegation-via-dpos.md"
+ },
+ {
+  "file": "061-wp-about-virtuals-1-the-protocol-parallel-hypersynchronicity-for-ai-agent.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/parallel-hypersynchronicity-for-ai-agents",
+  "title": "Parallel Hypersynchronicity for AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__parallel-hypersynchronicity-for-ai-agents.md"
+ },
+ {
+  "file": "062-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance",
+  "title": "AI Agent Co-Contribution and Provenance",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance.md"
+ },
+ {
+  "file": "063-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance",
+  "title": "Modular Consensus Framework for AI Agent Governance",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance.md"
+ },
+ {
+  "file": "064-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts",
+  "title": "Decentralized AI Agent Contributions and NFTs",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance__decentralized-ai-agent-contributions-and-nfts.md"
+ },
+ {
+  "file": "065-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts/cognitive-core-for-ai-agents",
+  "title": "Cognitive Core for AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance__decentralized-ai-agent-contributions-and-nfts__cognitive-core-for-ai-agents.md"
+ },
+ {
+  "file": "066-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts/voice-core-for-ai-agents",
+  "title": "Voice Core for AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance__decentralized-ai-agent-contributions-and-nfts__voice-core-for-ai-agents.md"
+ },
+ {
+  "file": "067-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts/visual-core-for-3d-ai-agents",
+  "title": "Visual Core for 3D AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance__decentralized-ai-agent-contributions-and-nfts__visual-core-for-3d-ai-agents.md"
+ },
+ {
+  "file": "068-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts/future-ai-agent-cores-and-functional-agents",
+  "title": "Future AI Agent Cores and Functional Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__modular-consensus-framework-for-ai-agent-governance__decentralized-ai-agent-contributions-and-nfts__future-ai-agent-cores-and-functional-agents.md"
+ },
+ {
+  "file": "069-wp-about-virtuals-1-the-protocol-ai-agent-co-contribution-and-provenance-.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/immutable-contribution-vault-for-ai-agent-provenance",
+  "title": "Immutable Contribution Vault for AI Agent Provenance",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__ai-agent-co-contribution-and-provenance__immutable-contribution-vault-for-ai-agent-provenance.md"
+ },
+ {
+  "file": "070-wp-about-virtuals-1-the-protocol-permissionless-access-to-virtual-ai-agen.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/permissionless-access-to-virtual-ai-agents",
+  "title": "Permissionless Access to VIRTUAL AI Agents",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__the-protocol__permissionless-access-to-virtual-ai-agents.md"
+ },
+ {
+  "file": "071-wp-about-virtuals-1-usdvirtual-tokenomics.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/usdvirtual-tokenomics",
+  "title": "$VIRTUAL Tokenomics",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__usdvirtual-tokenomics.md"
+ },
+ {
+  "file": "072-wp-about-virtuals-1-usdvirtual-tokenomics-token-distribution.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/usdvirtual-tokenomics/token-distribution",
+  "title": "Token Distribution",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__usdvirtual-tokenomics__token-distribution.md"
+ },
+ {
+  "file": "073-wp-about-virtuals-1-protocol-metrics.md",
+  "url": "https://whitepaper.virtuals.io/about-virtuals-1/protocol-metrics",
+  "title": "Protocol Metrics",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/about-virtuals-1__protocol-metrics.md"
+ },
+ {
+  "file": "074-wp-builders-hub-commonly-asked-questions.md",
+  "url": "https://whitepaper.virtuals.io/builders-hub/commonly-asked-questions",
+  "title": "Commonly Asked Questions",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/builders-hub__commonly-asked-questions.md"
+ },
+ {
+  "file": "075-wp-zh-virtuals-bai-pi-shu.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu",
+  "title": "Page Not Found",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu.md"
+ },
+ {
+  "file": "076-wp-zh-ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng",
+  "title": "AI \u667a\u80fd\u4f53\u8eab\u4efd\u4e0e\u94f6\u884c\u5c42",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng.md"
+ },
+ {
+  "file": "077-wp-zh-zhi-neng-ti-kong-zhi-tai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng/zhi-neng-ti-kong-zhi-tai",
+  "title": "\u667a\u80fd\u4f53\u63a7\u5236\u53f0",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng__zhi-neng-ti-kong-zhi-tai.md"
+ },
+ {
+  "file": "078-wp-zh-zai-hyperliquid-shang-gou-jian-ai-jiao-yi-zhi-neng-ti.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng/zhi-neng-ti-kong-zhi-tai/zai-hyperliquid-shang-gou-jian-ai-jiao-yi-zhi-neng-ti",
+  "title": "\u5728 Hyperliquid \u4e0a\u6784\u5efa AI \u4ea4\u6613\u667a\u80fd\u4f53",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__ai-zhi-neng-ti-shen-fen-yu-yin-hang-ceng__zhi-neng-ti-kong-zhi-tai__zai-hyperliquid-shang-gou-jian-ai-jiao-yi-zhi-neng-ti.md"
+ },
+ {
+  "file": "079-wp-zh-falyu-zhi-li-ceng.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/falyu-zhi-li-ceng",
+  "title": "\u6cd5\u5f8b\u4e0e\u6cbb\u7406\u5c42",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__falyu-zhi-li-ceng.md"
+ },
+ {
+  "file": "080-wp-zh-shen-me-shi-virtuals-protocolai-zhi-neng-ti-de-fei-jia-mi-zhi-nan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/guan-yu-virtuals-protocol/shen-me-shi-virtuals-protocolai-zhi-neng-ti-de-fei-jia-mi-zhi-nan",
+  "title": "\u4ec0\u4e48\u662f Virtuals Protocol\uff1fAI \u667a\u80fd\u4f53\u7684\u975e\u52a0\u5bc6\u6307\u5357",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__guan-yu-virtuals-protocol__shen-me-shi-virtuals-protocolai-zhi-neng-ti-de-fei-jia-mi-zhi-nan.md"
+ },
+ {
+  "file": "081-wp-zh-mian-xiang-ai-zhi-neng-ti-gou-jian-zhe-de-zi-yuan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/mian-xiang-ai-zhi-neng-ti-gou-jian-zhe-de-zi-yuan",
+  "title": "\u9762\u5411 AI \u667a\u80fd\u4f53\u6784\u5efa\u8005\u7684\u8d44\u6e90",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__mian-xiang-ai-zhi-neng-ti-gou-jian-zhe-de-zi-yuan.md"
+ },
+ {
+  "file": "082-wp-zh-shang-ye-ceng.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/shang-ye-ceng",
+  "title": "\u5546\u4e1a\u5c42",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__shang-ye-ceng.md"
+ },
+ {
+  "file": "083-wp-zh-ti-li-lao-dong-ceng-ji-qi-ren-yu-ju-shen-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/ti-li-lao-dong-ceng-ji-qi-ren-yu-ju-shen-ai",
+  "title": "\u4f53\u529b\u52b3\u52a8\u5c42\uff1a\u673a\u5668\u4eba\u4e0e\u5177\u8eab AI",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__ti-li-lao-dong-ceng-ji-qi-ren-yu-ju-shen-ai.md"
+ },
+ {
+  "file": "084-wp-zh-zi-ben-xing-cheng-ceng.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng",
+  "title": "\u8d44\u672c\u5f62\u6210\u5c42",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng.md"
+ },
+ {
+  "file": "085-wp-zh-60-tian.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/60-tian",
+  "title": "60 \u5929",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__60-tian.md"
+ },
+ {
+  "file": "086-wp-zh-dai-bi-fa-bu-fan-ju-ji-bao-hu.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/dai-bi-fa-bu-fan-ju-ji-bao-hu",
+  "title": "\u4ee3\u5e01\u53d1\u5e03\u53cd\u72d9\u51fb\u4fdd\u62a4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__dai-bi-fa-bu-fan-ju-ji-bao-hu.md"
+ },
+ {
+  "file": "087-wp-zh-kong-tou-fen-pei.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/kong-tou-fen-pei",
+  "title": "\u7a7a\u6295\u5206\u914d",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__kong-tou-fen-pei.md"
+ },
+ {
+  "file": "088-wp-zh-mian-xiang-ai-zhi-neng-ti-dai-bi-fa-xing-de-fei-yong-wei-tuo.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/mian-xiang-ai-zhi-neng-ti-dai-bi-fa-xing-de-fei-yong-wei-tuo",
+  "title": "\u9762\u5411 AI \u667a\u80fd\u4f53\u4ee3\u5e01\u53d1\u884c\u7684\u8d39\u7528\u59d4\u6258",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__mian-xiang-ai-zhi-neng-ti-dai-bi-fa-xing-de-fei-yong-wei-tuo.md"
+ },
+ {
+  "file": "089-wp-zh-virtuals-qi-dong-ji-zhi.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/virtuals-qi-dong-ji-zhi",
+  "title": "Virtuals \u542f\u52a8\u673a\u5236",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__virtuals-qi-dong-ji-zhi.md"
+ },
+ {
+  "file": "090-wp-zh-wei-ai-zhi-neng-ti-fa-bu-yu-gou-dai-bi.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/wei-ai-zhi-neng-ti-fa-bu-yu-gou-dai-bi",
+  "title": "\u4e3a AI \u667a\u80fd\u4f53\u53d1\u5e03\u9884\u8d2d\u4ee3\u5e01",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__wei-ai-zhi-neng-ti-fa-bu-yu-gou-dai-bi.md"
+ },
+ {
+  "file": "091-wp-zh-zi-dong-zi-ben-xing-cheng.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/zi-dong-zi-ben-xing-cheng",
+  "title": "\u81ea\u52a8\u8d44\u672c\u5f62\u6210",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__zi-dong-zi-ben-xing-cheng.md"
+ },
+ {
+  "file": "092-wp-zh-zuo-wei-xian-you-dai-bi-qi-dong.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/guan-yu-virtuals/zi-ben-xing-cheng-ceng/zuo-wei-xian-you-dai-bi-qi-dong",
+  "title": "\u4f5c\u4e3a\u73b0\u6709\u4ee3\u5e01\u542f\u52a8",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__guan-yu-virtuals__zi-ben-xing-cheng-ceng__zuo-wei-xian-you-dai-bi-qi-dong.md"
+ },
+ {
+  "file": "093-wp-zh-an-quan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/an-quan",
+  "title": "\u5b89\u5168",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__an-quan.md"
+ },
+ {
+  "file": "094-wp-zh-virtuals-protocol-an-quan-zheng-ce-yu-lou-dong-pi-lu.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/an-quan/virtuals-protocol-an-quan-zheng-ce-yu-lou-dong-pi-lu",
+  "title": "Virtuals Protocol \u5b89\u5168\u653f\u7b56\u4e0e\u6f0f\u6d1e\u62ab\u9732",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__an-quan__virtuals-protocol-an-quan-zheng-ce-yu-lou-dong-pi-lu.md"
+ },
+ {
+  "file": "095-wp-zh-virtuals-protocol-zhi-neng-he-yue-an-quan-shen-ji.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/an-quan/virtuals-protocol-zhi-neng-he-yue-an-quan-shen-ji",
+  "title": "Virtuals Protocol \u667a\u80fd\u5408\u7ea6\u5b89\u5168\u5ba1\u8ba1",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__an-quan__virtuals-protocol-zhi-neng-he-yue-an-quan-shen-ji.md"
+ },
+ {
+  "file": "096-wp-zh-zhi-neng-ti-fa-bu-zhi-chi.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/gou-jian-zhe-zhong-xin/zhi-neng-ti-fa-bu-zhi-chi",
+  "title": "\u667a\u80fd\u4f53\u53d1\u5e03\u652f\u6301",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__gou-jian-zhe-zhong-xin__zhi-neng-ti-fa-bu-zhi-chi.md"
+ },
+ {
+  "file": "097-wp-zh-virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan",
+  "title": "$VIRTUAL \u4ee3\u5e01\uff1aAI \u667a\u80fd\u4f53\u7684\u57fa\u7840\u8d44\u4ea7",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan.md"
+ },
+ {
+  "file": "098-wp-zh-shi-yong-vevirtual-jin-xing-virtuals-protocol-zhi-li.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan/shi-yong-vevirtual-jin-xing-virtuals-protocol-zhi-li",
+  "title": "\u4f7f\u7528 veVIRTUAL \u8fdb\u884c Virtuals Protocol \u6cbb\u7406",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan__shi-yong-vevirtual-jin-xing-virtuals-protocol-zhi-li.md"
+ },
+ {
+  "file": "099-wp-zh-virtual-dai-bi-fen-pei-yu-dai-bi-jing-ji-xue.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan/virtual-dai-bi-fen-pei-yu-dai-bi-jing-ji-xue",
+  "title": "$VIRTUAL \u4ee3\u5e01\u5206\u914d\u4e0e\u4ee3\u5e01\u7ecf\u6d4e\u5b66",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan__virtual-dai-bi-fen-pei-yu-dai-bi-jing-ji-xue.md"
+ },
+ {
+  "file": "100-wp-zh-virtual-zhi-ya-yu-vevirtual.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan/virtual-zhi-ya-yu-vevirtual",
+  "title": "$VIRTUAL \u8d28\u62bc\u4e0e veVIRTUAL",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtual-dai-bi-ai-zhi-neng-ti-de-ji-chu-zi-chan__virtual-zhi-ya-yu-vevirtual.md"
+ },
+ {
+  "file": "101-wp-zh-virtuals-builder-yu-agent-dai-bi-fa-xing-faq.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtuals-builder-yu-agent-dai-bi-fa-xing-faq",
+  "title": "Virtuals Builder \u4e0e Agent \u4ee3\u5e01\u53d1\u884c FAQ",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtuals-builder-yu-agent-dai-bi-fa-xing-faq.md"
+ },
+ {
+  "file": "102-wp-zh-virtuals-protocol-bian-ji-feng-ge-zhi-nan-yu-pin-pai-tao-jian.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtuals-protocol-bian-ji-feng-ge-zhi-nan-yu-pin-pai-tao-jian",
+  "title": "Virtuals Protocol \u7f16\u8f91\u98ce\u683c\u6307\u5357\u4e0e\u54c1\u724c\u5957\u4ef6",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtuals-protocol-bian-ji-feng-ge-zhi-nan-yu-pin-pai-tao-jian.md"
+ },
+ {
+  "file": "103-wp-zh-virtuals-protocol-he-xin-gong-xian-zhe.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtuals-protocol-he-xin-gong-xian-zhe",
+  "title": "Virtuals Protocol \u6838\u5fc3\u8d21\u732e\u8005",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtuals-protocol-he-xin-gong-xian-zhe.md"
+ },
+ {
+  "file": "104-wp-zh-jing-xuan-yan-jiu-gong-zuo.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtuals-protocol-he-xin-gong-xian-zhe/jing-xuan-yan-jiu-gong-zuo",
+  "title": "\u7cbe\u9009\u7814\u7a76\u5de5\u4f5c",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtuals-protocol-he-xin-gong-xian-zhe__jing-xuan-yan-jiu-gong-zuo.md"
+ },
+ {
+  "file": "105-wp-zh-virtuals-protocol-zhi-biao-yi-biao-pan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/virtuals-protocol-zhi-biao-yi-biao-pan",
+  "title": "Virtuals Protocol \u6307\u6807\u4eea\u8868\u76d8",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__virtuals-protocol-zhi-biao-yi-biao-pan.md"
+ },
+ {
+  "file": "106-wp-zh-zhong-yao-lian-jie-yu-zi-yuan.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/zhong-yao-lian-jie-yu-zi-yuan",
+  "title": "\u91cd\u8981\u94fe\u63a5\u4e0e\u8d44\u6e90",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__zhong-yao-lian-jie-yu-zi-yuan.md"
+ },
+ {
+  "file": "107-wp-zh-virtuals-protocol-he-yue-di-zhi.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/zhong-yao-lian-jie-yu-zi-yuan/virtuals-protocol-he-yue-di-zhi",
+  "title": "Virtuals Protocol \u5408\u7ea6\u5730\u5740",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__zhong-yao-lian-jie-yu-zi-yuan__virtuals-protocol-he-yue-di-zhi.md"
+ },
+ {
+  "file": "108-wp-zh-virtuals-protocol-yan-jiu-yu-yan-shen-yue-du.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-bai-pi-shu/xin-xi-zhong-xin/zhong-yao-lian-jie-yu-zi-yuan/virtuals-protocol-yan-jiu-yu-yan-shen-yue-du",
+  "title": "Virtuals Protocol \u7814\u7a76\u4e0e\u5ef6\u4f38\u9605\u8bfb",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-bai-pi-shu__xin-xi-zhong-xin__zhong-yao-lian-jie-yu-zi-yuan__virtuals-protocol-yan-jiu-yu-yan-shen-yue-du.md"
+ },
+ {
+  "file": "109-wp-ko-virtuals-protocol-whitepaper-ko.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko",
+  "title": "Page Not Found",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko.md"
+ },
+ {
+  "file": "110-wp-ko-agent-launch-support.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/builders-hub/agent-launch-support",
+  "title": "\uc5d0\uc774\uc804\ud2b8 \ucd9c\uc2dc \uc9c0\uc6d0",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__builders-hub__agent-launch-support.md"
+ },
+ {
+  "file": "111-wp-ko-important-links-and-resources.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/important-links-and-resources",
+  "title": "\uc911\uc694 \ub9c1\ud06c \ubc0f \ub9ac\uc18c\uc2a4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__important-links-and-resources.md"
+ },
+ {
+  "file": "112-wp-ko-virtuals-protocol-1.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/important-links-and-resources/virtuals-protocol-1",
+  "title": "Virtuals Protocol \uc5f0\uad6c \ubc0f \ucd94\uac00 \uc77d\uae30",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__important-links-and-resources__virtuals-protocol-1.md"
+ },
+ {
+  "file": "113-wp-ko-virtuals-protocol.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/important-links-and-resources/virtuals-protocol",
+  "title": "Virtuals Protocol \ucee8\ud2b8\ub799\ud2b8 \uc8fc\uc18c",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__important-links-and-resources__virtuals-protocol.md"
+ },
+ {
+  "file": "114-wp-ko-security.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/security",
+  "title": "\ubcf4\uc548",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__security.md"
+ },
+ {
+  "file": "115-wp-ko-virtuals-protocol-1.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/security/virtuals-protocol-1",
+  "title": "Virtuals Protocol \ubcf4\uc548 \uc815\ucc45 \ubc0f \ucde8\uc57d\uc810 \uacf5\uac1c",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__security__virtuals-protocol-1.md"
+ },
+ {
+  "file": "116-wp-ko-virtuals-protocol.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/security/virtuals-protocol",
+  "title": "Virtuals Protocol \uc2a4\ub9c8\ud2b8 \ucee8\ud2b8\ub799\ud2b8 \ubcf4\uc548 \uac10\uc0ac",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__security__virtuals-protocol.md"
+ },
+ {
+  "file": "117-wp-ko-usdvirtual-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/usdvirtual-ai",
+  "title": "$VIRTUAL \ud1a0\ud070: AI \uc5d0\uc774\uc804\ud2b8\ub97c \uc704\ud55c \uae30\ubcf8 \uc790\uc0b0",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__usdvirtual-ai.md"
+ },
+ {
+  "file": "118-wp-ko-usdvirtual-vevirtual.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/usdvirtual-ai/usdvirtual-vevirtual",
+  "title": "$VIRTUAL \uc2a4\ud14c\uc774\ud0b9 \ubc0f veVIRTUAL",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__usdvirtual-ai__usdvirtual-vevirtual.md"
+ },
+ {
+  "file": "119-wp-ko-usdvirtual.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/usdvirtual-ai/usdvirtual",
+  "title": "$VIRTUAL \ud1a0\ud070 \ubd84\ubc30 \ubc0f \ud1a0\ud06c\ub178\ubbf9\uc2a4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__usdvirtual-ai__usdvirtual.md"
+ },
+ {
+  "file": "120-wp-ko-vevirtual-virtuals-protocol.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/usdvirtual-ai/vevirtual-virtuals-protocol",
+  "title": "veVIRTUAL\uc744 \ud1b5\ud55c Virtuals Protocol \uac70\ubc84\ub10c\uc2a4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__usdvirtual-ai__vevirtual-virtuals-protocol.md"
+ },
+ {
+  "file": "121-wp-ko-virtuals-faq.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/virtuals-faq",
+  "title": "Virtuals \ube4c\ub354 \ubc0f \uc5d0\uc774\uc804\ud2b8 \ud1a0\ud070 \ucd9c\uc2dc FAQ",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__virtuals-faq.md"
+ },
+ {
+  "file": "122-wp-ko-virtuals-protocol-1.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/virtuals-protocol-1",
+  "title": "Virtuals Protocol \ud575\uc2ec \uae30\uc5ec\uc790",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__virtuals-protocol-1.md"
+ },
+ {
+  "file": "123-wp-ko-select-research-work.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/virtuals-protocol-1/select-research-work",
+  "title": "\uc120\uc815 \uc5f0\uad6c \uc791\uc5c5",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__virtuals-protocol-1__select-research-work.md"
+ },
+ {
+  "file": "124-wp-ko-virtuals-protocol-2.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/virtuals-protocol-2",
+  "title": "Virtuals Protocol \ud3b8\uc9d1 \uc2a4\ud0c0\uc77c \uac00\uc774\ub4dc \ubc0f \ube0c\ub79c\ub4dc \ud0a4\ud2b8",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__virtuals-protocol-2.md"
+ },
+ {
+  "file": "125-wp-ko-virtuals-protocol.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/info-hub/virtuals-protocol",
+  "title": "Virtuals Protocol \uba54\ud2b8\ub9ad \ub300\uc2dc\ubcf4\ub4dc",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__info-hub__virtuals-protocol.md"
+ },
+ {
+  "file": "126-wp-ko-ai-1.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/ai-1",
+  "title": "\ubb3c\ub9ac \ub178\ub3d9 \ub808\uc774\uc5b4: \ub85c\ubcf4\ud2f1\uc2a4\uc640 \uad6c\ud604\ud615 AI",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__ai-1.md"
+ },
+ {
+  "file": "127-wp-ko-ai-2.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/ai-2",
+  "title": "AI \uc5d0\uc774\uc804\ud2b8\ub97c \uc704\ud55c \ube4c\ub354 \ub9ac\uc18c\uc2a4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__ai-2.md"
+ },
+ {
+  "file": "128-wp-ko-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/ai",
+  "title": "AI \uc5d0\uc774\uc804\ud2b8 \uc2e0\uc6d0 \ubc0f \ubc45\ud0b9 \ub808\uc774\uc5b4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__ai.md"
+ },
+ {
+  "file": "129-wp-ko-agent-console.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/ai/agent-console",
+  "title": "\uc5d0\uc774\uc804\ud2b8 \ucf58\uc194",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__ai__agent-console.md"
+ },
+ {
+  "file": "130-wp-ko-hyperliquid-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/ai/agent-console/hyperliquid-ai",
+  "title": "Hyperliquid\uc5d0\uc11c AI \ud2b8\ub808\uc774\ub529 \uc5d0\uc774\uc804\ud2b8 \uad6c\ucd95\ud558\uae30",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__ai__agent-console__hyperliquid-ai.md"
+ },
+ {
+  "file": "131-wp-ko-capital-formation-layer.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer",
+  "title": "\uc790\ubcf8 \ud615\uc131 \ub808\uc774\uc5b4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer.md"
+ },
+ {
+  "file": "132-wp-ko-60.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/60",
+  "title": "60\uc77c",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__60.md"
+ },
+ {
+  "file": "133-wp-ko-ai-1.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/ai-1",
+  "title": "AI \uc5d0\uc774\uc804\ud2b8 \ucd9c\uc2dc\uc6a9 \uc0ac\uc804 \uad6c\ub9e4 \ud1a0\ud070",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__ai-1.md"
+ },
+ {
+  "file": "134-wp-ko-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/ai",
+  "title": "AI \uc5d0\uc774\uc804\ud2b8 \ud1a0\ud070 \ucd9c\uc2dc\ub97c \uc704\ud55c \uc218\uc218\ub8cc \uc704\uc784",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__ai.md"
+ },
+ {
+  "file": "135-wp-ko-airdrop-distribution.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/airdrop-distribution",
+  "title": "\uc5d0\uc5b4\ub4dc\ub86d \ubd84\ubc30",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__airdrop-distribution.md"
+ },
+ {
+  "file": "136-wp-ko-anti-sniper-protection-for-token-launches.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/anti-sniper-protection-for-token-launches",
+  "title": "\ud1a0\ud070 \ucd9c\uc2dc\ub97c \uc704\ud55c \uc548\ud2f0 \uc2a4\ub098\uc774\ud37c \ubcf4\ud638",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__anti-sniper-protection-for-token-launches.md"
+ },
+ {
+  "file": "137-wp-ko-automated-capital-formation.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/automated-capital-formation",
+  "title": "\uc790\ub3d9\ud654\ub41c \uc790\ubcf8 \ud615\uc131",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__automated-capital-formation.md"
+ },
+ {
+  "file": "138-wp-ko-launch-as-an-existing-token.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/launch-as-an-existing-token",
+  "title": "\uae30\uc874 \ud1a0\ud070\uc73c\ub85c \ucd9c\uc2dc",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__launch-as-an-existing-token.md"
+ },
+ {
+  "file": "139-wp-ko-virtuals.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/capital-formation-layer/virtuals",
+  "title": "Virtuals \ucd9c\uc2dc \uba54\ucee4\ub2c8\uc998",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__capital-formation-layer__virtuals.md"
+ },
+ {
+  "file": "140-wp-ko-commerce-layer.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/commerce-layer",
+  "title": "\uc0c1\uac70\ub798 \ub808\uc774\uc5b4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__commerce-layer.md"
+ },
+ {
+  "file": "141-wp-ko-law-and-governance-layer.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/law-and-governance-layer",
+  "title": "\ubc95\ub960 \ubc0f \uac70\ubc84\ub10c\uc2a4 \ub808\uc774\uc5b4",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__law-and-governance-layer.md"
+ },
+ {
+  "file": "142-wp-ko-virtuals-protocol-ai.md",
+  "url": "https://whitepaper.virtuals.io/virtuals-protocol-whitepaper-ko/virtuals/virtuals-protocol/virtuals-protocol-ai",
+  "title": "Virtuals Protocol\uc774\ub780? AI \uc5d0\uc774\uc804\ud2b8\ub97c \uc704\ud55c \ube44\ud06c\ub9bd\ud1a0 \uac00\uc774\ub4dc",
+  "method": "GitBook .md endpoint via curl",
+  "raw": "_raw/jina/whitepaper/virtuals-protocol-whitepaper-ko__virtuals__virtuals-protocol__virtuals-protocol-ai.md"
+ },
+ {
+  "file": "143-wp-hidden-acp-dev-onboarding-guide.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide",
+  "title": "ACP Dev Onboarding Guide",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide.md"
+ },
+ {
+  "file": "144-wp-hidden-best-practices-guide.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/best-practices-guide",
+  "title": "Best Practices Guide",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__best-practices-guide.md"
+ },
+ {
+  "file": "145-wp-hidden-job-rejection-and-refund-handling.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/best-practices-guide/job-rejection-and-refund-handling",
+  "title": "Job Rejection and Refund Handling",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__best-practices-guide__job-rejection-and-refund-handling.md"
+ },
+ {
+  "file": "146-wp-hidden-customize-agent.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent",
+  "title": "Customize Agent",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent.md"
+ },
+ {
+  "file": "147-wp-hidden-simulate-agent-with-code.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-code",
+  "title": "Simulate Agent with Code",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-code.md"
+ },
+ {
+  "file": "148-wp-hidden-acp-game-plugin.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-code/acp-game-plugin",
+  "title": "ACP-GAME Plugin",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-code__acp-game-plugin.md"
+ },
+ {
+  "file": "149-wp-hidden-acp-sdk.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-code/acp-sdk",
+  "title": "ACP SDK",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-code__acp-sdk.md"
+ },
+ {
+  "file": "150-wp-hidden-nodejs.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-code/acp-sdk/nodejs",
+  "title": "NodeJS",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-code__acp-sdk__nodejs.md"
+ },
+ {
+  "file": "151-wp-hidden-python.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-code/acp-sdk/python",
+  "title": "Python",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-code__acp-sdk__python.md"
+ },
+ {
+  "file": "152-wp-hidden-simulate-agent-with-sandbox-butler.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/customize-agent/simulate-agent-with-sandbox-butler",
+  "title": "Simulate Agent with Sandbox Butler",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__customize-agent__simulate-agent-with-sandbox-butler.md"
+ },
+ {
+  "file": "153-wp-hidden-graduate-agent.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/graduate-agent",
+  "title": "Graduate Agent",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__graduate-agent.md"
+ },
+ {
+  "file": "154-wp-hidden-agent-graduation-submission-guide.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/graduate-agent/agent-graduation-submission-guide",
+  "title": "Agent Graduation Submission Guide",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__graduate-agent__agent-graduation-submission-guide.md"
+ },
+ {
+  "file": "155-wp-hidden-graduation-process.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/graduate-agent/graduation-process",
+  "title": "Graduation Process",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__graduate-agent__graduation-process.md"
+ },
+ {
+  "file": "156-wp-hidden-sandbox-vs-graduated-agent.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/graduate-agent/sandbox-vs-graduated-agent",
+  "title": "Sandbox vs Graduated Agent",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__graduate-agent__sandbox-vs-graduated-agent.md"
+ },
+ {
+  "file": "157-wp-hidden-set-up-agent-profile.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile",
+  "title": "Set Up Agent Profile",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile.md"
+ },
+ {
+  "file": "158-wp-hidden-add-business-description.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/add-business-description",
+  "title": "Add Business Description",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__add-business-description.md"
+ },
+ {
+  "file": "159-wp-hidden-add-resource.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/add-resource",
+  "title": "Add Resource",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__add-resource.md"
+ },
+ {
+  "file": "160-wp-hidden-import-and-export-agent-job-resource.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/add-resource/import-and-export-agent-job-resource",
+  "title": "Import & Export Agent Job / Resource",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__add-resource__import-and-export-agent-job-resource.md"
+ },
+ {
+  "file": "161-wp-hidden-create-job-offering.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/create-job-offering",
+  "title": "Create Job Offering",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__create-job-offering.md"
+ },
+ {
+  "file": "162-wp-hidden-define-service-level-agreement.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/create-job-offering/define-service-level-agreement",
+  "title": "Define Service Level Agreement",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__create-job-offering__define-service-level-agreement.md"
+ },
+ {
+  "file": "163-wp-hidden-setup-job-sample.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/create-job-offering/setup-job-sample",
+  "title": "Setup Job Sample",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__create-job-offering__setup-job-sample.md"
+ },
+ {
+  "file": "164-wp-hidden-register-agent.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/register-agent",
+  "title": "Register Agent",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__register-agent.md"
+ },
+ {
+  "file": "165-wp-hidden-save-agent-profile.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/set-up-agent-profile/save-agent-profile",
+  "title": "Save Agent Profile",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__set-up-agent-profile__save-agent-profile.md"
+ },
+ {
+  "file": "166-wp-hidden-tips-and-troubleshooting.md",
+  "url": "https://whitepaper.virtuals.io/acp/acp-dev-onboarding-guide/tips-and-troubleshooting",
+  "title": "Tips & Troubleshooting",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__acp-dev-onboarding-guide__tips-and-troubleshooting.md"
+ },
+ {
+  "file": "167-wp-hidden-introducing-acp-v2.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2",
+  "title": "Introducing ACP v2",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2.md"
+ },
+ {
+  "file": "168-wp-hidden-acp-v2-trading-use-case.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2/acp-v2-trading-use-case",
+  "title": "ACP v2 Trading Use Case",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2__acp-v2-trading-use-case.md"
+ },
+ {
+  "file": "169-wp-hidden-exception-handling.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2/acp-v2-trading-use-case/exception-handling",
+  "title": "Exception Handling",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2__acp-v2-trading-use-case__exception-handling.md"
+ },
+ {
+  "file": "170-wp-hidden-reject-job-and-refund.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2/acp-v2-trading-use-case/exception-handling/reject-job-and-refund",
+  "title": "Reject Job and Refund",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2__acp-v2-trading-use-case__exception-handling__reject-job-and-refund.md"
+ },
+ {
+  "file": "171-wp-hidden-reject-job.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2/acp-v2-trading-use-case/exception-handling/reject-job",
+  "title": "Reject Job",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2__acp-v2-trading-use-case__exception-handling__reject-job.md"
+ },
+ {
+  "file": "172-wp-hidden-post-job-handling.md",
+  "url": "https://whitepaper.virtuals.io/acp/introducing-acp-v2/acp-v2-trading-use-case/post-job-handling",
+  "title": "Post Job Handling",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/acp__introducing-acp-v2__acp-v2-trading-use-case__post-job-handling.md"
+ },
+ {
+  "file": "173-wp-hidden-acp-tech-playbook.md",
+  "url": "https://whitepaper.virtuals.io/builders-hub/acp-tech-playbook",
+  "title": "ACP Tech Playbook",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/builders-hub__acp-tech-playbook.md"
+ },
+ {
+  "file": "174-wp-hidden-agent-contribution.md",
+  "url": "https://whitepaper.virtuals.io/builders-hub/build-with-virtuals/agent-contribution",
+  "title": "Agent Contribution",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/builders-hub__build-with-virtuals__agent-contribution.md"
+ },
+ {
+  "file": "175-wp-hidden-contribute-to-cognitive-core.md",
+  "url": "https://whitepaper.virtuals.io/builders-hub/build-with-virtuals/agent-contribution/contribute-to-cognitive-core",
+  "title": "Contribute to Cognitive Core",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/builders-hub__build-with-virtuals__agent-contribution__contribute-to-cognitive-core.md"
+ },
+ {
+  "file": "176-wp-hidden-contribute-to-voice-core.md",
+  "url": "https://whitepaper.virtuals.io/builders-hub/build-with-virtuals/agent-contribution/contribute-to-voice-core",
+  "title": "Contribute to Voice Core",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/builders-hub__build-with-virtuals__agent-contribution__contribute-to-voice-core.md"
+ },
+ {
+  "file": "177-wp-hidden-agent-launch-support.md",
+  "url": "https://whitepaper.virtuals.io/info-hub/builders-hub/agent-launch-support",
+  "title": "Agent Launch Support",
+  "method": "GitBook .md endpoint via curl (page not in sitemap, found by following internal links)",
+  "raw": "_raw/jina/whitepaper/info-hub__builders-hub__agent-launch-support.md"
+ },
+ {
+  "file": "178-www-home.md",
+  "url": "https://www.virtuals.io/",
+  "title": "Virtuals Protocol | Society of AI Agents",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/www-home.md"
+ },
+ {
+  "file": "179-www-researches.md",
+  "url": "https://www.virtuals.io/researches",
+  "title": "Research About Virtuals | Insights & Updates",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/www-researches.md"
+ },
+ {
+  "file": "180-app-home.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Home (Capital Market)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-home.txt"
+ },
+ {
+  "file": "181-app-robinhood-list.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Home, Robinhood Chain filter (Trending, Top, Gainers, New)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-robinhood-list.txt"
+ },
+ {
+  "file": "182-app-agent-95590-raxol.md",
+  "url": "https://app.virtuals.io/virtuals/95590",
+  "title": "Agent page 95590 (RAXOL)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-95590-raxol.txt"
+ },
+ {
+  "file": "183-app-agent-96200-vex.md",
+  "url": "https://app.virtuals.io/virtuals/96200",
+  "title": "Agent page 96200 (VEX)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-96200-vex.txt"
+ },
+ {
+  "file": "184-app-agent-98621-star.md",
+  "url": "https://app.virtuals.io/virtuals/98621",
+  "title": "Agent page 98621 (STAR)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-98621-star.txt"
+ },
+ {
+  "file": "185-app-agent-98632-mly.md",
+  "url": "https://app.virtuals.io/virtuals/98632",
+  "title": "Agent page 98632 (MLY)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-98632-mly.txt"
+ },
+ {
+  "file": "186-app-agent-101114-han.md",
+  "url": "https://app.virtuals.io/virtuals/101114",
+  "title": "Agent page 101114 (HAN)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-101114-han.txt"
+ },
+ {
+  "file": "187-app-agent-101415-kindra.md",
+  "url": "https://app.virtuals.io/virtuals/101415",
+  "title": "Agent page 101415 (KINDRA)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-101415-kindra.txt"
+ },
+ {
+  "file": "188-app-agent-102330-fletcher.md",
+  "url": "https://app.virtuals.io/virtuals/102330",
+  "title": "Agent page 102330 (FLETCHER)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-102330-fletcher.txt"
+ },
+ {
+  "file": "189-app-agent-105665-blep.md",
+  "url": "https://app.virtuals.io/virtuals/105665",
+  "title": "Agent page 105665 (BLEP)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-105665-blep.txt"
+ },
+ {
+  "file": "190-app-agent-105667-monvera.md",
+  "url": "https://app.virtuals.io/virtuals/105667",
+  "title": "Agent page 105667 (MONVERA)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-105667-monvera.txt"
+ },
+ {
+  "file": "191-app-agent-106006-phood.md",
+  "url": "https://app.virtuals.io/virtuals/106006",
+  "title": "Agent page 106006 (PHOOD)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-106006-phood.txt"
+ },
+ {
+  "file": "192-app-agent-106790-spinner.md",
+  "url": "https://app.virtuals.io/virtuals/106790",
+  "title": "Agent page 106790 (SPINNER)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-106790-spinner.txt"
+ },
+ {
+  "file": "193-app-agent-107686-vim.md",
+  "url": "https://app.virtuals.io/virtuals/107686",
+  "title": "Agent page 107686 (VIM)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-107686-vim.txt"
+ },
+ {
+  "file": "194-app-agent-108011-merrymen.md",
+  "url": "https://app.virtuals.io/virtuals/108011",
+  "title": "Agent page 108011 (MERRYMEN)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-108011-merrymen.txt"
+ },
+ {
+  "file": "195-app-agent-110340-agentiq.md",
+  "url": "https://app.virtuals.io/virtuals/110340",
+  "title": "Agent page 110340 (AGENTIQ)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-110340-agentiq.txt"
+ },
+ {
+  "file": "196-app-agent-110464-grid.md",
+  "url": "https://app.virtuals.io/virtuals/110464",
+  "title": "Agent page 110464 (GRID)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-110464-grid.txt"
+ },
+ {
+  "file": "197-app-agent-111515-karma.md",
+  "url": "https://app.virtuals.io/virtuals/111515",
+  "title": "Agent page 111515 (KARMA)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-111515-karma.txt"
+ },
+ {
+  "file": "198-app-agent-111724-vantis.md",
+  "url": "https://app.virtuals.io/virtuals/111724",
+  "title": "Agent page 111724 (VANTIS)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-111724-vantis.txt"
+ },
+ {
+  "file": "199-app-agent-114790-yldr.md",
+  "url": "https://app.virtuals.io/virtuals/114790",
+  "title": "Agent page 114790 (YLDR)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-114790-yldr.txt"
+ },
+ {
+  "file": "200-app-agent-115313-supermission.md",
+  "url": "https://app.virtuals.io/virtuals/115313",
+  "title": "Agent page 115313 (SUPERMISSION)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-115313-supermission.txt"
+ },
+ {
+  "file": "201-app-agent-121649-gtr.md",
+  "url": "https://app.virtuals.io/virtuals/121649",
+  "title": "Agent page 121649 (GTR)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-121649-gtr.txt"
+ },
+ {
+  "file": "202-app-agent-125262-wizz.md",
+  "url": "https://app.virtuals.io/virtuals/125262",
+  "title": "Agent page 125262 (WIZZ)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-125262-wizz.txt"
+ },
+ {
+  "file": "203-app-agent-133649-bloopa.md",
+  "url": "https://app.virtuals.io/virtuals/133649",
+  "title": "Agent page 133649 (BLOOPA)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-133649-bloopa.txt"
+ },
+ {
+  "file": "204-app-agent-134851-wall3.md",
+  "url": "https://app.virtuals.io/virtuals/134851",
+  "title": "Agent page 134851 (WALL3)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-134851-wall3.txt"
+ },
+ {
+  "file": "205-app-agent-137226-dolores.md",
+  "url": "https://app.virtuals.io/virtuals/137226",
+  "title": "Agent page 137226 (DOLORES)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-137226-dolores.txt"
+ },
+ {
+  "file": "206-app-agent-137992-sirius.md",
+  "url": "https://app.virtuals.io/virtuals/137992",
+  "title": "Agent page 137992 (SIRIUS)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-137992-sirius.txt"
+ },
+ {
+  "file": "207-app-agent-138533-graffiti.md",
+  "url": "https://app.virtuals.io/virtuals/138533",
+  "title": "Agent page 138533 (GRAFFITI)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-agent-138533-graffiti.txt"
+ },
+ {
+  "file": "208-app-acp-butler.md",
+  "url": "https://app.virtuals.io/acp/butler",
+  "title": "ACP Butler",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-acp-butler.txt"
+ },
+ {
+  "file": "209-app-acp-scan-agents.md",
+  "url": "https://app.virtuals.io/acp/scan/agents",
+  "title": "ACP Scan: Agents",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-acp-scan-agents.txt"
+ },
+ {
+  "file": "210-app-acp-scan-offerings.md",
+  "url": "https://app.virtuals.io/acp/scan/offerings",
+  "title": "ACP Scan: Offerings",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-acp-scan-offerings.txt"
+ },
+ {
+  "file": "211-app-build.md",
+  "url": "https://app.virtuals.io/build",
+  "title": "Build",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-build.txt"
+ },
+ {
+  "file": "212-app-create.md",
+  "url": "https://app.virtuals.io/create",
+  "title": "Create (login gate)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-create.txt"
+ },
+ {
+  "file": "213-app-create-agent-click.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Create Agent click (login gate)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-create-agent-click.txt"
+ },
+ {
+  "file": "214-app-dashboard.md",
+  "url": "https://app.virtuals.io/dashboard",
+  "title": "Dashboard (veVIRTUAL, airdrops)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-dashboard.txt"
+ },
+ {
+  "file": "215-app-launch-token-click.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Launch Token click (login gate)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-launch-token-click.txt"
+ },
+ {
+  "file": "216-app-login-modal.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Login modal",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-login-modal.txt"
+ },
+ {
+  "file": "217-app-referral.md",
+  "url": "https://app.virtuals.io/referral",
+  "title": "Referral",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-referral.txt"
+ },
+ {
+  "file": "218-app-research-agent-commerce-protocol.md",
+  "url": "https://app.virtuals.io/research/agent-commerce-protocol",
+  "title": "Research: Agent Commerce Protocol",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-app-research-agent-commerce-protocol.txt"
+ },
+ {
+  "file": "219-rendered-whitepaper-home.md",
+  "url": "https://whitepaper.virtuals.io/",
+  "title": "Whitepaper home (rendered)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-whitepaper-home.txt"
+ },
+ {
+  "file": "220-rendered-www-home.md",
+  "url": "https://www.virtuals.io/",
+  "title": "Marketing home (rendered)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-www-home.txt"
+ },
+ {
+  "file": "221-rendered-www-researches.md",
+  "url": "https://www.virtuals.io/researches",
+  "title": "Researches (rendered)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-www-researches.txt"
+ },
+ {
+  "file": "222-app-agentic-commerce-menu.md",
+  "url": "https://app.virtuals.io/",
+  "title": "Agentic Commerce menu",
+  "method": "agent-browser snapshot, session lp-virtuals",
+  "raw": "_raw/network/snapshot-app-agentic-commerce-menu.txt"
+ },
+ {
+  "file": "223-ext-acp-virtuals-io.md",
+  "url": "",
+  "title": "acp-virtuals-io",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-acp-virtuals-io.md"
+ },
+ {
+  "file": "224-ext-app-virtuals-io-acp-new.md",
+  "url": "https://app.virtuals.io/acp/new",
+  "title": "Virtuals Protocol | Society of AI Agents",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-app-virtuals-io-acp-new.md"
+ },
+ {
+  "file": "225-ext-app-virtuals-io-research-agent-commerce-protocol.md",
+  "url": "https://app.virtuals.io/research/agent-commerce-protocol",
+  "title": "Virtuals Protocol | Society of AI Agents",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-app-virtuals-io-research-agent-commerce-protocol.md"
+ },
+ {
+  "file": "226-ext-degen-virtuals-io.md",
+  "url": "https://degen.virtuals.io/",
+  "title": "Arena",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-degen-virtuals-io.md"
+ },
+ {
+  "file": "227-ext-discord-com-invite-virtualsio.md",
+  "url": "https://discord.com/invite/virtualsio",
+  "title": "Join the Virtuals Protocol Discord Server!",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-discord-com-invite-virtualsio.md"
+ },
+ {
+  "file": "228-ext-docs-game-virtuals-io.md",
+  "url": "https://docs.game.virtuals.io/",
+  "title": "GitBook",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-docs-game-virtuals-io.md"
+ },
+ {
+  "file": "229-ext-dune-com-virtual_protocol-virtual-protocol-on-base.md",
+  "url": "https://dune.com/virtual_protocol/virtual-protocol-on-base",
+  "title": "Virtuals Protocol AI Agent Tokens | Dune",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-dune-com-virtual_protocol-virtual-protocol-on-base.md"
+ },
+ {
+  "file": "230-ext-dune-com-virtuals_protocol.md",
+  "url": "https://dune.com/virtuals_protocol",
+  "title": "Virtuals Protocol | Dune",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-dune-com-virtuals_protocol.md"
+ },
+ {
+  "file": "231-ext-eastworlds-io.md",
+  "url": "https://eastworlds.io/",
+  "title": "Eastworlds \u2014 We Help Robots Leave the Lab Faster",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-eastworlds-io.md"
+ },
+ {
+  "file": "232-ext-github-com-Virtual-Protocol.md",
+  "url": "https://github.com/Virtual-Protocol",
+  "title": "Virtuals Protocol",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-github-com-Virtual-Protocol.md"
+ },
+ {
+  "file": "233-ext-gov-virtuals-io.md",
+  "url": "https://gov.virtuals.io/",
+  "title": "Virtuals Protocol Governance Forum",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-gov-virtuals-io.md"
+ },
+ {
+  "file": "234-ext-os-virtuals-io.md",
+  "url": "https://os.virtuals.io/",
+  "title": "EconomyOS",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-os-virtuals-io.md"
+ },
+ {
+  "file": "235-ext-support-virtuals-io.md",
+  "url": "https://support.virtuals.io/",
+  "title": "Virtuals Support Portal",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-support-virtuals-io.md"
+ },
+ {
+  "file": "236-ext-t-me-virtuals.md",
+  "url": "https://t.me/virtuals",
+  "title": "Virtuals Protocol",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-t-me-virtuals.md"
+ },
+ {
+  "file": "237-ext-virtuals-substack-com.md",
+  "url": "https://virtuals.substack.com/",
+  "title": "Virtuals\u2019 Substack | Substack",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-virtuals-substack-com.md"
+ },
+ {
+  "file": "238-ext-x-com-virtuals_io.md",
+  "url": "https://x.com/virtuals_io",
+  "title": "Virtuals Protocol (@virtuals_io) on X",
+  "method": "Jina Reader",
+  "raw": "_raw/jina/ext-x-com-virtuals_io.md"
+ },
+ {
+  "file": "239-os-acp__architecture.md",
+  "url": "https://os.virtuals.io/acp/architecture",
+  "title": "EconomyOS: Architecture",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__architecture.md"
+ },
+ {
+  "file": "240-os-acp__cli__acp-serve.md",
+  "url": "https://os.virtuals.io/acp/cli/acp-serve",
+  "title": "EconomyOS: ACP Serve",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__acp-serve.md"
+ },
+ {
+  "file": "241-os-acp__cli__client-workflow.md",
+  "url": "https://os.virtuals.io/acp/cli/client-workflow",
+  "title": "EconomyOS: Client Workflow",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__client-workflow.md"
+ },
+ {
+  "file": "242-os-acp__cli__event-streaming.md",
+  "url": "https://os.virtuals.io/acp/cli/event-streaming",
+  "title": "EconomyOS: Event Streaming",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__event-streaming.md"
+ },
+ {
+  "file": "243-os-acp__cli__getting-started.md",
+  "url": "https://os.virtuals.io/acp/cli/getting-started",
+  "title": "EconomyOS: Quickstart",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__getting-started.md"
+ },
+ {
+  "file": "244-os-acp__cli__provider-workflow.md",
+  "url": "https://os.virtuals.io/acp/cli/provider-workflow",
+  "title": "EconomyOS: Provider Workflow",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__provider-workflow.md"
+ },
+ {
+  "file": "245-os-acp__cli__reference.md",
+  "url": "https://os.virtuals.io/acp/cli/reference",
+  "title": "EconomyOS: CLI Command Reference",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__cli__reference.md"
+ },
+ {
+  "file": "246-os-acp__concepts.md",
+  "url": "https://os.virtuals.io/acp/concepts",
+  "title": "EconomyOS: Core Concepts",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__concepts.md"
+ },
+ {
+  "file": "247-os-acp__migration__cli.md",
+  "url": "https://os.virtuals.io/acp/migration/cli",
+  "title": "EconomyOS: CLI Migration Guide",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__migration__cli.md"
+ },
+ {
+  "file": "248-os-acp__migration__sdk.md",
+  "url": "https://os.virtuals.io/acp/migration/sdk",
+  "title": "EconomyOS: SDK Migration Guide",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__migration__sdk.md"
+ },
+ {
+  "file": "249-os-acp__overview.md",
+  "url": "https://os.virtuals.io/acp/overview",
+  "title": "EconomyOS: What is ACP?",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__overview.md"
+ },
+ {
+  "file": "250-os-acp__sdk__examples.md",
+  "url": "https://os.virtuals.io/acp/sdk/examples",
+  "title": "EconomyOS: SDK Examples",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__sdk__examples.md"
+ },
+ {
+  "file": "251-os-acp__sdk__getting-started.md",
+  "url": "https://os.virtuals.io/acp/sdk/getting-started",
+  "title": "EconomyOS: SDK Getting Started",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__sdk__getting-started.md"
+ },
+ {
+  "file": "252-os-acp__sdk__provider-adapters.md",
+  "url": "https://os.virtuals.io/acp/sdk/provider-adapters",
+  "title": "EconomyOS: Provider Adapters",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-acp__sdk__provider-adapters.md"
+ },
+ {
+  "file": "253-os-agent-identity__card__getting-started.md",
+  "url": "https://os.virtuals.io/agent-identity/card/getting-started",
+  "title": "EconomyOS: Card Getting Started",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__card__getting-started.md"
+ },
+ {
+  "file": "254-os-agent-identity__card__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/card/overview",
+  "title": "EconomyOS: Agent Card",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__card__overview.md"
+ },
+ {
+  "file": "255-os-agent-identity__compute__models.md",
+  "url": "https://os.virtuals.io/agent-identity/compute/models",
+  "title": "EconomyOS: Model Pricing",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__compute__models.md"
+ },
+ {
+  "file": "256-os-agent-identity__compute__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/compute/overview",
+  "title": "EconomyOS: Agent Compute",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__compute__overview.md"
+ },
+ {
+  "file": "257-os-agent-identity__email__api-reference.md",
+  "url": "https://os.virtuals.io/agent-identity/email/api-reference",
+  "title": "EconomyOS: Email CLI Reference",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__email__api-reference.md"
+ },
+ {
+  "file": "258-os-agent-identity__email__getting-started.md",
+  "url": "https://os.virtuals.io/agent-identity/email/getting-started",
+  "title": "EconomyOS: Email Getting Started",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__email__getting-started.md"
+ },
+ {
+  "file": "259-os-agent-identity__email__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/email/overview",
+  "title": "EconomyOS: Agent Email",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__email__overview.md"
+ },
+ {
+  "file": "260-os-agent-identity__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/overview",
+  "title": "EconomyOS: What is Agent Identity?",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__overview.md"
+ },
+ {
+  "file": "261-os-agent-identity__token__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/token/overview",
+  "title": "EconomyOS: Agent Token",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__token__overview.md"
+ },
+ {
+  "file": "262-os-agent-identity__wallet__overview.md",
+  "url": "https://os.virtuals.io/agent-identity/wallet/overview",
+  "title": "EconomyOS: Agent Wallet",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-agent-identity__wallet__overview.md"
+ },
+ {
+  "file": "263-os-community__capital-formation-for-founders.md",
+  "url": "https://os.virtuals.io/community/capital-formation-for-founders",
+  "title": "EconomyOS: Capital Formation for Founders",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-community__capital-formation-for-founders.md"
+ },
+ {
+  "file": "264-os-community__request-for-agents.md",
+  "url": "https://os.virtuals.io/community/request-for-agents",
+  "title": "EconomyOS: Request for Agents",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-community__request-for-agents.md"
+ },
+ {
+  "file": "265-os-community__showcase-contribute.md",
+  "url": "https://os.virtuals.io/community/showcase-contribute",
+  "title": "EconomyOS: Showcase Contribution Flow",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-community__showcase-contribute.md"
+ },
+ {
+  "file": "266-os-console.md",
+  "url": "https://os.virtuals.io/console",
+  "title": "EconomyOS: Agent Console",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-console.md"
+ },
+ {
+  "file": "267-os-index.md",
+  "url": "https://os.virtuals.io/",
+  "title": "EconomyOS: EconomyOS",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-index.md"
+ },
+ {
+  "file": "268-os-quickstart.md",
+  "url": "https://os.virtuals.io/quickstart",
+  "title": "EconomyOS: Quickstart",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-quickstart.md"
+ },
+ {
+  "file": "269-os-trading.md",
+  "url": "https://os.virtuals.io/trading",
+  "title": "EconomyOS: Trading",
+  "method": "Jina Reader",
+  "raw": "_raw/os/jina-trading.md"
+ },
+ {
+  "file": "270-degen-build.md",
+  "url": "https://degen.virtuals.io/build",
+  "title": "Degen: Arena",
+  "method": "Jina Reader",
+  "raw": "_raw/degen/build.md"
+ },
+ {
+  "file": "271-degen-docs.md",
+  "url": "https://degen.virtuals.io/docs",
+  "title": "Degen: Arena",
+  "method": "Jina Reader",
+  "raw": "_raw/degen/docs.md"
+ },
+ {
+  "file": "272-degen-terms.md",
+  "url": "https://degen.virtuals.io/terms",
+  "title": "Degen: Terms & Conditions | Arena",
+  "method": "Jina Reader",
+  "raw": "_raw/degen/terms.md"
+ },
+ {
+  "file": "273-gov-gov-home.md",
+  "url": "https://gov.virtuals.io/",
+  "title": "Governance forum home (proposal list)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/gov/read-gov-home.txt"
+ },
+ {
+  "file": "274-gov-proposal-114159049320.md",
+  "url": "https://gov.virtuals.io/proposal/114159049320088981416633051769497309098912685542870398419330790013517149477918",
+  "title": "Governance proposal 114159...77918 (pending, empty)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/gov/read-proposal-114159049320.txt"
+ },
+ {
+  "file": "275-gov-proposal-569967636290.md",
+  "url": "https://gov.virtuals.io/proposal/56996763629027767054698714571712096750640983191659498948864059685705038611655",
+  "title": "Governance proposal: Allocation of 1 percent VIRTUAL for Sniper Defense and Yield Fund",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/gov/read-proposal-569967636290.txt"
+ },
+ {
+  "file": "276-gov-proposal-582382599697.md",
+  "url": "https://gov.virtuals.io/proposal/58238259969716106252633733975150732933829817308503391581801496289223305313092",
+  "title": "Governance proposal: Establishing an Ecosystem Growth Foundation",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/gov/read-proposal-582382599697.txt"
+ },
+ {
+  "file": "277-gov-proposal-858630801508.md",
+  "url": "https://gov.virtuals.io/proposal/85863080150801247354820503347649561342766624974699481992117779927201501850460",
+  "title": "Governance proposal: Performance-based Ecosystem Grant to Virgen Labs",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/gov/read-proposal-858630801508.txt"
+ },
+ {
+  "file": "278-legacy-home.md",
+  "url": "https://legacy.virtuals.io/",
+  "title": "Legacy app (VIRTUAL to xVIRTUAL conversion, bridge)",
+  "method": "agent-browser read, session lp-virtuals",
+  "raw": "_raw/network/read-legacy-home.txt"
+ },
+ {
+  "file": "279-pdf-launchpad-agreement.md",
+  "url": "https://app.virtuals.io/launchpad_agreement.pdf",
+  "title": "launchpad_agreement.pdf",
+  "method": "Jina Reader (PDF)",
+  "raw": "_raw/pdf/launchpad_agreement.md"
+ },
+ {
+  "file": "280-pdf-terms-of-use.md",
+  "url": "https://app.virtuals.io/terms_of_use.pdf",
+  "title": "Virtuals Terms of Use v9 - 24September2025",
+  "method": "Jina Reader (PDF)",
+  "raw": "_raw/pdf/terms_of_use.md"
+ },
+ {
+  "file": "281-pdf-privacy-policy.md",
+  "url": "https://app.virtuals.io/privacy_policy.pdf",
+  "title": "Virtuals Privacy Policy - 18 June 2025",
+  "method": "Jina Reader (PDF)",
+  "raw": "_raw/pdf/privacy_policy.md"
+ },
+ {
+  "file": "282-pdf-acp-developer-agreement.md",
+  "url": "https://app.virtuals.io/acp_developer_agreement.pdf",
+  "title": "ACP Developer Agreement - Virtuals - 9September2025",
+  "method": "Jina Reader (PDF)",
+  "raw": "_raw/pdf/acp_developer_agreement.md"
+ }
+]

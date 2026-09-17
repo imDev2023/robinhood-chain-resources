@@ -1,0 +1,429 @@
+> Source: https://developers.uniswap.org
+
+# Uniswap Developers
+
+[Uniswap Developer Platform](https://developers.uniswap.org/docs): Developer documentation for the Uniswap Protocol: Uniswap API, SDKs, v4/v3/v2 smart contracts, UniswapX, Permit2, Universal Router, Smart Wallet, Unichain, and subgraphs.
+
+## Integration paths
+
+Choose the path that matches your needs.
+
+| Approach | Best For | Description | Complexity | Doc |
+|---|---|---|---|---|
+| Custom Linking | Simple referrals | Send users to the Uniswap interface with prefilled swap parameters via URL query strings. | Very low | /docs/trading/custom-interface-links |
+| Uniswap API | dApps, wallets, bots | Hosted REST API that handles routing, quoting, transaction construction, Permit2. Supports AMM v2/v3/v4 and UniswapX. | Low | /docs/trading/swapping-api/getting-started |
+| Uniswap LP API | LP UIs, automated LP strategies | Hosted REST API for liquidity position lifecycle (create, modify, claim fees). | Low | /docs/liquidity/liquidity-provisioning-api/getting-started |
+| Uniswap SDKs (v4, v3, v2) | Front-ends, custom routing | TypeScript libraries to compute routes, quotes, pool math, calldata locally. Submit transactions yourself. | Medium | /docs/sdks/overview |
+| Smart contracts | Onchain integrations, arbitrage, custom hooks | Interact directly with Universal Router, PoolManager, or write hooks in Solidity. | High | /docs/protocols/v4/guides/getting-started |
+
+## Uniswap API (formerly "Trading API")
+
+The Uniswap API is a hosted REST service that abstracts away routing, gas estimation, Permit2 approval handling, and transaction construction. It supports swaps across Uniswap v2, v3, v4, and UniswapX intent orders. The integrator handles wallet signing and onchain submission.
+
+### Endpoint summary
+
+The interactive playground at https://developers.uniswap.org/docs/api-reference lists every endpoint. Headlines:
+
+- `POST /quote` — get a swap quote across AMM and UniswapX routes.
+- `POST /swap` — build a swap transaction (returns calldata to sign and submit).
+- `GET /check_approval` — check whether the user has authorized Permit2 or the router for the input token.
+- `POST /lp/create` — build a transaction to create a new liquidity position (LP API).
+- `POST /lp/increase` — build a transaction to add to an existing liquidity position.
+- `POST /lp/decrease` — build a transaction to decrease an existing liquidity position.
+- `POST /lp/claim` — build a transaction to claim fees from a position.
+- `GET /swappable_tokens` — list tokens supported for bridging or swapping.
+
+### Integration flow
+
+1. Call `/check_approval` to see whether Permit2 or the router has sufficient allowance for the input token. If not, the response carries an approval transaction the user must sign and submit first.
+2. Send a `/quote` request with input token, output token, amount, chain, recipient, and optional `protocols` filter. The API returns the best route, expected output, gas estimate, and (for UniswapX routes) a Permit2 typed-data payload to sign.
+3. Send a `/swap` request with the user's signature (for UniswapX) or the desired route id (for AMM). The API returns transaction calldata.
+4. The integrator's wallet signs the transaction and submits it onchain via their RPC provider.
+
+### Permit2 in the Uniswap API
+
+The Uniswap API uses [Permit2](https://developers.uniswap.org/docs/protocols/permit2/overview) for token approval management. Users approve Permit2 once per token, then sign per-swap permits that delegate spend authority to the Uniswap router. This avoids one approval transaction per swap. For environments where Permit2 signing is unavailable (some embedded wallets, hardware wallet UIs without EIP-712 support), the Uniswap API exposes a "proxy approval" path documented at /docs/trading/swapping-api/concepts/no-permit2-workflow that uses a traditional ERC-20 `approve` followed by `transferFrom`.
+
+### Routing
+
+The `protocols` field in `/quote` selects which liquidity sources the API can use. Values include `V2`, `V3`, `V4`, `UNISWAPX_V2`, `UNISWAPX_V3`, and combinations. UniswapX V2 is available on Ethereum, Arbitrum, and Base; UniswapX V3 is available on Arbitrum. Submitting `UNISWAPX_V2` or `UNISWAPX_V3` on a chain not listed will fail. The default routing combines AMM and UniswapX where both are available and returns whichever produces better effective output.
+
+UniswapX quote requests have minimum swap values: 300 USDC equivalent on Ethereum, 1000 USDC equivalent on L2 networks (Arbitrum, Base). Requests below these thresholds return "No quotes available". This is the most common cause of failed UniswapX quote requests.
+
+### Error handling and retries
+
+Common errors live at /docs/trading/swapping-api/common-errors. Quote and swap requests are idempotent. 4xx responses indicate request validation problems (bad token address, unsupported chain, insufficient liquidity); retrying the same payload will not help. 5xx responses are transient; retry with exponential backoff. Rate limits apply per API key; see the API key dashboard at developers.uniswap.org/dashboard.
+
+### Supported chains for swapping
+
+Mainnets (chain ID, name, Universal Router 2.1.1 address listed where applicable):
+
+- 1 — Ethereum
+- 10 — OP Mainnet
+- 56 — BNB Smart Chain
+- 130 — Unichain
+- 137 — Polygon
+- 143 — Monad
+- 196 — X Layer
+- 324 — zkSync (UR 2.0 only)
+- 480 — World Chain
+- 1868 — Soneium
+- 8453 — Base
+- 42161 — Arbitrum
+- 42220 — Celo
+- 43114 — Avalanche
+- 59144 — Linea
+- 7777777 — Zora
+
+Testnets:
+
+- 1301 — Unichain Sepolia
+- 84532 — Base Sepolia
+- 11155111 — Ethereum Sepolia
+
+Always cross-reference https://developers.uniswap.org/docs/trading/swapping-api/supported-chains for the current canonical list, the live router addresses, and per-chain UniswapX availability. Router addresses are also published in https://github.com/Uniswap/sdks/blob/main/sdks/universal-router-sdk/src/utils/constants.ts.
+
+## Uniswap LP API (Liquidity Provisioning)
+
+The Uniswap LP API at /docs/liquidity/liquidity-provisioning-api/getting-started provides a REST interface to manage v3 and v4 liquidity positions: mint, increase, decrease, claim fees. It returns transaction calldata that the integrator's wallet signs and submits. Same authentication and Permit2 conventions as the Uniswap API. Use this when building automated LP strategies, LP dashboards, or wallets with embedded LP UX.
+
+## Uniswap v4 (latest protocol)
+
+Uniswap v4 is the current generation of the Uniswap protocol. Key innovations over v3:
+
+- **Singleton PoolManager**: one contract holds every pool. Lower gas for pool creation and multi-hop swaps. (https://developers.uniswap.org/docs/protocols/v4/concepts/poolmanager)
+- **Hooks**: developer-defined contracts that run before/after swap, before/after liquidity-add, or before/after liquidity-remove. Enables dynamic fees, custom curves, on-swap oracles, limit orders, MEV-redistribution, gating, KYC, and many other behaviors. Hook permissions are encoded in the hook contract's address. (https://developers.uniswap.org/docs/protocols/v4/concepts/hooks)
+- **Flash accounting**: token deltas accumulate during a transaction and settle once at the end. Removes intermediate transfer overhead and unlocks complex multi-action flows. (https://developers.uniswap.org/docs/protocols/v4/concepts/flash-accounting)
+- **ERC-6909**: multi-token claims standard used internally for gas-efficient balance accounting. (https://developers.uniswap.org/docs/protocols/v4/concepts/erc-6909)
+- **Dynamic fees**: hooks can compute swap fees per swap, opening room for fee strategies that respond to volatility, time, or volume. (https://developers.uniswap.org/docs/protocols/v4/concepts/dynamic-fees)
+- **Subscribers**: external contracts notified of position lifecycle events without owning the position. Enables liquidity mining and reward programs without custody.
+
+### v4 building blocks
+
+- `PoolManager` — singleton entry point for all v4 operations.
+- `PositionManager` — periphery contract for non-fungible liquidity positions, exposes `modifyLiquidities()`.
+- `Universal Router` — recommended entry point for swap integrations; encodes a sequence of commands (V4_SWAP, SETTLE_ALL, TAKE_ALL, etc.) executed in one transaction.
+- `StateView` — offchain read interface for pool state, balances, and ticks.
+- `StateLibrary` — onchain library for reading pool storage via `extsload`.
+- Hooks — implement `IHooks`, declare permissions via `getHookPermissions()`, and are deployed at addresses whose low bits encode the permissions bitmap (HookMiner finds matching salts).
+
+### v4 deployments
+
+Live deployment addresses for PoolManager, PositionManager, Universal Router, StateView, and Quoter on every supported chain are at https://developers.uniswap.org/docs/protocols/v4/deployments. Always read the live page rather than caching addresses, since governance can deploy new versions.
+
+### v4 hook security
+
+Hooks introduce permission, reentrancy, and input-validation risks. The Uniswap v4 Security Framework at /docs/protocols/v4/security defines a structured scoring model for hook risk evaluation: which permissions a hook holds, whether it can revert pool operations, whether it can withdraw funds, and operational guidance for integrators auditing or whitelisting hooks. Treat any hook as untrusted code until reviewed.
+
+### v4 build paths
+
+- Build a hook: /docs/protocols/v4/guides/hooks/your-first-hook (Foundry walkthrough). Then deploy with HookMiner: /docs/protocols/v4/guides/hooks/hook-deployment.
+- Create a pool: /docs/protocols/v4/guides/create-pool.
+- Manage liquidity: /docs/protocols/v4/guides/managing-liquidity/overview, with deep-dives on mint, increase, decrease, collect, batch, burn.
+- Swap from a contract: /docs/protocols/v4/guides/swapping/swapping using Universal Router.
+- Read pool state: /docs/protocols/v4/guides/read-pool-state (StateLibrary onchain) and /docs/protocols/v4/guides/state-view (StateView offchain).
+
+## Uniswap v3 (concentrated liquidity)
+
+Uniswap v3 introduced concentrated liquidity: liquidity providers choose a custom price range, dramatically improving capital efficiency over v2. v3 also adds multiple fee tiers (0.01%, 0.05%, 0.3%, 1%), NFT-based positions (ERC-721 via NonfungiblePositionManager), and a built-in TWAP price oracle.
+
+- Overview: /docs/protocols/v3/overview
+- Architecture: /docs/protocols/v3/concepts/architecture
+- Price Oracles: /docs/protocols/v3/concepts/price-oracles
+- Swapping (single-hop, multi-hop): /docs/protocols/v3/guides/swapping/getting-started
+- Managing liquidity (mint, increase, decrease, collect): /docs/protocols/v3/guides/managing-liquidity/getting-started
+- Flash swaps: /docs/protocols/v3/guides/flash-swaps/getting-started
+- Per-chain deployments: /docs/protocols/v3/deployments (Ethereum, Arbitrum, OP Mainnet, Polygon, Base, BNB, Celo, Avalanche, Zora, World Chain, X Layer, Monad, MegaETH, Tempo, Unichain, ZKsync)
+
+## Uniswap v2 (constant product)
+
+Uniswap v2 is the constant-product AMM (`x * y = k`) with full-range liquidity per pair. Simpler than v3, still widely deployed and integrated. Includes flash swaps and a TWAP-style on-pair oracle.
+
+- Overview: /docs/protocols/v2/overview
+- Architecture, pools, oracles, flash swaps, pricing: /docs/protocols/v2/concepts/architecture and siblings.
+- Guides: /docs/protocols/v2/guides/getting-started covers swapping, providing liquidity, flash swaps, oracle building.
+- Deployments: /docs/protocols/v2/deployments.
+
+## UniswapX (intent-based swapping)
+
+UniswapX is an intent-based trading protocol where users sign off-chain orders and external fillers compete to execute them. Benefits: gasless for users (the filler pays gas), MEV-protected (orders settle through a reactor with explicit price guarantees), and flexible auction formats.
+
+- Overview: /docs/liquidity/uniswapx/overview
+- Architecture (reactors, fill contracts, settlement): /docs/liquidity/uniswapx/concepts/architecture
+- Auction types per chain: /docs/liquidity/uniswapx/concepts/auction-types
+  - Ethereum and Arbitrum: Dutch auctions.
+  - Base and Unichain: priority-fee auctions on OP Stack chains.
+- RFQ flow (indicative versus hard quotes): /docs/liquidity/uniswapx/concepts/uniswaprfq
+- Filler integration:
+  - Mainnet: /docs/liquidity/uniswapx/filling/mainnet/filling-on-mainnet
+  - Become a quoter (Ethereum mainnet performance + production flow): /docs/liquidity/uniswapx/filling/mainnet/become-a-quoter
+  - Arbitrum: /docs/liquidity/uniswapx/filling/arbitrum/filling-on-arbitrum
+  - Base and Unichain (priority chains): /docs/liquidity/uniswapx/filling/priority-chain/filling-on-op-stack
+  - Filler FAQ: /docs/liquidity/uniswapx/filling/faq
+- Deployments: /docs/liquidity/uniswapx/deployments
+
+UniswapX V2 chain availability: Ethereum, Arbitrum, Base. UniswapX V3 chain availability: Arbitrum.
+
+## Liquidity Launchpad (Continuous Clearing Auction)
+
+The Liquidity Launchpad uses a Continuous Clearing Auction (CCA) to bootstrap initial pool liquidity for new tokens. Bidders submit bids over time, the auction discovers a clearing price as new bids enter each block, and proceeds migrate into a Uniswap v4 pool when the auction completes.
+
+- Overview: /docs/liquidity/liquidity-launchpad/overview
+- Strategies: /docs/liquidity/liquidity-launchpad/concepts/liquidity-strategies
+- CCA mechanism: /docs/liquidity/liquidity-launchpad/concepts/cca
+- Token factories (UERC20 for single-chain, USUPERC20 for Superchain): /docs/liquidity/liquidity-launchpad/concepts/token-factory
+- Setup CCA environment with Foundry: /docs/liquidity/liquidity-launchpad/guides/setup
+- Local deployment: /docs/liquidity/liquidity-launchpad/guides/local-deployment
+- Example configuration: /docs/liquidity/liquidity-launchpad/guides/example-configuration
+- Submit a bid: /docs/liquidity/liquidity-launchpad/guides/submit-bid
+- Price discovery walkthrough: /docs/liquidity/liquidity-launchpad/guides/price-discovery
+- Exit and claim tokens: /docs/liquidity/liquidity-launchpad/guides/exit-bid
+- Deployments: /docs/liquidity/liquidity-launchpad/deployments
+
+## Smart Wallet (Calibur, EIP-7702)
+
+Uniswap Smart Wallet (Calibur) brings smart-account capabilities to existing externally-owned accounts via EIP-7702 delegation. Features include batched transactions, gas abstraction (ERC-4337-style), alternative signers, and validation/execution hooks. Importantly, it preserves the user's EOA address; nothing migrates to a new contract address.
+
+- Overview: /docs/protocols/smart-wallet/overview
+- Delegation (EIP-7702): /docs/protocols/smart-wallet/concepts/delegation
+- Batched transactions (ERC-7821): /docs/protocols/smart-wallet/concepts/batched-transactions
+- Gas abstraction (ERC-4337): /docs/protocols/smart-wallet/concepts/gas-abstraction
+- Alternative signers: /docs/protocols/smart-wallet/concepts/alternative-signers
+- ERC-7739 (defensive rehashing for alternative signers): /docs/protocols/smart-wallet/concepts/erc-7739
+- ERC-7914 (ETH transfer allowances for contract accounts): /docs/protocols/smart-wallet/concepts/erc-7914
+- Hooks (validation and execution call sites): /docs/protocols/smart-wallet/concepts/hooks
+- Best practices for integrators: /docs/protocols/smart-wallet/guides/best-practices
+- Deployments: /docs/protocols/smart-wallet/deployments
+
+## The Compact (gasless cross-chain intents)
+
+The Compact is a resource-lock protocol that enables gasless, cross-chain order intents. Users deposit tokens into resource locks, sign EIP-712 compacts that authorize allocators to spend those locks against verified arbiter conditions, and arbiters submit claims that settle the intent.
+
+- Overview: /docs/protocols/the-compact/overview
+- Resource locks: /docs/protocols/the-compact/concepts/resource-locks
+- Compacts and EIP-712 formats: /docs/protocols/the-compact/concepts/compacts
+- Core interfaces (deposits, registration, claims, allocator and emissary verification): /docs/protocols/the-compact/concepts/core-interfaces
+- Allocators (responsibilities, authorization methods, forced-withdrawal safeguards): /docs/protocols/the-compact/concepts/allocators
+- Arbiters (single-chain and multichain claim verification): /docs/protocols/the-compact/concepts/arbiters
+- Periphery contracts (emissaries, Tribunal): /docs/protocols/the-compact/concepts/periphery-contracts
+- Resources: /docs/protocols/the-compact/resources
+
+## Permit2 (shared token approvals)
+
+Permit2 is the shared token-approval protocol used across the Uniswap stack. Users approve Permit2 once per token, then either (a) grant time-bounded allowances to specific spenders (`AllowanceTransfer`) or (b) sign single-use permits that authorize specific transfers (`SignatureTransfer`). It eliminates per-protocol approval transactions.
+
+- Overview: /docs/protocols/permit2/overview
+- Allowance Transfer (allowance-based approvals, permits, transferFrom flows, nonce safety): /docs/protocols/permit2/concepts/allowance-transfer
+- Signature Transfer (witness signing, unordered nonce bitmaps): /docs/protocols/permit2/concepts/signature-transfer
+
+## Universal Router
+
+The Universal Router is a multi-command router that executes v2, v3, v4 swaps and Permit2 transfers in one transaction. Integrators encode an array of commands (V4_SWAP, V3_SWAP_EXACT_IN, V2_SWAP_EXACT_IN, PERMIT2_PERMIT, SWEEP, UNWRAP_WETH, etc.) and corresponding inputs, and the router executes them atomically.
+
+- Overview: /docs/protocols/universal-router/overview
+- Commands reference: /docs/protocols/universal-router/concepts/commands
+
+## Protocol Fee
+
+Uniswap governance can route a portion of swap fees from v2 and v3 pools into the Protocol Fee system. Fees flow into TokenJar, an aggregator contract, then into releaser contracts that distribute to authorized recipients via `Firepit.release()`.
+
+- Overview: /docs/protocols/protocol-fee/overview
+- Fee splits per fee tier: /docs/protocols/protocol-fee/concepts/fees
+- Get started (call `Firepit.release()` end-to-end): /docs/protocols/protocol-fee/guides/getting-started
+- Read asset balances (AssetSink, v2 LP tokens, v3 pools): /docs/protocols/protocol-fee/guides/read-asset-balances
+- Best practices: /docs/protocols/protocol-fee/guides/best-practices
+- Deployments: /docs/protocols/protocol-fee/deployments
+
+## Uniswap SDKs
+
+The Uniswap SDKs are TypeScript libraries that compute pool math, build calldata, and model protocol primitives client-side. They do not submit transactions; integrators take SDK output and submit via Ethers, Viem, or any RPC client.
+
+### v4 SDK
+
+- Overview: /docs/sdks/v4/overview
+- Quoting (Quoter simulations before submitting swaps): /docs/sdks/v4/guides/swapping/quoting
+- Single-hop swap: /docs/sdks/v4/guides/swapping/single-hop-swapping
+- Multi-hop swap (path encoding, router calldata): /docs/sdks/v4/guides/swapping/multi-hop-swapping
+- Mint position: /docs/sdks/v4/guides/managing-liquidity/position-minting
+- Modify position (add/remove): /docs/sdks/v4/guides/managing-liquidity/modifying-position
+- Fetch positions and decode metadata: /docs/sdks/v4/guides/managing-liquidity/position-fetching
+- Collect fees: /docs/sdks/v4/guides/managing-liquidity/collect-fees
+- Create and initialize pool: /docs/sdks/v4/guides/create-pool
+- Pool data (StateView + SDK abstractions): /docs/sdks/v4/guides/pool-data
+
+### v3 SDK
+
+- Overview: /docs/sdks/v3/overview
+- Get started (mainnet-fork workflow with Foundry/Anvil): /docs/sdks/v3/guides/getting-started
+- Quoting: /docs/sdks/v3/guides/swapping/quoting
+- Routing: /docs/sdks/v3/guides/swapping/routing
+- Swapping: /docs/sdks/v3/guides/swapping/swapping
+- Managing liquidity (full lifecycle): /docs/sdks/v3/guides/managing-liquidity/getting-started
+- Active liquidity, range orders, swap-and-add: /docs/sdks/v3/guides/managing-liquidity/active-liquidity, /range-orders, /swap-and-add
+- Pool data: /docs/sdks/v3/guides/pool-data
+- Price oracle: /docs/sdks/v3/guides/price-oracle
+
+### v2 SDK
+
+- Overview: /docs/sdks/v2/overview
+- Getting started: /docs/sdks/v2/guides/getting-started
+- Fetching data: /docs/sdks/v2/guides/fetching-data
+- Pricing (mid price, execution price): /docs/sdks/v2/guides/pricing
+- Swapping (build transaction parameters): /docs/sdks/v2/guides/swapping
+- Pair address derivation: /docs/sdks/v2/guides/getting-pair-address
+
+## Unichain (OP Stack L2)
+
+Unichain is the Uniswap-aligned OP Stack L2. Chain ID 130 (mainnet), 1301 (Sepolia). Unichain features Flashblocks (200ms preconfirmations), fair transaction ordering, MEV protection, EVM equivalence, and full Superchain interop.
+
+- Overview: /docs/unichain
+- Network information (RPC URLs, chain IDs, parameters): /docs/unichain/technical-information/network-information
+- Flashblocks (sub-second preconfirmations): /docs/unichain/technical-information/flashblocks
+- EVM equivalence: /docs/unichain/technical-information/evm-equivalence
+- Bundles and revert protection: /docs/unichain/technical-information/advanced-txn
+- Submitting transactions from L1 (Optimism Portal): /docs/unichain/technical-information/submitting-transactions-from-l1
+- Contract addresses: /docs/unichain/technical-information/contract-addresses
+- RPC calls (supported and unsupported methods): /docs/unichain/technical-information/rpc-calls
+- Node snapshots: /docs/unichain/technical-information/node-snapshots
+- Set up a wallet: /docs/unichain/getting-started/setting-up-a-wallet
+- Get funds (bridge ETH): /docs/unichain/getting-started/get-funds-on-unichain
+- Set up a node: /docs/unichain/getting-started/set-up-a-node
+- Deploy a smart contract (Foundry, verify on Uniscan): /docs/unichain/guides/deploy-a-smart-contract
+- Deploy a SuperchainERC20: /docs/unichain/guides/deploy-a-superchain-erc20 and /docs/unichain/guides/deploy-a-contract-through-thirdweb
+- Create a v4 pool on Unichain: /docs/unichain/guides/create-a-pool
+- Routing on Unichain (Tycho across v2/v3/v4): /docs/unichain/guides/routing-on-unichain
+- Build a subgraph for Unichain: /docs/unichain/guides/subgraph-unichain
+- Transfer USDC dApp tutorial (Next.js + viem): /docs/unichain/guides/transfer-usdc
+- Tools: /docs/unichain/tools/{block-explorers,bridges,faucets,node-providers,oracles,wallets,account-abstraction,cross-chain,data-feeds,data-indexers,development-tools}
+
+## Uniswap AI
+
+Uniswap AI is an open-source toolkit of plugins, skills, and LLM context files for coding agents. It provides protocol-specific guidance for the Uniswap APIs, SDKs, and smart contracts.
+
+- Overview: /docs/uniswap-ai/overview
+- Skills catalog: /docs/uniswap-ai/skills
+- Contribute: /docs/uniswap-ai/contributions
+- Source: https://github.com/Uniswap/uniswap-ai
+
+## Subgraphs (onchain analytics)
+
+Uniswap publishes official subgraphs hosted on The Graph for v2, v3, and v4 across major chains. Subgraphs index swaps, pools, mints, burns, fees, and tokens, exposing them as GraphQL queries.
+
+- Overview: /docs/ecosystem/subgraphs/overview
+- Using subgraphs (build a UI on top): /docs/ecosystem/subgraphs/guides/using-subgraphs
+- v4 entities: /docs/ecosystem/subgraphs/concepts/v4/entities
+- v4 query examples: /docs/ecosystem/subgraphs/guides/v4-query-examples
+- v3 entities: /docs/ecosystem/subgraphs/concepts/v3/entities
+- v3 query examples: /docs/ecosystem/subgraphs/guides/v3-query-examples
+- v2 entities: /docs/ecosystem/subgraphs/concepts/v2/entities
+- v2 query examples: /docs/ecosystem/subgraphs/guides/v2-query-examples
+
+## Governance
+
+Uniswap is governed by UNI token holders. Governance follows a three-phase process (RFC, Temperature Check, Onchain Vote) hosted across the Uniswap Governance Forum, Snapshot, Agora, and Tally. The Decentralized Uniswap (DUNI) construct is documented at /docs/ecosystem/governance/overview.
+
+- Overview: /docs/ecosystem/governance/overview
+- Governance process: /docs/ecosystem/governance/governance-process
+- Guide to voting (delegate via Agora or Tally): /docs/ecosystem/governance/guide-to-voting
+- Technical reference (governance contracts and addresses): /docs/ecosystem/governance/technical-reference
+- Glossary: /docs/ecosystem/governance/glossary
+- Forum: https://gov.uniswap.org
+
+## Builder support
+
+- Funding (grants, incubators): /docs/ecosystem/builder-support/get-funded
+- GTM (co-marketing, allowlist programs): /docs/ecosystem/builder-support/get-reach
+- Security (audits, emergency response, safe harbor): /docs/ecosystem/builder-support/security-resources
+- Research: /docs/ecosystem/research
+
+## Frequently asked questions
+
+**Is the Uniswap API free?**
+Yes for development. Production usage requires an API key from the developer dashboard at https://developers.uniswap.org/dashboard. Rate limits apply per key.
+
+**Which chains does the Uniswap API support?**
+16+ EVM mainnets (Ethereum, Arbitrum, Base, OP Mainnet, Polygon, BNB Smart Chain, Unichain, Avalanche, Linea, Celo, Zora, World Chain, Soneium, X Layer, Monad, zkSync) plus Sepolia testnets (Ethereum, Base, Unichain). The authoritative live list with router addresses is /docs/trading/swapping-api/supported-chains.
+
+**Is "Trading API" the same as "Uniswap API"?**
+Yes. The canonical name is "Uniswap API". "Trading API" is the legacy informal name being phased out.
+
+**What protocol versions are supported?**
+Uniswap v4 (latest, recommended for new integrations), v3 (concentrated liquidity, widely deployed), and v2 (constant product). All three are live and the Uniswap API routes across them automatically.
+
+**Can I swap from a smart contract?**
+Yes. Use the Universal Router as the entry point for v2/v3/v4 swaps in a single transaction. Reference: /docs/protocols/universal-router/overview. For v4 hook integrations, see /docs/protocols/v4/guides/swapping/swapping.
+
+**How do I provide liquidity programmatically?**
+Three options: (1) Uniswap LP API for hosted REST integration; (2) the v4 SDK (/docs/sdks/v4/guides/managing-liquidity/position-minting) or v3 SDK to build calldata client-side; (3) interact directly with PositionManager for v4 (/docs/protocols/v4/guides/managing-liquidity/overview) or NonfungiblePositionManager for v3.
+
+**What are Uniswap v4 hooks?**
+Hooks are external smart contracts a v4 pool calls at specific lifecycle points (before/after swap, before/after add liquidity, before/after remove liquidity). Hooks let pool creators implement dynamic fees, custom curves, on-swap oracles, limit orders, MEV redistribution, and gating. See /docs/protocols/v4/concepts/hooks and the v4 Security Framework at /docs/protocols/v4/security.
+
+**What is UniswapX?**
+An intent-based trading protocol. Users sign off-chain orders; external fillers compete to execute them. Gasless for the user (filler pays gas), MEV-protected (settles via reactor with explicit price guarantees). UniswapX V2 lives on Ethereum, Arbitrum, Base; V3 on Arbitrum.
+
+**What is Permit2?**
+A shared token-approval protocol. Users approve Permit2 once per token, then sign per-spend permits. Used across the Uniswap API, Universal Router, and most Uniswap-aligned integrations. /docs/protocols/permit2/overview.
+
+**What is Unichain?**
+Unichain is an OP Stack L2 aligned with Uniswap. Chain ID 130 mainnet, 1301 Sepolia. Features Flashblocks (200ms preconfirmations), fair transaction ordering, MEV protection. Documented at /docs/unichain.
+
+**Where do I find contract deployment addresses?**
+Live, governance-controlled, refreshed addresses live in the Deployments page for each protocol: /docs/protocols/v4/deployments, /docs/protocols/v3/deployments, /docs/protocols/v2/deployments, /docs/protocols/smart-wallet/deployments, /docs/protocols/protocol-fee/deployments, /docs/liquidity/uniswapx/deployments, /docs/liquidity/liquidity-launchpad/deployments. Always read the live page; do not cache addresses.
+
+**What is the Liquidity Launchpad?**
+A Continuous Clearing Auction (CCA) system to bootstrap initial liquidity for new tokens. Bidders submit time-distributed bids; the auction discovers a clearing price; proceeds migrate into a Uniswap v4 pool when the auction completes. /docs/liquidity/liquidity-launchpad/overview.
+
+**What is The Compact?**
+A resource-lock protocol for gasless cross-chain order intents. Users deposit into resource locks, sign EIP-712 compacts authorizing allocators to spend the locks against verified arbiter conditions. /docs/protocols/the-compact/overview.
+
+**What is Uniswap Smart Wallet?**
+Smart-account capabilities (batched transactions, gas abstraction, alternative signers, validation hooks) for existing EOAs via EIP-7702 delegation. Implementation is called Calibur. /docs/protocols/smart-wallet/overview.
+
+**Where can I see all docs as raw Markdown?**
+- This file (/llms-full.txt) is the comprehensive ingest.
+- The concise index is at /llms.txt.
+- Per-page Markdown source: append `/llms.mdx` to any docs URL (for example /llms.mdx/docs/get-started/quickstart) or send `Accept: text/markdown` to any /docs/* URL.
+- Sitemap: /sitemap.xml.
+
+## Core terminology
+
+| Term | Definition |
+|---|---|
+| AMM | Automated Market Maker. Trades execute against a liquidity pool, not an order book. |
+| Concentrated Liquidity | LPs deploy capital within a custom price range; introduced in v3, refined in v4. |
+| Hooks | Developer-defined smart contracts that execute at specific Uniswap v4 pool lifecycle points. |
+| Flash Accounting | v4 mechanism where token deltas are tracked through the transaction and settled at the end. |
+| PoolManager | Singleton contract that manages every pool in Uniswap v4. |
+| PositionManager | Periphery contract for managing v4 liquidity positions. |
+| Permit2 | Shared token-approval protocol that reduces individual `approve` transactions. |
+| Universal Router | Multi-command router supporting v2, v3, v4, and Permit2 in one transaction. |
+| UniswapX | Intent-based order protocol with off-chain signing and on-chain settlement via reactors. |
+| Calibur | Implementation of Uniswap Smart Wallet using EIP-7702 delegation. |
+| Flashblocks | Sub-second block confirmations on Unichain (200 ms sub-blocks). |
+| ERC-6909 | Multi-token claims standard used inside v4 for gas-efficient balance accounting. |
+| EIP-7702 | Lets an EOA designate a contract whose code runs in the EOA's context, used by Smart Wallet. |
+| The Compact | Resource-lock protocol for gasless cross-chain order intents. |
+| CCA | Continuous Clearing Auction; the price-discovery mechanism behind Liquidity Launchpad. |
+| TWAP Oracle | Time-weighted average price oracle; available in v2 (per-pair) and v3 (per-pool). |
+| Subgraph | Indexed onchain data exposed as GraphQL via The Graph; Uniswap publishes v2/v3/v4 subgraphs. |
+
+## Official URLs
+
+- Developer Platform: https://developers.uniswap.org
+- API Reference (interactive): https://developers.uniswap.org/docs/api-reference
+- Uniswap App: https://app.uniswap.org
+- Protocol site: https://uniswap.org
+- GitHub organization: https://github.com/Uniswap
+- v4 Core: https://github.com/Uniswap/v4-core
+- v4 Periphery: https://github.com/Uniswap/v4-periphery
+- v4 Template: https://github.com/Uniswap/v4-template
+- Universal Router: https://github.com/Uniswap/universal-router
+- Permit2: https://github.com/Uniswap/permit2
+- Smart Wallet (Calibur): https://github.com/Uniswap/calibur
+- The Compact: https://github.com/Uniswap/the-compact
+- Uniswap AI: https://github.com/Uniswap/uniswap-ai
+- SDKs monorepo: https://github.com/Uniswap/sdks
+- Governance Forum: https://gov.uniswap.org
+- Discord: https://discord.gg/uniswap
+- X (Twitter): https://x.com/Uniswap

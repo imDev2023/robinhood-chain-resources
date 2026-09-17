@@ -1,0 +1,463 @@
+# Doppler - app home, all chains
+
+> Source: https://app.doppler.lol/
+> Retrieved: 2026-09-02 (agent-browser read, session lp-doppler)
+
+---
+
+Rendered text of the app home page with no chain filter and no wallet connected.
+Three feed columns: Last traded, Biggest movers, Newly created.
+Every row carries the launching application's badge (Bankr, Zora, Long, Feel) and a Quick buy button.
+
+```text
+Home
+
+Create token
+
+Portfolio
+
+Menu
+
+AllSoon
+
+All
+
+Upcoming
+
+Filters
+
+Connect
+
+-
+
+### Last traded
+
+S
+
+SETZ
+
+SETZ
+
+56s ago
+
+Bankr
+
+2976.63%
+
+Buy
+
+Delu
+
+Delu
+
+1m ago
+
+Bankr
+
+-18.38%
+
+Buy
+
+bored
+
+bored
+
+1m ago
+
+Zora
+
+-14.29%
+
+Buy
+
+VVVeity
+
+Venice Deity
+
+1m ago
+
+Bankr
+
+16.00%
+
+Buy
+
+zoracr
+
+zoracr
+
+1m ago
+
+Zora
+
+9.83%
+
+Buy
+
+nikitaolay
+
+nikitaolay
+
+2m ago
+
+Zora
+
+0.00%
+
+Buy
+
+spx48d
+
+spx48d
+
+2m ago
+
+Zora
+
+-7.68%
+
+Buy
+
+I
+
+IPOD
+
+iPod
+
+2m ago
+
+Feel
+
+-45.04%
+
+Buy
+
+EARENDEL
+
+Earendel
+
+2m ago
+
+Bankr
+
+-8.42%
+
+Buy
+
+airdropbase
+
+airdropbase
+
+2m ago
+
+Zora
+
+-8.04%
+
+Buy
+
+B
+
+Brain
+
+Brain
+
+3m ago
+
+Bankr
+
+0.00%
+
+Buy
+
+-
+
+### Biggest movers
+
+JOHNDOG
+
+John Dog
+
+4853.51%
+
+Long
+
+4853.51%
+
+Buy
+
+S
+
+SETZ
+
+SETZ
+
+2976.63%
+
+Bankr
+
+2976.63%
+
+Buy
+
+DEBTCOIN
+
+Debtcoin
+
+2202.89%
+
+Long
+
+2202.89%
+
+Buy
+
+CUM
+
+Cummingtonite
+
+1669.40%
+
+Long
+
+1669.40%
+
+Buy
+
+KOLI
+
+KOLI
+
+970.63%
+
+Long
+
+970.63%
+
+Buy
+
+MEOW
+
+AMD
+
+889.72%
+
+Long
+
+889.72%
+
+Buy
+
+AAPLDOG
+
+Apple Dog
+
+811.92%
+
+Long
+
+811.92%
+
+Buy
+
+BOMBA
+
+Bombardilo
+
+599.87%
+
+Long
+
+599.87%
+
+Buy
+
+MONITOR
+
+The Situation
+
+514.27%
+
+Long
+
+514.27%
+
+Buy
+
+BALD
+
+BALD
+
+493.73%
+
+Long
+
+493.73%
+
+Buy
+
+PLTITS
+
+Palantits
+
+408.99%
+
+Long
+
+408.99%
+
+Buy
+
+-
+
+### Newly created
+
+MOUNJARO
+
+Mounjaro
+
+37s ago
+
+0.00%
+
+Buy
+
+LOOONGSHOT
+
+Longshot
+
+2m ago
+
+Long
+
+0.00%
+
+Buy
+
+PEPEPO
+
+PEPEPO
+
+3m ago
+
+Long
+
+0.00%
+
+Buy
+
+V
+
+vested
+
+vested
+
+3m ago
+
+Long
+
+0.00%
+
+Buy
+
+JINQIA
+
+Money Mushroom
+
+3m ago
+
+Long
+
+0.00%
+
+Buy
+
+FPK
+
+Fuelpunk
+
+4m ago
+
+0.00%
+
+Buy
+
+CHILLICATS
+
+chilli cats
+
+4m ago
+
+Long
+
+0.00%
+
+Buy
+
+LOO
+
+Left on Opened
+
+4m ago
+
+Long
+
+0.00%
+
+Buy
+
+BOMBS
+
+BOMBS
+
+5m ago
+
+Long
+
+0.00%
+
+Buy
+
+CHI
+
+CHINESE INU
+
+6m ago
+
+Long
+
+0.00%
+
+Buy
+
+PLUMBERS
+
+plumbers
+
+6m ago
+
+Long
+
+0.00%
+
+Buy
+
+© Doppler 2026
+
+How it works
+
+X.comTelegramDocsMore
+
+### Solana is now on Doppler
+
+Start discovering and trading Solana tokens, now live on Doppler.
+
+Got it
+```
+
+## Interactive elements and outbound links
+
+Full accessibility snapshot with hrefs: `_raw/network/app-home.snapshot.txt`.
+Header: Home, search, Create token, Portfolio, Menu.
+Feed controls: All, Upcoming, Filters, Pulse view, Grid view, List view, Connect.
+Footer: How it works, X.com, Telegram, Docs, More.

@@ -1,0 +1,5 @@
+{
+  "url": "https://rc-api-rc.up.railway.app/api/launches/eip155%3A4663/0x64bcF4aA85559526cFf0528BCDc0Cb9d3ea41e18/state",
+  "status": 200,
+  "responseSample": "{\"graduation\":null,\"launchId\":\"0x64bcF4aA85559526cFf0528BCDc0Cb9d3ea41e18\",\"marketId\":\"0xa9349400def8a8fb8b96763c52870fcadbc8775361dd49e95291486be5141e0a\",\"networkId\":\"eip155:4663\",\"observedAt\":\"2026-09-02T15:18:04.000Z\",\"observedBlockNumber\":\"52675759\",\"phase\":\"locked\",\"provenance\":\"evm-finalized-rpc\",\"schedule\":null}"
+}

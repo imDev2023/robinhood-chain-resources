@@ -1,0 +1,103 @@
+1	https://docs.bags.fm/robinhood/claim-fees	Claim Creator Fees	pages/001-docs-robinhood-claim-fees.md
+2	https://docs.bags.fm/robinhood/contracts	Contracts Reference	pages/002-docs-robinhood-contracts.md
+3	https://docs.bags.fm/robinhood/index-tokens	Launch an Index Token	pages/003-docs-robinhood-index-tokens.md
+4	https://docs.bags.fm/robinhood/launch-token	Launch a Token	pages/004-docs-robinhood-launch-token.md
+5	https://docs.bags.fm/robinhood/overview	Robinhood Chain Overview	pages/005-docs-robinhood-overview.md
+6	https://docs.bags.fm/robinhood/partner-program	Partner Program	pages/006-docs-robinhood-partner-program.md
+7	https://docs.bags.fm/robinhood/read-state	Read State & Discover Tokens	pages/007-docs-robinhood-read-state.md
+8	https://docs.bags.fm/robinhood/setup	Environment Setup	pages/008-docs-robinhood-setup.md
+9	https://docs.bags.fm/robinhood/trade-tokens	Trade Tokens	pages/009-docs-robinhood-trade-tokens.md
+10	https://docs.bags.fm/api-reference/agent-auth-callback	Complete Agent Authentication Callback	pages/010-docs-api-reference-agent-auth-callback.md
+11	https://docs.bags.fm/api-reference/agent-auth-init	Initialize Agent Authentication	pages/011-docs-api-reference-agent-auth-init.md
+12	https://docs.bags.fm/api-reference/claim-damm-v2-vault	Claim DAMM v2 Vault	pages/012-docs-api-reference-claim-damm-v2-vault.md
+13	https://docs.bags.fm/api-reference/create-damm-v2-launch-transaction	Create DAMM v2 Launch Transaction	pages/013-docs-api-reference-create-damm-v2-launch-transaction.md
+14	https://docs.bags.fm/api-reference/create-dexscreener-order	Create Dexscreener Order	pages/014-docs-api-reference-create-dexscreener-order.md
+15	https://docs.bags.fm/api-reference/create-fee-share-admin-transfer-tx	Create Fee Share Admin Transfer Transaction	pages/015-docs-api-reference-create-fee-share-admin-transfer-tx.md
+16	https://docs.bags.fm/api-reference/create-fee-share-admin-update-config	Create Fee Share Admin Update Config	pages/016-docs-api-reference-create-fee-share-admin-update-config.md
+17	https://docs.bags.fm/api-reference/create-fee-share-configuration	Create Fee Share Config creation transaction	pages/017-docs-api-reference-create-fee-share-configuration.md
+18	https://docs.bags.fm/api-reference/create-partner-configuration	Create Partner Config	pages/018-docs-api-reference-create-partner-configuration.md
+19	https://docs.bags.fm/api-reference/create-rh-claim-txs	Create Robinhood Claim Transactions	pages/019-docs-api-reference-create-rh-claim-txs.md
+20	https://docs.bags.fm/api-reference/create-swap-transaction	Create Swap Transaction	pages/020-docs-api-reference-create-swap-transaction.md
+21	https://docs.bags.fm/api-reference/create-token-info	Create Token Info and Metadata	pages/021-docs-api-reference-create-token-info.md
+22	https://docs.bags.fm/api-reference/create-token-launch-transaction	Create Token Launch Transaction	pages/022-docs-api-reference-create-token-launch-transaction.md
+23	https://docs.bags.fm/api-reference/get-auth-me	Get Current User Info	pages/023-docs-api-reference-get-auth-me.md
+24	https://docs.bags.fm/api-reference/get-bags-pool-by-token-mint	Get Bags Pool by Token Mint	pages/024-docs-api-reference-get-bags-pool-by-token-mint.md
+25	https://docs.bags.fm/api-reference/get-bags-pools	Get Bags Pools	pages/025-docs-api-reference-get-bags-pools.md
+26	https://docs.bags.fm/api-reference/get-claim-transactions-v3	Get Claim Transactions (v3)	pages/026-docs-api-reference-get-claim-transactions-v3.md
+27	https://docs.bags.fm/api-reference/get-claim-transactions	Get Claim Transactions	pages/027-docs-api-reference-get-claim-transactions.md
+28	https://docs.bags.fm/api-reference/get-claimable-positions	Get Claimable Positions	pages/028-docs-api-reference-get-claimable-positions.md
+29	https://docs.bags.fm/api-reference/get-damm-v2-launches	Get DAMM v2 Direct Launches	pages/029-docs-api-reference-get-damm-v2-launches.md
+30	https://docs.bags.fm/api-reference/get-damm-v2-supported-quote-tokens	Get DAMM v2 Supported Quote Tokens	pages/030-docs-api-reference-get-damm-v2-supported-quote-tokens.md
+31	https://docs.bags.fm/api-reference/get-damm-v2-vault-claimables	Get DAMM v2 Vault Claimables	pages/031-docs-api-reference-get-damm-v2-vault-claimables.md
+32	https://docs.bags.fm/api-reference/get-dexscreener-order-availability	Check Dexscreener Order Availability	pages/032-docs-api-reference-get-dexscreener-order-availability.md
+33	https://docs.bags.fm/api-reference/get-evm-token-creator	Get EVM Token Creators	pages/033-docs-api-reference-get-evm-token-creator.md
+34	https://docs.bags.fm/api-reference/get-fee-share-admin-list	Get Fee Share Admin List	pages/034-docs-api-reference-get-fee-share-admin-list.md
+35	https://docs.bags.fm/api-reference/get-fee-share-wallet-bulk	Get Fee Share Wallet V2 (Bulk)	pages/035-docs-api-reference-get-fee-share-wallet-bulk.md
+36	https://docs.bags.fm/api-reference/get-fee-share-wallet	Get Fee Share Wallet V2	pages/036-docs-api-reference-get-fee-share-wallet.md
+37	https://docs.bags.fm/api-reference/get-global-claim-feed-v2	Get Global Claim Feed v2	pages/037-docs-api-reference-get-global-claim-feed-v2.md
+38	https://docs.bags.fm/api-reference/get-partner-claim-transactions	Create Partner Claim Transactions	pages/038-docs-api-reference-get-partner-claim-transactions.md
+39	https://docs.bags.fm/api-reference/get-partner-stats	Get Partner Stats	pages/039-docs-api-reference-get-partner-stats.md
+40	https://docs.bags.fm/api-reference/get-pool-config-keys	Get Pool Config Keys by Fee Claimer Vaults	pages/040-docs-api-reference-get-pool-config-keys.md
+41	https://docs.bags.fm/api-reference/get-rh-balances	Get Robinhood Balances	pages/041-docs-api-reference-get-rh-balances.md
+42	https://docs.bags.fm/api-reference/get-rh-claimable-positions	Get Robinhood Claimable Positions	pages/042-docs-api-reference-get-rh-claimable-positions.md
+43	https://docs.bags.fm/api-reference/get-rh-creation-fee	Get Robinhood Creation Fee	pages/043-docs-api-reference-get-rh-creation-fee.md
+44	https://docs.bags.fm/api-reference/get-rh-creator-earnings	Get Robinhood Creator Earnings	pages/044-docs-api-reference-get-rh-creator-earnings.md
+45	https://docs.bags.fm/api-reference/get-rh-creator-fees	Get Robinhood Creator Fees	pages/045-docs-api-reference-get-rh-creator-fees.md
+46	https://docs.bags.fm/api-reference/get-rh-creator-roster	Get Robinhood Creator Roster	pages/046-docs-api-reference-get-rh-creator-roster.md
+47	https://docs.bags.fm/api-reference/get-rh-index-token-history	Get Index Token History	pages/047-docs-api-reference-get-rh-index-token-history.md
+48	https://docs.bags.fm/api-reference/get-rh-index-token-status	Get Index Token Statuses	pages/048-docs-api-reference-get-rh-index-token-status.md
+49	https://docs.bags.fm/api-reference/get-rh-pool-price	Get Robinhood Pool Price	pages/049-docs-api-reference-get-rh-pool-price.md
+50	https://docs.bags.fm/api-reference/get-rh-portfolio	Get Robinhood Portfolio	pages/050-docs-api-reference-get-rh-portfolio.md
+51	https://docs.bags.fm/api-reference/get-rh-quote	Get Robinhood Swap Quote	pages/051-docs-api-reference-get-rh-quote.md
+52	https://docs.bags.fm/api-reference/get-rh-token-creations	Get Robinhood Token Creations	pages/052-docs-api-reference-get-rh-token-creations.md
+53	https://docs.bags.fm/api-reference/get-rh-token-state	Get Robinhood Token State	pages/053-docs-api-reference-get-rh-token-state.md
+54	https://docs.bags.fm/api-reference/get-rh-token	Get Robinhood Token	pages/054-docs-api-reference-get-rh-token.md
+55	https://docs.bags.fm/api-reference/get-rh-tokens	Get Robinhood Token List	pages/055-docs-api-reference-get-rh-tokens.md
+56	https://docs.bags.fm/api-reference/get-rh-top-volume	Get Robinhood Top Volume	pages/056-docs-api-reference-get-rh-top-volume.md
+57	https://docs.bags.fm/api-reference/get-rh-trade-stats	Get Robinhood Trade Stats	pages/057-docs-api-reference-get-rh-trade-stats.md
+58	https://docs.bags.fm/api-reference/get-rh-trades	Get Robinhood Trade History	pages/058-docs-api-reference-get-rh-trades.md
+59	https://docs.bags.fm/api-reference/get-token-claim-events	Get Token Claim Events	pages/059-docs-api-reference-get-token-claim-events.md
+60	https://docs.bags.fm/api-reference/get-token-claim-stats-v4	Get Token Claim Stats v4	pages/060-docs-api-reference-get-token-claim-stats-v4.md
+61	https://docs.bags.fm/api-reference/get-token-claim-stats	Get Token Claim Stats	pages/061-docs-api-reference-get-token-claim-stats.md
+62	https://docs.bags.fm/api-reference/get-token-launch-bulk	Get Token Launch Bulk	pages/062-docs-api-reference-get-token-launch-bulk.md
+63	https://docs.bags.fm/api-reference/get-token-launch-creators	Get Token Launch Creators	pages/063-docs-api-reference-get-token-launch-creators.md
+64	https://docs.bags.fm/api-reference/get-token-launch-feed	Get Token Launch Feed	pages/064-docs-api-reference-get-token-launch-feed.md
+65	https://docs.bags.fm/api-reference/get-token-launch	Get Token Launch	pages/065-docs-api-reference-get-token-launch.md
+66	https://docs.bags.fm/api-reference/get-token-lifetime-fees	Get Token Lifetime Fees	pages/066-docs-api-reference-get-token-lifetime-fees.md
+67	https://docs.bags.fm/api-reference/get-trade-quote	Get Trade Quote	pages/067-docs-api-reference-get-trade-quote.md
+68	https://docs.bags.fm/api-reference/init-rh-index-token	Initialize Index Token	pages/068-docs-api-reference-init-rh-index-token.md
+69	https://docs.bags.fm/api-reference/introduction	API Reference	pages/069-docs-api-reference-introduction.md
+70	https://docs.bags.fm/api-reference/send-transaction	Send Transaction	pages/070-docs-api-reference-send-transaction.md
+71	https://docs.bags.fm/api-reference/submit-dexscreener-payment	Submit Dexscreener Payment	pages/071-docs-api-reference-submit-dexscreener-payment.md
+72	https://docs.bags.fm/changelog/changelog	Changelog	pages/072-docs-changelog-changelog.md
+73	https://docs.bags.fm/cli/command-reference	CLI Command Reference	pages/073-docs-cli-command-reference.md
+74	https://docs.bags.fm/cli/install-and-setup	Install and Set Up the Bags CLI	pages/074-docs-cli-install-and-setup.md
+75	https://docs.bags.fm/cli/quickstart-token-launch	Quickstart: Launch a Token	pages/075-docs-cli-quickstart-token-launch.md
+76	https://docs.bags.fm/faq/do-i-need-wallet	Do I need a Solana wallet to use the API?	pages/076-docs-faq-do-i-need-wallet.md
+77	https://docs.bags.fm/faq/how-to-get-api-key	How do I get an API key?	pages/077-docs-faq-how-to-get-api-key.md
+78	https://docs.bags.fm/faq/linking-wallets	How to display social profile on token page?	pages/078-docs-faq-linking-wallets.md
+79	https://docs.bags.fm/faq/what-are-rate-limits	What are the rate limits?	pages/079-docs-faq-what-are-rate-limits.md
+80	https://docs.bags.fm/faq/what-is-bags-api	What is the Bags API?	pages/080-docs-faq-what-is-bags-api.md
+81	https://docs.bags.fm/how-to-guides/agent-authentication	Agent Authentication and Skill Workflow	pages/081-docs-how-to-guides-agent-authentication.md
+82	https://docs.bags.fm/how-to-guides/claim-fees	Claim Token Fees	pages/082-docs-how-to-guides-claim-fees.md
+83	https://docs.bags.fm/how-to-guides/claim-partner-fees	Claim Partner Fees	pages/083-docs-how-to-guides-claim-partner-fees.md
+84	https://docs.bags.fm/how-to-guides/create-launch-intent	Create a Launch Intent URL	pages/084-docs-how-to-guides-create-launch-intent.md
+85	https://docs.bags.fm/how-to-guides/create-partner-key	Create Partner Key	pages/085-docs-how-to-guides-create-partner-key.md
+86	https://docs.bags.fm/how-to-guides/customize-token-fees	Customize Token Fees	pages/086-docs-how-to-guides-customize-token-fees.md
+87	https://docs.bags.fm/how-to-guides/get-token-claim-events	Get Token Claim Events	pages/087-docs-how-to-guides-get-token-claim-events.md
+88	https://docs.bags.fm/how-to-guides/get-token-creators	Get Token Creators	pages/088-docs-how-to-guides-get-token-creators.md
+89	https://docs.bags.fm/how-to-guides/get-token-lifetime-fees	Get Token Lifetime Fees	pages/089-docs-how-to-guides-get-token-lifetime-fees.md
+90	https://docs.bags.fm/how-to-guides/initial-buy-math	Initial Buy Math	pages/090-docs-how-to-guides-initial-buy-math.md
+91	https://docs.bags.fm/how-to-guides/launch-token-non-sol-quote	Launch a Token with a Non-SOL Quote Token	pages/091-docs-how-to-guides-launch-token-non-sol-quote.md
+92	https://docs.bags.fm/how-to-guides/launch-token	Launch a Token	pages/092-docs-how-to-guides-launch-token.md
+93	https://docs.bags.fm/how-to-guides/trade-tokens	Trade Tokens	pages/093-docs-how-to-guides-trade-tokens.md
+94	https://docs.bags.fm/how-to-guides/typescript-node-setup	Set Up a TypeScript & Node.js Project	pages/094-docs-how-to-guides-typescript-node-setup.md
+95	https://docs.bags.fm/	Bags API Documentation	pages/095-docs-home.md
+96	https://docs.bags.fm/principles/api-key-management	API Key Management	pages/096-docs-principles-api-key-management.md
+97	https://docs.bags.fm/principles/base-url-versioning	Base URL & Versioning	pages/097-docs-principles-base-url-versioning.md
+98	https://docs.bags.fm/principles/error-handling	Error Handling	pages/098-docs-principles-error-handling.md
+99	https://docs.bags.fm/principles/file-uploads	File Upload Support	pages/099-docs-principles-file-uploads.md
+100	https://docs.bags.fm/principles/lookup-tables	Address Lookup Tables (LUTs)	pages/100-docs-principles-lookup-tables.md
+101	https://docs.bags.fm/principles/program-ids	Program IDs	pages/101-docs-principles-program-ids.md
+102	https://docs.bags.fm/principles/rate-limits	Rate Limits	pages/102-docs-principles-rate-limits.md
+103	https://docs.bags.fm/principles/tipping	Priority Fees and Tips	pages/103-docs-principles-tipping.md

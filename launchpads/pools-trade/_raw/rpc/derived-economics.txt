@@ -1,0 +1,89 @@
+Derived economics for pools.trade, Robinhood Chain 4663, read 2026-09-03.
+All values read live from the chain unless marked otherwise.
+
+== Instant Launch strategies (eth_call, 2026-09-03)
+InstantLaunchStrategy with creator fees   0x23f8209572b4a1C2AD88A42749E830791Fb027f1
+InstantLaunchStrategy no creator fees     0xAD44D55E7f8337C3cE113fBb591486E85be104b2
+LP_FEE()               = 2500        (0.25%)          identical on both
+TICK_SPACING()         = 25                            identical on both
+MIN_LAUNCH_TICK()      = -160100                       identical on both
+MAX_INITIAL_TICK()     = 251325                        identical on both
+TOTAL_SUPPLY()         = 1e27        (1,000,000,000 tokens, 18 decimals)
+initialTick()          = 198050
+initialSqrtPriceX96()  = 1582215647010010450556252328775749
+positionLiquidity()    = 50074188046840591947412
+feeSplitter()          = 0xeFF166AAf189323c58dc27eD1206EB2C37FaACDf (fees) / 0x222D6d4f1ce59b0d48D5505114eC8Addc90A4359 (no fees)
+beneficiaryVault()     = 0xd35E9CA72F64C7F93BE30fad67524323396B36D7 (fees) / 0x0000...0000 (no fees)
+launcher()             = 0x0000FffFBE8efE702c8703aE3477FF5dE3d319C0
+poolManager()          = 0x8366a39CC670B4001A1121B8F6A443A643e40951
+positionManager()      = 0x58daec3116aae6D93017bAAea7749052E8a04fA7
+
+Initial price from initialSqrtPriceX96:
+  (sqrtPriceX96 / 2^96)^2 = 3.988e8 token wei per ETH wei
+  so 1 ETH buys about 398,800,000 tokens at the opening tick
+  1,000,000,000 tokens = about 2.507 ETH, about $6.0K FDV at ETH = $2,395
+Cross-check from the app's own create form: a 1% pre-buy (10,000,000 tokens)
+quoted 0.0253656178726954 ETH = $60.94, consistent with an opening FDV near $6.0K
+plus curve slippage.
+
+Discrepancy: the app bundle's strategy registry records initialTick 198060 for every
+Robinhood strategy; the deployed contracts return 198050. The chain is authoritative.
+
+== FeeSplitter splits (getSplits(), 2026-09-03)
+0xeFF166AAf189323c58dc27eD1206EB2C37FaACDf (creator fees)
+  recipient 0xd35E9CA72F64C7F93BE30fad67524323396B36D7 UERC20BeneficiaryVault  nativeBps 4000  tokenBps 0     useCallback true
+  recipient 0xf9526Dd3361fe0ba6b7a99533ed471D3E808E99a CompoundingClaimRecipient nativeBps 6000  tokenBps 10000 useCallback true
+0x222D6d4f1ce59b0d48D5505114eC8Addc90A4359 (no creator fees)
+  recipient 0xf9526Dd3361fe0ba6b7a99533ed471D3E808E99a CompoundingClaimRecipient nativeBps 10000 tokenBps 10000 useCallback true
+BPS_DENOMINATOR() = 10000 on both.
+So the creator's cut is 40% of the ETH side of a 0.25% LP fee = 0.10% of every ETH-in trade.
+
+== CCA factory
+0x000000001F26a0044BaA66024e7b6599c61963F8 protocolFeeController() = 0x0000000000000000000000000000000000000000
+No protocol fee controller is set, so the auction takes no protocol fee.
+
+== BuybackAndBurnClaimRecipient
+0xa1ba4CC12654D2b188e3ba77dc86c75cA47f1A4e minCurrency1BurnAmount() = 500000000000000000000000
+= 500,000 tokens, 0.05% of a 1B supply. Not used by either pools.trade launch model
+(no live FeeSplitter routes to it); deployed and available.
+
+== Decoded production Crowd Launch (CCA), token TAARD
+Launch tx 0x1e97cbeec4194cde6e954b3705aaedbd445066cc55b2f6922767926a3a6d0581, 2026-09-03T02:28:44Z
+LiquidityLauncher.distributeToken -> strategy 0x05d552391067389EE44fec3924157ed33F976000 (LBPStrategy v3.1.1)
+MigratorParameters:
+  token                    0xca645b349005b2d155f272f47ef8ea837cf43987
+  currency                 0x0000000000000000000000000000000000000000  (native ETH)
+  migrationBlock           53210431
+  reservedTokenAmountForLP 500,000,000 tokens = exactly 50% of supply
+  recipient                0x000000000000000000000000000000000000dEaD  (unused LP supply and unused ETH are burned)
+  positionRecipient        0xeFF166AAf189323c58dc27eD1206EB2C37FaACDf  (the creator-fee FeeSplitter, which can never transfer the position out)
+  poolParameters           fee 2500 (0.25%), tickSpacing 25, hook 0x0 (hookless)
+  positionDefinitions      one position, offsetLower -98438, offsetUpper +98538 from the clearing tick, weight 1e7 (100%)
+  lpAllocationSchedule     one bracket, lowerThreshold 0, rate 1e7 = 100% of the raise goes into the LP
+AuctionParameters (CCA):
+  currency                 native ETH
+  tokensRecipient          0x...dEaD (unsold auction tokens are burned)
+  fundsRecipient           0x...0001 (MSG_SENDER sentinel, resolves to the LBPStrategy)
+  startBlock               53066430
+  endBlock                 53210430   (144,000 blocks = 14,400 s = 4.00 hours at 0.1 s blocks)
+  claimBlock               53210430   (same block as endBlock, so claims open the moment the window closes)
+  tickSpacing              331255776709822579 Q96 = exactly 1% of floorPrice
+  validationHook           0x0 (none)
+  floorPrice               33125577670982257900 Q96 = 4.181035712e-10 ETH per token
+                           = 0.4181 ETH FDV for 1B tokens, about $1,004 at capture
+  requiredCurrencyRaised   2090517856499999999 wei = 2.0905 ETH = exactly 5x the floor FDV
+                           50% of supply sold for 2.0905 ETH implies a graduation FDV of 4.181 ETH,
+                           about $10,047, which is the "$10K FDV" the interface displays
+  auctionStepsData         13 steps, 104 bytes:
+     12 steps of about 5.82% of auction supply each, covering 143,999 blocks (69.99% total)
+      1 final step of 30.011% released in the single last block
+     total 1e7 mps = 100% of the auction supply, total 144,000 blocks
+
+== Launch call shape, 50 most recent LiquidityLauncher transactions (2026-09-02/03)
+All 50: supply exactly 1e27 with 18 decimals, created through UERC20Factory 0x000000e200088D55C39a11F609E5F667729ad49b
+46 of 50 used InstantLaunchStrategy with creator fees 0x23f8209572b4a1C2AD88A42749E830791Fb027f1
+ 4 of 50 used LBPStrategy 0x05d552391067389EE44fec3924157ed33F976000 (Crowd Launch)
+36 of 50 bundled a launch buy: multicall(createToken, distributeToken, distributeWithNative -> UniversalRouterStrategy 0x1242c9439d589cAE85E121B1f79f2aF51e91DCEE)
+14 of 50 launched with no buy: multicall(createToken, distributeToken)
+Instant Launch configData is exactly 32 bytes: the creator fee beneficiary address.
+In every sampled Instant Launch the beneficiary equals the launching EOA.

@@ -1,0 +1,994 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "converter_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "router_",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "stock",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "address",
+      "name": "hooks",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "venue",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.FloorRoute[10]",
+    "name": "routes_",
+    "type": "tuple[10]"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "AmountOverflow",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DeadlineExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "HookedRoute",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidRoute",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidSaleToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidVenue",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NativeTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NothingToIncinerate",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PartialFill",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PermitCountMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RouteStockMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RouterMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RoutesNotSealed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SettleMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SlippageExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnexpectedEth",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "toEth",
+    "type": "bool"
+   }
+  ],
+  "name": "Incinerated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "IncineratedForQuotron",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "Rescued",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "stock",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amountIn",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "StockIncinerated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "FEE_BPS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "FEE_RECIPIENT",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "VENUE_V3",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "VENUE_V4",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256[10]",
+    "name": "amounts",
+    "type": "uint256[10]"
+   },
+   {
+    "internalType": "bool",
+    "name": "toEth",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerate",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "venue",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.GenericSale[]",
+    "name": "sales",
+    "type": "tuple[]"
+   },
+   {
+    "internalType": "bool",
+    "name": "toEth",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerateAny",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "venue",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.GenericSale[]",
+    "name": "sales",
+    "type": "tuple[]"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "value",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "v",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "r",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "s",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.StockPermit[]",
+    "name": "permits",
+    "type": "tuple[]"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minQuotronOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerateAnyForQuotron",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "venue",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.GenericSale[]",
+    "name": "sales",
+    "type": "tuple[]"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "value",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "v",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "r",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "s",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.StockPermit[]",
+    "name": "permits",
+    "type": "tuple[]"
+   },
+   {
+    "internalType": "bool",
+    "name": "toEth",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerateAnyWithPermits",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256[10]",
+    "name": "amounts",
+    "type": "uint256[10]"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "value",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "v",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "r",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "s",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.StockPermit[10]",
+    "name": "permits",
+    "type": "tuple[10]"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minQuotronOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerateForQuotron",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256[10]",
+    "name": "amounts",
+    "type": "uint256[10]"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "value",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint8",
+      "name": "v",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "r",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "s",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct QuotronStonksIncinerator.StockPermit[10]",
+    "name": "permits",
+    "type": "tuple[10]"
+   },
+   {
+    "internalType": "bool",
+    "name": "toEth",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minUsdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minWethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "incinerateWithPermits",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "usdgOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wethOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "feePaid",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "quotronRouter",
+  "outputs": [
+   {
+    "internalType": "contract IQuotronRouterIncinerator",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "rescue",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "rescueNative",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "routes",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "stock",
+    "type": "address"
+   },
+   {
+    "internalType": "uint24",
+    "name": "fee",
+    "type": "uint24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "address",
+    "name": "hooks",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "venue",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "unlockCallback",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "usdg",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "v3Router",
+  "outputs": [
+   {
+    "internalType": "contract IV3ExactInputIncinerator",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "wethUsdgFee",
+  "outputs": [
+   {
+    "internalType": "uint24",
+    "name": "",
+    "type": "uint24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

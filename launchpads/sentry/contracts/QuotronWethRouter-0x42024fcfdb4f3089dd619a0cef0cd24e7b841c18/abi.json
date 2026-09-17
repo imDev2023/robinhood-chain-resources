@@ -1,0 +1,390 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "poolManager_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "quotron_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "weth_",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct PoolKey",
+    "name": "poolKey_",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "DeadlineExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DirectEthRejected",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "EthTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExactOutputUnavailable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidPool",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PartialFill",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SettlementExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SlippageExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenTransferFailed",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "payer",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "wethSpent",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "Bought",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "payer",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "quotronIn",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "ethOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "Sold",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "minQuotronOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "buyExactEth",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "quotronOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "buyExactQuotron",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "wethSpent",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "hook",
+  "outputs": [
+   {
+    "internalType": "contract IQuotronFeeView",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolKey",
+  "outputs": [
+   {
+    "internalType": "Currency",
+    "name": "currency0",
+    "type": "address"
+   },
+   {
+    "internalType": "Currency",
+    "name": "currency1",
+    "type": "address"
+   },
+   {
+    "internalType": "uint24",
+    "name": "fee",
+    "type": "uint24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "contract IHooks",
+    "name": "hooks",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "quotron",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "quotronIn",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "minEthOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   }
+  ],
+  "name": "sellExactQuotronForEth",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "ethOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "unlockCallback",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "wethIsCurrency0",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

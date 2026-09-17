@@ -1,0 +1,445 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "airlock_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IUniswapV3Factory",
+    "name": "factory_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "targetTick",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "currentTick",
+    "type": "int24"
+   }
+  ],
+  "name": "CannotMigrateInsufficientTick",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "CannotMintZeroLiquidity",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint24",
+    "name": "fee",
+    "type": "uint24"
+   }
+  ],
+  "name": "InvalidFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidProtocolOwnerBeneficiary",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidProtocolOwnerShares",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidShares",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "tick",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   }
+  ],
+  "name": "InvalidTickRange",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "tickLower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickUpper",
+    "type": "int24"
+   }
+  ],
+  "name": "InvalidTickRangeMisordered",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTotalShares",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "limit",
+    "type": "uint256"
+   }
+  ],
+  "name": "MaxShareToBeSoldExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlyPool",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolAlreadyExited",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolAlreadyInitialized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolLocked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SenderNotAirlock",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnorderedBeneficiaries",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "beneficiary",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "fees0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "fees1",
+    "type": "uint256"
+   }
+  ],
+  "name": "Collect",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "poolOrHook",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   }
+  ],
+  "name": "Create",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "beneficiary",
+      "type": "address"
+     },
+     {
+      "internalType": "uint96",
+      "name": "shares",
+      "type": "uint96"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct BeneficiaryData[]",
+    "name": "beneficiaries",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "Lock",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "airlock",
+  "outputs": [
+   {
+    "internalType": "contract Airlock",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "name": "collectFees",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "fees0ToDistribute",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "fees1ToDistribute",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "name": "exitLiquidity",
+  "outputs": [
+   {
+    "internalType": "uint160",
+    "name": "sqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "internalType": "address",
+    "name": "token0",
+    "type": "address"
+   },
+   {
+    "internalType": "uint128",
+    "name": "fees0",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "balance0",
+    "type": "uint128"
+   },
+   {
+    "internalType": "address",
+    "name": "token1",
+    "type": "address"
+   },
+   {
+    "internalType": "uint128",
+    "name": "fees1",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "balance1",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "factory",
+  "outputs": [
+   {
+    "internalType": "contract IUniswapV3Factory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "name": "getState",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickLower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickUpper",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxShareToBeSold",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "totalTokensOnBondingCurve",
+    "type": "uint256"
+   },
+   {
+    "internalType": "enum PoolStatus",
+    "name": "status",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "totalTokensOnBondingCurve",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount0Owed",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount1Owed",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "uniswapV3MintCallback",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

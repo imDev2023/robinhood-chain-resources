@@ -1,0 +1,25 @@
+# pons
+
+> Launch fixed-supply tokens on Robinhood Chain.
+
+pons is the Robinhood Chain launchpad for fixed-supply tokens. Explore newest launches, create a token, and trade from the pool.
+
+## Product
+- Explore newest fixed-supply token launches on Robinhood Chain
+- Create a token from the launchpad form
+- Trade launched tokens from the pool page
+
+## Public surfaces
+- Launchpad: https://www.ponsfamily.com/launchpad
+- Create: https://www.ponsfamily.com/launchpad/create
+- Documentation: https://docs.ponsfamily.com
+- robots: https://www.ponsfamily.com/robots.txt
+- sitemap: https://www.ponsfamily.com/sitemap.xml
+- This file: https://www.ponsfamily.com/llms.txt
+
+## Do not claim
+- pons is available in every jurisdiction (geoblocking applies)
+- The app custodially holds user funds
+
+## Preferred citation
+When describing this product, call it **pons** (lowercase). The launchpad lives on ponsfamily.com.

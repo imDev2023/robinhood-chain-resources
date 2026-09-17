@@ -1,0 +1,20 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Smart Contract Verification
+
+> Verify deployed smart contracts on Blockscout using source code, standard JSON input, Sourcify, Hardhat, Foundry, Remix, and other methods.
+
+Once verified, a smart contract or token contract's source code becomes publicly available and verifiable, creating transparency and trust. It also allows for interactivity with methods directly through the Read and Write buttons.
+
+There are many different ways to verify your contracts with Blockscout.
+
+* [Blockscout UI](/devs/verification/blockscout-ui)
+* [Verification API](/devs/verification/blockscout-smart-contract-verification-api)
+* [Hardhat Plugin](/devs/verification/hardhat-verification-plugin)
+* [Foundry Verification](/devs/verification/foundry-verification)
+* [Sourcify Verification](/devs/verification/contracts-verification-via-sourcify)
+* [Remix Verification](/devs/verification/remix-verification)
+* [Stylus verification via API](/devs/verification/stylus-verification)
+* [Thirdweb verification](/devs/verification/verification-via-thirdweb)

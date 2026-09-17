@@ -1,0 +1,49 @@
+pages/01-docs-home.md	Home	https://docs.doppler.lol/	docs-home.direct.md
+pages/02-docs-explainer.md	Explainer	https://docs.doppler.lol/explainer	docs-explainer.direct.md
+pages/03-docs-core-concepts-creation-and-initialization.md	Creation & initialization	https://docs.doppler.lol/core-concepts/creation-and-initialization	docs-core-concepts_creation-and-initialization.direct.md
+pages/04-docs-core-concepts-price-discovery-auctions.md	Price discovery auctions	https://docs.doppler.lol/core-concepts/price-discovery-auctions	docs-core-concepts_price-discovery-auctions.direct.md
+pages/05-docs-core-concepts-supply-curves.md	Supply curves	https://docs.doppler.lol/core-concepts/supply-curves	docs-core-concepts_supply-curves.direct.md
+pages/06-docs-core-concepts-liquidity-migration-options.md	Liquidity migration	https://docs.doppler.lol/core-concepts/liquidity-migration-options	docs-core-concepts_liquidity-migration-options.direct.md
+pages/07-docs-core-concepts-fees-and-economics.md	Fees & economics	https://docs.doppler.lol/core-concepts/fees-and-economics	docs-core-concepts_fees-and-economics.direct.md
+pages/08-docs-advanced-features-doppler-hooks.md	Doppler Hooks	https://docs.doppler.lol/advanced-features/doppler-hooks	docs-advanced-features_doppler-hooks.direct.md
+pages/09-docs-advanced-features-rehype-pools.md	Fee Rehypothecation	https://docs.doppler.lol/advanced-features/rehype-pools	docs-advanced-features_rehype-pools.direct.md
+pages/10-docs-advanced-features-doppler404.md	Doppler404	https://docs.doppler.lol/advanced-features/doppler404	docs-advanced-features_doppler404.direct.md
+pages/11-docs-reference-api-reference.md	SDK API	https://docs.doppler.lol/reference/api-reference	docs-reference_api-reference.direct.md
+pages/12-docs-reference-examples.md	EVM SDK Examples	https://docs.doppler.lol/reference/examples	docs-reference_examples.direct.md
+pages/13-docs-reference-examples-multicurve.md	Multicurve	https://docs.doppler.lol/reference/examples/multicurve	docs-reference_examples_multicurve.direct.md
+pages/14-docs-reference-examples-static-auctions.md	Static auctions	https://docs.doppler.lol/reference/examples/static-auctions	docs-reference_examples_static-auctions.direct.md
+pages/15-docs-reference-examples-dynamic-auctions.md	Dynamic auctions	https://docs.doppler.lol/reference/examples/dynamic-auctions	docs-reference_examples_dynamic-auctions.direct.md
+pages/16-docs-reference-examples-quoting-monitoring-and-metrics.md	Quoting, monitoring, and metrics	https://docs.doppler.lol/reference/examples/quoting-monitoring-and-metrics	docs-reference_examples_quoting-monitoring-and-metrics.direct.md
+pages/17-docs-reference-svm-sdk-examples.md	SVM SDK Examples	https://docs.doppler.lol/reference/svm-sdk-examples	docs-reference_svm-sdk-examples.direct.md
+pages/18-docs-reference-svm-sdk-examples-launch.md	Launch	https://docs.doppler.lol/reference/svm-sdk-examples/launch	docs-reference_svm-sdk-examples_launch.direct.md
+pages/19-docs-reference-svm-sdk-examples-dynamic-fee-launch.md	Dynamic fee launch	https://docs.doppler.lol/reference/svm-sdk-examples/dynamic-fee-launch	docs-reference_svm-sdk-examples_dynamic-fee-launch.direct.md
+pages/20-docs-reference-svm-sdk-examples-swap.md	Swap	https://docs.doppler.lol/reference/svm-sdk-examples/swap	docs-reference_svm-sdk-examples_swap.direct.md
+pages/21-docs-reference-svm-sdk-examples-launch-monitor-and-e2e.md	Launch, monitor, and e2e	https://docs.doppler.lol/reference/svm-sdk-examples/launch-monitor-and-e2e	docs-reference_svm-sdk-examples_launch-monitor-and-e2e.direct.md
+pages/22-docs-reference-overview.md	Data Indexing	https://docs.doppler.lol/reference/overview	docs-reference_overview.direct.md
+pages/23-docs-reference-api-usage.md	Indexer API	https://docs.doppler.lol/reference/api-usage	docs-reference_api-usage.direct.md
+pages/24-docs-reference-quotes-and-swaps.md	Quotes & swaps	https://docs.doppler.lol/reference/quotes-and-swaps	docs-reference_quotes-and-swaps.direct.md
+pages/25-docs-reference-contract-addresses.md	Contract addresses	https://docs.doppler.lol/reference/contract-addresses	docs-reference_contract-addresses.direct.md
+pages/26-docs-reference-metadata-standards.md	Metadata standards	https://docs.doppler.lol/reference/metadata-standards	docs-reference_metadata-standards.direct.md
+pages/27-docs-reference-legacy-sdks-and-migration-guides.md	Legacy SDK migration guide	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides	docs-reference_legacy-sdks-and-migration-guides.direct.md
+pages/28-docs-reference-legacy-sdks-and-migration-guides-v3.md	v3	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3	docs-reference_legacy-sdks-and-migration-guides_v3.direct.md
+pages/29-docs-reference-legacy-sdks-and-migration-guides-v3-overview.md	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview	docs-reference_legacy-sdks-and-migration-guides_v3_overview.direct.md
+pages/30-docs-reference-legacy-sdks-and-migration-guides-v3-getting-started.md	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started	docs-reference_legacy-sdks-and-migration-guides_v3_getting-started.direct.md
+pages/31-docs-reference-legacy-sdks-and-migration-guides-v3-factory.md	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory	docs-reference_legacy-sdks-and-migration-guides_v3_factory.direct.md
+pages/32-docs-reference-legacy-sdks-and-migration-guides-v3-token.md	Token	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/token	docs-reference_legacy-sdks-and-migration-guides_v3_token.direct.md
+pages/33-docs-reference-legacy-sdks-and-migration-guides-v3-quoter.md	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/quoter	docs-reference_legacy-sdks-and-migration-guides_v3_quoter.direct.md
+pages/34-docs-reference-legacy-sdks-and-migration-guides-v3-custom-fees.md	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees	docs-reference_legacy-sdks-and-migration-guides_v3_custom-fees.direct.md
+pages/35-docs-reference-legacy-sdks-and-migration-guides-v3-governance-options.md	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options	docs-reference_legacy-sdks-and-migration-guides_v3_governance-options.direct.md
+pages/36-docs-reference-legacy-sdks-and-migration-guides-v3-streamable-v3.md	Streamable V3	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/streamable-v3	docs-reference_legacy-sdks-and-migration-guides_v3_streamable-v3.direct.md
+pages/37-docs-reference-legacy-sdks-and-migration-guides-v4.md	v4	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4	docs-reference_legacy-sdks-and-migration-guides_v4.direct.md
+pages/38-docs-reference-legacy-sdks-and-migration-guides-v4-overview.md	Overview	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview	docs-reference_legacy-sdks-and-migration-guides_v4_overview.direct.md
+pages/39-docs-reference-legacy-sdks-and-migration-guides-v4-getting-started.md	Get Started	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started	docs-reference_legacy-sdks-and-migration-guides_v4_getting-started.direct.md
+pages/40-docs-reference-legacy-sdks-and-migration-guides-v4-examples.md	Examples	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples	docs-reference_legacy-sdks-and-migration-guides_v4_examples.direct.md
+pages/41-docs-reference-legacy-sdks-and-migration-guides-v4-factory.md	Factory	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory	docs-reference_legacy-sdks-and-migration-guides_v4_factory.direct.md
+pages/42-docs-reference-legacy-sdks-and-migration-guides-v4-quoter.md	Quoter	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/quoter	docs-reference_legacy-sdks-and-migration-guides_v4_quoter.direct.md
+pages/43-docs-reference-legacy-sdks-and-migration-guides-v4-lens.md	Lens	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/lens	docs-reference_legacy-sdks-and-migration-guides_v4_lens.direct.md
+pages/44-docs-reference-legacy-sdks-and-migration-guides-v4-custom-fees.md	Custom Fees	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees	docs-reference_legacy-sdks-and-migration-guides_v4_custom-fees.direct.md
+pages/45-docs-reference-legacy-sdks-and-migration-guides-v4-governance-options.md	Governance Options	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/governance-options	docs-reference_legacy-sdks-and-migration-guides_v4_governance-options.direct.md
+pages/46-docs-reference-legacy-sdks-and-migration-guides-overview.md	Historical context	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/overview	docs-reference_legacy-sdks-and-migration-guides_overview.direct.md
+pages/47-docs-reference-legacy-sdks-and-migration-guides-sdk-migration-guide.md	Legacy SDK migration guide	https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/sdk-migration-guide	docs-reference_legacy-sdks-and-migration-guides_sdk-migration-guide.direct.md
+pages/48-docs-reference-security-and-bug-bounties.md	Security & bug bounties	https://docs.doppler.lol/reference/security-and-bug-bounties	docs-reference_security-and-bug-bounties.direct.md
+pages/49-docs-reference-roadmap.md	Roadmap	https://docs.doppler.lol/reference/roadmap	docs-reference_roadmap.direct.md

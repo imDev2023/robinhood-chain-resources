@@ -1,0 +1,2123 @@
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# ProjectVex
+
+VEX
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+-
+
+0xada5…f7cb+23.61K VEX
+
+2m@ $0.004474
+
+-
+
+0xf70d…dbef+114.05K VEX
+
+2m@ $0.004460
+
+-
+
+0x67d6…60e4+221.16K VEX
+
+3m@ $0.004423
+
+-
+
+0x2bb2…fbd1+364.43K VEX
+
+3m@ $0.004361
+
+-
+
+0x4337…7b1f-70.75K VEX
+
+4m@ $0.004279
+
+-
+
+0xc66d…3049-31.47K VEX
+
+4m@ $0.004302
+
+-
+
+0x642d…16f8-56.92K VEX
+
+5m@ $0.004327
+
+-
+
+0x391b…5ab1-414.9K VEX
+
+7m@ $0.004378
+
+-
+
+0xfca7…7467+3.87K VEX
+
+7m@ $0.004434
+
+-
+
+0x391b…5ab1-436.71K VEX
+
+8m@ $0.004468
+
+-
+
+0x391b…5ab1-200.26K VEX
+
+8m@ $0.004537
+
+-
+
+0xddbc…5680-21.9K VEX
+
+8m@ $0.004562
+
+-
+
+0x4337…5393-14.82K VEX
+
+8m@ $0.004566
+
+-
+
+0x391b…5ab1-259.59K VEX
+
+8m@ $0.004570
+
+-
+
+0xc4e7…72a4+25.7K VEX
+
+8m@ $0.004638
+
+-
+
+0xc4e7…72a4+5.14K VEX
+
+9m@ $0.004633
+
+-
+
+0x391b…5ab1-341.78K VEX
+
+9m@ $0.004659
+
+-
+
+0xc4e7…72a4+5.06K VEX
+
+9m@ $0.004713
+
+-
+
+0xc4e7…72a4+5.06K VEX
+
+10m@ $0.004711
+
+-
+
+0x391b…5ab1-347.62K VEX
+
+10m@ $0.004734
+
+-
+
+0xc4e7…72a4+4.98K VEX
+
+10m@ $0.004790
+
+-
+
+0xc4e7…72a4+4.98K VEX
+
+10m@ $0.004788
+
+-
+
+0x8853…f987-82.03K VEX
+
+10m@ $0.004783
+
+-
+
+0x344d…51a1+20.52K VEX
+
+11m@ $0.004805
+
+-
+
+0x196d…c0f9-13.94K VEX
+
+11m@ $0.004773
+
+-
+
+0x4337…7b5f-63.77K VEX
+
+11m@ $0.004774
+
+-
+
+0x6454…6f95-36.09K VEX
+
+12m@ $0.004786
+
+-
+
+0x8853…f987-12.35K VEX
+
+12m@ $0.004827
+
+-
+
+0x8853…f987-49.17K VEX
+
+13m@ $0.004830
+
+-
+
+0x0dab…0fc5+7.23K VEX
+
+14m@ $0.004867
+
+-
+
+0xd7e4…188c-65.07K VEX
+
+14m@ $0.004845
+
+-
+
+0x9cc2…8258-218.56K VEX
+
+15m@ $0.004865
+
+-
+
+0xdcd4…718a-59.38K VEX
+
+15m@ $0.004906
+
+-
+
+0xf47d…cfe0-18.88K VEX
+
+16m@ $0.004935
+
+-
+
+0xd562…b428-61.85K VEX
+
+17m@ $0.004928
+
+-
+
+0x4fa0…6a02+64.46K VEX
+
+17m@ $0.004974
+
+-
+
+0x9bc4…1083+78.44K VEX
+
+17m@ $0.004957
+
+-
+
+0x7fc3…e1c9+4.84K VEX
+
+17m@ $0.004932
+
+-
+
+0xd712…3279+32.66K VEX
+
+19m@ $0.004918
+
+-
+
+0x69ef…1a37-55.89K VEX
+
+19m@ $0.004910
+
+-
+
+0x9bc4…1083+100.54K VEX
+
+19m@ $0.004921
+
+-
+
+0x7b05…77a6-24.57K VEX
+
+19m@ $0.004900
+
+-
+
+0xcc4b…7a1a-100.53K VEX
+
+20m@ $0.004915
+
+-
+
+0xcc4b…7a1a+17.73K VEX
+
+20m@ $0.004935
+
+-
+
+0x8853…f987-55.17K VEX
+
+20m@ $0.004936
+
+-
+
+0x3a5c…9067+240.8K VEX
+
+22m@ $0.004899
+
+-
+
+0x0cd6…bbbd-4.71K VEX
+
+23m@ $0.004857
+
+-
+
+0xa67d…3fbb+149.03K VEX
+
+23m@ $0.004882
+
+-
+
+0x344d…51a1+48.58K VEX
+
+23m@ $0.004857
+
+-
+
+0x2b1f…f768+4.98K VEX
+
+24m@ $0.004852
+
+-
+
+0x55b9…35e5+141.54K VEX
+
+24m@ $0.004821
+
+-
+
+0xa5a5…a142+1.91K VEX
+
+25m@ $0.004790
+
+-
+
+0x56ba…3c39+441.46K VEX
+
+27m@ $0.004744
+
+-
+
+0xaa26…ce3e-150.86K VEX
+
+28m@ $0.004693
+
+-
+
+0x98ab…1303+47.6K VEX
+
+29m@ $0.004716
+
+-
+
+0x1e2e…1292+5.12K VEX
+
+29m@ $0.004710
+
+-
+
+0xca7d…4589+84.11K VEX
+
+30m@ $0.004699
+
+-
+
+0x059d…7b11+12.25K VEX
+
+30m@ $0.004688
+
+-
+
+0x81ad…c13c+42.1K VEX
+
+30m@ $0.004711
+
+-
+
+0xdddd…e6fa+1.82K VEX
+
+30m@ $0.004691
+
+-
+
+0xdddd…e6fa-4.86K VEX
+
+30m@ $0.004664
+
+-
+
+0xd782…0db8+34.87K VEX
+
+30m@ $0.004674
+
+-
+
+0x0ec4…038f+77.25K VEX
+
+30m@ $0.004661
+
+-
+
+0x6085…fdab+257.52K VEX
+
+31m@ $0.004623
+
+-
+
+0x18dd…8e25+63.52K VEX
+
+31m@ $0.004586
+
+-
+
+0x6937…7ef5+305.58K VEX
+
+31m@ $0.004544
+
+-
+
+0x698d…aaed+321.84K VEX
+
+31m@ $0.004499
+
+-
+
+0xf42b…acec+315.69K VEX
+
+32m@ $0.004405
+
+-
+
+0x3ceb…22b0+2.18K VEX
+
+32m@ $0.004385
+
+-
+
+0x8853…f987+49.52K VEX
+
+32m@ $0.004388
+
+-
+
+0x8853…f987+74.8K VEX
+
+32m@ $0.004350
+
+-
+
+0xada5…f7cb+68.18K VEX
+
+32m@ $0.004337
+
+-
+
+0x812a…d23f-181.8K VEX
+
+34m@ $0.004310
+
+-
+
+0x638b…8b7f-150.96K VEX
+
+34m@ $0.004345
+
+-
+
+0xd49b…f6bf-466.47K VEX
+
+34m@ $0.004437
+
+-
+
+0xd49b…f6bf-417.37K VEX
+
+35m@ $0.004534
+
+-
+
+0x563f…0746-42.1K VEX
+
+35m@ $0.004587
+
+-
+
+0xfac1…e420-40.08K VEX
+
+38m@ $0.004542
+
+-
+
+0xf3f4…059e-152.66K VEX
+
+38m@ $0.004579
+
+-
+
+0x8853…f987-37.94K VEX
+
+38m@ $0.004588
+
+-
+
+0x0580…d6df+5.15K VEX
+
+39m@ $0.004633
+
+-
+
+0x0580…d6df+5.16K VEX
+
+40m@ $0.004628
+
+-
+
+0x0580…d6df+5.16K VEX
+
+40m@ $0.004627
+
+-
+
+0x0580…d6df+5.16K VEX
+
+40m@ $0.004626
+
+-
+
+0x77a7…1ac9+780.19 VEX
+
+41m@ $0.004636
+
+-
+
+0x9e5d…97a7+86.88K VEX
+
+43m@ $0.004585
+
+-
+
+0x2bfd…3f4c+20.62K VEX
+
+44m@ $0.004633
+
+-
+
+0xd712…3279-28K VEX
+
+44m@ $0.004583
+
+-
+
+0x4337…6f8b-246.88K VEX
+
+44m@ $0.004642
+
+-
+
+0x56f6…c14b+15.3K VEX
+
+44m@ $0.004682
+
+-
+
+0x0580…d6df+5.1K VEX
+
+45m@ $0.004680
+
+-
+
+0x0449…7c1f+18.49K VEX
+
+45m@ $0.004697
+
+-
+
+0xf3f4…059e-152.66K VEX
+
+45m@ $0.004667
+
+-
+
+0x18dd…8e25+105.35K VEX
+
+46m@ $0.004719
+
+-
+
+0x2af7…27ec-20.74K VEX
+
+46m@ $0.004669
+
+-
+
+0xe976…b726-26.59K VEX
+
+46m@ $0.004675
+
+-
+
+0x812a…d23f-202.13K VEX
+
+46m@ $0.004693
+
+-
+
+0x11d3…70e7+7.53K VEX
+
+47m@ $0.004773
+
+-
+
+0x0ec4…038f+275.09K VEX
+
+47m@ $0.004739
+
+-
+
+0xada5…f7cb+234.9K VEX
+
+47m@ $0.004679
+
+-
+
+0xf42b…acec+522.87K VEX
+
+47m@ $0.004591
+
+-
+
+0x0ec4…038f+44.9K VEX
+
+47m@ $0.004527
+
+-
+
+0xddbc…5680+26.75K VEX
+
+47m@ $0.004519
+
+-
+
+0x5b0e…1476-533.69K VEX
+
+47m@ $0.004536
+
+-
+
+0xd712…9dae+51.16K VEX
+
+47m@ $0.004510
+
+-
+
+0xabb2…cd10+286.22K VEX
+
+47m@ $0.004589
+
+-
+
+0x9199…15ac+109.53K VEX
+
+48m@ $0.004544
+
+-
+
+0x56c2…8a8b+331.85K VEX
+
+48m@ $0.004495
+
+-
+
+0x331d…2466+288.06K VEX
+
+48m@ $0.004427
+
+-
+
+0x6937…7ef5+39.59K VEX
+
+48m@ $0.004392
+
+-
+
+0x98ab…1303+54.72K VEX
+
+48m@ $0.004369
+
+-
+
+0x74c3…d79d-85.36K VEX
+
+48m@ $0.004344
+
+-
+
+0xf1c1…6e1d+273.57K VEX
+
+48m@ $0.004373
+
+-
+
+0xe976…b726+27.13K VEX
+
+48m@ $0.004403
+
+-
+
+0x6f7a…6213-112.79K VEX
+
+48m@ $0.004367
+
+-
+
+0xa67d…3fbb+366.86K VEX
+
+48m@ $0.004289
+
+-
+
+0x74c3…d79d-256.08K VEX
+
+48m@ $0.004262
+
+-
+
+0x9cc2…8258+55.42K VEX
+
+48m@ $0.004314
+
+-
+
+0x9cc2…8258+55.59K VEX
+
+48m@ $0.004301
+
+-
+
+0x9199…15ac+57.41K VEX
+
+48m@ $0.004294
+
+-
+
+0x9cc2…8258+55.91K VEX
+
+49m@ $0.004277
+
+-
+
+0x9cc2…8258+56.08K VEX
+
+49m@ $0.004264
+
+-
+
+0x5118…6f72+140.21K VEX
+
+49m@ $0.004248
+
+-
+
+0xe209…ef08+406.11K VEX
+
+49m@ $0.004208
+
+-
+
+0xe209…ef08-103.34K VEX
+
+49m@ $0.004213
+
+-
+
+0xf092…3ce2+24.79K VEX
+
+49m@ $0.004156
+
+-
+
+0xd712…cd24+39.06K VEX
+
+49m@ $0.004142
+
+-
+
+0x9320…79bf-318.78K VEX
+
+49m@ $0.004140
+
+-
+
+0x0000…02c9+20.7K VEX
+
+49m@ $0.004162
+
+-
+
+0x9320…79bf-374.22K VEX
+
+49m@ $0.004212
+
+-
+
+0xcc4b…7a1a+176.35K VEX
+
+49m@ $0.004267
+
+-
+
+0xd712…3279+34.67K VEX
+
+49m@ $0.004241
+
+-
+
+0xa5a5…a142+337.88K VEX
+
+49m@ $0.004203
+
+-
+
+0x4337…224f-161.06K VEX
+
+49m@ $0.004177
+
+-
+
+0x74c3…d79d-341.44K VEX
+
+49m@ $0.004207
+
+-
+
+0x6085…fdab+338.81K VEX
+
+49m@ $0.004241
+
+-
+
+0x8d47…3796+28.97K VEX
+
+50m@ $0.004211
+
+-
+
+0xa67d…3fbb+362.31K VEX
+
+50m@ $0.004161
+
+-
+
+0x67d6…60e4+40.03K VEX
+
+50m@ $0.004120
+
+-
+
+0xcc4b…7a1a+60.02K VEX
+
+50m@ $0.004110
+
+-
+
+0xeb31…320d+3.91K VEX
+
+51m@ $0.004114
+
+-
+
+0xa451…3b45+2.92K VEX
+
+51m@ $0.004098
+
+-
+
+0x1cd9…5baf+11.92K VEX
+
+51m@ $0.004096
+
+-
+
+0x2bb2…fbd1+99.7K VEX
+
+52m@ $0.004098
+
+-
+
+0x728f…f500+67.82K VEX
+
+52m@ $0.004082
+
+-
+
+0xca7d…4589+121.9K VEX
+
+52m@ $0.004055
+
+-
+
+0xd712…9dae+64.52K VEX
+
+52m@ $0.004024
+
+-
+
+0x059d…7b11+122.68K VEX
+
+52m@ $0.004041
+
+-
+
+0xd460…181b+76.43K VEX
+
+52m@ $0.003992
+
+-
+
+0xaa26…ce3e+349.41K VEX
+
+52m@ $0.003946
+
+-
+
+0xff91…c603+73.76K VEX
+
+53m@ $0.003918
+
+-
+
+0xff91…c603+70.54K VEX
+
+53m@ $0.003915
+
+-
+
+0x9bc4…1083+12.31K VEX
+
+53m@ $0.003896
+
+-
+
+0xfe5d…3228+37.56K VEX
+
+55m@ $0.003891
+
+-
+
+0xe377…144a-512.91K VEX
+
+58m@ $0.003921
+
+-
+
+0x9ee7…bc34+29.95K VEX
+
+58m@ $0.003991
+
+-
+
+0xa5a5…a142+126.26K VEX
+
+59m@ $0.003976
+
+-
+
+0x12dc…b62c+6.07K VEX
+
+1h@ $0.003995
+
+-
+
+0x2af7…27ec+12.02K VEX
+
+1h@ $0.003980
+
+-
+
+0x812a…d23f+252.32K VEX
+
+1h@ $0.003937
+
+-
+
+0x2af7…27ec+12.18K VEX
+
+1h@ $0.003925
+
+-
+
+0x2895…0094+7.04K VEX
+
+1h@ $0.003922
+
+-
+
+0x401e…88e8-27.42K VEX
+
+1h@ $0.003911
+
+-
+
+0xfe5d…3228+167.74K VEX
+
+1h@ $0.003902
+
+-
+
+0x693d…c121+18.61K VEX
+
+1h@ $0.003893
+
+-
+
+0x2af7…27ec+12.35K VEX
+
+1h@ $0.003870
+
+-
+
+0x2af7…27ec+223.38K VEX
+
+1h@ $0.003852
+
+-
+
+0x812a…d23f+167.23K VEX
+
+1h@ $0.003836
+
+-
+
+0xefbc…3c30+63.51K VEX
+
+1h@ $0.003793
+
+-
+
+0x812a…d23f+263.25K VEX
+
+1h@ $0.003788
+
+-
+
+0xa5a5…a142+98.91K VEX
+
+1h@ $0.003734
+
+-
+
+0x391b…5ab1+143.59K VEX
+
+1h@ $0.003714
+
+-
+
+0x9ee7…bc34+12.89K VEX
+
+1h@ $0.003709
+
+-
+
+0xf70d…dbef+18.7K VEX
+
+1h@ $0.003716
+
+-
+
+0x370a…12cf+40.11K VEX
+
+1h@ $0.003699
+
+-
+
+0x9ee7…bc34+12.94K VEX
+
+1h@ $0.003694
+
+-
+
+0x4e67…e4d4+16.48K VEX
+
+1h@ $0.003681
+
+-
+
+0xdcd4…718a+12.94K VEX
+
+1h@ $0.003697
+
+-
+
+0x7cb6…19dc+65.31K VEX
+
+1h@ $0.003691
+
+-
+
+0x2895…0094+1.55K VEX
+
+1h@ $0.003693
+
+-
+
+0x5f8d…17a2-881.55K VEX
+
+1h@ $0.003756
+
+-
+
+0x9572…7431-944.49K VEX
+
+1h@ $0.003905
+
+-
+
+0x0000…1e1a-19.27K VEX
+
+1h@ $0.003959
+
+-
+
+0x3131…aab6-216.95K VEX
+
+1h@ $0.003962
+
+-
+
+0x472c…91aa-114.18K VEX
+
+1h@ $0.003995
+
+-
+
+0x12cc…7114+60.16K VEX
+
+1h@ $0.004043
+
+-
+
+0x2ce2…6eab+49.5K VEX
+
+1h@ $0.004053
+
+-
+
+0x3f30…caee+68.61K VEX
+
+1h@ $0.004031
+
+-
+
+0x3f30…caee+230.99K VEX
+
+1h@ $0.004003
+
+-
+
+0xbc64…e2a0+28.91K VEX
+
+1h@ $0.003986
+
+-
+
+0x9320…79bf-198K VEX
+
+1h@ $0.003982
+
+-
+
+0xd712…9b96+59.39K VEX
+
+1h@ $0.004031
+
+-
+
+0x0000…c3f5+40.33K VEX
+
+1h@ $0.004011
+
+-
+
+0x7319…1a12+13.09K VEX
+
+1h@ $0.004014
+
+-
+
+0xd712…2f1b+79.78K VEX
+
+1h@ $0.004010
+
+-
+
+0x0000…efaf+26.61K VEX
+
+1h@ $0.004020
+
+-
+
+0x56f6…c14b+29.94K VEX
+
+1h@ $0.003988
+
+-
+
+0xd782…0db8+17.64K VEX
+
+1h@ $0.003996
+
+-
+
+0xd82f…6af2+120.35K VEX
+
+1h@ $0.003968
+
+-
+
+0x1dd9…dd43-1.14K VEX
+
+1h@ $0.003933
+
+-
+
+0x67a4…d026+62.1K VEX
+
+1h@ $0.003962
+
+-
+
+0x12cc…7114+203.57K VEX
+
+1h@ $0.003932
+
+-
+
+0x3f30…caee+210.37K VEX
+
+1h@ $0.003895
+
+-
+
+0x5118…6f72+46.57K VEX
+
+1h@ $0.003872
+
+-
+
+0x4127…68c6+62.5K VEX
+
+1h@ $0.003843
+
+-
+
+0x0834…c72c-107.8K VEX
+
+1h@ $0.003828
+
+-
+
+0x0834…c72c+811.93K VEX
+
+1h@ $0.003790
+
+-
+
+0x6263…5abb-69.18K VEX
+
+1h@ $0.003705
+
+-
+
+0x4454…498f-92.22K VEX
+
+1h@ $0.003741
+
+-
+
+0xdddd…e6fa-2.31K VEX
+
+1h@ $0.003724
+
+-
+
+0xdddd…e6fa+1.11K VEX
+
+1h@ $0.003745
+
+-
+
+0x344d…51a1-67.46K VEX
+
+1h@ $0.003744
+
+-
+
+0xa2d3…65b3-216.85K VEX
+
+1h@ $0.003743
+
+-
+
+0x0372…8de3-19.45K VEX
+
+1h@ $0.003779
+
+-
+
+0xa2d3…65b3+221.26K VEX
+
+1h@ $0.003779
+
+-
+
+0x67e9…54b5+3.18K VEX
+
+1h@ $0.003748
+
+-
+
+0x87ed…c19e-55.22K VEX
+
+1h@ $0.003718
+
+-
+
+0x675d…51cc+15.07K VEX
+
+2h@ $0.003760
+
+-
+
+0x059d…7b11+25.76K VEX
+
+2h@ $0.003745
+
+-
+
+0xcc60…6aca+26.87K VEX
+
+2h@ $0.003740
+
+-
+
+0x6022…f67a+28.86K VEX
+
+2h@ $0.003724
+
+-
+
+0x58f7…a341-195.76K VEX
+
+2h@ $0.003715
+
+-
+
+0x0449…7c1f+18.27K VEX
+
+2h@ $0.003747
+
+-
+
+0x6022…f67a+29.19K VEX
+
+2h@ $0.003744
+
+-
+
+0x58f7…a341-326.26K VEX
+
+2h@ $0.003755
+
+-
+
+0x4381…2646+5.88K VEX
+
+2h@ $0.003812
+
+-
+
+0x7cb6…19dc+83.64K VEX
+
+2h@ $0.003836
+
+-
+
+0x4337…f965-90.25K VEX
+
+2h@ $0.003787
+
+-
+
+0x4337…403c-112.8K VEX
+
+2h@ $0.003805
+
+-
+
+0x6f7a…6213-112.79K VEX
+
+2h@ $0.003836
+
+-
+
+0x9c47…b3b5+309.97K VEX
+
+2h@ $0.003851
+
+-
+
+0x059d…7b11-25.47K VEX
+
+2h@ $0.003808
+
+-
+
+0x7cb6…19dc+552.11K VEX
+
+2h@ $0.003785
+
+-
+
+0x3572…05cd+16.51K VEX
+
+2h@ $0.003744
+
+-
+
+0x085e…8d4a+12.8K VEX
+
+2h@ $0.003733
+
+-
+
+0x5083…c344-440.94K VEX
+
+2h@ $0.003738
+
+-
+
+0x9bc4…1083-16.87K VEX
+
+2h@ $0.003792
+
+-
+
+0xe10b…e44a+12.07K VEX
+
+2h@ $0.003829
+
+-
+
+0x5668…0e21+19.32K VEX
+
+2h@ $0.003826
+
+-
+
+0x70f3…6955-179.65K VEX
+
+2h@ $0.003799
+
+-
+
+0x370a…12cf+73.4K VEX
+
+2h@ $0.003854
+
+-
+
+0xd469…69c7-13.03K VEX
+
+2h@ $0.003815
+
+-
+
+0x4337…5393-102.92K VEX
+
+2h@ $0.003835
+
+-
+
+0x564b…6dc1-42.27K VEX
+
+2h@ $0.003818
+
+-
+
+0x6085…fdab+70.05K VEX
+
+2h@ $0.003865
+
+-
+
+0x3da8…e2f0-6.09K VEX
+
+2h@ $0.003812
+
+-
+
+0x3da8…e2f0+6.21K VEX
+
+2h@ $0.003834
+
+-
+
+0x4337…1131-26.07K VEX
+
+2h@ $0.003812
+
+-
+
+0x6085…fdab+25.64K VEX
+
+2h@ $0.003834
+
+-
+
+0x87ae…3298-1.29K VEX
+
+2h@ $0.003821
+
+-
+
+0xca7d…4589+38.47K VEX
+
+2h@ $0.003852
+
+-
+
+0x344d…51a1+80.85K VEX
+
+2h@ $0.003818
+
+-
+
+0x18dd…8e25+104.29K VEX
+
+2h@ $0.003824
+
+-
+
+0xa67d…3fbb+161.43K VEX
+
+2h@ $0.003802
+
+-
+
+0xd820…3d3c+7.01K VEX
+
+2h@ $0.003788
+
+-
+
+0x0296…b704+43.5K VEX
+
+2h@ $0.003783
+
+-
+
+0x235b…da69+54.19K VEX
+
+2h@ $0.003751
+
+-
+
+0x7319…1a12-12.82K VEX
+
+2h@ $0.003736
+
+-
+
+0x03c4…20ac-523.91K VEX
+
+3h@ $0.003790
+
+-
+
+0x1885…9530-60.56K VEX
+
+3h@ $0.003827
+
+-
+
+0x9320…79bf-91.92K VEX
+
+3h@ $0.003841
+
+-
+
+0x497b…eab7+18.5K VEX
+
+3h@ $0.003872
+
+-
+
+0x1885…9530+30.87K VEX
+
+3h@ $0.003867
+
+-
+
+0x1885…9530+30.92K VEX
+
+3h@ $0.003861
+
+-
+
+0xc912…c247-114.46K VEX
+
+3h@ $0.003855
+
+-
+
+0x3ad5…8421+709.07K VEX
+
+3h@ $0.003781
+
+-
+
+0xbd85…7da0+33.49K VEX
+
+3h@ $0.003727
+
+-
+
+0xb83e…8e29+226.13K VEX
+
+3h@ $0.003715
+
+-
+
+0xd7e4…188c+117.77K VEX
+
+3h@ $0.003686
+
+-
+
+0x7319…1a12+13.04K VEX
+
+3h@ $0.003663
+
+-
+
+0xf42b…acec+4.62K VEX
+
+3h@ $0.003650
+
+-
+
+0x059d…7b11+106.87K VEX
+
+3h@ $0.003641
+
+-
+
+0x6454…6f95+275.38K VEX
+
+3h@ $0.003611
+
+-
+
+0x155d…e823+10.02K VEX
+
+3h@ $0.003590
+
+-
+
+0x6022…f67a-9.83K VEX
+
+3h@ $0.003553
+
+-
+
+0x74c3…d79d+696.75K VEX
+
+3h@ $0.003543
+
+-
+
+0x9bc4…1083+246.08K VEX
+
+3h@ $0.003461
+
+-
+
+0x059d…7b11+6.96K VEX
+
+3h@ $0.003439
+
+-
+
+0x2bfd…3f4c+27.76K VEX
+
+3h@ $0.003438
+
+-
+
+0x642d…16f8+58.08K VEX
+
+3h@ $0.003439
+
+-
+
+0x91ff…82c8+13.93K VEX
+
+3h@ $0.003407
+
+-
+
+0x7319…1a12-12.85K VEX
+
+3h@ $0.003398
+
+-
+
+0x059d…7b11+8.76K VEX
+
+3h@ $0.003415
+
+-
+
+0x6937…7ef5+66K VEX
+
+3h@ $0.003409
+
+-
+
+0xf70d…dbef+43.06K VEX
+
+3h@ $0.003397
+
+-
+
+0xdcd4…718a+14.07K VEX
+
+3h@ $0.003383
+
+-
+
+0xdcd4…718a+14.08K VEX
+
+3h@ $0.003380
+
+-
+
+0x58e2…efbf+5.82K VEX
+
+3h@ $0.003383
+
+-
+
+0xb8ce…f014+49.33K VEX
+
+3h@ $0.003380
+
+-
+
+0x4337…1b62-61.76K VEX
+
+3h@ $0.003357
+
+-
+
+0xdddd…e6fa-4.15K VEX
+
+3h@ $0.003365
+
+-
+
+0xdddd…e6fa+2.05K VEX
+
+3h@ $0.003385
+
+-
+
+0x331d…2466+141.11K VEX
+
+3h@ $0.003402
+
+-
+
+0x1f9f…9cff+21.37K VEX
+
+3h@ $0.003377
+
+-
+
+0x56ce…e5b1+59.24K VEX
+
+3h@ $0.003388
+
+-
+
+0x2bb2…fbd1+56.21K VEX
+
+3h@ $0.003379
+
+-
+
+0x5087…c3e6+475.3K VEX
+
+3h@ $0.003323
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.004476-27.36%
+
+Launched by:0x32e7...eB33
+
+powered by
+
+## About
+
+See more
+
+### How It Works
+
+VEX — the verifiable AI agent for on-chain capital. Most agents ask for your trust; VEX proves it. The model proposes, but the runtime decides what actually executes: every action is enforced by your own rules before signing — preventing hallucinated trades, wrong wallets, or oversized positions — and recorded to a tamper-proof, on-chain-anchored audit log. The result is a track record that's provably complete and impossible to rewrite. Enforce your AI. Prove every trade.
+
+### Roadmap
+
+Roadmap
+
+Next (sequential)
+
+- Desktop app launch — local runtime, custody separation, multi-chain (EVM + Solana), live integrations: Polymarket, Jupiter, KyberSwap, Khalani, DexScreener
+
+- ERC-8004 identity attestation — on-chain agent identity registration with externalized verification results
+
+- Verifiable record layer — rejection rows, per-row hashes, sequence numbers, and thesis hashes, with day-one public timestamping and on-chain Merkle anchoring under completeness commitments
+
+- Verified copy trading — bond vaults and the copy qualification gate open the market; followers copy only proven strategists, each within their own policy limits
+
+### Token Utility
+
+① Agent Identity (ERC-8004) — Agents are registered on-chain via ERC-8004, with verification results posted as attestations. Identity and reputation live on top of $VEX.
+② Bond — Becoming a copyable strategist requires staking a per-identity $VEX bond — the sybil-defense layer that sets qualification, boost, and priority.
+③ Execution Fee — A transparent, volume-based fee on trades executed through VEX, shown as a line item, never hidden in slippage.
+④ Buyback — Execution fees and copy settlement flow to open-market $VEX buybacks from day one. No emissions, no inflation.
+⑤ Subscription — Free / Pro / Advanced / Team tiers, from local chat to always-on autonomous runtime.
+
+Project Video
+
+## Team
+
+-
+
+@ProjectVEXaiOwner
+
+-
+
+@nov3lolo
+
+cto/dev
+
+-
+
+@LikeMikeyzz
+
+CEO/Founder
+
+## Allocation
+
+Next unlock in 304 days
+
+Total1B
+
+Liquidity Pool50.00%
+
+500MFixed Supply
+
+Liquidity Pool500M50.00%Fixed Supply
+
+Automated Capital Formation25.00%
+
+250MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation250M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+250M · 03 Jul 27Default Team Vesting
+
+Team250M25.00%Default Team Vesting · Unlocks 03 Jul 27
+
+## Supply
+
+1B750M500M250M0
+
+Today
+
+03 Jul 2609 Nov 2618 Mar 2724 Jul 2730 Nov 27
+
+Liquidity PoolAutomated Capital FormationTeam
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $VEX or 1,000 veVIRTUAL to join the conversation.
+
+Buy $VEX
+
+0xC3eA…1b60· a month
+
+typographical error. i buy VEX at 4M MC , i will back when MC 1B :)))
+
+0xC3eA…1b60· a month
+
+i but VEX at 4M MC , i will back when MC 1B :)))
+
+0x8EEB…220A· 2 months
+
+A must hold: 0x5ad6FAd7794f4118fa119dC6F5652F360f3B8EB5
+
+@VladRobinhood
+
+0x8EEB…220A· 2 months
+
+VEX Agent, look at VLAD the official action figure of Robinhood’s CEO that they keep in the office
+
+0xE1b9…8504· 2 months
+
+Vex moon
+
+nov3lolo0xBAa1…5920· 2 months
+
+Make no mistake.
+
+## Market Overview
+
+Mechanics
+
+Mcap$4.3M
+
+FDV$4.5M
+
+Liq.$736.9K
+
+Holders5.9K
+
+24h Vol$1.1M
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+VEX
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (5.9K)
+
+View top 500
+
+Top 1055.9%
+
+Others44.1%
+
+0x1b0d…a6d0Unlocker250M VEX26.7%
+
+0xe289…ee8aACF Vault140.5M VEX15.0%
+
+0x817f…18daLP39.6M VEX—
+
+0x4fa2…1ecfACF Pool23.7M VEX—
+
+0x829d…224a44.9M VEX4.8%
+
+0x32e7…eb33Dev26.3M VEX2.8%
+
+0xbaa1…592020M VEX2.1%
+
+0xbdf7…56ca10.2M VEX1.1%
+
+0x4cfd…d15b8.7M VEX0.9%
+
+0x8260…77ef8.6M VEX0.9%
+
+0x3e66…5c7d7.3M VEX0.8%
+
+0x3c09…a9527M VEX0.7%
+
+0xcaf9…763b6.9M VEX0.7%
+
+## Twitter Feed
+
+Project:VEX@ProjectVEXai
+
+Sep 1
+
+VEX infra is growing fast 🟦
+
+Your AI agent can now not only trade crypto, it’s about to trade at machine speed, with smarter, more optimized execution.
+
+Sooner than you think 🪶
+
+Project:VEX@ProjectVEXai
+
+Aug 30
+
+Heard there’s a runner created by the VEX agent on @pools_dot_fun
+
+With VEX agent, you don’t just catch the next runner. You can create it.
+
+That’s the alpha. 🟦
+
+Project:VEX@ProjectVEXai
+
+Aug 29
+
+Someone said VEX is building an agentic ecosystem inside the ecosystems.
+
+It’s happening before you even notice.
+
+Agentic Capital Market 🟦
+
+Project:VEX@ProjectVEXai
+
+Aug 27
+
+Your VEX agent just evolved 🟦
+
+Deeper market intelligence. Visible evidence. Stronger safeguards. Now entering the Speed Force.
+
+VEX 0.2.7 CHRONOS rebuilds market research from the ground up.
+
+18 rebuilt tools go beyond price. Buyers. Sellers. Smart money. Safety. Flow. Live
+
+Project:VEX@ProjectVEXai
+
+Aug 25
+
+Gm Robinhood szn enjoyers!
+
+Project:VEX@ProjectVEXai
+
+Aug 24
+
+The pools just went agentic 🟦
+
+VEX is teaming up with @pools_dot_fun to bring autonomous agents to the trenches.
+
+&lt;Scan launches. Find opportunities. Deploy tokens. Trade the market&gt;
+
+All day. All night.
+Welcome to the Agentic Meme Market on @RobinhoodApp
+
+Project:VEX@ProjectVEXai
+
+Aug 22
+
+Did you know VEX just got another major upgrade in just 1 week?
+
+Chronos 0.2.6 is built to make the agent better at what actually matters:
+
+Research on-chain opportunities smarter.
+Run long-lived missions more effectively.
+Execute more on-chain actions.
+Recover better when
+
+Project:VEX@ProjectVEXai
+
+Aug 20
+
+We’re teaming up with @athenax_co and @nounsdao at @CoinfestAsia 🟦
+
+On a mission to bring the Agentic Capital Market into the real world.
+
+VEX agents across @RobinhoodApp, @solana, @arbitrum, @BNBCHAIN, @base and 40+ chains.
+
+Now, VEX goes IRL in Bali.
+
+Find us at Melasti Beach
+
+Project:VEX@ProjectVEXai
+
+Aug 18
+
+You haven’t unlocked the full power of the on-chain Agent yet. 🟦
+
+Most people still use agents like chatbots: prompt, get an answer, move on.
+
+But every trader operates differently.
+
+Teach VEX 0.2 Chronos your strategy, risk rules, and execution preferences - so it can stop
+
+Project:VEX@ProjectVEXai
+
+Aug 16
+
+You haven’t unlocked the full power of the Agent yet!
+
+🟦 https://t.co/ZwaXSCmj3M
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

@@ -1,0 +1,66 @@
+---
+layout: docs
+---
+
+# Robinhood Chain Lighter Domains
+
+## What is a Lighter Domain?
+
+Lighter Domains are independent Lighter instances with separate execution, sequencing, blockspace, and liquidity. That separation is intentional — allowing markets to serve different ecosystems, partners, and regulatory requirements. Long-term, they are designed to preserve separation where it matters while enabling future connectivity through proof aggregation and verified messaging.
+
+The **Robinhood Chain Instance** is a dedicated Lighter instance deployed on the Robinhood Chain. It is not the same as Lighter Core — it has its own contracts, sequencer, blockspace, and liquidity.
+
+## Key Information
+
+| Resource | Address |
+| --- | --- |
+| Public UI | [https://robinhoodchain.lighter.xyz](https://robinhoodchain.lighter.xyz) |
+| Lighter Contract | `0x94bAB9693Ba2f6358507eFfcbd372b0660AFfF9d` |
+| API Docs | [https://apidocs.rh.lighter.xyz/docs/get-started](https://apidocs.rh.lighter.xyz/docs/get-started) |
+| API Base URL | [https://api.rh.lighter.xyz/](https://api.rh.lighter.xyz/) |
+
+## Deposit
+
+### Direct Deposit (same-chain, on RH Chain) — preferred for RH Wallet
+
+Call the `deposit` method on the Lighter contract directly:
+
+```solidity
+function deposit(
+    address _to,
+    uint16  _assetIndex,
+    TxTypes.RouteType _routeType,   // uint8
+    uint256 _amount
+) external payable
+```
+
+**Example (USDG deposit):**
+
+```
+_to          = <recipient address>
+_assetIndex  = 3          // USDG
+_routeType   = 0
+_amount      = 1000000    // 1 USDG = 1e6 (6 decimals)
+```
+
+> Anyone can call `deposit` on behalf of any address. The account is created on the first deposit.
+
+### Cross-chain / Intent Address Deposit
+
+For deposits originating from other chains (e.g., Ethereum → Robinhood Chain):
+
+1. Call `createIntentAddress` to get a deterministic deposit address.
+2. Send USDG to that intent address (no `deposit()` call needed).
+3. Lighter monitors the intent address and calls `deposit` on-chain via `CREATE2` (1 block + 1 round trip).
+4. The monitoring service credits the user (1 block + 1 round trip).
+
+## Withdraw
+
+Two modes, both operational on Robinhood Chain:
+
+- **Fast Withdraw** — uses Robinhood Chain's soft finality; near-instant.
+- **Secure Withdraw** — standard L2 withdrawal with full finality guarantees.
+
+## Learn More
+
+- [Lighter Robinhood API Docs](https://apidocs.rh.lighter.xyz/docs/get-started)

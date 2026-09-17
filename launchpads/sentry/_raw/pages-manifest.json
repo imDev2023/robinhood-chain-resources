@@ -1,0 +1,407 @@
+[
+ [
+  "01-app-discover-tokens.md",
+  "Discover, the token list at sentry.trading",
+  "https://www.sentry.trading/"
+ ],
+ [
+  "02-app-referral-landing.md",
+  "Referral landing, /?ref=CRUELHAND",
+  "https://www.sentry.trading/?ref=CRUELHAND"
+ ],
+ [
+  "03-app-token-detail-views.md",
+  "Token detail pages, sixteen captured views",
+  "https://www.sentry.trading/desktop/tokens (token rows)"
+ ],
+ [
+  "04-app-social-feed.md",
+  "Social, the in-app feed",
+  "https://www.sentry.trading/desktop/social"
+ ],
+ [
+  "05-app-profile-portfolio.md",
+  "Profile and portfolio, signed in",
+  "https://www.sentry.trading/desktop/portfolio"
+ ],
+ [
+  "06-app-creator-tools.md",
+  "Tools, the creator tools page",
+  "https://www.sentry.trading/desktop/tools"
+ ],
+ [
+  "07-app-create-form.md",
+  "Create a new coin, the launch form behind the login gate",
+  "https://www.sentry.trading/desktop/create"
+ ],
+ [
+  "08-app-login-gate.md",
+  "The login gate: account, X, or wallet",
+  "https://www.sentry.trading/desktop/tokens (Login)"
+ ],
+ [
+  "09-app-settings.md",
+  "Settings and the referral program",
+  "https://www.sentry.trading/desktop/tokens (Settings gear)"
+ ],
+ [
+  "10-app-network-switcher.md",
+  "The chain selector",
+  "https://www.sentry.trading/desktop/tokens (Network button)"
+ ],
+ [
+  "11-app-domains-and-filters.md",
+  "The Domains tab and the Filters modal",
+  "https://www.sentry.trading/desktop/tokens (Domains, Filters)"
+ ],
+ [
+  "12-app-swap-public.md",
+  "The public swap page, no account needed",
+  "https://www.sentry.trading/swap"
+ ],
+ [
+  "13-app-lock-public.md",
+  "The public token locker page",
+  "https://www.sentry.trading/lock"
+ ],
+ [
+  "14-app-mobile-routes.md",
+  "The /mobile route family",
+  "https://www.sentry.trading/mobile/{tokens,social,portfolio,tools,create,guide}"
+ ],
+ [
+  "15-app-route-map.md",
+  "Route map: what each path actually serves",
+  "https://www.sentry.trading/desktop/*"
+ ],
+ [
+  "16-guide-welcome.md",
+  "Guide, Welcome",
+  "https://www.sentry.trading/desktop/guide#welcome"
+ ],
+ [
+  "17-guide-getting-started.md",
+  "Guide, Getting Started",
+  "https://www.sentry.trading/desktop/guide#getting-started"
+ ],
+ [
+  "18-guide-account-security.md",
+  "Guide, Account Security",
+  "https://www.sentry.trading/desktop/guide#account-security"
+ ],
+ [
+  "19-guide-username-pfp.md",
+  "Guide, Username & PFP",
+  "https://www.sentry.trading/desktop/guide#profile"
+ ],
+ [
+  "20-guide-your-wallets.md",
+  "Guide, Your Wallets",
+  "https://www.sentry.trading/desktop/guide#your-wallets"
+ ],
+ [
+  "21-guide-importing-a-wallet.md",
+  "Guide, Importing a Wallet",
+  "https://www.sentry.trading/desktop/guide#importing-wallets"
+ ],
+ [
+  "22-guide-settings-hub.md",
+  "Guide, Settings Hub",
+  "https://www.sentry.trading/desktop/guide#settings"
+ ],
+ [
+  "23-guide-set-primary.md",
+  "Guide, Set Primary",
+  "https://www.sentry.trading/desktop/guide#set-primary"
+ ],
+ [
+  "24-guide-exporting-private-keys.md",
+  "Guide, Exporting Private Keys",
+  "https://www.sentry.trading/desktop/guide#exporting-keys"
+ ],
+ [
+  "25-guide-trading-the-aggregator.md",
+  "Guide, Trading & The Aggregator",
+  "https://www.sentry.trading/desktop/guide#trading-ink"
+ ],
+ [
+  "26-guide-limit-dca-orders.md",
+  "Guide, Limit & DCA Orders",
+  "https://www.sentry.trading/desktop/guide#orders"
+ ],
+ [
+  "27-guide-charts-pnl-cards.md",
+  "Guide, Charts & PNL Cards",
+  "https://www.sentry.trading/desktop/guide#charts-pnl"
+ ],
+ [
+  "28-guide-watchlist-alerts.md",
+  "Guide, Watchlist & Alerts",
+  "https://www.sentry.trading/desktop/guide#watchlist"
+ ],
+ [
+  "29-guide-push-notifications.md",
+  "Guide, Push Notifications",
+  "https://www.sentry.trading/desktop/guide#notifications"
+ ],
+ [
+  "30-guide-telegram-bots.md",
+  "Guide, Telegram Bots",
+  "https://www.sentry.trading/desktop/guide#telegram-bots"
+ ],
+ [
+  "31-guide-boosts-featured-slots.md",
+  "Guide, Boosts & Featured Slots",
+  "https://www.sentry.trading/desktop/guide#boosts-featured"
+ ],
+ [
+  "32-guide-referral-program.md",
+  "Guide, Referral Program",
+  "https://www.sentry.trading/desktop/guide#referrals"
+ ],
+ [
+  "33-guide-creating-tokens.md",
+  "Guide, Creating Tokens",
+  "https://www.sentry.trading/desktop/guide#creating-tokens"
+ ],
+ [
+  "34-guide-launch-mechanics.md",
+  "Guide, Launch Mechanics",
+  "https://www.sentry.trading/desktop/guide#launch-mechanics"
+ ],
+ [
+  "35-guide-anti-snipe-protection.md",
+  "Guide, Anti-Snipe Protection",
+  "https://www.sentry.trading/desktop/guide#anti-snipe"
+ ],
+ [
+  "36-guide-creator-rewards.md",
+  "Guide, Creator Rewards",
+  "https://www.sentry.trading/desktop/guide#creator-rewards"
+ ],
+ [
+  "37-guide-tokenized-stocks-as-base-pairs.md",
+  "Guide, Tokenized Stocks as Base Pairs",
+  "https://www.sentry.trading/desktop/guide#stock-pairs"
+ ],
+ [
+  "38-guide-token-locker.md",
+  "Guide, Token Locker",
+  "https://www.sentry.trading/desktop/guide#token-locker"
+ ],
+ [
+  "39-guide-the-sentry-token.md",
+  "Guide, The SENTRY Token",
+  "https://www.sentry.trading/desktop/guide#sentry-token"
+ ],
+ [
+  "40-guide-domains-hood-ink.md",
+  "Guide, Domains: .hood & .ink",
+  "https://www.sentry.trading/desktop/guide#zns-domains"
+ ],
+ [
+  "41-guide-the-ecosystem-tab.md",
+  "Guide, The Ecosystem Tab",
+  "https://www.sentry.trading/desktop/guide#ecosystem"
+ ],
+ [
+  "42-guide-bridging.md",
+  "Guide, Bridging",
+  "https://www.sentry.trading/desktop/guide#bridging"
+ ],
+ [
+  "43-guide-spend.md",
+  "Guide, Spend",
+  "https://www.sentry.trading/desktop/guide#spend"
+ ],
+ [
+  "44-guide-platform-fees.md",
+  "Guide, Platform Fees",
+  "https://www.sentry.trading/desktop/guide#fees"
+ ],
+ [
+  "45-guide-chains-contracts.md",
+  "Guide, Chains & Contracts",
+  "https://www.sentry.trading/desktop/guide#chains-contracts"
+ ],
+ [
+  "46-guide-ink-xstocks-developers.md",
+  "Guide, Ink xStocks (Developers)",
+  "https://www.sentry.trading/desktop/guide#ink-xstocks"
+ ],
+ [
+  "47-guide-ecosystem-stats.md",
+  "Guide, Ecosystem Stats",
+  "https://www.sentry.trading/desktop/guide#stats"
+ ],
+ [
+  "48-guide-brand-kit.md",
+  "Guide, Brand Kit",
+  "https://www.sentry.trading/desktop/guide#brand-kit"
+ ],
+ [
+  "49-guide-navigating-the-app.md",
+  "Guide, Navigating the App",
+  "https://www.sentry.trading/desktop/guide#navigating"
+ ],
+ [
+  "50-guide-faq.md",
+  "Guide, FAQ",
+  "https://www.sentry.trading/desktop/guide#faq"
+ ],
+ [
+  "51-guide-v2-roadmap.md",
+  "Guide, V2 Roadmap",
+  "https://www.sentry.trading/desktop/guide#roadmap"
+ ],
+ [
+  "52-guide-team.md",
+  "Guide, Team",
+  "https://www.sentry.trading/desktop/guide#team"
+ ],
+ [
+  "53-guide-troubleshooting.md",
+  "Guide, Troubleshooting",
+  "https://www.sentry.trading/desktop/guide#troubleshooting"
+ ],
+ [
+  "54-guide-disclaimers.md",
+  "Guide, Disclaimers",
+  "https://www.sentry.trading/desktop/guide#disclaimers"
+ ],
+ [
+  "55-guide-resources.md",
+  "Guide, Resources",
+  "https://www.sentry.trading/desktop/guide#resources"
+ ],
+ [
+  "56-guide-terms-of-service.md",
+  "Guide, Terms of Service",
+  "https://www.sentry.trading/desktop/guide#tos"
+ ],
+ [
+  "57-guide-privacy-policy.md",
+  "Guide, Privacy Policy",
+  "https://www.sentry.trading/desktop/guide#privacy"
+ ],
+ [
+  "58-guide-machine-readable-source.md",
+  "sentry-guide.md, the machine-readable guide",
+  "https://www.sentry.trading/sentry-guide.md"
+ ],
+ [
+  "59-quotrons-root.md",
+  "Quotrons, the terminal exchange",
+  "https://www.quotrons.cash/"
+ ],
+ [
+  "60-quotrons-about.md",
+  "Quotrons, About and Legal",
+  "https://www.quotrons.cash/about"
+ ],
+ [
+  "61-quotrons-docs.md",
+  "Quotrons, Docs",
+  "https://www.quotrons.cash/docs"
+ ],
+ [
+  "62-quotrons-desk.md",
+  "Quotrons, My Desk",
+  "https://www.quotrons.cash/desk"
+ ],
+ [
+  "63-quotrons-exchange.md",
+  "Quotrons, Exchange",
+  "https://www.quotrons.cash/exchange"
+ ],
+ [
+  "64-quotrons-xstocks.md",
+  "Quotrons, xStocks Pools",
+  "https://www.quotrons.cash/xstocks"
+ ],
+ [
+  "65-quotrons-market.md",
+  "Quotrons, Social Market",
+  "https://www.quotrons.cash/market"
+ ],
+ [
+  "66-quotrons-rewards.md",
+  "Quotrons, Reward Stocks",
+  "https://www.quotrons.cash/rewards"
+ ],
+ [
+  "67-quotrons-otc.md",
+  "Quotrons, OTC Desk",
+  "https://www.quotrons.cash/otc"
+ ],
+ [
+  "68-quotrons-relics.md",
+  "Quotrons, Relics",
+  "https://www.quotrons.cash/relics"
+ ],
+ [
+  "69-quotrons-v1.md",
+  "Quotrons, V1 Migration Record",
+  "https://www.quotrons.cash/v1"
+ ],
+ [
+  "70-linktree-cruelhand.md",
+  "linktr.ee/cruelhand, the founder's link hub",
+  "https://linktr.ee/cruelhand"
+ ],
+ [
+  "71-mavrk-markets.md",
+  "Mavrk, the company behind Sentry and Quotrons",
+  "https://mavrk.markets/"
+ ],
+ [
+  "72-linkedin-sergio-luna.md",
+  "LinkedIn, Sergio Alessandro Luna",
+  "https://www.linkedin.com/in/sergioalessandroluna/"
+ ],
+ [
+  "73-robinhood-chain-docs.md",
+  "Robinhood Chain documentation",
+  "https://docs.robinhood.com/chain/"
+ ],
+ [
+  "74-zns-connect.md",
+  "ZNS Connect, the .ink and .hood name registry",
+  "https://zns.bio/"
+ ],
+ [
+  "75-relay-link.md",
+  "Relay, the bridge behind Sentry's Bridge tile",
+  "https://relay.link/"
+ ],
+ [
+  "76-ink-foundation.md",
+  "Ink Foundation",
+  "http://inkfnd.com/"
+ ],
+ [
+  "77-gm-ink.md",
+  "gm.ink",
+  "https://gm.ink/"
+ ],
+ [
+  "78-github-mavrkofficial.md",
+  "GitHub, mavrkofficial",
+  "https://github.com/mavrkofficial"
+ ],
+ [
+  "79-github-quotrons-brand-kit.md",
+  "GitHub, mavrkofficial/quotrons-brand-kit",
+  "https://github.com/mavrkofficial/quotrons-brand-kit"
+ ],
+ [
+  "80-opensea-quotrons404.md",
+  "OpenSea, the Quotrons404 collection",
+  "https://opensea.io/collection/Quotrons404"
+ ],
+ [
+  "81-quotrons-integration-bundle.md",
+  "Quotrons, the machine-readable integration bundle",
+  "https://www.quotrons.cash/llms.txt, https://www.quotrons.cash/quotrons-llm.md, https://www.quotrons.cash/integration.md, https://www.quotrons.cash/integration/manifest.json, https://www.quotrons.cash/integration/Quotron404V2.abi.json, https://www.quotrons.cash/integration/QuotronWethHook.abi.json, https://www.quotrons.cash/integration/QuotronWethQuoter.abi.json, https://www.quotrons.cash/integration/QuotronWethRouter.abi.json, https://www.quotrons.cash/migration/manifest.json, https://www.quotrons.cash/llms-full.txt"
+ ]
+]

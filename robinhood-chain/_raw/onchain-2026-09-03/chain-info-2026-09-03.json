@@ -1,0 +1,17 @@
+{
+ "capturedAt": "2026-09-03T03:56:25Z",
+ "chainId": "0x1237",
+ "clientVersion": "nitro/v3.11.3-beb2108/linux-amd64/go1.25.12",
+ "blockNumber": 53117114,
+ "gasPriceWei": 472640000,
+ "baseFeePerGasWei": 471712000,
+ "baseFeeBlock": 53117114,
+ "gasLimit": 1125899906842624,
+ "blockTimestamp": 1788407785,
+ "blockTime": {
+  "fromBlock": 53117014,
+  "toBlock": 53117114,
+  "seconds": 10,
+  "perBlock": 0.1
+ }
+}

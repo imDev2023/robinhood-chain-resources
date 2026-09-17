@@ -1,0 +1,702 @@
+{
+ "BONER": {
+  "asset": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+  "numeraire": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+   "currency1": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ],
+   [
+    "0x79aeae6a47ff2e551f60bd87dbd6358efeaf4dc8",
+    95.0,
+    "3654506921871903548088328",
+    "390102070721338708204"
+   ]
+  ],
+  "cumulatedFees0": "3654506921871903548088328",
+  "cumulatedFees1": "390102070721338708204",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x98096d17e191b3da1d5f99a6d7b3584351b11e18",
+    "numeraire": "0xccee82fe024c36fa15e1005ede3e9e4787e23d09",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1787259586,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "90988092954428738145878",
+    "beneficiaryFees1": "34360496832379668965",
+    "airlockOwnerFees0": "3434519259918972512140940",
+    "airlockOwnerFees1": "333200731523010292928"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "80175637474429474608777"
+   }
+  }
+ },
+ "AI": {
+  "asset": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+  "numeraire": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+   "currency1": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xcbdfea90430a30ee4469c9902e120a77e7c7e4711d5643671c1d1957f2f1ce27",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x4a0cb7eef4b4dc31c75eac705e03463cfc3c5cb2",
+    95.0,
+    "50417360007071024330256524",
+    "571332915015481845914"
+   ],
+   [
+    "0xedeaa06e2eb42a5c19ce27c6cffb36fd4fe1eda8",
+    5.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "72696337954269699382799556",
+  "cumulatedFees1": "1844341336248366183835",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x2e8c31162b855a2ffa90f6f8634643ad6f111e18",
+    "numeraire": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    100.0,
+    0.0,
+    0.0,
+    0.0,
+    100.0,
+    0.0,
+    0.0
+   ],
+   "schedule": {
+    "startingTime": 1784051311,
+    "startFee": 800000,
+    "endFee": 8000,
+    "lastFee": 8000,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "0",
+    "beneficiaryFees1": "0",
+    "airlockOwnerFees0": "5651662759614467000309636",
+    "airlockOwnerFees1": "125315891273783937546"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "0"
+   }
+  }
+ },
+ "SPACEHOOD": {
+  "asset": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+  "numeraire": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": -887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+   "currency1": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0x225cc98f7d66b29fef96377becc7bf89582e2ab7b923a09aee9719fd80eb94ca",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x1ae51740ce21caebb8c92c457ad7fc1bdaae5305",
+    95.0,
+    "0",
+    "0"
+   ],
+   [
+    "0xedeaa06e2eb42a5c19ce27c6cffb36fd4fe1eda8",
+    5.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "0",
+  "cumulatedFees1": "0",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0xfe7e19cbce2f896c6c528bc355baf5a768291e18",
+    "numeraire": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    100.0,
+    0.0,
+    0.0,
+    0.0,
+    100.0,
+    0.0,
+    0.0
+   ],
+   "schedule": {
+    "startingTime": 1784040493,
+    "startFee": 800000,
+    "endFee": 8000,
+    "lastFee": 8000,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "0",
+    "beneficiaryFees1": "0",
+    "airlockOwnerFees0": "42625583749842624042",
+    "airlockOwnerFees1": "6950138930107753757909125"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "0"
+   }
+  }
+ },
+ "JOHNDOG": {
+  "asset": "0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18",
+  "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18",
+   "currency1": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xa9349400def8a8fb8b96763c52870fcadbc8775361dd49e95291486be5141e0a",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ],
+   [
+    "0x9b9849762f9be27d5546117c12ac6d7cf1dfbb38",
+    95.0,
+    "1295237886989384441245474",
+    "3844610859874262834"
+   ]
+  ],
+  "cumulatedFees0": "1295237886989384441245474",
+  "cumulatedFees1": "3844610859874262834",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18",
+    "numeraire": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1788312314,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "104474223282046170642991",
+    "beneficiaryFees1": "1148626350818701243",
+    "airlockOwnerFees0": "3242411739315893599493306",
+    "airlockOwnerFees1": "20829477622966887266"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "29702315583543062384584"
+   }
+  }
+ },
+ "MOO": {
+  "asset": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+  "numeraire": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+   "currency1": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xc3cc877a8a7d28efdb5dbec9ae71724652431e6411aa1a9fc8928028da554aa1",
+  "beneficiaries_lastCumulated": [
+   [
+    "0xedeaa06e2eb42a5c19ce27c6cffb36fd4fe1eda8",
+    5.0,
+    "0",
+    "0"
+   ],
+   [
+    "0xf415398e3705414f1f02ddbeeff319b906f6fa07",
+    95.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "81787024851840879719775892",
+  "cumulatedFees1": "118000049913479816479",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0xd9db30bb0d2b8d2eae3826a1372117e058791e18",
+    "numeraire": "0xff080c8ce2e5feadaca0da81314ae59d232d4afd",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    100.0,
+    0.0,
+    0.0,
+    0.0,
+    100.0,
+    0.0,
+    0.0
+   ],
+   "schedule": {
+    "startingTime": 1784572502,
+    "startFee": 800000,
+    "endFee": 8000,
+    "lastFee": 8000,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "0",
+    "beneficiaryFees1": "0",
+    "airlockOwnerFees0": "6287850320137375703802138",
+    "airlockOwnerFees1": "7882653688749633369"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "0"
+   }
+  }
+ },
+ "HIAI": {
+  "asset": "0x9d65690e811dbf4d269f53e522b4771dfe8e1e18",
+  "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": -887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+   "currency1": "0x9d65690e811dbf4d269f53e522b4771dfe8e1e18",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0x9776481d68d3bb0b1b291d5572e0da450f26c92388379648fecb88cd332e10eb",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ],
+   [
+    "0x79e660623a3fff90f8233200160eef40a1133b12",
+    95.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "0",
+  "cumulatedFees1": "0",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x9d65690e811dbf4d269f53e522b4771dfe8e1e18",
+    "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1788320877,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "769573720901",
+    "beneficiaryFees1": "2688756903211184365",
+    "airlockOwnerFees0": "3489594928739048",
+    "airlockOwnerFees1": "24814178109484454963504"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "38162802997356491946"
+   }
+  }
+ },
+ "AU": {
+  "asset": "0xd4aae326ddd1a2537a92c00e6576e4605e5d1e18",
+  "numeraire": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": -887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+   "currency1": "0xd4aae326ddd1a2537a92c00e6576e4605e5d1e18",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xa656346c328c7185f783e78936b68eb5868aa9cf5809260320b279f7e13790fc",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x1919214fb47185e2ceada118727cbf317478d216",
+    95.0,
+    "8873957086196933004",
+    "3263423070380106117998998"
+   ],
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "8873957086196933004",
+  "cumulatedFees1": "3263423070380106117998998",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0xd4aae326ddd1a2537a92c00e6576e4605e5d1e18",
+    "numeraire": "0x58ffe4a942d3885baa22d7520691f611ef09e7aa",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1787885490,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "1519363090252456978",
+    "beneficiaryFees1": "256488959651549036155898",
+    "airlockOwnerFees0": "14393299802152453639",
+    "airlockOwnerFees1": "4322022567423260134386259"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "28371399491733186488006"
+   }
+  }
+ },
+ "SAYLORMOON": {
+  "asset": "0xd18528b39da6464b3662c331a52181ecb15b1e18",
+  "numeraire": "0xec262a75e413fafd0df80480274532c79d42da09",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0xd18528b39da6464b3662c331a52181ecb15b1e18",
+   "currency1": "0xec262a75e413fafd0df80480274532c79d42da09",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xd1c2f6cb178a165a643deae8752098dea08d51b6170cd8e36e196ef03dc74751",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x0a148bacaf68fc9acca1cd339a0e25efb97a3625",
+    95.0,
+    "3771376790830820843868165",
+    "20194768806240458271"
+   ],
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "3771376790830820843868165",
+  "cumulatedFees1": "20194768806240458271",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0xd18528b39da6464b3662c331a52181ecb15b1e18",
+    "numeraire": "0xec262a75e413fafd0df80480274532c79d42da09",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1787968557,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "312483004276223582563252",
+    "beneficiaryFees1": "5445802500688086532",
+    "airlockOwnerFees0": "5093813994347601683037107",
+    "airlockOwnerFees1": "47237014788050287818"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "55026861418818281012359"
+   }
+  }
+ },
+ "CLIPPY": {
+  "asset": "0x85856f025bf13b8fd2aae2f6da458318744f1e18",
+  "numeraire": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": 887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x85856f025bf13b8fd2aae2f6da458318744f1e18",
+   "currency1": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xb3e164e6cce432f23a0d553f37091216963010de78c5d3ca80d1d56aadab3e25",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x29ccc8f5dcbe0823fa48ccff0aba3f3766215c9a",
+    95.0,
+    "31434677326968896662825143",
+    "19909478194639338113"
+   ],
+   [
+    "0xedeaa06e2eb42a5c19ce27c6cffb36fd4fe1eda8",
+    5.0,
+    "0",
+    "0"
+   ]
+  ],
+  "cumulatedFees0": "31434677326968896662825143",
+  "cumulatedFees1": "19909478194639338113",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x85856f025bf13b8fd2aae2f6da458318744f1e18",
+    "numeraire": "0xe93237c50d904957cf27e7b1133b510c669c2e74",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    100.0,
+    0.0,
+    0.0,
+    0.0,
+    100.0,
+    0.0,
+    0.0
+   ],
+   "schedule": {
+    "startingTime": 1784316990,
+    "startFee": 800000,
+    "endFee": 8000,
+    "lastFee": 8000,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "0",
+    "beneficiaryFees1": "0",
+    "airlockOwnerFees0": "5071189349807637923559371",
+    "airlockOwnerFees1": "5463430985183534257"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "0"
+   }
+  }
+ },
+ "AIANTIVAX": {
+  "asset": "0x7ffb2d1A58848332Fd7d63C4F46e7b6aD3EA1E18",
+  "numeraire": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+  "status": 2,
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "farTick": -887256,
+  "totalTokensOnCurve": "1000000000000000000000000000",
+  "poolKey": {
+   "currency0": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+   "currency1": "0x7ffb2d1a58848332fd7d63c4f46e7b6ad3ea1e18",
+   "fee": 8388608,
+   "tickSpacing": 8,
+   "hooks": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544"
+  },
+  "poolId": "0xe9aef5279d0445c6fe4d8c677e19de27d52562f90b18d57836de0a2d12494994",
+  "beneficiaries_lastCumulated": [
+   [
+    "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    5.0,
+    "0",
+    "0"
+   ],
+   [
+    "0x4be370ad2a9440fd501228474ec5623da5b65913",
+    95.0,
+    "3460653093529816",
+    "28099191572964503140361"
+   ]
+  ],
+  "cumulatedFees0": "3460653093529816",
+  "cumulatedFees1": "28099191572964503140361",
+  "rehype": {
+   "poolInfo": {
+    "asset": "0x7ffb2d1a58848332fd7d63c4f46e7b6ad3ea1e18",
+    "numeraire": "0x43b07d15ce533bec5476d70c22a78a1b2b662155",
+    "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765"
+   },
+   "feeDistributionPct": [
+    0.0,
+    71.42857142857143,
+    0.0,
+    28.571428571428573,
+    14.285714285714286,
+    71.42857142857143,
+    0.0,
+    14.285714285714286
+   ],
+   "schedule": {
+    "startingTime": 1788321253,
+    "startFee": 800000,
+    "endFee": 11200,
+    "lastFee": 11200,
+    "durationSeconds": 10
+   },
+   "routingMode": 0,
+   "hookFees": {
+    "fees0": "0",
+    "fees1": "0",
+    "beneficiaryFees0": "105323096327",
+    "beneficiaryFees1": "1719382942022400348",
+    "airlockOwnerFees0": "2377081816516172",
+    "airlockOwnerFees1": "19721896302840813659812"
+   },
+   "position": {
+    "tickLower": -887272,
+    "tickUpper": 887272,
+    "liquidity": "28130372682163906195"
+   }
+  }
+ }
+}

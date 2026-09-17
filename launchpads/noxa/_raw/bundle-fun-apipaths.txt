@@ -1,0 +1,3 @@
+"/api/glossary/Errors
+"/api/human
+"/api/WagmiProvider

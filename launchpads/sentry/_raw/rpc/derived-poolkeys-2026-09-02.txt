@@ -1,0 +1,25 @@
+SLV baseTokenToHook(stock factory) = ('0x5daa88b65bd47199ec92d3cde01b56348e1270cc',)
+NFLX baseTokenToHook(stock factory) = ('0x5daa88b65bd47199ec92d3cde01b56348e1270cc',)
+AAPL baseTokenToHook(stock factory) = ('0x5daa88b65bd47199ec92d3cde01b56348e1270cc',)
+WETH baseTokenToHook(weth factory) = ('0x0000000000000000000000000000000000000000',)
+== Silver Inu (stock)
+  poolKeyOf = ('0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f', '0xf668b7002810313fd676862a8ec57f0975038692', 8388608, 200, '0x5daa88b65bd47199ec92d3cde01b56348e1270cc')
+  poolIdOf  = 057efd834864a0e92dbe44800c086e995908f3404c80ae6fcbe2941e4661ca4a
+  getCreator= ('0xc636e79a4957edc0a0c66f0416852e811abfceb9',)
+  feeRecipientOf= ('0xc636e79a4957edc0a0c66f0416852e811abfceb9',)
+  isReflectionToken= (True,)
+  isStockBase(base)=
+== Hood Of Meme (weth)
+  poolKeyOf = ('0x0bd7d308f8e1639fab988df18a8011f41eacad73', '0x9b4434278976ccf6150a0ff113acc96d594cabac', 8388608, 200, '0x35c0098836fa0d10a015a95bf02c16387814f0cc')
+  poolIdOf  = 6b0fe4e9fe262f88759bb184f967bcbfd248e35332505d5c8de2ae426f93c66c
+  getCreator= ('0xdd6572065fb3ff1020c7b8c05b25b9e1de36c6e4',)
+  feeRecipientOf= ('0xdd6572065fb3ff1020c7b8c05b25b9e1de36c6e4',)
+  isReflectionToken= (False,)
+  isStockBase(base)=
+== Baby Sentry (weth refl)
+  poolKeyOf = ('0x0bd7d308f8e1639fab988df18a8011f41eacad73', '0xef3a80c82c1a5f12c3e16e79eae47c364e4fe669', 8388608, 200, '0x730abadbb4f328520e5350f59126fbe1d67f70cc')
+  poolIdOf  = c18e89099bb91e1823f2914e3d34242dc51a50bbb61134609fc6adda4218b591
+  getCreator= ('0xd0caa10317afb8ea9a1ed4c72f04495d5cec9286',)
+  feeRecipientOf= ('0xd0caa10317afb8ea9a1ed4c72f04495d5cec9286',)
+  isReflectionToken= (True,)
+  isStockBase(base)=

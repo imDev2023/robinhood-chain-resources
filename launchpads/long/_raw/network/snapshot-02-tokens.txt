@@ -1,0 +1,6 @@
+- heading "Sorry, you have been blocked" [level=1, ref=e1]
+- heading "You are unable to access long.xyz" [level=2, ref=e2]
+- heading "Why have I been blocked?" [level=2, ref=e3]
+- heading "What can I do to resolve this?" [level=2, ref=e4]
+- button "Click to reveal" [ref=e5]
+- link "Cloudflare" [ref=e6, url=https://www.cloudflare.com/5xx-error-landing]

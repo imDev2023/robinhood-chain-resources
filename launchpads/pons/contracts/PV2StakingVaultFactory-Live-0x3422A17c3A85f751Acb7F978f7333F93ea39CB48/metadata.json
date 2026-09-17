@@ -1,0 +1,40 @@
+{
+ "address": "0x3422A17c3A85f751Acb7F978f7333F93ea39CB48",
+ "role": "PV2StakingVaultFactory-Live",
+ "group": "PonsVault v2",
+ "note": "Unverified. The Staking vault factory the live ponsvault.com launch flow actually calls, as of 2026-09-02. Shares the beacon owned by the documented factory `0x1488473464\u2026`. 16 vaults built.",
+ "blockscout_address": {
+  "block_number_balance_updated_at": 52465128,
+  "coin_balance": "0",
+  "creation_status": "success",
+  "creation_transaction_hash": "0xb63e77be3f5279dad111e722caabec173ee6fb0b557cb0efa9a460da33375b2c",
+  "creator_address_hash": "0x897ac30f73Ba92E1EFbC1dF1e67f8b5F4b3ECD2b",
+  "ens_domain_name": null,
+  "exchange_rate": "2397.53",
+  "has_beacon_chain_withdrawals": false,
+  "has_logs": true,
+  "has_token_transfers": false,
+  "has_tokens": false,
+  "has_validated_blocks": false,
+  "hash": "0x3422A17c3A85f751Acb7F978f7333F93ea39CB48",
+  "implementations": [
+   {
+    "address_hash": "0xC8e0a4fE58918c47F66CF630c6A7205741C11FD4",
+    "name": null
+   }
+  ],
+  "is_contract": true,
+  "is_scam": false,
+  "is_verified": false,
+  "metadata": null,
+  "name": null,
+  "private_tags": [],
+  "proxy_type": "basic_implementation",
+  "public_tags": [],
+  "reputation": "ok",
+  "token": null,
+  "watchlist_address_id": null,
+  "watchlist_names": []
+ },
+ "blockscout_smart_contract": null
+}

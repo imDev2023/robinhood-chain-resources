@@ -1,0 +1,395 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blockscout Smart Contract Verification API
+
+> Verify Solidity and Vyper smart contracts on Blockscout programmatically, across any supported chain, using the PRO API's contract verification route.
+
+<Info>
+  Contract verification is available through the PRO API's Etherscan-compatible RPC route — `module=contract`. One key works across every Blockscout-supported chain: swap `chain_id` to move between them. Get a free key at [dev.blockscout.com](https://dev.blockscout.com/).
+</Info>
+
+All calls in this guide share the same base pattern:
+
+```text theme={null}
+https://api.blockscout.com/v2/api?chain_id=<chain_id>&module=contract&action=<action>&apikey=<your_pro_api_key>
+```
+
+Swap `<chain_id>` for the target chain (`1` for Ethereum, `8453` for Base, `11155111` for Sepolia, and so on — full list at [dev.blockscout.com](https://dev.blockscout.com/)).
+
+<Warning>
+  Contract addresses, source code, and other variables in the examples below are illustrative. Replace them with your own contract's details.
+</Warning>
+
+<Note>
+  If you're running a self-hosted Blockscout instance, or verifying on a chain the PRO API doesn't cover yet, the same actions work against that instance's own API directly — see the [Contract module RPC reference](/devs/apis/rpc/contract) for the per-instance version of these calls.
+</Note>
+
+### License type
+
+You can specify the license type of the smart contract as `string` or `number`. For example, for `GNU General Public License v2.0 (GNU GPLv2)` you could pass either `4` or `"gnu_gpl_v2"`.
+
+We are supporting such types of license as:
+
+```java theme={null}
+1. No License (None)
+2. The Unlicense (Unlicense)
+3. MIT License (MIT)
+4. GNU General Public License v2.0 (GNU GPLv2)
+5. GNU General Public License v3.0 (GNU GPLv3)
+6. GNU Lesser General Public License v2.1 (GNU LGPLv2.1)
+7. GNU Lesser General Public License v3.0 (GNU LGPLv3)
+8. BSD 2-clause "Simplified" license (BSD-2-Clause)
+9. BSD 3-clause "New" Or "Revised" license* (BSD-3-Clause)
+10. Mozilla Public License 2.0 (MPL-2.0)
+11. Open Software License 3.0 (OSL-3.0)
+12. Apache 2.0 (Apache-2.0)
+13. GNU Affero General Public License (GNU AGPLv3)
+14. Business Source License (BSL 1.1)
+```
+
+API license types:
+
+```text theme={null}
+none
+unlicense
+mit
+gnu_gpl_v2
+gnu_gpl_v3
+gnu_lgpl_v2_1
+gnu_lgpl_v3
+bsd_2_clause
+bsd_3_clause
+mpl_2_0
+osl_3_0
+apache_2_0
+gnu_agpl_v3
+bsl_1_1
+```
+
+## Via flattened source code or standard JSON input
+
+`action=verifysourcecode`
+
+The same action handles both cases — set `codeformat` to `solidity-single-file` for a flattened contract, or `solidity-standard-json-input` for a standard JSON input file (the format most build tools, like Hardhat and Foundry, generate automatically).
+
+<Tabs>
+  <Tab title="Params">
+    | Parameter                      | Description                                                                                                                                        |
+    | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | **codeformat**                 | `solidity-single-file` or `solidity-standard-json-input`                                                                                           |
+    | **contractaddress**            | `string` containing the address hash of the contract                                                                                               |
+    | **contractname**               | `string` name of the contract. Can be empty (`""`), just the name (`"ContractName"`), or path and name (`"contracts/contract_1.sol:ContractName"`) |
+    | **compilerversion**            | `string` containing the compiler version for the contract                                                                                          |
+    | **sourceCode**                 | `string` standard input JSON or flattened Solidity code                                                                                            |
+    | optimizationUsed               | `0`, `false`, `1`, or `true`. Set when `codeformat=solidity-single-file`                                                                           |
+    | runs                           | `integer` optimization runs used during compilation. Set when `optimizationUsed` is `1` or `true`                                                  |
+    | evmversion                     | `string` EVM version. Set when `codeformat=solidity-single-file`                                                                                   |
+    | constructorArguments           | optional `string` constructor argument data                                                                                                        |
+    | autodetectConstructorArguments | optional `boolean` whether to auto-detect constructor arguments                                                                                    |
+    | licenseType                    | `string` or `number` license type — see [License type](#license-type) above                                                                        |
+    | libraryname1 / libraryaddress1 | optional name and address of a linked library                                                                                                      |
+  </Tab>
+
+  <Tab title="Example Result">
+    ```json theme={null}
+    {
+      "message": "OK",
+      "result": "b080b96bd06ad1c9341c2afb7e3730311388544961acde94",
+      "status": "1"
+    }
+    ```
+
+    The `result` is a `guid` — use it with [`checkverifystatus`](#check-verification-status) to poll for the outcome.
+  </Tab>
+</Tabs>
+
+<CodeGroup>
+  ```sh cURL theme={null}
+  curl "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verifysourcecode&apikey=<your_pro_api_key>" \
+    --form 'contractaddress="0xYourContractAddress"' \
+    --form 'sourceCode="// SPDX-License-Identifier: GPL-3.0
+
+  pragma solidity >=0.8.2 <0.9.0;
+
+  contract Storage {
+      uint256 number;
+
+      function store(uint256 num) public {
+          number = num;
+      }
+
+      function retrieve() public view returns (uint256){
+          return number;
+      }
+  }"' \
+    --form 'contractname="Storage"' \
+    --form 'codeformat="solidity-single-file"' \
+    --form 'compilerversion="v0.8.34+commit.80d5c536"' \
+    --form 'optimizationUsed="0"' \
+    --form 'evmversion="default"' \
+    --form 'licenseType="3"'
+  ```
+
+  ```js JavaScript theme={null}
+  const formData = new FormData();
+
+  formData.append("contractaddress", "0xYourContractAddress");
+  formData.append("sourceCode", sourceCode); // flattened Solidity or standard-json-input string
+  formData.append("contractname", "Storage");
+  formData.append("codeformat", "solidity-single-file"); // or "solidity-standard-json-input"
+  formData.append("compilerversion", "v0.8.34+commit.80d5c536");
+  formData.append("optimizationUsed", "0");
+  formData.append("evmversion", "default");
+  formData.append("licenseType", "3");
+
+  const response = await fetch(
+    "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verifysourcecode&apikey=<your_pro_api_key>",
+    { method: "POST", body: formData }
+  );
+
+  const data = await response.json();
+  ```
+
+  ```py Python theme={null}
+  import requests
+
+  files = {
+      "contractaddress": (None, "0xYourContractAddress"),
+      "sourceCode": (None, source_code),  # flattened Solidity or standard-json-input string
+      "contractname": (None, "Storage"),
+      "codeformat": (None, "solidity-single-file"),  # or "solidity-standard-json-input"
+      "compilerversion": (None, "v0.8.34+commit.80d5c536"),
+      "optimizationUsed": (None, "0"),
+      "evmversion": (None, "default"),
+      "licenseType": (None, "3"),
+  }
+
+  response = requests.post(
+      "https://api.blockscout.com/v2/api",
+      params={"chain_id": "11155111", "module": "contract", "action": "verifysourcecode", "apikey": "<your_pro_api_key>"},
+      files=files,
+  )
+
+  data = response.json()
+  ```
+</CodeGroup>
+
+## Via Sourcify
+
+`action=verify_via_sourcify`
+
+If the contract is already verified on [Sourcify](https://sourcify.dev/), Blockscout fetches the match from the [repo](https://repo.sourcify.dev/) automatically. Otherwise, upload the source files and JSON metadata file(s).
+
+<Tabs>
+  <Tab title="Params">
+    | Parameter       | Description                            |
+    | --------------- | -------------------------------------- |
+    | **addressHash** | `string` containing the address hash   |
+    | files           | `array` with source and metadata files |
+  </Tab>
+
+  <Tab title="Example Result">
+    ```json theme={null}
+    {
+      "message": "OK",
+      "result": {
+        "ABI": "[...]",
+        "CompilerVersion": "v0.8.34+commit.80d5c536",
+        "ContractName": "Storage",
+        "SourceCode": "// SPDX-License-Identifier: GPL-3.0..."
+      },
+      "status": "1"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<CodeGroup>
+  ```sh cURL theme={null}
+  curl "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verify_via_sourcify&apikey=<your_pro_api_key>" \
+    --form 'addressHash="0xYourContractAddress"' \
+    --form 'files[0]=@./Storage.sol' \
+    --form 'files[1]=@./metadata.json'
+  ```
+
+  ```js JavaScript theme={null}
+  const formData = new FormData();
+
+  formData.append("addressHash", "0xYourContractAddress");
+  formData.append("files[0]", solFile);       // File or Blob for the .sol source
+  formData.append("files[1]", metadataFile);  // File or Blob for metadata.json
+
+  const response = await fetch(
+    "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verify_via_sourcify&apikey=<your_pro_api_key>",
+    { method: "POST", body: formData }
+  );
+
+  const data = await response.json();
+  ```
+
+  ```py Python theme={null}
+  import requests
+
+  files = {
+      "addressHash": (None, "0xYourContractAddress"),
+      "files[0]": ("Storage.sol", open("Storage.sol", "rb")),
+      "files[1]": ("metadata.json", open("metadata.json", "rb")),
+  }
+
+  response = requests.post(
+      "https://api.blockscout.com/v2/api",
+      params={"chain_id": "11155111", "module": "contract", "action": "verify_via_sourcify", "apikey": "<your_pro_api_key>"},
+      files=files,
+  )
+
+  data = response.json()
+  ```
+</CodeGroup>
+
+## Vyper contracts
+
+`action=verify_vyper_contract`
+
+<Tabs>
+  <Tab title="Params">
+    | Parameter              | Description                                               |
+    | ---------------------- | --------------------------------------------------------- |
+    | **addressHash**        | `string` containing the address hash of the contract      |
+    | **name**               | `string` containing the name of the contract              |
+    | **compilerVersion**    | `string` containing the compiler version for the contract |
+    | **contractSourceCode** | `string` containing the source code of the contract       |
+    | constructorArguments   | optional `string` constructor argument data               |
+  </Tab>
+
+  <Tab title="Example Result">
+    ```json theme={null}
+    {
+      "message": "OK",
+      "result": {
+        "ABI": "[...]",
+        "CompilerVersion": "v0.3.7+commit.6020b8bb",
+        "ContractName": "VyperStorage",
+        "SourceCode": "# @version 0.3.7..."
+      },
+      "status": "1"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+<CodeGroup>
+  ```sh cURL theme={null}
+  curl "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verify_vyper_contract&apikey=<your_pro_api_key>" \
+    --form 'addressHash="0xYourContractAddress"' \
+    --form 'name="VyperStorage"' \
+    --form 'compilerVersion="v0.3.7+commit.6020b8bb"' \
+    --form 'contractSourceCode="<your Vyper source code>"'
+  ```
+
+  ```js JavaScript theme={null}
+  const formData = new FormData();
+
+  formData.append("addressHash", "0xYourContractAddress");
+  formData.append("name", "VyperStorage");
+  formData.append("compilerVersion", "v0.3.7+commit.6020b8bb");
+  formData.append("contractSourceCode", vyperSourceCode);
+
+  const response = await fetch(
+    "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verify_vyper_contract&apikey=<your_pro_api_key>",
+    { method: "POST", body: formData }
+  );
+
+  const data = await response.json();
+  ```
+
+  ```py Python theme={null}
+  import requests
+
+  files = {
+      "addressHash": (None, "0xYourContractAddress"),
+      "name": (None, "VyperStorage"),
+      "compilerVersion": (None, "v0.3.7+commit.6020b8bb"),
+      "contractSourceCode": (None, vyper_source_code),
+  }
+
+  response = requests.post(
+      "https://api.blockscout.com/v2/api",
+      params={"chain_id": "11155111", "module": "contract", "action": "verify_vyper_contract", "apikey": "<your_pro_api_key>"},
+      files=files,
+  )
+
+  data = response.json()
+  ```
+</CodeGroup>
+
+<Note>
+  Only single-file Vyper verification is confirmed on this route. If you need Vyper multi-part or Vyper standard-JSON-input verification specifically, those aren't confirmed to have a PRO API equivalent yet — use the [per-instance route](/devs/apis/rpc/contract) for those cases in the meantime.
+</Note>
+
+## Multiple raw source files
+
+Blockscout's REST API has a dedicated "multi-part" mode for submitting several unflattened `.sol` files at once. The PRO API's `verifysourcecode` action doesn't have a direct equivalent for that — instead, build a standard JSON input file (most toolchains generate one automatically, e.g. under `artifacts/build-info/` in Hardhat) and submit it with `codeformat=solidity-standard-json-input` in the [flattened / standard JSON section above](#via-flattened-source-code-or-standard-json-input). That covers the same multi-file case.
+
+## Check verification status
+
+`action=checkverifystatus`
+
+<Info>
+  `guid` is the value returned by `verifysourcecode`.
+</Info>
+
+<Tabs>
+  <Tab title="Params">
+    | Parameter | Description                                            |
+    | --------- | ------------------------------------------------------ |
+    | **guid**  | `string` used for identifying the verification attempt |
+  </Tab>
+
+  <Tab title="Example Result">
+    ```json theme={null}
+    {
+      "message": "OK",
+      "result": "Pending in queue",
+      "status": "1"
+    }
+    ```
+
+    Return options: `Pending in queue` | `Pass - Verified` | `Fail - Unable to verify` | `Unknown UID`
+  </Tab>
+</Tabs>
+
+```sh cURL theme={null}
+curl "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=checkverifystatus&guid=<guid>&apikey=<your_pro_api_key>"
+```
+
+## Verify a proxy contract
+
+`action=verifyproxycontract`, checked with `action=checkproxyverification`
+
+Same route family as the actions above — pass the proxy's own address and Blockscout resolves and links the implementation contract.
+
+<Tabs>
+  <Tab title="Params">
+    | Parameter   | Description                                                |
+    | ----------- | ---------------------------------------------------------- |
+    | **address** | `string` containing the address hash of the proxy contract |
+  </Tab>
+
+  <Tab title="Example Result">
+    ```json theme={null}
+    {
+      "message": "OK",
+      "result": "c32d204404f33ff38fee42394f7e671fd96314b3658d466a",
+      "status": "1"
+    }
+    ```
+
+    Poll the result with `action=checkproxyverification&guid=<guid>`. Return options: `Verification in progress` | a success message naming the resolved implementation address | `A corresponding implementation contract was unfortunately not detected for the proxy address.` | `Unknown UID`
+  </Tab>
+</Tabs>
+
+```sh cURL theme={null}
+curl "https://api.blockscout.com/v2/api?chain_id=11155111&module=contract&action=verifyproxycontract&address=0xYourProxyAddress&apikey=<your_pro_api_key>"
+```

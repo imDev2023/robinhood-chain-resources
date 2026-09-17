@@ -1,0 +1,11 @@
+{
+ "block": 34251364,
+ "gasPriceWei": 42584000,
+ "gasPriceGwei": 0.042584,
+ "client": "nitro/v3.11.2-3599aca/linux-amd64/go1.25.11",
+ "chainId": 4663,
+ "blockTimeSec": 0.1,
+ "gasLimit": 1125899906842624,
+ "baseFeePerGas": 42584000,
+ "timestampISO": "2026-08-12T04:48:15+00:00"
+}

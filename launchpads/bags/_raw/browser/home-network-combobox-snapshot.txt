@@ -1,0 +1,5 @@
+- generic "$PEPEEarned $388.62K from $PEPE" [ref=e2] clickable [cursor:pointer]
+  - link "$PEPE PEPE $PEPE Verified Earned $ 388.62K from $PEPE" [ref=e5, url=https://bags.fm/EkJuyYyD3to61CHVPJn6wHb7xANxvqApnVJ4o2SdBAGS]
+- listbox [ref=e1]
+  - option "Solana" [ref=e3]
+  - option "Robinhood" [selected, ref=e4]

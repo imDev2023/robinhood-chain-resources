@@ -1,0 +1,7 @@
+{
+  "url": "https://app.doppler.lol/api/upcoming-auctions?tokenAddress=0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18",
+  "method": "GET",
+  "postData": null,
+  "status": 200,
+  "responseSample": "[]"
+}

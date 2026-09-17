@@ -1,0 +1,367 @@
+{
+ "0x0647140b": [],
+ "0x03d9f247": [],
+ "0x01480614": [],
+ "0x06118588": [],
+ "0x06b7c759": [],
+ "0x0f428e0f": [],
+ "0x11ccd3cd": [],
+ "0x0b0d9c09": [
+  "take(address,address,uint256)"
+ ],
+ "0x10409e9d": [],
+ "0x014612af": [],
+ "0x0fe58201": [
+  "FIRST_CONFIG_ID()"
+ ],
+ "0x118cdaa7": [
+  "OwnableUnauthorizedAccount(address)"
+ ],
+ "0x1cad862d": [
+  "getLaunchConfig(uint256)"
+ ],
+ "0x130611ef": [
+  "setApprovedQuote(address,bool)"
+ ],
+ "0x09ee12d5": [
+  "NotAContract()"
+ ],
+ "0x06117018": [],
+ "0x01000000": [],
+ "0x156e29f6": [
+  "mint(address,uint256,uint256)"
+ ],
+ "0x0b34c2b3": [],
+ "0x197fc07f": [],
+ "0x23b872dd": [
+  "transferFrom(address,address,uint256)"
+ ],
+ "0x236a4afb": [
+  "launchEnabled()"
+ ],
+ "0x1a12c087": [],
+ "0x1a78aacb": [],
+ "0x20a61e89": [],
+ "0x21c4e357": [],
+ "0x11da60b4": [
+  "settle()"
+ ],
+ "0x29610465": [],
+ "0x12b6e6e7": [
+  "register(bytes32,address,address,uint16,uint24)"
+ ],
+ "0x2a576987": [],
+ "0x03e60e89": [],
+ "0x3670b9b0": [
+  "firstConfigId()"
+ ],
+ "0x0fef9203": [],
+ "0x2d35e7ed": [],
+ "0x313ce567": [
+  "decimals()"
+ ],
+ "0x29190615": [],
+ "0x377df307": [
+  "approvedQuote(address)"
+ ],
+ "0x10c29a61": [
+  "initializeVNext()"
+ ],
+ "0x26c7c639": [
+  "TreasuryCannotHoldTokens()"
+ ],
+ "0x23887b51": [
+  "publishModuleSet(address,address,address,address)"
+ ],
+ "0x199f5f57": [
+  "QuoteNotApproved()"
+ ],
+ "0x2d6176c8": [
+  "initialize((string,string,string,string,string,(string,string,string,string,string),address,uint256,uint24))"
+ ],
+ "0x11b48401": [
+  "currentSplitterOf(bytes32)"
+ ],
+ "0x2a875269": [],
+ "0x36600461": [],
+ "0x0de68793": [
+  "InvalidConfigId()"
+ ],
+ "0x31461157": [],
+ "0x33eeccd9": [
+  "ConfigDisabled()"
+ ],
+ "0x35faa416": [
+  "sweep()"
+ ],
+ "0x388636eb": [
+  "register(bytes32,(address,address,uint24,int24,address))"
+ ],
+ "0x3924e20d": [],
+ "0x4033e4e3": [
+  "FeeTransferFailed()"
+ ],
+ "0x3a7b5936": [],
+ "0x412ef363": [
+  "getModuleSet(uint256)"
+ ],
+ "0x45cf6135": [
+  "airdropVaultMaster()"
+ ],
+ "0x4b09d207": [
+  "MIN_QUOTE_DECIMALS()"
+ ],
+ "0x4c9c8ce3": [
+  "ERC1967InvalidImplementation(address)"
+ ],
+ "0x46101408": [],
+ "0x5313be2c": [
+  "setLaunchFee(uint256)"
+ ],
+ "0x4707d000": [
+  "rescueToken(address,address)"
+ ],
+ "0x52d1902d": [
+  "proxiableUUID()"
+ ],
+ "0x5274afe7": [
+  "SafeERC20FailedOperation(address)"
+ ],
+ "0x485cc955": [
+  "initialize(address,address)",
+  "watch_tg_invmru_7bd442a(uint256,address,uint256)",
+  "watch_tg_invmru_10757d42(bool,bool)"
+ ],
+ "0x4e487b71": [
+  "Panic(uint256)"
+ ],
+ "0x5c9907f8": [],
+ "0x5b00934d": [],
+ "0x4ad7e0a3": [],
+ "0x5031a9ed": [],
+ "0x4300081c": [],
+ "0x4f1ef286": [
+  "upgradeToAndCall(address,bytes)",
+  "upgradeToAndCall_23573451()"
+ ],
+ "0x56020880": [],
+ "0x57506001": [],
+ "0x558a1e03": [],
+ "0x6276cbbe": [
+  "initialize((address,address,uint24,int24,address),uint160)"
+ ],
+ "0x575f5ffd": [],
+ "0x5e1f3d93": [],
+ "0x5a6bcfda": [
+  "modifyLiquidity((address,address,uint24,int24,address),(int24,int24,int256,bytes32),bytes)"
+ ],
+ "0x48c89491": [
+  "unlock(bytes)"
+ ],
+ "0x61d027b3": [
+  "treasury()"
+ ],
+ "0x631f8653": [],
+ "0x66004614": [],
+ "0x6956f2ab": [],
+ "0x68286016": [],
+ "0x68199f55": [],
+ "0x79ba5097": [
+  "acceptOwnership()"
+ ],
+ "0x7687e965": [],
+ "0x81599da9": [
+  "airdropVaultOf(bytes32)"
+ ],
+ "0x6de13a36": [
+  "setLaunchConfigEnabled(uint256,bool)"
+ ],
+ "0x570c1085": [],
+ "0x703e46dd": [],
+ "0x7acbe679": [],
+ "0x7f7c9018": [],
+ "0x70a08231": [
+  "balanceOf(address)"
+ ],
+ "0x65ff01fc": [
+  "sqrtPriceAtTick(int24)"
+ ],
+ "0x6eb1769f": [],
+ "0x7f5a7c7b": [
+  "hook()"
+ ],
+ "0x52ed1fd7": [
+  "CreatorMustBeSender()"
+ ],
+ "0x88c6164d": [],
+ "0x684b021c": [
+  "initializePool(bytes32,address)"
+ ],
+ "0x715018a6": [
+  "renounceOwnership()"
+ ],
+ "0xa80ac0c2": [],
+ "0xa5841194": [
+  "sync(address)"
+ ],
+ "0x8da5cb5b": [
+  "owner()"
+ ],
+ "0x99d726c7": [
+  "nextConfigId()"
+ ],
+ "0x9d5fd721": [
+  "moduleSetCount()"
+ ],
+ "0xb5f03610": [],
+ "0x92f6576e": [
+  "MAX_FEE_RATE()"
+ ],
+ "0x9996b315": [
+  "AddressEmptyCode(address)"
+ ],
+ "0xae72d871": [
+  "launchConfigCount()"
+ ],
+ "0xa0f76cce": [
+  "PIPS_PER_BP()"
+ ],
+ "0xa9059cbb": [
+  "transfer(address,uint256)"
+ ],
+ "0x91dd7346": [
+  "unlockCallback(bytes)"
+ ],
+ "0xa575f5ff": [],
+ "0xb5f03614": [],
+ "0xb398979f": [
+  "ERC1967NonPayable()"
+ ],
+ "0xad3cb1cc": [
+  "UPGRADE_INTERFACE_VERSION()"
+ ],
+ "0xb06ebf3d": [
+  "FailedDeployment()"
+ ],
+ "0xc5b211e9": [
+  "QuoteDecimalsTooLow(uint256)"
+ ],
+ "0xbc4ef19e": [],
+ "0xa0620634": [
+  "configCount()"
+ ],
+ "0x9ac68694": [
+  "publishConfig((uint256,address,uint256,int24,int24,uint16,uint24,bool,bool,bool))"
+ ],
+ "0xb7f3391b": [
+  "UnknownModuleSet()"
+ ],
+ "0xbef48b4f": [
+  "retiredConfigCount()"
+ ],
+ "0xb47cef4a": [],
+ "0xca715301": [
+  "retiredPointers()"
+ ],
+ "0xc8cf7dd9": [],
+ "0xbbc6064e": [
+  "MODULE_GENERATION()"
+ ],
+ "0xc285282f": [
+  "launchSplitterOf(bytes32)"
+ ],
+ "0x88c75a71": [
+  "BurnerMismatch()"
+ ],
+ "0xcf3cf573": [
+  "launchFee()"
+ ],
+ "0xcf479181": [
+  "InsufficientBalance(uint256,uint256)"
+ ],
+ "0xd505accf": [
+  "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+  "$____$$_$$___$$$_$$$$__$$$__$$$$$$$$$(address,address,uint256,uint256,uint8,bytes32,bytes32)",
+  "watch_tg_invmru_168a06(bool,address,bool)"
+ ],
+ "0xb78cb0dd": [
+  "PermitFailed()"
+ ],
+ "0xd6bda275": [
+  "FailedCall()"
+ ],
+ "0x93f5e3a9": [
+  "EmptyAirdrop()"
+ ],
+ "0xd7390935": [],
+ "0xd09c628d": [
+  "publishedConfigCount()"
+ ],
+ "0xdc4c90d3": [
+  "poolManager()"
+ ],
+ "0xd602d806": [],
+ "0xd3d373d3": [],
+ "0xb115b156": [],
+ "0xdd62ed3e": [
+  "allowance(address,address)"
+ ],
+ "0xd903540b": [],
+ "0xb0e0f2c5": [
+  "initialize(address,bytes32,address,address[],uint16[])"
+ ],
+ "0xe1a45218": [
+  "BPS_DENOMINATOR()"
+ ],
+ "0xe30c3978": [
+  "pendingOwner()"
+ ],
+ "0xd7300000": [],
+ "0xde1b2ec6": [
+  "setAirdropVaultMaster(address)"
+ ],
+ "0xd92e233d": [
+  "ZeroAddress()"
+ ],
+ "0xbc672e9d": [
+  "InvalidAirdropBps()"
+ ],
+ "0xfba343c9": [],
+ "0xf3cd914c": [
+  "swap((address,address,uint24,int24,address),(bool,int256,uint160),bytes)"
+ ],
+ "0xf5298aca": [
+  "burn(address,uint256,uint256)"
+ ],
+ "0xffffffff": [
+  "LOCK8605463013()",
+  "test266151307()",
+  "selfCallSimulateExecute565348489()",
+  "uWjK9(uint256)"
+ ],
+ "0xf2fde38b": [
+  "transferOwnership(address)",
+  "_SIMONdotBLACK_(int8[],uint256,address,bytes8,int96)"
+ ],
+ "0xf92ee8a9": [
+  "InvalidInitialization()"
+ ],
+ "0xf0f44260": [
+  "setTreasury(address)"
+ ],
+ "0xfef4d43d": [
+  "SplitterNotSet()"
+ ],
+ "0xe36a4351": [
+  "PermitNotApplicable()"
+ ],
+ "0xecd7b0d1": [
+  "EmptyString()"
+ ],
+ "0xebc5d1d1": [
+  "VanityAddressRequired()"
+ ],
+ "0xf56f05b2": [
+  "setLaunchEnabled(bool)"
+ ]
+}

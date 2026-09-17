@@ -1,0 +1,33 @@
+{
+ "block": 52846471,
+ "ethUsd": 2397.55,
+ "indexerLagSeconds": 0,
+ "indexerBlocksBehind": 0,
+ "indexerTier": "live",
+ "launches": 81,
+ "rpcReachable": true,
+ "addresses": {
+  "cashcat": "0x020bfC650A365f8BB26819deAAbF3E21291018b4",
+  "chainId": 4663,
+  "deployBlock": 49311371,
+  "deployer": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "dividendSink": "0x9f3edbfAE8014d55E328b6Dd966C6C95E75f6210",
+  "feeRouter": "0xe1c046571e69Ae2408C21605f2ff657A23977C4c",
+  "hood10": "0x0D257cA40d40090BE60C2d2Ed5bB3535392838cc",
+  "hood10Distributor": "0x9f3edbfAE8014d55E328b6Dd966C6C95E75f6210",
+  "launchFactory": "0x718633252AA8329495Df8BBa8fF7c9e8378CFC63",
+  "launchHook": "0xe6234a98fF84220CcDA12985548ddAb36327Aacc",
+  "owner": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "poolManager": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+  "protocolTreasury": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "quoteRegistry": "0x5D8b610E39156d2cFeF3c1ceCC3c22f4990A1298",
+  "tsla": "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+  "usdg": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+  "weth": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+  "simulatedAtBlock": 49311346,
+  "rpc": "https://alpha-dawn-owl.robinhood-mainnet.quiknode.pro/732193542413786b31414220cd40e4cf4f435165/",
+  "recordedAt": "2026-08-29T16:52:45.361Z",
+  "deployBlockHash": "0x0124756d1817a86553a8eaae158ab83e5f82da1cde514efdc38c092ee24a3e2f",
+  "dividendDeployer": "0x3087cFD761D679Ded5d0a2baf4d3577aE447d5E3"
+ }
+}

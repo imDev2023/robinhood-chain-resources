@@ -1,0 +1,46 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Streak Rewards
+
+> Claim Blockscout Merits every day to build a streak and earn bonus rewards every 7 consecutive days, with up to 30 Merits on streak days.
+
+<Info>
+  Available at [https://merits.blockscout.com/](https://merits.blockscout.com/) and on the Blockscout Merits dashboard.
+</Info>
+
+<Frame caption="Streaks view in the Merits hub. To maintain your streak, visit the Blockscout explorer dashboard and make a daily claim.">
+  <img src="https://mintcdn.com/blockscout/kl-dO7vK6d_hNvHA/images/bb735732-image.jpeg?fit=max&auto=format&n=kl-dO7vK6d_hNvHA&q=85&s=81310f8f9c7cd805e8c42a181c8bcbde" width="2208" height="1136" data-path="images/bb735732-image.jpeg" />
+</Frame>
+
+Earn additional Merits by visiting and claiming once per day. A day starts at 00:00 UTC and ends at 23:59 UTC.
+
+<Info>
+  To maintain a streak, you must make a claim each calendar day. The timing on the claim doesn't matter, it can occur any time between 00:00 UTC and 23:59 UTC.
+</Info>
+
+* Merits must be claimed once per day to maintain a streak. Every day you make a Merits claim, your streak increases by 1.
+
+* If you fail to make a claim on a calendar day, your streak resets to 0.
+
+* Every 7 days of a streak results in an increased Merit reward. This is a single day award which is claimed each 7th day of your streak (7,14,21,28 etc).
+
+* Currently, the highest reward is 20 Merits, for a total of 30 Merits (10 daily claim Merits + 20 streak reward Merits) available to claim on streak reward days.
+
+<Info>
+  *See the table below for more details on streak rewards.*
+</Info>
+
+### Streak rewards for daily claims
+
+| Streak | Daily Claim | Reward | Total Merits Claim |
+| ------ | ----------- | ------ | ------------------ |
+| 1-6    | 10          | 0      | 10                 |
+| 7      | 10          | 10     | 20                 |
+| 8-13   | 10          | 0      | 10                 |
+| 14     | 10          | 20     | 30                 |
+| 15-20  | 10          | 0      | 10                 |
+| 21     | 10          | 20     | 30                 |
+| 22-27  | 10          | 0      | 10                 |
+| 28     | 10          | 20     | 30                 |

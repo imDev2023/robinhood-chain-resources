@@ -1,0 +1,57 @@
+HomeMenu
+
+ExploreStatsSeatsLaunchClaimDocsX
+
+Connect
+
+← Vault Seats
+
+# Artificial General Intelligence
+
+$AGI · 1024 seats · series #1
+
+Seats for sale1,0213 of 1024 minted
+
+Price per seat69,420$AGI per seat
+
+Reward pot0.0030of 0.05 ETH
+
+Loan principal48,594$AGI against one seat
+
+Seat number
+
+Owned by 0x31EA…ea88
+
+Artificial General Intelligence #1
+
+- SeriesAGI
+
+- Seat1
+
+This seat is what every tab below acts on.
+
+TradeMy seatsActivateDistributionsLoans
+
+## Trade
+
+Buy next takes whichever seat is next in line and costs the least ETH. Snipe takes the exact number above — same $AGI price, higher ETH fee — and works on any seat nobody owns yet. So you can go straight for the art you want.
+
+Buy next seatSnipe #1Sell #1 back
+
+Connect a wallet to trade.
+
+ETH fee: 0.001 to buy or sell, 0.0015 to snipe — the shop's floor, since 10% and 15% of what a seat is worth (0.000127 ETH on the $AGI curve) comes to less. Every wei of it goes into the reward pot and back out to activated seats.
+
+## Contracts
+
+Fuel $AGI0xaB11c6…279777
+
+Collection0xA62Ba0…b0F7a8
+
+Shop (AMM)0x752A37…9C2811
+
+Activation0xf02E8e…4855Bf
+
+Booster0x55ceF4…F2D691
+
+Loan vault0xFcc379…4952f1

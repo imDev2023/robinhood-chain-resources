@@ -1,0 +1,41 @@
+{
+ "capturedAt": "2026-09-02",
+ "chainId": "0x1237",
+ "clientVersion": "nitro/v3.11.3-beb2108/linux-amd64/go1.25.12",
+ "blockNumber": 52266372,
+ "gasPriceWei": 360574000,
+ "baseFeePerGasWei_block52266850": 474862000,
+ "gasLimit": 1125899906842624,
+ "blockTime": {
+  "fromBlock": 52266272,
+  "toBlock": 52266372,
+  "seconds": 10,
+  "perBlock": 0.1
+ },
+ "rosterReadBlock": 52437900,
+ "blockscoutStats": {
+  "average_block_time": 101.0,
+  "coin_image": "https://coin-images.coingecko.com/coins/images/279/small/ethereum.png?1696501628",
+  "coin_price": "2414.26",
+  "coin_price_change_percentage": null,
+  "gas_price_updated_at": "2026-09-02T03:49:43.466994Z",
+  "gas_prices": {
+   "slow": 0.38,
+   "average": 0.52,
+   "fast": 0.98
+  },
+  "gas_prices_update_in": 27532,
+  "gas_used_today": "0",
+  "market_cap": "291352079351.1135910630",
+  "network_utilization_percentage": 3.2618850909216235e-07,
+  "secondary_coin_image": null,
+  "secondary_coin_price": null,
+  "static_gas_price": null,
+  "total_addresses": "18324296",
+  "total_blocks": "52176137",
+  "total_gas_used": "0",
+  "total_transactions": "572586004",
+  "transactions_today": "0",
+  "tvl": null
+ }
+}

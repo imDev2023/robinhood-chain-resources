@@ -1,0 +1,396 @@
+# Noxa - fun token pcc comments
+
+> Source: https://fun.noxa.fi/token/0xbf3e53713a53e9c3d5d1ddc25dd2c65669244663
+> Retrieved: 2026-09-02 (agent-browser read)
+>
+> Note: Comments tab
+
+---
+
+Noxa
+
+HomeLaunchBridgeProfileStatsDocsCreate coin
+
+Create
+
+Connect Wallet
+
+# Pussy Cat Club
+
+$PCC
+
+Created by 0x2ac7...09438d ago10.93K holders0xbf3e...4663RH Scan ↗
+
+TelegramTwitterWebsite
+
+$0.006724
+
+$6.72M mcap
+
+### Market Cap
+
+1m5m15m1h4h1d
+
+### About
+
+The hottest door on Robinhood. If you have to ask what's inside, you're not on the list. Members only.
+
+### Trades
+
+TraderSideETHPriceTime
+
+0xb4ac...4b36sell0.0004 ETH0.0₅27932m
+
+0xcaf6...5cb2sell0.0556 ETH0.0₅27932m
+
+0xcaf6...5cb2sell0.0587 ETH0.0₅27982m
+
+0xc8b2...6b92buy0.0522 ETH0.0₅28023m
+
+0xcaf6...5cb2sell0.0693 ETH0.0₅27983m
+
+0xcaf6...5cb2sell0.0632 ETH0.0₅28044m
+
+0xcaf6...5cb2sell0.0525 ETH0.0₅28094m
+
+0xcaf6...5cb2sell0.059 ETH0.0₅28134m
+
+0xb8df...e812buy0.0541 ETH0.0₅28185m
+
+0xa744...2fe8buy0.0563 ETH0.0₅28135m
+
+0x24cb...e47cbuy0.0568 ETH0.0₅28096m
+
+0x24cb...e47cbuy0.066 ETH0.0₅28046m
+
+0x39b3...be5fsell0.1677 ETH0.0₅27996m
+
+0xcaf6...5cb2sell0.041 ETH0.0₅28136m
+
+0xc8b2...6b92buy0.0659 ETH0.0₅28167m
+
+0xcaf6...5cb2sell0.0588 ETH0.0₅28117m
+
+0xcaf6...5cb2sell0.0496 ETH0.0₅28158m
+
+0xcaf6...5cb2sell0.0258 ETH0.0₅28198m
+
+0xa744...2fe8buy0.0659 ETH0.0₅28218m
+
+0xcaf6...5cb2sell0.0608 ETH0.0₅28168m
+
+0xcaf6...5cb2sell0.0461 ETH0.0₅28219m
+
+0xc8b2...6b92buy0.0658 ETH0.0₅28249m
+
+0xb8df...e812buy0.0608 ETH0.0₅281910m
+
+0xcaf6...5cb2sell0.0499 ETH0.0₅281510m
+
+0xb8df...e812buy0.0714 ETH0.0₅281910m
+
+0xcaf6...5cb2sell0.0641 ETH0.0₅281311m
+
+0x81df...eee3buy0.0688 ETH0.0₅281811m
+
+0x3a7f...d6f9buy0.0493 ETH0.0₅281312m
+
+0xf2ab...5040buy0.0532 ETH0.0₅280912m
+
+0x4070...c53ebuy0.0466 ETH0.0₅280512m
+
+0x4070...c53ebuy0.0557 ETH0.0₅280112m
+
+0x989b...cb5bbuy0.0677 ETH0.0₅279713m
+
+0xcaf6...5cb2sell0.0542 ETH0.0₅279113m
+
+0xcaf6...5cb2sell0.046 ETH0.0₅279614m
+
+0x81df...eee3buy0.05 ETH0.0₅279914m
+
+0x39b3...be5fsell0.5817 ETH0.0₅279514m
+
+0xcaf6...5cb2sell0.066 ETH0.0₅284114m
+
+0xf2ab...5040buy0.0679 ETH0.0₅284615m
+
+0x4070...c53ebuy0.0559 ETH0.0₅284115m
+
+0xcaf6...5cb2sell0.0619 ETH0.0₅283716m
+
+0x39b3...be5fsell0.0149 ETH0.0₅284116m
+
+0xcaf6...5cb2sell0.0384 ETH0.0₅284316m
+
+0x8f10...f996sell0.0205 ETH0.0₅284616m
+
+0xcaf6...5cb2sell0.0567 ETH0.0₅284716m
+
+0x989b...cb5bbuy0.0605 ETH0.0₅285217m
+
+0x8f10...f996buy0.0062 ETH0.0₅284717m
+
+0x4070...c53ebuy0.0516 ETH0.0₅284717m
+
+0x3a7f...d6f9buy0.0119 ETH0.0₅284317m
+
+0x39b3...be5fbuy0.9358 ETH0.0₅284217m
+
+0x39b3...be5fbuy0.3834 ETH0.0₅276918m
+
+0xcaf6...5cb2sell0.0672 ETH0.0₅273818m
+
+0xcaf6...5cb2sell0.0644 ETH0.0₅274318m
+
+0x39b3...be5fbuy0.115 ETH0.0₅274818m
+
+0x989b...cb5bbuy0.0627 ETH0.0₅273918m
+
+0xcaf6...5cb2sell0.0532 ETH0.0₅273419m
+
+0x81df...eee3buy0.0717 ETH0.0₅273819m
+
+0xcaf6...5cb2sell0.0499 ETH0.0₅273320m
+
+0xd795...15a4buy0.2868 ETH0.0₅273720m
+
+0x989b...cb5bbuy0.0452 ETH0.0₅271320m
+
+0x8f10...f996sell0.0565 ETH0.0₅271020m
+
+### Comments
+
+Connect your wallet to comment
+
+No comments yet. Be the first.
+
+GraduationGraduated
+
+Reached the $48.13K market-cap milestone.
+
+BuySell
+
+AmountBalance: 0.00 PCC
+
+PCC
+
+25%50%75%MAX
+
+You receive (est.)—
+
+Min received (after slippage)—
+
+Price impact—
+
+Slippage
+
+0.5%1%5%
+
+Connect your wallet to trade
+
+Routes through Uniswap V3 SwapRouter02 · 1% fee tier
+
+### Holders
+
+10.93K total
+
+10x5823...1bc5
+
+24M2.40%
+
+20x93cb...ea8c
+
+22.72M2.27%
+
+30x01d8...f894Liquidity
+
+22.71M2.27%
+
+40x0d54...5b7d
+
+22.55M2.25%
+
+50xab42...eaf9
+
+19.98M2.00%
+
+60x1fb3...5246
+
+19.62M1.96%
+
+70x82c1...3989
+
+19.57M1.96%
+
+80xe363...365a
+
+18.31M1.83%
+
+90x8287...3c20
+
+17.79M1.78%
+
+100xbe57...3bdf
+
+16.49M1.65%
+
+110xd96a...8b65
+
+15.82M1.58%
+
+120x41b8...b279
+
+15.42M1.54%
+
+130x824a...1367
+
+12.73M1.27%
+
+140x3f04...1f84
+
+12.36M1.24%
+
+150x5323...2429
+
+12.36M1.24%
+
+160x6b36...dc64
+
+12.36M1.24%
+
+170xdf97...afab
+
+12.13M1.21%
+
+180xa170...f2a1
+
+11.96M1.20%
+
+190xb6bf...2360
+
+11.84M1.18%
+
+200xa22b...6ad4
+
+11.78M1.18%
+
+210x9a69...d44d
+
+11.72M1.17%
+
+220xf6f3...e805
+
+11.35M1.13%
+
+230x23fa...742d
+
+11.22M1.12%
+
+240x435b...7ae4
+
+11.22M1.12%
+
+250xbe2e...0d6e
+
+10.99M1.10%
+
+260x434b...5c1e
+
+10.96M1.10%
+
+270xb68d...39aa
+
+10.85M1.09%
+
+280xa956...ed35
+
+10.82M1.08%
+
+290x94bf...fff4
+
+10.63M1.06%
+
+300x1cc0...9b10
+
+10.55M1.06%
+
+310x0f6b...ea8c
+
+10.36M1.04%
+
+320x0277...846d
+
+10.36M1.04%
+
+330x4bdc...c2c2
+
+10.36M1.04%
+
+340x2e73...d5b9
+
+10.36M1.04%
+
+350x5594...9f07
+
+10.36M1.04%
+
+360x7b0e...49fe
+
+10.36M1.04%
+
+370x876b...5f5e
+
+10.36M1.04%
+
+380x8a30...53be
+
+10.36M1.04%
+
+390xfac7...370f
+
+10.35M1.03%
+
+400xdf44...6852
+
+10.35M1.03%
+
+410xadc7...e51b
+
+10.34M1.03%
+
+420xf399...9ae3
+
+10.34M1.03%
+
+430xeffb...b8d5
+
+10.33M1.03%
+
+440x5016...4c8e
+
+10.29M1.03%
+
+450xa0ce...51a5
+
+10.18M1.02%
+
+460x5886...9230
+
+10.17M1.02%
+
+470xb607...b83d
+
+10.13M1.01%
+
+480xea86...1792
+
+10.13M1.01%
+
+490xa34e...49c2
+
+10.12M1.01%
+
+500x7b6f...d521
+
+10.03M1.00%

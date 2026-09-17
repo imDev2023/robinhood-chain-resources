@@ -1,0 +1,24 @@
+Discovery probes, 2026-09-03, docs.robinhood.com/chain
+======================================================
+HTTP  bytes  URL                                                    result
+200   1270   tvly map https://docs.robinhood.com/chain --json        20 URLs -> tvly-map-2026-09-03.json
+200   1184   https://docs.robinhood.com/sitemap.xml                  real, but lists only /, /crypto/, /crypto/connect/, /crypto/trading/, /healthcheck/ (no /chain)
+200    535   https://docs.robinhood.com/chain/sitemap.xml            SPA shell, not a sitemap
+404  93024   https://docs.robinhood.com/sitemap-pages.xml            SPA 404 page (body deleted, it is just the app shell)
+200    535   https://docs.robinhood.com/chain/sitemap-pages.xml      SPA shell
+404  93024   https://docs.robinhood.com/llms.txt                     SPA 404 page (body deleted)
+200    535   https://docs.robinhood.com/chain/llms.txt               SPA shell
+404  93024   https://docs.robinhood.com/llms-full.txt                SPA 404 page (body deleted)
+200    535   https://docs.robinhood.com/chain/llms-full.txt          SPA shell
+
+Authoritative source found instead:
+200 1382820  https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/assets/index-DCWCEAE1.js
+              -> 25 /chain routes in the router table (routes-from-bundle.txt)
+              -> full URL-encoded MDX/MD source of all 25 pages, extracted to mdx/
+              -> full sidebar nav, plus 8 unarchived /rhj routes
+
+Coverage comparison for the same site on the same day:
+  tvly map            20 URLs   misses add-network-to-wallet, deploy-smart-contracts,
+                                differences-from-ethereum, report-issue, privacy-statements
+  sitemap / llms.txt   0 URLs   not served for the /chain space
+  bundle route table  25 URLs   complete

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5575",
+    "name": "Virtuals Protocol",
+    "address": "base:0x0b3e328455c4059EEb9e3f84b5543F74E24e7E1b",
+    "symbol": "VIRTUAL",
+    "url": "https://app.virtuals.io",
+    "referralUrl": "https://app.virtuals.io/referral?code=JsPKKT",
+    "description": "Society of AI Agents base",
+    "chain": "Base",
+    "logo": "https://icons.llamao.fi/icons/protocols/virtuals-protocol",
+    "audits": "0",
+    "gecko_id": "virtual-protocol",
+    "cmcId": "29420",
+    "category": "AI Agents",
+    "chains": [
+      "Base"
+    ],
+    "module": "virtuals-protocol/index.js",
+    "twitter": "virtuals_io",
+    "dimensions": {
+      "fees": "virtual-protocol",
+      "dexs": "virtual-protocol"
+    },
+    "methodology": "Counts VIRTUAL locked in pre-graduation agent bonding curve pools (FPair) and VIRTUAL locked in the Virtuals Protocol staking contract.",
+    "misrepresentedTokens": false,
+    "tvlCodePath": "https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/virtuals-protocol/index.js",
+    "slug": "virtuals-protocol",
+    "tvl": 0,
+    "chainTvls": {
+      "Base": 0,
+      "Base-staking": 15525907.277651798,
+      "staking": 15525907.277651798
+    },
+    "change_1h": null,
+    "change_1d": null,
+    "change_7d": null,
+    "tokenBreakdowns": {},
+    "mcap": 456363592.08053946,
+    "staking": 15525907.277651798
+  }
+]

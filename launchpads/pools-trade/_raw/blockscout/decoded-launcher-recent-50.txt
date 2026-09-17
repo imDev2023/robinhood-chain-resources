@@ -1,0 +1,291 @@
+== tx 0x3c2777ab4e9bd476405e8ce75d49387f23f1de8f380df12c2c3bc55500f41e0c from 0x3306B80Aef1C9C492c426CfFE2e2476661E369Ce 2026-09-03T02:31:50.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Ponzi Scheme' symbol='Ponzi' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Ponzi Scheme', 'https://x.com/doesntmattersol', 'ipfs://bafybeiebly6qwhi2cusjrolywvabylzvzjiugahkscc74rrltzduc2stqm'),)
+   distributeToken token=0x5de76f7fc523225489568004e31344213dd1aaca strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xd7c03014cab860a34ac426dbfd2e64a416a86a4ae803a18bf22a2c2c15b46cbc
+      configData len=32 hex=0000000000000000000000003306b80aef1c9c492c426cffe2e2476661e369ce
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xd7c03014cab860a34ac426dbfd2e64a416a86a4ae803a18bf22a2c2c15b46cbc value=0.0495 data_len=1600
+== tx 0x358685ea1b9c85d40961a697666695e9651de2ad0f3ac3bb5f560b2ea563888c from 0x538E739d00227b1C025962Cf247668f042eF232A 2026-09-03T02:29:45.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Cr3dentials' symbol='CRED' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Providing credit-without-collateral, to anyone, anywhere.', '', 'ipfs://bafkreiaeikvjk2nlthxukooavd72eab4ojshcsopbqgnc3kakpdsfijvde'),)
+   distributeToken token=0x224a688000c4c9cbba4eae31951cd41b66db753d strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x3d2bb065cdd0371540757123b4121d02c66004d6efe398431ffb4d8ed1878234
+      configData len=32 hex=000000000000000000000000538e739d00227b1c025962cf247668f042ef232a
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x3d2bb065cdd0371540757123b4121d02c66004d6efe398431ffb4d8ed1878234 value=0.13230044703816235 data_len=1312
+== tx 0x1e97cbeec4194cde6e954b3705aaedbd445066cc55b2f6922767926a3a6d0581 from 0xA5B1C60C3Fbf50c6D166d785FdfAD714f725596A 2026-09-03T02:28:44.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Taard Capital' symbol='TAARD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('"Sorry babe I got no cash, I full ported TAARD!"\n\nWe are in late stage capitalism, we are all (re)taards.', '', 'ipfs://bafkreihflexukfn53ato7jy2sxh4rjgimsdlvrggo3l5fmygzrlulh3qfy'),)
+   distributeToken token=0xca645b349005b2d155f272f47ef8ea837cf43987 strategy=0x05d552391067389ee44fec3924157ed33f976000 amount=1,000,000,000 graffiti=0xbec995f0e3f1a037088fc6cee50116f4807c2f8e36bda1809d02eb6e04aea8a7
+      configData len=1376 hex=00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000320000000000000000000000000ca645b349005b2d155f272f47ef8ea837cf4398700000000
+== tx 0x54d56ffdd5ea51abc80c4e78b6a113e117e4a013a85a1f7ed8005f98d379f83c from 0x171017C203D0719013D2E2988Be829fe5bfa5ff2 2026-09-03T02:26:27.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Muu' symbol='MUU' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreieaijwd7ckgysvgvdzjfxozuflqaapodtoryytbsydbo52oree7om'),)
+   distributeToken token=0xc315bb41daa8d4f0bf83088de113f3e73ba7b7c6 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x9c472bd3c2f351f47385116e1a7527a3d9fd6c3dfd72b6cde9928c2b53fbb764
+      configData len=32 hex=000000000000000000000000171017c203d0719013d2e2988be829fe5bfa5ff2
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x9c472bd3c2f351f47385116e1a7527a3d9fd6c3dfd72b6cde9928c2b53fbb764 value=0.297 data_len=1312
+== tx 0x29229ce07afe7fad93c76d96d656141503973681818be7359fb2201fa6f557c8 from 0x880d0Db6669e31D9dac2B595796eD828C83C12b9 2026-09-03T02:17:10.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Reddit Collectible Avatars' symbol='REDDIT' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (("Reddit NFTs were selling for $50k back in the days, let's bring 'em back!", '', 'ipfs://bafkreidvoce4h5pbuz4jd2aeycwaniokl2rp5lrld2whfo2clixu564cg4'),)
+   distributeToken token=0x13baf48d54f327ec6c101d897cb7610b511d50e4 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x4e54524600c06bdceaff9f5f672c76ae5cb975dc6e6718fcc18b55ae372a9dad
+      configData len=32 hex=000000000000000000000000880d0db6669e31d9dac2b595796ed828c83c12b9
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x4e54524600c06bdceaff9f5f672c76ae5cb975dc6e6718fcc18b55ae372a9dad value=0.025390994904168785 data_len=1312
+== tx 0x904d809c5acd549fe46461b1c40ae62a9549c1f8263d2da0a498999736a7d47f from 0xE138ba40d54561121FFeB75D07B3f6dc0E843e0d 2026-09-03T02:16:01.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Palantard' symbol='PAL' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Palantard', 'https://x.com/palantardmeme', 'ipfs://bafybeibvszc7kzau5nkt72hzbrpx53cj6geohujg5vk2ywrcyfpz2shtym'),)
+   distributeToken token=0x5082da8337f3b9301d9ffc46a1fc5dd5a173bcf0 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x346652c77db2e0598c0ad1bd23a22edffaed90938ffef9d816c509b1b3cc26ef
+      configData len=32 hex=000000000000000000000000e138ba40d54561121ffeb75d07b3f6dc0e843e0d
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x346652c77db2e0598c0ad1bd23a22edffaed90938ffef9d816c509b1b3cc26ef value=0.051 data_len=1600
+== tx 0xdb10d466cd56a54aad31bb1e8dfddba1c0cb82ecf25821a0056af282a4450062 from 0x40d4e51C89c0BE6e3818F47Ecd6CD2407e676D4b 2026-09-03T02:13:22.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Retarded Cat' symbol='RETARDED' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Retarded Cat', 'https://x.com/RetardedCatRH', 'ipfs://bafybeigzqzrbsf7jzj37jvekaelkns4woanvcxppupmmgx6m5z62jyqg6e'),)
+   distributeToken token=0xbef288298a71e2ca86f550d17875981704a662e4 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x8e44cf7b226b428376d4629f62a0c7e2a3a2e1f3cabf6c1e184228191f8dcb62
+      configData len=32 hex=00000000000000000000000040d4e51c89c0be6e3818f47ecd6cd2407e676d4b
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x8e44cf7b226b428376d4629f62a0c7e2a3a2e1f3cabf6c1e184228191f8dcb62 value=0.049 data_len=1600
+== tx 0x44e3977bdb76a06f86d57e48732f86cf8e8da8c7d887c27024088493aaf95328 from 0x1ED770c21c8a46562A0Cc57E42dC105c45F85faB 2026-09-03T01:43:48.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='贵州茅台' symbol='600519' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Moutai comes from Guizhou, China.', '', 'ipfs://bafkreiha67btxbviauovoyddjfk2e4prn3gtukmixswg5g6j5okqtbzdfu'),)
+   distributeToken token=0x38ce3094d4dd84538482bf30130181c1f5e4bccc strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x6f75f1207728bf4b7d80d615d612bcd01200bfd246f006d75df67ee6c5ad6e82
+      configData len=32 hex=0000000000000000000000001ed770c21c8a46562a0cc57e42dc105c45f85fab
+== tx 0x869b699b41bf1ec485b14fd6d23b31b71ae51650799b5e2d775d8708765ac0c5 from 0xA240a813E6887C446C55F8CB9Dbb6Bb44846B166 2026-09-03T01:42:21.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Magachud' symbol='Magachud' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreihgjiin7qiundamoq5ofyllr7m3apixokjb63gcdfmvvdqnt4iuia'),)
+   distributeToken token=0x5856f8afc98ecb6ff17a3e985b22fc85d0ecf51a strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x0c657bac2c8e619f562517173f367e6ac5298f46c53a95f0527b850637498d10
+      configData len=32 hex=000000000000000000000000a240a813e6887c446c55f8cb9dbb6bb44846b166
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x0c657bac2c8e619f562517173f367e6ac5298f46c53a95f0527b850637498d10 value=0.1 data_len=1312
+== tx 0xc60cd566379c4666ea2750be098a09c09fe4b60afcda7b3530dbcba14586b6a5 from 0x5ef57327caD991535d1F6c8545e6765f00869847 2026-09-03T01:37:25.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Magachud' symbol='Magachud' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreihgjiin7qiundamoq5ofyllr7m3apixokjb63gcdfmvvdqnt4iuia'),)
+   distributeToken token=0x674d8868186e895269a9ef0ad18778fb716d61c1 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xa00f54571163ee2d870e7bca1067698404e969e5dd78d3c05d17f7fbbf3fab53
+      configData len=32 hex=0000000000000000000000005ef57327cad991535d1f6c8545e6765f00869847
+== tx 0xdc5ccb54f81433a866f4eb58764eaf03a46de11ce56dc35ad59f519eab4ca1e0 from 0xea02e49B8C8BDEa3e25B4d1128BF0086Db8D1d34 2026-09-03T01:29:24.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='iSpy' symbol='ISPY' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('iSpy', 'https://x.com/ispyrh', 'ipfs://bafybeigrordeppwn3ccdl4rugj6xouoimvxj5blhiiyjzv2kw73v5rriti'),)
+   distributeToken token=0xf33ec4892b7669779209dea750c3737a3adea377 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x4e56100fb05a5d30e363d4868e27841a6840dab336bd1ed6bb110ba3266c4da3
+      configData len=32 hex=000000000000000000000000ea02e49b8c8bdea3e25b4d1128bf0086db8d1d34
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x4e56100fb05a5d30e363d4868e27841a6840dab336bd1ed6bb110ba3266c4da3 value=0.065 data_len=1600
+== tx 0x4794d5a1144160b13d1822e5acd3bdf04f56542b292f63f8b9886e21c3479edb from 0x3EC152E6067B9DEA96806D2A1828b11315399080 2026-09-03T01:24:22.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Advanced Money Duplicatooooor' symbol='AMD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Advanced Money Duplicatooooor', 'https://x.com/dvancedMoneyDup', 'ipfs://bafybeiazccogjpcsthdw7siu27f2nbyc6wjxa7nicw7n3kwmrpt5ysnjpe'),)
+   distributeToken token=0x5d582e79c195c9d726e465b8b0a1a854cecbf6f7 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x3b56c31940c1ca704f9a6eb43146f310500ff188e6d49bdd3e238f8c82003fdb
+      configData len=32 hex=0000000000000000000000003ec152e6067b9dea96806d2a1828b11315399080
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x3b56c31940c1ca704f9a6eb43146f310500ff188e6d49bdd3e238f8c82003fdb value=0.06 data_len=1600
+== tx 0x54ae9cf068eab633cd3cb27ec736dbe7c390f584f7c30defdb3379c815a33c09 from 0xA517F5678b98D2F448b6a999949a597Daf85A26e 2026-09-03T01:18:42.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Haawee Pooter' symbol='POOTER' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('This project is just for fun.. please do not put in more money than you can afford to lose.', '', 'ipfs://bafkreia3stdvgzqvmcwlsxhwccicwaosj5j3uplsfshu5fpy7nlfuo3j5e'),)
+   distributeToken token=0x2a4a910ffec5d1434c0643e79ea0d86bb17bfe66 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xc84f483e4599019b83b64d73da7e110395c69e59102038c726b0d11cf5be0597
+      configData len=32 hex=000000000000000000000000a517f5678b98d2f448b6a999949a597daf85a26e
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xc84f483e4599019b83b64d73da7e110395c69e59102038c726b0d11cf5be0597 value=0.13230044703816235 data_len=1312
+== tx 0xd294927eb9514f50e3f1c38a72b4d3ecca1008a2578bafe299904553b3a9e732 from 0x6F469B5d37FFe0A91d028226739b3A9b1f4a45De 2026-09-03T01:11:08.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='donat' symbol='HELP' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('HELP', '', 'ipfs://bafkreieyu4vs5xcxtcrvnwccmja2rtxr3cgmmoc4i6hqduen4omvbfrviu'),)
+   distributeToken token=0xe835baae59c36e5f0a56e4f90dfa9dd7c1dbf0bb strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x8867e17161d4f7db4e7b926d4a0dd0886e93c5c45dc469842f7ff8e543043aff
+      configData len=32 hex=0000000000000000000000006f469b5d37ffe0a91d028226739b3a9b1f4a45de
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x8867e17161d4f7db4e7b926d4a0dd0886e93c5c45dc469842f7ff8e543043aff value=0.012631700983548029 data_len=1312
+== tx 0xf9f0c51d39c8872f50764561e9affd2e9cd96e3b987e8fb2ff7dccbe9f9eaa91 from 0x3aBc07c79D6154DE45237472134de7529f4bEcb8 2026-09-03T01:06:56.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Player vs Player' symbol='PVP' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreideicizz6q26ezw3n5pqqj2gwcoorrvu56xhp5an6o5zcc52as5x4'),)
+   distributeToken token=0x96d5a4548d4c1865b7a723271138a12a47e0cc38 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x116ceabe827e54fbb576a6515d5af841827f7df4302fe9426bf9c1268b9e5477
+      configData len=32 hex=0000000000000000000000003abc07c79d6154de45237472134de7529f4becb8
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x116ceabe827e54fbb576a6515d5af841827f7df4302fe9426bf9c1268b9e5477 value=0.1 data_len=1312
+== tx 0xdd0f72f7acfe41e53f43d8d139ef6373c368307777b2c63828b8d14c32875e02 from 0xc14a8b7B5fAdad78872617636f94dED27D8087b1 2026-09-03T01:05:25.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='dogitoki' symbol='DOGITOKI' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('dogitoki', '', 'ipfs://bafkreif6wjhheojjim3ep6hxeb2mr5xq2da2fctpktzywxuxbkt5njrdym'),)
+   distributeToken token=0xd1be30ef3c7a144edee0779b457cab70a9c1c299 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xd68b86b406bc9f825511ef59e48253e0777cd3e01c4688daaa5a3b34392dfe26
+      configData len=32 hex=000000000000000000000000c14a8b7b5fadad78872617636f94ded27d8087b1
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xd68b86b406bc9f825511ef59e48253e0777cd3e01c4688daaa5a3b34392dfe26 value=0.025390994904168785 data_len=1312
+== tx 0x660c01316c614d24f6edf91a0727410b204cb81a9bc73c70a72a3406ae183d63 from 0x625AE789D6088e54C4eE0e2a00d48256460dfF2D 2026-09-03T00:53:17.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='MAKIMAKO' symbol='MAKIMAKO' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('MAKIMAKO', '', 'ipfs://bafkreidu3pph2ejivyxi7azsjwij63minz4qd4g43gpuvsjcf5ht35e5om'),)
+   distributeToken token=0x5a6ed6d37dad3e38342965ccb7cba70413483381 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x1cff82a0abbcc34bb69b368e8f0daa7014e8feaf0b206da6fdc42d8553d78516
+      configData len=32 hex=000000000000000000000000625ae789d6088e54c4ee0e2a00d48256460dff2d
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x1cff82a0abbcc34bb69b368e8f0daa7014e8feaf0b206da6fdc42d8553d78516 value=0.012631700983548029 data_len=1312
+== tx 0x6762fc8832a9b8d0b617918d67f89b6c5c1cc94b12e38193ba92aea6966aaf07 from 0x6729AeB5C84719FA9518B45b378233A61AA131a0 2026-09-03T00:45:03.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='hoodiecapy' symbol='HOODIE' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('your trading lucky charm!', '', 'ipfs://bafkreiaz53kbicnkk6sqgih3z7xbipehwcfeods5zreyjkneaaaw26h7am'),)
+   distributeToken token=0xfcafd99e2af4af26ad851cb764d844e5153a343b strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x31bd7a7897756ce77a5849d35f93e33b1925c1a41ab0ff113ba8cff11141cb98
+      configData len=32 hex=0000000000000000000000006729aeb5c84719fa9518b45b378233a61aa131a0
+== tx 0x4186b580742918031e004644bb72a51f8efbdca749c4fb06d82dbcb3883ea921 from 0x2936E7abbA5E02A2AAdFdB924EA896c4018A750a 2026-09-03T00:42:42.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='SHILLBOARD' symbol='SHLB' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('SHiLLBOARD is a holder powered billboard on Robinhood Chain. Hold $SHLB, climb the ranks and SHiLL with any image you want.', '', 'ipfs://bafybeibz73u2ybbe2tjdn4n2nbj5wzenmadezk5lwcapjby5khadyhjbje'),)
+   distributeToken token=0x0f5278b11d4028847224d451b0b315b816e6b8bf strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xce50ca16153052b13913e75c6e192e9e6a92e790a1497441e0f8af299b308708
+      configData len=32 hex=0000000000000000000000002936e7abba5e02a2aadfdb924ea896c4018a750a
+== tx 0x209a9a2743cd37c76b29aa440b284d410d3934c4b56df085de0f14275b5add68 from 0x625AE789D6088e54C4eE0e2a00d48256460dfF2D 2026-09-03T00:38:46.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='DONAT' symbol='DONAT' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('DONAT  HELP', '', 'ipfs://bafkreidu3pph2ejivyxi7azsjwij63minz4qd4g43gpuvsjcf5ht35e5om'),)
+   distributeToken token=0x1d44ffdf83cfa90262ae85fd0bd4502713216480 strategy=0x05d552391067389ee44fec3924157ed33f976000 amount=1,000,000,000 graffiti=0x23c25e4c23d11234d7d997cc694c0d895c9772dd3c635483ef3447e934f4928b
+      configData len=1376 hex=000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000003200000000000000000000000001d44ffdf83cfa90262ae85fd0bd450271321648000000000
+== tx 0xacb3688c4734a93e674f655b35876e71b2c10dfe08fba11e64a8907553974535 from 0x5803aB82B0fEccA8F5c17B9E69E0C4D2C130EFeF 2026-09-03T00:37:29.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Hoodless' symbol='HOODLESS' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreiat2jaihgcqvhwwaqegmlpytx3isn2kxfwovgyupmorlnpoj2oyfm'),)
+   distributeToken token=0x9701c38f2d1a9d5ab19250fe80d9a36f932ee693 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xd50fb5f756b7f3695186c0973482874c34c2fb8fe5ea82af79ecb3e0cce6ec7d
+      configData len=32 hex=0000000000000000000000005803ab82b0fecca8f5c17b9e69e0c4d2c130efef
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xd50fb5f756b7f3695186c0973482874c34c2fb8fe5ea82af79ecb3e0cce6ec7d value=0.1 data_len=1312
+== tx 0xc5e5cd421c27d93484fe0c5945ec0689c10d360732649462dd764f793515c9ef from 0x767bdF5E00F84B4868aB4342366C561FC049c0dB 2026-09-03T00:29:59.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='THE FLAMINGO' symbol='FLAMINGO' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', 'https://x.com/pools_dot_fun/status/2095308181979402420', 'https://xyzzzzzzzzzzzzzzzzzz.com/img/tmp-tkripr_Fg1tsNWnLLM'),)
+   distributeToken token=0x4cced0b3db80a2b6bff2a329976ca482df87a188 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x006f573ee9b29ad63b9f317641f03f5451ac15c59f5797e5404ac6106c3e22f6
+      configData len=32 hex=000000000000000000000000767bdf5e00f84b4868ab4342366c561fc049c0db
+== tx 0x01f1311e2c6b87f6bc041b6572def20b19b4cdabf80afe3264d89d91e47a55db from 0x4c27C9F67169e90fd03f9baA45c29acb888c052d 2026-09-03T00:23:39.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='ArbInHood' symbol='ARBINHOOD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', 'https://ponsfamily.com/launchpad/0x865f603ffc1e6b940bd5475e9d00ff2e28868068', 'https://pbs.twimg.com/media/HROxkFeb0AA6E6t.jpg'),)
+   distributeToken token=0x8a526e0278a89bc15b67774ea31e293a4ac9ddde strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x0586cb7267681b2380bb5c661e8e089dfe6e886d85fa69c7e0515cc142fd7255
+      configData len=32 hex=0000000000000000000000004c27c9f67169e90fd03f9baa45c29acb888c052d
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xd9864df9854712b6fc4aa628e4a82971aa08dbfa6d2020475b15af45ac80cd9c value=0.5 data_len=1280
+== tx 0xc00b74d5cf6c024e7a6c0143fab2ede2ad866befc09282f1009205f452a6e348 from 0x35250404e9Cf384D78a0CFF38ba52df706c91F4D 2026-09-03T00:01:04.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Actually Indian' symbol='AI' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreiajyo3ixmvzc3bt4rcmdc7vx4n7vyd57ony7xdgocrdbolgajfkji'),)
+   distributeToken token=0x83d6d81d3e4555fe8bcd3e6af0ab403b9a0735c3 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x315ccc76524077de3e1ab6181551819e6bfa6f8a691f9431dcb3cc2df3b69871
+      configData len=32 hex=00000000000000000000000035250404e9cf384d78a0cff38ba52df706c91f4d
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x315ccc76524077de3e1ab6181551819e6bfa6f8a691f9431dcb3cc2df3b69871 value=0.1 data_len=1312
+== tx 0x82aa8616ef70e8d775fe75d8fec5dbfe62ff50d4d7d9c5e5fe92d13067f04ce9 from 0x8267b2130C808B277b653831D4Dd5d3c38db98A4 2026-09-02T23:08:36.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Dandelion Flower' symbol='DANDELIO' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Dandelion Flower', '', 'ipfs://bafkreidqbpjxhf3tsicjhq7pl47srwkgv5ol3k5z5d25w5jfnrlnsxgvau'),)
+   distributeToken token=0x093a0d18212a42d0eefaa2297a9fa6d50de3a83c strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xddaf7668b0acc451cab4e8eb94591b93eac086f693ba6515943958e1685c3b7a
+      configData len=32 hex=0000000000000000000000008267b2130c808b277b653831d4dd5d3c38db98a4
+== tx 0x74c0b72fc19aad7a703ef1f757c7769deac3bc815c1e0e61902a361919b96bad from 0x3BfeB889Dd9593Df2E1a0922df66e8B56f852577 2026-09-02T23:07:57.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Hood Book' symbol='HOODBOOK' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('The hood keeps the books on every position. Open it and see who really won.', 'https://hoodbook.io', 'ipfs://QmeRr8YQ2uUYtgDz2Sn1o2qgut4ZL1U6xwWquuG8iGhdEb'),)
+   distributeToken token=0xaea383dd9c1b9e2c1901c07f3053f2138676b356 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x0f0a9bdf1a4398e22b37d5b39d01889e262d75c13412f3729cbc67da7c63ee30
+      configData len=32 hex=0000000000000000000000003bfeb889dd9593df2e1a0922df66e8b56f852577
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x0f0a9bdf1a4398e22b37d5b39d01889e262d75c13412f3729cbc67da7c63ee30 value=0.012631700983548025 data_len=1280
+== tx 0xc53cd06756bf4cfb3899810c5ed45690ad161ebe3fae452023673abdf2c2a727 from 0xeeeFFF8ce2710fA490E0FcB794235E873C252d2e 2026-09-02T23:04:18.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='What Do You Meme?' symbol='WDYM' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreibptroghicsgwnhjvzucmcfhr6xd4ywt6mfhqzh5dad6s6ab7i6sa'),)
+   distributeToken token=0xd4546e3e6413f3be401d2b60ad245a577aeec412 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x60e43ed0b61ed7a132bdf07cedef4dc77d4d0191c9826c68c1bec75f140f0f44
+      configData len=32 hex=000000000000000000000000eeefff8ce2710fa490e0fcb794235e873c252d2e
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x60e43ed0b61ed7a132bdf07cedef4dc77d4d0191c9826c68c1bec75f140f0f44 value=0.26 data_len=1312
+== tx 0xfc519d39f49fc32df7e9ff25df9bf45d57e28e4d33f6cff096ead5e87f97cbb8 from 0x194a8948692347a3ed2F97B3E851Dd54AD0fb944 2026-09-02T22:59:06.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='BIRDCAT' symbol='BIRDCAT' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('$BIRDCAT 🐱🐦\n\nThe friendship nobody expected. ❤️\n\nA cat. A bird. Two animals that should be enemies… but somehow became best friends.\n\nSometimes the strangest friendships are the best ones.\n\n$BIRDCAT on Robinhood 🟣\n\n#BIRDCAT', '', 'ipfs://bafybeiaur5huyoeuyugfxvg4toy5jvyreb3sfrcd6yyg4x54zmu7u2xaue'),)
+   distributeToken token=0x20ee75e09891d575882bea1d4618f7e8008b571a strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xa51120c42a4a772b67666174bd0484789e5dab8ac2910abd67fc32ea8225e828
+      configData len=32 hex=000000000000000000000000194a8948692347a3ed2f97b3e851dd54ad0fb944
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xa51120c42a4a772b67666174bd0484789e5dab8ac2910abd67fc32ea8225e828 value=0.13230044703816235 data_len=1312
+== tx 0x56c93e6c907795c83c7d7adff33ce5cd28fdb909dbe630e76da8f57251b62f28 from 0x180979f43230a4629C17c0AcfFAafFbdB56A3979 2026-09-02T22:46:34.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Charlie The Bullicorn' symbol='CHARLIE' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Launched on discord.gg/uxento', 'https://www.youtube.com/watch?v=Mo-wDUbvc28&t=369s', 'ipfs://QmNsin5Y1WKzaUBrvZbsv5S5XzeUBvfesEk3XtqwsGSDfc'),)
+   distributeToken token=0x80abdc0142c37fdefaf1c7026ec27435590d236e strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x213582ba15c3299eed815da7d802045b92585faed55dbc42560a99341ca4a0ac
+      configData len=32 hex=000000000000000000000000180979f43230a4629c17c0acffaaffbdb56a3979
+== tx 0xfd67321ca4c06f06347171e6a52801479d866c614f72e9f734b40472138040fb from 0x792159C56c3614d821F84b3e41E83740D13Ee752 2026-09-02T22:22:32.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Shitcoin' symbol='SSHIT' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Token Name: Shitcoin ($SHIT)\n\nOfficial Slogan: "To the moon? ...Or the sewer?"\n\nDescription: Born from the ashes of the self-deprecating world of shitposting, $SHIT is the first meme token that doesn\'t promise to change the global financial system, but does guarantee laughs while', '', 'ipfs://bafkreibzf7yq7munfqznivndgxky7t3iianaffkyc6g5octi7jamlbxsd4'),)
+   distributeToken token=0x8b4edff2e068d3d56c2625d45a81e60f616a7587 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x5b530b68cbcb7e5e8e4709c4bb8efdc16182f22f4e2fcd8d693cf2e45e88ff2e
+      configData len=32 hex=000000000000000000000000792159c56c3614d821f84b3e41e83740d13ee752
+== tx 0xdf5ffc2763d63ec180fc5e90a89f56695bfc45da55fded3ac935e8d58f8de5a6 from 0x156f08D2B5578e4d3aCaC640a42DcADbd6B8E783 2026-09-02T22:04:29.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='DAN ROBINSON' symbol='DAN' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', 'https://x.com/haydenzadams/status/2095271563515896030', 'ipfs://QmPSaUHJx1Ass4aj19V6MiHViXdnZSj9RdfztFCWoESVid'),)
+   distributeToken token=0x736cd2867e1c53e49f1401bc4fc679977af93f3c strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xe69f7bcc77f36ee0136920555d192831bca74c00b0d3defb4e33a955d7f58242
+      configData len=32 hex=000000000000000000000000156f08d2b5578e4d3acac640a42dcadbd6b8e783
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xe69f7bcc77f36ee0136920555d192831bca74c00b0d3defb4e33a955d7f58242 value=0.25 data_len=1280
+== tx 0x9e177034b3d231ba5a9f1a74ae17fc7a3cf08f1993a5fb46b62fd4606323bad1 from 0x2af348E59d6194e43627F5a819f866d4Fe2231fb 2026-09-02T22:04:14.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='BULL POST' symbol='BULL' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'https://deploy.28282828282828.com/m/d72bf2854607f48a.json'),)
+   distributeToken token=0xe47f04eab7af2b672e5d872d6c6e9f01852b3835 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x89a7917fd5effb9c8462cf420bb25e2fa467d404c73456ddb156c09810fabe88
+      configData len=32 hex=0000000000000000000000002af348e59d6194e43627f5a819f866d4fe2231fb
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x32cfe3501a567e6251a226dfa9e64a0c2826e96497c49639868bf8913156db27 value=0.71 data_len=1280
+== tx 0x022457b56d0d32a9b8252434f33102785274c1321722065c59ec531bd46a7cb4 from 0x474f14431c1b8DFA6241100BfE807B7A2Ff8720e 2026-09-02T21:57:00.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='FrontalWedgie' symbol='Fwedgie' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('FrontalWedgie (TIE) is the ultimate degen meme coin born from the most cringe-worthy wardrobe malfunctions in human history.\n\nWhether it is pulling up your leggings way too fast, climbing out of the pool in panic, or pushing a bit too hard at the gym and s', '', 'https://coffee-left-pigeon-833.mypinata.cloud/ipfs/bafkreiewkavzx7bmtc4cuwqjy5h6xhh3yukhn2zdtbjr6alp5mracrol3u'),)
+   distributeToken token=0x5f1f1cf0c07a1dc4548d07e1ec9e305a0f39ef41 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x821400db198ece3656b03f255be4e9984ec0fd6a24968a6e0040f31317061a40
+      configData len=32 hex=000000000000000000000000474f14431c1b8dfa6241100bfe807b7a2ff8720e
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x821400db198ece3656b03f255be4e9984ec0fd6a24968a6e0040f31317061a40 value=0.035 data_len=1280
+== tx 0x8ea0c13090f250054a78eee28a4922afb4ba7af81701a28593fbe132e54b5af7 from 0xB40B61Af25aC60892Ee7E1EeD3DA0627A7638049 2026-09-02T21:56:00.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='FrontalWedgie' symbol='Fwedgie' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('FrontalWedgie (TIE) is the ultimate degen meme coin born from the most cringe-worthy wardrobe malfunctions in human history.\n\nWhether it is pulling up your leggings way too fast, climbing out of the pool in panic, or pushing a bit too hard at the gym and s', '', 'https://coffee-left-pigeon-833.mypinata.cloud/ipfs/bafkreiewkavzx7bmtc4cuwqjy5h6xhh3yukhn2zdtbjr6alp5mracrol3u'),)
+   distributeToken token=0xab2300c7d284b769fbf55a2adfbaef280ef948d2 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x3297d0f7bc44108f0a2d5fb52d5ec1ec46a4a6a83f67081995100ec99415be20
+      configData len=32 hex=000000000000000000000000b40b61af25ac60892ee7e1eed3da0627a7638049
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x3297d0f7bc44108f0a2d5fb52d5ec1ec46a4a6a83f67081995100ec99415be20 value=0.035 data_len=1280
+== tx 0xb555cbf2db7dcbbe87a597d24bc8912a2ac7463271373dbd1f5dcbea1ef74198 from 0x792159C56c3614d821F84b3e41E83740D13Ee752 2026-09-02T21:55:26.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='CryptOmnia' symbol='CRYPT' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Crypt (cryptography, security, hidden) combined with Omnia (from the Latin *omnia*, meaning "everything" or "universal"). It evokes the idea of \u200b\u200ba total security system, a decentralized protocol, or an all-encompassing cryptographic master key.', '', 'ipfs://bafkreiacykme46nhxn5yajfruhwap3xxqjnlebk5j3derjekdnmwr6tbhy'),)
+   distributeToken token=0x52b3f3f7b8156106d685971976561ee70a4b5821 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x0956569a7c3844bee05fc7d5a97a605a47bab57e6a2685d00656b4ca3ddea6af
+      configData len=32 hex=000000000000000000000000792159c56c3614d821f84b3e41e83740d13ee752
+== tx 0x871e087076bf4f9b309057554f033e5c24030200eba2687f986175196b60f5d8 from 0x792159C56c3614d821F84b3e41E83740D13Ee752 2026-09-02T21:41:47.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='trollface' symbol='TROLL' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Built upon the most legendary internet meme, the Trollface Token channels the authentic energy of chaos, irony, and old-school web humor.', '', 'ipfs://bafkreicopms3a46g5uwiegwhkvmbij22pfv3vt7jiidtdw3ug5iow7w55u'),)
+   distributeToken token=0x6341140c5bd5802dc0621098bd592835bf95eb8b strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x46ad4feba3d6e3464c6e8f065b1efe1b6dad6dba1aff4e1bba302c5a565d7c17
+      configData len=32 hex=000000000000000000000000792159c56c3614d821f84b3e41e83740d13ee752
+== tx 0x9cc452bf1381ef0a1698c696891af28633214630641d8e840240fd06908648fc from 0xFEC0Ad833FB7D20A83E373279f37c88159bAd99E 2026-09-02T21:11:26.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Apple Lily' symbol='ALILY' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('open-sourcing Lily by Perplexity', '', 'ipfs://bafkreihtbb5vv3awbi4weblouocfqubcpyep3plgu22qoal7x4q4yrkpky'),)
+   distributeToken token=0x47bff37c22cac1d0fc5f202b34a7bcb49e6d6714 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xdc749128e6704eaaeaec7bbef886fa65ba3d12d12930034f6bc5bff938a236bf
+      configData len=32 hex=000000000000000000000000fec0ad833fb7d20a83e373279f37c88159bad99e
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xdc749128e6704eaaeaec7bbef886fa65ba3d12d12930034f6bc5bff938a236bf value=0.025390994904168785 data_len=1312
+== tx 0x7fa747bba89ec722482e47f22a0d324280fa416ac0e4e1d7829d5c37caf22927 from 0x7E6971BfeE2E2859187118deF68DCa9fDC56f7C5 2026-09-02T20:53:52.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='FrontalWedgie' symbol='Fwedgie' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('FrontalWedgie', '', 'https://coffee-left-pigeon-833.mypinata.cloud/ipfs/bafkreiewkavzx7bmtc4cuwqjy5h6xhh3yukhn2zdtbjr6alp5mracrol3u'),)
+   distributeToken token=0x33d1608e18c4f6572f23526ad88d9f1128dc99e1 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x6fcff9369d89c1675b223b3e30169bac575feeb799d213d99e2740e653ef0e38
+      configData len=32 hex=0000000000000000000000007e6971bfee2e2859187118def68dca9fdc56f7c5
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x6fcff9369d89c1675b223b3e30169bac575feeb799d213d99e2740e653ef0e38 value=0.05 data_len=1280
+== tx 0x1f8cae59e24e52a45e164dce450457f6def23bf630527c0ac821e2eae9e9df29 from 0xdFcC0d95EdE2bfA3aa9730829a63Bc32BabE389d 2026-09-02T20:53:51.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='BotWage' symbol='BWAGE' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('BotWage ($BWAGE) — Bots don’t work for free. A community token built around AI agents, autonomous machines, and the emerging machine-to-machine economy.', '', 'ipfs://bafkreidcv55dmzp5eg6nbe66ohvyorkkhij3z7nexvrwbjxnxgpsrkkqu4'),)
+   distributeToken token=0x6594e3d4ae51af7aadb7360423693711f696c62c strategy=0x05d552391067389ee44fec3924157ed33f976000 amount=1,000,000,000 graffiti=0x1fdf7773f8c9f7b6ab6ab99977a427195bbea9f180e8e1838b3f1fbd6ceb788f
+      configData len=1376 hex=000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000003200000000000000000000000006594e3d4ae51af7aadb7360423693711f696c62c00000000
+== tx 0xc26fc4c11eef8f61e074be457acfe218741cd4aa9926e453973200419bc6812c from 0xeef11c04cb5c4403E382cde5dA6d9e61A6a07d0F 2026-09-02T20:49:51.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='1W' symbol='1W' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('Mem token 1w', '', 'ipfs://bafkreieeog54bvykhjtistdaqlzf4wfyxi2xuxw4y2oauvyhezdjd55g7e'),)
+   distributeToken token=0x07d1605ee57d1cace7a4c019b4b7a7338aa46e11 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x297fac371731ec3c0d24eb94817bc8bf3480f161fbf0ad109e46f56242c4217f
+      configData len=32 hex=000000000000000000000000eef11c04cb5c4403e382cde5da6d9e61a6a07d0f
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x297fac371731ec3c0d24eb94817bc8bf3480f161fbf0ad109e46f56242c4217f value=0.05130017336896906 data_len=1312
+== tx 0xf318a805c88457c766296d2a477b355c92f29ee437d7ff2e11bc426350f36712 from 0x5Ac0F046B82022CC6EFC5e9b134f14da08761b1C 2026-09-02T20:48:18.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='FrontalWedgie' symbol='Fwedgie' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('FrontalWedgie', '', 'https://coffee-left-pigeon-833.mypinata.cloud/ipfs/bafkreiewkavzx7bmtc4cuwqjy5h6xhh3yukhn2zdtbjr6alp5mracrol3u'),)
+   distributeToken token=0x6b51b21cd34f4e9c77b3a01829b404e504fdb618 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x7b5f87909e3996382fd5aa64dc14a00ade5da71ffa0683be694c2cd282296493
+      configData len=32 hex=0000000000000000000000005ac0f046b82022cc6efc5e9b134f14da08761b1c
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x7b5f87909e3996382fd5aa64dc14a00ade5da71ffa0683be694c2cd282296493 value=0.05 data_len=1280
+== tx 0x4af59fcb13074371667de5c704e6d86f21bb3b7225c2de906e135314fe70c469 from 0xeef11c04cb5c4403E382cde5dA6d9e61A6a07d0F 2026-09-02T20:07:25.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='CASH UNICORN' symbol='CASHUNI' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('🦄 CASH UNi — one unicorn. One token. One big dream.', '', 'ipfs://bafkreicgymehdc5nng6klrkmk42srorivzjoxpdraayuj7dxkgjw5dybku'),)
+   distributeToken token=0x3c2d23c56d9bf4aa6a9ef6977f391ad04b1eeae2 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x542bac8557f9d8a763904aa28f001f6355aa66f42c03f77457e51a5be8f4bd81
+      configData len=32 hex=000000000000000000000000eef11c04cb5c4403e382cde5da6d9e61a6a07d0f
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x542bac8557f9d8a763904aa28f001f6355aa66f42c03f77457e51a5be8f4bd81 value=0.025390994904168785 data_len=1312
+== tx 0x9a19b97a6c9f2fd986fc88bda3ad73cf8a2da920b3466a5bd24dcc7b43bf8812 from 0x77c9888245930934DAF981fE75299Bc00448FF20 2026-09-02T20:01:55.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Santa by Robinhood' symbol='SANTA' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('The journey to Christmas starts here. A festive community token bringing high Christmas spirit to the Robinhood Blockchain and the entire cryptocurrency community. Your Christmas. Your Santa. Your Robinhood.', '', 'ipfs://bafkreihjihjm77nwxucf3yoyasbtzg2zlaloqrpevt4haos3ngxhhlm7ke'),)
+   distributeToken token=0xfafde84f08abe540fb20940a7741d7b44a478ccd strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xe2b3b26ab31f0158323a36ac42eae7b2d56b3d344af9c99e63dff46d91860cdd
+      configData len=32 hex=000000000000000000000000b5a3651a9789681c9168a6729bab0ece5ecdcadf
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xe2b3b26ab31f0158323a36ac42eae7b2d56b3d344af9c99e63dff46d91860cdd value=0.13230044703816235 data_len=1312
+== tx 0x20661ef94c7324f1894c1da8ecc17314398b65638fa8ae7763e6189d372fb316 from 0xeef11c04cb5c4403E382cde5dA6d9e61A6a07d0F 2026-09-02T19:54:37.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='UNICASH' symbol='UNICASH' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (("🦄 UNICASH is a meme that believes in unicorns and big X's.", '', 'ipfs://bafkreicgymehdc5nng6klrkmk42srorivzjoxpdraayuj7dxkgjw5dybku'),)
+   distributeToken token=0xa1b9f869b824a1d0a7e38c127646a63e0420f847 strategy=0x05d552391067389ee44fec3924157ed33f976000 amount=1,000,000,000 graffiti=0x85361afde102f13f1ffaf688337258a04a794ad52b7c1c5cc7781069aa2fff98
+      configData len=1376 hex=00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000320000000000000000000000000a1b9f869b824a1d0a7e38c127646a63e0420f84700000000
+== tx 0x8e7086a7fcad9faee0da79a6e21f27faec9a4ed670f0a8cad48294a678c43efa from 0x00a62C9B4B16B4FC3Eb1DdF2ada4c174c15a4c27 2026-09-02T19:00:57.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='ArbinHoodOns' symbol='AHO' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('https://x.com/saintniko/status/2095224018521514333', '', 'ipfs://bafkreicv6phqz454igyxvebjiykewex7xp3opknzmbloposkwnjqaqkhdm'),)
+   distributeToken token=0x788f83e9e68d38ccd009dc6fbdc0a3354c478318 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xdd3d306e2ece44e41d74621a66f3c3ef5641bcadf56c3be4229527e6043ac94e
+      configData len=32 hex=00000000000000000000000000a62c9b4b16b4fc3eb1ddf2ada4c174c15a4c27
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xdd3d306e2ece44e41d74621a66f3c3ef5641bcadf56c3be4229527e6043ac94e value=0.05130017336896906 data_len=1312
+== tx 0x1270bec939cc7574331b47c14d5f90e8332bb9e6bf48c22472491b4c31ed74ac from 0x80bd1bd0f36090527BE1030b0DaF9ead7b29a051 2026-09-02T18:56:40.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='catincloak' symbol='cloak' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreiciqrgouv535b3twvmc44lys7324ha2qyrxbkoi2yo5u6qtlqowb4'),)
+   distributeToken token=0x66c43ed48890f1fb5375126e098909109aaf8d10 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0xc7b7aef4bcb206528bfe94bcf9b3ca07e132e6e18f3ffb43ff3a94a8b5c0e104
+      configData len=32 hex=00000000000000000000000080bd1bd0f36090527be1030b0daf9ead7b29a051
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0xc7b7aef4bcb206528bfe94bcf9b3ca07e132e6e18f3ffb43ff3a94a8b5c0e104 value=0.198 data_len=1312
+== tx 0xe031eb72d55b885a24fc33e4743bf56cd3123c09fcadc9fa57bd54a42ffb7d31 from 0x25ED98b71FCD1cd725Ebb2BF08d4477Faf3bDB4a 2026-09-02T18:45:31.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='NIGGA ON THE HOOD' symbol='NIGGAHOOD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://QmTvLGbNgk1jxFGgTnEY59M7QXtZNDKG7WtRwFttpvCsZ6'),)
+   distributeToken token=0x1dec5baa9263d34c4335ae6b771a7cf3de213f1a strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x0214cc8bfe58cc0c2fd57f87a88967f67b94b3b84b1e6f70d14b7e2187d62bc1
+      configData len=32 hex=00000000000000000000000025ed98b71fcd1cd725ebb2bf08d4477faf3bdb4a
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x0214cc8bfe58cc0c2fd57f87a88967f67b94b3b84b1e6f70d14b7e2187d62bc1 value=0.04 data_len=1312
+== tx 0xba6a2c5a698fa0212913edf10dabfb8dd8d783ec90cd3d1e671e9da14ed32665 from 0x25ED98b71FCD1cd725Ebb2BF08d4477Faf3bDB4a 2026-09-02T18:35:10.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='SwapHood Official' symbol='SWAPHOOD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', 'https://t.me/SwapHoodOfficial', 'ipfs://QmdTNc5tfznUfw1ACiikdJn1LYi1uPCweByQxNXj2jA4pD'),)
+   distributeToken token=0x2bd01cdded7ebc99cfbf8113573292c96ae234a6 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x498999de677288d21687cdb1d993f7693fa2df9a29a7fc1ddd983409f291ef47
+      configData len=32 hex=00000000000000000000000025ed98b71fcd1cd725ebb2bf08d4477faf3bdb4a
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x498999de677288d21687cdb1d993f7693fa2df9a29a7fc1ddd983409f291ef47 value=0.05 data_len=1312
+== tx 0xe206a30185cec4e0d8c90b3df817d600137ae57fd4fb4452f60453794a9d2722 from 0x60db159c890262045979dc382E336bd4C80ebe01 2026-09-02T18:31:57.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='Nottinghood Technologies India Private Limited' symbol='NOTTINGHOOD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', '', 'ipfs://bafkreieckrrsp3jopa4qh4vsghienursiqgpxn3nar6myftanr7fxzdpl4'),)
+   distributeToken token=0xafb32e37e80fa584d642ddc93fe3327660017597 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x9885255444e9d81957baded0d91456111d1dbe2329ac206be9cff69fd687ed97
+      configData len=32 hex=00000000000000000000000060db159c890262045979dc382e336bd4c80ebe01
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x9885255444e9d81957baded0d91456111d1dbe2329ac206be9cff69fd687ed97 value=0.198 data_len=1312
+== tx 0x2eaeb2e53d28129411f51cbcf0ace45db41c757a41dcdef80ded8dba8248150b from 0x25ED98b71FCD1cd725Ebb2BF08d4477Faf3bDB4a 2026-09-02T18:28:44.000000Z
+   createToken factory=0x000000e200088d55c39a11f609e5f667729ad49b name='SwapHood Token' symbol='SWAPHOOD' decimals=18 supply=1,000,000,000 recipient=0x0000ffffbe8efe702c8703ae3477ff5de3d319c0
+      metadata (('', 'https://t.me/swaphoodofficial', 'ipfs://QmdTNc5tfznUfw1ACiikdJn1LYi1uPCweByQxNXj2jA4pD'),)
+   distributeToken token=0x7fc415d892271584ba3809319eebce9a98dae226 strategy=0x23f8209572b4a1c2ad88a42749e830791fb027f1 amount=1,000,000,000 graffiti=0x080d6266ba50015c5350fe5b504e9bb8f66894bb4297db986f9466f1dad52ddf
+      configData len=32 hex=00000000000000000000000025ed98b71fcd1cd725ebb2bf08d4477faf3bdb4a
+   distributeWithNative strategy=0x1242c9439d589cae85e121b1f79f2af51e91dcee graffiti=0x080d6266ba50015c5350fe5b504e9bb8f66894bb4297db986f9466f1dad52ddf value=0.1 data_len=1312
+
+strategy counts Counter({'0x23f8209572b4a1c2ad88a42749e830791fb027f1': 46, '0x05d552391067389ee44fec3924157ed33f976000': 4})
+call combos Counter({'createToken+distributeToken+distributeWithNative': 36, 'createToken+distributeToken': 14})
+supplies Counter({1000000000000000000000000000: 50})
+decimals Counter({18: 50})

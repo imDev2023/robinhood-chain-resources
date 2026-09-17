@@ -1,0 +1,7 @@
+- heading "Create a token" [level=2, ref=e1]
+- button "Back" [ref=e3]
+- button "Close" [ref=e4]
+- checkbox "I understand and agree to the following" [checked=false, ref=e5]
+- LabelText "I understand and agree to the following" [ref=e6] clickable [cursor:pointer]
+- link "Learn more" [ref=e7, url=https://app.uniswap.org/liquidity/launch-auction]
+- button "Add funds" [ref=e2]

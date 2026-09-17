@@ -1,0 +1,33 @@
+{
+ "block_number_balance_updated_at": 18495187,
+ "coin_balance": "0",
+ "creation_status": "success",
+ "creation_transaction_hash": "0xae1fbd32247877fb26632102b2e0b22f4e9c0e56d0627eefb739015c8c386ccc",
+ "creator_address_hash": "0x43E4C17b15365596Caae8e7d00E42Bc8E988c2d4",
+ "ens_domain_name": null,
+ "exchange_rate": "2391.49",
+ "has_beacon_chain_withdrawals": false,
+ "has_logs": true,
+ "has_token_transfers": false,
+ "has_tokens": false,
+ "has_validated_blocks": false,
+ "hash": "0x715dA6B1a2B96fF47610de4AD3736105cc77B70D",
+ "implementations": [
+  {
+   "address_hash": "0x5b56842Ba4aac6BBba74E1490c791bfAc2c5fa8C",
+   "name": "AgentDAO"
+  }
+ ],
+ "is_contract": true,
+ "is_scam": false,
+ "is_verified": true,
+ "metadata": null,
+ "name": null,
+ "private_tags": [],
+ "proxy_type": "eip1167",
+ "public_tags": [],
+ "reputation": "ok",
+ "token": null,
+ "watchlist_address_id": null,
+ "watchlist_names": []
+}

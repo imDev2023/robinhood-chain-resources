@@ -1,0 +1,2059 @@
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# GRID by Virtuals
+
+GRID
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+-
+
+0xf5c4…6157-883.96 GRID
+
+9m@ $0.002011
+
+-
+
+0x17e5…433e-66.71K GRID
+
+10m@ $0.002014
+
+-
+
+0xb531…922b+39.44K GRID
+
+13m@ $0.002018
+
+-
+
+0x81ad…c13c+3.22K GRID
+
+14m@ $0.002026
+
+-
+
+0x564b…6dc1-427.09K GRID
+
+14m@ $0.002034
+
+-
+
+0xb235…2050-2.04K GRID
+
+16m@ $0.002044
+
+-
+
+0x6e7a…883c-32.43K GRID
+
+21m@ $0.002063
+
+-
+
+0xb531…922b+38.57K GRID
+
+23m@ $0.002070
+
+-
+
+0xca7d…4589+13.48K GRID
+
+24m@ $0.002068
+
+-
+
+0xb531…922b+38.69K GRID
+
+33m@ $0.002055
+
+-
+
+0x41dc…c674+128.37K GRID
+
+34m@ $0.002047
+
+-
+
+0xd840…37ba-13.93K GRID
+
+34m@ $0.002042
+
+-
+
+0x17e5…433e+75.37K GRID
+
+37m@ $0.002045
+
+-
+
+0xafe8…3537+146.94K GRID
+
+38m@ $0.002027
+
+-
+
+0xadf5…d3f1+247.8K GRID
+
+39m@ $0.002009
+
+-
+
+0xafe8…3537+99.94K GRID
+
+39m@ $0.001987
+
+-
+
+0x6e7a…883c+33.09K GRID
+
+39m@ $0.001972
+
+-
+
+0x89ce…4926-99K GRID
+
+41m@ $0.001974
+
+-
+
+0xb531…922b+40.35K GRID
+
+43m@ $0.001973
+
+-
+
+0x3f1b…6f1c+3.48K GRID
+
+47m@ $0.001968
+
+-
+
+0x4337…e061-45.85K GRID
+
+48m@ $0.001964
+
+-
+
+0xe0f0…3bf5+36.4K GRID
+
+48m@ $0.001970
+
+-
+
+0x9bc4…1083+9.05K GRID
+
+49m@ $0.001978
+
+-
+
+0xe209…ef08+18.87K GRID
+
+51m@ $0.001970
+
+-
+
+0xb531…922b+40.73K GRID
+
+53m@ $0.001965
+
+-
+
+0x0296…b704+758.89 GRID
+
+54m@ $0.001954
+
+-
+
+0xa233…5b4c-10.34K GRID
+
+54m@ $0.001951
+
+-
+
+0x17e5…433e+17.41K GRID
+
+56m@ $0.001956
+
+-
+
+0xa233…5b4c-2.59K GRID
+
+59m@ $0.001949
+
+-
+
+0xb531…922b+40.72K GRID
+
+1h@ $0.001972
+
+-
+
+0xafe8…3537+102.06K GRID
+
+1h@ $0.001958
+
+-
+
+0xe0f0…3bf5+36.61K GRID
+
+1h@ $0.001959
+
+-
+
+0xe0f0…3bf5+36.55K GRID
+
+1h@ $0.001962
+
+-
+
+0xfa52…0186-253.14K GRID
+
+1h@ $0.001951
+
+-
+
+0xad01…fce5-2.56K GRID
+
+1h@ $0.001941
+
+-
+
+0xe0f0…3bf5+24.42K GRID
+
+1h@ $0.001957
+
+-
+
+0xe0f0…3bf5+24.45K GRID
+
+1h@ $0.001955
+
+-
+
+0xb2f0…d1ba-1.91M GRID
+
+1h@ $0.002026
+
+-
+
+0xe0f0…3bf5+33.57K GRID
+
+1h@ $0.002138
+
+-
+
+0xb531…922b+37.38K GRID
+
+1h@ $0.002134
+
+-
+
+0xd079…fae8-7.53K GRID
+
+1h@ $0.002113
+
+-
+
+0x0296…b704-113.28K GRID
+
+1h@ $0.002129
+
+-
+
+0xe0f0…3bf5+33.52K GRID
+
+1h@ $0.002140
+
+-
+
+0x8c15…b098-49.72K GRID
+
+1h@ $0.002121
+
+-
+
+0xb531…922b+37.26K GRID
+
+1h@ $0.002141
+
+-
+
+0x17e5…433e+43.35K GRID
+
+1h@ $0.002149
+
+-
+
+0xb531…922b+37.44K GRID
+
+1h@ $0.002123
+
+-
+
+0xeb2b…9c0f-58.39K GRID
+
+1h@ $0.002124
+
+-
+
+0x21d9…e6ef+5.59K GRID
+
+1h@ $0.002136
+
+-
+
+0xe0f0…3bf5+22.27K GRID
+
+1h@ $0.002143
+
+-
+
+0xe0f0…3bf5+22.3K GRID
+
+1h@ $0.002141
+
+-
+
+0xb531…922b+37.4K GRID
+
+1h@ $0.002138
+
+-
+
+0xb531…922b+37.56K GRID
+
+1h@ $0.002137
+
+-
+
+0xc138…2259-271.16K GRID
+
+1h@ $0.002129
+
+-
+
+0x4337…5627-132.97K GRID
+
+2h@ $0.002140
+
+-
+
+0xb531…922b+37.07K GRID
+
+2h@ $0.002158
+
+-
+
+0x9b78…1a56-1.06M GRID
+
+2h@ $0.002194
+
+-
+
+0xb531…922b+35.21K GRID
+
+2h@ $0.002263
+
+-
+
+0x235b…da69-4.77K GRID
+
+2h@ $0.002248
+
+-
+
+0x17e5…433e-97.8K GRID
+
+2h@ $0.002270
+
+-
+
+0x79b2…09ad-840.55K GRID
+
+2h@ $0.002323
+
+-
+
+0xb531…922b+33.6K GRID
+
+2h@ $0.002377
+
+-
+
+0x4337…d6af-22.51K GRID
+
+2h@ $0.002378
+
+-
+
+0xb531…922b+33.53K GRID
+
+2h@ $0.002384
+
+-
+
+0xf3fc…a0e9+199.12K GRID
+
+2h@ $0.002376
+
+-
+
+0x4f31…2f46+42.05K GRID
+
+2h@ $0.002365
+
+-
+
+0xb531…922b+33.96K GRID
+
+2h@ $0.002346
+
+-
+
+0xc59f…043e-21.21K GRID
+
+2h@ $0.002346
+
+-
+
+0xfc2c…2f13+152.16K GRID
+
+2h@ $0.002353
+
+-
+
+0x4617…739e-42.88K GRID
+
+2h@ $0.002317
+
+-
+
+0xb531…922b+34.17K GRID
+
+2h@ $0.002346
+
+-
+
+0x564b…6dc1-26.93K GRID
+
+2h@ $0.002331
+
+-
+
+0xfbe2…bae8+208.02K GRID
+
+2h@ $0.002335
+
+-
+
+0xcf57…5ee4-24.59K GRID
+
+2h@ $0.002296
+
+-
+
+0xca7d…4589+210.32K GRID
+
+2h@ $0.002298
+
+-
+
+0xa62e…e93b+20.64K GRID
+
+2h@ $0.002299
+
+-
+
+0x085d…0905-50.06K GRID
+
+2h@ $0.002288
+
+-
+
+0xe988…2d92-49.94K GRID
+
+2h@ $0.002293
+
+-
+
+0xfd5c…3543-100.71K GRID
+
+2h@ $0.002302
+
+-
+
+0x0000…5ba7-3.17K GRID
+
+2h@ $0.002308
+
+-
+
+0x0000…efaf-115.24K GRID
+
+2h@ $0.002315
+
+-
+
+0xb2f0…d1ba+812.27K GRID
+
+2h@ $0.002289
+
+-
+
+0x58f9…2871+1.02M GRID
+
+2h@ $0.002176
+
+-
+
+0xb2f0…d1ba+1.14M GRID
+
+2h@ $0.002068
+
+-
+
+0x344d…51a1+446.38K GRID
+
+3h@ $0.002001
+
+-
+
+0xb531…922b+40.33K GRID
+
+3h@ $0.001980
+
+-
+
+0xf70d…dbef+766.46K GRID
+
+3h@ $0.001944
+
+-
+
+0x58fe…cae9-9.88K GRID
+
+3h@ $0.001903
+
+-
+
+0x17e5…433e+10.9K GRID
+
+3h@ $0.001903
+
+-
+
+0x4a44…cc01+105.81K GRID
+
+3h@ $0.001899
+
+-
+
+0xadf5…d3f1-180.6K GRID
+
+3h@ $0.001890
+
+-
+
+0xb531…922b+41.69K GRID
+
+3h@ $0.001916
+
+-
+
+0xb531…922b+24.09K GRID
+
+3h@ $0.001895
+
+-
+
+0xb531…922b+42.14K GRID
+
+3h@ $0.001888
+
+-
+
+0x9aee…6119+12.61K GRID
+
+3h@ $0.001899
+
+-
+
+0xe988…2d92+50.95K GRID
+
+3h@ $0.001896
+
+-
+
+0xfd5c…3543+102.76K GRID
+
+3h@ $0.001886
+
+-
+
+0x085d…0905+51.07K GRID
+
+3h@ $0.001892
+
+-
+
+0x497b…eab7+38.14K GRID
+
+3h@ $0.001874
+
+-
+
+0xb531…922b+42.55K GRID
+
+3h@ $0.001874
+
+-
+
+0x5b0e…1476+942.26K GRID
+
+3h@ $0.001833
+
+-
+
+0xb531…922b+44.68K GRID
+
+3h@ $0.001775
+
+-
+
+0xbd60…f647-1.94K GRID
+
+3h@ $0.001763
+
+-
+
+0xc138…2259+276.66K GRID
+
+3h@ $0.001773
+
+-
+
+0xea8d…e79d+286.07K GRID
+
+3h@ $0.001741
+
+-
+
+0xb531…922b+45.98K GRID
+
+4h@ $0.001740
+
+-
+
+0xb531…922b+46.13K GRID
+
+4h@ $0.001720
+
+-
+
+0x4381…2646+45.27K GRID
+
+4h@ $0.001731
+
+-
+
+0x0296…b704-399.65 GRID
+
+4h@ $0.001717
+
+-
+
+0xb531…922b+46.29K GRID
+
+4h@ $0.001716
+
+-
+
+0x2c0e…576d+545.78K GRID
+
+4h@ $0.001703
+
+-
+
+0xa8a9…90f6-11.8K GRID
+
+4h@ $0.001681
+
+-
+
+0xb531…922b+47.18K GRID
+
+4h@ $0.001692
+
+-
+
+0xec74…e140+147.45K GRID
+
+4h@ $0.001675
+
+-
+
+0x331d…2466+208.4K GRID
+
+4h@ $0.001672
+
+-
+
+0xb531…922b+48.01K GRID
+
+4h@ $0.001653
+
+-
+
+0xd093…4574-233.08K GRID
+
+4h@ $0.001659
+
+-
+
+0xb531…922b+47.66K GRID
+
+4h@ $0.001676
+
+-
+
+0x9800…929b-45.39K GRID
+
+4h@ $0.001663
+
+-
+
+0xb531…922b+47.77K GRID
+
+5h@ $0.001673
+
+-
+
+0x4123…2237-1.49M GRID
+
+5h@ $0.001706
+
+-
+
+0x728f…f500+55.36K GRID
+
+5h@ $0.001780
+
+-
+
+0xb531…922b+44.97K GRID
+
+5h@ $0.001765
+
+-
+
+0xdd50…ca08-4.77K GRID
+
+5h@ $0.001760
+
+-
+
+0x378f…7e07-477.53K GRID
+
+5h@ $0.001770
+
+-
+
+0xb531…922b+44.19K GRID
+
+5h@ $0.001805
+
+-
+
+0xb531…922b+44.27K GRID
+
+5h@ $0.001796
+
+-
+
+0x344d…51a1+196.88K GRID
+
+5h@ $0.001772
+
+-
+
+0x62cf…eddf-175.1K GRID
+
+5h@ $0.001766
+
+-
+
+0xd9bc…6f48-105.8K GRID
+
+5h@ $0.001776
+
+-
+
+0xb531…922b+44.28K GRID
+
+5h@ $0.001784
+
+-
+
+0xada5…f7cb+7.12K GRID
+
+5h@ $0.001791
+
+-
+
+0xb531…922b+44.42K GRID
+
+5h@ $0.001787
+
+-
+
+0x62de…99eb+10.57K GRID
+
+6h@ $0.001781
+
+-
+
+0x62de…99eb+10.58K GRID
+
+6h@ $0.001780
+
+-
+
+0xb531…922b+44.59K GRID
+
+6h@ $0.001783
+
+-
+
+0x43e7…ff32+56.76K GRID
+
+6h@ $0.001775
+
+-
+
+0xf70d…dbef+14.98K GRID
+
+6h@ $0.001769
+
+-
+
+0xb531…922b+44.95K GRID
+
+6h@ $0.001767
+
+-
+
+0x4337…a4ab-1.39K GRID
+
+6h@ $0.001755
+
+-
+
+0xd840…37ba+3.79K GRID
+
+6h@ $0.001765
+
+-
+
+0x56a0…f57d+135.23K GRID
+
+6h@ $0.001754
+
+-
+
+0xb531…922b+45.41K GRID
+
+6h@ $0.001751
+
+-
+
+0xb531…922b+45.55K GRID
+
+6h@ $0.001740
+
+-
+
+0xbb89…3859-2.18K GRID
+
+6h@ $0.001717
+
+-
+
+0xf42b…acec+188.24K GRID
+
+6h@ $0.001719
+
+-
+
+0xb531…922b+46.07K GRID
+
+6h@ $0.001718
+
+-
+
+0xa67d…3fbb+47.72K GRID
+
+6h@ $0.001722
+
+-
+
+0xb531…922b+46.1K GRID
+
+6h@ $0.001717
+
+-
+
+0xb531…922b-105.16K GRID
+
+6h@ $0.001705
+
+-
+
+0x378f…7e07+487.23K GRID
+
+6h@ $0.001704
+
+-
+
+0xdd50…ca08-3.33K GRID
+
+6h@ $0.001675
+
+-
+
+0x11bc…b136+282.41K GRID
+
+7h@ $0.001685
+
+-
+
+0x11bc…b136+285.77K GRID
+
+7h@ $0.001665
+
+-
+
+0x11bc…b136+289.44K GRID
+
+7h@ $0.001644
+
+-
+
+0xb531…922b+48.87K GRID
+
+7h@ $0.001627
+
+-
+
+0xadf5…d3f1+184.27K GRID
+
+7h@ $0.001617
+
+-
+
+0xa01e…27cd-49.5K GRID
+
+7h@ $0.001612
+
+-
+
+0x7730…12a9+42.72K GRID
+
+7h@ $0.001613
+
+-
+
+0xb3cb…640c-628.49 GRID
+
+7h@ $0.001608
+
+-
+
+0xbc4f…586d-7.32K GRID
+
+7h@ $0.001609
+
+-
+
+0x0296…b704+27.29K GRID
+
+7h@ $0.001615
+
+-
+
+0xb531…922b+49.71K GRID
+
+7h@ $0.001604
+
+-
+
+0xcf42…3dc3-40.73K GRID
+
+7h@ $0.001599
+
+-
+
+0x4337…9fb1-46.96K GRID
+
+7h@ $0.001603
+
+-
+
+0xe0f0…3bf5+73.9K GRID
+
+7h@ $0.001609
+
+-
+
+0x5055…5cd5-5.94K GRID
+
+7h@ $0.001602
+
+-
+
+0x17e5…433e+32.11K GRID
+
+7h@ $0.001601
+
+-
+
+0xc59f…043e+131.87K GRID
+
+7h@ $0.001595
+
+-
+
+0x3f8c…fd98-1.5M GRID
+
+7h@ $0.001643
+
+-
+
+0xb241…2401-421.42K GRID
+
+7h@ $0.001712
+
+-
+
+0xbde8…4dae-8.39K GRID
+
+7h@ $0.001727
+
+-
+
+0xa297…abe1-7.4K GRID
+
+8h@ $0.001741
+
+-
+
+0x4337…187e-33.8K GRID
+
+8h@ $0.001747
+
+-
+
+0xdd50…ca08+28.3K GRID
+
+8h@ $0.001752
+
+-
+
+0xf5b7…b9a9-3.88K GRID
+
+8h@ $0.001741
+
+-
+
+0x235b…da69-589.25K GRID
+
+8h@ $0.001766
+
+-
+
+0xdd50…ca08-87.8K GRID
+
+8h@ $0.001784
+
+-
+
+0x3eef…a224-2.13K GRID
+
+8h@ $0.001799
+
+-
+
+0x4337…d6af-25.78K GRID
+
+8h@ $0.001796
+
+-
+
+0x4acb…bfd7-4.71K GRID
+
+8h@ $0.001800
+
+-
+
+0xd712…9b96-5.6K GRID
+
+8h@ $0.001798
+
+-
+
+0xae5e…6593-2.11K GRID
+
+8h@ $0.001798
+
+-
+
+0x5e2b…11a5+27.94K GRID
+
+8h@ $0.001798
+
+-
+
+0x98e3…d341-4.85K GRID
+
+8h@ $0.001797
+
+-
+
+0x1cd9…5baf+14.65K GRID
+
+8h@ $0.001807
+
+-
+
+0x4b37…0770+5.5K GRID
+
+8h@ $0.001798
+
+-
+
+0x0296…b704-196.42K GRID
+
+8h@ $0.001795
+
+-
+
+0x58fe…cae9-4.49K GRID
+
+8h@ $0.001808
+
+-
+
+0xf70d…dbef+9.62K GRID
+
+8h@ $0.001824
+
+-
+
+0x0d4e…8ed3+390.2K GRID
+
+8h@ $0.001808
+
+-
+
+0xbc35…b395+5.37K GRID
+
+8h@ $0.001783
+
+-
+
+0x564b…6dc1-30.44K GRID
+
+8h@ $0.001784
+
+-
+
+0x017e…e114-1.64M GRID
+
+8h@ $0.001851
+
+-
+
+0x7730…12a9-33.17K GRID
+
+8h@ $0.001910
+
+-
+
+0x5055…5cd5-1.98K GRID
+
+8h@ $0.001922
+
+-
+
+0x1cd9…5baf+1.06M GRID
+
+8h@ $0.001888
+
+-
+
+0x564b…6dc1+31.31K GRID
+
+8h@ $0.001843
+
+-
+
+0x416e…ba99+26.07K GRID
+
+9h@ $0.001828
+
+-
+
+0x5419…ee87+102.63K GRID
+
+9h@ $0.001827
+
+-
+
+0x564b…6dc1-19.98K GRID
+
+9h@ $0.001812
+
+-
+
+0xdd50…ca08-159.98K GRID
+
+9h@ $0.001821
+
+-
+
+0x334f…11aa+26.23K GRID
+
+9h@ $0.001838
+
+-
+
+0x986f…b526-34.23K GRID
+
+9h@ $0.001816
+
+-
+
+0x0296…b704+2.71K GRID
+
+9h@ $0.001836
+
+-
+
+0x4337…df9b-77.23K GRID
+
+9h@ $0.001828
+
+-
+
+0xf0dd…4c85-17.76K GRID
+
+9h@ $0.001821
+
+-
+
+0xc59f…043e+135.87K GRID
+
+9h@ $0.001839
+
+-
+
+0xdd50…ca08-105.52K GRID
+
+9h@ $0.001816
+
+-
+
+0x0000…f9cf-13.84K GRID
+
+9h@ $0.001822
+
+-
+
+0xb486…3336-14.15K GRID
+
+9h@ $0.001806
+
+-
+
+0x3f1b…6f1c-5.49K GRID
+
+9h@ $0.001824
+
+-
+
+0x4337…2838-27.85K GRID
+
+9h@ $0.001840
+
+-
+
+0xe0f0…3bf5+64.58K GRID
+
+9h@ $0.001843
+
+-
+
+0x82a7…e1ab+52.23K GRID
+
+9h@ $0.001844
+
+-
+
+0x0ec4…038f+48.35K GRID
+
+9h@ $0.001826
+
+-
+
+0xc59f…043e+103.18K GRID
+
+9h@ $0.001832
+
+-
+
+0x4e13…e351-14.26K GRID
+
+9h@ $0.001817
+
+-
+
+0x4337…f637-231.89K GRID
+
+10h@ $0.001826
+
+-
+
+0xa233…5b4c+5.48K GRID
+
+10h@ $0.001828
+
+-
+
+0xdd50…ca08+26.99K GRID
+
+10h@ $0.001847
+
+-
+
+0xdd50…ca08+2.69K GRID
+
+10h@ $0.001840
+
+-
+
+0x8bab…7ea5-41.22K GRID
+
+10h@ $0.001831
+
+-
+
+0x4b37…0770+10.77K GRID
+
+10h@ $0.001840
+
+-
+
+0x6b68…46ff-8.47K GRID
+
+10h@ $0.001828
+
+-
+
+0x34fc…67c3+528.82K GRID
+
+10h@ $0.001819
+
+-
+
+0x2ece…ce21-55.97K GRID
+
+10h@ $0.001790
+
+-
+
+0xdd50…ca08+27.44K GRID
+
+10h@ $0.001805
+
+-
+
+0xb67e…5f88-66.09K GRID
+
+10h@ $0.001806
+
+-
+
+0x4337…9ad4-84.61K GRID
+
+10h@ $0.001812
+
+-
+
+0xdd50…ca08+27.18K GRID
+
+10h@ $0.001823
+
+-
+
+0xdd50…ca08-100.83K GRID
+
+10h@ $0.001809
+
+-
+
+0x4337…fa00-231.89K GRID
+
+10h@ $0.001818
+
+-
+
+0xdd50…ca08-1.41K GRID
+
+10h@ $0.001834
+
+-
+
+0x564b…6dc1-1.41K GRID
+
+10h@ $0.001831
+
+-
+
+0x4acb…bfd7-11.17K GRID
+
+10h@ $0.001837
+
+-
+
+0x301b…bc50+25.74K GRID
+
+10h@ $0.001842
+
+-
+
+0x0296…b704+26.92K GRID
+
+10h@ $0.001832
+
+-
+
+0x564b…6dc1-463.39K GRID
+
+11h@ $0.001939
+
+-
+
+0x2411…f36e+341.39K GRID
+
+11h@ $0.001957
+
+-
+
+0x676e…1b33-16.17K GRID
+
+11h@ $0.001920
+
+-
+
+0x331d…2466+512.88K GRID
+
+11h@ $0.001909
+
+-
+
+0xbd60…f647-258.61K GRID
+
+11h@ $0.001886
+
+-
+
+0xcd6b…9799-11.35K GRID
+
+11h@ $0.001898
+
+-
+
+0x17e5…433e-55.65K GRID
+
+11h@ $0.001903
+
+-
+
+0xf728…3d52+2.45K GRID
+
+11h@ $0.001933
+
+-
+
+0xbe0a…ef63+25.96K GRID
+
+11h@ $0.001932
+
+-
+
+0x714d…82f8+48.78K GRID
+
+11h@ $0.001918
+
+-
+
+0x4337…6c92-8.86K GRID
+
+11h@ $0.001916
+
+-
+
+0x46eb…be25-7.28K GRID
+
+11h@ $0.001921
+
+-
+
+0x2a3f…1b4d-370.96K GRID
+
+11h@ $0.001932
+
+-
+
+0x2ece…ce21-43.03K GRID
+
+11h@ $0.001954
+
+-
+
+0x6cf5…78e6+1.29M GRID
+
+11h@ $0.001909
+
+-
+
+0x0000…c03c+7.95K GRID
+
+11h@ $0.001840
+
+-
+
+0xb486…3336+6.67K GRID
+
+11h@ $0.001840
+
+-
+
+0x18dd…8e25+9.31K GRID
+
+11h@ $0.001848
+
+-
+
+0x5419…ee87+263.59K GRID
+
+11h@ $0.001833
+
+-
+
+0xcfb9…5f76+8.29K GRID
+
+11h@ $0.001813
+
+-
+
+0xa62e…e93b+33.19K GRID
+
+11h@ $0.001813
+
+-
+
+0x8291…c613-82.2K GRID
+
+11h@ $0.001814
+
+-
+
+0xf9a7…7246+236.94K GRID
+
+11h@ $0.001814
+
+-
+
+0xf8cf…a0f8-2.28K GRID
+
+11h@ $0.001790
+
+-
+
+0x32c2…51d5+1.71M GRID
+
+11h@ $0.001735
+
+-
+
+0x62b0…7e3b-789.54K GRID
+
+11h@ $0.001691
+
+-
+
+0xca7d…4589-105.15K GRID
+
+11h@ $0.001690
+
+-
+
+0xca7d…4589+576.36K GRID
+
+11h@ $0.001718
+
+-
+
+0x9b78…1a56+1.08M GRID
+
+11h@ $0.001654
+
+-
+
+0xd949…e607+596.91K GRID
+
+11h@ $0.001607
+
+-
+
+0xcf57…5ee4-20.52K GRID
+
+11h@ $0.001640
+
+-
+
+0x3f8c…fd98-920.31K GRID
+
+11h@ $0.001608
+
+-
+
+0x0521…def1+37.48K GRID
+
+11h@ $0.001649
+
+-
+
+0xde33…4324+8.71K GRID
+
+11h@ $0.001654
+
+-
+
+0xff56…cf72+140.54K GRID
+
+11h@ $0.001643
+
+-
+
+0xf2c8…e9cc+2.54K GRID
+
+11h@ $0.001648
+
+-
+
+0xd712…6397+2.19K GRID
+
+11h@ $0.001648
+
+-
+
+0x44d5…1e04+126.07K GRID
+
+11h@ $0.001633
+
+-
+
+0xd206…0acb+622.03K GRID
+
+11h@ $0.001608
+
+-
+
+0xcf42…3dc3+15.1K GRID
+
+12h@ $0.001582
+
+-
+
+0x1f70…2fb5+1.39K GRID
+
+12h@ $0.001579
+
+-
+
+0xcf57…5ee4+22.13K GRID
+
+12h@ $0.001580
+
+-
+
+0xe0f0…3bf5+75.64K GRID
+
+12h@ $0.001579
+
+-
+
+0x0521…def1+39.16K GRID
+
+12h@ $0.001571
+
+-
+
+0x6e26…8ad1-936.92K GRID
+
+12h@ $0.001594
+
+-
+
+0xcf57…5ee4+27.64K GRID
+
+12h@ $0.001627
+
+-
+
+0xb241…2401+146.31K GRID
+
+12h@ $0.001633
+
+-
+
+0x3f8c…fd98-395.15K GRID
+
+12h@ $0.001904
+
+-
+
+0x44d5…1e04+92.09K GRID
+
+12h@ $0.001920
+
+-
+
+0x7730…12a9+33.93K GRID
+
+12h@ $0.001915
+
+-
+
+0x8c15…b098+50.73K GRID
+
+12h@ $0.001911
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.002014-25.80%
+
+Launched by:0x0A9a...F264
+
+powered by
+
+## About
+
+See more
+
+Grid Arena is a skill-based prediction platform on Robinhood Chain where users compete in fast 5-minute grids on stocks and crypto. Powered by the $GRID token, players can stake to earn fee rebates, capture platform revenue through buybacks and staking rewards, and boost airdrop multipliers by holding $GRID. With transparent mechanics and future AI agent integration, Grid Arena combines real utility and community rewards in one onchain arena.
+
+Project Video
+
+## Team
+
+-
+
+0x0A9a...F264Owner
+
+## Allocation
+
+Next unlock in 46 days
+
+Total1B
+
+Liquidity Pool38.01%
+
+380.1MFixed Supply
+
+Liquidity Pool380.1M38.01%Fixed Supply
+
+Automated Capital Formation25.00%
+
+250MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation250M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+250M · 17 Jul 27Default Team Vesting
+
+Team250M25.00%Default Team Vesting · Unlocks 17 Jul 27
+
+Community Rewards5.00%
+
+50M · 01 Aug 26allocated to community rewards through structured airdrop seasons, rewarding active players and $GRID holders
+
+Community Rewards50M5.00%allocated to community rewards through structured airdrop seasons, rewarding active players and $GRID holders · Unlocks 01 Aug 26
+
+Marketing5.00%
+
+50M · 01 Aug 26dedicated to strategic marketing and ecosystem expansion
+
+Marketing50M5.00%dedicated to strategic marketing and ecosystem expansion · Unlocks 01 Aug 26
+
+Sniper Tax Buyback for Team1.99%
+
+19.9M · 18 Oct 26Locked for 3 months, vesting linearly over 9 months
+
+Sniper Tax Buyback for Team19.9M1.99%Locked for 3 months, vesting linearly over 9 months · Unlocks 18 Oct 26
+
+## Supply
+
+1B750M500M250M0
+
+Today
+
+17 Jul 2623 Nov 2631 Mar 2707 Aug 2714 Dec 27
+
+Liquidity PoolAutomated Capital FormationTeamCommunity RewardsMarketingSniper Tax Buyback for Team
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $GRID or 1,000 veVIRTUAL to join the conversation.
+
+Buy $GRID
+
+0x6E09…45D7· 2 months
+
+who's the dev?
+
+## Market Overview
+
+Mechanics
+
+Mcap$2M
+
+FDV$2M
+
+Liq.$284.8K
+
+Holders1.8K
+
+24h Vol$304.6K
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+GRID
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (1.8K)
+
+View top 500
+
+Top 1073.2%
+
+Others26.8%
+
+0xd7c2…cc00Unlocker349.9M GRID38.7%
+
+0xe289…ee8aACF Vault189.5M GRID20.9%
+
+0xefc1…7e5fACF Pool51.3M GRID—
+
+0xa072…0f27LP43.6M GRID—
+
+0x829d…224a44.8M GRID5.0%
+
+0x6045…617522.2M GRID2.4%
+
+0xe886…5f0d12.5M GRID1.4%
+
+0x8e0c…1c2110.8M GRID1.2%
+
+0x9e57…792e10M GRID1.1%
+
+0xbac0…bf418M GRID0.9%
+
+0x1354…bcba7.8M GRID0.9%
+
+0x05e9…03e96.9M GRID0.8%
+
+0xd929…c6195.9M GRID0.7%
+
+## Twitter Feed
+
+Grid@grid_arena
+
+Sep 1
+
+Friendly reminder:
+Season Zero is still ongoing.
+
+25,000,000 $Grid
+$67K+ USD in rewards.
+14 days left.
+
+The leaderboard is not finished.
+Volume matters.
+Wins matter.
+Your $Grid balance matters.
+Referrals matter.
+
+Gridrunners, this is where the final push starts. A lot can change
+
+Grid@grid_arena
+
+Sep 1
+
+Gm
+
+Try out Grid v2. There's a lot more coming soon.
+More markets. More collabs. More ways to Grid.
+
+Grid@grid_arena
+
+Aug 31
+
+Oh, and the new Grid landing is live too.
+
+We may have left a little more on there than we were supposed to.
+
+For those who like looking for alpha.
+Worth looking around. Closely.
+
+https://t.co/67BGa8vKMp
+
+Grid@grid_arena
+
+Aug 31
+
+⬜️⬜️⬜️
+⬜️🟩🟩
+⬜️⬜️🟩 https://t.co/LvgJsa8HXL
+
+Grid@grid_arena
+
+Aug 31
+
+GRID v2 IS LIVE.
+
+Markets have been fragmented for too long.
+Stocks over here.
+Crypto over there.
+Prediction markets somewhere else.
+Trading on one screen.
+Watching price action on another.
+
+We think the endgame looks different.
+One arena for every market.
+
+A place where you can
+
+Grid@grid_arena
+
+Aug 30
+
+Prediction was the first door.
+
+v2 opens the rest.
+
+Predict.
+Trade.
+Play.
+
+Every market. One Grid.
+
+Grid@grid_arena
+
+Aug 30
+
+Green across the board. Green candles. Green chain. Green Grid.
+
+@RobinhoodCrypto szn is here.
+
+Grid v2 will be joining the party soon.
+
+Grid@grid_arena
+
+Aug 28
+
+Gm
+Touch some grass on the weekend while you can.
+Grid will be starting next week on v2.
+
+Predict, Trade, Play.
+Every Market, One Grid.
+
+Grid@grid_arena
+
+Aug 27
+
+Markets don’t go offline.
+You do.
+
+That’s why Grid + agents gets interesting.
+
+Set the strategy.
+Set the rules.
+Let the agent run the Grid when you can’t.
+
+You find the edge.
+Your agent makes sure you don’t sleep through it.
+
+Grid@grid_arena
+
+Aug 26
+
+Grid v1 was just the warm-up. The Arena is about to change.
+
+New markets. New experiences. New games.
+
+We’re almost done cooking.
+
+Grid v2 is coming.
+
+https://t.co/yVJetnH9a9
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

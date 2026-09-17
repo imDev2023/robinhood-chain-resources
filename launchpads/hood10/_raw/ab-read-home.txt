@@ -1,0 +1,384 @@
+H10HOOD10DOCSLAUNCHPAD
+
+CONNECT WALLET
+
+DELTA$0.01762-22.63%CASHCAT$0.2827+17.93%PONS$0.4224-3.09%STONKBROKER$0.02337-19.88%AI$0.2393+37.84%MICRODUCK$0.02960+109%JUGGERNAUT$0.007321+22.56%INDEX$0.02940+1.12%TENDIES$0.02816+56.21%YOLO$0.01254+21.28%
+
+DELTA$0.01762-22.63%CASHCAT$0.2827+17.93%PONS$0.4224-3.09%STONKBROKER$0.02337-19.88%AI$0.2393+37.84%MICRODUCK$0.02960+109%JUGGERNAUT$0.007321+22.56%INDEX$0.02940+1.12%TENDIES$0.02816+56.21%YOLO$0.01254+21.28%
+
+v1.0
+
+# Hold 1.
+Own 10.
+
+Hold $HOOD10 and collect dividends in Robinhood Chain’s Top 10. Every Epoch. All Ten.
+
+Calculate your dividendSee the basketRead the docs
+
+```
+
+                                                @@@
+                                           $$$$$$$$@@@@$
+                                          #####$$$$$$$$$$$
+                                        *******######$$$$$$$
+                                        !!!!!******######$$$$$
+                                       ==!====!!!******########
+                                       ;;;;;;====!!!!*****######
+                                       :::~::;;;;===!!!!*****####*
+                                       -----~~:::;;;===!!!!*******
+                                       ,.,.,,---~~:;;;;==!!!!!*****
+                                       ........,--~~::;;====!!!!!!!!
+                                        .........,,-~~:::;;====!!!!!
+                                        ...........,,--~~:;;;;======
+                                         ............,,-~~:::;;;;===;
+                                          ......-:.....,,-~~:::;;;;;;
+                                           ....-~=*$.....,--~~~:::;;;
+                                            ..,-:=*##*.....,--~~~::::
+                                              .-:=!!!=~.....,---~~~~
+                                               .,~;==:-.......,,----
+                                                 .-~:~-........,,,,,
+                                                   ..,,............
+                                                      ...........
+                                                         ......
+
+```
+
+index · rotating— fpsdrag to rotate10 / 10
+
+1
+
+## Index summary
+
+LIVE · ROBINHOOD CHAIN
+
+market cap
+
+$2.34M
+
+1,000,000,000 supply, fully circulating
+
+liquidity
+
+$744K
+
+across 20 pools
+
+total volume
+
+$1.72M
+
+trading 9d
+
+hood10 holders
+
+—
+
+not indexed yet
+
+dividends paid out
+
+$81,951
+
+across 31 epochs, in kind
+
+last epoch paid
+
+$0
+
+$0 per constituent, equal weight
+
+eligible supply
+
+866.9M
+
+86.7% qualified at snapshot
+
+next distribution
+
+02:07:57
+
+checked every three hours · closes once the pot covers settlement
+
+2
+
+## The basket
+
+bought with trading fees, airdropped in kind
+
+distributed to holders
+
+$81,951
+
+across 31 settled epochs · 10 constituents · equal weight, 10% each
+
+last epoch$0
+
+all epochs$81,951
+
+eligible supply, last epoch
+
+866.9M
+
+86.69% of supply qualified at the snapshot
+
+24h basket volume
+
+$248.7M
+
+across all ten pools
+
+dispersion, 24h
+
+132pts
+
+best +109% · worst −22.63%
+
+paid in kind: ten tokens, never cashread from chain, never from a database2026 | v1.0
+
+3
+
+## The calculator
+
+no epoch settled yet — nothing to project from
+
+you holdwallet not connected · drag
+
+19,650,000 HOOD10
+
+1M10M50M250M
+
+position value
+
+$46,512
+
+share of supply
+
+1.965%
+
+you'd collect, per epochin kind
+
+—
+
+trailing yield, per epoch
+
+—
+
+annualised, simple
+
+—
+
+No epoch has settled yet, so there is no trailing figure to compute from. This fills in after the first distribution.
+
+your slice, token by token10 rows
+
+DELTA——
+
+CASHCAT——
+
+PONS——
+
+STONKBROKER——
+
+AI——
+
+MICRODUCK——
+
+JUGGERNAUT——
+
+INDEX——
+
+TENDIES——
+
+YOLO——
+
+supply 1,000,000,000 · spot $0.002367paid in kind, airdropped on-chain2026 | v1.0
+
+4
+
+## The ten
+
+constituents · as of 2026-09-02LIVE · RANKED BY QUOTE LIQUIDITY
+
+DELTA01
+
+Delta
+
+$0.01762
+
+▼ -22.63% 24h
+
+10.00%$0
+
+CASHCAT02
+
+Cash Cat
+
+$0.2827
+
+▲ +17.93% 24h
+
+10.00%$0
+
+PONS03
+
+Pons
+
+$0.4224
+
+▼ -3.09% 24h
+
+10.00%$0
+
+STONKBROKER04
+
+StonkBroker
+
+$0.02337
+
+▼ -19.88% 24h
+
+10.00%$0
+
+AI05
+
+Artificial Inu
+
+$0.2393
+
+▲ +37.84% 24h
+
+10.00%$0
+
+MICRODUCK06
+
+microduck
+
+$0.02960
+
+▲ +109% 24h
+
+10.00%$0
+
+JUGGERNAUT07
+
+The Juggernaut
+
+$0.007321
+
+▲ +22.56% 24h
+
+10.00%$0
+
+INDEX08
+
+The Index
+
+$0.02940
+
+▲ +1.12% 24h
+
+10.00%$0
+
+TENDIES09
+
+TENDIES
+
+$0.02816
+
+▲ +56.21% 24h
+
+10.00%$0
+
+YOLO10
+
+YOLO
+
+$0.01254
+
+▲ +21.28% 24h
+
+10.00%$0
+
+10 constituents · equal weightone token, one seat · pools summed2026 | v1.0
+
+5
+
+## The ledger
+
+every dividend, filed31 epochs
+
+epochdatesnapshotdistributedper 1M
+
+3102 SEPT 260x9dcf419a…$0$0.00
+
+3001 SEPT 260x8139e128…$0$0.00
+
+2931 AUG 260xb1c05d2e…$0$0.00
+
+2830 AUG 260xebf38732…$0$0.00
+
+2730 AUG 260x9d9c3198…$0$0.00
+
+2630 AUG 260xd5c56a3f…$0$0.00
+
+2529 AUG 260xdef827ee…$0$0.00
+
+2429 AUG 260x3960197a…$0$0.00
+
+2329 AUG 260xbb61982b…$0$0.00
+
+2228 AUG 260xd52f3946…$0$0.00
+
+2128 AUG 260x63be37e6…$0$0.00
+
+2028 AUG 260x878414b4…$0$0.00
+
+1928 AUG 260xaaafadad…$0$0.00
+
+1827 AUG 260xaeca0540…$0$0.00
+
+1727 AUG 260x811169fb…$0$0.00
+
+1627 AUG 260x142446d3…$0$0.00
+
+1527 AUG 260xf8a31584…$0$0.00
+
+1426 AUG 260xfa0388e3…$0$0.00
+
+1326 AUG 260x247c72e5…$0$0.00
+
+1226 AUG 260x779182fe…$0$0.00
+
+1126 AUG 260x8ba87e6e…$0$0.00
+
+1026 AUG 260xcd62c022…$0$0.00
+
+0925 AUG 260xa285afcd…$0$0.00
+
+0825 AUG 260x8e7f5ec6…$0$0.00
+
+0725 AUG 260xd349b404…$0$0.00
+
+0625 AUG 260x4d4813ac…$0$0.00
+
+0525 AUG 260x01179ac5…$0$0.00
+
+0424 AUG 260x16ab8093…$0$0.00
+
+0324 AUG 260x6eb1ef3e…$30,993$35.07
+
+0224 AUG 260xcd3f479b…$50,958$58.96
+
+0124 AUG 260xe2514649…$0$0.00
+
+paid in kind: ten tokens, never cashtotal $81,9512026 | v1.0
+
+H10
+
+## registry
+
+- index vaultpublished at launch
+
+## reading
+
+- Docstax · epoch · eligibility · risks

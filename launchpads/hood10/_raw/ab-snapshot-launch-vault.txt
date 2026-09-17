@@ -1,0 +1,7 @@
+- generic "H10HOOD10LaunchboardvaultprofileLaunchConnectthe vaultevery trade feeds the index70% of the feeheld" [ref=e1] clickable [onclick]
+  - link "H 10 HOOD10" [ref=e2, url=https://hood10.xyz/]
+  - link "BOARD" [ref=e3, url=https://launch.hood10.xyz/#/]
+  - link "VAULT" [ref=e4, url=https://launch.hood10.xyz/#/vault]
+  - link "PROFILE" [ref=e5, url=https://launch.hood10.xyz/#/me]
+  - link "LAUNCH" [ref=e6, url=https://launch.hood10.xyz/#/launch]
+  - button "CONNECT" [ref=e7]

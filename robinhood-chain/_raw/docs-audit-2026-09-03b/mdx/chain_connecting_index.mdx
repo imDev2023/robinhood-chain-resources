@@ -1,0 +1,60 @@
+---
+showOutline: false
+---
+
+# Connecting to Robinhood Chain
+
+Robinhood Chain is an Arbitrum Layer-2 Chain built on Ethereum, using Ethereum blobs for data availability and ETH as the native gas token. Developers can add the network to their wallet using the configuration details below.
+
+## Network Configuration
+
+| Property | Robinhood Chain | Robinhood Chain Testnet |
+| :--- | :--- | :--- |
+| Chain ID | 4663 | 46630 |
+| Currency Symbol | ETH | ETH |
+| Block Explorer | [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com) | [explorer.testnet.chain.robinhood.com](https://explorer.testnet.chain.robinhood.com) |
+
+## Developer Endpoints
+
+Alchemy is the recommended infrastructure provider for building on Robinhood Chain. [Sign up for a free Alchemy account](https://dashboard.alchemy.com) and create an app on Robinhood Chain to get your API key.
+
+| Endpoint | Mainnet URL | Testnet URL |
+| :--- | :--- | :--- |
+| RPC | `https://robinhood-mainnet.g.alchemy.com/v2/{API_KEY}` | `https://robinhood-testnet.g.alchemy.com/v2/{API_KEY}` |
+| Websocket | `wss://robinhood-mainnet.g.alchemy.com/v2/{API_KEY}` | `wss://robinhood-testnet.g.alchemy.com/v2/{API_KEY}` |
+
+For historical reads and indexing, use an archive endpoint — available through providers such as Alchemy.
+
+### Other Providers
+
+Robinhood Chain is also supported by QuickNode, Blockdaemon, dRPC, and Validation Cloud. Sign up directly with your provider to get an endpoint.
+
+QuickNode endpoints follow: `https://{ENDPOINT}.robinhood-mainnet.quiknode.pro/{TOKEN}`
+
+## Supported Services
+
+| Service | Description |
+| :--- | :--- |
+| Node API | Access standard JSON-RPC and Websocket endpoints for reading and writing to Robinhood Chain. |
+| Data API | Instant, reliable access to indexed blockchain data like token balances, transaction history, NFTs, and portfolio activity |
+| Gasless Transaction Infrastructure | Create and manage programmable wallets with built-in support for gas sponsorship, batched transactions, flexible policies, and spending controls. |
+
+For more details on each service, visit the [Alchemy documentation](https://www.alchemy.com/docs/reference/robinhood-chain-api-quickstart).
+
+## Public Endpoints
+
+The following public endpoints are available but are rate-limited and not recommended for production use. For production, use a provider (see above).
+
+| Endpoint | Mainnet URL | Testnet URL |
+| :--- | :--- | :--- |
+| RPC | `https://rpc.mainnet.chain.robinhood.com` | `https://rpc.testnet.chain.robinhood.com` |
+| Sequencer Feed | `wss://feed.mainnet.chain.robinhood.com` | `wss://feed.testnet.chain.robinhood.com` |
+| Sequencer | `https://sequencer.mainnet.chain.robinhood.com` | `https://sequencer.testnet.chain.robinhood.com` |
+
+## Bridge to Robinhood Chain
+
+To move funds onto Robinhood Chain, use the canonical Arbitrum bridge or one of several cross-chain routes. See [Bridging](/chain/bridging) for all options and supported assets.
+
+## Connect a Wallet
+
+To connect to Robinhood Chain via a wallet, follow the instructions [here](/chain/add-network-to-wallet).

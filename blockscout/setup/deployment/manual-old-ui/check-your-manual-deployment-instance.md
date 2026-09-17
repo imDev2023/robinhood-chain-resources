@@ -1,0 +1,21 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Clean a Previous Manual Blockscout Instance
+
+> Remove build artifacts, node modules, static assets, and PostgreSQL data from a previous manual Blockscout deployment before redeploying or upgrading.
+
+In order to delete build artifacts anyone can run `./rel/commands/clear_build.sh` from the root project directory. It will delete these folders:
+
+* delete `_build` & `deps` directories
+* delete node modules located at
+* `apps/block_scout_web/assets/node_modules`
+* & `apps/explorer/node_modules`
+* delete `logs/dev` directory
+
+<Info>
+  You should also delete static assets (`apps/block_scout_web/priv/static` folder). Before rebuilding to apply changes to the front-end, run the previous command with `-f` flag:
+
+  `./rel/commands/clear_build.sh -f`
+</Info>

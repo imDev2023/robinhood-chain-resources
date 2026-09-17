@@ -1,0 +1,49 @@
+<!-- source: https://developers.uniswap.org/docs/liquidity/liquidity-launchpad/guides/setup | captured: 2026-08-22 | via: https://developers.uniswap.org/docs/liquidity/liquidity-launchpad/guides/setup.md (native markdown) -->
+# Setup CCA Environment (/docs/liquidity/liquidity-launchpad/guides/setup)
+
+Set up a local Continuous Clearing Auction development environment for Uniswap Liquidity Launchpad with Foundry.
+
+**Repository:** [github.com/Uniswap/continuous-clearing-auction](https://github.com/Uniswap/continuous-clearing-auction)
+
+## Prerequisites
+* [Foundry](https://getfoundry.sh/)
+* Access to a local terminal that can run `anvil`
+
+## Step 1: Clone the Repository
+```bash
+git clone https://github.com/Uniswap/continuous-clearing-auction.git
+cd continuous-clearing-auction
+```
+
+## Step 2: Install Foundry (if Needed)
+Developing with CCA locally requires [Foundry](https://getfoundry.sh/).
+
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+```
+
+## Step 3: Install Dependencies and Build
+```bash
+forge install
+forge build
+```
+
+## Step 4: Run Optional Checks and Start a Local Node
+Install pre-commit hooks if you want automated checks before commits.
+
+```bash
+pre-commit install
+pre-commit run --all-files
+```
+
+Start a local node for local scripts and tests.
+
+```bash
+anvil
+```
+
+Remappings are preconfigured in `foundry.toml`. Adjust them only if you import CCA into an existing Foundry project.
+
+## Verification
+* `forge build` completes without errors.
+* `anvil` starts and listens on `http://localhost:8545`.

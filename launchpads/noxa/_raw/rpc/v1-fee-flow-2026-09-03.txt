@@ -1,0 +1,25 @@
+V1 fee flow, traced end to end from a real collection
+=====================================================
+tx 0x91479f6f1b0bed82e68ccbbc426d2beac6f7877323d96863731a1ec261a4a295, 2026-09-02T03:22:34Z
+caller 0x16115dd159fF6509182B9f7212db010068539e81 (the token's deployer)
+to    0x9eFdC1A8e6E94f16A228e44f3025E1f346EE0417  FeeCollector.collect(0x2355431b...VIBECAT)
+
+token transfers, in order:
+  WETH    pool  -> LaunchLockerV1   0.062903554548915224
+  VIBECAT pool  -> LaunchLockerV1   507618.031784249960436607
+  WETH    LaunchLockerV1 -> FeeCollector  0.062903554548915224   (100%, because protocolFeeShare()=100)
+  WETH    LaunchLockerV1 -> caller        0
+  VIBECAT LaunchLockerV1 -> FeeCollector  507618.03...           (100%)
+  VIBECAT LaunchLockerV1 -> caller        0
+  VIBECAT FeeCollector -> 0x000...dEaD    507618.03...           (the token side is BURNED)
+  WETH    FeeCollector -> caller          0.062903554548915224   (100% of the WETH side)
+
+Reading: on V1 the locker's protocolFeeShare of 100 does NOT mean the protocol takes
+everything. It routes everything to the FeeCollector, which has protocolShare()=0 and
+tokenTreasuryShare()=0 and therefore burns the launched-token side and pays the entire
+WETH side to the creator. Net effect: creator receives 100% of the ETH-denominated fees
+and the token side is permanently removed from supply. This matches the 2026-07-14
+announcement that trading fees were set to 100% for creators.
+
+V1 fee claiming is live and heavily used: 49 successful collect() calls in the nine
+hours to 2026-09-02T03:22Z (_raw/blockscout-feesplitter-txs.json).

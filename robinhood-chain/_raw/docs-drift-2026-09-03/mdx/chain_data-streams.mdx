@@ -1,0 +1,42 @@
+---
+layout: docs
+---
+
+# Data Streams
+
+## Overview
+
+Chainlink Data Streams are a secure, fast, and high-performance pull-based oracle solution delivering real-time market data with sub-second latency. Data is streamed and maintained offchain for speed, then cryptographically signed and verified onchain when requested. This approach provides fast, flexible, and secure access to high-frequency data.
+
+## What this enables
+
+Data Streams supports advanced DeFi applications such as perpetual futures, options trading, automated liquidations, and high-frequency strategies that require rapid reaction to market changes. By decoupling data delivery from onchain writes, Data Streams significantly reduces costs while enabling real-time responsiveness.
+
+## Benefits
+
+- Sub-second latency for high-frequency updates
+- Pull-based architecture that reduces unnecessary onchain costs
+- Cryptographic verification for trust-minimized data usage
+- Multi-region, high-availability infrastructure
+- Flexible integration for both onchain and offchain processes
+
+## Key developer tools
+
+- Data visualization dashboards at [https://data.chain.link/streams](https://data.chain.link/streams)
+- SDKs in Go, TypeScript, and Rust
+- REST and WebSocket data access endpoints
+- Onchain verifier contract for report validation
+
+## Robinhood Chain Implementation
+
+The Data Streams Verifier Proxy facilitates on-chain verification for Data Streams reports. For the Robinhood Chain Mainnet (chain ID 4663), the verifier proxy is located at the following address:
+
+| Network | Verifier Proxy Address |
+| :--- | :--- |
+| Robinhood Chain | `0xcE73c8ad08CBDEaCa6078BF0627C8fe0a9a536E7` |
+
+Developers should invoke the `verify()` function on this specific contract to authenticate signed reports on-chain prior to execution. For real-time availability updates, refer to the Chainlink network status page for Robinhood Chain.
+
+## Further reading
+
+- [Chainlink Data Streams](https://docs.chain.link/data-streams)

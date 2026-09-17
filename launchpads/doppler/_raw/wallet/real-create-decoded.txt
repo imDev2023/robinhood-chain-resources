@@ -1,0 +1,56 @@
+Real Airlock.create on Robinhood Chain (4663), decoded 2026-09-02
+tx       0x093b506d6d4f383c8c0861c5c3acf720e2fa55b5b733a432d24b0e135669df12
+from     0x8c4B5bB3Aee821ff68e3D31a9890C7410C75aC0b
+to       0xeb7C034704eF8Dcd2D32324c1545f62fB4aD0862 (Airlock)
+value    0 wei   <- no ETH is attached to a launch
+gas used 2,806,026 of 3,772,379
+
+== CreateParams
+  initialSupply     1,000,000,000 tokens
+  numTokensToSell   1,000,000,000 tokens (100% of supply)
+  numeraire         0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73
+  tokenFactory      0x1B37D3a72082029c44B35B604Ea473617580b69a
+  governanceFactory 0x85f37f74Ef2478A770318bc810177a9835911aD7
+  poolInitializer   0x4e3468951D49f2EEa976eD0D6e75fFCb44a9a544
+  liquidityMigrator 0xba2F330EDb16cD8056f5988d8CE19BbC63475A0e
+  integrator        0x3879B1Ee8389FfeFb7afd51b1bafb9fAF23d6699
+  salt              0x000000000000002bfad578e172e2aec3488ff2cdedda78748bc245426c7182d6
+  governanceFactoryData  0x   (empty -> NoOp governance)
+  liquidityMigratorData  0x   (empty -> NoOp migrator, never migrates)
+
+== tokenFactoryData -> DopplerERC20V1Factory.create
+  name                              ChartHood
+  symbol                            CHART
+  vestingSchedules(cliff,duration)  ()
+  vestingBeneficiaries              ()
+  scheduleIds                       ()
+  amounts                           ()
+  tokenURI                          https://feel.cash/chart-2
+  maxBalanceLimit                   0
+  balanceLimitEnd                   0
+  controller                        0x0000000000000000000000000000000000000000
+  excludedFromBalanceLimit          ()
+  -> no vesting, no grants, and NO anti-snipe: maxBalanceLimit=0 disables the per-wallet cap
+
+== poolInitializerData -> DopplerHookInitializer.InitData
+  fee                0  (0 = dynamic fee, set by the attached Doppler Hook)
+  tickSpacing        200
+  farTick            887000   <- graduation trigger; pool must reach this tick
+  curves             11
+     1: ticks  -193000 ..  -181400  positions=1  shares=24.2744%
+     2: ticks  -181400 ..  -170000  positions=1  shares=29.7136%
+     3: ticks  -170000 ..  -158400  positions=1  shares=12.6743%
+     4: ticks  -158400 ..  -147000  positions=1  shares=12.8533%
+     5: ticks  -147000 ..  -135400  positions=1  shares= 2.6210%
+     6: ticks  -135400 ..  -124000  positions=1  shares= 4.5164%
+     7: ticks  -124000 ..  -112400  positions=1  shares= 2.5680%
+     8: ticks  -112400 ..  -100800  positions=1  shares= 0.1000%
+     9: ticks  -100800 ..   -89400  positions=1  shares= 0.1000%
+    10: ticks   -89400 ..   -77800  positions=1  shares= 0.5790%
+    11: ticks   -77800 ..   887200  positions=1  shares=10.0000%
+    total            100.0000%
+  beneficiaries      1
+    0x21e2ce70511e4fe542a97708e89520471daa7a66  100.0000%
+  dopplerHook        0x9982538f41f2ae29ddb9d3d9307010052984fdbb   (isDopplerHookEnabled = 3, live)
+  onInit calldata    576 bytes, rehypothecation config
+  onGraduation       (empty)

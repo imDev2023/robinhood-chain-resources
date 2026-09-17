@@ -1,0 +1,507 @@
+# Noxa - fun home gainers
+
+> Source: https://fun.noxa.fi/?sort=gainers
+> Retrieved: 2026-09-02 (agent-browser read)
+> Screenshot: ../screenshots/02-fun-home-gainers.png
+
+---
+
+Noxa
+
+HomeLaunchBridgeProfileStatsDocsCreate coin
+
+Create
+
+Connect Wallet
+
+# Explore coins
+
+TrendingLiveNewGainersMarket CapVolumeHoldersTradesOldest
+
+COCO+0.87%
+
+$COCO · by 0x37b3...63af
+
+Mcap
+
+$560.04K
+
+Price
+
+$0.00056
+
+Vol 24h
+
+$58.7K
+
+1mo ago1.72K holders
+
+Graduated
+
+Ballistic Bundle 5640+0.11%
+
+$BNDL5640 · by 0x8396...91fd
+
+Mcap
+
+$3.27K
+
+Price
+
+$0.0₅3268
+
+Vol 24h
+
+$8.523
+
+1mo ago6 holders
+
+7%
+
+What If+0.00%
+
+$IF · by 0x84f8...4afa
+
+Mcap
+
+$7.76M
+
+Price
+
+$0.007764
+
+Vol 24h
+
+$375.97K
+
+1mo ago6.73K holders
+
+Graduated
+
+H0.00%
+
+$H · by 0xe861...ecf7
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3263
+
+Vol 24h
+
+$1.833
+
+1mo ago5 holders
+
+7%
+
+OILLESS0.00%
+
+$OILLESS · by 0x0d16...973e
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$0.048
+
+1mo ago2 holders
+
+7%
+
+NOXA DOG0.00%
+
+$NDOG · by 0x1ef8...4014
+
+Mcap
+
+$3.53K
+
+Price
+
+$0.0₅3529
+
+Vol 24h
+
+$12.02
+
+1mo ago18 holders
+
+7%
+
+Robinhood's Fastest Asset 670.00%
+
+$RH67 · by 0x6a29...16d6
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3263
+
+Vol 24h
+
+$106.76
+
+1mo ago3 holders
+
+7%
+
+Robinhood Colors0.00%
+
+$RC · by 0x8049...8d00
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3263
+
+Vol 24h
+
+$100.08
+
+1mo ago5 holders
+
+7%
+
+ㅤ0.00%
+
+$ㅤ · by 0x6816...33b3
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$11.68
+
+1mo ago3 holders
+
+7%
+
+67SouthparkTrollZcash420RobinInu0.00%
+
+$Robin · by 0x2602...281c
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$1.847
+
+1mo ago3 holders
+
+7%
+
+0
+
+IngotFinance0.00%
+
+$INGOTFI · by 0xae7a...0470
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3263
+
+Vol 24h
+
+$94.84
+
+1mo ago3 holders
+
+7%
+
+Two Wolves0.00%
+
+$WOLVES · by 0xc94a...80a8
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$11.37
+
+1mo ago16 holders
+
+7%
+
+one life, its worth an attempt0.00%
+
+$worth · by 0x63b8...14f7
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$6.122
+
+1mo ago7 holders
+
+7%
+
+Redditinu0.00%
+
+$Redditinu · by 0x0301...45db
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$6.333
+
+1mo ago9 holders
+
+7%
+
+Cash Cat0.00%
+
+$CASHCAT · by 0xcdfc...ca90
+
+Mcap
+
+$272.39M
+
+Price
+
+$0.2724
+
+Vol 24h
+
+$9.36M
+
+2mo ago119.74K holders
+
+Graduated
+
+0
+
+noxacat0.00%
+
+$noxacat · by 0xa6a3...754c
+
+Mcap
+
+$3.63K
+
+Price
+
+$0.0₅3631
+
+Vol 24h
+
+$0
+
+1mo ago740 holders
+
+8%
+
+0
+
+PFPputer0.00%
+
+$PFPPUTER · by 0xae7a...0470
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3263
+
+Vol 24h
+
+$132.51
+
+1mo ago3 holders
+
+7%
+
+ACAT0.00%
+
+$ACAT · by 0x2b8b...bae5
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$94.82
+
+1mo ago3 holders
+
+7%
+
+NOXA MODE0.00%
+
+$MODE · by 0x6816...33b3
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$102.49
+
+1mo ago2 holders
+
+7%
+
+AmunPhantom0.00%
+
+$Amun · by 0x7d51...f03d
+
+Mcap
+
+$3.28K
+
+Price
+
+$0.0₅3278
+
+Vol 24h
+
+$172.36
+
+1mo ago5 holders
+
+7%
+
+Henry0.00%
+
+$henry · by 0x1c1c...bb9d
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$1.289
+
+1mo ago3 holders
+
+7%
+
+Robinhood Wallet0.00%
+
+$WALLET · by 0x5427...aa33
+
+Mcap
+
+$10.06M
+
+Price
+
+$0.0101
+
+Vol 24h
+
+$426.22K
+
+1mo ago5K holders
+
+Graduated
+
+NOXACAT0.00%
+
+$NOXACAT · by 0xc33f...59b6
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3264
+
+Vol 24h
+
+$197.06
+
+1mo ago7 holders
+
+7%
+
+NOXAv20.00%
+
+$NOXAv2 · by 0x64f3...efd3
+
+Mcap
+
+$3.26K
+
+Price
+
+$0.0₅3262
+
+Vol 24h
+
+$7.739
+
+1mo ago7 holders
+
+7%
+
+Load more

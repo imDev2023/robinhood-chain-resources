@@ -1,0 +1,93 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blocks Page: Block Height, Gas, and Rewards
+
+> Understand Blockscout block views including block height, timestamp, gas used, validator rewards, burnt fees, base fee, and included transactions.
+
+Blocks update on the homepage as they are created with basic information including block number (block height), number of transactions in the block, and time since the block was created.
+
+Click on a specific block number for information about that block, or **View All Blocks** for a more detailed overview of recent blocks.
+
+The all blocks page can also be accessed from the top menu.
+
+<Info>
+  Blockscout displays are configurable and may show different information depending on the instance and/or consensus method. These examples use a V1 instance of the UI. **V2 views are in process.**
+</Info>
+
+<Frame caption="">
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/a419e445-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=ba8c9db97e0512be72867e2448b7354e" width="2304" height="1174" data-path="images/a419e445-image.jpeg" />
+</Frame>
+
+## View All Blocks
+
+The view all blocks page shows updated details from the most recent blocks. Use the page arrows to navigate.
+
+<Frame caption="">
+  <img src="https://mintcdn.com/blockscout/GHvuDaE4gRKuNH6O/images/f3af3084-image.jpeg?fit=max&auto=format&n=GHvuDaE4gRKuNH6O&q=85&s=b99facebfbe54e9d95fb49a577867afd" width="2304" height="918" data-path="images/f3af3084-image.jpeg" />
+</Frame>
+
+#### Details by line
+
+1. Number of transactions in the block / size of block in bytes / time since block was created.
+
+2. Validator appending the block to the chain (fee recipient).
+
+3. Reward to validator (in ETH). Equals the amount of priority fees sent by users to include transactions in the block.
+
+4. Same as (3).
+
+5. Portion of tx fee (in ETH) burned due to EIP-1559. Amount burned = `baseFeePerGas * gasUsed`
+
+6. Block Gas limit. On Ethereum this is 30M gas: 2x the target size of 15M.
+
+7. Amount of gas used in the block (amount and % of block space used). The blue line visualizes the %.
+
+## Individual Block Page
+
+Click on a block number (this number, also referred to as block height, indicates how many blocks have been added to the chain) to view additional details about the block. Scroll down to view individual transactions contained in a block.
+
+Click on the tooltip (i) next to each item to view relevant info.
+
+<Frame caption="">
+  <img src="https://mintcdn.com/blockscout/GHvuDaE4gRKuNH6O/images/ee266d0e-image.jpeg?fit=max&auto=format&n=GHvuDaE4gRKuNH6O&q=85&s=e526e03ae6301c970b783fd1944eba68" width="2304" height="1543" data-path="images/ee266d0e-image.jpeg" />
+</Frame>
+
+1. **Block Height**: Also known as block number, shows the position of the block on the chain.
+
+2. **Timestamp**: Time & date the block was produced.
+
+3. **Transactions**: Number of transactions included in the block.
+
+4. **Fee Recipient**: Address of the validator (block producer) that received priority fees. Copy the address with the blue icon and paste into search to find more details about this validator.
+
+5. **Size**: Size of the data contained in the block in bytes.
+
+6. **Hash**: Cryptographic hash of the block header.
+
+7. **Parent Hash**: Hash of the preceding block.
+
+8. **Difficulty**: *NA for PoS.* Work required to mine a block in PoW.
+
+9. **Total Difficulty**: *NA for PoS.* Total difficulty to mine the chain up until this block.
+
+10. **Gas Used**: Total amount of gas used in the block & % of filled space.
+
+11. **Gas Limit**: Total gas limit for the block. 30M is Ethereum limit, which represents 2x the 15M target.
+
+12. **Nonce**: *N/A for PoS*. Demonstrates work in PoW.
+
+13. **Base Fee per Gas**: Minimum multiplier required for a transaction to be included in a block.
+
+14. **Burnt Fees**: Amount of ETH burned in the block.
+
+15. **Priority Fee/Tip**: Total tips for transactions included in the block.
+
+16. **Miner Reward**: Amount received by fee recipient in PoS. Matches (15).
+
+Scroll below the block details to view transactions contained within the block.
+
+<Frame caption="">
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/8bc247a2-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=fee7de8dc1d98acc53f5752846398ee4" width="2304" height="1550" data-path="images/8bc247a2-image.jpeg" />
+</Frame>

@@ -1,0 +1,364 @@
+# Virtuals Protocol - Agent page 134851 (WALL3)
+
+> Source: https://app.virtuals.io/virtuals/134851
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/15-app-agent-134851-wall3.png
+Interactive snapshot: _raw/network/snapshot-app-agent-134851-wall3.txt
+Network requests: _raw/network/requests-app-agent-134851-wall3.txt
+
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+# WALL3
+
+WALL3
+
+Robinhood
+
+## Trades
+
+RecentsYours
+
+No trades yet
+
+Buys and sells will stream in here.
+
+OverviewMarketHoldersAboutTokenomicsForumTwitter
+
+$0.001411+0.00%
+
+Launched by:0xc743...F871
+
+powered by
+
+## About
+
+See more
+
+The strategy layer for agentic finance | Drawing on more than a decade of experience with systems managing billions.
+
+### How It Works
+
+Wall 3 Labs has a mission to bring TradFi RWA strategies onchain, democratizing access to all. Our end goal is to build the first Agentic Onchain Hedge Fund. We believe the future of investing is trustless, permissionless and agentic.
+
+### Roadmap
+
+Step 1 is giving access to the strategy layer while we build the execution layer. Meet Wall3 Agent.
+
+Wall3 Agent is an institutional macro research desk, rebuilt as a single AI agent and delivered onchain. One query routes through eight specialist desks: monetary, inflation, growth, financials, risk, geopolitics, behavioral, prediction markets, and returns a structured view backed by true market-moving data.
+
+The kind of capability hedge funds spend seven figures a year to build, now token-gated via WALL3 utility token.
+
+### Additional Details
+
+Powering Wall3 Agent is NINA by argan.ai, a systematic engine composed of many specialized quant models and agents.
+
+Quant systems lay the foundations while the AI agents fill the blind spots and read between the lines as human analysts would.
+
+Before opening a single seat to Wall3 Agent, we launched our systematic macro strategy in May 2024. After deploying our own capital in the second half of 2024 we launched the Argan Agentic Fund for external investors in January 2025.
+
+### Token Utility
+
+WALL3 meters access to Wall3 Agent and to every agent the lab ships after it. Hold it to query the desk. That’s the job it does. No promises, no yield theater: a working utility token.
+
+## Team
+
+- 0x
+
+0xc743...F871Owner
+
+Wall3 Labs
+
+## Allocation
+
+Next unlock in 16 days
+
+Total1B
+
+Automated Capital Formation25.00%
+
+250MFollows Limit Order Program from 2mn to 160mn FDV
+
+Automated Capital Formation250M25.00%Follows Limit Order Program from 2mn to 160mn FDV
+
+Team25.00%
+
+250M · 18 Aug 27Default Team Vesting
+
+Team250M25.00%Default Team Vesting · Unlocks 18 Aug 27
+
+Liquidity Pool11.34%
+
+113.4MFixed Supply
+
+Liquidity Pool113.4M11.34%Fixed Supply
+
+Product and development Treasury10.00%
+
+100M · 18 Aug 26Product and development Treasury
+
+Product and development Treasury100M10.00%Product and development Treasury · Unlocks 18 Aug 26
+
+Growth, marketing and community Treasury7.00%
+
+70M · 18 Sep 26Growth, marketing and community Treasury
+
+Growth, marketing and community Treasury70M7.00%Growth, marketing and community Treasury · Unlocks 18 Sep 26
+
+Strategic reserve and runway treasury5.00%
+
+50M · 18 Aug 27Strategic reserve and runway treasury
+
+Strategic reserve and runway treasury50M5.00%Strategic reserve and runway treasury · Unlocks 18 Aug 27
+
+Liquidity and exchange infrastructure4.00%
+
+40M · 18 Sep 26Liquidity and exchange infrastructure
+
+Liquidity and exchange infrastructure40M4.00%Liquidity and exchange infrastructure · Unlocks 18 Sep 26
+
+Future contributors and hiring4.00%
+
+40M · 18 Aug 27Future contributors and hiring
+
+Future contributors and hiring40M4.00%Future contributors and hiring · Unlocks 18 Aug 27
+
+Sniper Tax Buyback for Team3.41%
+
+34.1M · 19 Nov 26Locked for 3 months, vesting linearly over 9 months
+
+Sniper Tax Buyback for Team34.1M3.41%Locked for 3 months, vesting linearly over 9 months · Unlocks 19 Nov 26
+
+Partnerships and ecosystem grants3.00%
+
+30M · 18 Nov 26Partnerships and ecosystem grants
+
+Partnerships and ecosystem grants30M3.00%Partnerships and ecosystem grants · Unlocks 18 Nov 26
+
+Early backers2.00%
+
+20M · 25 Aug 261 week lock-up, no vesting. Discounted OTC buy options for early backers, no free distribution.
+
+Early backers20M2.00%1 week lock-up, no vesting. Discounted OTC buy options for early backers, no free distribution. · Unlocks 25 Aug 26
+
+veVIRTUAL Airdrop0.25%
+
+2.5MFixed Supply
+
+veVIRTUAL Airdrop2.5M0.25%Fixed Supply
+
+## Supply
+
+1B750M500M250M0
+
+Today
+
+18 Aug 2625 Mar 2730 Oct 2704 Jun 2809 Jan 29
+
+Automated Capital FormationTeamLiquidity PoolProduct and development TreasuryGrowth, marketing and community TreasuryStrategic reserve and runway treasuryLiquidity and exchange infrastructureFuture contributors and hiringSniper Tax Buyback for TeamPartnerships and ecosystem grantsEarly backersveVIRTUAL Airdrop
+
+## Forum
+
+0 / 300Post
+
+Hold at least 10,000 $WALL3 or 1,000 veVIRTUAL to join the conversation.
+
+Buy $WALL3
+
+0xFBbf…64E6· 15 days
+
+Gm
+
+## Market Overview
+
+Mechanics
+
+Mcap$211.4K
+
+FDV$1.4M
+
+Liq.$712.6K
+
+Holders443
+
+24h Vol$0
+
+Pay Total25%50%75%Max
+
+VIRTUAL
+
+$0
+
+Guaranteed Receive Amount
+
+WALL3
+
+$0
+
+Slippage3%
+
+Price Impact—
+
+RouteRelay
+
+Connect Wallet
+
+## Holders (443)
+
+View top 443
+
+Top 1096.5%
+
+Others3.5%
+
+0xc0f2…5c51Unlocker634.1M WALL372.0%
+
+0xe289…ee8aACF Vault182.6M WALL320.7%
+
+0xdc9b…cf1aLP85.5M WALL3—
+
+0xb693…8f17ACF Pool31.1M WALL3—
+
+0xe0c8…3c61Airdrop2.3M WALL3—
+
+0x0275…a6c76.5M WALL30.7%
+
+0x05e9…03e96.3M WALL30.7%
+
+0xfb4b…21025.8M WALL30.7%
+
+0x29b6…398a3.4M WALL30.4%
+
+0xa70f…0c133.4M WALL30.4%
+
+0xdcea…92793.1M WALL30.4%
+
+0x6fd0…f45d2.7M WALL30.3%
+
+0x6116…26a82.6M WALL30.3%
+
+## Twitter Feed
+
+Wall3 Labs@Wall3_RL
+
+Aug 31
+
+RECAP - Wall3 Agent Case Study
+
+Even though we designed our system to work on long term trends and inflection points - we've found it to be sharp on lower timeframes as well.
+
+$WALL3 picked up on a divergence between defense performance and the contract spending. This was local
+
+Wall3 Labs@Wall3_RL
+
+Aug 30
+
+3 minutes that change how you think about using AI in Investing
+
+Clip from last week's livestream with @virtuals_io
+
+Many traders listen to FED livestreams, and cling onto and overanalyse every word, looking for alpha.
+
+Our CIO Reza explains why that's dumb, and what our agents
+
+Wall3 Labs@Wall3_RL
+
+Aug 29
+
+Bullish Equities View | Market Positioning &amp; Sentiment Desk
+
+This desk gives us quantitative, data-driven insights into the true sentiment of the market. Many investors rely on sentiment heavily but this is rarely quantifiable and mostly "vibes based".
+
+Combining multiple desks
+
+Wall3 Labs@Wall3_RL
+
+Aug 28
+
+AMA https://t.co/pUdBD97pav
+
+Wall3 Labs@Wall3_RL
+
+Aug 28
+
+AMA in 1 hour, our team will answer any questions you have.
+
+If you've ever wanted a certain feature, now's a great time to bring it up. We've made our careers off of using our system, now it is for you guys🚀
+
+https://t.co/uUgOh5L6cO
+
+Wall3 Labs@Wall3_RL
+
+Aug 27
+
+AMA - Ask the Architects Directly
+
+On Tuesday you heard our story, tomorrow we're listening to you.
+
+Bring your questions about agentic investing, the $WALL3 ecosystem, and more.
+
+To Join: https://t.co/g4sNhG7Yfi
+
+Wall3 Labs@Wall3_RL
+
+Aug 26
+
+Unitree Robotics - Individual Company Outlook🧵
+
+Today we're giving a sneak peek at the single-company analytics that will be integrated into the $WALL3 ecosystem soon.
+
+Here is our full breakdown on Unitree's current post-IPO valuation and what operating milestones turn the
+
+Wall3 Labs@Wall3_RL
+
+Aug 26
+
+Bitcoin is very sensitive to macro, more specifically liquidity.
+
+Surprisingly, this isn't common knowledge yet, and it's why investors often get caught on the wrong side of geopolitics, conflict and things like FED decisions.
+
+The engine leans bullish on Bitcoin, but it may take https://t.co/7h0e06TVXO
+
+Wall3 Labs@Wall3_RL
+
+Aug 25
+
+Going live in 10 min https://t.co/VytRaYrpZu
+
+Wall3 Labs@Wall3_RL
+
+Aug 25
+
+Many traders spend their days staring at economic calendars, waiting to punt on 8:30 AM CPI prints or Fed rate announcements.
+
+By the time the press conference starts, they’re already trading someone else’s exit liquidity.
+
+That is purely reactive trading. Good investors are https://t.co/btotre8z7F
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

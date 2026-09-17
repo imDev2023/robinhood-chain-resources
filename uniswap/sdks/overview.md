@@ -1,0 +1,19 @@
+<!-- source: https://developers.uniswap.org/docs/sdks/overview | captured: 2026-08-22 | via: https://developers.uniswap.org/docs/sdks/overview.md (native markdown) -->
+# SDKs Overview (/docs/sdks/overview)
+
+Explore Uniswap SDK families and choose the right version for your integration workflow.
+
+Use this page to choose the right Uniswap SDK version for your integration and then jump into implementation guides.
+
+## Choose your SDK version
+| SDK                                      | Best for                                                            |
+| ---------------------------------------- | ------------------------------------------------------------------- |
+| [Uniswap v4 SDK](/docs/sdks/v4/overview) | New integrations using hooks, flash accounting, and singleton pools |
+| [Uniswap v3 SDK](/docs/sdks/v3/overview) | Concentrated liquidity workflows on Uniswap v3 pools                |
+| [Uniswap v2 SDK](/docs/sdks/v2/overview) | Legacy constant product integrations and routing flows              |
+
+## The Core SDK
+The Core SDK `@uniswap/sdk-core` provides shared token, amount, and price primitives used across v2, v3, and v4 SDKs.
+
+* [SDK Core GitHub Repo](https://github.com/Uniswap/sdk-core)
+* [Core SDK NPM Package](https://www.npmjs.com/package/@uniswap/sdk-core)

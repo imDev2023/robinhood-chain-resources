@@ -1,0 +1,35 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blockscout APIs
+
+> Overview of Blockscout APIs, including the multichain PRO API, REST, JSON-RPC, ETH-compatible RPC, and GraphQL endpoints for EVM chain data.
+
+## Blockscout API Usage
+
+<Check>
+  Our Universal PRO API is now available, and per-instance API support has been deprecated. Please go to [https://dev.blockscout.com/](https://dev.blockscout.com/) to get an API key and start exploring.<br /><br />Note: Your old MyAccount API keys and prior routes will not work with the new PRO API. [Get a new key](https://dev.blockscout.com/) and [update your routes](/devs/pro-api).
+</Check>
+
+<CardGroup cols={3}>
+  <Card title="PRO API" icon="rectangle-pro" href="/devs/pro-api">
+    API Overview, Routes, Plans and Credits
+  </Card>
+
+  <Card title="ETHERSCAN MIGRATION" icon="person-running-fast" href="/devs/migrate-from-etherscan">
+    Port over seamlessly and get more calls for less \$\$
+  </Card>
+
+  <Card title="DEV PORTAL" icon="torii-gate" href="/devs/dev-portal">
+    Use the Dev Portal to enhance your API experience.
+  </Card>
+
+  <Card title="USE CASES" icon="user-chef" href="/devs/use-cases-overview">
+    Example apps and agent flows
+  </Card>
+
+  <Card title="AI Agents" icon="robot" href="https://agents.blockscout.com/">
+    Agents should visit [https://agents.blockscout.com/](https://agents.blockscout.com/) to set up optimized data workstreams
+  </Card>
+</CardGroup>

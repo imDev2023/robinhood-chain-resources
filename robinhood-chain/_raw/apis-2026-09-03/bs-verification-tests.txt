@@ -1,0 +1,41 @@
+Blockscout contract-verification probes against robinhoodchain.blockscout.com, 2026-09-03.
+Browser User-Agent set on every call. EOA = 0xTEST_WALLET_ADDRESS_REDACTED
+(shared test wallet, no code). CONTRACT = 0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D
+(verified BeaconProxy).
+
+GET  /api/v2/smart-contracts/verification/config
+  200. is_rust_verifier_microservice_enabled: true. 1,657 solc versions,
+  52 vyper versions, 15 solidity evm versions, 14 license types,
+  verification_options: 7 entries incl. multi-part, vyper-multi-part, vyper-standard-input.
+
+POST /api/v2/smart-contracts/<EOA>/verification/via/flattened-code
+  404 {"message":"Address is not a smart-contract"}  (2 of 3 attempts)
+  500 HTML error page                                (1 of 3 attempts, intermittent)
+
+POST /api/v2/smart-contracts/<EOA>/verification/via/standard-input   400 "Bad request"
+POST /api/v2/smart-contracts/<EOA>/verification/via/multi-part       400 "Bad request"
+POST /api/v2/smart-contracts/<EOA>/verification/via/sourcify         400 "Bad request"
+POST /api/v2/smart-contracts/<EOA>/verification/via/vyper-code       404 {"message":"Address is not a smart-contract"}
+POST /api/v2/smart-contracts/<EOA>/verification/via/bogus-method     404 "Page not found"
+  (the 400s are the multipart body missing each route's required fields, not a missing route)
+
+POST /api/v2/smart-contracts/<CONTRACT>/verification/via/flattened-code
+  200 {"message":"Smart-contract verification started"}
+  -> the route accepts submissions. The submitted source was deliberate garbage,
+     so the job failed the bytecode match; GET /api/v2/addresses/<CONTRACT> still
+     reports is_verified true and name "BeaconProxy" afterwards.
+
+GET  /api?module=contract&action=verifysourcecode                200 {"message":"Missing codeformat field",...}
+POST /api?module=contract&action=verifysourcecode (partial body) 200 {"message":"optimizationUsed is required.",...}
+GET  /api?module=contract&action=checkverifystatus&guid=abc      200 {"result":"Unknown UID"}
+  -> the v1 Etherscan-shaped verify route is live and validates field by field.
+
+Routes that do NOT exist on this instance (backend v11.2.8.+commit.e889cab0):
+  GET  /api/v2/smart-contracts/<addr>/methods-read           404 "Page not found"
+  GET  /api/v2/smart-contracts/<addr>/methods-read?is_custom_abi=false  404
+  GET  /api/v2/smart-contracts/<addr>/methods-write          404
+  GET  /api/v2/smart-contracts/<addr>/methods-read-proxy     404
+  POST /api/v2/smart-contracts/<addr>/query-read-method      404
+  GET  /api/v2/smart-contracts/<addr>/solidityscan-report    404
+  GET  /api/v2/addresses/<addr>/methods-read                 400 {"message":"Unknown API v2 action"}
+  (SCRAPING-PLAN.md 3.6 lists methods-read as working; it is not, on this instance, today)

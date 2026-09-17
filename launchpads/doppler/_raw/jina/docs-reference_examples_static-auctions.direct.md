@@ -1,0 +1,169 @@
+> For the complete documentation index, see [llms.txt](https://docs.doppler.lol/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.doppler.lol/reference/examples/static-auctions.md).
+
+# Static auctions
+
+## Using market cap targets
+
+```typescript
+import { DopplerSDK } from '@whetstone-research/doppler-sdk';
+import { parseEther, createPublicClient, createWalletClient, http } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { baseSepolia } from 'viem/chains';
+
+const privateKey = process.env.PRIVATE_KEY as `0x${string}`;
+const rpcUrl = process.env.RPC_URL ?? baseSepolia.rpcUrls.default.http[0];
+
+async function main() {
+  const account = privateKeyToAccount(privateKey);
+
+  const publicClient = createPublicClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+  });
+
+  const walletClient = createWalletClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+    account,
+  });
+
+  const sdk = new DopplerSDK({
+    publicClient,
+    walletClient,
+    chainId: baseSepolia.id,
+  });
+
+  const params = sdk
+    .buildStaticAuction()
+    .tokenConfig({
+      name: 'My Token',
+      symbol: 'MTK',
+      tokenURI: 'https://example.com/token-metadata.json',
+    })
+    .saleConfig({
+      initialSupply: parseEther('1000000000'),
+      numTokensToSell: parseEther('900000000'),
+      numeraire: '0x4200000000000000000000000000000000000006', // WETH on Base
+    })
+    .withMarketCapRange({
+      marketCap: { start: 100_000, end: 10_000_000 }, // $100k to $10M
+      numerairePrice: 3000, // ETH = $3000 USD
+    })
+    .withVesting({
+      duration: BigInt(365 * 24 * 60 * 60),
+      cliffDuration: 0,
+    })
+    .withGovernance({ type: 'noOp' })
+    .withMigration({ type: 'uniswapV2' })
+    .withUserAddress(account.address)
+    .build();
+
+  const result = await sdk.factory.createStaticAuction(params);
+
+  console.log('Pool:', result.poolId);
+  console.log('Token:', result.tokenAddress);
+}
+
+main();
+```
+
+### With Uniswap V4 migration
+
+```typescript
+import { DopplerSDK, getAirlockOwner } from '@whetstone-research/doppler-sdk';
+import { parseEther, createPublicClient, createWalletClient, http } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { baseSepolia } from 'viem/chains';
+
+const privateKey = process.env.PRIVATE_KEY as `0x${string}`;
+const rpcUrl = process.env.RPC_URL ?? baseSepolia.rpcUrls.default.http[0];
+
+async function main() {
+  const account = privateKeyToAccount(privateKey);
+
+  const publicClient = createPublicClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+  });
+
+  const walletClient = createWalletClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+    account,
+  });
+
+  const sdk = new DopplerSDK({
+    publicClient,
+    walletClient,
+    chainId: baseSepolia.id,
+  });
+
+  const airlockOwner = await getAirlockOwner(publicClient);
+
+  const params = sdk
+    .buildStaticAuction()
+    .tokenConfig({
+      name: 'My Token',
+      symbol: 'MTK',
+      tokenURI: 'https://example.com/token-metadata.json',
+    })
+    .saleConfig({
+      initialSupply: parseEther('1000000000'),
+      numTokensToSell: parseEther('900000000'),
+      numeraire: '0x4200000000000000000000000000000000000006',
+    })
+    .withMarketCapRange({
+      marketCap: { start: 100_000, end: 10_000_000 },
+      numerairePrice: 3000,
+    })
+    .withVesting({
+      duration: BigInt(365 * 24 * 60 * 60),
+      cliffDuration: 0,
+    })
+    .withGovernance({ type: 'noOp' })
+    .withMigration({
+      type: 'uniswapV4',
+      fee: 3000,
+      tickSpacing: 60,
+      streamableFees: {
+        lockDuration: 365 * 24 * 60 * 60,
+        beneficiaries: [
+          { beneficiary: account.address, shares: parseEther('0.95') },
+          { beneficiary: airlockOwner, shares: parseEther('0.05') },
+        ],
+      },
+    })
+    .withUserAddress(account.address)
+    .build();
+
+  const result = await sdk.factory.createStaticAuction(params);
+
+  console.log('Pool:', result.poolId);
+  console.log('Token:', result.tokenAddress);
+}
+
+main();
+```
+
+***
+
+## Using raw ticks
+
+```typescript
+const params = sdk.buildStaticAuction()
+  .tokenConfig({
+    name: 'My Token',
+    symbol: 'MTK',
+    tokenURI: 'https://example.com/token-metadata.json',
+  })
+  .saleConfig({
+    initialSupply: parseEther('1000000000'),
+    numTokensToSell: parseEther('900000000'),
+    numeraire: '0x4200000000000000000000000000000000000006',
+  })
+  .poolByTicks({ startTick: 175000, endTick: 225000, fee: 10000 })
+  .withGovernance({ type: 'noOp' })
+  .withMigration({ type: 'uniswapV2' })
+  .withUserAddress(account.address)
+  .build();
+```

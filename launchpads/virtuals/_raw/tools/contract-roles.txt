@@ -1,0 +1,50 @@
+VirtualToken-CCIP|0xc6911796042b15d7Fa4F6CDe69e245DdCd3d9c31|VIRTUAL on Robinhood Chain is a Chainlink CCIP burn-and-mint CrossChainToken, minted only by the CCIP token pool. It is the quote asset of every Virtuals bonding curve and every graduated Uniswap V2 pool on this chain.
+CCIP-BurnMintTokenPool|0x78680385fcb8187ac1b28E0d6b1e0ACf5e0d0992|Chainlink CCIP token pool that mints and burns VIRTUAL on Robinhood Chain. This is how VIRTUAL reached chain 4663 (no canonical Arbitrum bridge wrapper).
+CCIP-TokenAdminRegistry|0x1912C3cFafE8A76A32a92861d815aC2837F237Ca|Chainlink CCIP registry that maps VIRTUAL to its token pool. Third-party infrastructure, not deployed by Virtuals.
+CCIP-RegistryModuleOwnerCustom|0x3237c0D7B58bEC8Dc17F00103B784Bd6678F789E|Chainlink CCIP module used by the token owner to register VIRTUAL as admin. Third-party infrastructure.
+CCIP-OffRamp|0xcDCa5D374E46a6DddaB50BD2D9aCB8c796ec35C3|Chainlink CCIP off-ramp that executes inbound VIRTUAL mints. Third-party infrastructure.
+BondingV5-Proxy|0xd4cCBFA37e2f35611b3042e4096Ad7a3459Bd007|The launchpad entry point. preLaunch, launch, buy, sell and graduation all go through this proxy. Listed in the whitepaper as the Robinhood Chain bonding curve address.
+BondingV5-Impl-current|0x66Fc520c7F316B8623eee2A5dA821c3b34D0539D|Current implementation behind the BondingV5 proxy (fourth implementation, deployed by the owner 0xc31C...).
+BondingV5-Impl-initial|0xFFB470f3a2De124b918Ee412FEDd79CF6ACb6265|First BondingV5 implementation deployed 2026-06-25 by the deployer 0xe4a0...; superseded.
+BondingV5-Impl-v2|0x319Dd22FEBD8AB7370761b59fBAEa1f00c80B970|Intermediate BondingV5 implementation deployed by the owner 0xc31C...; superseded.
+BondingV5-Impl-v3|0x634D91f7A67011A60985dF555A5157f9b321f7dE|Intermediate BondingV5 implementation deployed by the owner 0xc31C...; superseded.
+BondingConfig-Proxy|0x3e331Fdd9Fe54D5047b1B7339Fd5c91977D53e2F|Holds every economic parameter of the curve: initial supply, fake initial liquidity, 42,000 VIRTUAL target, reserve bips, launch fees, anti-sniper presets, privileged launchers, fee and reserve wallets.
+BondingConfig-Impl-current|0x13C4A51590DA706aA01654dF25e80e7d001728C6|Current BondingConfig implementation.
+BondingConfig-Impl-initial|0xe4A58C2632645E242c37aD4EA633CA13d38d0272|First BondingConfig implementation (2026-06-25); superseded.
+FFactoryV3-Proxy|0xFC2E4Da3EdB2E18100473339c763705d263D20A9|Creates the internal bonding pairs (FPairV2) and holds buyTax, sellTax, taxVault and antiSniperTaxVault. The implementation 0x38b1... is not verified on Blockscout; the ABI used for reads comes from protocol-contracts/contracts/launchpadv2/FFactoryV3.sol.
+FRouterV3-Proxy|0xCa6395246B4382Ba70F886526dD9a9De984F6081|Executes buy and sell against the bonding pair, applies the 1 percent tax and the decaying anti-sniper tax, and deposits tax into AgentTaxV2.
+FRouterV3-Impl-current|0x09256b9D607c53fD946681F7C5a7a4381ba285A1|Current FRouterV3 implementation.
+FRouterV3-Impl-initial|0x2339d99BCf6E9F4118AbeC2a79aFB0697BEe9d7D|First FRouterV3 implementation (2026-06-25); superseded.
+AgentFactoryV7-Proxy|0x43E4C17b15365596Caae8e7d00E42Bc8E988c2d4|Mints the agent token clone at preLaunch and, at graduation, creates the Uniswap V2 pool, the veToken (10-year LP lock), the DAO, the agent NFT and the ERC-6551 token-bound account.
+AgentFactoryV7-Impl|0xF0a8089da19568a37bCCacc4BFE3A2a9f1E71675|AgentFactoryV7 implementation.
+AgentTaxV2-Proxy|0x6D80B81d9Fc56A7A839b1Af9006Eb49151961ce7|Tax vault. Receives the 1 percent VIRTUAL tax per token, swaps it to USDG through Uniswap V2 and splits it 30 percent treasury, 70 percent creator (minus any partner share).
+AgentTaxV2-Impl|0x4D4e8F06FE9a3dB2FA7AD4D17893128600Ec01bB|AgentTaxV2 implementation.
+TaxAccountingAdapter-Proxy|0xF36F0dd7b6b1730d0A59d1F3fD0E494C4D5c66E8|Post-graduation tax adapter referenced by every AgentTokenV4 clone; forwards the token-level 1 percent tax to AgentTaxV2.
+TaxAccountingAdapter-Impl|0xbAF52C875916a06Df443b77D634eE4e9170cf06C|TaxAccountingAdapter implementation.
+AgentTokenV4-Impl|0x581f7B996E6D3E436c537989157c9CB36421419b|Implementation cloned (EIP-1167) for every agent token. 1 percent buy and sell project tax, swap threshold, blacklist, vault.
+AgentVeTokenV2-Impl|0xD851E9f4C40C7df6a2Ce16065A4EcBC86C7321E7|Implementation cloned for every graduated token's staked-LP token (sTOKEN). Holds the LP with a 10-year maturity.
+AgentDAO-Impl|0x5b56842Ba4aac6BBba74E1490c791bfAc2c5fa8C|Implementation cloned for every graduated agent's governor.
+AgentNftV2-Proxy|0x4008561D44A774AD3D517a009D0B6b647932D8D0|Agent identity NFT minted at graduation (virtualId, validators, TBA).
+AgentNftV2-Impl|0x5967bABc9B7F57CbF5826053955520ab528aC0AF|AgentNftV2 implementation.
+ERC6551Registry|0xf504AB63fD11871f2A4d356989273F02c219B467|Token-bound account registry used for each agent's TBA.
+AccountV3Upgradable-TBA-Impl|0x1a1866D18c060CCFC0fb2154Cc693CfCca4bB7Ad|Tokenbound AccountV3 implementation referenced by BondingConfig.deployParams.
+Multicall3-Virtuals|0x3Eb3394F5D89465A77f73a83d3675B0Ed051F852|Multicall3 deployed by the Virtuals deployer for the frontend.
+SwapRouter-UniV3-Virtuals|0x170D9E6A0Af82b56bcdd3900ECa1367655B6997f|Uniswap V3 SwapRouter deployed by the Virtuals deployer on 2026-06-30, used for the deployer's own VIRTUAL/USDG swaps.
+UniswapV2Factory|0x8bcEaA40b9AcDfAedF85adF4ff01F5ad6517937F|Uniswap V2 factory used for every graduated pool (third-party).
+UniswapV2Router02|0x89e5DB8B5aA49aA85AC63f691524311AEB649eba|Uniswap V2 router used by AgentTaxV2 to swap VIRTUAL tax into USDG (third-party).
+UniswapV3Factory|0x1F7D7550b1B028F7571E69a784071f0205FD2EFa|Uniswap V3 factory (third-party); parent of the VIRTUAL/WETH and USDG/VIRTUAL pools.
+NonfungiblePositionManager|0x73991A25c818Bf1F1128DEaAb1492d45638dE0d3|Uniswap V3 position manager (third-party).
+UniswapV3Pool-VIRTUAL-WETH-005|0x9cc8c4F6118419A27f113723F1DeA646685Be55F|The Dexscreener VIRTUAL/WETH pool from launchpad-research.md, Uniswap V3 fee 500 (0.05 percent). token0 WETH, token1 VIRTUAL.
+UniswapV3Pool-USDG-VIRTUAL-030|0xe98Cc271C75B74d5F92b8d89C2A0DFC7ea29c971|Uniswap V3 USDG/VIRTUAL pool, fee 3000 (0.3 percent). token0 USDG, token1 VIRTUAL.
+USDG-Proxy|0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168|Paxos USDG stablecoin proxy. AgentTaxV2.assetToken: all creator and treasury fee payouts on this chain are in USDG.
+USDG-Impl|0x68184C449E1a8f34fA18d289737129FD27B66f8F|USDG implementation.
+WETH-Proxy|0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73|Canonical WETH (Arbitrum Orbit aeWETH proxy) from launchpad-research.md.
+WETH-aeWETH-Impl|0xC6B81b429797E0f555440b70cD99e032D7AE947e|aeWETH implementation.
+ACP-AgenticCommerceV3-Proxy|0x62891D58e1321D92f338901A433c2699aADaf2C1|Agent Commerce Protocol escrow and job contract on Robinhood Chain.
+ACP-AgenticCommerceV3-Impl|0xA1572Efb913F7c3Ca64825eB96906E9a1945ecDe|AgenticCommerceV3 implementation.
+ACP-FundTransferHook|0x6bb20A93278703f40161D0821C92763AbAFdE5A5|ACP payment hook.
+ACP-SubscriptionHook|0xDBf76987F775418595dA1EA9Bb30C066b10a5a3F|ACP subscription hook.
+ACP-SubscriptionState|0x58C1B1287c4FEA23AEc6CBBfa0ef32850525d777|ACP subscription state.
+ACP-MultiHookRouter|0x42AD30063577aFb1Dac07e46A28eE137F6A5aC47|ACP hook router.
+Example-VEX-UniswapV2Pair|0x817f16F5D8da83d1B089B082c0172af3923618dA|Graduated pool VEX/VIRTUAL created 2026-07-03 at graduation of agent 96200.
+Example-AgentTokenV4-standalone|0x89B22729b6263d8dDC4847aE59504209221e8300|A standalone (non-clone) AgentTokenV4 deployment by 0x38bcCe51..., not part of the Virtuals launch path; kept for reference because Blockscout search returns it.

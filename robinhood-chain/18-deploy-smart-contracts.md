@@ -1,0 +1,188 @@
+# Deploy Smart Contracts
+
+> Source: <https://docs.robinhood.com/chain/deploy-smart-contracts>
+> Retrieved: 2026-08-12 (Tavily extract, advanced depth)
+
+---
+
+# Deploy a Contract
+
+Robinhood Chain is fully EVM-compatible, so smart contracts written in Solidity or Vyper deploy without modification using standard Ethereum tooling. This guide covers deploying a simple contract with Foundry or Hardhat — pick whichever you prefer.
+
+## Prerequisites
+
+Before you begin, you'll need:
+
+* A wallet with ETH on Robinhood Chain for gas — see [Add network to your wallet](/chain/add-network-to-wallet).
+* The network details below.
+
+| Property | Mainnet | Testnet |
+| --- | --- | --- |
+| Network | Robinhood Chain | Robinhood Chain Testnet |
+| Chain ID | 4663 | 46630 |
+| RPC URL | `https://rpc.mainnet.chain.robinhood.com` | `https://rpc.testnet.chain.robinhood.com` |
+| Block Explorer | [robinhoodchain.blockscout.com](https://robinhoodchain.blockscout.com) | [explorer.testnet.chain.robinhood.com](https://explorer.testnet.chain.robinhood.com) |
+
+*We recommend deploying to testnet first. The steps below target mainnet — to deploy to testnet instead, use the testnet values above: set `RH_RPC_URL` to the testnet RPC, use chain ID 46630, and verify against `https://explorer.testnet.chain.robinhood.com/api/`.*
+
+*Security note: Never commit a real private key. Use an environment variable, and prefer a throwaway deployer key for testing.*
+
+## Deploy with Foundry
+
+### 1. Install Foundry
+
+If Foundry is already installed, skip this step. Run the installer and follow the prompts:
+
+```
+# Install foundryup
+curl -L https://foundry.paradigm.xyz | bash
+# Install forge, anvil, cast, and chisel
+foundryup
+```
+
+### 2. Create a project
+
+```
+# Initialize a new project
+mkdir rh-deploy && cd rh-deploy
+forge init
+```
+
+### 3. Create a contract
+
+Create `src/HelloRobinhood.sol` with the following content:
+
+```
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+contract HelloRobinhood {
+function hello() external pure returns (string memory) {
+return "Hello, Robinhood Chain!";
+}
+}
+```
+
+### 4. Deploy
+
+```
+# Set environment variables
+export PRIVATE_KEY=0x<your_private_key>
+export RH_RPC_URL=https://rpc.mainnet.chain.robinhood.com
+# Deploy contract
+forge create HelloRobinhood \
+--rpc-url $RH_RPC_URL \
+--private-key $PRIVATE_KEY \
+--broadcast
+```
+
+### 5. Verify on Block Explorer
+
+```
+# Verify the contract on Blockscout
+forge verify-contract <contract_address> \
+src/HelloRobinhood.sol:HelloRobinhood \
+--chain-id 4663 \
+--rpc-url $RH_RPC_URL \
+--verifier blockscout \
+--verifier-url https://robinhoodchain.blockscout.com/api/
+```
+
+After verification, view your contract at `https://robinhoodchain.blockscout.com/address/`.
+
+## Deploy with Hardhat
+
+### 1. Create a project
+
+Initialize your environment and Hardhat project:
+
+```
+# Initialize project and install Hardhat
+mkdir rh-deploy && cd rh-deploy
+npm init -y
+npm install --save-dev hardhat
+npx hardhat init
+```
+
+### 2. Configure Robinhood Chain
+
+Update `hardhat.config.js` with the network settings:
+
+```
+require("@nomicfoundation/hardhat-toolbox");
+module.exports = {
+solidity: "0.8.13",
+networks: {
+robinhood: {
+url: process.env.RH_RPC_URL,
+chainId: 4663,
+accounts: [process.env.PRIVATE_KEY],
+},
+},
+etherscan: {
+apiKey: { robinhood: "empty" },
+customChains: [
+{
+network: "robinhood",
+chainId: 4663,
+urls: {
+apiURL: "https://robinhoodchain.blockscout.com/api",
+browserURL: "https://robinhoodchain.blockscout.com/",
+},
+},
+],
+},
+};
+```
+
+Set your environment variables before proceeding:
+
+```
+export PRIVATE_KEY=0x<your_private_key>
+export RH_RPC_URL=https://rpc.mainnet.chain.robinhood.com
+```
+
+### 3. Create a contract
+
+Create `contracts/HelloRobinhood.sol`:
+
+```
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+contract HelloRobinhood {
+function hello() external pure returns (string memory) {
+return "Hello, Robinhood Chain!";
+}
+}
+```
+
+### 4. Compile and Deploy
+
+Create `scripts/deploy.js` and then execute the deployment command:
+
+```
+const hre = require("hardhat");
+async function main() {
+const contract = await hre.ethers.deployContract("HelloRobinhood");
+await contract.waitForDeployment();
+console.log("Deployed to:", await contract.getAddress());
+}
+main().catch((error) => {
+console.error(error);
+process.exitCode = 1;
+});
+```
+
+```
+# Compile and run deployment script
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network robinhood
+```
+
+### 5. Verify on Block Explorer
+
+```
+# Verify the contract on Blockscout
+npx hardhat verify --network robinhood <contract_address>
+```
+
+After verification, view your contract at `https://robinhoodchain.blockscout.com/address/`.

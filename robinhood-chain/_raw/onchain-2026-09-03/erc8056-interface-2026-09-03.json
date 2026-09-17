@@ -1,0 +1,87 @@
+{
+ "capturedAt": "2026-09-03T04:16:00Z",
+ "block": 53117114,
+ "token": "0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D",
+ "beacon": "0xe10B6f6B275De231345c20d14aB812DB62151B00",
+ "method": "Multicall3 aggregate3, allowFailure=false per call with try semantics",
+ "results": [
+  {
+   "call": "uiMultiplier()",
+   "selector": "0xa60bf13d",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+  },
+  {
+   "call": "newUIMultiplier()",
+   "selector": "0xdc767007",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+  },
+  {
+   "call": "effectiveAt()",
+   "selector": "0x97a4064f",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "call": "totalSupplyUI()",
+   "selector": "0x9bea6429",
+   "success": true,
+   "returnData": "0x00000000000000000000000000000000000000000000003d66d7c7e6477f0000"
+  },
+  {
+   "call": "oraclePaused()",
+   "selector": "0x7706ba52",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "call": "uid()",
+   "selector": "0xf514ce36",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000002c4d1ce31ec4310b2c507c921a52b70"
+  },
+  {
+   "call": "owner()",
+   "selector": "0x8da5cb5b",
+   "success": false,
+   "returnData": "0x"
+  },
+  {
+   "call": "version()",
+   "selector": "0x54fd4d50",
+   "success": false,
+   "returnData": "0x"
+  },
+  {
+   "call": "isin()",
+   "selector": "0x82d5a60d",
+   "success": false,
+   "returnData": "0x"
+  },
+  {
+   "call": "oracle()",
+   "selector": "0x7dc0d1d0",
+   "success": false,
+   "returnData": "0x"
+  },
+  {
+   "call": "balanceOfUI(address)",
+   "selector": "0x437a9958",
+   "success": true,
+   "returnData": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "call": "BEACON owner()",
+   "selector": "0x8da5cb5b",
+   "success": false,
+   "returnData": "0x"
+  },
+  {
+   "call": "BEACON implementation()",
+   "selector": "0x5c60da1b",
+   "success": true,
+   "returnData": "0x000000000000000000000000b35490d6f9163de4f80d88dc75c3516eb64c5ae2"
+  }
+ ]
+}

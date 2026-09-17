@@ -1,0 +1,47 @@
+# BLOCKSCOUT_API_KEY effect, 2026-09-03
+## instance API, no key
+HTTP/2 200 
+x-ratelimit-limit: 180
+x-ratelimit-remaining: 179
+x-ratelimit-reset: 11425
+## instance API, ?apikey= query param
+HTTP/2 200 
+x-ratelimit-limit: 180
+x-ratelimit-remaining: 178
+x-ratelimit-reset: 11319
+## instance API, Authorization: Bearer
+HTTP/2 200 
+x-ratelimit-limit: 180
+x-ratelimit-remaining: 177
+x-ratelimit-reset: 10686
+## instance v1 API, &apikey=
+HTTP/2 429 
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 2830595
+
+## v1 route retry
+HTTP/2 429 
+x-ratelimit-limit: 10
+x-ratelimit-remaining: 0
+x-ratelimit-reset: 2812811
+## PRO API host probes with proapi_ key
+404  https://api.blockscout.com/api/v2/config/backend-version  ->  {"error":"Network not supported","source":"internal"}
+200  https://api.blockscout.com/4663/api/v2/config/backend-version  ->  {"backend_version":"v11.2.8.+commit.e889cab0"}
+404  https://api.blockscout.com/chains  ->  {"error":"Network not supported","source":"internal"}
+404  https://api.blockscout.com/api/v2/chains  ->  {"error":"Network not supported","source":"internal"}
+200  https://chains.blockscout.com/api/chains/4663  ->  {"name":"Robinhood Chain","description":"Robinhood Chain is a permissionless Layer 2 blockchain built for financial services and tokenized real-world assets.","
+
+## PRO API: key vs no key, no browser UA at all
+-- with key, default curl UA --
+HTTP/2 200 
+x-ratelimit-limit: 5
+x-ratelimit-remaining: 4
+x-ratelimit-reset: 343
+x-credits-remaining: 99960
+-- NO key, default curl UA --
+402 {"error":"Proceed with API key or make a X402 payment to continue"}
+-- with key: smart-contracts and v1 getsourcecode --
+200  https://api.blockscout.com/4663/api/v2/smart-contracts/0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D  bytes=   38494
+200  https://api.blockscout.com/4663/api/v2/addresses/0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D  bytes=    1269
+200  https://api.blockscout.com/4663/api?module=contract&action=getsourcecode&address=0x1Cdad396DB64BDa184d5182A97Dd9B3C62100b7D  bytes=   34482

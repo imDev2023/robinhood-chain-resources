@@ -1,0 +1,157 @@
+-
+
+Home
+
+-
+
+Trade
+
+-
+
+Create
+
+-
+
+Docs
+
+create
+
+log in
+
+# Terms of Service
+
+Last updated: February 11, 2026
+
+## 1. Introduction
+
+These Terms of Use (these "Terms" or this "Agreement") are a contract between you and Bags Holdings, Inc. ("Bags," "we," "our," or "us") and governs your access to and use of the Bags mobile application (the "Bags App"), the Bags website located at https://bags.fm and all related components (the "Site"), and other online software applications, features, products, and services provided by Bags (collectively, the "Services").
+
+By accessing or using any portion of the Services, or, if earlier, by clicking on an "I Agree" button or check box presented with these Terms, you agree to comply with and be bound by these Terms and any materials expressly incorporated herein, including our Privacy Policy, Bags Reward Program Agreement, and User Guidelines.
+
+IMPORTANT: THESE TERMS INCLUDE A WAIVER OF ANY RIGHT TO PARTICIPATE IN A CLASS ACTION, AS WELL AS A MANDATORY ARBITRATION CLAUSE THAT GOVERNS RESOLUTION OF CERTAIN DISPUTES AND WAIVES YOUR RIGHT TO SUE IN COURT OR HAVE A TRIAL BY JURY. PLEASE READ SECTION 22 CAREFULLY.
+
+## 2. Amendments to this Agreement
+
+Bags reserves the right to amend this Agreement or other policies that govern the Services from time to time and in our sole discretion. Any changes will be effective immediately upon posting of the revisions, and you waive any right you may have to receive specific notices of such changes or modifications. By continuing to use the Services after any changes to this Agreement are posted to the Site, you agree to be bound by those changes. If you do not agree to the changes, you may stop using the Services.
+
+## 3. Description of the Services
+
+The Bags App and Site are the interfaces that allow you to use and interact with the Services. Some of these services may not be available to you depending on your jurisdiction or for other reasons.
+
+### 3.1 Service Features
+
+The Services include a suite of tools that enable users to send messages to other users and verify authentic engagement within the Services. The Services also includes information related to third party products and services ("Content"), in particular but not limited to cryptographic tokens, digital currencies, cryptocurrencies, and virtual currencies (collectively, "Digital Assets").
+
+### 3.2 Unhosted Wallet Application
+
+Bags makes available to users an unhosted wallet application ("Non-Custodial Wallet"). The Non-Custodial Wallet enables users to (a) store locally on their own devices, Digital Assets; (b) link to decentralized applications; (c) from the Bags App or Site user interface, transact Digital Assets; (d) view addresses and information that are part of blockchain networks and broadcast transactions. We will not create any hosted wallet for you or otherwise custody Digital Assets on your behalf, and it is your responsibility to maintain the security of your Non-Custodial Wallet.
+
+### 3.3 Rewards Program
+
+Bags may offer, from time to time, an incentive program via the Bags App, the Site, and such other channels as Bags may make available from time to time (collectively, the "Rewards Program"). The Rewards Program may allow users who undertake certain activities within the Services to get rewarded with virtual incentives.
+
+### 3.4 Referral Program
+
+Bags may, from time to time, allow you to earn Bags Points in connection with taking actions to promote the Services, including by referring a friend to the Service ("Referral Program"). To be eligible to earn points through the Referral Program: (a) you must refer a new user to the Services by providing your personalized link; (b) the new user must use your link to create a user account; and (c) the new user must complete specified activities on the Bags App or Site.
+
+## 4. Your Account
+
+### 4.1 Eligibility
+
+If you are an individual, you represent and warrant that you are at least 18 years old, capable of forming a binding contract with Bags in your respective jurisdiction, and not a Restricted Party as defined in Subsection 4.2 below.
+
+### 4.2 Restricted Parties
+
+In connection with the Services, you represent and warrant that you will comply with all applicable laws including but not limited to export restrictions, end-user restrictions, antiterrorism laws, anti-money laundering laws, and economic sanctions. You are not permitted to use the Services if doing so would violate any applicable Sanctions Laws.
+
+### 4.3 Registration
+
+You may be required to provide us directly, or through a third party, with certain information and documentation. You represent and warrant that any information and documentation that you provide to us is complete and accurate.
+
+## 5. Third Party Smart Contracts, Services, and Applications
+
+We do not own or control the underlying software protocols which govern the operation of Digital Assets. By using the Services, you acknowledge and agree that we are not responsible for operation of the underlying protocols and that we make no guarantee of their functionality, security, or availability.
+
+## 6. Risk Disclosures
+
+You understand, accept, and agree to assume all of the various risks involved in using, holding, transacting, and transferring Digital Assets and the use of the Services, including but not limited to:
+
+- Digital Assets may be complex, and terms, features, or risks may not be readily or fully understood due to the complex structure, novelty, and reliance on technological features.
+
+- Any Digital Asset may be lost if sent to the wrong address.
+
+- Digital Assets may be subject to forks or attacks on the security, integrity, and/or operation of the networks.
+
+- Any Digital Asset may decrease in value or lose all value in a short period of time or permanently due to various factors outside of our control.
+
+- Digital Assets held by a decentralized application or a wallet software provider may not be protected deposits and may not be protected by any deposit protection scheme.
+
+- Digital Assets are generally considered a high-risk asset class. You must exercise prudent judgment when transacting Digital Assets.
+
+## 7. General User Acknowledgements and Covenants
+
+By accessing or using the Services, you acknowledge, represent, and warrant that you have received, carefully read, understand, accept, and agree to assume all of the various risks involved in using the Services, including those set forth in Section 6.
+
+## 8. Prohibited Uses
+
+You may not use the Services to engage in the following categories of activity:
+
+- Unlawful Activity. Activity which would violate any law, statute, ordinance, or regulation.
+
+- Abusive of Others. Interfere with another individual's access to or use of the Services.
+
+- Fraud. Activity which operates to deceive or defraud Bags, any users or any other person.
+
+- Gambling. Lotteries, bidding fee auctions, sports forecasting, internet gaming, contests, sweepstakes, games of chance.
+
+- Abusive Activity. Activity that damages the reputation of Bags or impairs any of our legal rights or interests.
+
+- Intellectual Property Infringement. Violate the legal rights of others or contain any material that could give rise to civil or criminal liability.
+
+## 9. Changes, Suspension, and Termination
+
+Bags may, at its discretion and without liability to you, with or without prior notice and at any time, modify, discontinue, temporarily, or permanently, all or any portion of the Services.
+
+## 10. Intellectual Property Rights
+
+The Services and its entire contents, features, and functionality are owned by Bags ("Bags Materials"), its licensors, or other providers of such material and are protected by applicable copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.
+
+## 11. Site Content
+
+We do not warrant the accuracy, completeness, or usefulness of any materials or information that we or a third party present on or through the Services. Any information posted to the Services should not be construed as an intention to form a contract, and in no case should any information be construed as our offer to buy, sell, exchange, or otherwise transact Digital Assets.
+
+## 12–18. Additional Terms
+
+Sections 12 through 18 cover interactions with other users, promotions, feedback, relationship of the parties, charges and fees, user guidelines, and general service terms including wallet software, smart contract transactions, and taxes. Please contact us at support@bags.fm for the full text of these sections.
+
+## 19. Warranty Disclaimer
+
+THE SITE, BAGS APP, SERVICES, BAGS MATERIALS, AND ANY PRODUCT, SERVICE OR OTHER ITEM PROVIDED BY OR ON BEHALF OF BAGS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. TO THE FULLEST EXTENT LEGALLY PERMISSIBLE, BAGS EXPLICITLY DISCLAIMS ANY AND ALL REPRESENTATIONS OR WARRANTIES OF ANY KIND WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING THE WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE.
+
+## 20. Indemnification
+
+You agree to defend, indemnify, and hold harmless Bags, its affiliates, licensors, and service providers from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees arising out of or relating to your violation of these Terms or your use of the Services.
+
+## 21. Limitation of Liability
+
+TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL BAGS BE LIABLE FOR DAMAGES OF ANY KIND ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE THE SERVICES. THE COLLECTIVE LIABILITY OF BAGS SHALL NOT EXCEED THE GREATER OF $100 OR THE AMOUNT YOU HAVE PAID DIRECTLY TO BAGS IN THE LAST SIX MONTHS.
+
+## 22. Dispute Resolution, Waiver of Class Action, and Mandatory Arbitration
+
+IMPORTANT: ANY CLAIMS MUST BE BROUGHT IN YOUR INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PUTATIVE CLASS, COLLECTIVE ACTION, OR REPRESENTATIVE PROCEEDING. YOU AGREE THAT, BY ENTERING INTO THIS AGREEMENT, YOU ARE WAIVING THE RIGHT TO A TRIAL BY JURY AND THE RIGHT TO PARTICIPATE IN A CLASS ACTION.
+
+Before filing a claim against Bags, you agree to try to resolve the Dispute by first emailing us with a description of your claim. All Disputes must be resolved by final and binding arbitration conducted by the International Chamber of Commerce (ICC) under its Commercial Arbitration Rules. Any in-person arbitration shall be held in Los Angeles, California.
+
+## 23. Governing Law
+
+This Agreement shall be governed by, and construed and enforced in accordance with, the laws of the State of Delaware. The federal and state courts located in Delaware will have exclusive jurisdiction.
+
+## 24. Miscellaneous Terms
+
+These Terms constitute the entire agreement and understanding between you and Bags as to the subject matter hereof, and supersede any and all prior discussions, agreements, and understandings of any kind.
+
+Bags is not a broker-dealer or investment adviser. Nothing in this website shall constitute an offer to buy or solicitation of an offer to sell any security, cryptocurrency, product, or strategy. All investments involve risk, including loss of principal. You should consult your business advisor, attorney, or tax and accounting advisor regarding your specific situation.
+
+© 2026 Bags Holdings, Inc.
+
+AboutContactTermsDocsDiscordSupport

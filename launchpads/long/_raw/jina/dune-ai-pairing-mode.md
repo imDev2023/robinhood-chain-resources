@@ -1,0 +1,57 @@
+Title: AI Pairing Mode on LONG | Dune
+
+URL Source: https://dune.com/natan_benish2001/ai-pairing-mode-on-long
+
+Markdown Content:
+[Skip to content](https://dune.com/natan_benish2001/ai-pairing-mode-on-long#skip-nav)
+
+[](https://dune.com/)
+
+*   [Search](https://dune.com/search)
+*   [Catalog](https://dune.com/data)
+
+*   [Queries](https://dune.com/workspace/queries)
+*   [Dashboards](https://dune.com/workspace/dashboards)
+*   [Favorites](https://dune.com/discover/content/favorites)
+*   [Folders](https://dune.com/workspace/folders/creations)
+*   [Data uploads](https://dune.com/workspace/data)
+*   [Materialized views](https://dune.com/workspace/materialized-views)
+*   [Contracts](https://dune.com/workspace/contracts)
+
+*   [Activity](https://dune.com/workspace/activity)
+*   [Schedules](https://dune.com/workspace/schedules)
+*   [Alerts](https://dune.com/workspace/alerts)
+
+*   [Dune APIs](https://dune.com/workspace/apis)
+*   [MCP & CLI](https://dune.com/workspace/mcp)
+*   [API keys](https://dune.com/workspace/api-keys)
+*   [Connectors](https://dune.com/workspace/connectors)
+
+*   [Docs](https://docs.dune.com/)
+*   [Upgrade plan](https://dune.com/pricing?ref=nav)
+
+*   [](https://dune.com/)
+
+Loading
+
+Links/Buttons:
+- [Skip to content](https://dune.com/natan_benish2001/ai-pairing-mode-on-long#skip-nav)
+- [](https://dune.com/)
+- [Search](https://dune.com/search)
+- [Catalog](https://dune.com/data)
+- [Queries](https://dune.com/workspace/queries)
+- [Dashboards](https://dune.com/workspace/dashboards)
+- [Favorites](https://dune.com/discover/content/favorites)
+- [Folders](https://dune.com/workspace/folders/creations)
+- [Data uploads](https://dune.com/workspace/data)
+- [Materialized views](https://dune.com/workspace/materialized-views)
+- [Contracts](https://dune.com/workspace/contracts)
+- [Activity](https://dune.com/workspace/activity)
+- [Schedules](https://dune.com/workspace/schedules)
+- [Alerts](https://dune.com/workspace/alerts)
+- [Dune APIs](https://dune.com/workspace/apis)
+- [MCP & CLI](https://dune.com/workspace/mcp)
+- [API keys](https://dune.com/workspace/api-keys)
+- [Connectors](https://dune.com/workspace/connectors)
+- [Docs](https://docs.dune.com/)
+- [Upgrade plan](https://dune.com/pricing?ref=nav)

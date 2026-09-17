@@ -1,0 +1,124 @@
+<!-- source: https://developers.uniswap.org/docs/protocols/v4/guides/managing-liquidity/decrease-liquidity | captured: 2026-08-22 | via: https://developers.uniswap.org/docs/protocols/v4/guides/managing-liquidity/decrease-liquidity.md (native markdown) -->
+# Decrease Liquidity (/docs/protocols/v4/guides/managing-liquidity/decrease-liquidity)
+
+Decrease an existing Uniswap v4 position by encoding PositionManager actions and calling `modifyLiquidities()`.
+
+## Context
+Please note that `PositionManager` is a command-based contract, where integrators will be encoding commands and their corresponding
+parameters.
+
+Decreasing liquidity assumes the position already exists and the user wants to remove tokens from the position.
+
+## Setup
+See the [setup guide](/docs/protocols/v4/guides/managing-liquidity/getting-started)
+
+## Guide
+Below is a step-by-step guide for decreasing a position's liquidity, in *solidity*.
+
+## 1. Import and define IPositionManager
+```solidity
+import {IPositionManager} from "v4-periphery/src/interfaces/IPositionManager.sol";
+
+// inside a contract, test, or foundry script:
+IPositionManager posm = IPositionManager(<address>);
+```
+
+## 2. Encode actions
+To decrease a position's liquidity, the first action must be:
+
+* *decrease* operation - the subtraction of liquidity to an existing position.
+
+For *delta resolving* operations, developers may need to choose between `TAKE_PAIR`, `CLOSE_CURRENCY`, or `CLEAR_OR_TAKE` actions.
+
+> In Uniswap v4, fee revenue is automatically debited to a position on decreasing liquidity
+
+If decreasing the liquidity requires the transfer of both tokens:
+
+* *take pair* - receives a pair of tokens, to decrease liquidity
+
+Otherwise:
+
+* *clear or take* - if the token amount to-be-collected is below a threshold, opt to forfeit the dust. Otherwise, claim the tokens
+
+```solidity
+import {Actions} from "v4-periphery/src/libraries/Actions.sol";
+```
+
+If both tokens need to be sent:
+
+```solidity
+bytes memory actions = abi.encodePacked(uint8(Actions.DECREASE_LIQUIDITY), uint8(Actions.TAKE_PAIR));
+```
+
+If converting fees to liquidity, forfeiting dust:
+
+```solidity
+bytes memory actions = abi.encodePacked(uint8(Actions.DECREASE_LIQUIDITY), uint8(Actions.CLEAR_OR_TAKE), uint8(Actions.CLEAR_OR_TAKE));
+```
+
+## 3. Encoded parameters
+When taking pair:
+
+```solidity
+bytes[] memory params = new bytes[](2);
+```
+
+Otherwise:
+
+```solidity
+bytes[] memory params = new bytes[](3);
+```
+
+The `DECREASE_LIQUIDITY` action requires the following parameters:
+
+| Parameter    | Type      | Description                                                                |
+| ------------ | --------- | -------------------------------------------------------------------------- |
+| `tokenId`    | *uint256* | position identifier                                                        |
+| `liquidity`  | *uint256* | the amount of liquidity to remove                                          |
+| `amount0Min` | *uint128* | the minimum amount of currency0 liquidity msg.sender is willing to receive |
+| `amount1Min` | *uint128* | the minimum amount of currency1 liquidity msg.sender is willing to receive |
+| `hookData`   | *bytes*   | arbitrary data that will be forwarded to hook functions                    |
+
+```solidity
+params[0] = abi.encode(tokenId, liquidity, amount0Min, amount1Min, hookData);
+```
+
+The `TAKE_PAIR` action requires the following parameters:
+
+* `currency0` - *Currency*, one of the tokens to be received
+* `currency1` - *Currency*, the other token to be received
+* `recipient` - *Recipient*, the recipient to receive the tokens
+
+In the above case, the parameter encoding is:
+
+```solidity
+Currency currency0 = Currency.wrap(<tokenAddress1>); // tokenAddress1 = 0 for native ETH
+Currency currency1 = Currency.wrap(<tokenAddress2>);
+params[1] = abi.encode(currency0, currency1, recipient);
+```
+
+The `CLEAR_OR_TAKE` action requires one `currency` and:
+
+* `amountMax` - *uint256*, the maximum threshold to concede dust,
+  otherwise taking the dust.
+
+In this case, the parameter encoding is:
+
+```solidity
+params[1] = abi.encode(currency0, amount0Max);
+params[2] = abi.encode(currency1, amount1Max);
+```
+
+## 4. Submit call
+The entrypoint for all liquidity operations is `modifyLiquidities()`.
+
+```solidity
+uint256 deadline = block.timestamp + 60;
+
+uint256 valueToPass = currency0.isAddressZero() ? amount0Max : 0;
+
+posm.modifyLiquidities{value: valueToPass}(
+    abi.encode(actions, params),
+    deadline
+);
+```

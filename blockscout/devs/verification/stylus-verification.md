@@ -1,0 +1,43 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Stylus Verification
+
+> Verify Arbitrum Stylus smart contracts located in public GitHub repositories using the Blockscout verification API and Stylus verifier endpoint.
+
+<Note>
+  The original article appeared in the [Stylus Saturdays blog](https://stylus-saturdays.com/p/how-to-verify-your-stylus-contracts)
+</Note>
+
+## **How to verify your Stylus contracts using Blockscout's API**
+
+We support verifying Stylus contracts located in public GitHub repositories. The swagger file for our API endpoint to request the verification can be found [<u>here</u>](https://app.swaggerhub.com/apis/blockscout-f58/stylus-verifier/v1#/StylusSdkRsVerifier/StylusSdkRsVerifier_VerifyGithubRepository). The endpoint accepts the following fields: `deployment_transaction`, `rpc_endpoint`, `cargo_stylus_version`, `repository_url`, `commit`, and `path_prefix`
+
+<Info>
+  Stylus verification runs against a specific chain's own verifier service — it isn't part of the multichain PRO API. Call it directly against your target chain's own Blockscout instance, the same way the example below queries `arbitrum.blockscout.com` for Arbitrum One. Swap the host for whichever chain your contract is deployed on.
+</Info>
+
+The `path_prefix` is required so that repositories with several contract crates inside can be used. The repository [<u>https://github.com/blockscout/cargo-stylus-test-examples</u>](https://github.com/blockscout/cargo-stylus-test-examples) contains some great examples.
+
+When a user visits the verification UI, they provide the `cargo_stylus_version`, `repository_url`, `commit`, and `path_prefix` values. These values, along with the address of the contract being verified, are sent to an Elixir backend. The backend retrieves the `deployment_transaction` from the internal database, and sends the data it collected so far, and the `rpc_endpoint`, to a separate verification service.
+
+The service validates the repository, clones the repo the user provided, and checks out the commit hash. If `path_prefix` is provided, it enters the corresponding `prefix`, which is calculated relative to the repository root directory.
+
+Stylus requires the Rust toolchain version to be specified in a `rust-toolchain.toml` file. The file has to be located inside the working directory.
+
+For verification, Blockscout uses the command `cargo stylus verify --no-verify --endpoint {rpc_endpoint} --deployment-tx {deployment_transaction}`.
+
+We opt out of running verification inside in-stylus docker container by adding the `--no-verify` flag. We opt out because `cargo-stylus` requires the docker daemon to be run locally, but we would like to run the service and docker daemon on different machines. We implemented our own docker container startup process which allows us to run containers on the remote docker daemon.
+
+`cargo stylus verify` prints the result into console. We parse the `stdout` and look for the line: "`Verified - contract matches local project's file hashes`". If found, the verification is considered successful, otherwise the verification fails.
+
+If successful, we also attempt to retrieve the contract ABI as it is not returned by the verify command. To get the ABI, we run the `cargo stylus export-abi` command, and parse its result. It prints the ABIs of all included contracts, and the verified contract ABI is printed as the last one. The name of this ABI is also used as a contract name inside a response.
+
+If you need the code, the main function is implemented here: [<u>https://github.com/blockscout/blockscout-rs/blob/main/stylus-verifier/stylus-verifier-logic/src/stylus\_sdk\_rs.rs#L76</u>](https://github.com/blockscout/blockscout-rs/blob/main/stylus-verifier/stylus-verifier-logic/src/stylus_sdk_rs.rs#L76)
+
+An example of making a request to the Blockscout API for verification (Arbitrum One shown here — swap `arbitrum.blockscout.com` for your target chain's own instance):
+
+```bash theme={null}
+curl 'https://arbitrum.blockscout.com/api/v2/smart-contracts/<address_hash>/verification/via/stylus-github-repository' -H 'Content-type: application/json' -d '{"cargo_stylus_version":"v0.5.6","repository_url":"https://github.com/OffchainLabs/stylus-erc20","commit":"d109002ffff3df7589cbbc92f8f104567a84f085","path_prefix":"","license_type":"none"}'
+```

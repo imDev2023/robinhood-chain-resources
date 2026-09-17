@@ -1,0 +1,23 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Blockscout Deployment Methods and Options
+
+> Deploy Blockscout with Autoscout, manual setup, Docker Compose, Kubernetes, Kurtosis, Terraform, or Ansible, including microservices and frontend.
+
+<Tip>
+  🚗 [Autoscout is now available](/using-blockscout/autoscout), providing a simple one-click explorer deployment with Blockscout's optimized hosting infrastructure. Use it for early testing, modifications, and launching a full production-grade explorer. [**Get Started Now**](/using-blockscout/autoscout) **and have your explorer up-and-running in minutes.**
+</Tip>
+
+There are several methods available for deploying Blockscout and associated services (stats, admin etc).
+
+* [Autoscout Deployment](/using-blockscout/autoscout): Use the Blockscout launchpad to deploy an instance in 5 minutes using Blockscout's infrastructure
+* [Manual Deployment](/setup/deployment/manual-deployment-guide): Includes instructions for deploying Blockscout with the current frontend and all microservices.
+* [Kurtosis Deployment](https://github.com/0xBloctopus/blockscout-package): Plug-and-play explorer bundle by [Bloctopus.io](http://Bloctopus.io) to deploy Blockscout services within any Kurtosis environment, supporting EVM, OP, or standalone stacks
+* [Docker-compose Deployment](/setup/deployment/docker-compose-deployment): Includes current frontend and all microservices
+* [Kubernetes Deployment](/setup/deployment/kubernetes-deployment): Includes current frontend and all microservices
+* [Manual Deployment](/setup/deployment/manual-old-ui) with backend and **old Blockscout UI (no longer supported)**
+* [Frontend migration](/setup/deployment/frontend-migration) (migrating from the previous Blockscout UI to the new UI)
+* [Terraform Deployment](/setup/deployment/terraform-deployment) (Polygon Supernets)
+* [Ansible Deployment](/setup/deployment/ansible-deployment) (old UI)

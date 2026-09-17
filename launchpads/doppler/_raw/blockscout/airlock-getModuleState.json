@@ -1,0 +1,818 @@
+[
+ {
+  "address": "0xeb7c034704ef8dcd2d32324c1545f62fb4ad0862",
+  "source": "docs:Airlock",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xf45588e8e0b1df9db9ae7e20ece5726ae931357c",
+  "source": "docs:Bundler",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x37a9fa204a4d3a429fded7e3469ab076c854bc9d",
+  "source": "docs:DN404Factory",
+  "state": 1,
+  "stateName": "TokenFactory"
+ },
+ {
+  "address": "0x103004e50bed65dfba30dd9c264b6bdf5e529b83",
+  "source": "docs:DopplerCreateXDeployer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4389ad34938b14f25cff7ed983c53f5a42a2573f",
+  "source": "docs:DopplerDeployer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x3be8b97fd0e713b5abe0649fa830223b6b4bc599",
+  "source": "docs:DopplerERC20V1",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x1b37d3a72082029c44b35b604ea473617580b69a",
+  "source": "docs:DopplerERC20V1Factory",
+  "state": 1,
+  "stateName": "TokenFactory"
+ },
+ {
+  "address": "0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544",
+  "source": "docs:DopplerHookInitializer",
+  "state": 3,
+  "stateName": "PoolInitializer"
+ },
+ {
+  "address": "0x7bf319d8e969f7596b1bc171da9ce322f67ae0c4",
+  "source": "docs:DopplerHookMigrator",
+  "state": 4,
+  "stateName": "LiquidityMigrator"
+ },
+ {
+  "address": "0xf4c22465532f64777ffcd7770831aeca38f35c04",
+  "source": "docs:DopplerLensQuoter",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xdeb0447dae3eb177c4dba8bbccca25c8f273b7ef",
+  "source": "docs:GovernanceFactory",
+  "state": 2,
+  "stateName": "GovernanceFactory"
+ },
+ {
+  "address": "0xdb036746d65dd52126b1915f1adf555e6c5237cf",
+  "source": "docs:LaunchpadGovernanceFactory",
+  "state": 2,
+  "stateName": "GovernanceFactory"
+ },
+ {
+  "address": "0xde8886a0019ea060b8378ee37b8a23b8117f29a3",
+  "source": "docs:LockableUniswapV3Initializer",
+  "state": 3,
+  "stateName": "PoolInitializer"
+ },
+ {
+  "address": "0x85f37f74ef2478a770318bc810177a9835911ad7",
+  "source": "docs:NoOpGovernanceFactory",
+  "state": 2,
+  "stateName": "GovernanceFactory"
+ },
+ {
+  "address": "0xba2f330edb16cd8056f5988d8ce19bbc63475a0e",
+  "source": "docs:NoOpMigrator",
+  "state": 4,
+  "stateName": "LiquidityMigrator"
+ },
+ {
+  "address": "0xce6cd4e35447e05a39a50a4bcf61f2dcd93a8f0d",
+  "source": "docs:Quoter",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x5f9eb5f6726fe88d5e39867967f5b833d2fa3215",
+  "source": "docs:RehypeDopplerHookInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x660740d7d6fb2c8998fa3fff459cceb9ac12c84b",
+  "source": "docs:RehypeDopplerHookMigrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x7b6147ac3f615bdb764e7ebd5f517dac1ad163b8",
+  "source": "docs:StreamableFeesLockerV2",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xc16c826f75338a5ea626f94f8992191b4ce5aba2",
+  "source": "docs:SwapRestrictorDopplerHook",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6076fddfcac0dd980e0350dff5239fec3f86c578",
+  "source": "docs:TimelockFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x46adee7595d48b1ec53090e9bc78e1e69fa0ef06",
+  "source": "docs:TopUpDistributor",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x63f6efe03f25a8c6650b38d05c5a454051d642a5",
+  "source": "docs:UniswapV2Locker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xb05046cea797c993fb5b583098b1c4682e9da333",
+  "source": "docs:UniswapV2MigratorSplit",
+  "state": 4,
+  "stateName": "LiquidityMigrator"
+ },
+ {
+  "address": "0x6cce158b6d1747617fc218592b4d60b239b957ea",
+  "source": "docs:UniswapV4Initializer",
+  "state": 3,
+  "stateName": "PoolInitializer"
+ },
+ {
+  "address": "0xce8ca5040a76999a1c3dae944ed3ec04deb894e5",
+  "source": "search:DegenV4Bundler",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xede0b5fae363232c396724fa962250fa197cc5a1",
+  "source": "search:Bundler",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xbd54a9e1d2249185a27af097abaa930631ec45c5",
+  "source": "search:RehypeDopplerHookInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x975f9d1939cf6e4a3c9d99f9d41e6411cf4da23b",
+  "source": "search:RehypeDopplerHookMigrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x9982538f41f2ae29ddb9d3d9307010052984fdbb",
+  "source": "search:RehypeDopplerHookInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x1a0f286bb7f5967ae89c13d3425d5ce04c34cd27",
+  "source": "search:RehypeDopplerHookMigrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "source": "search:RehypeDopplerHookInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6232e26bea0283d15dfde673ada0cc993bc7b90f",
+  "source": "search:RamenLiquidityLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x29d53c7f408f8537d96c5ae0c115512d6dd6ecbb",
+  "source": "search:V4SingleSidedLockerFeeTo",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0df65905183a4eb853c5b6abc593f94ce2857351",
+  "source": "search:LpLockerV3",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x123c6f36756acddea8974235f73a9c8d98a755c4",
+  "source": "search:V4SingleSidedLockerFeeTo",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x9404ab616d8f8a0d7896108919f47de49234f1c3",
+  "source": "search:LeopoldLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x485690d46e344127aa2eb45d8d9bacbb5856d58b",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4c35c69be81f01a10b600c719d2dd6c568a46f6a",
+  "source": "search:APELocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xe0037af63db9e59986ae2e7efca420e2888221cb",
+  "source": "search:PopLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xfe8ee24d4de572e7e0e6d646d9f4b08173961588",
+  "source": "search:Locker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xee6cdca11ce8d9112d4fab804fc9af0f5ea51564",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0a744dfe64a22a1e65d9c2ec2df3f3f7263cf21e",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xc26198a9dad770d4371e9f491f4ff21d97e2c8ff",
+  "source": "search:LpLockerV4",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xec161c60960606ffd7c6550e1fe80b31ff4a7efb",
+  "source": "search:V4SingleSidedLockerFeeTo",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xcf26557a0c6bab0350f39f3813a713c4584fb22b",
+  "source": "search:V4SingleSidedLockerFeeTo",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xe65fec54913028a8b8e13c636af66e80b895b30b",
+  "source": "search:V4SingleSidedLockerFeeTo",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x7d0ed0d43157d97c82dc9c7606295c86cfac72f0",
+  "source": "search:RobinFunFiV2LaunchLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x1012ef276317a25c9ddea54a971cb946c1e5a575",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x58f5de3c99c0c057a6009ac11fa06db21cd7635b",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6ef61a37278cc1e8cf8cd3109ffc607905ef7262",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xb206f68a077ac3087b5307a6f265cc9fb9aa720d",
+  "source": "search:LaunchpadFeeLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa0d4fa31740fa0d8fc6b5b4173da17864eb6e888",
+  "source": "search:AbyssPositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x5a1102b701a5ca7d1f2c7050ab130df4a38aa2a7",
+  "source": "search:LpLockerV4",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x08120ac2b010df49e5376f0558fc765f16a22672",
+  "source": "search:AurnLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x5fc6add062329742efefa9c4b11c355aae02fa1e",
+  "source": "search:BootstrapLockerV1",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x142bdcea01338386bcfde53a019c50de9496a129",
+  "source": "search:StrategyLiquidityLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x72d4f7ef827eb3de953450b10c1458560e123504",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x517877e982ca51573308208187379b00c63c5a1f",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x7af726af8a08c651e128759ba466b5ffc13eaa7d",
+  "source": "search:PositionLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x08a9cbdc6c759bb8b3df87fb08eac434de47852d",
+  "source": "search:StonkBrokerMigrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x205e13e6ec07baa4ed1c57d677de9fee1c88cd6d",
+  "source": "search:QuotronMigrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xc309f5bbb451ee9b9642ba28855bae568a967054",
+  "source": "search:UniswapV3Migrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4ae320a3acbdaca48057bca18918b73f63ac0bc3",
+  "source": "search:GazzV4Migrator",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x05ffcf79fb5c603150e0e2d8f6eef76c047d4d62",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x09e394d8b259b836e634e3d10b8c638f5adea460",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x00d72433f6e0ef22fa8f864234935d202c342adb",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x3218fa1a96cf39d4021a5d2d303ec75dd6509369",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0ac25dd747d7741f4117805ade80210aec52bee5",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0a087e4d46ee030ce3c1b1b813bcaecf025a26aa",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x07cfddb42f2b013d925c01b405474550983ce628",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x08c6ccdfa43c8a0b71a4ea50fd092d780c553de1",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x07869b96b6eed9d09b61d61484d9175b9b6a702e",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4af3a309fd64195e4df3b8e5f2a3c0f3ab35b418",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0396f7b50a8e1e10e77159672e2abd0547302ae8",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0683dce690ed2a395fcab452be321967fc51e70b",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x03de7165e18f14ae9e3fd5e6b75b82f5b3c023d9",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x01c1f35f9463c39ea9169334a64c0ed3a340ac85",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x051b6d0eaddd14c38d0c35d6e9cae28e1366c9d3",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x07f455ab170048ef1a5fd8cdae96e41d6e6e2b58",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0159b3882efdde049823c83e85fae7d8f0e266ff",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x044ee5584992a8250d77becc74d14e8783419254",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x00021b6533ffa19c8d1ed72c46a1bbf15f52e71c",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x023b5a1143bb6d69c609754ae0bf4e0607a2d0da",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0840ed93085fb354740870611510672840534851",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x13cec6570ca87294cc161659048127bc0018ac39",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x088339cf03238d4f53ee10edff6947ea96816e21",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x3f298f2b7306bf9a9e7177ca461c58c4c2fdfa4c",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xf79bfc61ed105cab7eb6e418408d70b3d56f36ac",
+  "source": "search:DopplerLaunchSettler",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x062939bb32eabd47a522fe48872f41e04017a095",
+  "source": "search:DopplerDN404",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa4ca892f6d9aa8937c0a358f945af70037045716",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6946f4c2ed3af8b1acb272f9925d23756295e8cc",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x96f59f793029300c1dd0ae3ec84bf3233271a3b6",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x3a5ec46fa7e40790fef9f4a7540d57a289c7e8cc",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x45c9acfa18565b2d19dfeae794cdb38971530b7d",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x21300c843ad6537fe0a8e6ed76f52ee240bca8cc",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x87ebe9feee204719627033aeca9201d74749f42a",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa88caa44590874b27193da6eaddb545e7f7be8cc",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xdc2296319cea9827fa0ba2845e8b0bcd7f421f8a",
+  "source": "search:PairLocker",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x417ce83babc5f044692e64a30e79cb4b37fc66b2",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xbcf9df67a971652d0dae1cb3c2d36297168ca088",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa3f5d1824116242b32d30569f2d1c31f84b55706",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x3159c10004d82593ac82ce2a15843442376d2088",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4ef0964ab0abb1e27e8b08d2b9b4968c778af651",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa9b4f53fbbcaeeb3ba22700bd13c811279d9dd93",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa37f471f2504d60a5cb320952ab20fd762b70c2d",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x65c0ce5b05dc2820f6b4700438ae542ebcda3841",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xad180b4ed95251dfe17330187756c0582d6b4938",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x2c6da434170cde3c95dcc5f2b1f42095ecb88fa0",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6785bb1dadcb5244467bf81103b8ad03c8ce558f",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xb0847ce58c035c760bcd035f89891fd8c9eb3108",
+  "source": "search:AirlockToken",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6215f027cd66410c3a0cb5548036698e8b7cf1dd",
+  "source": "search:AirlockLaunchpad",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xa16dd7a4ece0aa7f165f044199935db4e2498088",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x7b95238ed71cfe3546a466ea9f37c78bb2a0c088",
+  "source": "search:AirlockGate",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x9c88f06b72fcd3cedbef3be7521ee5abd72d0845",
+  "source": "search:TickerAirlockFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xaecc88b7419c3a840cd683ba85d5c1c59a7d27c5",
+  "source": "search:MultiPoolsTokenFactoryV2",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x1ce56417de2154c54d5d12c770cca1013e046fde",
+  "source": "search:TokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x7b6abff2b8969ca7fd90fa016d0c06e4a0615c41",
+  "source": "search:TokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xf5a63f2e22b6a55f87d6def1a4f5b040e31b4bd3",
+  "source": "search:FloorTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x51c1792e080820754d6b90bac5ef8fee43c958df",
+  "source": "search:LotteryTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x6a742fef2a8386fe61f827704131e806b643af67",
+  "source": "search:StakeTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x0ba82f2d61316c8d8a94794ef45b96be6dae7282",
+  "source": "search:GovernanceTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x70e6c775edc908cfa7adc1b9ae8e7adb32644595",
+  "source": "search:RebaseTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x099b6ae4d4b8bd196ad1682bb8390ef0ad225228",
+  "source": "search:DeflationaryTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x5f31a8a4dad696cb89497060c213eba803b261f7",
+  "source": "search:VestedTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x9dcd7e60697bae1c417473664f2de4db99eade46",
+  "source": "search:ReflectionTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x417efc9ff8bb5385d2716844534c65192e368d78",
+  "source": "search:TaxTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x67d6d0dda95208247bf4242d75d6c10dadf29a25",
+  "source": "search:StandardTokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xd3fb55935cbfe77ce7e914317ff11c7fac93378d",
+  "source": "search:TokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x57b1bfeaed094cf05b43d75fb1047d0b9429d32b",
+  "source": "search:TokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x79a5a53eb863bc9a7e379a2b5c543004b6c19a45",
+  "source": "search:TokenFactory",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x4b052f2781a97824fc1b0b8ff47c78e6e292e000",
+  "source": "search:InitializerHook",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xd462a559337859369ef271814851a18f496ba000",
+  "source": "search:InitializerHook",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xb8af7693c75b3a9fbd328172b364c892af65ffda",
+  "source": "search:AtomicSecondaryPoolInitializerV2",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0x1e104c4be6b7ca8d316f03233fb5e7e902ff104b",
+  "source": "search:AtomicSecondaryPoolInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ },
+ {
+  "address": "0xebbb669d9aff985a32170ea5d6e69b2e738fa263",
+  "source": "search:TokenInitializer",
+  "state": 0,
+  "stateName": "NotWhitelisted"
+ }
+]

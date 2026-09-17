@@ -1,0 +1,28 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Integrating Blockscout into your Application
+
+> Integrate Blockscout into your app using the PRO API, SDK notifications, MCP server for AI agents, and Chainscout multi-chain data endpoints.
+
+Blockscout features integration points for different applications.
+
+## APIs
+
+* Blockscout's PRO API provides free and professional tiers for fast, wide-ranging API access.
+  * Get started immediately at [https://dev.blockscout.com/](https://dev.blockscout.com/)
+  * Learn more in our [dedicated API section](/devs/apis).
+* [Additional microservice APIs](https://blockscout.github.io/swaggers/) include items like the Blockscout name service, Merits, Contract Verifier and others.
+
+## SDK
+
+* The [Blockscout SDK](/devs/blockscout-sdk) provides access to simple explorer-based notifications directly into an application.
+
+## MCP
+
+* The [MCP Server](/devs/mcp-server) wraps Blockscout APIs and exposes blockchain data—balances, tokens, NFTs, contract metadata—via the Model Context Protocol (MCP) so that AI agents and tools (like Claude, Cursor, or IDEs) can access and analyze it contextually.
+
+## Chainscout
+
+* The [Chainscout list](/devs/chainscout-chains-list) provides a list of all known projects using Blockscout along with chain IDs and other relevant information.

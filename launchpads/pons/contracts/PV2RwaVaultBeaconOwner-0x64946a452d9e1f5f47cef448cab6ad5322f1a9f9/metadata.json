@@ -1,0 +1,40 @@
+{
+ "address": "0x64946a452d9e1f5f47cef448cab6ad5322f1a9f9",
+ "role": "PV2RwaVaultBeaconOwner",
+ "group": "PonsVault v2",
+ "note": "Unverified. Owns the RWA beacon. Deployed by the same EOA as every other PonsVault contract, `0x897ac30f73\u2026`.",
+ "blockscout_address": {
+  "block_number_balance_updated_at": 50081884,
+  "coin_balance": "0",
+  "creation_status": "success",
+  "creation_transaction_hash": "0x741e50b2f11d2627fd2ed4d9bfe7c6bd5c3845a91b0e8893effb80edc90c82a4",
+  "creator_address_hash": "0x897ac30f73Ba92E1EFbC1dF1e67f8b5F4b3ECD2b",
+  "ens_domain_name": null,
+  "exchange_rate": "2397.53",
+  "has_beacon_chain_withdrawals": false,
+  "has_logs": true,
+  "has_token_transfers": false,
+  "has_tokens": false,
+  "has_validated_blocks": false,
+  "hash": "0x64946A452d9e1f5F47Cef448CAB6aD5322f1a9F9",
+  "implementations": [
+   {
+    "address_hash": "0xcd5a5EaEfBc504CcDed34B882889383255D6f9e3",
+    "name": null
+   }
+  ],
+  "is_contract": true,
+  "is_scam": false,
+  "is_verified": false,
+  "metadata": null,
+  "name": null,
+  "private_tags": [],
+  "proxy_type": "basic_implementation",
+  "public_tags": [],
+  "reputation": "ok",
+  "token": null,
+  "watchlist_address_id": null,
+  "watchlist_names": []
+ },
+ "blockscout_smart_contract": null
+}

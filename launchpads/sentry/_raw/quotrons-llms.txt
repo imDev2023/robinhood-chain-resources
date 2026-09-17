@@ -1,0 +1,55 @@
+# QUOTRONS V2
+
+> QUOTRONS is a 4,444-terminal ERC-404 collection on Robinhood Chain
+> (chain id 4663). V2's supported market is one canonical QUOTRON/WETH
+> Uniswap v4 pool. One whole liquid token materializes one dark terminal;
+> burning its backing token hardwires that terminal into a permanent NFT.
+> Hardwired terminals claim promotional rewards paid in one of ten
+> tokenized stocks.
+
+Status on 2026-08-13: V1 is permanently retired after a stale-approval
+incident. The verified V2 contracts are deployed and the snapshot-based,
+zero-action distribution is finalized. The canonical QUOTRON/WETH pool is
+seeded, trading is live, metadata is frozen, and launch fees are permanently
+finalized at 3%.
+
+Final V1 historical record: $113,849.84 in tokenized-stock rewards
+generated for hardwired holders. This frozen archival value uses the
+final onchain fee pots, the exact 80/17 reward-to-burn ratio, and the V1
+final-accounting stock marks; it is not a live balance or current-price
+valuation.
+
+V2 core: 0x5a86828Efd322bfb16d93cFeD16EE9BC14940D7F
+V2 NFT mirror: 0x027ACa2794E44f24950D81227DcD516FfBB49d6e
+V2 reflections: 0xe04fba61FD54Ba78Dd450A30d8Af40167aF5d3Ec
+Canonical router: 0x42024fCFdB4F3089Dd619A0cEF0Cd24E7b841C18
+Canonical hook: 0x62E200Cc8e4D95cf622f40Dd70f407C883EcB0cc
+
+Permanent base fee: 3%. Of volume at that rate, 2% funds stock rewards,
+0.6375% compounds locked liquidity, 0.2125% buys and burns
+STONKBROKERS, and 0.15% goes to the creator. The temporary launch-fee
+phase has ended.
+
+Ten reward stocks: NVDA AAPL TSLA GME SPCX SPY PLTR NFLX RDDT MSTR.
+The Gold Indicator accrues all ten stocks directly; V2 has no fresh PAXG
+conversion rail.
+
+The Machine's Record shows a cumulative V2 reward total that does not reset
+when an epoch opens. It adds all historical WETH reward-pot pulls to the live
+queue, and separately reports WETH already converted and allocated to
+hardwired terminals. Its USD estimate uses the current ETH/USD price.
+
+Metadata is revealed and pinned. The onchain base URIs freeze as part of
+the one-way launch transaction. Dark metadata:
+ipfs://bafybeig447r5kqu34u2qm5aklrvgk5igor6qe6o7ng6wmuj2vet3idiwhe/
+Hardwired metadata:
+ipfs://bafybeigl2vkhz4pwib27k6l6g5nqsvp5i6zgnhogc27csap3cltlvvx5mi/
+
+V2 discloses owner pause and venue-codehash controls, a blacklist
+guardian, and a threshold recovery Safe that can forcibly move eligible
+user balances or terminal NFTs. These are explicit trust assumptions.
+
+Reflections and reward drops are promotional rewards, not dividends,
+investment income, equity, or a share of profits. Nothing here is
+financial advice. Read the complete reference at:
+https://quotrons.cash/llms-full.txt

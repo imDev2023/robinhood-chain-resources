@@ -1,0 +1,143 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# PRO API general info
+
+> Access multichain onchain data through one Blockscout PRO API key with expanded rate limits, unified billing, and REST plus RPC endpoints.
+
+# Blockscout PRO API — Multichain Onchain Data, One API Key
+
+<Note>
+  <Card title="AI Agents" icon="robot" href="https://agents.blockscout.com/">
+    Agents should visit [https://agents.blockscout.com/](https://agents.blockscout.com/) to set up optimized data workstreams
+  </Card>
+</Note>
+
+## The Problem
+
+Building multichain? You're probably managing separate API keys, billing accounts, and rate limits for every chain you support. When a provider drops free-tier access or changes terms without warning, your app breaks.
+
+Blockscout PRO API eliminates that fragmentation. One account, one API key, dozens of mainnets and testnets — with the same endpoint structure you already know.
+
+## Why Developers Switch to Blockscout PRO API
+
+### Multichain by Default
+
+Access onchain data across all Blockscout-supported chains through a single API key. Add a new chain by changing a `chain_id` parameter — no new vendor setup, no duplicated integration work.
+
+```text theme={null}
+https://api.blockscout.com/v2/api?chain_id=1&module=account&action=balance&address=0x...&apikey=proapi_xxx
+```
+
+Swap `chain_id=1` for `chain_id=8453` (Base), `chain_id=10` (Optimism), `chain_id=534352` (Scroll), or any supported chain.
+
+### What Chains are Supported?
+
+The latest list is also available at [dev.blockscout.com](http://dev.blockscout.com) under supported chains.
+
+export const SupportedChains = () => {
+  const [chains, setChains] = useState(null);
+  const [error, setError] = useState(null);
+  const [loaded, setLoaded] = useState(false);
+  const load = async () => {
+    if (loaded) return;
+    setLoaded(true);
+    try {
+      const configRes = await fetch('https://raw.githubusercontent.com/blockscout/backend-configs/main/pro-api/prod/chains-config.json');
+      const config = await configRes.json();
+      const chainIds = Object.keys(config);
+      const metaRes = await fetch(`https://chains.blockscout.com/api/chains?chain_ids=${chainIds.join(',')}`);
+      const meta = await metaRes.json();
+      const rows = chainIds.map(id => ({
+        id,
+        name: meta[id]?.name || id,
+        isTestnet: meta[id]?.isTestnet ?? false
+      })).sort((a, b) => a.name.localeCompare(b.name));
+      setChains(rows);
+    } catch (err) {
+      setError(err);
+    }
+  };
+  return <div onClick={load}>
+      {!loaded && <p>Click to load the current list of supported chains…</p>}
+      {loaded && error && <p>
+          Couldn't load the live chain list — see the{' '}
+          <a href="https://github.com/blockscout/backend-configs/blob/main/pro-api/prod/chains-config.json">
+            current config
+          </a>{' '}
+          instead.
+        </p>}
+      {loaded && !error && !chains && <p>Loading supported chains…</p>}
+      {chains && <>
+          <h4>Mainnets</h4>
+          <table>
+            <thead>
+              <tr><th>Chain</th><th>Chain ID</th></tr>
+            </thead>
+            <tbody>
+              {chains.filter(c => !c.isTestnet).map(c => <tr key={c.id}><td>{c.name}</td><td>{c.id}</td></tr>)}
+            </tbody>
+          </table>
+          <h4>Testnets</h4>
+          <table>
+            <thead>
+              <tr><th>Chain</th><th>Chain ID</th></tr>
+            </thead>
+            <tbody>
+              {chains.filter(c => c.isTestnet).map(c => <tr key={c.id}><td>{c.name}</td><td>{c.id}</td></tr>)}
+            </tbody>
+          </table>
+        </>}
+    </div>;
+};
+
+<Accordion title="PRO API Supported Chains">
+  <SupportedChains />
+</Accordion>
+
+### Etherscan-Compatible Endpoints
+
+Already using Etherscan V2's unified API? Migration is trivial — the structure is nearly identical. Etherscan uses `api.etherscan.io/v2/api?chainid=`, Blockscout uses `api.blockscout.com/v2/api?chain_id=`. Same modules, same parameters — swap the base URL and key.
+
+**→ [Migration Guide: Etherscan to Blockscout](/devs/migrate-from-etherscan)**
+
+<Info>
+  All PRO API endpoints are documented individually in the API Reference menu
+</Info>
+
+### More Capacity at Every Tier
+
+|                | Blockscout PRO API                    | Etherscan              |
+| -------------- | ------------------------------------- | ---------------------- |
+| **Free**       | 100K credits/day · 5 RPS · All chains | 3 RPS · Limited chains |
+| **\$49/mo**    | 100M credits · 15 RPS                 | 100K calls · 5 RPS     |
+| **\$199/mo**   | 500M credits · 30 RPS                 | 200K calls · 10 RPS    |
+| **Enterprise** | Custom                                | Custom                 |
+
+### Explorer-Enriched Data
+
+PRO API serves the same indexed, decoded, and structured data that powers Blockscout explorers. That means token metadata, proxy implementations, internal transactions, and contract context — not just raw RPC responses.
+
+## Built For
+
+* **Dapps & Wallets** — Transaction history, token balances, NFTs, and contract activity across chains
+* **AI Agents & Bots** — Structured onchain data for monitoring, automation, and AI-driven workflows
+* **Analytics & Research** — Cross-chain behavior analysis, dashboards, and reporting
+* **Operational Tooling** — Debugging, compliance workflows, and internal monitoring
+
+## Get Started in 3 Steps
+
+1. **Create an account** at [dev.blockscout.com](https://dev.blockscout.com)
+2. **Generate your API key** — free tier starts immediately
+3. **Query any supported chain** using familiar REST or JSON-RPC endpoints
+
+No credit card required for the free tier. Upgrade when you're ready.
+
+**→ [Start Building](https://dev.blockscout.com)**
+
+## Trusted Infrastructure
+
+Blockscout powers explorers for 100+ L2s and scaling projects. The PRO API runs on the same infrastructure and data pipeline — formalized for production workloads with higher limits, real-time usage dashboards, and up to 50 API keys per account.
+
+**→ [View Supported Chains](https://chains.blockscout.com)** **→ [API Documentation](https://docs.blockscout.com/devs/apis)** **→ [Developer Portal](https://dev.blockscout.com)**

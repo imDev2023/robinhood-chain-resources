@@ -1,0 +1,381 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "beacon_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "initialOwner",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroBeacon",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   }
+  ],
+  "name": "VaultCreated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "acceptOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "allVaults",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "beacon",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract IERC20",
+    "name": "usdg",
+    "type": "address"
+   },
+   {
+    "internalType": "contract ILighterBridge",
+    "name": "bridge",
+    "type": "address"
+   },
+   {
+    "internalType": "uint16",
+    "name": "assetIndex",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint8",
+    "name": "routeType",
+    "type": "uint8"
+   },
+   {
+    "components": [
+     {
+      "internalType": "contract IVerifierRouter",
+      "name": "router",
+      "type": "address"
+     },
+     {
+      "internalType": "uint16",
+      "name": "targetMarket",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "sizeDecimals",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint8",
+      "name": "priceDecimals",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bandLo1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "bandHi1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetLeverage1e18",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxSlippageBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minOrderNotional6",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint16",
+      "name": "exitHaircutBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "address",
+      "name": "expectedL1Owner",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "apiKeyIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes",
+      "name": "parkKey",
+      "type": "bytes"
+     },
+     {
+      "internalType": "uint64",
+      "name": "challengeBatches",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "executionBatches",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint16",
+      "name": "bondBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "mintFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "rescuerBountyBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "executorBountyBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint256",
+      "name": "equityCapUsdg",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "admin",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct LongXVaultUpgradeable.VaultConfig",
+    "name": "cfg",
+    "type": "tuple"
+   },
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   }
+  ],
+  "name": "createVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingOwner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vaultCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "vaults",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

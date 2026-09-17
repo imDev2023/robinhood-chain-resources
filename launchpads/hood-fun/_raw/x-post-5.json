@@ -1,0 +1,5 @@
+Triggering pipeline collection for x_posts...
+Triggered collection with snapshot ID:sd_mtjki1gs19kkthjm08
+Status: running - polling again (attempt 1/600)
+Data received after 2 attempts
+[{"id":"2094160727292477761","user_posted":"hooddotfun","name":"HOOD","description":"gm we are back","date_posted":"2026-08-30T20:29:59.000Z","url":"https://x.com/hooddotfun/status/2094160727292477761","quoted_post":{},"replies":4,"reposts":1,"likes":4,"views":351,"followers":3976,"biography":"Hood is the official launchpad for the Robinhood chain on the EVM network","posts_count":161,"profile_image_link":"https://pbs.twimg.com/profile_images/2076895679960469504/bNasG_cn_normal.png","following":17,"is_verified":true,"quotes":0,"bookmarks":0,"parent_post_details":{"post_id":"2094160727292477761","profile_id":"1889858138909646848","profile_name":"HOOD","date_posted":"2026-08-30T20:29:59.000Z"},"verification_type":"blue","user_id":"1889858138909646848","is_repost":false,"timestamp":"2026-09-02T03:59:50.544Z","input":{"url":"https://x.com/hooddotfun/status/2094160727292477761","country":""}}]

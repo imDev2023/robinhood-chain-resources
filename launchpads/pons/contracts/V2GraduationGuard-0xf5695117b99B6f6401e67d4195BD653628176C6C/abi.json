@@ -1,0 +1,78 @@
+[
+ {
+  "inputs": [],
+  "name": "GraduationSeedNotViable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SqrtPriceOutOfBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnsupportedPrice",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "pairToken",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint256",
+    "name": "quoteAmount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "tokenAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "assertSeedable",
+  "outputs": [],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint256",
+    "name": "quoteAmount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "tokenAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "assertSeedableEitherOrdering",
+  "outputs": [],
+  "stateMutability": "pure",
+  "type": "function"
+ }
+]

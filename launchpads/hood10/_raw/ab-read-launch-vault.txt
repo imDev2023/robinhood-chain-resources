@@ -1,0 +1,71 @@
+H10HOOD10LaunchboardvaultprofileLaunchConnect
+
+the vaultevery trade feeds the index70% of the fee
+
+held by the index
+
+0 Ξ
+
+in the live distributor
+
+paid in, lifetime
+
+0.0000 Ξ
+
+from launchpad fees
+
+assets booked
+
+0
+
+waiting to be sold
+
+quote assets
+
+21
+
+the pad has been paid in
+
+WETHemptybooked 0sellable now 0
+
+USDGemptybooked 0sellable now 0
+
+SPYemptybooked 0sellable now 0
+
+PONSemptybooked 0sellable now 0
+
+COINemptybooked 0sellable now 0
+
+RBLXemptybooked 0sellable now 0
+
+NVDAemptybooked 0sellable now 0
+
+PENGUemptybooked 0sellable now 0
+
+TENDIESemptybooked 0sellable now 0
+
+HOOD10emptybooked 0sellable now 0
+
+AAPLemptybooked 0sellable now 0
+
+Indexemptybooked 0sellable now 0
+
+microduckemptybooked 0sellable now 0
+
+YOLOemptybooked 0sellable now 0
+
+CASHCATemptybooked 0sellable now 0
+
+FRONGemptybooked 0sellable now 0
+
+AIemptybooked 0sellable now 0
+
+METAemptybooked 0sellable now 0
+
+PLTRemptybooked 0sellable now 0
+
+TSLAemptybooked 0sellable now 0
+
+HMMemptybooked 0sellable now 0
+
+hood10 · launchrobinhood chain · id 4663block 52437164

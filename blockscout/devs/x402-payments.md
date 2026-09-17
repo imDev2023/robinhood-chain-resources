@@ -1,0 +1,338 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# x402 payments for the Blockscout Pro API
+
+> Use the x402 HTTP payment protocol to pay per call for the Blockscout Pro API with stablecoins, letting autonomous agents access data without an API key.
+
+x402 turns the HTTP 402 status code into a stablecoin payment rail. An agent requests a resource, receives payment terms, signs an authorization, and retries with proof of payment attached. This does not require an account or API key for usage.
+
+Blockscout's Pro API supports x402 as an alternative to key-based billing. Both options read from the same underlying data, so you can choose whichever fits your agent's setup.
+
+<Info>
+  Governance of the x402 protocol moved to the Linux Foundation in April 2026, with 22 launch members including Google, Visa, Mastercard, Stripe, AWS, and Circle. The reference implementation is Apache 2.0 licensed with SDKs for TypeScript, Python, and Go.
+</Info>
+
+## How x402 works
+
+x402 is a four-step loop layered on top of a standard HTTP request:
+
+1. **Request.** A client (human or agent) sends a standard HTTP request to a protected endpoint.
+2. **402 response.** If payment is required, the server replies with a `402` status and a payment-terms object: accepted token (usually USDC), network, recipient address, amount, and expiry.
+3. **Signature.** The client signs an **EIP-3009 `transferWithAuthorization`** message with its wallet, then resends the original request with the signed payload attached in a `PAYMENT-SIGNATURE` header.
+4. **Verify and settle.** A facilitator (a service that handles onchain verification and settlement) checks the signature and submits the transfer onchain. The server returns a `200` with the requested data and a `PAYMENT-RESPONSE` header confirming settlement.
+
+<Note>
+  **The client never submits a transaction.** Signing an EIP-3009 authorization is an off-chain, gasless action — it's a message that says "I authorize this transfer," not a broadcast transaction. The facilitator is the one that takes that signed authorization and submits it onchain, paying the gas itself. This is why the client wallet only needs USDC, not ETH (see [Requirements](#requirements) below).
+</Note>
+
+The current spec (v2) organizes payment terms around CAIP-2 network identifiers, so the same payment envelope can work across chains. Blockscout's x402 implementation currently supports the **Base network**.
+
+<Note>
+  x402 is trust-minimizing. A payment payload is signed by the buyer, and any facilitator that tampers with a transaction will fail signature verification, so it can't redirect funds. Anyone can run a facilitator; Coinbase currently runs the first production one.
+</Note>
+
+## Key-based vs. x402 requests
+
+A standard Pro API request includes a key in the query string and is billed against your account. This is the most cost-effective way to use the Pro API and includes a free tier.
+
+```http theme={null}
+GET https://api.blockscout.com/8453/api/v2/tokens/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913?apikey=proapi_xxx
+```
+
+The same endpoint also accepts a request with no key, charged per call via x402:
+
+```http theme={null}
+GET https://api.blockscout.com/8453/api/v2/tokens/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913
+HTTP/1.1 402 Payment Required
+PAYMENT-REQUIRED: <base64-encoded payment terms: network eip155:8453, asset USDC, payTo Blockscout's address, amount, facilitator URL>
+```
+
+## Walkthrough: pay-per-call with a Hermes agent
+
+This walkthrough sets up a burner wallet, funds it, and configures a [Hermes agent](https://github.com/NousResearch/hermes-agent) to sign x402 payments automatically when calling the Pro API on Base.
+
+## Requirements
+
+* A wallet funded with **USDC** on Base. No ETH is required — the client only signs an off-chain EIP-3009 authorization, and the facilitator pays gas to settle it onchain.
+* The x402 Python SDK (`pip install "x402[requests]" eth_account`), or one of the [reference SDKs](https://github.com/coinbase/x402) for TypeScript or Go. See below for [additional Python reference info](#additional-python-reference-info).
+* An agent runtime capable of storing a private key and signing messages (see the walkthrough below for a Hermes-based example).
+
+## Steps
+
+<Steps>
+  <Step title="Set up your agent">
+    Follow the setup steps in the [Hermes agent repo](https://github.com/NousResearch/hermes-agent). Any x402-aware agent runtime works; this walkthrough uses Hermes with an OpenAI key and Telegram as the interface, but any agent interface or LLM provider is compatible.
+  </Step>
+
+  <Step title="Create a burner wallet">
+    Generate a new wallet for testing. Using [Foundry](https://www.getfoundry.sh/):
+
+    ```bash theme={null}
+    cast wallet new
+    ```
+
+    Use a burner wallet for testing, not a wallet holding significant funds.
+  </Step>
+
+  <Step title="Fund the wallet with USDC on Base">
+    Send a small amount of **USDC** to the burner wallet address on Base. You can send this from any wallet, such as MetaMask. No ETH is needed — the facilitator covers gas when it settles the signed authorization onchain.
+  </Step>
+
+  <Step title="Store the private key">
+    Add the private key to your agent's local environment. Never share this key or commit it to version control.
+
+    ```bash theme={null}
+    echo 'X402_PRIVATE_KEY=0xYOUR_PRIVATE_KEY_HERE' >> ~/.hermes/.env
+    ```
+  </Step>
+
+  <Step title="Install the x402 SDK">
+    ```bash theme={null}
+    pip install "x402[requests]" eth_account
+    ```
+  </Step>
+
+  <Step title="Add a ready-to-run payment script">
+    Rather than describing the payment protocol in prose inside `AGENTS.md` and hoping the model executes it correctly step by step, give the agent an actual script it can invoke as a tool. Save this as `~/.hermes/skills/x402_pay.py`:
+
+    ```python theme={null}
+    #!/usr/bin/env python3
+    """
+    Usage: x402_pay.py <url>
+
+    Calls a Blockscout Pro API URL, paying via x402 with the wallet in
+    $X402_PRIVATE_KEY if the endpoint returns a 402. Prints a single JSON
+    object to stdout with the response body and payment settlement info.
+    """
+    import json
+    import os
+    import sys
+
+    from eth_account import Account
+    from x402 import x402ClientSync
+    from x402.http import x402HTTPClientSync
+    from x402.http.clients import x402_requests
+    from x402.mechanisms.evm import EthAccountSigner
+    from x402.mechanisms.evm.exact.register import register_exact_evm_client
+
+
+    def call_with_safe_retry(session, url, max_retries=2):
+        response = session.get(url)
+        signature = response.request.headers.get("PAYMENT-SIGNATURE")
+
+        attempt = 0
+        while (
+            response.status_code >= 500
+            and "PAYMENT-RESPONSE" not in response.headers
+            and signature
+            and attempt < max_retries
+        ):
+            attempt += 1
+            response = session.get(url, headers={"PAYMENT-SIGNATURE": signature})
+
+        return response
+
+
+    def main():
+        if len(sys.argv) != 2:
+            print(json.dumps({"error": "usage: x402_pay.py <url>"}))
+            sys.exit(1)
+
+        url = sys.argv[1]
+
+        client = x402ClientSync()
+        account = Account.from_key(os.environ["X402_PRIVATE_KEY"])
+        register_exact_evm_client(client, EthAccountSigner(account))
+        http_client = x402HTTPClientSync(client)
+
+        with x402_requests(client) as session:
+            response = call_with_safe_retry(session, url)
+
+            settle_response = None
+            if response.ok:
+                settle_response = http_client.get_payment_settle_response(
+                    lambda name: response.headers.get(name)
+                )
+
+            print(json.dumps({
+                "status": response.status_code,
+                "body": response.text,
+                "payment": settle_response,
+            }))
+
+
+    if __name__ == "__main__":
+        main()
+    ```
+
+    Make it executable:
+
+    ```bash theme={null}
+    chmod +x ~/.hermes/skills/x402_pay.py
+    ```
+  </Step>
+
+  <Step title="Point the agent at the script">
+    Instead of asking the agent to hand-roll the 402/sign/retry flow, tell it to run the script:
+
+    ```bash theme={null}
+    cat >> ~/.hermes/AGENTS.md << 'EOF'
+
+    ## x402 Payments
+    To call a Blockscout Pro API endpoint that may require payment, run:
+
+        python3 ~/.hermes/skills/x402_pay.py "<url>"
+
+    This handles the 402 challenge, EIP-3009 signing, safe 5xx retries, and
+    payment verification. Parse its JSON stdout for `status`, `body`, and
+    `payment` (null if no payment was required).
+    EOF
+    ```
+  </Step>
+
+  <Step title="Call the Pro API without a key">
+    Send the agent a request that targets the multichain Pro API endpoint directly, not a per-instance endpoint, so the call routes through x402:
+
+    > "Run the x402 payment script against `https://api.blockscout.com/8453/api/v2/tokens/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` and tell me if it settled."
+
+    <Warning>
+      Some agent configurations may resolve a query like "get token info on Base" to a free, per-instance endpoint instead of the Pro API's multichain endpoint, which won't trigger a 402. Reference the full Pro API URL directly, as shown above, to confirm you're testing the x402 path.
+    </Warning>
+  </Step>
+
+  <Step title="Confirm the payment">
+    A successful run prints the settlement details from the `PAYMENT-RESPONSE` header, including the transaction hash:
+
+    ```json theme={null}
+    {
+      "status": 200,
+      "body": "{...token data...}",
+      "payment": {
+        "success": true,
+        "transaction": "0x339bccd1664bd7398add3df2450c9ca0acab9abf748f86dbbd6de1b78b9bbe04",
+        "network": "eip155:8453",
+        "payer": "0xe7878baE142Ef38B557540Ae62E5118A0da4a13D"
+      }
+    }
+    ```
+  </Step>
+
+  <Step title="Verify on Blockscout">
+    Look up the transaction hash on the [Base explorer](https://base.blockscout.com) to confirm the USDC transfer settled onchain.
+  </Step>
+</Steps>
+
+## Limitations
+
+* Agents need a funded wallet (with USDC) before they can make their first call; there's no prepaid or trial mode for x402 specifically (use the free key-based tier for testing without a funded wallet).
+* Most production traffic currently routes through a single facilitator (Coinbase's), though the protocol is permissionless and additional facilitators are expected.
+* Per-call billing means a stream of micro-settlements rather than a single invoice. Factor this into cost tracking if you're running high call volumes.
+
+## Additional Python Reference Info
+
+<AccordionGroup>
+  <Accordion title="Make a Paid Request (Python example)">
+    This uses the current v2 Python SDK surface (`x402ClientSync` / `x402HTTPClientSync`), which replaces the older `x402.clients.x402_requests(session, account=...)` shape:
+
+    ```python theme={null}
+    import os
+     
+    from eth_account import Account
+    from x402 import x402ClientSync
+    from x402.http import x402HTTPClientSync
+    from x402.http.clients import x402_requests
+    from x402.mechanisms.evm import EthAccountSigner
+    from x402.mechanisms.evm.exact.register import register_exact_evm_client
+     
+    TOKEN_URL = "https://api.blockscout.com/8453/api/v2/tokens/0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+     
+    # Build the client and register the EVM "exact" payment scheme
+    client = x402ClientSync()
+    account = Account.from_key(os.getenv("X402_PRIVATE_KEY"))
+    register_exact_evm_client(client, EthAccountSigner(account))
+    http_client = x402HTTPClientSync(client)
+     
+    with x402_requests(client) as session:
+        response = session.get(TOKEN_URL)
+        print(response.status_code, response.text)
+     
+        if response.ok:
+            settle_response = http_client.get_payment_settle_response(
+                lambda name: response.headers.get(name)
+            )
+            if settle_response:
+                print("Payment settled, tx:", settle_response.get("transaction"))
+    ```
+
+    `x402_requests(client)` catches the `402` automatically, signs an EIP-3009 authorization with the registered signer, and resends the request with the `PAYMENT-SIGNATURE` header attached — similar to how a browser follows a redirect.
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Safe retries on 5xx">
+    The SDK's automatic wrapper signs a fresh authorization every time it sees a `402`. That's the wrong behavior for a `5xx` on retry: if the facilitator already settled the payment and the origin server then failed before responding, resigning would attempt to charge the wallet again. If a `5xx` comes back **without** a `PAYMENT-RESPONSE` header, replay the request with the *same* `PAYMENT-SIGNATURE` you already sent, instead of letting the client sign a new one:
+
+    ```python theme={null}
+    def call_with_safe_retry(session, url, max_retries=2):
+        response = session.get(url)
+        signature = response.request.headers.get("PAYMENT-SIGNATURE")
+     
+        attempt = 0
+        while (
+            response.status_code >= 500
+            and "PAYMENT-RESPONSE" not in response.headers
+            and signature
+            and attempt < max_retries
+        ):
+            attempt += 1
+            response = session.get(url, headers={"PAYMENT-SIGNATURE": signature})
+     
+        return response
+    ```
+
+    The facilitator treats a replayed authorization idempotently: if it was already settled, it won't double-charge; if it wasn't, this retry is what finally gets it processed. Once a response comes back with a `PAYMENT-RESPONSE` header, stop retrying — payment succeeded or definitively failed, and either way a new attempt would need a fresh signature.
+  </Accordion>
+</AccordionGroup>
+
+<AccordionGroup>
+  <Accordion title="Verifying a successful payment">
+    A `200` alone doesn't confirm payment was actually collected — check the `PAYMENT-RESPONSE` header and the settlement transaction hash it carries:
+
+    ```python theme={null}
+    response = call_with_safe_retry(session, TOKEN_URL)
+     
+    if response.ok:
+        settle_response = http_client.get_payment_settle_response(
+            lambda name: response.headers.get(name)
+        )
+        if settle_response:
+            print("Payment settled")
+            print("Network:", settle_response.get("network"))
+            print("Transaction:", settle_response.get("transaction"))
+        else:
+            print("200 with no PAYMENT-RESPONSE header — check if this hit a free/cached path")
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Additional Reference Info
+
+<CardGroup cols={2}>
+  <Card title="Get a Pro API Key (not required for x402)" icon="key" href="https://blockscout.com/pro-api">
+    For key-based billing and access to the free tier
+  </Card>
+
+  <Card title="Agent Skills Repo" icon="robot" href="https://github.com/blockscout/agent-skills">
+    Install web3-dev or blockscout-analysis, or add x402\_pay.py alongside them
+  </Card>
+
+  <Card title="MCP Server" icon="plug" href="/devs/mcp-server">
+    Query Blockscout data through MCP-aware agents
+  </Card>
+
+  <Card title="x402 Reference Implementation" icon="github" href="https://github.com/coinbase/x402">
+    SDKs for TypeScript, Python, and Go
+  </Card>
+</CardGroup>

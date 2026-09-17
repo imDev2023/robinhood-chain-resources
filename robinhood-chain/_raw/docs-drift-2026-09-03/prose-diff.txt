@@ -1,0 +1,405 @@
+
+########## 01-overview.md <-> chain.mdx  ratio=0.780 diffblocks=13
+  ARCHIVED- Start building Connect to the network Learn how to connect to Robinhood ChainDeploy a smart contract Get your first contract live on Robinhood Chain using Foundry or HardhatRun a full node Spin up your own Robinhood Chain node for full data access and independence Built for Real-World Assets At its core, Robinhood Chain is optimized for tokenized real-world assets (RWAs) - including equities, ETFs
+  LIVE0903+ Start building <CardGrid columns={3}
+  LIVE0903+ title="Connect to the network" href="/chain/connecting" Learn how to connect to Robinhood Chain </Card }
+  LIVE0903+ title="Deploy a smart contract" href="/chain/deploy-smart-contracts" Get your first contract live on Robinhood Chain using Foundry or Hardhat </Card }
+  LIVE0903+ title="Run a full node" href="/chain/run-a-full-node" Spin up your own Robinhood Chain node for full data access and independence </Card </CardGrid Built for Real-World Assets At its core, Robinhood Chain is optimized for tokenized real-world assets (RWAs) - including equities, ETFs, private assets, and other financial instruments - allowing them to be represented and traded onchain.
+  ARCHIVED- Connecting to Robinhood Chain Robinhood Chain Status Bridge assets onto Robinhood Chain:
+  ARCHIVED- Bridging Deploy your first contract:
+  ARCHIVED- Deploy smart contracts Run a full node:
+  ARCHIVED- Run a full node Questions or issues:
+  LIVE0903+ Connecting to Robinhood Chain - Robinhood Chain Status - Bridge assets onto Robinhood Chain:
+  LIVE0903+ Bridging - Deploy your first contract:
+  LIVE0903+ Deploy smart contracts - Run a full node:
+  LIVE0903+ Run a full node - Questions or issues:
+
+########## 02-connecting.md <-> chain_connecting.mdx  ratio=0.810 diffblocks=8
+  ARCHIVED- Network Configuration Property Robinhood Chain Robinhood Chain Testnet --- --- --- Chain ID 4663 46630 Currency Symbol ETH ETH Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com Developer Endpoints Alchemy is the recommended infrastructure provider for building on Robinhood Chain.
+  LIVE0903+ Network Configuration Property Robinhood Chain Robinhood Chain Testnet :--- :--- :--- Chain ID 4663 46630 Currency Symbol ETH ETH Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com Developer Endpoints Alchemy is the recommended infrastructure provider for building on Robinhood Chain.
+  ARCHIVED- Endpoint Mainnet URL Testnet URL --- --- --- RPC https://robinhood-mainnet.g.alchemy.com/v2/{API KEY}
+  LIVE0903+ Endpoint Mainnet URL Testnet URL :--- :--- :--- RPC https://robinhood-mainnet.g.alchemy.com/v2/{API KEY}
+  ARCHIVED- Supported Services Service Description --- --- Node API Access standard JSON-RPC and Websocket endpoints for reading and writing to Robinhood Chain.
+  LIVE0903+ Supported Services Service Description :--- :--- Node API Access standard JSON-RPC and Websocket endpoints for reading and writing to Robinhood Chain.
+  ARCHIVED- Endpoint Mainnet URL Testnet URL --- --- --- RPC https://rpc.mainnet.chain.robinhood.com https://rpc.testnet.chain.robinhood.com Sequencer Feed wss://feed.mainnet.chain.robinhood.com wss://feed.testnet.chain.robinhood.com Sequencer https://sequencer.mainnet.chain.robinhood.com https://sequencer.testnet.chain.robinhood.com Bridge to Robinhood Chain To move funds onto Robinhood Chain, use the canoni
+  LIVE0903+ Endpoint Mainnet URL Testnet URL :--- :--- :--- RPC https://rpc.mainnet.chain.robinhood.com https://rpc.testnet.chain.robinhood.com Sequencer Feed wss://feed.mainnet.chain.robinhood.com wss://feed.testnet.chain.robinhood.com Sequencer https://sequencer.mainnet.chain.robinhood.com https://sequencer.testnet.chain.robinhood.com Bridge to Robinhood Chain To move funds onto Robinhood Chain, use the can
+
+########## 03-add-network-to-wallet.md <-> chain_add-network-to-wallet.mdx  ratio=0.533 diffblocks=7
+  ARCHIVED- ![Logo!Logo](/chain) ![Logo!Logo](/chain) Add network to your wallet Robinhood Wallet Robinhood Wallet provides support for Robinhood Chain.
+  ARCHIVED- Download Robinhood Wallet (requires iOS or Android) ![Download on the App Store](https://apps.apple.com/us/app/robinhood-wallet-swap-crypto/id1634080733)![Get it on Google Play](https://play.google.com/store/apps/details?id=com.robinhood.gateway) 1.
+  LIVE0903+ Add network to your wallet Robinhood Wallet Robinhood Wallet provides support for Robinhood Chain.
+  LIVE0903+ Download Robinhood Wallet (requires iOS or Android) 2.
+  ARCHIVED- Loading wallet connection...
+  ARCHIVED- Property Robinhood Chain Robinhood Chain Testnet --- --- --- Chain ID 4663 46630 Default RPC URL https://rpc.mainnet.chain.robinhood.com/ https://rpc.testnet.chain.robinhood.com Currency Symbol ETH ETH Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com
+  LIVE0903+ Property Robinhood Chain Robinhood Chain Testnet :--- :--- :--- Chain ID 4663 46630 Default RPC URL https://rpc.mainnet.chain.robinhood.com/ https://rpc.testnet.chain.robinhood.com Currency Symbol ETH ETH Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com
+
+########## 04-bridging.md <-> chain_bridging.mdx  ratio=1.000 diffblocks=0
+
+########## 06-stock-tokens.md <-> chain_stock-tokens.mdx  ratio=0.723 diffblocks=26
+  ARCHIVED- Why build with stock tokens Programmable real-world assets Standard ERC-20 interface - works out of the box with existing wallets, libraries, and tooling.
+  ARCHIVED- Onchain prices - every Stock Token has a live Chainlink price feed, so your contracts can read prices directly onchain.
+  ARCHIVED- Composable - build trading, lending, structured products, and more on top of real-world asset exposure.
+  ARCHIVED- Self-custodied and 24/7 - assets live in users' wallets and are accessible around the clock.
+  LIVE0903+ Why build with stock tokens - Programmable real-world assets - Standard ERC-20 interface - works out of the box with existing wallets, libraries, and tooling.
+  LIVE0903+ - Onchain prices - every Stock Token has a live Chainlink price feed, so your contracts can read prices directly onchain.
+  LIVE0903+ - Composable - build trading, lending, structured products, and more on top of real-world asset exposure.
+  LIVE0903+ - Self-custodied and 24/7 - assets live in users' wallets and are accessible around the clock.
+  ARCHIVED- List and display Robinhood Stock Tokens in a wallet, portfolio tracker, or trading interface.
+  ARCHIVED- Build lending markets that use stock tokens as collateral.
+  LIVE0903+ - List and display Robinhood Stock Tokens in a wallet, portfolio tracker, or trading interface.
+  LIVE0903+ - Build lending markets that use stock tokens as collateral.
+  ARCHIVED- How Stock Tokens work Each Stock Token is a standard ERC-20 contract with 18 decimals.
+  ARCHIVED- Each token corresponds to a specific underlying equity or ETF, identified by its ticker symbol.
+  ARCHIVED- Prices are published onchain via per-asset Chainlink data feeds.
+  LIVE0903+ How Stock Tokens work - Each Stock Token is a standard ERC-20 contract with 18 decimals.
+  LIVE0903+ - Each token corresponds to a specific underlying equity or ETF, identified by its ticker symbol.
+  LIVE0903+ - Prices are published onchain via per-asset Chainlink data feeds.
+  ARCHIVED- Get started Goal Where to go --- --- Build with Stock Tokens Building with Stock Tokens Find contract addresses Token Contracts Read onchain prices Oracles & Price Feeds Disclaimer Stock Tokens are ERC-20s issued by RHJ.
+  LIVE0903+ Get started Goal Where to go --- --- Build with Stock Tokens Building with Stock Tokens Find contract addresses Token Contracts Read onchain prices Oracles & Price Feeds Disclaimer <div style={{ fontSize:
+  LIVE0903+ 'var(--vocs-color text3)' }}
+  LIVE0903+ Stock Tokens are ERC-20s issued by RHJ.
+  ARCHIVED- <http://docs.robinhood.com/rhj Stock Tokens are not registered under U.S.
+  LIVE0903+ http://docs.robinhood.com/rhj Stock Tokens are not registered under U.S.
+  ARCHIVED- <http://docs.robinhood.com/rhj Robinhood Assets (Jersey) Limited is a private limited company incorporated in Jersey, with its registered address at First Floor, La Chasse Chambers, Ten La Chasse, St.
+  LIVE0903+ http://docs.robinhood.com/rhj Robinhood Assets (Jersey) Limited is a private limited company incorporated in Jersey, with its registered address at First Floor, La Chasse Chambers, Ten La Chasse, St.
+
+########## 07-building-with-stock-tokens.md <-> chain_building-with-stock-tokens.mdx  ratio=0.738 diffblocks=34
+  ARCHIVED- IERC20 nvda = IERC20(NVDA TOKEN ADDRESS); uint256 balance = nvda.balanceOf(user); nvda.transfer(recipient, amount); nvda.approve(spender, amount); Stock tokens also implement ERC-8056 (Scaled UI Amount Extension), which defines the corporate-action multiplier ( uiMultiplier() ).
+  LIVE0903+ solidity IERC20 nvda = IERC20(NVDA TOKEN ADDRESS); uint256 balance = nvda.balanceOf(user); nvda.transfer(recipient, amount); nvda.approve(spender, amount); Stock tokens also implement ERC-8056 (Scaled UI Amount Extension), which defines the corporate-action multiplier ( uiMultiplier() ).
+  ARCHIVED- AggregatorV3Interface feed = AggregatorV3Interface(NVDA PRICE FEED); (, int256 price, , uint256 updatedAt, ) = feed.latestRoundData(); require(price 0 && updatedAt 0, "Invalid price"); The Chainlink price already includes the corporate-action multiplier (dividends, splits), so the value you read is the token's full price - don't apply the multiplier yourself.
+  LIVE0903+ solidity AggregatorV3Interface feed = AggregatorV3Interface(NVDA PRICE FEED); (, int256 price, , uint256 updatedAt, ) = feed.latestRoundData(); require(price 0 && updatedAt 0, "Invalid price"); The Chainlink price already includes the corporate-action multiplier (dividends, splits), so the value you read is the token's full price - don't apply the multiplier yourself.
+  ARCHIVED- underlying shares = raw token amount × uiMultiplier ÷ 1e18 uiMultiplier() is fixed-point with 18 decimals - 1e18 = 1.0.
+  ARCHIVED- At launch the multiplier is 1e18 (one token = one underlying share).
+  ARCHIVED- When a corporate action is applied (e.g.
+  LIVE0903+ underlying shares = raw token amount × uiMultiplier ÷ 1e18 - uiMultiplier() is fixed-point with 18 decimals - 1e18 = 1.0.
+  LIVE0903+ - At launch the multiplier is 1e18 (one token = one underlying share).
+  LIVE0903+ - When a corporate action is applied (e.g.
+  ARCHIVED- interface IScaledUIAmountNewUIMultiplier { // The pending UI multiplier scheduled to take effect at effectiveAt.
+  LIVE0903+ solidity interface IScaledUIAmountNewUIMultiplier { // The pending UI multiplier scheduled to take effect at effectiveAt.
+  ARCHIVED- newUIMultiplier() - the multiplier that will take effect at effectiveAt() .
+  LIVE0903+ - newUIMultiplier() - the multiplier that will take effect at effectiveAt() .
+  ARCHIVED- effectiveAt() - the timestamp at which newUIMultiplier() becomes the active uiMultiplier() .
+  LIVE0903+ - effectiveAt() - the timestamp at which newUIMultiplier() becomes the active uiMultiplier() .
+  ARCHIVED- interface IScaledUIAmountBalances { // UI-adjusted balance of an account (raw balance scaled by uiMultiplier).
+  LIVE0903+ solidity interface IScaledUIAmountBalances { // UI-adjusted balance of an account (raw balance scaled by uiMultiplier).
+  ARCHIVED- balanceOfUI(account) - the account's balance expressed in underlying shares.
+  LIVE0903+ - balanceOfUI(account) - the account's balance expressed in underlying shares.
+  ARCHIVED- totalSupplyUI() - total supply expressed in underlying shares.
+  LIVE0903+ - totalSupplyUI() - total supply expressed in underlying shares.
+  ARCHIVED- interface IScaledUIAmount { // Current UI multiplier, expressed with 18 decimals (1e18 = 1.0).
+  LIVE0903+ solidity interface IScaledUIAmount { // Current UI multiplier, expressed with 18 decimals (1e18 = 1.0).
+  ARCHIVED- Subscribe to UIMultiplierUpdated to track corporate-action adjustments and the timestamp each became effective.
+  ARCHIVED- Use TransferWithScaledUI to record the underlying-share value ( uiValue ) of each transfer alongside the raw value.
+  LIVE0903+ - Subscribe to UIMultiplierUpdated to track corporate-action adjustments and the timestamp each became effective.
+  LIVE0903+ - Use TransferWithScaledUI to record the underlying-share value ( uiValue ) of each transfer alongside the raw value.
+  ARCHIVED- value a user's holdings in USD // Returns the USD value of a user's stock token balance.
+  LIVE0903+ value a user's holdings in USD solidity // Returns the USD value of a user's stock token balance.
+  ARCHIVED- Next steps Token Contracts - all stock token & ETF addresses Oracles & Price Feeds - price feed integration Deploy a Contract - ship your contracts to Robinhood Chain Disclaimer This page features third-party developers and protocols building on Robinhood Chain.
+  LIVE0903+ Next steps - Token Contracts - all stock token & ETF addresses - Oracles & Price Feeds - price feed integration - Deploy a Contract - ship your contracts to Robinhood Chain Disclaimer <div style={{ fontSize:
+  LIVE0903+ 'var(--vocs-color text3)' }}
+  LIVE0903+ This page features third-party developers and protocols building on Robinhood Chain.
+
+########## 08-stock-token-apis.md <-> chain_stock-token-apis.mdx  ratio=0.946 diffblocks=12
+  ARCHIVED- https://cdn.robinhood.com/ncw assets/logos/.png .
+  LIVE0903+ https://cdn.robinhood.com/ncw assets/logos/<address .png .
+  ARCHIVED- Field Type Notes --- --- --- fractionalTradability string null Fractional-share tradability of the underlier.
+  ARCHIVED- allDayTradability string null RH all-day / overnight (24/5) trading flag for the underlier.
+  ARCHIVED- extendedHoursFractionalTradability boolean null Whether fractional trading is enabled during extended hours.
+  LIVE0903+ Field Type Notes --- --- --- fractionalTradability string \ null Fractional-share tradability of the underlier.
+  LIVE0903+ allDayTradability string \ null RH all-day / overnight (24/5) trading flag for the underlier.
+  LIVE0903+ extendedHoursFractionalTradability boolean \ null Whether fractional trading is enabled during extended hours.
+  ARCHIVED- UNIT SPLIT unitSplit oldUnderlyingSymbol , oldRate , newUnderlyingSymbol , newRate , alternateUnderlyingSymbol , alternateRate Example { "corpActions":
+  LIVE0903+ UNIT SPLIT unitSplit oldUnderlyingSymbol , oldRate , newUnderlyingSymbol , newRate , alternateUnderlyingSymbol , alternateRate Example json { "corpActions":
+  ARCHIVED- Next steps Stock Tokens - overview of Robinhood Stock Tokens Building with Stock Tokens - onchain integration patterns and the multiplier Token Contracts - all stock token & ETF addresses Oracles & Price Feeds - onchain price feed integration
+  LIVE0903+ Next steps - Stock Tokens - overview of Robinhood Stock Tokens - Building with Stock Tokens - onchain integration patterns and the multiplier - Token Contracts - all stock token & ETF addresses - Oracles & Price Feeds - onchain price feed integration
+
+########## 12-differences-from-ethereum.md <-> chain_differences-from-ethereum.mdx  ratio=0.941 diffblocks=4
+  ARCHIVED- uint256 l2Block = ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber(); Randomness block.prevrandao / block.difficulty return a constant value on Robinhood Chain and are not a source of randomness.
+  LIVE0903+ solidity uint256 l2Block = ArbSys(0x0000000000000000000000000000000000000064).arbBlockNumber(); Randomness block.prevrandao / block.difficulty return a constant value on Robinhood Chain and are not a source of randomness.
+  ARCHIVED- Further reading Gas & Fees Transaction Finality Cross-Chain Messaging Arbitrum:
+  LIVE0903+ Further reading - Gas & Fees - Transaction Finality - Cross-Chain Messaging - Arbitrum:
+
+########## 13-gas-and-fees.md <-> chain_gas-and-fees.mdx  ratio=0.571 diffblocks=12
+  ARCHIVED- L2 execution fee - the cost of executing your transaction on Robinhood Chain.
+  LIVE0903+ - L2 execution fee - the cost of executing your transaction on Robinhood Chain.
+  ARCHIVED- L1 data fee - the cost of posting your transaction's data to Ethereum for data availability.
+  LIVE0903+ - L1 data fee - the cost of posting your transaction's data to Ethereum for data availability.
+  ARCHIVED- Pack function arguments tightly.
+  ARCHIVED- Avoid unnecessary data in calls.
+  ARCHIVED- Batch operations where possible (see Account Abstraction for batched UserOperations).
+  ARCHIVED- Further reading Differences from Ethereum Connecting to Robinhood Chain - ETH as the native gas token Protocol Contracts - ArbGasInfo and NodeInterface precompiles Arbitrum:
+  LIVE0903+ - Pack function arguments tightly.
+  LIVE0903+ - Avoid unnecessary data in calls.
+  LIVE0903+ - Batch operations where possible (see Account Abstraction for batched UserOperations).
+  LIVE0903+ Further reading - Differences from Ethereum - Connecting to Robinhood Chain - ETH as the native gas token - Protocol Contracts - ArbGasInfo and NodeInterface precompiles - Arbitrum:
+
+########## 14-transaction-finality.md <-> chain_transaction-finality.mdx  ratio=0.833 diffblocks=6
+  ARCHIVED- Choosing a confirmation level Everyday UX (most apps):
+  LIVE0903+ Choosing a confirmation level - Everyday UX (most apps):
+  ARCHIVED- High-value or irreversible actions:
+  LIVE0903+ - High-value or irreversible actions:
+  ARCHIVED- Further reading Differences from Ethereum Bridging - the 7-day withdrawal challenge period Arbitrum:
+  LIVE0903+ Further reading - Differences from Ethereum - Bridging - the 7-day withdrawal challenge period - Arbitrum:
+
+########## 16-token-contracts.md <-> chain_contracts.mdx  ratio=0.000 diffblocks=25
+  ARCHIVED- Base tokens Symbol Contract Notes --- --- --- WETH 0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73 Canonical wrapped ETH on Robinhood Chain (L2 Weth) USDG 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168 Global Dollar stablecoin (Paxos) Stock Tokens and Tokenized ETFs (194 active) All are ERC-20, 18 decimals, deployed on Robinhood Chain (chain ID 4663), status ASSET STATUS ACTIVE .
+  ARCHIVED- Multiplier is the on-chain uiMultiplier() (ERC-8056), 1.0 = one token represents one underlying share.
+  ARCHIVED- Feed is the Chainlink price feed proxy; blank means no Chainlink feed was published for that token at the time of capture.
+  ARCHIVED- Total supply is the raw totalSupply() divided by 1e18 at block 52,437,900 on 2026-09-02.
+  ARCHIVED- Symbol Name Contract Multiplier Total supply Chainlink feed proxy --- --- --- --- --- --- AAOI Applied Optoelectronics • Robinhood Token 0x521Cf887E6531c6F667b5BC4D896E5d9bfE8EB2E 1.000000000000 137.7070 - AAPL Apple • Robinhood Token 0xaF3D76f1834A1d425780943C99Ea8A608f8a93f9 1.000566080061 12,562.3966 0x6B22A786bAa607d76728168703a39Ea9C99f2cD0 ABCL Abcellera Biologics • Robinhood Token 0x3139D77
+  ARCHIVED- • Robinhood Token 0x748c32c3ca24eDf31ea597Db1F3d330a7a6DA3Dc 1.000000000000 24.6110 - AMAT Applied Materials • Robinhood Token 0x36046893810a7E7fCE501229d57dc3FC8c8716d0 1.000000000000 27.9930 - AMBA Ambarella • Robinhood Token 0x99D9D8663545151603863C5AcbD6FC3218899009 1.000000000000 178.3490 - AMC AMC Entertainment • Robinhood Token 0x05a3d1Cd21d0C88145E82600E62e7E496e0F222B 1.000000000000 116,2
+  ARCHIVED- Beauty • Robinhood Token 0x39EC44Bee4F6A116c6F9B8De566848a985C53C60 1.000000000000 326.2170 - EWT iShares MSCI Taiwan Capped ETF • Robinhood Token 0x1c690498150252222C275A5CEd69d3A6b1f52D5E 1.000000000000 26.1990 - EWY iShares MSCI South Korea fund • Robinhood Token 0x7f0aBeF0C07280F82c6a08ead09dEd6BAE2C13Fc 1.000000000000 31.1880 0xEFdf54610B62A7753Ec30bDc380847c12D32e1D1 F Ford Motor • Robinhood
+  ARCHIVED- • Robinhood Token 0x03BC731Ffb162cdd7B98D3C6542bFC291126075d 1.000000000000 756.3370 - FTNT Fortinet • Robinhood Token 0x3FB8976980d486084b2eb4a404BD12e72823958f 1.000000000000 63.4820 - FUTU Futu Holdings • Robinhood Token 0xeB30663bDFf0622Ef4e4E5cBb4E975F19f33f51D 1.000000000000 260.5600 - GE General Electric • Robinhood Token 0x63b814DDBd6BF339f25Fed8c36158a008D5B373e 1.000000000000 216.7190 - 
+  ARCHIVED- • Robinhood Token 0x2D427692E928fa156ec22acfaBaFA0447C5805B7 1.000000000000 782.2520 - GME GameStop • Robinhood Token 0x1b0E319c6A659F002271B69dB8A7df2F911c153E 1.000000000000 101,721.5930 0x27C71df6A64fB476468EdF256CF72c038baB5B67 GOOGL Alphabet Class A • Robinhood Token 0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3 1.000000000000 5,208.3340 0xF6f373a037c30F0e5010d854385cA89185AE638b HII Huntington 
+  ARCHIVED- • Robinhood Token 0xEAf2512dFC1bEAc608F8794B3793CD4E02894Aa6 1.000000000000 18.1970 - JNJ Johnson & Johnson • Robinhood Token 0x03DfbBE0AC4E7bCDaFd08eD41A400326B77D8c80 1.000000000000 618.6510 - JOBY Joby Aviation • Robinhood Token 0xb334C5cE741B80B5B671F47F5C269Cb193fe8E24 1.000000000000 2,471.8160 - KLAC KLA • Robinhood Token 0x96b933C74eCB4A0926b9210cef7b743EF46be2E9 1.000000000000 12.8870 - KS
+  ARCHIVED- • Robinhood Token 0xec262a75e413fAfD0dF80480274532C79D42da09 1.000000000000 11,851.2690 0x396118bdFB181e6240E74D243F266B061c0edc3D MTSI MACOM • Robinhood Token 0xC93f4d80e268AB922e871bd169156C3CC41894e6 1.000000000000 17.1910 - MU Micron Technology • Robinhood Token 0xfF080c8ce2E5feadaCa0Da81314Ae59D232d4afD 1.000074823219 3,093.6552 0x425EEFdCf05ed6526C3cE61Af99429A228a6d596 MXL MaxLinear • Robin
+  ARCHIVED- Class A common stock • Robinhood Token 0x116F00968269B7bfbaD4109cE591d6E74c0601d4 1.000000000000 167.6410 - NFLX Netflix • Robinhood Token 0xE0444EF8BF4eD74f74FD73686e2ddF4C1c5591E8 1.000000000000 4,451.5590 - NNE Nano Nuclear Energy • Robinhood Token 0xBEF75684C43c4ea7BD18Dd532a2244674Ee8b926 1.000000000000 1,275.5740 - NOW ServiceNow • Robinhood Token 0x0C3260aF4B8f13a69c4c2dFb84fD667890CDFa14 1
+  ARCHIVED- Common Stock • Robinhood Token 0xC583c60aeF9Dc401Da72cEC1B404743a93cea1Cc 1.000000000000 1,090.4500 - QCOM Qualcomm • Robinhood Token 0x0f17206447090e464C277571124dD2688E48AEA9 1.000000000000 116.5290 - QQQ Invesco QQQ • Robinhood Token 0xD5f3879160bc7c32ebb4dC785F8a4F505888de68 1.000000000000 3,423.4730 0x80901d846d5D7B030F26B480776EE3b29374C2ae QUBT Quantum Computing • Robinhood Token 0x59818904
+  ARCHIVED- American Depositary Shares • Robinhood Token 0x84CAb63bc87912E71ad199ff14A0bA45de68FeF8 1.000000000000 4,111.0000 - SLS SELLAS Life Sciences • Robinhood Token 0x285b231728c7E4333799183DF1094d775246a535 1.000000000000 241.0000 - SLV iShares Silver Trust • Robinhood Token 0x411eFb0E7f985935DAec3D4C3ebaEa0d0AD7D89f 1.000000000000 15,412.8010 0x209b73908e92Ae021826eD79609845451Ecba2ce SMCI Super Micro
+  ARCHIVED- Class A Common Stock • Robinhood Token 0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa 1.000000000000 42,082.7440 0xB265810950ba6c5C0Ff821c9963014a56fD8Bffb SPMO Invesco S&P 500 Momentum ETF • Robinhood Token 0xAd622320e520de39e72d41EF07438C3Fd3354875 1.000000000000 168.8580 - SPY SPDR S&P 500 ETF Trust • Robinhood Token 0x117cc2133c37B721F49dE2A7a74833232B3B4C0C 1.000000000000 15,450.7170 0x319724394D
+  ARCHIVED- • Robinhood Token 0x9e7ABD3C9139D14E4c86DcE0e455AAB7A0C2FB3E 1.000000000000 30,469.0000 - XLK State Street Technology Select Sector SPDR ETF • Robinhood Token 0x15Cd20759CE7F3285c29A319dE2D1A2e098c6f43 1.000000000000 60.5950 - XNDU Xanadu Quantum • Robinhood Token 0xA8eB3BCcbf2017eE7CBfb652eB51CF2E1B153289 1.000000000000 389.0000 - XOM ExxonMobil Holdings Corporation • Robinhood Token 0xf9B46d3D1B
+  ARCHIVED- Tokens with multiplier != 1.0:
+  ARCHIVED- AAPL (1.000566080), ASML (1.000101323), CCL (1.021486445), COST (1.000612040), CRWD (4.000000000), DELL (1.000063709), MU (1.000074823), ORCL (1.002210915), SGOV (1.005101770).
+  ARCHIVED- Tokens with oraclePaused() == true :
+  ARCHIVED- ISIN and asset UID The REST registry also returns an ISIN and a 32-byte asset uid (matching the on-chain uid() ), stable across chains.
+  ARCHIVED- Symbol ISIN uid --- --- --- AAOI US03823U1025 0x00000000000000000000000000000000a47bbc4c8a0b4f44a6d1aff3242b3088 AAPL US0378331005 0x00000000000000000000000000000000c2425be3658540dd8e2424cbf3c5c649 ABCL CA00288U1066 0x00000000000000000000000000000000cbe64873637849e38e848d35826726d4 ADBE US00724F1012 0x00000000000000000000000000000000d44f85ce72274d6e867a54fa2f4009cb AEHR US00760J1088 0x000000000000
+  LIVE0903+ Robinhood Chain Token Contracts Token Smart Contracts The following contracts are deployed on Robinhood Chain.
+  LIVE0903+ Use the addresses on this page to identify the canonical Robinhood Stock Token for each underlying - a token with a matching name/ticker but a different contract address is not a Robinhood Stock Token.
+  LIVE0903+ Symbol Contract -------- ------- WETH 0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73 USDG 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168 Stock Tokens & Tokenized ETFs The table below is generated live from the on-chain asset registry.
+  LIVE0903+ Each symbol links to the token's contract on Blockscout.
+
+########## 17-protocol-contracts.md <-> chain_protocol-contracts.mdx  ratio=0.000 diffblocks=14
+  ARCHIVED- ![Logo!Logo](/chain) ![Logo!Logo](/chain) Robinhood Chain Contracts Core contracts The following contracts are deployed on Ethereum (L1).
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- Rollup 0x23A19d23e89166adedbDcB432518AB01e4272D94 0xdc5F8E399DBd8a9F5F87AeC4C23Beb12431b386D Sequencer Inbox 0xBd0D173EEb87D57A09521c24388a12789F33ba96 0xA0D9dB3DC9791D54b5183C1C1866eFe1eCA7D414 CoreProxyAdmin 0x1232813BDd40aa9d53066A880dE78a4Be70B90FD 0x20d5d542c1bF0a3c295524Eaef336fC07e890622 Cross-chain messaging contracts The followi
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- Delayed Inbox 0x1A07cc4BD17E0118BdB54D70990D2158AbAD7a2D 0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4 Bridge 0xDf8755334ce7A73cCF6b581C02eA649AE3E864b3 0x96295BDad104eaD97cC08797b3dC68efF59CcF30 Outbox 0xf0ce991ea4A0d2400A4AB49b20ae333f6Dce3DE9 0x8D180Caf588f3Da027BEf1F42a106Da93F90b166 Token bridge smart contracts Core contracts (L1) The 
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- L1 Gateway Router 0x6a2E3a1e16FC29f27Ce61429746D558d656975bB 0xF6F11aAEE80875776C264d93B37B34cE437382D1 L1 ERC20 Gateway 0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0 0x52C2976cbDEf48BcC51d07d3c523769F76ECBd09 L1 Arb-Custom Gateway 0x9368EAEbFe6E063C69dcF8126711A6997E0eCeE1 0xFB4aa8024F70B00121723A9C923BaD0Dd2dFaf8F L1 Weth Gateway 0xF7e12b
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- L2 Gateway Router 0x1E324B9316138CA9a73F960213621AD1aaf01B89 0x77bF00A6A90c600f214b34BAFBB7918c0cF113A8 L2 ERC20 Gateway 0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e 0x8689aFB9086734e12beA6b5DF541a1da252Ea32a L2 Arb-Custom Gateway 0x912285144fC0f6e89d3Ed16F5Ab72f87A1878959 0xE4EE9C15e2cA44136796342e31b67d953E67a70b L2 Weth Gateway 0x1D187C
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- ArbAddressTable 0x0000000000000000000000000000000000000066 0x0000000000000000000000000000000000000066 ArbAggregator 0x000000000000000000000000000000000000006D 0x000000000000000000000000000000000000006D ArbFunctionTable 0x0000000000000000000000000000000000000068 0x0000000000000000000000000000000000000068 ArbGasInfo 0x000000000000000000000
+  ARCHIVED- Contract Robinhood Chain Robinhood Chain Testnet --- --- --- L2 Multicall 0x2cAC2D899eCC914d704FeaAE33ac1bF36277DaD1 0xa432504b6F04Cafe775b09D8AA92e8dbe41Ec7a8 Permit2 0x000000000022D473030F116dDEE9F6B43aC78BA3 0x000000000022D473030F116dDEE9F6B43aC78BA3
+  LIVE0903+ Robinhood Chain Contracts Core contracts The following contracts are deployed on Ethereum (L1).
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- Rollup 0x23A19d23e89166adedbDcB432518AB01e4272D94 0xdc5F8E399DBd8a9F5F87AeC4C23Beb12431b386D Sequencer Inbox 0xBd0D173EEb87D57A09521c24388a12789F33ba96 0xA0D9dB3DC9791D54b5183C1C1866eFe1eCA7D414 CoreProxyAdmin 0x1232813BDd40aa9d53066A880dE78a4Be70B90FD 0x20d5d542c1bF0a3c295524Eaef336fC07e890622 Cross-chain messaging contract
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- Delayed Inbox 0x1A07cc4BD17E0118BdB54D70990D2158AbAD7a2D 0xF2939afA86F6f933A3CE17fCAB007907B6b0B7a4 Bridge 0xDf8755334ce7A73cCF6b581C02eA649AE3E864b3 0x96295BDad104eaD97cC08797b3dC68efF59CcF30 Outbox 0xf0ce991ea4A0d2400A4AB49b20ae333f6Dce3DE9 0x8D180Caf588f3Da027BEf1F42a106Da93F90b166 Token bridge smart contracts Core contra
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- L1 Gateway Router 0x6a2E3a1e16FC29f27Ce61429746D558d656975bB 0xF6F11aAEE80875776C264d93B37B34cE437382D1 L1 ERC20 Gateway 0x85001CC4867C5e1C22dA4B79BB8852B9e2a06da0 0x52C2976cbDEf48BcC51d07d3c523769F76ECBd09 L1 Arb-Custom Gateway 0x9368EAEbFe6E063C69dcF8126711A6997E0eCeE1 0xFB4aa8024F70B00121723A9C923BaD0Dd2dFaf8F L1 Weth Gat
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- L2 Gateway Router 0x1E324B9316138CA9a73F960213621AD1aaf01B89 0x77bF00A6A90c600f214b34BAFBB7918c0cF113A8 L2 ERC20 Gateway 0xfd9b17206278C16DdaacF6AC8f05dBf97EdCb31e 0x8689aFB9086734e12beA6b5DF541a1da252Ea32a L2 Arb-Custom Gateway 0x912285144fC0f6e89d3Ed16F5Ab72f87A1878959 0xE4EE9C15e2cA44136796342e31b67d953E67a70b L2 Weth Gat
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- ArbAddressTable 0x0000000000000000000000000000000000000066 0x0000000000000000000000000000000000000066 ArbAggregator 0x000000000000000000000000000000000000006D 0x000000000000000000000000000000000000006D ArbFunctionTable 0x0000000000000000000000000000000000000068 0x0000000000000000000000000000000000000068 ArbGasInfo 0x00000000
+  LIVE0903+ Contract Robinhood Chain Robinhood Chain Testnet -------- ------- ------- L2 Multicall 0x2cAC2D899eCC914d704FeaAE33ac1bF36277DaD1 0xa432504b6F04Cafe775b09D8AA92e8dbe41Ec7a8 Permit2 0x000000000022D473030F116dDEE9F6B43aC78BA3 0x000000000022D473030F116dDEE9F6B43aC78BA3
+
+########## 18-deploy-smart-contracts.md <-> chain_deploy-smart-contracts.mdx  ratio=0.571 diffblocks=30
+  ARCHIVED- A wallet with ETH on Robinhood Chain for gas - see Add network to your wallet.
+  ARCHIVED- The network details below.
+  ARCHIVED- Property Mainnet Testnet --- --- --- Network Robinhood Chain Robinhood Chain Testnet Chain ID 4663 46630 RPC URL https://rpc.mainnet.chain.robinhood.com https://rpc.testnet.chain.robinhood.com Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com We recommend deploying to testnet first.
+  LIVE0903+ - A wallet with ETH on Robinhood Chain for gas - see Add network to your wallet.
+  LIVE0903+ - The network details below.
+  LIVE0903+ Property Mainnet Testnet :--- :--- :--- Network Robinhood Chain Robinhood Chain Testnet Chain ID 4663 46630 RPC URL https://rpc.mainnet.chain.robinhood.com https://rpc.testnet.chain.robinhood.com Block Explorer robinhoodchain.blockscout.com explorer.testnet.chain.robinhood.com We recommend deploying to testnet first.
+  ARCHIVED- Install foundryup curl -L https://foundry.paradigm.xyz bash Install forge, anvil, cast, and chisel foundryup 2.
+  ARCHIVED- Create a project Initialize a new project mkdir rh-deploy && cd rh-deploy forge init 3.
+  LIVE0903+ bash Install foundryup curl -L https://foundry.paradigm.xyz bash Install forge, anvil, cast, and chisel foundryup 2.
+  LIVE0903+ Create a project bash Initialize a new project mkdir rh-deploy && cd rh-deploy forge init 3.
+  ARCHIVED- // SPDX-License-Identifier:
+  LIVE0903+ solidity // SPDX-License-Identifier:
+  ARCHIVED- Deploy Set environment variables export PRIVATE KEY=0x<your private key export RH RPC URL=https://rpc.mainnet.chain.robinhood.com Deploy contract forge create HelloRobinhood \ --rpc-url $RH RPC URL \ --private-key $PRIVATE KEY \ --broadcast 5.
+  ARCHIVED- Verify on Block Explorer Verify the contract on Blockscout forge verify-contract <contract address \ src/HelloRobinhood.sol:HelloRobinhood \ --chain-id 4663 \ --rpc-url $RH RPC URL \ --verifier blockscout \ --verifier-url https://robinhoodchain.blockscout.com/api/ After verification, view your contract at https://robinhoodchain.blockscout.com/address/ .
+  LIVE0903+ Deploy bash Set environment variables export PRIVATE KEY=0x<your private key export RH RPC URL=https://rpc.mainnet.chain.robinhood.com Deploy contract forge create HelloRobinhood \ --rpc-url $RH RPC URL \ --private-key $PRIVATE KEY \ --broadcast 5.
+  LIVE0903+ Verify on Block Explorer bash Verify the contract on Blockscout forge verify-contract <contract address \ src/HelloRobinhood.sol:HelloRobinhood \ --chain-id 4663 \ --rpc-url $RH RPC URL \ --verifier blockscout \ --verifier-url https://robinhoodchain.blockscout.com/api/ After verification, view your contract at https://robinhoodchain.blockscout.com/address/<contract address .
+  ARCHIVED- Initialize project and install Hardhat mkdir rh-deploy && cd rh-deploy npm init -y npm install --save-dev hardhat npx hardhat init 2.
+  LIVE0903+ bash Initialize project and install Hardhat mkdir rh-deploy && cd rh-deploy npm init -y npm install --save-dev hardhat npx hardhat init 2.
+  ARCHIVED- require("@nomicfoundation/hardhat-toolbox"); module.exports = { solidity:
+  LIVE0903+ javascript require("@nomicfoundation/hardhat-toolbox"); module.exports = { solidity:
+  ARCHIVED- export PRIVATE KEY=0x<your private key export RH RPC URL=https://rpc.mainnet.chain.robinhood.com 3.
+  LIVE0903+ bash export PRIVATE KEY=0x<your private key export RH RPC URL=https://rpc.mainnet.chain.robinhood.com 3.
+  ARCHIVED- // SPDX-License-Identifier:
+  LIVE0903+ solidity // SPDX-License-Identifier:
+  ARCHIVED- const hre = require("hardhat"); async function main() { const contract = await hre.ethers.deployContract("HelloRobinhood"); await contract.waitForDeployment(); console.log("Deployed to:", await contract.getAddress()); }
+  ARCHIVED- main().catch((error) = { console.error(error); process.exitCode = 1; }); Compile and run deployment script npx hardhat compile npx hardhat run scripts/deploy.js --network robinhood 5.
+  ARCHIVED- Verify on Block Explorer Verify the contract on Blockscout npx hardhat verify --network robinhood <contract address After verification, view your contract at https://robinhoodchain.blockscout.com/address/ .
+  LIVE0903+ javascript const hre = require("hardhat"); async function main() { const contract = await hre.ethers.deployContract("HelloRobinhood"); await contract.waitForDeployment(); console.log("Deployed to:", await contract.getAddress()); }
+  LIVE0903+ main().catch((error) = { console.error(error); process.exitCode = 1; }); bash Compile and run deployment script npx hardhat compile npx hardhat run scripts/deploy.js --network robinhood 5.
+  LIVE0903+ Verify on Block Explorer bash Verify the contract on Blockscout npx hardhat verify --network robinhood <contract address After verification, view your contract at https://robinhoodchain.blockscout.com/address/<contract address .
+
+########## 19-account-abstraction.md <-> chain_account-abstraction.mdx  ratio=0.818 diffblocks=12
+  ARCHIVED- ![Logo!Logo](/chain) ![Logo!Logo](/chain) Account Abstraction Robinhood Chain has first-class support for ERC-4337 account abstraction, and also supports EIP-7702, which lets existing externally-owned accounts delegate to smart contract code - so users can get smart-account features (batching, sponsorship, session keys) without migrating to a new address.
+  LIVE0903+ Account Abstraction Robinhood Chain has first-class support for ERC-4337 account abstraction, and also supports EIP-7702, which lets existing externally-owned accounts delegate to smart contract code - so users can get smart-account features (batching, sponsorship, session keys) without migrating to a new address.
+  ARCHIVED- Install dependencies npm install @alchemy/wallet-apis @alchemy/common viem 1.
+  ARCHIVED- Create a client and send gas-sponsored operation const client = createSmartWalletClient({ transport:
+  LIVE0903+ Install dependencies bash npm install @alchemy/wallet-apis @alchemy/common viem 4.
+  LIVE0903+ Create a client and send gas-sponsored operation typescript const client = createSmartWalletClient({ transport:
+  ARCHIVED- npm i @zerodev/sdk @zerodev/ecdsa-validator Send a sponsored transaction with ZeroDev:
+  ARCHIVED- const ZERODEV RPC = 'https://rpc.zerodev.app/api/v3/YOUR PROJECT ID/chain/4663' const chain = robinhoodMainnet const entryPoint = getEntryPoint("0.7") const kernelVersion = KERNEL V3 1 const main = async () = { // Construct a signer const privateKey = generatePrivateKey() const signer = privateKeyToAccount(privateKey) // Construct a public client const publicClient = createPublicClient({ // Use yo
+  LIVE0903+ bash npm i @zerodev/sdk @zerodev/ecdsa-validator Send a sponsored transaction with ZeroDev:
+  LIVE0903+ typescript const ZERODEV RPC = 'https://rpc.zerodev.app/api/v3/YOUR PROJECT ID/chain/4663' const chain = robinhoodMainnet const entryPoint = getEntryPoint("0.7") const kernelVersion = KERNEL V3 1 const main = async () = { // Construct a signer const privateKey = generatePrivateKey() const signer = privateKeyToAccount(privateKey) // Construct a public client const publicClient = createPublicClient(
+  ARCHIVED- Further reading Alchemy documentation ERC-4337 specification ZeroDev documentation
+  LIVE0903+ Further reading - Alchemy documentation - ERC-4337 specification - ZeroDev documentation
+
+########## 20-cross-chain-messaging.md <-> chain_cross-chain-messaging.mdx  ratio=0.833 diffblocks=12
+  ARCHIVED- L1 → L2 via retryable tickets, submitted through the Delayed Inbox.
+  LIVE0903+ - L1 → L2 via retryable tickets, submitted through the Delayed Inbox.
+  ARCHIVED- L2 → L1 via the ArbSys precompile.
+  LIVE0903+ - L2 → L1 via the ArbSys precompile.
+  ARCHIVED- registerCustomArbitrumNetwork({ name:
+  LIVE0903+ typescript registerCustomArbitrumNetwork({ name:
+  ARCHIVED- const messageCreator = new ParentToChildMessageCreator(parentSigner); // an Ethereum signer const tx = await messageCreator.createRetryableTicket( { to:
+  LIVE0903+ typescript const messageCreator = new ParentToChildMessageCreator(parentSigner); // an Ethereum signer const tx = await messageCreator.createRetryableTicket( { to:
+  ARCHIVED- const arbSys = ArbSys factory.connect( "0x0000000000000000000000000000000000000064", childSigner // a Robinhood Chain signer ); const tx = await arbSys.sendTxToL1( destinationL1Address, // target contract on Ethereum data, // calldata { value:
+  LIVE0903+ typescript const arbSys = ArbSys factory.connect( "0x0000000000000000000000000000000000000064", childSigner // a Robinhood Chain signer ); const tx = await arbSys.sendTxToL1( destinationL1Address, // target contract on Ethereum data, // calldata { value:
+  ARCHIVED- const childReceipt = new ChildTransactionReceipt(receipt); const [message] = await childReceipt.getChildToParentMessages(parentSigner); // This promise resolves only after the challenge window expires await message.waitUntilReadyToExecute(childProvider); await message.execute(parentSigner); Further reading Arbitrum SDK Arbitrum cross-chain messaging docs Bridging - for moving assets rather than me
+  LIVE0903+ typescript const childReceipt = new ChildTransactionReceipt(receipt); const [message] = await childReceipt.getChildToParentMessages(parentSigner); // This promise resolves only after the challenge window expires await message.waitUntilReadyToExecute(childProvider); await message.execute(parentSigner); Further reading - Arbitrum SDK - Arbitrum cross-chain messaging docs - Bridging - for moving asse
+
+########## 21-oracles-and-price-feeds.md <-> chain_oracles-and-price-feeds.mdx  ratio=0.800 diffblocks=20
+  ARCHIVED- // SPDX-License-Identifier:
+  LIVE0903+ solidity // SPDX-License-Identifier:
+  ARCHIVED- feedPrice 1e18 / uiMultiplier() Share-equivalent units:
+  LIVE0903+ feedPrice 1e18 / uiMultiplier() - Share-equivalent units:
+  ARCHIVED- (, int256 sequencerStatus, uint256 startedAt, , ) = sequencerUptimeFeed.latestRoundData(); require(sequencerStatus == 0, "Sequencer down"); // 0 = up require(block.timestamp - startedAt GRACE PERIOD, "Grace period not over"); Oracle Pauses During Corporate Actions While a corporate action is being processed, the price oracle for the affected token is paused - feeds are expected to stop publishing 
+  LIVE0903+ solidity (, int256 sequencerStatus, uint256 startedAt, , ) = sequencerUptimeFeed.latestRoundData(); require(sequencerStatus == 0, "Sequencer down"); // 0 = up require(block.timestamp - startedAt GRACE PERIOD, "Grace period not over"); Oracle Pauses During Corporate Actions While a corporate action is being processed, the price oracle for the affected token is paused - feeds are expected to stop pu
+  ARCHIVED- Best practices Check staleness - compare updatedAt against the feed's heartbeat; reject stale prices.
+  ARCHIVED- Validate the answer - reject zero or negative values.
+  ARCHIVED- Read decimals() - never hard-code.
+  ARCHIVED- Check sequencer uptime - see above.
+  ARCHIVED- Account for the multiplier on corp actions - the feed quotes per-token price; read uiMultiplier() (and pending newUIMultiplier() / effectiveAt() ) consistently before converting to share terms.
+  ARCHIVED- Check the oracle pause flag - read oraclePaused() ; treat true as "do not trust the price," but keep your staleness check as the primary guard since the flag is advisory and not enforced on-chain.
+  ARCHIVED- Further reading Chainlink Data Feeds Chainlink L2 Sequencer Uptime Feeds Robinhood Price Feeds Building with Stock Tokens
+  LIVE0903+ Best practices - Check staleness - compare updatedAt against the feed's heartbeat; reject stale prices.
+  LIVE0903+ - Validate the answer - reject zero or negative values.
+  LIVE0903+ - Read decimals() - never hard-code.
+  LIVE0903+ - Check sequencer uptime - see above.
+  LIVE0903+ - Account for the multiplier on corp actions - the feed quotes per-token price; read uiMultiplier() (and pending newUIMultiplier() / effectiveAt() ) consistently before converting to share terms.
+  LIVE0903+ - Check the oracle pause flag - read oraclePaused() ; treat true as "do not trust the price," but keep your staleness check as the primary guard since the flag is advisory and not enforced on-chain.
+  LIVE0903+ Further reading - Chainlink Data Feeds - Chainlink L2 Sequencer Uptime Feeds - Robinhood Price Feeds - Building with Stock Tokens
+
+########## 22-data-streams.md <-> chain_data-streams.mdx  ratio=0.700 diffblocks=6
+  ARCHIVED- Benefits Sub-second latency for high-frequency updates Pull-based architecture that reduces unnecessary onchain costs Cryptographic verification for trust-minimized data usage Multi-region, high-availability infrastructure Flexible integration for both onchain and offchain processes Key developer tools Data visualization dashboards at <https://data.chain.link/streams SDKs in Go, TypeScript, and Ru
+  LIVE0903+ Benefits - Sub-second latency for high-frequency updates - Pull-based architecture that reduces unnecessary onchain costs - Cryptographic verification for trust-minimized data usage - Multi-region, high-availability infrastructure - Flexible integration for both onchain and offchain processes Key developer tools - Data visualization dashboards at https://data.chain.link/streams - SDKs in Go, TypeS
+  ARCHIVED- Network Verifier Proxy Address --- --- Robinhood Chain 0xcE73c8ad08CBDEaCa6078BF0627C8fe0a9a536E7 Developers should invoke the verify() function on this specific contract to authenticate signed reports on-chain prior to execution.
+  LIVE0903+ Network Verifier Proxy Address :--- :--- Robinhood Chain 0xcE73c8ad08CBDEaCa6078BF0627C8fe0a9a536E7 Developers should invoke the verify() function on this specific contract to authenticate signed reports on-chain prior to execution.
+  ARCHIVED- Further reading Chainlink Data Streams
+  LIVE0903+ Further reading - Chainlink Data Streams
+
+########## 26-run-a-full-node.md <-> chain_run-a-full-node.mdx  ratio=0.651 diffblocks=45
+  ARCHIVED- https://rpc.mainnet.chain.robinhood.com Alchemy:
+  LIVE0903+ https://rpc.mainnet.chain.robinhood.com - Alchemy:
+  ARCHIVED- chain info robinhood-chain-info.json and genesis robinhood-genesis.json Testnet:
+  ARCHIVED- chain info robinhood-chain-testnet-info.json Testnet does not use a custom genesis file, so its start command omits the --init.genesis-json-file flag.
+  ARCHIVED- Hardware requirements Component Requirement --- --- CPU Modern multi-core (8+) CPU with strong single-core performance RAM 64 GB RAM (128 GB recommended) Storage Locally attached NVMe SSD; (2 × current chain size) + 20% buffer.
+  LIVE0903+ chain info <a download href={ ${ASSET PREFIX}/chain-node-configs/robinhood-chain-info.json }
+  LIVE0903+ robinhood-chain-info.json</a and genesis <a download href={ ${ASSET PREFIX}/chain-node-configs/robinhood-genesis.json }
+  LIVE0903+ robinhood-genesis.json</a - Testnet:
+  LIVE0903+ chain info <a download href={ ${ASSET PREFIX}/chain-node-configs/robinhood-chain-testnet-info.json }
+  LIVE0903+ robinhood-chain-testnet-info.json</a Testnet does not use a custom genesis file, so its start command omits the --init.genesis-json-file flag.
+  LIVE0903+ Hardware requirements Component Requirement :--- :--- CPU Modern multi-core (8+) CPU with strong single-core performance RAM 64 GB RAM (128 GB recommended) Storage Locally attached NVMe SSD; (2 × current chain size) + 20% buffer.
+  ARCHIVED- An L1 execution RPC endpoint An L1 beacon (consensus) endpoint - required to read blob data If you run your own L1 node, it must be fully synced before Robinhood Chain can finish syncing.
+  LIVE0903+ - An L1 execution RPC endpoint - An L1 beacon (consensus) endpoint - required to read blob data If you run your own L1 node, it must be fully synced before Robinhood Chain can finish syncing.
+  ARCHIVED- Provider Link --- --- Quicknode https://www.quicknode.com/chains/robinhood Blockdaemon https://docs.blockdaemon.com/docs/how-to-connect-to-robinhood dRPC https://drpc.org/chainlist/robinhood-testnet-rpc Validation Cloud https://www.validationcloud.io/robinhood Chainstack https://chainstack.com/build-better-with-robinhood-chain/ GlobalStake https://GlobalStake.io Running the node Start the node wit
+  LIVE0903+ Provider Link :--- :--- Quicknode https://www.quicknode.com/chains/robinhood Blockdaemon https://docs.blockdaemon.com/docs/how-to-connect-to-robinhood dRPC https://drpc.org/chainlist/robinhood-testnet-rpc Validation Cloud https://www.validationcloud.io/robinhood Chainstack https://chainstack.com/build-better-with-robinhood-chain/ GlobalStake https://GlobalStake.io Running the node Start the node w
+  ARCHIVED- Mainnet DATA DIR="$HOME/rh/robinhood-nitro-data" docker run --rm -it \ -v "$DATA DIR":/home/nitro/.arbitrum \ -v "$HOME/rh/config":/home/nitro/config \ -p 8547:8547 -p 8548:8548 \ offchainlabs/nitro-node:v3.11.2-3599aca \ --chain.info-files=/home/nitro/config/robinhood-chain-info.json \ --parent-chain.connection.url=...
+  LIVE0903+ Mainnet bash DATA DIR="$HOME/rh/robinhood-nitro-data" docker run --rm -it \ -v "$DATA DIR":/home/nitro/.arbitrum \ -v "$HOME/rh/config":/home/nitro/config \ -p 8547:8547 -p 8548:8548 \ offchainlabs/nitro-node:v3.11.2-3599aca \ --chain.info-files=/home/nitro/config/robinhood-chain-info.json \ --parent-chain.connection.url=...
+  ARCHIVED- DATA DIR="$HOME/rh/robinhood-nitro-data" docker run --rm -it \ -v "$DATA DIR":/home/nitro/.arbitrum \ -v "$HOME/rh/config":/home/nitro/config \ -p 8547:8547 -p 8548:8548 \ offchainlabs/nitro-node:v3.11.2-3599aca \ --chain.info-files=/home/nitro/config/robinhood-chain-testnet-info.json \ --parent-chain.connection.url=...
+  LIVE0903+ bash DATA DIR="$HOME/rh/robinhood-nitro-data" docker run --rm -it \ -v "$DATA DIR":/home/nitro/.arbitrum \ -v "$HOME/rh/config":/home/nitro/config \ -p 8547:8547 -p 8548:8548 \ offchainlabs/nitro-node:v3.11.2-3599aca \ --chain.info-files=/home/nitro/config/robinhood-chain-testnet-info.json \ --parent-chain.connection.url=...
+  ARCHIVED- curl -d '{"id":0,"jsonrpc":"2.0","method":"eth getBlockByNumber","params":["latest",false]}' \ -H "Content-Type:
+  LIVE0903+ bash curl -d '{"id":0,"jsonrpc":"2.0","method":"eth getBlockByNumber","params":["latest",false]}' \ -H "Content-Type:
+  ARCHIVED- curl -d '{"id":0,"jsonrpc":"2.0","method":"eth syncing","params":[]}' \ -H "Content-Type:
+  LIVE0903+ bash curl -d '{"id":0,"jsonrpc":"2.0","method":"eth syncing","params":[]}' \ -H "Content-Type:
+  ARCHIVED- Robinhood Chain (Mainnet):
+  ARCHIVED- https://snapshot-explorer.arbitrum.io/?chain=Robinhood+Chain Robinhood Chain Testnet:
+  LIVE0903+ - Robinhood Chain (Mainnet):
+  LIVE0903+ https://snapshot-explorer.arbitrum.io/?chain=Robinhood+Chain - Robinhood Chain Testnet:
+  ARCHIVED- Troubleshooting General checks View logs via docker logs -f <container to identify errors.
+  ARCHIVED- Confirm the container status is healthy and not in a restart loop.
+  ARCHIVED- Verify network connectivity to L1 execution and beacon endpoints from the host.
+  ARCHIVED- Confirm your L1 node is fully synced; an unsynced L1 will stall L2 syncing.
+  ARCHIVED- Syncing issues Check the L1 connection and beacon URL; most failures are due to unreachable beacon endpoints.
+  ARCHIVED- Ensure the server clock is accurate using ntp or chrony .
+  ARCHIVED- Verify disk I/O performance; networked storage will significantly throttle sync speed.
+  ARCHIVED- Connectivity issues Verify container ports (8547 for HTTP, 8548 for WS) are correctly mapped and open.
+  ARCHIVED- Ensure --http.addr=0.0.0.0 is set to allow external RPC access.
+  LIVE0903+ Troubleshooting General checks - View logs via docker logs -f <container to identify errors.
+  LIVE0903+ - Confirm the container status is healthy and not in a restart loop.
+  LIVE0903+ - Verify network connectivity to L1 execution and beacon endpoints from the host.
+  LIVE0903+ - Confirm your L1 node is fully synced; an unsynced L1 will stall L2 syncing.
+  LIVE0903+ Syncing issues - Check the L1 connection and beacon URL; most failures are due to unreachable beacon endpoints.
+  LIVE0903+ - Ensure the server clock is accurate using ntp or chrony .
+  LIVE0903+ - Verify disk I/O performance; networked storage will significantly throttle sync speed.
+  LIVE0903+ Connectivity issues - Verify container ports (8547 for HTTP, 8548 for WS) are correctly mapped and open.
+  LIVE0903+ - Ensure --http.addr=0.0.0.0 is set to allow external RPC access.
+
+########## 27-governance.md <-> chain_governance.mdx  ratio=0.889 diffblocks=2
+  ARCHIVED- Participants Seats Participant --- --- 1 BitGo, Inc.
+  LIVE0903+ Participants Seats Participant :--- :--- 1 BitGo, Inc.
+
+########## 28-notices-and-upgrades.md <-> chain_notices-and-upgrades.mdx  ratio=0.667 diffblocks=6
+  ARCHIVED- Node operators should monitor this page - some upgrades require you to update your node before a scheduled activation.
+  ARCHIVED- Developers should review notices for any behavior changes that could affect contracts or integrations.
+  ARCHIVED- End users generally don't need to take action.
+  LIVE0903+ - Node operators should monitor this page - some upgrades require you to update your node before a scheduled activation.
+  LIVE0903+ - Developers should review notices for any behavior changes that could affect contracts or integrations.
+  LIVE0903+ - End users generally don't need to take action.
+
+########## 29-terms-of-service.md <-> chain_terms-of-service.mdx  ratio=0.984 diffblocks=12
+  ARCHIVED- Robinhood Chain Terms of Service 1.
+  LIVE0903+ August 24, 2026 Robinhood Chain Terms of Service 1.
+  ARCHIVED- "Our dApp is deployed on Robinhood Chain"; "[Protocol Name] - Compatible with Robinhood Chain"; "This wallet supports Robinhood Chain." (b) Developer Tools, Libraries, and Open-Source Projects.
+  LIVE0903+ "Our dApp is deployed on Robinhood Chain"; "\[Protocol Name\] - Compatible with Robinhood Chain"; "This wallet supports Robinhood Chain." (b) Developer Tools, Libraries, and Open-Source Projects.
+  ARCHIVED- (i) documentation, README files, and technical specifications for open-source software, SDKs, developer tools, libraries, or APIs designed to interact with or build on the Robinhood Chain network; (ii) GitHub repository names, package names, or similar identifiers, provided the name clearly reflects the purpose of the repository (e.g., "[project-name]-robinhoodchain-sdk") and is not solely "robinh
+  LIVE0903+ (i) documentation, README files, and technical specifications for open-source software, SDKs, developer tools, libraries, or APIs designed to interact with or build on the Robinhood Chain network; (ii) GitHub repository names, package names, or similar identifiers, provided the name clearly reflects the purpose of the repository (e.g., "\[project-name\]-robinhoodchain-sdk") and is not solely "robi
+  ARCHIVED- "This [community/project/initiative] is not affiliated with, endorsed by, or officially connected with Robinhood Markets, Inc."; and (iii) the Authorized User's own name, logo, or brand must be clearly displayed and must be more prominent than any use of the Robinhood Chain Marks in the Authorized User's materials.
+  LIVE0903+ "This \[community/project/initiative\] is not affiliated with, endorsed by, or officially connected with Robinhood Markets, Inc."; and (iii) the Authorized User's own name, logo, or brand must be clearly displayed and must be more prominent than any use of the Robinhood Chain Marks in the Authorized User's materials.
+  ARCHIVED- "[Your Brand] - Powered by Robinhood Chain." Not Permitted:
+  LIVE0903+ "\[Your Brand\] - Powered by Robinhood Chain." Not Permitted:
+  ARCHIVED- Robinhood's election to pursue any claim in court pursuant to this Section 12.14 shall not constitute a waiver of Robinhood's right to arbitrate any other Claim that is otherwise subject to arbitration under this Section 12.
+  LIVE0903+ Robinhood's election to pursue any claim in court pursuant to this Section 12.14 shall not constitute a waiver of Robinhood's right to arbitrate any other Claim that is otherwise subject to arbitration under this Section 12\.
+
+########## 30-report-issue.md <-> chain_report-issue.mdx  ratio=0.250 diffblocks=6
+  ARCHIVED- To report technical issues, please contact us here.
+  ARCHIVED- To report potential vulnerabilities, please submit a report here.
+  ARCHIVED- To discuss partnerships, please contact us here.
+  LIVE0903+ - To report technical issues, please contact us here.
+  LIVE0903+ - To report potential vulnerabilities, please submit a report here.
+  LIVE0903+ - To discuss partnerships, please contact us here.
+
+########## 33-brand-guidelines.md <-> chain_brand-guidelines.mdx  ratio=0.671 diffblocks=47
+  ARCHIVED- Under no circumstances should the standard Robinhood master logo be substituted for the Robinhood Chain logo.
+  ARCHIVED- Only the Robinhood Chain logo from this guideline is authorized for chain partnership content.
+  LIVE0903+ - Under no circumstances should the standard Robinhood master logo be substituted for the Robinhood Chain logo.
+  LIVE0903+ - Only the Robinhood Chain logo from this guideline is authorized for chain partnership content.
+  ARCHIVED- Use the Robinhood Chain logo exactly as provided.
+  LIVE0903+ - Use the Robinhood Chain logo exactly as provided.
+  ARCHIVED- You must refer to the network exclusively as 'Robinhood Chain.' The shorthand 'Hood Chain' is prohibited in all external-facing content.
+  ARCHIVED- You must not use the Robinhood Chain marks in any AI-generated content, synthetic media, deepfakes, or digitally manipulated content that could create a false impression of Robinhood's involvement, endorsement, or sponsorship of any product, service, or statement.
+  ARCHIVED- You must not incorporate the Robinhood Chain Marks, or any element of the Robinhood Chain brand identity, into the artwork, iconography, metadata, or smart contract attributes of any non-fungible token (NFT), digital collectible, or token.
+  LIVE0903+ - You must refer to the network exclusively as 'Robinhood Chain.' The shorthand 'Hood Chain' is prohibited in all external-facing content.
+  LIVE0903+ - You must not use the Robinhood Chain marks in any AI-generated content, synthetic media, deepfakes, or digitally manipulated content that could create a false impression of Robinhood's involvement, endorsement, or sponsorship of any product, service, or statement.
+  LIVE0903+ - You must not incorporate the Robinhood Chain Marks, or any element of the Robinhood Chain brand identity, into the artwork, iconography, metadata, or smart contract attributes of any non-fungible token (NFT), digital collectible, or token.
+  ARCHIVED- !Robinhood Chain logo shown in black on a light background and in white on a black background Logo:
+  ARCHIVED- Download feather symbol asset here !Robinhood feather symbol shown as a rounded-square app icon and as a circular icon on a Robin Neon background Logo Usage:
+  LIVE0903+ Download feather symbol asset here Logo Usage:
+  ARCHIVED- !Robinhood Chain logo with clear space guides showing the minimum spacing equal to the width of the letter R from the wordmark Logo Usage:
+  ARCHIVED- !Robinhood Chain logo shown at four decreasing sizes down to the minimum size of 20px height Logo Usage:
+  ARCHIVED- !Six examples of prohibited logo usage:
+  ARCHIVED- the Robinhood master logo, the feather with the word Chain alone, a recolored logo, the logo over busy imagery, a low-resolution logo, and a rotated feather symbol Color Below are the ways in which we use color with our logos.
+  LIVE0903+ Color Below are the ways in which we use color with our logos.
+  ARCHIVED- Black on Robin Neon ( 000000 on ccff00) !Approved color pairings for the Robinhood Chain logo:
+  ARCHIVED- black on white, white on black, and black on Robin Neon Messaging You must keep momentum stats for Robinhood Chain separate from Robinhood or Robinhood Crypto.
+  LIVE0903+ Black on Robin Neon ( 000000 on ccff00) Messaging - You must keep momentum stats for Robinhood Chain separate from Robinhood or Robinhood Crypto.
+  ARCHIVED- Any statistic included in external-facing content should come with a clear explanation of how it was derived, either within the copy or in a footnote.
+  LIVE0903+ - Any statistic included in external-facing content should come with a clear explanation of how it was derived, either within the copy or in a footnote.
+  ARCHIVED- "[App] surpassed [metric] on [date], according to [source, linked]." You must not refer to Stock Tokens as "tokenized stocks" or "tokenized equities." Use "Stock Tokens" in full.
+  LIVE0903+ "[App] surpassed [metric] on [date], according to [source, linked]." - You must not refer to Stock Tokens as "tokenized stocks" or "tokenized equities." Use "Stock Tokens" in full.
+  ARCHIVED- "tokenized real-world assets such as Stock Tokens." You must use "Robinhood Chain" in full in all external copy.
+  LIVE0903+ "tokenized real-world assets such as Stock Tokens." - You must use "Robinhood Chain" in full in all external copy.
+  ARCHIVED- You must not use "Hood Chain," "Chain," "Robinhood" on its own, or any other shorthand, abbreviation, or informal variant to refer to the network.
+  ARCHIVED- In running text and external copy, write "Robinhood Chain" in the title case in every instance.
+  ARCHIVED- "Our application is deployed on Robinhood Chain." In headings and display copy, follow the capitalization convention of the surrounding content, provided both words remain capitalized.
+  LIVE0903+ - You must not use "Hood Chain," "Chain," "Robinhood" on its own, or any other shorthand, abbreviation, or informal variant to refer to the network.
+  LIVE0903+ - In running text and external copy, write "Robinhood Chain" in the title case in every instance.
+  LIVE0903+ "Our application is deployed on Robinhood Chain." - In headings and display copy, follow the capitalization convention of the surrounding content, provided both words remain capitalized.
+  ARCHIVED- a developer's guide." You may use your own house font, but you must not to italicize, underline, or otherwise style "Robinhood Chain" in a way that distorts the mark or fragments its components.
+  LIVE0903+ a developer's guide." - You may use your own house font, but you must not to italicize, underline, or otherwise style "Robinhood Chain" in a way that distorts the mark or fragments its components.
+  ARCHIVED- What to Avoid You must not tag @RobinhoodApp in content related to Robinhood Chain partnerships; tag @RobinhoodCrypto instead.
+  ARCHIVED- You must not reference $HOOD (or HOOD) in any context.
+  LIVE0903+ What to Avoid - You must not tag @RobinhoodApp in content related to Robinhood Chain partnerships; tag @RobinhoodCrypto instead.
+  LIVE0903+ - You must not reference $HOOD (or HOOD) in any context.
+  ARCHIVED- You must not include projected, estimated, or forward-looking figures in co-marketing content.
+  LIVE0903+ - You must not include projected, estimated, or forward-looking figures in co-marketing content.
+  ARCHIVED- You must not amplify or comment on Robinhood news, earnings, or regulatory matters via co-marketing posts, whether directly or indirectly.
+  ARCHIVED- Disclosures Use of Brand Assets The trademarks, logos, brand assets, and other intellectual property provided within these Brand Guidelines (the "Assets") are made available solely for use in accordance with these guidelines.
+  LIVE0903+ - You must not amplify or comment on Robinhood news, earnings, or regulatory matters via co-marketing posts, whether directly or indirectly.
+  LIVE0903+ Disclosures <div className="brand-disclosures" Use of Brand Assets The trademarks, logos, brand assets, and other intellectual property provided within these Brand Guidelines (the "Assets") are made available solely for use in accordance with these guidelines.

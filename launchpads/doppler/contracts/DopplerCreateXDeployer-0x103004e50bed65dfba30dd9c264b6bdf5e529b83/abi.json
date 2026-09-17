@@ -1,0 +1,768 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "actual",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "expected",
+    "type": "address"
+   }
+  ],
+  "name": "AddressMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AlreadyInitialized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ArrayLengthsMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExecutionFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDeployer",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NewOwnerIsZeroAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoHandoverRequest",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "actual",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "expected",
+    "type": "uint256"
+   }
+  ],
+  "name": "PaymentMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Unauthorized",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   }
+  ],
+  "name": "AdminAdded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   }
+  ],
+  "name": "AdminRemoved",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "deployer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "deployed",
+    "type": "address"
+   }
+  ],
+  "name": "Deployed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "deployer",
+    "type": "address"
+   }
+  ],
+  "name": "DeployerAdded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "admin",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "deployer",
+    "type": "address"
+   }
+  ],
+  "name": "DeployerRemoved",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pendingOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipHandoverCanceled",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pendingOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipHandoverRequested",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "addr",
+    "type": "address"
+   }
+  ],
+  "name": "RolesRevoked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "RolesUpdated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "CreateX",
+  "outputs": [
+   {
+    "internalType": "contract ICreateX",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "admins",
+    "type": "address[]"
+   }
+  ],
+  "name": "addAdmins",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "deployers",
+    "type": "address[]"
+   }
+  ],
+  "name": "addDeployers",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "cancelOwnershipHandover",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pendingOwner",
+    "type": "address"
+   }
+  ],
+  "name": "completeOwnershipHandover",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "initCodeHash",
+    "type": "bytes32"
+   }
+  ],
+  "name": "computeCreate2Address",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   }
+  ],
+  "name": "computeCreate3Address",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   }
+  ],
+  "name": "computeGuardedSalt",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "initCode",
+    "type": "bytes"
+   }
+  ],
+  "name": "deployCreate2",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "initCode",
+    "type": "bytes"
+   },
+   {
+    "internalType": "address",
+    "name": "expected",
+    "type": "address"
+   }
+  ],
+  "name": "deployCreate2",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "initCode",
+    "type": "bytes"
+   }
+  ],
+  "name": "deployCreate3",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "initCode",
+    "type": "bytes"
+   },
+   {
+    "internalType": "address",
+    "name": "expected",
+    "type": "address"
+   }
+  ],
+  "name": "deployCreate3",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "target",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "execute",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "targets",
+    "type": "address[]"
+   },
+   {
+    "internalType": "uint256[]",
+    "name": "values",
+    "type": "uint256[]"
+   },
+   {
+    "internalType": "bytes[]",
+    "name": "data",
+    "type": "bytes[]"
+   }
+  ],
+  "name": "execute",
+  "outputs": [
+   {
+    "internalType": "bytes[]",
+    "name": "",
+    "type": "bytes[]"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   }
+  ],
+  "name": "generateSalt",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "grantRoles",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "hasAllRoles",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "hasAnyRole",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "result",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pendingOwner",
+    "type": "address"
+   }
+  ],
+  "name": "ownershipHandoverExpiresAt",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "result",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "admins",
+    "type": "address[]"
+   }
+  ],
+  "name": "removeAdmins",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "deployers",
+    "type": "address[]"
+   }
+  ],
+  "name": "removeDeployers",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "renounceRoles",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "requestOwnershipHandover",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "name": "revokeRoles",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "addrs",
+    "type": "address[]"
+   }
+  ],
+  "name": "revokeRoles",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   }
+  ],
+  "name": "rolesOf",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "roles",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ }
+]

@@ -1,0 +1,43 @@
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodCustomLaunchpad-v2-default-0x8c529f0a77c07ce0e6796f153d292501ee6f66f6 files 13
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodLaunchpad-classic-0x6a63d96ef77ae569fcb85934cf1bd1ec7fe9b33d files 13
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodBurnLocker-0xd2a7c92fcb240c755919e9230c8db066e9ca1500 files 5
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodProfiles-0xd71f61Ee12c9bb7Faf001267Af17e1118856fA29 files 1
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodCommunityFactory-0x6d188c21f99a7578d4E3fD449b67d740ff97eb4d files 10
+unverified 0x6b8Efd1713B020Ea0C01557Dc3fCFEa266cc048f HoodCommunityFactory-Implementation
+Traceback (most recent call last):
+  File "/Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/_raw/write_contract.py", line 5, in <module>
+    if d.get('message') or not d.get('source_code'):
+       ^^^^^
+AttributeError: 'str' object has no attribute 'get'
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodStockFactory-0x1811F54e2964758641AaC993cA91F9189a8BdA2d files 16
+unverified 0xECF1533F94EB3547FdFF9B50b6173529Aa4E0a33 HoodStockFactory-Implementation
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodV3MigratorV2-a-0x86c6FAF889eBAC8621BBb6dd8CA86aa6d51c9e6C files 11
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodV3MigratorV2-b-0x6d36DcD6fab842a2B29896c5c58f32304B824711 files 11
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodV3Migrator-a-0x5790Ef23bE2E1543442C12F4550FaE147ba8eDBe files 9
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodV3Migrator-b-0x88B4cde518272033F48862CEF728203aF219D02e files 9
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'get'
+unverified 0x52E31d7E2A3A71a55C4527bd5b5cA3FeE2975866 SwapRouter-hood
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/UniswapSwapRouter02-0xCaf681a66D020601342297493863E78C959E5cb2 files 63
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/UniswapV3Factory-0x1f7d7550B1b028f7571E69A784071F0205FD2EfA files 33
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/UniswapV2Factory-0x8bcEaA40B9AcdfAedF85AdF4FF01F5Ad6517937f files 11
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/UniswapV3Pool-FEATHER-WETH-0x72d74dAd7135d5e183A3d3FBE1E8358bBC143A9b files 31
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/WETH-Proxy-0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73 files 9
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/WETH-Implementation-aeWETH-0xC6B81b429797E0f555440b70cD99e032D7AE947e files 22
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/StockFactory-Proxy-RobinhoodStocks-0x4783C67b63dE2B358Ac5951a7D41F47A38F3C046 files 13
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/StockFactory-Implementation-RobinhoodStocks-0xEe351E53BCe6AAF106428358838197C91e36EE0E files 22
+unverified 0xB3f3B54E11217F4F73e7a766B7CAA187390d700D ProtocolOwner-GnosisSafe
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/GnosisSafe-MasterCopy-0x29fcB43b46531BcA003ddC8FCB67FFE91900C762 files 46
+unverified 0x90655172A3F8C73C2D664F372e1be0339702bFa7 Deployer-EOA-1
+unverified 0x0F307b093dafB55B2a0C12D53d5640D00D9a7836 Deployer-EOA-2
+unverified 0x4fc2c986e3dBA46D7Ce6B60919c78E48ae52188b Deployer-EOA-3
+unverified 0x860C93251C121Bd3dF12c7B52aD522edE1AB99FF Deployer-EOA-4
+unverified 0x78b531f1394863964978Dc57d21c07B89e1CEeBd Deployer-EOA-5
+unverified 0x9701fb0aDe1E269c8f64Ec0C7b3cfADB31A13A52 Uniswap-Deployer-EOA
+unverified 0xc6a2941b962fb667786d7F4b97f7f965D6f0A4f8 CommunityLauncher-unverified
+unverified 0xAF36aC404E9472f1dDBC3B36E348920F1E943c9E CommunityRewardsVault-Implementation-unverified
+unverified 0x9Fe65C9a603B0C9975079fBFc510a62713031119 CommunityRewardsVault-FEATHER-clone
+unverified 0xAb0B12005275cA53C649f360119b9C23F60faAb8 HoodCommunityGuarded-Implementation-unverified
+wrote /Volumes/Farhan/Work Folder/Dev/AI/long-launch/resources/launchpads/hood-fun/contracts/HoodToken-Robin-0x67AF360b375DC86aE5Ad620693bfCD916A31600D files 6
+FETCH_DONE

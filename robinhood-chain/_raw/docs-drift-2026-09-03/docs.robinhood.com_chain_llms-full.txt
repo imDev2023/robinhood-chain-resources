@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" data-vocs>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--head-->
+    <script type="module" crossorigin src="https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/assets/index-DCWCEAE1.js"></script>
+    <link rel="stylesheet" crossorigin href="https://cdn.robinhood.com/assets/generated_assets/hoodchain_docsite/assets/style-D37RUZbu.css">
+  </head>
+  <body>
+    <div id="app"><!--body--></div>
+  </body>
+</html>

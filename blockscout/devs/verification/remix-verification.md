@@ -1,0 +1,18 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Verify contracts with the Remix IDE plugin
+
+> Verify smart contracts on Blockscout directly from Remix IDE using the built-in contract verification plugin available since Remix v0.56.0.
+
+Since [v0.56.0](https://github.com/remix-project-org/remix-project/releases/tag/v0.56.0) Remix IDE comes with a built-in verification plugin that allows you to verify your contracts on multiple verifiers.
+
+To verify your contracts on Remix:
+
+* Turn on the plugin "CONTRACT VERIFICATION" from the plugin manager.
+* On the File Explorer, select and compile the contract you want to verify.
+* On the Contract Verification plugin, select the Contract Name, Chain, and input the contract address. Add constructor arguments if needed.
+* Click "Verify". You can see the process on the "Receipts" tab.
+
+You can find more information about the plugin in the [Remix documentation](https://remix-ide.readthedocs.io/en/latest/contract_verification.html#verify-page).

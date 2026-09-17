@@ -1,0 +1,40 @@
+{
+ "address": "0xef9f80d2f51ec6aecab284e778f328e9f0982a6f",
+ "role": "PV2StakingVaultBeacon",
+ "group": "PonsVault v2",
+ "note": "UpgradeableBeacon for Staking vaults. `implementation()` = `0xC8e0a4fE\u2026`, `owner()` = `0x1488473464\u2026`.",
+ "blockscout_address": {
+  "block_number_balance_updated_at": 52466032,
+  "coin_balance": "0",
+  "creation_status": "success",
+  "creation_transaction_hash": "0xd3453bf8a403bd7d43947727c92fa1656049a3852acdd649d7b23864d75242a3",
+  "creator_address_hash": "0x1488473464F2C6E6c5C412f05d805c619322E7EB",
+  "ens_domain_name": null,
+  "exchange_rate": "2397.53",
+  "has_beacon_chain_withdrawals": false,
+  "has_logs": true,
+  "has_token_transfers": false,
+  "has_tokens": false,
+  "has_validated_blocks": false,
+  "hash": "0xEf9f80D2F51Ec6AEcaB284e778f328e9F0982a6f",
+  "implementations": [
+   {
+    "address_hash": "0xC8e0a4fE58918c47F66CF630c6A7205741C11FD4",
+    "name": null
+   }
+  ],
+  "is_contract": true,
+  "is_scam": false,
+  "is_verified": false,
+  "metadata": null,
+  "name": null,
+  "private_tags": [],
+  "proxy_type": "basic_implementation",
+  "public_tags": [],
+  "reputation": "ok",
+  "token": null,
+  "watchlist_address_id": null,
+  "watchlist_names": []
+ },
+ "blockscout_smart_contract": null
+}

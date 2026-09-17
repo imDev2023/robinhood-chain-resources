@@ -1,0 +1,501 @@
+# Noxa - fun home live
+
+> Source: https://fun.noxa.fi/?sort=live
+> Retrieved: 2026-09-02 (agent-browser read)
+> Screenshot: ../screenshots/02-fun-home-live.png
+
+---
+
+Noxa
+
+HomeLaunchBridgeProfileStatsDocsCreate coin
+
+Create
+
+Connect Wallet
+
+# Explore coins
+
+TrendingLiveNewGainersMarket CapVolumeHoldersTradesOldest
+
+Pussy Cat Club-0.86%
+
+$PCC · by 0x2ac7...0943
+
+Mcap
+
+$6.72M
+
+Price
+
+$0.006724
+
+Vol 24h
+
+$1.19M
+
+8d ago10.93K holders
+
+Graduated
+
+What If+0.00%
+
+$IF · by 0x84f8...4afa
+
+Mcap
+
+$7.76M
+
+Price
+
+$0.007764
+
+Vol 24h
+
+$375.97K
+
+1mo ago6.73K holders
+
+Graduated
+
+CashDog-0.09%
+
+$CashDog · by 0xcf7c...b5a4
+
+Mcap
+
+$142.1K
+
+Price
+
+$0.000142
+
+Vol 24h
+
+$37.42K
+
+1mo ago2.24K holders
+
+Graduated
+
+SANTAHOOD0.00%
+
+$SANTACOIN · by 0xd0c8...6216
+
+Mcap
+
+$572.67K
+
+Price
+
+$0.000573
+
+Vol 24h
+
+$91.61K
+
+2mo ago681 holders
+
+Graduated
+
+Cash Cat0.00%
+
+$CASHCAT · by 0xcdfc...ca90
+
+Mcap
+
+$272.39M
+
+Price
+
+$0.2724
+
+Vol 24h
+
+$9.36M
+
+2mo ago119.74K holders
+
+Graduated
+
+TENDIES0.00%
+
+$TENDIES · by 0xe71e...04f0
+
+Mcap
+
+$23.49M
+
+Price
+
+$0.0235
+
+Vol 24h
+
+$2.85M
+
+2mo ago16.11K holders
+
+Graduated
+
+46630.00%
+
+$4663 · by 0x71f2...969b
+
+Mcap
+
+$325.36K
+
+Price
+
+$0.000325
+
+Vol 24h
+
+$48.69K
+
+2mo ago2.74K holders
+
+Graduated
+
+The Juggernaut0.00%
+
+$JUGGERNAUT · by 0xe5f8...8361
+
+Mcap
+
+$8.23M
+
+Price
+
+$0.008232
+
+Vol 24h
+
+$1.89M
+
+2mo ago14.77K holders
+
+Graduated
+
+Robinhood Wallet0.00%
+
+$WALLET · by 0x5427...aa33
+
+Mcap
+
+$10.06M
+
+Price
+
+$0.0101
+
+Vol 24h
+
+$426.22K
+
+1mo ago5K holders
+
+Graduated
+
+Baby Cash Cat0.00%
+
+$BABYCASHCAT · by 0x40fd...2f53
+
+Mcap
+
+$202.21K
+
+Price
+
+$0.000202
+
+Vol 24h
+
+$48.42K
+
+1mo ago1.97K holders
+
+Graduated
+
+Wojak0.00%
+
+$WOJAK · by 0x1e06...9c44
+
+Mcap
+
+$1.31M
+
+Price
+
+$0.001307
+
+Vol 24h
+
+$70.68K
+
+2mo ago1.14K holders
+
+Graduated
+
+KITSU0.00%
+
+$KITSU · by 0x170a...58e5
+
+Mcap
+
+$1.6M
+
+Price
+
+$0.001598
+
+Vol 24h
+
+$201.63K
+
+2mo ago3.69K holders
+
+Graduated
+
+Robinhood0.00%
+
+$ROBINHOOD · by 0x4f5e...68c8
+
+Mcap
+
+$104.45K
+
+Price
+
+$0.000104
+
+Vol 24h
+
+$22.11K
+
+2mo ago2.54K holders
+
+Graduated
+
+Buy Button0.00%
+
+$BUY · by 0x3149...7cec
+
+Mcap
+
+$1.24M
+
+Price
+
+$0.00124
+
+Vol 24h
+
+$152.71K
+
+2mo ago1.83K holders
+
+Graduated
+
+Frog In Hood0.00%
+
+$FIH · by 0xbbfd...d5a5
+
+Mcap
+
+$1.61M
+
+Price
+
+$0.001608
+
+Vol 24h
+
+$144.63K
+
+2mo ago1.28K holders
+
+Graduated
+
+Robin Hood0.00%
+
+$FOX · by 0x0bc5...9269
+
+Mcap
+
+$1.8M
+
+Price
+
+$0.001797
+
+Vol 24h
+
+$333.78K
+
+1mo ago4.28K holders
+
+Graduated
+
+$1 is all you need0.00%
+
+$$1 · by 0x7eaf...4837
+
+Mcap
+
+$152.24K
+
+Price
+
+$0.000152
+
+Vol 24h
+
+$85.03K
+
+1mo ago3.83K holders
+
+Graduated
+
+Robinhood Pepe0.00%
+
+$REPE · by 0xfae9...8c41
+
+Mcap
+
+$116.57K
+
+Price
+
+$0.000117
+
+Vol 24h
+
+$6.88K
+
+2mo ago2.8K holders
+
+Graduated
+
+COCO+0.87%
+
+$COCO · by 0x37b3...63af
+
+Mcap
+
+$560.04K
+
+Price
+
+$0.00056
+
+Vol 24h
+
+$58.7K
+
+1mo ago1.72K holders
+
+Graduated
+
+The Little Guy0.00%
+
+$Guy · by 0x6bb9...a412
+
+Mcap
+
+$121.59K
+
+Price
+
+$0.000122
+
+Vol 24h
+
+$26.12K
+
+1mo ago826 holders
+
+Graduated
+
+meow0.00%
+
+$meow · by 0xbe8a...04da
+
+Mcap
+
+$156.28K
+
+Price
+
+$0.000156
+
+Vol 24h
+
+$49.76K
+
+1mo ago3.14K holders
+
+Graduated
+
+Vibing Cat0.00%
+
+$VIBE CAT · by 0x1611...9e81
+
+Mcap
+
+$308.74K
+
+Price
+
+$0.000309
+
+Vol 24h
+
+$68.22K
+
+1mo ago1.27K holders
+
+Graduated
+
+Dog In Hood0.00%
+
+$DIH · by 0xe1c3...75c2
+
+Mcap
+
+$212.2K
+
+Price
+
+$0.000212
+
+Vol 24h
+
+$54.85K
+
+2mo ago4.23K holders
+
+Graduated
+
+BENJAMINS BREAD0.00%
+
+$BREAD · by 0x8a9d...7ad1
+
+Mcap
+
+$1.01M
+
+Price
+
+$0.001014
+
+Vol 24h
+
+$59.03K
+
+1mo ago480 holders
+
+Graduated
+
+Load more

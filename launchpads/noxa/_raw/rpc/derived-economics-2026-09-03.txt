@@ -1,0 +1,96 @@
+Noxa derived numbers, 2026-09-03, chain 4663 via https://app.doppler.lol/api/rpc/4663
+=====================================================================================
+
+Exact launch counts, from ERC-721 balanceOf on the Uniswap V3 NonfungiblePositionManager
+0x73991a25C818Bf1f1128dEAaB1492D45638DE0D3. Every Noxa launch mints exactly one position
+NFT and transfers it to the locker, and no locker has any unlock path, so the locker's NFT
+balance is an exact launch count.
+
+  LaunchLockerV1      0x7F03effbd7ceB22A3f80Dd468f67eF27826acD85 -> 60,142
+  LaunchLockerV1Test  0xeC4a56061d86955D0Df883efb2E5791d99Ea71f2 ->      1
+  LaunchLockerV2      0x9A6931E371b62048C7543C7002C99D83685BD44d ->  1,090
+  NoxaIO LauncherLocker 0x90331A631123bD2493Ba962c4304dcb49f3A5d4A -> 171
+  total Noxa launches on Robinhood Chain                          -> 61,404
+
+  NFPM totalSupply (all Uniswap V3 positions on the chain)         -> 720,251
+
+Cross-check: the noxa.io front page reports "Tokens 60313 Total launched".
+60,142 + 171 = 60,313 exactly, so that counter is V1 plus noxa.io and excludes the
+1,090 launches on the live fun.noxa.fi V2 factory.
+Independently, LaunchFactoryV2.allTokensLength() returns 1090, matching the V2 locker.
+
+Graduation threshold, derived from api.noxa.fi
+----------------------------------------------
+For twelve tokens taken from /api/tokens?sort=new, marketCapWeth / (graduationPct/100)
+equals 20.0000 in every case:
+
+  0x9852d8ac... mcapWETH 1.359089 pct 6.7954 -> 20.0000
+  0xe0fa13e9... mcapWETH 1.355795 pct 6.7790 -> 20.0000
+  0x0ec130c6... mcapWETH 1.355854 pct 6.7793 -> 20.0000
+  0x66b1cf95... mcapWETH 1.358334 pct 6.7917 -> 20.0000
+  0xfe055401... mcapWETH 1.356290 pct 6.7814 -> 20.0000
+  0xd1ae6d27... mcapWETH 1.355858 pct 6.7793 -> 20.0000
+  0xcd52d6c9... mcapWETH 1.355897 pct 6.7795 -> 20.0000
+  0x847a71dd... mcapWETH 1.355909 pct 6.7795 -> 20.0000
+  0xd06006fa... mcapWETH 1.554987 pct 7.7749 -> 20.0000
+  0xe99c3b0d... mcapWETH 1.356023 pct 6.7801 -> 20.0000
+  0x12d16f17... mcapWETH 1.355692 pct 6.7785 -> 20.0000
+
+Graduation on the live V2 launchpad is therefore a fully diluted market cap of
+20 WETH, about $48,000 at the $2,399.22 ETH price the same API reported.
+A fresh launch opens at about 1.3557 WETH FDV, roughly $3,253, which is why every
+new coin shows about 6.78% progress the moment it is created.
+Graduation has no contract effect: the position never moves and nothing migrates.
+
+Pool WETH balances were also read and do NOT track graduationPct, confirming the
+metric is a price/market-cap measure rather than a liquidity-raised measure.
+
+Live contract state
+-------------------
+LaunchFactoryV2 0xDd84fDdEA1206115B37dbBC0ba5721530E1bA9C5
+  launchingEnabled()   -> true
+  allTokensLength()    -> 1090
+  MAX_LAUNCH_FEE()     -> 1000000000000000000 (1 ETH ceiling)
+  owner()              -> 0x63CD726Ccc6560F571861BbAb925f9AF4a6095B2
+  treasury()           -> 0x4977307cF8fa1fb5Ce45873717164c872BAD6f23
+  locker()             -> 0x9A6931E371b62048C7543C7002C99D83685BD44d
+  launchConfigs(0)     -> (supply 1e27, maxWalletBps 10000, maxTxBps 10000,
+                           restrictionSeconds 1, initialTick -204200, launchFeeWei 0,
+                           observationCardinality 300, enabled true)
+  dexConfigs(0)        -> (positionManager 0x73991a25..., swapRouter 0xCaf681a6...,
+                           v3Factory 0x1f7d7550..., weth 0x0Bd7D308..., fee 10000, enabled true)
+
+LaunchLockerV2 0x9A6931E371b62048C7543C7002C99D83685BD44d
+  protocolFeeShare()     -> 0   (percent, so 100% of collected fees to the creator)
+  protocolFeeRecipient() -> 0x4977307cF8fa1fb5Ce45873717164c872BAD6f23
+  BPS_DENOMINATOR()      -> 10000
+  twapWindow()           -> 1800
+  maxSlippageBps()       -> 2000
+  REASSIGN_DELAY()       -> 86400
+
+LaunchFactoryV1 0xD9eC2db5f3D1b236843925949fe5bd8a3836FCcB
+  launchEnabled() -> false
+  launchFee()     -> 500000000000000 (0.0005 ETH, now unreachable)
+LaunchFactoryV1Test 0x0742D64925E4C78cb1bAFfce2fA1dceBa8Cf133c
+  launchEnabled() -> false
+
+NoxaIO LaunchFactory 0xA24D48D50Fd7985c6dE816EaF77C1A17D3593BBE
+  launchEnabled()     -> true
+  launchFee()         -> 500000000000000 (0.0005 ETH)
+  owner()             -> 0x407Fe47FA03617062E9cD27DCACe8DAB006322d8
+  launchConfigCount() -> 1
+  dexConfigCount()    -> 1
+NoxaIO FeeRouter 0x28A5328B61E00dD75F1d0C8A1831A65890E42d36
+  protocolShareBps() -> 3333
+  ctoShareBps()      -> 3334
+  burnerShareBps()   -> 3333
+  protocolRecipient()-> 0xA2dA74831c34D396Be9a42FbeCc54C561184BCb1 (the FeeSplitter)
+  burnerRecipient()  -> 0xee0a9B71e3def2A5c4d141AD1B97CE0Dd1E87748
+
+Token-level state, "Miss him" 0x0EC130c6258534663b67c131A5a6719B4F614663
+  maxWalletLimit()     -> 1e27 (the whole supply, so no cap)
+  maxTxLimit()         -> 1e27
+  restrictionSeconds() -> 1
+  poolFee()            -> 10000
+  deployer()           -> 0xa0b80B6db45E1C324E2396477660f022ea12BB06
+  locker()             -> 0x9A6931E371b62048C7543C7002C99D83685BD44d

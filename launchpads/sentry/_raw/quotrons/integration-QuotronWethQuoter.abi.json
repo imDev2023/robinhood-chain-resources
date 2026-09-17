@@ -1,0 +1,103 @@
+[
+  {
+    "type": "function",
+    "name": "quoteBuyExactEth",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "ethIn", "type": "uint256" },
+      { "name": "payer", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "quotronOut", "type": "uint256" },
+      { "name": "feeBps", "type": "uint256" },
+      { "name": "feeWeth", "type": "uint256" },
+      { "name": "poolWethIn", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "quoteSellExactQuotron",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "quotronIn", "type": "uint256" },
+      { "name": "payer", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "ethOut", "type": "uint256" },
+      { "name": "feeBps", "type": "uint256" },
+      { "name": "feeWeth", "type": "uint256" },
+      { "name": "poolWethOut", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "quoteBuyExactQuotron",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "quotronOut", "type": "uint256" },
+      { "name": "payer", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "ethIn", "type": "uint256" },
+      { "name": "feeBps", "type": "uint256" },
+      { "name": "feeWeth", "type": "uint256" },
+      { "name": "poolWethIn", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "currentFeeBps",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "payer", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "router",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "hook",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "quotron",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "weth",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "poolId",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bytes32" }
+    ]
+  }
+]

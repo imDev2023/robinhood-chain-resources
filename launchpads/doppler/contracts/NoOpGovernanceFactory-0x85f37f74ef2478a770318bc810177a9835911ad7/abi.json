@@ -1,0 +1,44 @@
+[
+ {
+  "inputs": [],
+  "name": "DEAD_ADDRESS",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "name": "create",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "governance",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "timelockController",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ }
+]

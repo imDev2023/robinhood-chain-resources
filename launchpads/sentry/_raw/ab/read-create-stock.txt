@@ -1,0 +1,41 @@
+Skip to tokens list
+
+DiscoverSocialCreateProfileTools
+
+Create a new coin
+
+INK0xTEST...REDACTED
+
+Coin info
+
+Deploy your coin on Ink chain
+
+Coin Name
+
+Coin Symbol
+
+Coin LogoTap to upload logo
+
+Launch Type
+
+StandardStock Base Pair
+
+Base Stock PairSelect a tokenized stock…
+
+Your token launches paired with this stock. Holders earn the stock reflections on every trade.
+
+Telegram Coin EmojiCreate custom TG coin emoji · $20Learn more
+
+Dev Buy (USD)Switch to ETH
+
+Social linksOptional
+
+Creator fee recipientOptional · defaults to your wallet
+
+Deploy on Robinhood
+
+SENTRY$0.00320
+
+Guide·Disclaimers·Terms·Privacy
+
+Sentry is a product of Mavrk, Inc.

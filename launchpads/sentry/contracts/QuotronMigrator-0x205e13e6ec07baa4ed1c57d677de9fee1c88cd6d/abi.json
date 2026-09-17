@@ -1,0 +1,1132 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "legacy_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "legacyMirror_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "legacyReflections_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "v2_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "v2Reflections_",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "snapshotBlock_",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "snapshotRoot_",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "distributionCap_",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "ClaimAlreadyAssigned",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ClaimAlreadyFollowsToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ClaimNotAssigned",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DistributionCapExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DistributionClosed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DistributionIncomplete",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "IncidentAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidKind",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidProof",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LeafAlreadyUsed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LegacyConfigurationUnsafe",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Paused_",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnsafeLegacyApproval",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongBeneficiary",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongTerminalState",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddress",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalDistributed",
+    "type": "uint256"
+   }
+  ],
+  "name": "DistributionFinalized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "FractionalMigrated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "reserveSpent",
+    "type": "uint256"
+   }
+  ],
+  "name": "GenesisDistributed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "snapshotAccount",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "beneficiary",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "leaf",
+    "type": "bytes32"
+   }
+  ],
+  "name": "IdClaimAssigned",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "snapshotAccount",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "currentOwner",
+    "type": "address"
+   }
+  ],
+  "name": "IdClaimFollowsToken",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousBeneficiary",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newBeneficiary",
+    "type": "address"
+   }
+  ],
+  "name": "IdClaimTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   }
+  ],
+  "name": "IdMigrated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "id",
+    "type": "uint256"
+   }
+  ],
+  "name": "LegacyRewardDeferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "id",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "LegacyRewardMigrated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "paused",
+    "type": "bool"
+   }
+  ],
+  "name": "Paused",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "originalId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "replacementId",
+    "type": "uint256"
+   }
+  ],
+  "name": "RestitutionClaimed",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "INCIDENT_ATTACKER",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "INCIDENT_OPERATOR",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "INCIDENT_POISON_SEED",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "KIND_DARK",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "KIND_FRACTIONAL",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "KIND_HARDWIRED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "KIND_RESTITUTION_DARK",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "LEAF_DOMAIN",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "beneficiary",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "assignIdClaim",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "assignIdClaimToToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "originalId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "replacementId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "claimRestitutionDark",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "snapshotAccount",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "completeDepositedId",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "kind",
+      "type": "uint8"
+     },
+     {
+      "internalType": "address",
+      "name": "account",
+      "type": "address"
+     },
+     {
+      "internalType": "uint256",
+      "name": "v1Id",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "v2Id",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "amount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32[]",
+      "name": "proof",
+      "type": "bytes32[]"
+     }
+    ],
+    "internalType": "struct QuotronMigrator.DistributionClaim[]",
+    "name": "claims",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "distributeBatch",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "distributionCap",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "distributionFinalized",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "finalizeDistribution",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "fractionalSink",
+  "outputs": [
+   {
+    "internalType": "contract QuotronLegacyTokenSink",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "idClaimAssignment",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "leaf",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "snapshotAccount",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "beneficiary",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "bool",
+    "name": "followsToken",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "leafFor",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacy",
+  "outputs": [
+   {
+    "internalType": "contract ILegacyQuotron",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacyConfigurationReady",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacyMirror",
+  "outputs": [
+   {
+    "internalType": "contract ILegacyMirror",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacyReflections",
+  "outputs": [
+   {
+    "internalType": "contract ILegacyReflections",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   }
+  ],
+  "name": "makeIdClaimFollowToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "migrateFractional",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "snapshotAccount",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "migrateId",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "paused",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "id",
+    "type": "uint256"
+   }
+  ],
+  "name": "retryLegacyRewards",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "paused_",
+    "type": "bool"
+   }
+  ],
+  "name": "setPaused",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "snapshotBlock",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "snapshotRoot",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "totalDistributed",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "newBeneficiary",
+    "type": "address"
+   }
+  ],
+  "name": "transferIdClaim",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "usedLeaf",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "v2",
+  "outputs": [
+   {
+    "internalType": "contract IQuotronV2MigrationTarget",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "v2Reflections",
+  "outputs": [
+   {
+    "internalType": "contract IQuotronReflectionsV2Legacy",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v1Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "v2Id",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32[]",
+    "name": "proof",
+    "type": "bytes32[]"
+   }
+  ],
+  "name": "verifyLeaf",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

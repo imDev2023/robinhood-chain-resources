@@ -1,0 +1,13 @@
+## FFactoryV3 proxy 0xFC2E4Da3EdB2E18100473339c763705d263D20A9 impl 0x38b1A526f25b40bf7bb2a8c40957Ae3598C0356f (unverified, ABI from repo FFactoryV3.sol)
+buyTax() = 1
+sellTax() = 1
+taxVault() = 0x6D80B81d9Fc56A7A839b1Af9006Eb49151961ce7
+antiSniperTaxVault() = 0x32487287c65f11d53bbCa89c2472171eB09bf337
+antiSniperBuyTaxStartValue() = 99
+router() = 0xCa6395246B4382Ba70F886526dD9a9De984F6081
+allPairsLength() = 25342
+bondingConfig() ERROR ('execution reverted', '0x')
+assetToken() ERROR ('execution reverted', '0x')
+owner() ERROR ('execution reverted', '0x')
+taxManager() ERROR ('execution reverted', '0x')
+antiSniperTaxManager() ERROR ('execution reverted', '0x')

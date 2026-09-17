@@ -1,0 +1,169 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# PRO API authorization, response headers, and routes
+
+> Reference for Blockscout PRO API authorization, response headers, route list, pagination, and credit costs for REST and RPC endpoints.
+
+<Check>
+  Dev portal and free API key at [https://dev.blockscout.com/](https://dev.blockscout.com/)<br /><br />Agents visit [https://agents.blockscout.com/](https://agents.blockscout.com/) to access optimized instructions
+</Check>
+
+* [Authorization](https://docs.blockscout.com/#pro-api-authorization)
+* [Routes](#pro-api-routes)
+* [Pagination](#pagination)
+* [Credits](#blockscout-credit-costs)
+
+<Info>
+  PRO API endpoints are documented individually in the API Reference menu
+</Info>
+
+# PRO API Authorization
+
+Pass an API key using either:
+
+* `apikey` query parameter
+* `authorization` header
+
+## PRO API Response Headers
+
+The following information related to the PRO API plan is included in the response headers
+
+* **x-credits-remaining:** Number of credits remaining in your plan. If on the free plan, this will reset daily, otherwise it is monthly. You can check additional details in the [PRO API UI](https://dev.blockscout.com/).
+* **x-ratelimit-limit:** Available RPS with your plan (can be -1 if there is an internal error)
+* **x-ratelimit-remaining:** Remaining rate limit based on your queries (can be -1 if there is an internal error)
+* **x-ratelimit-reset:** time in milliseconds until the rate limit resets (can be -1 if there is an internal error)
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/VM0y03Br-QMpZ_wK/images/Screenshot2026-03-04at1.29.00PM.png?fit=max&auto=format&n=VM0y03Br-QMpZ_wK&q=85&s=f1ecc31ea268dc7a0ebcc7defc92bf04" alt="Screenshot2026 03 04at1 29 00PM" width="1108" height="502" data-path="images/Screenshot2026-03-04at1.29.00PM.png" />
+</Frame>
+
+# PRO API Routes
+
+All current API routes can be used with the PRO Plan. See the PRO API Endpoints section to try example calls with your API key.
+
+The Route examples below use the Optimism chain (chain\_id=10). In previous per-instance routes API keys are optional for the free tier, they are required for all tiers (including the free tier) of the PRO API.
+
+## **JSON RPC API v2 (compare to Etherscan PRO API)**
+
+PRO API Route:
+
+```text wrap theme={null}
+https://api.blockscout.com/v2/api?chain_id=10&module=block&action=eth_block_number&apikey=proapi_xxxxxxxx
+```
+
+Previous per-instance route:
+
+<Warning>
+  `https://optimism.blockscout.com/api?module=block&action=eth_block_number`
+</Warning>
+
+## **JSON RPC API**
+
+PRO API Route:
+
+```text wrap theme={null}
+https://api.blockscout.com/10/api?module=account&action=eth_get_balance&address={addressHash}&apikey=proapi_xxxxxxx
+```
+
+Previous per-instance route:
+
+<Warning>
+  `https://optimism.blockscout.com/api?module=account&action=eth_get_balance&address={addressHash}`
+</Warning>
+
+## **REST API**
+
+PRO API Route:
+
+```text wrap theme={null}
+https://api.blockscout.com/10/api/v2/blocks/{block_number_or_hash}?apikey=proapi_xxxxxxxx
+```
+
+Previous per-instance route:
+
+<Warning>
+  `https://optimism.blockscout.com/api/v2/blocks/{block_number_or_hash}`
+</Warning>
+
+## **ETH RPC API**
+
+see [ETH RPC docs](/devs/apis/rpc/eth-rpc) for more info on post requests.
+
+PRO API Route
+
+```text theme={null}
+curl -H "content-type: application/json" \
+  -H "authorization: Bearer proapi_xxxxxx" \
+  -X POST \
+  --data '{"id":0,"jsonrpc":"2.0","method":"eth_blockNumber","params":[]}' \
+  https://api.blockscout.com/10/json-rpc
+```
+
+<Note>
+  Please see the [API reference section](/devs/apis) for specific endpoint info related to the various API routes.
+</Note>
+
+# Pagination
+
+Blockscout uses the keyset pagination method to quickly return results. By default an API response returns the first 50 results. To access additional results (in groups of 50), add the `next_page_params` to your query.
+
+For example, open [**https://api.blockscout.com/10/api/v2/transactions?apikey=proapi\_xxxxxx**](https://api.blockscout.com/10/api/v2/transactions?apikey=proapi_xxxxxx) and scroll to the bottom of the response.
+
+<Frame caption="Example response from transactions query">
+  <img src="https://mintcdn.com/blockscout/hSpk2S3pm3N4c9cZ/images/tx-pagination-1.jpg?fit=max&auto=format&n=hSpk2S3pm3N4c9cZ&q=85&s=c4460dc59fa7fe90637200940b93cf5f" alt="Tx Pagination 1" width="1524" height="1116" data-path="images/tx-pagination-1.jpg" />
+</Frame>
+
+You will see the `next_page_params` object. Add the parameters from this object to your next query to receive the next 50 results.
+
+[**https://api.blockscout.com/10/api/v2/transactions?apikey=proapi\_xxxxxx\&block\_number=148445196\&index=59\&items\_count=50**](https://api.blockscout.com/10/api/v2/transactions?apikey=proapi_xxxxxx\&block_number=148445196\&index=59\&items_count=50)
+
+Repeat this process to continue receiving results in groups of 50 (remove params and substitute the new `next_page_params` found in the body of the query).
+
+<Frame>
+  <img src="https://mintcdn.com/blockscout/hSpk2S3pm3N4c9cZ/images/tx-pagination-2.jpg?fit=max&auto=format&n=hSpk2S3pm3N4c9cZ&q=85&s=2afa1e44bc9f04729368663f0a2effdc" alt="Tx Pagination 2" width="1522" height="1050" data-path="images/tx-pagination-2.jpg" />
+</Frame>
+
+In this example, the query to receive the next 50 results would be:
+
+[**https://api.blockscout.com/10/api/v2/transactions?apikey=proapi\_xxxxxx\&block\_number=148445366\&index=24\&items\_count=50**](https://api.blockscout.com/10/api/v2/transactions?apikey=proapi_xxxxxx\&block_number=148445366\&index=24\&items_count=50)
+
+# Blockscout Credit Costs
+
+Credit amounts vary based on resource usage for different calls. The number of credits required for different calls is subject to change based on current analytics and resource usage.
+
+You can check your credits, top calls and overall usage in the dev portal dashboard at [https://dev.blockscout.com/](https://dev.blockscout.com/)
+
+Credits are consumed per API call. The **default cost is 20 credits** for any endpoint not listed below.
+
+* A request consumes credits once, no matter how many records the response contains. For example, a `txlist` call that returns 10,000 transactions costs the same as one that returns a single transaction.
+* Etherscan-compatible RPC calls (`?module=...&action=...`, such as `txlist` and `tokentx`) are not listed in the table below, so they use the default cost of 20 credits per call.
+
+## When credits run out
+
+* **Free plan:** the 100K credit allowance resets **daily**. Once it is exhausted, further requests are rejected until the daily reset. Requests are not automatically served at a lower rate limit. They fail instead.
+* **Paid plans:** the monthly credit allowance may continue into overage once exhausted, subject to your plan terms.
+
+Track remaining credits with the `x-credits-remaining` response header or the [developer portal dashboard](https://dev.blockscout.com/), and upgrade your plan if you regularly hit the cap.
+
+| Endpoint                                               | Credits |
+| :----------------------------------------------------- | :-----: |
+| `default` (all unlisted endpoints)                     |    20   |
+| `api/v2/search/quick`                                  |    25   |
+| `api/v2/transactions/:hash/logs`                       |    30   |
+| `api/v2/transactions/:hash/token-transfers`            |    30   |
+| `api/v2/transactions/:hash/state-changes`              |    30   |
+| `api/v2/tokens`                                        |    30   |
+| `api/v2/tokens/:address_hash/transfers`                |    30   |
+| `api/v2/addresses/:address_hash/token-transfers`       |    30   |
+| `api/v2/addresses/:address_hash/logs`                  |    30   |
+| `api/v2/transactions/:hash/internal-transactions`      |    40   |
+| `api/v2/addresses/:address_hash/internal-transactions` |    40   |
+| `api/v2/smart-contracts/verification/config`           |    40   |
+| `api/v2/transactions/:hash/summary`                    |    50   |
+| `api/v2/transactions/:hash/raw-trace`                  |    50   |
+| `api/v2/addresses/:address_hash/coin-balance-history`  |    50   |
+|                                                        |         |
+
+*Last Updated February, 2026*

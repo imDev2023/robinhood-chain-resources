@@ -1,0 +1,8 @@
+admin slot 0xb53127684a568b3173ae13b9f8a6016e243e63b6e8ee1178d6a717850b5d6103
+Portal               proxyAdmin=0x21f7f9b33dfd0dbc3a94c0efa79f1546a1391ff5 adminOwner=('0xc68f29bfe2f6c3d95adb5685592b9f86680968f2',)
+VaultPortal          proxyAdmin=0x21f7f9b33dfd0dbc3a94c0efa79f1546a1391ff5 adminOwner=('0xc68f29bfe2f6c3d95adb5685592b9f86680968f2',)
+SwapRegistry         proxyAdmin=0x21f7f9b33dfd0dbc3a94c0efa79f1546a1391ff5 adminOwner=('0xc68f29bfe2f6c3d95adb5685592b9f86680968f2',)
+TaxTokenHelper       proxyAdmin=0x21f7f9b33dfd0dbc3a94c0efa79f1546a1391ff5 adminOwner=('0xc68f29bfe2f6c3d95adb5685592b9f86680968f2',)
+TriggerService       proxyAdmin=0x49b0f3b3c2b4f92000dd8e5b89efbf4956ed8ddb adminOwner=('0xa4a727e0918cf9b39639fc4cb7d742d39c5352a4',)
+DividendClaimHelper  proxyAdmin=0x49b0f3b3c2b4f92000dd8e5b89efbf4956ed8ddb adminOwner=('0xa4a727e0918cf9b39639fc4cb7d742d39c5352a4',)
+WETH                 proxyAdmin=0xa3acd31afb851b4eb9dad00f5204c01d924267df adminOwner=('0x2a153c6a1b66dbc930a8d7017230ab0253005c09',)

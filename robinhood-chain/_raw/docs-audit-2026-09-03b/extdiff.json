@@ -1,0 +1,257 @@
+[
+ {
+  "file": "09-eip-8056.md",
+  "src": "ext/eip8056.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [],
+    "in_archive_not_source": [
+     "https://eips.ethereum.org/EIPS/eip-1155",
+     "https://eips.ethereum.org/EIPS/eip-165",
+     "https://eips.ethereum.org/EIPS/eip-20",
+     "https://eips.ethereum.org/EIPS/eip-721",
+     "https://eips.ethereum.org/EIPS/eip-8056",
+     "https://eips.ethereum.org/EIPS/eip-8056#abstract",
+     "https://eips.ethereum.org/EIPS/eip-8056#backwards-compatibility",
+     "https://eips.ethereum.org/EIPS/eip-8056#copyright",
+     "https://eips.ethereum.org/EIPS/eip-8056#core-interface",
+     "https://eips.ethereum.org/EIPS/eip-8056#defi-protocol-integration",
+     "https://eips.ethereum.org/EIPS/eip-8056#exchange-integration",
+     "https://eips.ethereum.org/EIPS/eip-8056#implementation-guide-for-integrators",
+     "https://eips.ethereum.org/EIPS/eip-8056#implementation-requirements",
+     "https://eips.ethereum.org/EIPS/eip-8056#interface-detection",
+     "https://eips.ethereum.org/EIPS/eip-8056#motivation",
+     "https://eips.ethereum.org/EIPS/eip-8056#optional-extension-balances",
+     "https://eips.ethereum.org/EIPS/eip-8056#optional-extension-conversion",
+     "https://eips.ethereum.org/EIPS/eip-8056#rationale",
+     "https://eips.ethereum.org/EIPS/eip-8056#reference-implementation",
+     "https://eips.ethereum.org/EIPS/eip-8056#required-extension-pending-multiplier",
+     "https://eips.ethereum.org/EIPS/eip-8056#security-considerations",
+     "https://eips.ethereum.org/EIPS/eip-8056#specification",
+     "https://eips.ethereum.org/EIPS/eip-8056#test-cases",
+     "https://eips.ethereum.org/EIPS/eip-8056#wallet-integration",
+     "https://eips.ethereum.org/LICENSE",
+     "https://eips.ethereum.org/assets/eip-8056/token_arch_layers.jpeg",
+     "https://eips.ethereum.org/assets/eip-8056/token_value_repr.jpeg",
+     "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8056.md",
+     "https://github.com/gretzke",
+     "https://github.com/tinom9"
+    ]
+   }
+  },
+  "ratio": 0.9261,
+  "sent_only_source": [
+   "18 decimal precision using 18 decimals for the multiplier provides sufficient precision for most use cases while aligning with ethereum's standard decimal representation.",
+   "abstract this eip proposes a standard extension to erc 20 tokens that enables issuers to apply an updatable multiplier to the ui (user interface) amount of tokens.",
+   "initial multiplier test verify that initial multiplier is 1.0 (1e18) confirm balanceof equals balanceofui initially 2.",
+   "integer overflow risk of overflow when applying the multiplier use safemath or solidity 0.8.0+ automatic overflow protection 3.",
+   "oracle dependency for automated multiplier updates, the system may depend on oracles oracle failures or manipulations could affect displayed balances 5.",
+   "raw amount preservation all actual token operations continue to use raw amounts, ensuring that the multiplier is purely a display feature and doesn't affect the underlying token economics.",
+   "specification the key words \"must\", \"must not\", \"required\", \"shall\", \"shall not\", \"should\", \"should not\", \"recommended\", \"may\", and \"optional\" in this document are to be interpreted as described in rfc 2119.",
+   "user confusion clear communication is essential when ui amounts differ from raw amounts integrators must clearly indicate when displaying ui adjusted balances 4."
+  ],
+  "sent_only_archive": [
+   "18 decimal precision using 18 decimals for the multiplier provides sufficient precision for most use cases while aligning with ethereum\u2019s standard decimal representation.",
+   "available https //eips.ethereum.org/eips/eip 8056.",
+   "citation please cite this document as chris ridmann (@cridmann) , daniel gretzke(@gretzke), gilbert shih , tino martinez molina(@tinom9), markus osterlund (@robriks) , \"erc 8056 scaled ui amount extension for erc 20 tokens [draft],\" ethereum improvement proposals , no.",
+   "erc 8056 scaled ui amount extension for erc 20 tokens equity token support for stock splits authors chris ridmann (@cridmann) , daniel gretzke(@gretzke), gilbert shih , tino martinez molina(@tinom9), markus osterlund (@robriks) created 2025 10 20 discussion link https //ethereum magicians.org/t/erc 8056 scaled ui amount extension for erc 20 tokens/25899 requires eip 20, eip 165 table of contents abstract motivation specification core interface optional extension conversion optional extension balances required extension pending multiplier interface detection implementation requirements reference implementation rationale backwards compatibility test cases security considerations implementation guide for integrators copyright abstract this eip proposes a standard extension to erc 20 tokens that enables issuers to apply an updatable multiplier to the ui (user interface) amount of tokens.",
+   "ethereum improvement proposals",
+   "initial multiplier test verify that initial multiplier is 1.0 (1e18) confirm balanceof equals balanceofui initially 1.",
+   "integer overflow risk of overflow when applying the multiplier use safemath or solidity 0.8.0+ automatic overflow protection 1.",
+   "oracle dependency for automated multiplier updates, the system may depend on oracles oracle failures or manipulations could affect displayed balances 1.",
+   "raw amount preservation all actual token operations continue to use raw amounts, ensuring that the multiplier is purely a display feature and doesn\u2019t affect the underlying token economics.",
+   "specification the key words \u201cmust\u201d, \u201cmust not\u201d, \u201crequired\u201d, \u201cshall\u201d, \u201cshall not\u201d, \u201cshould\u201d, \u201cshould not\u201d, \u201crecommended\u201d, \u201cmay\u201d, and \u201coptional\u201d in this document are to be interpreted as described in rfc 2119.",
+   "user confusion clear communication is essential when ui amounts differ from raw amounts integrators must clearly indicate when displaying ui adjusted balances 1."
+  ],
+  "counts": {
+   "src": 58,
+   "arc": 61,
+   "src_only": 8,
+   "arc_only": 11
+  }
+ },
+ {
+  "file": "10-chainlink-tokenized-equity-feeds.md",
+  "src": "ext/chainlink-tokenized-equity.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://docs.chain.link/data-feeds/tokenized-equity-feeds/robinhood"
+    ],
+    "in_archive_not_source": [
+     "https://dev.chain.link"
+    ]
+   }
+  },
+  "ratio": 0.9838,
+  "sent_only_source": [
+   "chainlink provides tokenized equity feeds for robinhood tokenized stocks.",
+   "robinhood tokenized equities source https //docs.chain.link/data feeds/tokenized equity feeds/robinhood for the complete documentation index, see llms.txt.",
+   "total return value calculation robinhood tokenized equity feeds calculate the token price using the following formula where underlying equity market price sourced from chainlink's 24/5 equity price feeds, which aggregate data across regular, pre market, post market, and overnight trading sessions."
+  ],
+  "sent_only_archive": [
+   "for ai agents use llms.txt as the documentation index.",
+   "networks robinhood chain mainnet total return value calculation robinhood tokenized equity feeds calculate the token price using the following formula where underlying equity market price sourced from chainlink's 24/5 equity price feeds, which aggregate data across regular, pre market, post market, and overnight trading sessions.",
+   "retrieve the smallest relevant .md page first.",
+   "robinhood tokenized equities chainlink provides tokenized equity feeds for robinhood tokenized stocks.",
+   "what's next smart value recapture (svr) feeds view provider catalog learn about tokenized equity feeds find price feed addresses get the latest chainlink content straight to your inbox."
+  ],
+  "counts": {
+   "src": 43,
+   "arc": 45,
+   "src_only": 3,
+   "arc_only": 5
+  }
+ },
+ {
+  "file": "15-arbitrum-compliance-filtering.md",
+  "src": "ext/arbitrum-compliance.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://docs.arbitrum.io/llms.txt"
+    ],
+    "in_archive_not_source": []
+   }
+  },
+  "ratio": 0.9983,
+  "sent_only_source": [
+   "for a complete page index, fetch compliance filtering note this feature is available through the arbos 61 upgrade, however off by default."
+  ],
+  "sent_only_archive": [
+   "compliance filtering note this feature is available through the arbos 61 upgrade, however off by default."
+  ],
+  "counts": {
+   "src": 66,
+   "arc": 66,
+   "src_only": 1,
+   "arc_only": 1
+  }
+ },
+ {
+  "file": "23-chainlink-data-streams.md",
+  "src": "ext/chainlink-data-streams.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://docs.chain.link/data-streams"
+    ],
+    "in_archive_not_source": []
+   }
+  },
+  "ratio": 0.9786,
+  "sent_only_source": [
+   "(image image) integration options access data directly through rest apis or websocket connections using our sdks go sdk full featured sdk with comprehensive examples rust sdk high performance sdk for rust applications typescript sdk type safe sdk for typescript applications rest api or websocket direct access to data streams endpoints getting started 1.",
+   "(image image) pull based oracles also operate more efficiently by retrieving data only when necessary.",
+   "chainlink data streams delivers low latency market data offchain, which you can verify onchain.",
+   "chainlink data streams source https //docs.chain.link/data streams for the complete documentation index, see llms.txt.",
+   "explore available data browse available reports and associated schemas to see what data is available, or discover streams programmatically with the discovery endpoint."
+  ],
+  "sent_only_archive": [
+   "chainlink data streams chainlink data streams delivers low latency market data offchain, which you can verify onchain.",
+   "explore available data browse available reports and associated schemas to see what data is available.",
+   "for ai agents use llms.txt as the documentation index.",
+   "integration options access data directly through rest apis or websocket connections using our sdks go sdk full featured sdk with comprehensive examples rust sdk high performance sdk for rust applications typescript sdk type safe sdk for typescript applications rest api or websocket direct access to data streams endpoints getting started 1.",
+   "pull based oracles also operate more efficiently by retrieving data only when necessary.",
+   "retrieve the smallest relevant .md page first.",
+   "what's next learn how to fetch and decode data streams reports with the api find the list of available stream ids find the schema of data to expect from data streams reports crypto find the schema of data to expect from data streams reports rwa get the latest chainlink content straight to your inbox."
+  ],
+  "counts": {
+   "src": 34,
+   "arc": 36,
+   "src_only": 5,
+   "arc_only": 7
+  }
+ },
+ {
+  "file": "24-chainlink-l2-sequencer-feeds.md",
+  "src": "ext/chainlink-l2-seq.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://docs.chain.link/data-feeds/l2-sequencer-feeds"
+    ],
+    "in_archive_not_source": [
+     "https://dev.chain.link",
+     "https://remix.ethereum.org/#url=https://docs.chain.link/samples/DataFeeds/DataConsumerWithSequencerCheck.sol&autoCompile=true"
+    ]
+   },
+   "num": {
+    "in_source_not_archive": [
+     "20px",
+     "8px"
+    ],
+    "in_archive_not_source": []
+   }
+  },
+  "ratio": 0.9874,
+  "sent_only_source": [
+   "(image image) after the sequencer comes back up, it moves all transactions in the pending queue to the processed queue.",
+   "(image image) example consumer contract this example code works on any network that supports solidity.",
+   "(image image) on the l1 network 1.",
+   "caution availability notice chainlink is no longer expanding l2 sequencer uptime feeds to additional networks.",
+   "existing feeds on the supported networks listed below will continue to operate and be supported.",
+   "l2 sequencer uptime feeds source https //docs.chain.link/data feeds/l2 sequencer feeds for the complete documentation index, see llms.txt.",
+   "optimistic rollups (e.g., arbitrum, optimism) and many zk rollups rely on sequencers to efficiently manage transaction ordering, execution, and batching before submitting them to layer 1 (l1) blockchains like ethereum.",
+   "the object returns the following values a variable with a value of either or 0 the sequencer is up 1 the sequencer is down this timestamp indicates when the sequencer feed changed status.",
+   "the variable returns only on arbitrum when the sequencer uptime contract is not yet initialized."
+  ],
+  "sent_only_archive": [
+   "+ the variable returns only on arbitrum when the sequencer uptime contract is not yet initialized.",
+   "after the sequencer comes back up, it moves all transactions in the pending queue to the processed queue.",
+   "example consumer contract this example code works on any network that supports solidity.",
+   "for ai agents use llms.txt as the documentation index.",
+   "get the latest chainlink content straight to your inbox.",
+   "l2 sequencer uptime feeds optimistic rollups (e.g., arbitrum, optimism) and many zk rollups rely on sequencers to efficiently manage transaction ordering, execution, and batching before submitting them to layer 1 (l1) blockchains like ethereum.",
+   "open in remix what is remix?",
+   "retrieve the smallest relevant .md page first.",
+   "the object returns the following values a variable with a value of either or + 0 the sequencer is up + 1 the sequencer is down this timestamp indicates when the sequencer feed changed status."
+  ],
+  "counts": {
+   "src": 60,
+   "arc": 60,
+   "src_only": 9,
+   "arc_only": 9
+  }
+ },
+ {
+  "file": "25-alchemy-robinhood-quickstart.md",
+  "src": "ext/alchemy-quickstart.raw",
+  "fact_delta": {
+   "url": {
+    "in_source_not_archive": [
+     "https://dashboard.alchemy.com/signup"
+    ],
+    "in_archive_not_source": [
+     "https://classic.yarnpkg.com/lang/en/docs/install#",
+     "https://dashboard.alchemy.com/signup?utm_source=docs&utm_medium=referral&utm_content=reference_robinhood-chain-api-quickstart",
+     "https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#"
+    ]
+   }
+  },
+  "ratio": 0.9511,
+  "sent_only_source": [
+   "choose a package manager (npm or yarn) choose between and based on your preference or project requirements.",
+   "make your first request install axios, a popular http client, to make api requests create an file in your project directory and paste the following code replace with your actual alchemy api key from the alchemy dashboard.",
+   "robinhood chain api quickstart how to get started building on robinhood chain and using the json rpc api for the complete documentation index, see llms.txt.",
+   "run your script run your script to make a request to the robinhood chain network you should see the latest block information from robinhood chain's network outputted to your console next steps you've made your first request to the robinhood chain network.",
+   "set up your project run the following commands to create and initialize your project this creates a new directory named and initializes a node.js project within it.",
+   "to use the robinhood chain api you'll need to create a free alchemy account first!",
+   "what is the robinhood chain api?"
+  ],
+  "sent_only_archive": [
+   "choose between and based on your preference or project requirements.",
+   "for the complete documentation index, seellms.txt.",
+   "install axios, a popular http client, to make api requests create an file in your project directory and paste the following code replace with your actual alchemy api key from the alchemy dashboard.",
+   "run the following commands to create and initialize your project this creates a new directory named and initializes a node.js project within it.",
+   "run your script to make a request to the robinhood chain network you should see the latest block information from robinhood chain's network outputted to your console you've made your first request to the robinhood chain network.",
+   "skip to content go to dashboard robinhood chain api quickstart how to get started building on robinhood chain and using the json rpc api to use the robinhood chain api you'll need to create a free alchemy account first!"
+  ],
+  "counts": {
+   "src": 11,
+   "arc": 10,
+   "src_only": 7,
+   "arc_only": 6
+  }
+ }
+]

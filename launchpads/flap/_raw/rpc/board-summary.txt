@@ -1,0 +1,23 @@
+board rows: 200
+quote token mix: [('ETH', 176), ('HOODon', 11), ('GME', 5), ('SPY', 3), ('NVDA', 2), ('NFLX', 1), ('0x48e39e56acdba37b09020c0b734a613c9a2f100a', 1), ('PLTR', 1)]
+with tax: 181 of 200
+tax rate pairs (bps): [((100, 100), 66), ((300, 300), 47), ((200, 200), 34), ((500, 500), 9), ((200, 100), 3), ((200, 400), 3), ((1000, 1000), 3), ((150, 150), 3)]
+vaults: Counter({False: 149, True: 51})
+
+top 12 by 24h volume:
+  moon         mooncat                    mcap $   5,011,000 vol24h $    760,628 liq $    352,061 holders   2270 quote ETH     tax 5.0/5.0%
+  PRISM        Prism Assets               mcap $   2,309,300 vol24h $    698,246 liq $    383,661 holders   2518 quote ETH     tax 3.0/3.0%
+  KITTENS      Dancing Kittens            mcap $     264,592 vol24h $    262,694 liq $     46,487 holders    107 quote HOODon  tax 1.0/1.0%
+  CHILLZ       Chilleez                   mcap $     274,040 vol24h $    144,150 liq $     50,824 holders    266 quote NFLX    tax 2.0/2.0%
+  RAMEN        RAMENCOIN                  mcap $      70,818 vol24h $    127,859 liq $     29,761 holders    930 quote ETH     tax 2.0/2.0%
+  AUREON       AUREON                     mcap $     183,521 vol24h $    117,634 liq $     64,727 holders    824 quote ETH     tax 1.0/1.0%
+  MON          Stockmon                   mcap $     450,240 vol24h $     85,438 liq $     96,366 holders    635 quote ETH     tax 3.0/3.0%
+  COOKWARE     Copper Pot of Wealth       mcap $     133,570 vol24h $     84,042 liq $     63,639 holders   2345 quote HOODon  tax 3.0/3.0%
+  INVEST       Dog in Vest                mcap $     138,315 vol24h $     56,369 liq $     55,280 holders    686 quote SPY     tax 5.0/5.0%
+  DMND         Diamond                    mcap $     256,441 vol24h $     52,482 liq $     60,672 holders    908 quote ETH     tax 3.0/3.0%
+  Givest       Givest                     mcap $     145,906 vol24h $     39,259 liq $    101,605 holders   2028 quote ETH     tax 1.5/1.0%
+  HTZ          Hertz Global Holdings      mcap $      10,359 vol24h $     30,496 liq $      9,584 holders    235 quote GME     tax 1.0/1.0%
+
+board createdAt range: 2026-07-09T13:05:09+00:00 to 2026-09-02T16:19:36+00:00
+sum 24h volume of the 200 rows: $2641294
+sum liquidity of the 200 rows: $3222469

@@ -1,0 +1,33 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# What is WaaS
+
+> Blockscout Wallet as a Service (WaaS) delivers ready-made wallet infrastructure with email or passkey login, swap, on/off ramp, and gas sponsorship.
+
+<Tip>
+  [Contact the Blockscout team](https://eaas.blockscout.com/?utm_medium=header#contact) if you are ready to integrate a global wallet and start onboarding new users today.
+</Tip>
+
+## What is WaaS?
+
+Blockscout's WaaS offers ready-made wallet infrastructure for supported blockchains.
+
+* Developers can integrate directly into their applications [via the SDK](https://www.npmjs.com/package/@blockscout/rootstock-global-wallet), providing a full-featured wallet which can include a swap functionality, a fiat on/off ramp, and more.
+* Wallets are created with familiar methods like email or passkey login. WaaS makes wallet creation and usage as easy as creating any standard online account.
+* Users can immediately begin using the wallet. Account abstraction allows for multi-token fee payment, and gas sponsorship capabilities provide no-cost transaction fees when activated.
+
+## WaaS benefits
+
+**1) Stronger onboarding**\
+New users can onboard instantly through email, social login, passkeys, or a classic wallet, creating a fast, frictionless experience.
+
+**2) Seamless experience across the ecosystem**\
+Once logged in, the same embedded smart wallet can be used across all participating applications, improving retention and promoting activity. Integrated features like wallet connect provide instant connection to all web3 applications.
+
+**3) Better developer environment**\
+Developers can integrate the ecosystem wallet SDK, shortening build time and providing consistent UX across the chain.
+
+**4) On ramp and gas sponsorship**\
+On and off-ramp features can be easily implemented, offering a full fiat-to-crypto experience. Gas sponsorship options allow for instant usage.

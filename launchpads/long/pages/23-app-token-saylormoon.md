@@ -1,0 +1,45 @@
+# Long - Token page, $SAYLORMOON anchored to MSTR
+
+> Source: https://app.long.xyz/tokens/0xd18528b39da6464b3662c331a52181ecb15b1e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0xd18528b39da6464b3662c331a52181ecb15b1e18.md`
+
+---
+
+![Image 1: SAYLORMOON](https://storage.long.xyz/tokens/0xd18528b39da6464b3662c331a52181ecb15b1e18.png)
+
+$SAYLORMOON
+
+SAYLORMOON
+
+Anchored to![Image 2: MSTR](https://app.long.xyz/robinhood-coins/mstr.png)**MSTR**
+
+$4.3M
+
+$4.3M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xd18528b39da6464b3662c331a52181ecb15b1e18)
+
+## Fees
+
+Fee receiver:[@saylor](https://x.com/saylor)/[0x138ACc...d857](https://robinhoodchain.blockscout.com/address/0x138ACcbC1B612eC5D029f641A6345d55ADbcd857)
+
+Claimed$18,154.89
+
+Unclaimed$14,079.60
+
+Name SAYLORMOON
+Ticker$SAYLORMOON
+CA 0xd18528...1e18
+Anchored to![Image 3: MSTR](https://app.long.xyz/robinhood-coins/mstr.png)MSTR 0xec262a...da09
+Description In the name of the moon, I'll punish you!
+Social Links-
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0xd1c2f6cb178a165a643deae8752098dea08d51b6170cd8e36e196ef03dc74751)
+
+Links/Buttons:
+- [](https://robinhoodchain.blockscout.com/address/0xd18528b39da6464b3662c331a52181ecb15b1e18)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xd18528b39da6464b3662c331a52181ecb15b1e18)
+- [@saylor](https://x.com/saylor)
+- [0x138ACc...d857](https://robinhoodchain.blockscout.com/address/0x138ACcbC1B612eC5D029f641A6345d55ADbcd857)
+- [View chart](https://www.defined.fi/robinhood/0xd1c2f6cb178a165a643deae8752098dea08d51b6170cd8e36e196ef03dc74751)

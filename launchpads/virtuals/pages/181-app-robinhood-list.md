@@ -1,0 +1,426 @@
+# Virtuals Protocol - Home, Robinhood Chain filter (Trending, Top, Gainers, New)
+
+> Source: https://app.virtuals.io/
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/02-app-robinhood-list.png
+Interactive snapshot: _raw/network/snapshot-app-robinhood-list.txt
+Network requests: _raw/network/requests-app-robinhood-list.txt
+
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+## Trending
+
+NameFDV24H Δ
+
+VEX$3.54M-38.29%
+
+GRID$1.67M-24.84%
+
+TIBBIR$240.88M-3.72%
+
+RAXOL$2.49M-16.18%
+
+FLETCHER$278.07K-5.13%
+
+GRAFFITI$8.5K+0.00%
+
+## Just Graduated
+
+NameFDV24H Δ
+
+DOLORES$172.95K-17.28%
+
+FUBUKI$21.57K-2.20%
+
+CMNS$1.88M-14.79%
+
+WALL3$1.41M+0.00%
+
+PVE$15.23K-0.88%
+
+SEALED$27.89K-47.89%
+
+## Gainers
+
+NameFDV24H Δ
+
+RAONI$32.77K+121.71%
+
+OS$268.4K+53.31%
+
+PHOOD$126.98K+49.79%
+
+BOWYER$112.82K+36.32%
+
+BASKT$28.24K+24.38%
+
+MYRAD$519.21K+23.69%
+
+## Live Trades
+
+Live
+
+UserAmount
+
+0x4123…2237+$744.8 0x1c4c…63a3
+
+0xb172…9760-$1.4K 0x8ff9…796b
+
+0x4123…2237+$5.3K 0x1c4c…63a3
+
+0x7b5c…7b9a-$2.6K 0x797f…4714
+
+0x72e5…0066-$749.7 0x8ff9…796b
+
+0xb172…9760-$827.1 0x8ff9…796b
+
+TrendingTopGainersNew
+
+24H
+
+5M1H6H
+
+Filters10VIRTUAL
+
+NamePrice/%ΔFDVVolLast 24h24h RangeLiquidityAgeHoldersBuy
+
+ProjectVexVEX
+
+$0.003506-37.62%
+
+$3.6M$967.5K
+
+$0.0034$0.0066
+
+$654.5K2mo
+
+5.8K-1
+
+GRID by VirtualsGRID
+
+$0.001653-25.71%
+
+$1.7M$433.4K
+
+$0.0016$0.0037
+
+$165.5K1mo
+
+1.8K-13
+
+RibbitaTIBBIR
+
+$0.240726-3.72%
+
+$240.9M$356.1K
+
+$0.2321$0.2541
+
+$3.3M19mo
+
+75.6K
+
+RAXOLRAXOL
+
+$0.002488-16.18%
+
+$2.5M$225.1K
+
+$0.0021$0.0040
+
+$3B2mo
+
+2.2K
+
+FletcherFLETCHER
+
+$0.0₃2781-3.42%
+
+$283.1K$162.7K
+
+$0.0₃1586$0.0₃4498
+
+$90.9K1mo
+
+989
+
+Graffiti by VirtualsGRAFFITI
+
+$0.0₅8498+0.00%
+
+$8.5K$135.9K
+
+$0.0₅596$0.0₄5153
+
+$14.1K-
+
+26+24
+
+MerrymenMERRYMEN
+
+$0.0₃1611-43.53%
+
+$161.1K$116.1K
+
+$0.0₃1351$0.0₃348
+
+$68.6K1mo
+
+717-16
+
+Bowyer AppBOWYER
+
+$0.0₃1126+36.32%
+
+$112.8K$104.1K
+
+$0.0₄8002$0.0₃2345
+
+$132.9K1mo
+
+1.5K+49
+
+Voice of the GodsADM
+
+$0.001618-10.38%
+
+$1.6M$92.5K
+
+$0.0015$0.0023
+
+$249K20mo
+
+6.6K-6
+
+Karma by VirtualsKARMA
+
+$0.0₃8574-41.91%
+
+$934.7K$91K
+
+$0.0₃8465$0.0016
+
+$406.6K1mo
+
+1.6K-1
+
+REPPOREPPO
+
+$0.013710-9.55%
+
+$13.7M$147.6K
+
+$0.0136$0.0156
+
+$1.1M9mo
+
+23.1K
+
+Fabric ProtocolROBO
+
+$0.013760+7.00%
+
+$137.6M$56.3K
+
+$0.0122$0.0140
+
+$420.6K6mo
+
+2.4K+2
+
+G.A.M.EGAME
+
+$0.007569-2.45%
+
+$7.6M$55.5K
+
+$0.0072$0.0081
+
+$2.7M23mo
+
+282.6K
+
+Commons by VirtualsCMNS
+
+$0.001880-14.79%
+
+$1.9M$47.8K
+
+$0.0016$0.0023
+
+$161.8K1w
+
+1.2K-36
+
+VimenVIM
+
+$0.0₃2146-17.29%
+
+$214.6K$43K
+
+$0.0₃204$0.0₃3647
+
+$77.2K1mo
+
+668-3
+
+Privacy HoodPHOOD
+
+$0.0₃127+49.79%
+
+$127K$39.5K
+
+$0.0₄5695$0.0₃1608
+
+$93.5K1mo
+
+1.2K+2
+
+Ethy AIETHY
+
+$0.001069-14.02%
+
+$1.1M$38.6K
+
+$0.0₃9368$0.0013
+
+$215.2K19mo
+
+13.6K-5
+
+SIBYLSIBYL
+
+$0.0₃9893+8.98%
+
+$990.4K$36.7K
+
+$0.0₃8142$0.0011
+
+$142.1K-
+
+4.2K+11
+
+BLEEEPBLEP
+
+$0.0₃4674-24.77%
+
+$467.4K$36.5K
+
+$0.0₃4623$0.0₃696
+
+$95.9K1mo
+
+793+4
+
+PEAKPEAK
+
+$0.001057-10.84%
+
+$1.1M$33.6K
+
+$0.0011$0.0012
+
+$125.4K2mo
+
+8.5K-4
+
+c0mputeZERO
+
+$0.0₃6959-28.06%
+
+$680.3K$142.9K
+
+$0.0₃6641$0.0012
+
+$269.4K-
+
+5.4K-6
+
+717aiWIRE
+
+$0.001336-6.49%
+
+$1.3M$30.7K
+
+$0.0013$0.0015
+
+$240.3K20mo
+
+13.3K-3
+
+MYRADMYRAD
+
+$0.0₃5192+23.69%
+
+$519.2K$26.5K
+
+$0.0₃3753$0.0₃5507
+
+$87.4K1mo
+
+622+4
+
+XMAQUINADEUS
+
+$0.019370-1.56%
+
+$19.4M$26.3K
+
+$0.0189$0.0203
+
+$726.1K-
+
+3.8K-4
+
+RaoniRAONI
+
+$0.0₄3353+121.71%
+
+$32.8K$24K
+
+$0.0₄1463$0.0₃1454
+
+$5.6K22mo
+
+9.1K-2
+
+-
+
+- 1
+
+- 2
+
+- More pages
+
+- 3289
+
+-
+
+© 2021–2026 VIRTUALS.io All Rights Reserved.
+
+Launchpad AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1b
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

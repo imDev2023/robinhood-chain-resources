@@ -1,0 +1,122 @@
+[
+  {
+    "type": "function",
+    "name": "currentFeeBps",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "account", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "markedTimeRemaining",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "account", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "isTransferRestricted",
+    "stateMutability": "view",
+    "inputs": [
+      { "name": "account", "type": "address" }
+    ],
+    "outputs": [
+      { "name": "", "type": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "paused",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "launchFeesFinalized",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "canonicalRouter",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "address" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "registeredPool",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bytes32" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "poolRegistered",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "bool" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "reflectionPot",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "burnPot",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "lpPot",
+    "stateMutability": "view",
+    "inputs": [],
+    "outputs": [
+      { "name": "", "type": "uint256" }
+    ]
+  },
+  {
+    "type": "event",
+    "name": "FeeTaken",
+    "anonymous": false,
+    "inputs": [
+      { "name": "poolId", "type": "bytes32", "indexed": true },
+      { "name": "swapper", "type": "address", "indexed": true },
+      { "name": "feeBps", "type": "uint256", "indexed": false },
+      { "name": "total", "type": "uint256", "indexed": false },
+      { "name": "toReflections", "type": "uint256", "indexed": false },
+      { "name": "toBurn", "type": "uint256", "indexed": false },
+      { "name": "toLp", "type": "uint256", "indexed": false },
+      { "name": "toCreator", "type": "uint256", "indexed": false }
+    ]
+  }
+]

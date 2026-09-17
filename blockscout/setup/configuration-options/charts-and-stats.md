@@ -1,0 +1,102 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Charts and Stats Microservice for Blockscout
+
+> Run the Blockscout stats microservice to calculate and display chain charts and counters, with configurable line charts, counters, and update schedules.
+
+<Frame caption="Stats page example">
+  <img src="https://mintcdn.com/blockscout/5j9ATJZuQuk5LMJq/images/284052aa-image.jpeg?fit=max&auto=format&n=5j9ATJZuQuk5LMJq&q=85&s=de4206088c16eca06480139a5b7bfefa" width="2304" height="1318" data-path="images/284052aa-image.jpeg" />
+</Frame>
+
+## Description
+
+Blockscout provides a way to easily calculate and display chain-relevant charts and statistics. For example, it can calculate and display the number of blocks per day, the average block reward, or the number of active accounts per day.
+
+Statistics are implemented using a separate microservice that is connected to the indexed blockscout database. The source code and full README.md for the service is available here: [https://github.com/blockscout/blockscout-rs/tree/main/stats](https://github.com/blockscout/blockscout-rs/tree/main/stats)
+
+On start, the service performs initial calculations for all charts. After that, each chart updates independently according to its `update_schedule`.
+
+## Cache
+
+<Info>
+  It’s better to run the service after blockscout has finished the indexing process. During indexing blockscout database contains partial information about the blockchain, so statistics may be inaccurate.
+</Info>
+
+The stats service will try to use cache values for efficient chart recalculation. If you decide to run statistics during indexing, rerun the service with<br />`STATS__FORCE_UPDATE_ON_START=true` env variable once indexing is finished to perform a full update of all charts.
+
+## How to run
+
+Options including docker, docker-compose or building from source. -> [https://github.com/blockscout/blockscout-rs/tree/main/stats#build](https://github.com/blockscout/blockscout-rs/tree/main/stats#build)
+
+## Configs
+
+* Env variables [https://github.com/blockscout/blockscout-rs/tree/main/stats#env](https://github.com/blockscout/blockscout-rs/tree/main/stats#env)
+* .env example: [https://github.com/blockscout/blockscout/blob/master/docker-compose/envs/common-stats.env](https://github.com/blockscout/blockscout/blob/master/docker-compose/envs/common-stats.env)
+
+## Chart Types
+
+Two types of charts are available for the Charts and Stats Section, `Line` charts and `Counter` charts.
+
+### Line Charts
+
+Example line chart where the X axis is date, and the Y axis is some data.
+
+<Frame caption="Transactions per day">
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/936b6a98-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=01e5557da18661025cbd2f5a2882c117" width="1058" height="522" data-path="images/936b6a98-image.jpeg" />
+</Frame>
+
+### Counter Charts
+
+Single value, typically related to sums.
+
+<Frame caption="Total number of accounts">
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/12bd63a1-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=2332b2049ef0b1bc2c9c44507721b921" width="516" height="184" data-path="images/12bd63a1-image.jpeg" />
+</Frame>
+
+## Chart configuration
+
+Blockscout has a set of predefined charts, which can be enabled or disabled using `charts.toml` file. Default charts config can be found here: [https://github.com/blockscout/blockscout-rs/blob/main/stats/config/charts.toml](https://github.com/blockscout/blockscout-rs/blob/main/stats/config/charts.toml)
+
+This file can be used as a template. Customize by removing unnecessary or unrelated charts from `.toml` file. For example, here is a configuration with only block-related statistics:
+
+```toml theme={null}
+[[counters]]
+id = "totalBlocks"
+title = "Total Blocks"
+update_schedule = "0 0 */3 * * * *"
+
+[[counters]]
+id = "averageBlockTime"
+title = "Average Block Time"
+units = "s"
+update_schedule = "0 0 15 * * * *"
+
+[[lines.sections]]
+id = "blocks"
+title = "Blocks"
+
+[[lines.sections.charts]]
+id = "newBlocks"
+title = "New blocks"
+description = "New blocks number"
+update_schedule = "0 0 8 * * * *"
+drop_last_point = true
+
+[[lines.sections.charts]]
+id = "averageBlockSize"
+title = "Average block size"
+description = "Average size of blocks in bytes"
+units = "Bytes"
+update_schedule = "0 0 9 * * * *"
+drop_last_point = true
+
+[[lines.sections.charts]]
+id = "averageBlockRewards"
+title = "Average block rewards"
+description = "Average amount of distributed reward in tokens per day"
+units = "ETH"
+update_schedule = "0 0 20 * * * *"
+drop_last_point = true
+```

@@ -1,0 +1,40 @@
+{
+ "address": "0x7e344f13a42c8ae4C6c7e2D9d48f98deBeCd82aB",
+ "role": "PV2RwaVaultFactory-Live",
+ "group": "PonsVault v2",
+ "note": "Unverified. The vault factory the live flow calls for both RWA Dividend and Buyback and Burn launches. `template()` returns `rwa`. 20 vaults built.",
+ "blockscout_address": {
+  "block_number_balance_updated_at": 52449842,
+  "coin_balance": "0",
+  "creation_status": "success",
+  "creation_transaction_hash": "0x395179e7b34170d70c9942c8ee856f0aa63f66385adadfe8f09a0d9d5462519a",
+  "creator_address_hash": "0x897ac30f73Ba92E1EFbC1dF1e67f8b5F4b3ECD2b",
+  "ens_domain_name": null,
+  "exchange_rate": "2397.53",
+  "has_beacon_chain_withdrawals": false,
+  "has_logs": true,
+  "has_token_transfers": false,
+  "has_tokens": false,
+  "has_validated_blocks": false,
+  "hash": "0x7e344f13a42c8ae4C6c7e2D9d48f98deBeCd82aB",
+  "implementations": [
+   {
+    "address_hash": "0xcd5a5EaEfBc504CcDed34B882889383255D6f9e3",
+    "name": null
+   }
+  ],
+  "is_contract": true,
+  "is_scam": false,
+  "is_verified": false,
+  "metadata": null,
+  "name": null,
+  "private_tags": [],
+  "proxy_type": "basic_implementation",
+  "public_tags": [],
+  "reputation": "ok",
+  "token": null,
+  "watchlist_address_id": null,
+  "watchlist_names": []
+ },
+ "blockscout_smart_contract": null
+}

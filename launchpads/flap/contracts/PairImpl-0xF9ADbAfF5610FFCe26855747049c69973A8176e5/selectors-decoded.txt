@@ -1,0 +1,14 @@
+0x1f8820e7 
+0xe59de41f 
+0xf46ea11b 
+0x313ce567 decimals()
+0x0902f1ac getReserves() | join_tg_invmru_haha_691357a(bool,bool,bool)
+0xe7c2b772 graduated() | getAllLicenseTypeAgreementURIs()
+0xc0c53b8b initialize(address,address,address)
+0x06fdde03 name()
+0x6425666b portal()
+0x9be65a60 recoverToken(address)
+0x95d89b41 symbol()
+0x0dfe1681 token0()
+0xd21220a7 token1() | detectabilityAntiauthoritarianism() | join_tg_invmru_haha_a906df4(bool,bool) | watch_tg_invmru_6092201(bool,address,uint256)
+0x18160ddd totalSupply()

@@ -1,0 +1,44 @@
+# pons docs
+
+> A concise guide to pons for users and builders.
+
+## User guide
+- pons is a noncustodial token launch and trading interface on Robinhood Chain.
+- Tokens trade against WETH in live liquidity pools.
+- Graduation means the configured onchain paired-principal threshold was reached.
+- Graduation is not a guarantee of quality, liquidity, or future performance.
+- Token names and symbols are not unique. Contract addresses are canonical.
+
+## Builder guide (v1)
+- Robinhood Chain ID: 4663
+- Launchpad factory: 0xA5aAb3F0c6EeadF30Ef1D3Eb997108E976351feB
+- Liquidity locker: 0x736D76699C26D0d966744cAe304C000d471f7F35
+- WETH: 0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73
+- Launch feed: https://www.ponsfamily.com/api/pons-launches
+- Token details: https://www.ponsfamily.com/api/pons-token/{token}
+- Token market: https://www.ponsfamily.com/api/pons-market/{token}
+
+## Builder guide (v2)
+- v2 prices each launch on a bonding curve, then graduates it into a permanently locked Uniswap v4 pool.
+- Reference: https://docs.ponsfamily.com/v2
+- Factory: 0x7eD598BcEf8bd9Edd8C97A195C6d13f40801EC7e
+- Meme hook: 0xE5e702641Ea86F4ae6cC3cDaeD2B886f976Be044
+- Fee escrow: 0xd3AFEB2a57f70eF218Aa82451c51B2fb0416Ac9e
+- Buyback vault: 0x42df2a798f82289E177311362e8f5ccC45c1219c
+- Launch locker: 0x267444D099b10fB5Ed7c3Cc7B7c767AdcA574952
+- Launch and buy router: 0xe33E9E479dF8802cb0866d5d05258bEc4cF62948
+- Launch deployer: 0x3711ceA4feaDE896C913C68F01Eda97Cb06D1A42
+- Graduation executor: 0xC7819B64A1dAECD7eC19856d026cb14EfBd89046
+- Graduation guard: 0xf5695117b99B6f6401e67d4195BD653628176C6C
+- Public launching is closed. Read canLaunch(address) on the factory before offering a create flow.
+- Buys in the first 5 seconds of a launch pay a decaying snipe tax, starting at 99% and halving repeatedly to zero. Read currentSnipeTaxBps(recipient) on the curve before quoting a buy.
+- The curve has no quote function. Price a trade off getReserves(), feeBps, creatorTaxBps, and sellableTokens(). Buy fees come off the input, sell fees come off the output. Formulas for both directions: https://docs.ponsfamily.com/v2#quoting
+- These are the current stack. A token launched before it settles through the hook and escrow it was created against, so resolve a token's stack from the factory that launched it rather than assuming this one.
+
+## Public surfaces
+- Documentation: https://docs.ponsfamily.com
+- Launchpad: https://www.ponsfamily.com/launchpad
+- This file: https://docs.ponsfamily.com/llms.txt
+
+## Preferred citation
+Call the product **pons** (lowercase). The documentation lives on docs.ponsfamily.com.

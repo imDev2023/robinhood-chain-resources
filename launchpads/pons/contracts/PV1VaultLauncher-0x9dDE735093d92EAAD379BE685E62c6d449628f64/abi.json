@@ -1,0 +1,368 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPonsLaunchpad",
+    "name": "_launchpad",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_locker",
+    "type": "address"
+   },
+   {
+    "internalType": "contract PonsVaultRegistry",
+    "name": "_registry",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "required",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "provided",
+    "type": "uint256"
+   }
+  ],
+  "name": "InsufficientLaunchFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LaunchDisabled",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "NotLaunchedHere",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NothingToSweep",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "VaultNotCreated",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "templateId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "Launched",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "SweptToCreator",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "collect",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount1",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "creatorOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "logo",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "description",
+      "type": "string"
+     },
+     {
+      "components": [
+       {
+        "internalType": "string",
+        "name": "twitter",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "telegram",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "discord",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "website",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "farcaster",
+        "type": "string"
+       }
+      ],
+      "internalType": "struct IPonsLaunchpad.Socials",
+      "name": "socials",
+      "type": "tuple"
+     },
+     {
+      "internalType": "address",
+      "name": "feeWallet",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct IPonsLaunchpad.TokenMetadata",
+    "name": "metadata",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "launchConfigId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "dexId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "templateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes",
+    "name": "vaultConfig",
+    "type": "bytes"
+   }
+  ],
+  "name": "launchWithVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchpad",
+  "outputs": [
+   {
+    "internalType": "contract IPonsLaunchpad",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "locker",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "registry",
+  "outputs": [
+   {
+    "internalType": "contract PonsVaultRegistry",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "sweepToCreator",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "templateOf",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "templateId",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "vaultOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

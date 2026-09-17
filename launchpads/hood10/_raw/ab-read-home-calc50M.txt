@@ -1,0 +1,403 @@
+H10HOOD10DOCSLAUNCHPAD
+
+CONNECT WALLET
+
+DELTA$0.01762-22.63%CASHCAT$0.2827+17.93%PONS$0.4224-3.09%STONKBROKER$0.02337-19.88%AI$0.2393+37.84%MICRODUCK$0.02960+109%JUGGERNAUT$0.007321+22.56%INDEX$0.02940+1.12%TENDIES$0.02816+56.21%YOLO$0.01254+21.28%
+
+DELTA$0.01762-22.63%CASHCAT$0.2827+17.93%PONS$0.4224-3.09%STONKBROKER$0.02337-19.88%AI$0.2393+37.84%MICRODUCK$0.02960+109%JUGGERNAUT$0.007321+22.56%INDEX$0.02940+1.12%TENDIES$0.02816+56.21%YOLO$0.01254+21.28%
+
+v1.0
+
+# Hold 1.
+Own 10.
+
+Hold $HOOD10 and collect dividends in Robinhood Chain’s Top 10. Every Epoch. All Ten.
+
+Calculate your dividendSee the basketRead the docs
+
+```
+
+                                     pB%@@@@@@@@@@@@@@@
+                                 48W@@@@@@@@@@@@@@@@@@@@@@@@@@
+                              [9HN@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   P9dVObAXmR#gMQ&@
+                             x4mM@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@5ja]ESSwqkPhdVOUKm#gN%@@@@
+                           LZPU$%@@@@@@@@@@@@@@@@@@@@@@@@@@@@Cl[oZ55555555Yxya2wk9VbX8$N%@@@@@
+                          /IadXg&@@@@@@@@@@@@Q0$D8HXKKKXXmRF}1tlulutt13IIfII1t[oYySkdOKRBW@@@@@@@
+                          Tt24XB&@@@@@@@@@@@gAVhqS2]aaaa])|C}fIIIf}{|7J))vv))7|CIlojEP4bH$N&@@@@@@@
+                         v)t]9K$%@@@@@@@@@@@VYt}7)TLLTvzv7|{{{C{F7JvL?z*ccccc/?L)FflZaqdGH#N&@@@@@@@
+                         sv1j6bRW@@@@@@@@@@@z=>+!rrcrz/svJ7|||7J)T?/cc/sTvvTL?z//LJC1oaqdbmBW@@@@@@@@
+                         LsC5qpHg@@@@@@@@@@@g       ?/zLv)JJJJ)Tszc!c?)IZ2]of7vL?*?)Cl52PpKD0&@@@@@@@@@
+                         J/7[]9AGKmDB0NQ&@@@@@@@@@@&zczsTv))))vszc+!czvC5GWM9n{JT?*L7Ieyq4U8gQ@@@@@@@@@@
+                     4GKmD$gMW%&@@@@@@@@@@@@@@@@@@@@@@@@@@TvvvTs/!><!*?TJCe9Awt{JLzzJ}[jwdbmBQ@@@@@@@@@@
+            6dVGUKmR#$gMWQ&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@vTszc<=>+czs)F}t5eI|v?/J}[jqdUmBQ@@@@@@@@@@
+    ]EqPhdVObAXH8D$B0MWQ&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Lzc+===U43Tzs|tt{)zzJfeakVARg&@@@@@@@@@@
+n5j]SqPhdVObUKH8R#$g0NW%&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@Ls    Z5FT/T}o{v/L{t5EhOX#N@@@@@@@@@@@
+e5jaEwk694pGbAXH8R#$g0NW%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     nfJ?LfY7?/Jfeak4UmB%@@@@@@@@@@@
+ue5ja2wk69dVOGUAXH8RD$B0NQ&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     l)cFZILc)}[jw9GX#N@@@@@@@@@@@@
+1ueZYy]EwkPhd4pObUAXHm8R#$B0NQ&@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   vy4Av*vCuxShOKRg@@@@@@@@@@@@@
+{f1unZYja]EwqP69d4VOGbUAKXHHm8RD##$$BBBBBggBBBBBBBBBBBBBBgg0MNQ%@@@@@@@@@@@@@@Tc)}[xShpA8g@@@@@@@@@@@@@@
+J7{f3tueo5xja]2SwqkPh9dd4VVpOOGGGbbbbbUUUUUUUbbbbbGGGGGGbbUAXmR$0W@@@@@@@@@@@LzJIejwhpA8B&@@@@@@@@@@@@@@
+?Lv)7{}I1luneZ5Yxjya]22ESSwwqqkkkkkkkkkqqqwwwSEE22]]]]]22SwkhdOAm$M&@@@@@@@@zLFtZaq9OA8B&@@@@@@@@@@@@@@@
+????ssT)7|{}fI1tluu[neeoooZZZZZZZZZooeeen[ult1II}}CCCCC}Ituox]q9OXD0%@@@@@s?7InxEPdGKRg@@@@@@@@@@@@@@@@@
+Z1{vz***/z?sLvv)J7|||F{{{{{{{{F|7JJ)vLs?z*r<===========;!zv{3nxE6pARgQ@@@c)}[5]q9pUXR0@@@@@@@@@@@@@@@@@@
+YnI|vz*r+<>;>><++++!!+++++<>>=====;;>rz@@@@@@@W     Js/r<=<zJ}u5]k4bHDg/7f[5aw64GAm#W@@@@@@@@@@@@@@@@@@N
+  vLs?z/ccrr!!++++++++++!r/)u24X$Q@@@@@@@@@@@@$       |Tzc<=!s|3[Y2kdL|In5awPdpbX8B%@@@@@@@@@@@@@@@@@@N
+                          /|nS4K#N@@@@@@@@@@@@#          )?c+;+?7}/7}lox]wP9VGAmD0@@@@@@@@@@@@@@@@@@@N
+                          *{e29bm$N%@@@@@@@@@@U             vzc?|fle5y2q69VGUX8BQ@@@@@@@@@@@@@@@@@@%gb
+                         7/{[ak4UHD$0NWQ%%&&@@H             7ftuoYy2wk6dVGUKmDg%@@@@@@@@@@@@@@@@@&W#6
+                         J/|t52PdOUXXmmmHHXAbbm        I3lunZYja]SqPhdVObAHR$N@@@@@@@@@@@@@@@@@%Ng8
+                         J*J}[x2q694ppOVV4dhPqE]yxY55555Yjya]Ewqk694VObUKmRBN@@@@@@@@@@@@@@&%WMgRU
+                         |zLF3n5y2wqkPPPPkkqwSE2]]aaaa]]2ESwqP69d4VObUKHmR$M%@@@@@@@@@@&%QWM0$RAh
+                          L/){IuoYja2ESSSSSESE22E222ESSwqkkP6h94VpObUAXmR#B0WQ&@@@&%QNM00g$D8Kp
+                          }??)Fft[o5xjyaa]]]]2222EESwwqqkP6h9d4VOGbbAKHmRD#$BgggggBBB$$#RmXb42
+                          eILsv|CItueo5Yxjyyaa]22EESwwqkP6h9dd4VpGGbUAXHHm8RRRRRRRRR8mHXUO92
+                           kZ7LvJFCI1l[eoZ5Yxjya]]2ESwqkkP6h9d4VVOOGbUUAKKXXXHHHXXKAUGOdP]
+                            dwlJ))7|Cf3tu[eo55Yjya]]2ESwqkP6h99d44VpOOGGbbbbbbbbGOV49k2o
+                             2kZf7))J|{}I1tu[eoZ5Yjya]2ESwwqkPP6h99dd4444V4444d9hPq2xf
+                              Ce[fJvvv)J|{}I1tu[eoZ5Yxjya]2ESSwqqkkPPPPPPPPkqwS]jZ1
+                                77)Lz/?sTvJ|{}f3tlu[eoZ5Yxjjyaa]]]22222]]ayjYou}
+                                  vsz/c!c/?sT)7|{}fI1tlu[neeoZZZ5555ZZoenl1fL
+                                     sz*cr+!r*z?Lv)7|FC}}fI31111333IfC{7/
+                                        sz/c!+<<+rrc/z?sLLTTvvvTs?/=
+
+```
+
+index · rotating20 fpsdrag to rotate10 / 10
+
+1
+
+## Index summary
+
+LIVE · ROBINHOOD CHAIN
+
+market cap
+
+$2.34M
+
+1,000,000,000 supply, fully circulating
+
+liquidity
+
+$744K
+
+across 20 pools
+
+total volume
+
+$1.72M
+
+trading 9d
+
+hood10 holders
+
+—
+
+not indexed yet
+
+dividends paid out
+
+$81,951
+
+across 31 epochs, in kind
+
+last epoch paid
+
+$0
+
+$0 per constituent, equal weight
+
+eligible supply
+
+866.9M
+
+86.7% qualified at snapshot
+
+next distribution
+
+02:06:14
+
+checked every three hours · closes once the pot covers settlement
+
+2
+
+## The basket
+
+bought with trading fees, airdropped in kind
+
+distributed to holders
+
+$81,951
+
+across 31 settled epochs · 10 constituents · equal weight, 10% each
+
+last epoch$0
+
+all epochs$81,951
+
+eligible supply, last epoch
+
+866.9M
+
+86.69% of supply qualified at the snapshot
+
+24h basket volume
+
+$248.7M
+
+across all ten pools
+
+dispersion, 24h
+
+132pts
+
+best +109% · worst −22.63%
+
+paid in kind: ten tokens, never cashread from chain, never from a database2026 | v1.0
+
+3
+
+## The calculator
+
+no epoch settled yet — nothing to project from
+
+you holdwallet not connected · drag
+
+50,150,000 HOOD10
+
+1M10M50M250M
+
+position value
+
+$118,705
+
+share of supply
+
+5.015%
+
+you'd collect, per epochin kind
+
+—
+
+trailing yield, per epoch
+
+—
+
+annualised, simple
+
+—
+
+No epoch has settled yet, so there is no trailing figure to compute from. This fills in after the first distribution.
+
+your slice, token by token10 rows
+
+DELTA——
+
+CASHCAT——
+
+PONS——
+
+STONKBROKER——
+
+AI——
+
+MICRODUCK——
+
+JUGGERNAUT——
+
+INDEX——
+
+TENDIES——
+
+YOLO——
+
+supply 1,000,000,000 · spot $0.002367paid in kind, airdropped on-chain2026 | v1.0
+
+4
+
+## The ten
+
+constituents · as of 2026-09-02LIVE · RANKED BY QUOTE LIQUIDITY
+
+DELTA01
+
+Delta
+
+$0.01762
+
+▼ -22.63% 24h
+
+10.00%$0
+
+CASHCAT02
+
+Cash Cat
+
+$0.2827
+
+▲ +17.93% 24h
+
+10.00%$0
+
+PONS03
+
+Pons
+
+$0.4224
+
+▼ -3.09% 24h
+
+10.00%$0
+
+STONKBROKER04
+
+StonkBroker
+
+$0.02337
+
+▼ -19.88% 24h
+
+10.00%$0
+
+AI05
+
+Artificial Inu
+
+$0.2393
+
+▲ +37.84% 24h
+
+10.00%$0
+
+MICRODUCK06
+
+microduck
+
+$0.02960
+
+▲ +109% 24h
+
+10.00%$0
+
+JUGGERNAUT07
+
+The Juggernaut
+
+$0.007321
+
+▲ +22.56% 24h
+
+10.00%$0
+
+INDEX08
+
+The Index
+
+$0.02940
+
+▲ +1.12% 24h
+
+10.00%$0
+
+TENDIES09
+
+TENDIES
+
+$0.02816
+
+▲ +56.21% 24h
+
+10.00%$0
+
+YOLO10
+
+YOLO
+
+$0.01254
+
+▲ +21.28% 24h
+
+10.00%$0
+
+10 constituents · equal weightone token, one seat · pools summed2026 | v1.0
+
+5
+
+## The ledger
+
+every dividend, filed31 epochs
+
+epochdatesnapshotdistributedper 1M
+
+3102 SEPT 260x9dcf419a…$0$0.00
+
+3001 SEPT 260x8139e128…$0$0.00
+
+2931 AUG 260xb1c05d2e…$0$0.00
+
+2830 AUG 260xebf38732…$0$0.00
+
+2730 AUG 260x9d9c3198…$0$0.00
+
+2630 AUG 260xd5c56a3f…$0$0.00
+
+2529 AUG 260xdef827ee…$0$0.00
+
+2429 AUG 260x3960197a…$0$0.00
+
+2329 AUG 260xbb61982b…$0$0.00
+
+2228 AUG 260xd52f3946…$0$0.00
+
+2128 AUG 260x63be37e6…$0$0.00
+
+2028 AUG 260x878414b4…$0$0.00
+
+1928 AUG 260xaaafadad…$0$0.00
+
+1827 AUG 260xaeca0540…$0$0.00
+
+1727 AUG 260x811169fb…$0$0.00
+
+1627 AUG 260x142446d3…$0$0.00
+
+1527 AUG 260xf8a31584…$0$0.00
+
+1426 AUG 260xfa0388e3…$0$0.00
+
+1326 AUG 260x247c72e5…$0$0.00
+
+1226 AUG 260x779182fe…$0$0.00
+
+1126 AUG 260x8ba87e6e…$0$0.00
+
+1026 AUG 260xcd62c022…$0$0.00
+
+0925 AUG 260xa285afcd…$0$0.00
+
+0825 AUG 260x8e7f5ec6…$0$0.00
+
+0725 AUG 260xd349b404…$0$0.00
+
+0625 AUG 260x4d4813ac…$0$0.00
+
+0525 AUG 260x01179ac5…$0$0.00
+
+0424 AUG 260x16ab8093…$0$0.00
+
+0324 AUG 260x6eb1ef3e…$30,993$35.07
+
+0224 AUG 260xcd3f479b…$50,958$58.96
+
+0124 AUG 260xe2514649…$0$0.00
+
+paid in kind: ten tokens, never cashtotal $81,9512026 | v1.0
+
+H10
+
+## registry
+
+- index vaultpublished at launch
+
+## reading
+
+- Docstax · epoch · eligibility · risks

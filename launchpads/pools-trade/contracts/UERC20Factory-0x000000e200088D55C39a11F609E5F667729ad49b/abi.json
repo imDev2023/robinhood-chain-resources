@@ -1,0 +1,218 @@
+[
+ {
+  "inputs": [],
+  "name": "RecipientCannotBeZeroAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TotalSupplyCannotBeZero",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "description",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "website",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "image",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes",
+      "name": "extraData",
+      "type": "bytes"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct UERC20Metadata",
+    "name": "metadata",
+    "type": "tuple"
+   }
+  ],
+  "name": "TokenCreated",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "uint8",
+    "name": "decimals",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "graffiti",
+    "type": "bytes32"
+   }
+  ],
+  "name": "createToken",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getParameters",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "totalSupply",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "graffiti",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "recipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "creator",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "decimals",
+      "type": "uint8"
+     },
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "components": [
+       {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "website",
+        "type": "string"
+       },
+       {
+        "internalType": "string",
+        "name": "image",
+        "type": "string"
+       },
+       {
+        "internalType": "bytes",
+        "name": "extraData",
+        "type": "bytes"
+       }
+      ],
+      "internalType": "struct UERC20Metadata",
+      "name": "metadata",
+      "type": "tuple"
+     }
+    ],
+    "internalType": "struct IUERC20Factory.Parameters",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "uint8",
+    "name": "decimals",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "graffiti",
+    "type": "bytes32"
+   }
+  ],
+  "name": "getUERC20Address",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

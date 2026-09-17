@@ -1,0 +1,3 @@
+<stdin>:10: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+49311480 2026-08-29T16:52:55Z 0x0000000000000000000000000000000000000000 -> 0xe1c046571e69ae2408c21605f2ff657a23977c4c 0x6c0bbf908393eb9b96f59f94bd15404b770ba685942514ca92af476c4818c895
+49485132 2026-08-29T21:45:22Z 0xe1c046571e69ae2408c21605f2ff657a23977c4c -> 0xbd40e13889cd75d8019cfbaa4f3c5562ba242279 0x639c201a3d4c81b07373650a5805b0e512c2145b0557553c1dfa81163cf2c13f

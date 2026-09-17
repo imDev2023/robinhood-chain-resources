@@ -1,0 +1,45 @@
+# Noxa - fun bridge anywallet
+
+> Source: https://fun.noxa.fi/bridge
+> Retrieved: 2026-09-02 (agent-browser read)
+> Screenshot: ../screenshots/11-fun-bridge-anywallet.png
+
+---
+
+Noxa
+
+HomeLaunchBridgeProfileStatsDocsCreate coin
+
+Create
+
+Connect Wallet
+
+# Bridge to Robinhood Chain
+
+Deposit ETH from another chain to start trading on Noxa. Robinhood Chain's native gas token behaves as ETH.
+
+From
+
+Ethereum
+
+ETH
+
+To
+
+Robinhood Chain
+
+0.0
+
+ETH
+
+Recipient on Robinhood Chain
+
+Use walletAny wallet / exchange
+
+Your refund address on Ethereum
+
+Get deposit address
+
+No wallet needed — send from an exchange or any wallet.
+
+Powered by Relay · delivered as native ETH on Robinhood Chain

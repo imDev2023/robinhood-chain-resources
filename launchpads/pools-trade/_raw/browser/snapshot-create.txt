@@ -1,0 +1,8 @@
+- heading "Create a token" [level=2, ref=e1]
+- heading "Launch your token" [level=2, ref=e3]
+- button "Close" [ref=e4]
+- radio "CrowdLaunch Bundle resistant, fairerdistribution" [checked=true, ref=e5]
+- LabelText "CrowdLaunchBundle resistant, fairerdistribution" [ref=e6] clickable [cursor:pointer]
+- radio "InstantLaunch Standard bonding curvelaunch" [checked=false, ref=e7]
+- LabelText "InstantLaunchStandard bonding curvelaunch" [ref=e8] clickable [cursor:pointer]
+- button "Connect a wallet" [ref=e2]

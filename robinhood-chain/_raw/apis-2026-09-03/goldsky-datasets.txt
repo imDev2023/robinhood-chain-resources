@@ -1,0 +1,33 @@
+Goldsky Mirror dataset probe, 2026-09-03, via `goldsky dataset get <name>` after
+`goldsky login --token $GOLDSKY_API_KEY` (project "Octopus Exchange").
+Spinner frames stripped; only the verdict line kept.
+
+FOUND (type: dataset, version 1.1.0):
+  robinhood_mainnet.raw_blocks       displayName "Raw Blocks"
+  robinhood_mainnet.raw_logs         displayName "Raw Logs"
+  robinhood_mainnet.raw_traces       displayName "Raw Traces"
+  robinhood_testnet.raw_logs         displayName "Raw Logs"
+
+NOT FOUND:
+  robinhood_mainnet.raw_transactions
+  robinhood_mainnet.transactions
+  robinhood_mainnet.blocks
+  robinhood_mainnet.logs
+  robinhood_mainnet.traces
+  robinhood_mainnet.decoded_logs
+  robinhood_mainnet.enriched_transactions
+  robinhood_mainnet.enriched_blocks
+  robinhood_mainnet.edge_raw_logs
+
+`goldsky dataset list` fails in a non-interactive shell with
+"TTY initialization failed: uv_tty_init returned EINVAL (invalid argument)",
+so the full catalogue could not be enumerated; the names above were probed one by one.
+
+`goldsky subgraph list` on the same account returns a live subgraph on this chain family:
+  octopus/1.0.0
+  GraphQL API: https://api.goldsky.com/api/public/project_cmsaqlax74bi401vn1h6bc1uh/subgraphs/octopus/1.0.0/gn
+  Status: healthy (Active), Synced: 100%, Chain: robinhood-testnet
+  Blocks indexed: 97,379,692 -> 112,090,050
+
+A `_meta` query against that endpoint on 2026-09-03 returned
+block 112,090,143 / timestamp 1788408613 / hasIndexingErrors false.

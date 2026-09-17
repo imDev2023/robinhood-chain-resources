@@ -1,0 +1,289 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPositionManager",
+    "name": "_positionManager",
+    "type": "address"
+   },
+   {
+    "internalType": "uint128",
+    "name": "_minLiquidityIncrease",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "currency",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "received",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "expected",
+    "type": "uint256"
+   }
+  ],
+  "name": "InsufficientAmountReceived",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "tokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidPosition",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "currency",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidTransferRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MinLiquidityIncreaseIsZero",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "required",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "actual",
+    "type": "uint256"
+   }
+  ],
+  "name": "NotEnoughLiquidityAdded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "tokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "currency0Amount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "currency1Amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "AmountsReceived",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "tokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "currency0Amount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "currency1Amount",
+    "type": "uint256"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct PoolKey",
+    "name": "poolKey",
+    "type": "tuple"
+   }
+  ],
+  "name": "Claimed",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "tokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "amounts",
+  "outputs": [
+   {
+    "internalType": "uint128",
+    "name": "currency0Amount",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "currency1Amount",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "_tokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_minCurrency0Amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_minCurrency1Amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "claim",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "minLiquidityIncrease",
+  "outputs": [
+   {
+    "internalType": "uint128",
+    "name": "",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "_tokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_currency0Amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_currency1Amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "onAmountsReceived",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract IPositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "currency",
+    "type": "address"
+   }
+  ],
+  "name": "totalAmounts",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

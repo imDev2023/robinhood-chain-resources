@@ -1,0 +1,111 @@
+# Virtuals Protocol - Referral
+
+> Source: https://app.virtuals.io/referral
+> Retrieved: 2026-09-02 (agent-browser read, session lp-virtuals)
+
+---
+
+Screenshot: screenshots/33-app-referral.png
+Interactive snapshot: _raw/network/snapshot-app-referral.txt
+
+Capital MarketAgentic CommerceveVIRTUAL
+
+Launch
+
+Launch Token
+
+Create Agent
+
+Login
+
+Login
+
+Refer & Earn
+
+Invite your friends, trade Virtuals Agents and get up to 20% of their trading fees
+
+Link My Referrer
+
+Invite Via Code
+
+Copy
+
+Total Direct Refer
+
+-
+
+Total Secondary Refer
+
+-
+
+Claimable Commissions
+
+0
+
+updated every 24h
+
+How to Get Rewards
+
+1
+
+Share your Referral
+
+Share your referral link with your friends
+
+2
+
+Sign up & Trade
+
+Invite your friends to sign up and trade.
+Some pools are excluded from referral programs. Learn more
+
+3
+
+Earn 20 + 5% Fees
+
+Earn 20% of the trading fee from Direct Referrals and 5% from Secondary Referrals
+
+Direct ReferralsSecondary Referrals
+
+Total Commission
+
+0
+
+Wallet Address
+
+Joined Date
+
+Total Trading Volume
+
+Total Commission Earned
+
+(◞‸◟；)
+No one joined you yet
+
+WritingResearchGovernanceBuildButler
+
+Crypto Data Powered by CoinGecko
+
+© 2021-2026 VIRTUALS.io All Rights Reserved.
+
+Launch AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1bBuy $VIRTUAL
+
+Launch AgreementTerms of UsePrivacy Policy
+
+$VIRTUAL0x0b3e...7E1bBuy $VIRTUAL
+
+© 2021-2026 VIRTUALS.io All Rights Reserved.
+
+Launch AgreementTerms of UsePrivacy Policy
+
+We may employ on-the-spot tracking techniques during your browsing session to collect data on your interactions, preferences, and behaviour. This data helps us personalise your experience and improve our services. See our Privacy Policy.
+
+Allow AnalyticsOpt-out
+
+tag.
+
+To begin the development, run `npm start` or `yarn start`.
+To create a production bundle, use `npm run build` or `yarn build`.
+-->

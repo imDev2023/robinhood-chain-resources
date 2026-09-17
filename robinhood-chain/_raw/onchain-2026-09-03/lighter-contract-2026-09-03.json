@@ -1,0 +1,25 @@
+{
+ "capturedAt": "2026-09-03",
+ "block": 53117114,
+ "source": "docs.robinhood.com/chain/lighter-domains, archived as robinhood-chain/34-lighter-domains.md",
+ "lighterContract": {
+  "address": "0x94bAB9693Ba2f6358507eFfcbd372b0660AFfF9d",
+  "codeBytes": 1367,
+  "codeSha256": "2cc5df6d443e97bbb810d03b149a473088952cc3cc6e068c0ac767724b6014d7"
+ },
+ "erc1967": {
+  "implementationSlot": "0x00000000000000000000000082de5b1161c93afdfe21ba0d5343f01cd7401d90",
+  "beaconSlot": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "adminSlot": "0x00000000000000000000000043cff77cd060a155dce5deb12b93b875f69f2716"
+ },
+ "implementation": {
+  "address": "0x82de5b1161c93afdfe21ba0d5343f01cd7401d90",
+  "codeBytes": 23168,
+  "codeSha256": "a393b51edfd7f66b056e2b8f479f70933a5c6cdf0b6274518666771ccdc14170"
+ },
+ "proxyAdmin": {
+  "address": "0x43cff77cd060a155dce5deb12b93b875f69f2716",
+  "codeBytes": 4116,
+  "codeSha256": "534eee18fd1561edbd60760df558316b68598f5e6f09aca6301cfbcfc1264d3d"
+ }
+}

@@ -1,0 +1,15 @@
+# Not for public search yet.
+#
+# Indexing is blocked by `<meta name="robots" content="noindex, nofollow">`
+# (see app/root.tsx), NOT by a Disallow rule here. That is deliberate:
+#
+#   - A crawler must be able to fetch the page to see the noindex. `Disallow: /`
+#     would hide the noindex, and Google can still list a disallowed URL it
+#     found via an inbound link — so it is both weaker and less predictable.
+#   - Twitterbot, Slackbot-LinkExpanding and facebookexternalhit honour
+#     robots.txt. `Disallow: /` would stop them fetching the page and every
+#     link unfurl would fall back to a bare URL.
+#
+# So: crawling is allowed, indexing is not.
+User-agent: *
+Allow: /

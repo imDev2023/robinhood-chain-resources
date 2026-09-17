@@ -1,0 +1,53 @@
+Connect Wallet
+
+- Home
+
+- Proposal
+
+Pending
+
+Proposal
+
+By
+
+•
+
+ID: undefined
+
+•
+
+Proposed on: Sep 2nd, 2026
+
+Proposal
+
+DescriptionExecutable codeCommentsVotes
+
+```
+{}
+```
+
+No comments available.
+
+VoterFor/Against/AbstainAmount Voted
+
+Current Votes
+
+Quorum
+
+0 of 0
+
+Majority support
+
+Abstain
+
+For
+
+0
+
+Against
+
+0
+
+Abstain
+
+0

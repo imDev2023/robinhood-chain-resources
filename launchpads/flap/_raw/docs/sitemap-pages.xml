@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+			<url>
+				<loc>https://docs.flap.sh/flap</loc>
+				<priority>1</priority>
+				<lastmod>2026-07-15T00:45:31.867Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/flap-official-links</loc>
+				<priority>1</priority>
+				<lastmod>2026-08-08T09:48:22.367Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers</loc>
+				<priority>1</priority>
+				<lastmod>2026-02-06T09:44:54.543Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/deployed-contract-addresses</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-07-20T17:36:27.528Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-02-06T16:47:03.339Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/bonding-curve</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-06T09:54:39.282Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/list-on-dex</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-06T05:20:59.686Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/portal-vs-vaultportal</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-03-29T10:03:40.724Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/protocol-economics</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-23T14:44:14.453Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-06T16:40:54.952Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token/prebond-tax</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-02-06T16:40:54.952Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token/tax-token-v1</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-02-06T16:47:03.339Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token/tax-token-v2</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-02-06T16:47:03.339Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token/tax-token-v3</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-05-06T15:19:27.255Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/basic-and-mechanism/flap-tax-token/tax-liquidation-mechanism</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-08-01T17:57:40.179Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/a-quick-start-for-wallet-terminal-bot-developers</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-06T17:49:23.462Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/deployed-contract-addresses</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-14T13:00:13.160Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/index-token-created-events</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-03-29T10:03:40.724Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/indexing-vaults</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-23T15:16:52.692Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/indexing-vaults/index-and-query-a-stocks-vault</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-07-23T15:03:26.686Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/bonding-curve-in-developers-perspective</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-05T16:52:14.485Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/inspect-a-token</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-03-29T10:03:40.724Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/parse-token-meta</loc>
+				<priority>0.7</priority>
+				<lastmod>2025-12-26T05:38:02.451Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/token-version-specification</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-14T10:50:00.705Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/inspect-a-tax-token</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-08-04T08:03:36.008Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/trade-tokens</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-14T13:27:46.085Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/wallet-and-terminal-and-bot-developers/token-migration</loc>
+				<priority>0.7</priority>
+				<lastmod>2025-09-25T02:48:18.349Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/quick-start-token-launcher-developers</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-06T16:23:05.998Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/deployed-contract-addresses</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-03-29T09:18:24.572Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/launch-token-through-portal</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-15T04:48:05.417Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/launch-token-through-vaultportal</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-15T04:48:05.417Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/registered-vaults</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-20T13:07:37.192Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/token-launcher-developers/robinhood-integration-guide</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-13T06:18:57.575Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers</loc>
+				<priority>0.84</priority>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/quick-start-vault-developers</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-23T08:42:49.940Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/deployed-contract-addresses</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-03-29T09:18:24.572Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/vault-and-vaultfactory-specification</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-08-06T19:53:10.970Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/flap-tax-vault</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-02-16T08:32:51.413Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/gift-vault</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-20T13:07:37.192Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/building-a-vault-ui</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-20T17:30:57.650Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/case-study-beacon-upgradeable-vault</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-06-13T19:36:38.887Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/tutorials</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-08-09T19:36:16.384Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/tutorials/lp-token-as-dividend</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-06-18T10:50:39.384Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/vault-developers/tutorials/basket-token-multi-asset-dividends</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-08-09T19:36:16.384Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-03-11T10:05:42.774Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/flap-ai-oracle</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-09T07:36:19.546Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/flap-candy-box</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-05T11:36:40.659Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/flap-trigger-service</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-20T06:18:41.085Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/worldcup-resolver</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-27T10:18:54.358Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/worldcup-viewer</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-05-27T10:43:53.618Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/x-general-verifier</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-20T13:07:37.192Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/recent-release</loc>
+				<priority>0.7</priority>
+				<lastmod>2026-07-14T13:53:07.901Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/developers/preview/recent-release/v5.14.16-buy-quota</loc>
+				<priority>0.59</priority>
+				<lastmod>2026-07-14T13:53:07.901Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/audit-reports</loc>
+				<priority>1</priority>
+				<lastmod>2026-01-31T08:52:02.187Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/media-kit</loc>
+				<priority>1</priority>
+				<lastmod>2026-01-31T08:52:02.187Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/skills</loc>
+				<priority>1</priority>
+				<lastmod>2026-08-22T07:24:27.222Z</lastmod>
+</url>
+
+			<url>
+				<loc>https://docs.flap.sh/flap/skills/using-with-binance-agentic-wallet</loc>
+				<priority>0.84</priority>
+				<lastmod>2026-08-22T07:24:27.222Z</lastmod>
+</url>
+
+
+</urlset>

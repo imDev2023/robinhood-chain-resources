@@ -1,0 +1,128 @@
+# Doppler - Dynamic auctions
+
+> Source: https://docs.doppler.lol/reference/examples/dynamic-auctions
+> Retrieved: 2026-09-02 (GitBook .md endpoint, saved as `_raw/jina/docs-reference_examples_dynamic-auctions.direct.md`)
+
+---
+
+# Dynamic auctions
+
+Dynamic auctions are Dutch auctions where the price starts high and descends over time through epochs until buyers purchase or the auction ends.
+
+## Using market cap targets
+
+`saleConfig()` must be called before `withMarketCapRange()`. Note: Do NOT use `poolConfig()` with `withMarketCapRange()` - they are mutually exclusive. Use `poolConfig()` only with `auctionByTicks()` for manual tick configuration.
+
+```typescript
+import { DopplerSDK } from '@whetstone-research/doppler-sdk';
+import { parseEther, createPublicClient, createWalletClient, http } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { baseSepolia } from 'viem/chains';
+
+const privateKey = process.env.PRIVATE_KEY as `0x${string}`;
+const rpcUrl = process.env.RPC_URL ?? baseSepolia.rpcUrls.default.http[0];
+
+async function main() {
+  const account = privateKeyToAccount(privateKey);
+
+  const publicClient = createPublicClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+  });
+
+  const walletClient = createWalletClient({
+    chain: baseSepolia,
+    transport: http(rpcUrl),
+    account,
+  });
+
+  const sdk = new DopplerSDK({
+    publicClient,
+    walletClient,
+    chainId: baseSepolia.id,
+  });
+
+  const params = sdk
+    .buildDynamicAuction()
+    .tokenConfig({
+      name: 'My Token',
+      symbol: 'MTK',
+      tokenURI: 'https://example.com/token-metadata.json',
+    })
+    .saleConfig({
+      initialSupply: parseEther('1000000000'),
+      numTokensToSell: parseEther('500000000'),
+      numeraire: '0x4200000000000000000000000000000000000006', // WETH on Base
+    })
+    .withMarketCapRange({
+      marketCap: { start: 500_000, min: 50_000 }, // $500k start, $50k floor
+      numerairePrice: 3000, // ETH = $3000 USD
+      minProceeds: parseEther('100'),
+      maxProceeds: parseEther('5000'),
+    })
+    .withMigration({
+      type: 'uniswapV4',
+      fee: 3000,
+      tickSpacing: 60,
+      streamableFees: {
+        lockDuration: 365 * 24 * 60 * 60,
+        beneficiaries: [
+          { beneficiary: account.address, shares: parseEther('0.95') },
+          await sdk.getAirlockBeneficiary(),
+        ],
+      },
+    })
+    .withGovernance({ type: 'noOp' })
+    .withUserAddress(account.address)
+    .build();
+
+  const result = await sdk.factory.createDynamicAuction(params);
+
+  console.log('Hook:', result.hookAddress);
+  console.log('Token:', result.tokenAddress);
+  console.log('Pool ID:', result.poolId);
+}
+
+main();
+```
+
+***
+
+## Using raw ticks
+
+```typescript
+const params = sdk.buildDynamicAuction()
+  .tokenConfig({
+    name: 'My Token',
+    symbol: 'MTK',
+    tokenURI: 'https://example.com/token-metadata.json',
+  })
+  .saleConfig({
+    initialSupply: parseEther('1000000000'),
+    numTokensToSell: parseEther('500000000'),
+    numeraire: '0x4200000000000000000000000000000000000006',
+  })
+  .poolConfig({ fee: 3000, tickSpacing: 60 })
+  .auctionByTicks({
+    startTick: -92103,
+    endTick: -69080,
+    minProceeds: parseEther('100'),
+    maxProceeds: parseEther('5000'),
+    duration: 7 * 24 * 60 * 60,
+    epochLength: 3600,
+  })
+  .withMigration({
+    type: 'uniswapV4',
+    fee: 3000,
+    tickSpacing: 60,
+    streamableFees: {
+      lockDuration: 365 * 24 * 60 * 60,
+      beneficiaries: [
+        { beneficiary: account.address, shares: parseEther('1') },
+      ],
+    },
+  })
+  .withGovernance({ type: 'noOp' })
+  .withUserAddress(account.address)
+  .build();
+```

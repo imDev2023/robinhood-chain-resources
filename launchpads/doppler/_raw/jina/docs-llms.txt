@@ -1,0 +1,53 @@
+# Doppler Docs
+
+## Doppler Docs
+
+- [Home](https://docs.doppler.lol/readme.md)
+- [Explainer](https://docs.doppler.lol/explainer.md)
+- [Creation & initialization](https://docs.doppler.lol/core-concepts/creation-and-initialization.md): Learn about creating tokens using the Doppler Protocol
+- [Price discovery auctions](https://docs.doppler.lol/core-concepts/price-discovery-auctions.md): Learn about Doppler's price discovery auctions
+- [Supply curves](https://docs.doppler.lol/core-concepts/supply-curves.md): Learn more about Doppler's custom supply curves
+- [Liquidity migration](https://docs.doppler.lol/core-concepts/liquidity-migration-options.md): Learn more about how liquidity migration can be customized
+- [Fees & economics](https://docs.doppler.lol/core-concepts/fees-and-economics.md)
+- [Doppler Hooks](https://docs.doppler.lol/advanced-features/doppler-hooks.md)
+- [Fee Rehypothecation](https://docs.doppler.lol/advanced-features/rehype-pools.md): Create Multicurve pools with RehypeDopplerHook for advanced fee distribution and buyback mechanisms
+- [Doppler404](https://docs.doppler.lol/advanced-features/doppler404.md): Create hybrid fungible and non-fungible tokens
+- [SDK API](https://docs.doppler.lol/reference/api-reference.md)
+- [EVM SDK Examples](https://docs.doppler.lol/reference/examples.md)
+- [Multicurve](https://docs.doppler.lol/reference/examples/multicurve.md): Create coins with Doppler Multicurve for more granular supply curves
+- [Static auctions](https://docs.doppler.lol/reference/examples/static-auctions.md): Create coins with Doppler's static bonding curve, aka Doppler v3
+- [Dynamic auctions](https://docs.doppler.lol/reference/examples/dynamic-auctions.md): Create coins with Doppler's Dutch auction bonding curve, aka Doppler v4
+- [Quoting, monitoring, and metrics](https://docs.doppler.lol/reference/examples/quoting-monitoring-and-metrics.md): Examples for getting swap quotes, monitoring auction progress, and fetching token details
+- [SVM SDK Examples](https://docs.doppler.lol/reference/svm-sdk-examples.md)
+- [Launch](https://docs.doppler.lol/reference/svm-sdk-examples/launch.md): Easily launch new assets on Solana with Doppler
+- [Dynamic fee launch](https://docs.doppler.lol/reference/svm-sdk-examples/dynamic-fee-launch.md): Create a Solana launch with a dynamic fee schedule
+- [Swap](https://docs.doppler.lol/reference/svm-sdk-examples/swap.md): Easily swap Doppler created assets on Solana
+- [Launch, monitor, and e2e](https://docs.doppler.lol/reference/svm-sdk-examples/launch-monitor-and-e2e.md): Create a Solana launch, buy from the curve, and migrate to CPMM
+- [Data Indexing](https://docs.doppler.lol/reference/overview.md)
+- [Indexer API](https://docs.doppler.lol/reference/api-usage.md)
+- [Quotes & swaps](https://docs.doppler.lol/reference/quotes-and-swaps.md)
+- [Contract addresses](https://docs.doppler.lol/reference/contract-addresses.md)
+- [Metadata standards](https://docs.doppler.lol/reference/metadata-standards.md): Best practices for ecosystem support and compatability
+- [Legacy SDK migration guide](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides.md)
+- [v3](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3.md)
+- [Overview](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/overview.md): Overview of Doppler V3
+- [Get Started](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/getting-started.md): Getting Started with Doppler V3 SDK
+- [Factory](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/factory.md): Factory Class Reference
+- [Token](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/token.md): Token Class Reference
+- [Quoter](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/quoter.md): Quoter Class Reference
+- [Custom Fees](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/custom-fees.md): Arbitrary migration to Uniswap v4 pools with customizable fees
+- [Governance Options](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/governance-options.md)
+- [Streamable V3](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v3/streamable-v3.md): Streamable V3 (Lockable V3 Pools) Reference
+- [v4](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4.md)
+- [Overview](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/overview.md): Overview of the Doppler V4 SDK
+- [Get Started](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/getting-started.md): Getting Started with Doppler V4 SDK
+- [Examples](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/examples.md)
+- [Factory](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/factory.md): Factory Class Reference
+- [Quoter](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/quoter.md): Quoter Class Reference
+- [Lens](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/lens.md): Quoter Class Reference
+- [Custom Fees](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/custom-fees.md)
+- [Governance Options](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/v4/governance-options.md)
+- [Historical context](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/overview.md)
+- [Legacy SDK migration guide](https://docs.doppler.lol/reference/legacy-sdks-and-migration-guides/sdk-migration-guide.md): Migrate from the (legacy) Doppler v3 or v4 SDK to the latest
+- [Security & bug bounties](https://docs.doppler.lol/reference/security-and-bug-bounties.md)
+- [Roadmap](https://docs.doppler.lol/reference/roadmap.md): A high level overview of where Doppler is planning to go...

@@ -1,0 +1,10 @@
+FeeSafe owners     (('0xa85c06f58b6a2f1bf577b15f20f4aa66d8a334ec', '0x01db37579e55ce13f4504019025e36047bdad845', '0x29a64981d327c2b4893f1bb84aa9a6266efbb491'),)
+FeeSafe threshold  (2,)
+FeeSafe masterCopy ('1.4.1',)
+FeeSafe is portal admin? (True,)
+UpgradeSafe 0xc68f29bf owners (('0x0806d3920dafd50e8ceb189c82d2d3a217e2a045', '0x01db37579e55ce13f4504019025e36047bdad845', '0x29a64981d327c2b4893f1bb84aa9a6266efbb491', '0xa85c06f58b6a2f1bf577b15f20f4aa66d8a334ec', '0x705163cf642a975d2f0570463be93aab7993d1c2'),)
+UpgradeSafe 0xc68f29bf threshold (2,)
+Sinjoh owner() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+Sinjoh taxToken() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+Sinjoh description() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+Sinjoh vaultType() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}

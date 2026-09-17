@@ -1,0 +1,266 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Backend ENVs for Blockscout Integrations
+
+> Environment variables for configuring Blockscout backend integrations with Rust microservices, external APIs, and third-party services via MICROSERVICE ENVs.
+
+<Info>
+  The following ENVs are used for different integrations. Some work with various microservices (when the variable begins with MICROSERVICE) while others are contained within the application.
+
+  More info on Blockscout Rust MicroServices is available in the [blockscout-rs Github Repo](https://github.com/blockscout/blockscout-rs/tree/main).
+</Info>
+
+## Time format
+
+Can be set in format `1h` for 1 hour, `1m` for 1 minute, `1s` or `1` for 1 second, `1ms` for 1 millisecond.
+If no unit is provided, the value will be interpreted as seconds.
+
+<Warning>
+  ***Note*** **: Before release 5.1.2, all environment variables of time format supported only integers in seconds (without dimensions) as values.**
+</Warning>
+
+## General
+
+| Variable                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Parameters                                                            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `MICROSERVICE_HTTP_POOL_SIZE`  | Total size of the keep-alive connection pools used by `Explorer.MicroserviceInterfaces.HttpClient` for BENS and Metadata requests. This total is split across multiple pools controlled by `MICROSERVICE_HTTP_POOL_COUNT`. Each individual pool size is calculated as `MICROSERVICE_HTTP_POOL_SIZE / MICROSERVICE_HTTP_POOL_COUNT`. Two logical pools are used: `:microservices` for short requests on the critical path and `:microservices_proxy` for requests proxied to a microservice on behalf of an API caller, so a handful of long-running proxied requests can no longer starve the preloads. Both pools are supervised from `Explorer.Application`. Implemented in [#14689](https://github.com/blockscout/blockscout/pull/14689) | Version: v11.2.7+ <br />Default: `1000` <br />Applications: API       |
+| `MICROSERVICE_HTTP_POOL_COUNT` | Number of individual connection pools to split `MICROSERVICE_HTTP_POOL_SIZE` across. Pool splitting allows traffic to spread across multiple processes, reducing contention. Each pool size is calculated as `MICROSERVICE_HTTP_POOL_SIZE / MICROSERVICE_HTTP_POOL_COUNT`. Implemented in [#14707](https://github.com/blockscout/blockscout/pull/14707)                                                                                                                                                                                                                                                                                                                                                                                     | Version: v11.2.7+ <br />Default: `4` <br />Applications: API, Indexer |
+
+## Smart-contract verifier / Eth Bytecode DB
+
+<Info>
+  Connecting to the smart contract verification service
+</Info>
+
+| Variable                                                | Description                                                                                                                                                                                                                                                                               | Parameters                                                                                                 |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `MICROSERVICE_SC_VERIFIER_ENABLED`                      | If `true`, integration with [Rust smart-contract verifier](https://github.com/blockscout/blockscout-rs/tree/main/smart-contract-verifier) is enabled. `true` is the default value starting from version 6.4.0. Implemented in [#5860](https://github.com/blockscout/blockscout/pull/5860) | Version: v5.1.3+ <br />Default: `true` <br />Applications: API                                             |
+| `MICROSERVICE_SC_VERIFIER_URL`                          | URL of Rust smart-contract verifier. Implemented in [#5860](https://github.com/blockscout/blockscout/pull/5860)                                                                                                                                                                           | Version: v5.1.3+ <br />Default: `https://eth-bytecode-db.services.blockscout.com/` <br />Applications: API |
+| `MICROSERVICE_ETH_BYTECODE_DB_INTERVAL_BETWEEN_LOOKUPS` | Minimal time after unsuccessful check of smart contract's sources in Eth Bytecode DB. Implemented in [#7187](https://github.com/blockscout/blockscout/pull/7187).                                                                                                                         | Version: v5.1.3+ <br />Default: `10m` <br />Applications: API                                              |
+| `MICROSERVICE_SC_VERIFIER_TYPE`                         | Type of smart contract microservice could be either `eth_bytecode_db` or `sc_verifier`. Implemented in [#7187](https://github.com/blockscout/blockscout/pull/7187)                                                                                                                        | Version: v5.1.3+ <br />Default: `sc_verifier` <br />Applications: API                                      |
+| `MICROSERVICE_ETH_BYTECODE_DB_MAX_LOOKUPS_CONCURRENCY`  | Maximum amount of concurrent requests for fetching smart contract's sources in Eth Bytecode DB. Implemented in [#8472](https://github.com/blockscout/blockscout/pull/8472)                                                                                                                | Version: v5.3.0+ <br />Default: `10` <br />Applications: API                                               |
+| `MICROSERVICE_SC_VERIFIER_API_KEY`                      | API key for verification that metadata sent to verifier microservice from a trusted source. Implemented in [#8750](https://github.com/blockscout/blockscout/pull/8750)                                                                                                                    | Version: v5.3.2+ <br />Default: (empty) <br />Applications: API                                            |
+
+## Sol2Uml
+
+<Info>
+  Sol2Uml is a visualization tool for Solidity contracts.
+</Info>
+
+<Frame caption="Scroll down on the contract page to find the View UML diagram link">
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/13468a98-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=2cfc88f19921d545254deed1ac7c5115" alt="" width="2304" height="1036" data-path="images/13468a98-image.jpeg" />
+</Frame>
+
+<Frame caption="Contract visualization example">
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/10610308-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=dfe27455f240b24e4f8d92acd4eaef3b" alt="" width="2302" height="1528" data-path="images/10610308-image.jpeg" />
+</Frame>
+
+| Variable                                 | Description                                                                                                                                                                                                    | Parameters                                                      |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `MICROSERVICE_VISUALIZE_SOL2UML_ENABLED` | If `true`, integration with [Rust sol2uml visualizer](https://github.com/blockscout/blockscout-rs/tree/main/visualizer) is enabled. Implemented in [#6401](https://github.com/blockscout/blockscout/pull/6401) | Version: v5.1.3+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_VISUALIZE_SOL2UML_URL`     | URL of Rust visualizer. Implemented in [#6401](https://github.com/blockscout/blockscout/pull/6401)                                                                                                             | Version: v5.1.3+ <br />Default: (empty) <br />Applications: API |
+
+## Sig-provider
+
+<Info>
+  The Sig-provider microservice is used by Blockscout to display decoded transaction data on transaction pages and to determine transaction actions
+</Info>
+
+| Variable                            | Description                                                                                                                                                                                                        | Parameters                                                      |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| `MICROSERVICE_SIG_PROVIDER_ENABLED` | If `true`, integration with [Rust sig-provider service](https://github.com/blockscout/blockscout-rs/tree/main/sig-provider) is enabled. Implemented in [#6541](https://github.com/blockscout/blockscout/pull/6541) | Version: v5.1.3+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_SIG_PROVIDER_URL`     | URL of Rust sig-provider service. Implemented in [#6541](https://github.com/blockscout/blockscout/pull/6541)                                                                                                       | Version: v5.1.3+ <br />Default: (empty) <br />Applications: API |
+
+## Blockscout ENS
+
+<Info>
+  Blockscout ENS provides indexed data of domain name service for blockscout instances. [Learn more](https://github.com/blockscout/blockscout-rs/tree/main/blockscout-ens).
+</Info>
+
+| Variable                               | Description                                                                                                                                                                                                                                                                                            | Parameters                                                       |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `MICROSERVICE_BENS_ENABLED`            | If `true`, integration with [Blockscout ENS service](https://github.com/blockscout/blockscout-rs/tree/main/blockscout-ens) is enabled. Implemented in [#8972](https://github.com/blockscout/blockscout/pull/8972)                                                                                      | Version: v5.4.0+ <br />Default: (empty) <br />Applications: API  |
+| `MICROSERVICE_BENS_URL`                | URL of Blockscout ENS service. Implemented in [#8972](https://github.com/blockscout/blockscout/pull/8972)                                                                                                                                                                                              | Version: v5.4.0+ <br />Default: (empty) <br />Applications: API  |
+| `MICROSERVICE_BENS_PROTOCOLS`          | Comma-separated list of ENS protocols. Implemented in [#13992](https://github.com/blockscout/blockscout/pull/13992)                                                                                                                                                                                    | Version: v10.0.0+ <br />Default: (empty) <br />Applications: API |
+| `DISABLE_BLOCKS_BENS_PRELOAD`          | If `true`, skips ENS name preloading in responses for block list endpoints: `/api/v2/blocks`, `/api/v2/main-page/blocks`, `/api/v2/blocks/optimism-batch/:batch_number`, `/api/v2/blocks/scroll-batch/:batch_number`.                                                                                  | Version: v11.0.0+ <br />Default: `false` <br />Applications: API |
+| `DISABLE_TRANSACTIONS_BENS_PRELOAD`    | If `true`, skips ENS name preloading in responses for transaction list endpoints: `/api/v2/transactions`, `/api/v2/transactions/watchlist`, `/api/v2/main-page/transactions`, `/api/v2/main-page/transactions/watchlist`, `/api/v2/addresses/:hash/transactions`, `/api/v2/blocks/:hash/transactions`. | Version: v11.0.0+ <br />Default: `false` <br />Applications: API |
+| `DISABLE_TOKEN_TRANSFERS_BENS_PRELOAD` | If `true`, skips ENS name preloading in responses for token transfer list endpoints: `/api/v2/token-transfers`, `/api/v2/addresses/:hash/token-transfers`, `/api/v2/tokens/:address_hash_param/transfers`.                                                                                             | Version: v11.0.0+ <br />Default: `false` <br />Applications: API |
+
+## Blockscout Account Abstraction
+
+<Info>
+  Enables the [User Ops Indexer](https://github.com/blockscout/blockscout-rs/tree/main/user-ops-indexer), a service designed to index, decode and serve user operations as per the ERC-4337 standard
+</Info>
+
+| Variable                                   | Description                                                                                                                                                                                                                         | Parameters                                                      |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `MICROSERVICE_ACCOUNT_ABSTRACTION_ENABLED` | If `true`, integration with [Blockscout Account Abstraction service](https://github.com/blockscout/blockscout-rs/tree/main/user-ops-indexer) is enabled. Implemented in [#9145](https://github.com/blockscout/blockscout/pull/9145) | Version: v6.1.0+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_ACCOUNT_ABSTRACTION_URL`     | URL of Blockscout ENS service. Implemented in [#9145](https://github.com/blockscout/blockscout/pull/9145)                                                                                                                           | Version: v6.1.0+ <br />Default: (empty) <br />Applications: API |
+
+## Tx Interpreter (Summary) Service
+
+| Variable                                          | Description                                                                                                                               | Parameters                                                      |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `MICROSERVICE_TRANSACTION_INTERPRETATION_ENABLED` | If `true`, integration with Tx Interpreter Service is enabled. Implemented in [#8957](https://github.com/blockscout/blockscout/pull/8957) | Version: v5.4.0+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_TRANSACTION_INTERPRETATION_URL`     | URL of Tx Interpreter Service. Implemented in [#8957](https://github.com/blockscout/blockscout/pull/8957)                                 | Version: v5.4.0+ <br />Default: (empty) <br />Applications: API |
+
+## Metadata Service
+
+| Variable                                       | Description                                                                                                                                 | Parameters                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `MICROSERVICE_METADATA_ENABLED`                | If `true`, integration with Metadata Service is enabled. Implemented in [#9706](https://github.com/blockscout/blockscout/pull/9706)         | Version: v6.4.0+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_METADATA_URL`                    | URL of Metadata Service. Implemented in [#9706](https://github.com/blockscout/blockscout/pull/9706)                                         | Version: v6.4.0+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_METADATA_PROXY_REQUESTS_TIMEOUT` | Timeout for request forwarding from `/api/v2/proxy/metadata/`. Implemented in [#11656](https://github.com/blockscout/blockscout/pull/11656) | Version: v7.0.0+ <br />Default: `30s` <br />Applications: API   |
+
+## Multichain Search Service
+
+<Info>
+  Multichain Search is the single point of search of the data in all blockchains.
+</Info>
+
+| Variable                                                                            | Description                                                                                                                                                                                                                                                                       | Parameters                                                                |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `MICROSERVICE_MULTICHAIN_SEARCH_URL`                                                | Multichain Search Service API URL. Integration is enabled, if this variable value contains valid URL. Implemented in [#11139](https://github.com/blockscout/blockscout/pull/11139)                                                                                                | Version: v6.10.0+ <br />Default: (empty) <br />Applications: API, Indexer |
+| `MICROSERVICE_MULTICHAIN_SEARCH_API_KEY`                                            | Multichain Search Service API key. Implemented in [#11139](https://github.com/blockscout/blockscout/pull/11139)                                                                                                                                                                   | Version: v6.10.0+ <br />Default: (empty) <br />Applications: API, Indexer |
+| `MICROSERVICE_MULTICHAIN_SEARCH_ADDRESSES_CHUNK_SIZE`                               | Chunk size of addresses while exporting to Multichain Search DB. Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377)                                                                                                                                     | Version: v8.1.0+ <br />Default: 7000 <br />Applications: API, Indexer     |
+| `MICROSERVICE_MULTICHAIN_SEARCH_TOKEN_INFO_CHUNK_SIZE`                              | Chunk size of token info while exporting to Multichain Search DB. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867)                                                                                                                                    | Version: v9.0.0+ <br />Default: 1000 <br />Applications: Indexer          |
+| `MICROSERVICE_MULTICHAIN_SEARCH_COUNTERS_CHUNK_SIZE`                                | Chunk size of counters while exporting to Multichain Search DB. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                                                     | Version: v9.1.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `MIGRATION_BACKFILL_MULTICHAIN_SEARCH_BATCH_SIZE`                                   | Batch size of backfilling Multichain Search Service DB. Implemented in [#11139](https://github.com/blockscout/blockscout/pull/11139)                                                                                                                                              | Version: v6.10.0+ <br />Default: 10 <br />Applications: Indexer           |
+| `INDEXER_DISABLE_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_FETCHER`                    | If `true`, multichain DB main (blocks, transactions, addresses) export fetcher doesn't run. Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377).                                                                                                         | Version: v9.0.0+ <br />Default: `false`<br />Applications: Indexer        |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_BATCH_SIZE`                         | Batch size for multichain DB main (blocks, transactions, addresses) export fetcher. Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377).                                                                                                                 | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_CONCURRENCY`                        | Concurrency for multichain DB main (blocks, transactions, addresses) export fetcher. Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377).                                                                                                                | Version: v9.0.0+ <br />Default: `10`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_ENQUEUE_BUSY_WAITING_TIMEOUT`       | Timeout before new attempt to append item to multichain DB main (blocks, transactions, addresses) export queue if it's full. [Time format](/setup/env-variables/backend-env-variables#time-format). Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377). | Version: v9.0.0+ <br />Default: `1s`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_MAX_QUEUE_SIZE`                     | Maximum size of multichain DB main (blocks, transactions, addresses) export queue. Implemented in [#12377](https://github.com/blockscout/blockscout/pull/12377).                                                                                                                  | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_MAIN_QUEUE_INIT_QUERY_LIMIT`                   | Limit of the init query for processing the main export queue to the Multichain DB. Implemented in [#12822](https://github.com/blockscout/blockscout/pull/12822).                                                                                                                  | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_DISABLE_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_FETCHER`                | If `true`, multichain DB balances export fetcher doesn't run. Implemented in [#12580](https://github.com/blockscout/blockscout/pull/12580).                                                                                                                                       | Version: v9.0.0+ <br />Default: `false`<br />Applications: Indexer        |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_BATCH_SIZE`                     | Batch size for multichain DB balances export fetcher. Implemented in [#12580](https://github.com/blockscout/blockscout/pull/12580).                                                                                                                                               | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_CONCURRENCY`                    | Concurrency for multichain DB balances export fetcher. Implemented in [#12580](https://github.com/blockscout/blockscout/pull/12580).                                                                                                                                              | Version: v9.0.0+ <br />Default: `10`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_ENQUEUE_BUSY_WAITING_TIMEOUT`   | Timeout before new attempt to append item to multichain DB balances export queue if it's full. [Time format](/setup/env-variables/backend-env-variables#time-format). Implemented in [#12580](https://github.com/blockscout/blockscout/pull/12580).                               | Version: v9.0.0+ <br />Default: `1s`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_MAX_QUEUE_SIZE`                 | Maximum size of multichain DB balances export queue. Implemented in [#12580](https://github.com/blockscout/blockscout/pull/12580).                                                                                                                                                | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_BALANCES_QUEUE_INIT_QUERY_LIMIT`               | Limit of the init query for processing the balances export queue to the Multichain DB. Implemented in [#12822](https://github.com/blockscout/blockscout/pull/12822).                                                                                                              | Version: v9.0.0+ <br />Default: `1000` <br />Applications: Indexer        |
+| `INDEXER_DISABLE_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_FETCHER`              | If `true`, multichain DB token info export fetcher doesn't run. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                                                                                                                                     | Version: v9.0.0+ <br />Default: `false`<br />Applications: Indexer        |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_BATCH_SIZE`                   | Batch size for multichain DB token info export fetcher. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                                                                                                                                             | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_CONCURRENCY`                  | Concurrency for multichain DB token info export fetcher. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                                                                                                                                            | Version: v9.0.0+ <br />Default: `10`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_ENQUEUE_BUSY_WAITING_TIMEOUT` | Timeout before new attempt to append item to multichain DB token info export queue if it's full. [Time format](/setup/env-variables/backend-env-variables#time-format). Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                             | Version: v9.0.0+ <br />Default: `1s`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_MAX_QUEUE_SIZE`               | Maximum size of multichain DB token info export queue. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                                                                                                                                              | Version: v9.0.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_TOKEN_INFO_QUEUE_INIT_QUERY_LIMIT`             | Limit of the init query for processing the token info export queue to the Multichain DB. Implemented in [#12867](https://github.com/blockscout/blockscout/pull/12867).                                                                                                            | Version: v9.0.0+ <br />Default: `1000` <br />Applications: Indexer        |
+| `INDEXER_DISABLE_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_FETCHER`                | If `true`, multichain DB counters export fetcher doesn't run. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                                                       | Version: v9.1.0+ <br />Default: `false`<br />Applications: Indexer        |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_BATCH_SIZE`                     | Batch size for multichain DB counters export fetcher. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                                                               | Version: v9.1.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_CONCURRENCY`                    | Concurrency for multichain DB counters export fetcher. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                                                              | Version: v9.1.0+ <br />Default: `10`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_ENQUEUE_BUSY_WAITING_TIMEOUT`   | Timeout before new attempt to append item to multichain DB counters export queue if it's full. [Time format](/setup/env-variables/backend-env-variables#time-format). Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                               | Version: v9.1.0+ <br />Default: `1s`<br />Applications: Indexer           |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_MAX_QUEUE_SIZE`                 | Maximum size of multichain DB counters export queue. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                                                                | Version: v9.1.0+ <br />Default: `1000`<br />Applications: Indexer         |
+| `INDEXER_MULTICHAIN_SEARCH_DB_EXPORT_COUNTERS_QUEUE_INIT_QUERY_LIMIT`               | Limit of the init query for processing the counters export queue to the Multichain DB. Implemented in [#13007](https://github.com/blockscout/blockscout/pull/13007).                                                                                                              | Version: v9.1.0+ <br />Default: `1000` <br />Applications: Indexer        |
+
+## TAC Operation Lifecycle Service
+
+| Variable                                       | Description                                                                                                                                                                                          | Parameters                                                      |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `MICROSERVICE_TAC_OPERATION_LIFECYCLE_URL`     | TAC Operation Lifecycle Service API URL. Integration is enabled, if this variable value contains valid URL. Implemented in [#12367](https://github.com/blockscout/blockscout/pull/12367)             | Version: v8.1.0+ <br />Default: (empty) <br />Applications: API |
+| `MICROSERVICE_TAC_OPERATION_LIFECYCLE_ENABLED` | If `false`, TAC Operation Lifecycle Service integration is disabled despite `MICROSERVICE_TAC_OPERATION_LIFECYCLE_URL`. Implemented in [#12367](https://github.com/blockscout/blockscout/pull/12367) | Version: v8.1.0+ <br />Default: `true` <br />Applications: API  |
+
+## Sourcify
+
+<Info>
+  Allows for contract verification via [Sourcify](https://sourcify.dev/)
+</Info>
+
+| Variable                       | Description                                                                                                                                                                                                | Parameters                                                                            |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `SOURCIFY_INTEGRATION_ENABLED` | Enables or disables verification of contracts through Sourcify.                                                                                                                                            | Version: v5.1.3+ <br />Default: `false` <br />Applications: API                       |
+| `SOURCIFY_SERVER_URL`          | URL to Sourcify backend.                                                                                                                                                                                   | Version: v3.7.0+ <br />Default: `https://sourcify.dev/server` <br />Applications: API |
+| `SOURCIFY_REPO_URL`            | URL to Sourcify repository with fully verified contracts. Override the env var if a custom repository URL is set.                                                                                          | Version: v3.7.0+ <br />Default: `https://repo.sourcify.dev/` <br />Applications: API  |
+| `SOURCIFY_POLL_INTERVAL`       | Interval between async verification polling requests. [Time format](/setup/env-variables/backend-env-variables#time-format). Implemented in [#14584](https://github.com/blockscout/blockscout/pull/14584). | Version: latest <br />Default: `3s` <br />Applications: API                           |
+| `SOURCIFY_POLL_MAX_ATTEMPTS`   | Maximum number of attempts for async verification polling. Implemented in [#14584](https://github.com/blockscout/blockscout/pull/14584)                                                                    | Version: latest <br />Default: `20` <br />Applications: API                           |
+
+## Tenderly
+
+| Variable              | Description                                                                                                                                                                                                                                                                   | Parameters                                                      |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `SHOW_TENDERLY_LINK`  | if `true`, "Open in Tenderly" button is displayed on the transaction page. Implemented in [#4656](https://github.com/blockscout/blockscout/pull/4656)                                                                                                                         | Version: v4.0.0+ <br />Default: (empty) <br />Applications: API |
+| `TENDERLY_CHAIN_PATH` | Chain path to the transaction in Tenderly. For instance, for transactions in xDai, Tenderly link looks like this `https://dashboard.tenderly.co/tx/xdai/0x...`, then `TENDERLY_CHAIN_PATH =/xdai.` Implemented in [#4656](https://github.com/blockscout/blockscout/pull/4656) | Version: v4.0.0+ <br />Default: (empty) <br />Applications: API |
+
+## Datadog
+
+<Info>
+  Integration with the Datadog monitoring and analytics tools
+</Info>
+
+| Variable       | Description                                                                                     | Parameters                                                  |
+| -------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `DATADOG_HOST` | Host configuration setting for [Datadog integration](https://docs.datadoghq.com/integrations/). | Version: all <br />Default: (empty) <br />Applications: API |
+| `DATADOG_PORT` | Port configuration setting for [Datadog integration](https://docs.datadoghq.com/integrations/). | Version: all <br />Default: (empty) <br />Applications: API |
+
+## Spandex
+
+<Info>
+  Spandex is a library for tracing Elixir applications
+</Info>
+
+| Variable                 | Description                                                                              | Parameters                                                  |
+| ------------------------ | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `SPANDEX_BATCH_SIZE`     | [Spandex](https://github.com/spandex-project/spandex) and Datadog configuration setting. | Version: all <br />Default: (empty) <br />Applications: API |
+| `SPANDEX_SYNC_THRESHOLD` | [Spandex](https://github.com/spandex-project/spandex) and Datadog configuration setting. | Version: all <br />Default: (empty) <br />Applications: API |
+
+## Analytics
+
+<Info>
+  Variables for adding Mixpanel and/or amplitude for visitor analytics.
+</Info>
+
+| Variable            | Description                                                                                                                              | Parameters                                                                          |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `MIXPANEL_TOKEN`    | [Mixpanel](https://mixpanel.com/) project token.                                                                                         | Needs Recompile: ☑️ Version: v5.0.0+ <br />Default: (empty) <br />Applications: API |
+| `MIXPANEL_URL`      | Url to use Mixpanel with proxy ([Collection via Proxy](https://developer.mixpanel.com/docs/collection-via-a-proxy)).                     | Needs Recompile: ☑️ Version: v5.0.0+ <br />Default: (empty) <br />Applications: API |
+| `AMPLITUDE_API_KEY` | [Amplitude](https://amplitude.com/) API key.                                                                                             | Needs Recompile: ☑️ Version: v5.0.0+ <br />Default: (empty) <br />Applications: API |
+| `AMPLITUDE_URL`     | Url to use Amplitude with proxy ([Use Domain Proxy to Relay Events](https://www.docs.developers.amplitude.com/analytics/domain-proxy/)). | Needs Recompile: ☑️ Version: v5.0.0+ <br />Default: (empty) <br />Applications: API |
+
+## Solidityscan
+
+<Info>
+  Enables security scoring for smart contracts
+</Info>
+
+<Frame caption>
+  <img src="https://mintcdn.com/blockscout/JTppjXqh5Q4u166M/images/159daf66-image.jpeg?fit=max&auto=format&n=JTppjXqh5Q4u166M&q=85&s=ae1d21ada3ab4fbbadfbb3e737a06482" alt="" width="2304" height="1242" data-path="images/159daf66-image.jpeg" />
+</Frame>
+
+| Variable                   | Description                                                                                                                                                                                                                                                | Parameters                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `SOLIDITYSCAN_PLATFORM_ID` | Internal platform id in [Solidityscan](https://apidoc.solidityscan.com/solidityscan-security-api/solidityscan-other-apis/quickscan-api-v1). Implemented in [#10473](https://github.com/blockscout/blockscout/pull/10473)                                   | Version: v6.8.0+ <br />Default: 16 <br />Applications: API      |
+| `SOLIDITYSCAN_CHAIN_ID`    | Internal chain id in [Solidityscan](https://apidoc.solidityscan.com/solidityscan-security-api/solidityscan-other-apis/quickscan-api-v1). It may not match with actual chain ID. Implemented in [#8908](https://github.com/blockscout/blockscout/pull/8908) | Version: v5.3.3+ <br />Default: (empty) <br />Applications: API |
+| `SOLIDITYSCAN_API_TOKEN`   | API token for usage of [Solidityscan API](https://apidoc.solidityscan.com/solidityscan-security-api/solidityscan-other-apis/quickscan-api-v1).                                                                                                             | Version: v5.3.3+ <br />Default: (empty) <br />Applications: API |
+
+## Noves.fi
+
+<Info>
+  Adds additional transaction details such as summaries and asset flows. [More info here](https://www.blog.blockscout.com/better-blockchain-data-with-noves/).
+</Info>
+
+| Variable                | Description                                                                                                                                            | Parameters                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| `NOVES_FI_BASE_API_URL` | [Noves.fi API](https://blockscout.noves.fi/swagger/index.html) base URL. Implemented in [#9056](https://github.com/blockscout/blockscout/pull/9056).   | Version: v6.1.0+ <br />Default: `https://blockscout.noves.fi` <br />Applications: API |
+| `NOVES_FI_CHAIN_NAME`   | [Noves.fi API](https://blockscout.noves.fi/swagger/index.html) chain name. Implemented in [#9056](https://github.com/blockscout/blockscout/pull/9056). | Version: v6.1.0+ <br />Default: (empty) <br />Applications: API                       |
+| `NOVES_FI_API_TOKEN`    | [Noves.fi API](https://blockscout.noves.fi/swagger/index.html) token. Implemented in [#9056](https://github.com/blockscout/blockscout/pull/9056).      | Version: v6.1.0+ <br />Default: (empty) <br />Applications: API                       |
+
+## Xname app
+
+<Info>
+  Enables Xname app integration, which includes humanity score display.
+</Info>
+
+| Variable             | Description                                                                                                             | Parameters                                                                          |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `XNAME_BASE_API_URL` | [Xname API](https://xname.app/) base URL. Implemented in [#11010](https://github.com/blockscout/blockscout/pull/11010). | Version: v6.9.2+ <br />Default: `https://gateway.xname.app` <br />Applications: API |
+| `XNAME_API_TOKEN`    | [Xname API](https://xname.app/) token. Implemented in [#11010](https://github.com/blockscout/blockscout/pull/11010).    | Version: v6.9.2+ <br />Default: (empty) <br />Applications: API                     |
+
+## Stylus contract verifier
+
+<Info>
+  Connecting to the Stylus smart contract verification service
+</Info>
+
+| Variable                           | Description                                                                                                                                                                                                                                                            | Parameters                                                       |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `MICROSERVICE_STYLUS_VERIFIER_URL` | URL of Stylus verifier. If set valid url and `CHAIN_TYPE=arbitrum`, integration with [Stylus verifier](https://github.com/blockscout/blockscout-rs/tree/main/stylus-verifier) is enabled. Implemented in [#11183](https://github.com/blockscout/blockscout/pull/11183) | Version: v6.10.0+ <br />Default: (empty) <br />Applications: API |

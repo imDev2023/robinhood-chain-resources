@@ -1,0 +1,40 @@
+{
+ "address": "0x8b6a7475A35a3cB9B2FE82f7d9778e279F5a0905",
+ "role": "PV2Vault-Example-Staking-PAPERHANDS",
+ "group": "PonsVault v2",
+ "note": "BeaconProxy. A live Staking vault, and the `creatorFeeRecipient` of the PAPERHANDS launch. Worked example in the README.",
+ "blockscout_address": {
+  "block_number_balance_updated_at": 52450113,
+  "coin_balance": "67780187880646",
+  "creation_status": "success",
+  "creation_transaction_hash": "0xa2fd067d865efb751ba8f9759d9513caa124ce1e137fb0291bf34d0ac094a6d9",
+  "creator_address_hash": "0x3422A17c3A85f751Acb7F978f7333F93ea39CB48",
+  "ens_domain_name": null,
+  "exchange_rate": "2397.53",
+  "has_beacon_chain_withdrawals": false,
+  "has_logs": true,
+  "has_token_transfers": true,
+  "has_tokens": true,
+  "has_validated_blocks": false,
+  "hash": "0x8b6a7475A35a3cB9B2FE82f7d9778e279F5a0905",
+  "implementations": [
+   {
+    "address_hash": "0xC8e0a4fE58918c47F66CF630c6A7205741C11FD4",
+    "name": null
+   }
+  ],
+  "is_contract": true,
+  "is_scam": false,
+  "is_verified": false,
+  "metadata": null,
+  "name": null,
+  "private_tags": [],
+  "proxy_type": "eip1967_beacon",
+  "public_tags": [],
+  "reputation": "ok",
+  "token": null,
+  "watchlist_address_id": null,
+  "watchlist_names": []
+ },
+ "blockscout_smart_contract": null
+}

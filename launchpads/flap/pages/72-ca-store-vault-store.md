@@ -1,0 +1,72 @@
+# Flap - Vault Store (CAstore), Robinhood Chain
+
+> Source: https://flap.sh/robinhood/CAstore
+> Retrieved: 2026-09-02 (agent-browser read, no wallet connected)
+
+---
+
+HOMEStoreDocs
+
+Community
+
+XTelegram
+
+More
+
+AI OracleTerms and ConditionsContact Us
+
+Create TokenCREATE
+
+SearchRobinhoodENConnect Wallet
+
+Create TokenCREATESearchRobinhoodConnect Wallet
+
+## Create your own contract template
+
+Submit your custom VAULT for audit and integration into Flap.
+
+Submit ProjectDeveloper Doc
+
+## Launch from Factory
+
+Use a custom vault that isn't featured in the Vault Store by entering its FACTORY contract address.
+
+Launch Factory
+
+## Create your own contract template
+
+Submit your custom VAULT for audit and integration into Flap.
+
+Submit ProjectDeveloper Doc
+
+## Launch from Factory
+
+Use a custom vault that isn't featured in the Vault Store by entering its FACTORY contract address.
+
+Launch Factory
+
+## Featured Vault Templates
+
+### Stocks
+
+Tax ETH is reserved for tokenized-stock purchases. Keepers sell supported RWA assets to the vault, and holders can claim RWA dividends.
+
+## FAQ
+
+### 1.What is a Vault?
+
+A Vault is an onchain contract that automatically manages how trading-tax revenue is used. Anyone can launch a token directly using vault templates from the Flap Store.
+
+### 2.What is a Factory?
+
+### 3.Is every Vault created by Flap?
+
+### 4.Can I build my own vaults?
+
+### 5.Are all projects audited by Flap?
+
+Flap — The Programmable Token Launchpad
+
+HOMEStoreDocsCommunityMoreLanguageEN
+
+See `screenshots/16-ca-store.png`.

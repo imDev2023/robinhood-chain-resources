@@ -1,0 +1,44 @@
+# Long - Token page, $LUCIA anchored to TTWO
+
+> Source: https://app.long.xyz/tokens/0xae12303bd73442d3c8dba9a58b164070d78a1e18
+> Retrieved: 2026-09-02 (Jina Reader)
+> Raw capture: `_raw/jina/app-token-0xae12303bd73442d3c8dba9a58b164070d78a1e18.md`
+
+---
+
+![Image 1: LUCIA](https://storage.long.xyz/tokens/0xae12303bd73442d3c8dba9a58b164070d78a1e18.png)
+
+$LUCIA
+
+LUCIA
+
+Anchored to![Image 2: TTWO](https://app.long.xyz/robinhood-coins/ttwo.png)**TTWO**
+
+$1.2M
+
+$1.2M
+
+[Trade on Matcha Meta DEX](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xae12303bd73442d3c8dba9a58b164070d78a1e18)
+
+## Fees
+
+Fee receiver:[0xE59fe5...cBd8](https://robinhoodchain.blockscout.com/address/0xE59fe5264F891B7142F107b34F52DB43365dcBd8)
+
+Claimed$7,539.97
+
+Unclaimed$364.15
+
+Name LUCIA
+Ticker$LUCIA
+CA 0xae1230...1e18
+Anchored to![Image 3: TTWO](https://app.long.xyz/robinhood-coins/ttwo.png)TTWO 0x5e8121...9786
+Description-
+Social Links[https://x.com/Dexerto/status/2093088688905277499?s=20](https://x.com/Dexerto/status/2093088688905277499?s=20)
+Supply 1,000,000,000
+Defined[View chart](https://www.defined.fi/robinhood/0xf8b8b1dfecbe59a8306226b62437e4682519215ccad3343ff651b8f74e5cf0a8)
+
+Links/Buttons:
+- [](https://x.com/Dexerto/status/2093088688905277499?s=20)
+- [Trade on Matcha Meta DEX↗](https://meta.matcha.xyz/?chainId=4663&sellToken=0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&buyToken=0xae12303bd73442d3c8dba9a58b164070d78a1e18)
+- [0xE59fe5...cBd8](https://robinhoodchain.blockscout.com/address/0xE59fe5264F891B7142F107b34F52DB43365dcBd8)
+- [View chart](https://www.defined.fi/robinhood/0xf8b8b1dfecbe59a8306226b62437e4682519215ccad3343ff651b8f74e5cf0a8)

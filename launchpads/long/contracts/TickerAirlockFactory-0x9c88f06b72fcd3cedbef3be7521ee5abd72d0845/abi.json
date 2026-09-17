@@ -1,0 +1,689 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "airlock_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "trustedTokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "initialOwner",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "submittedKey",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "deployedKey",
+    "type": "bytes32"
+   }
+  ],
+  "name": "DeployedSymbolMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "EnforcedPause",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExpectedPause",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "index",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes1",
+    "name": "character",
+    "type": "bytes1"
+   }
+  ],
+  "name": "InvalidTickerCharacter",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "length",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidTickerLength",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MalformedTokenData",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NativeTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OwnershipRenunciationDisabled",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ReentrancyGuardReentrantCall",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "tickerKey",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint48",
+    "name": "reservedUntil",
+    "type": "uint48"
+   }
+  ],
+  "name": "TickerReserved",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TimestampOverflow",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "supplied",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "expected",
+    "type": "address"
+   }
+  ],
+  "name": "UnsupportedTokenFactory",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddress",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "ERC20Swept",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "poolOrHook",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "poolInitializer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "launcher",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "tickerKey",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "deployedAt",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint48",
+    "name": "reservedUntil",
+    "type": "uint48"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "normalizedTicker",
+    "type": "string"
+   }
+  ],
+  "name": "LaunchCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "NativeSwept",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "Paused",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "Unpaused",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "AIRLOCK",
+  "outputs": [
+   {
+    "internalType": "contract IAirlock",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RESERVATION_DURATION",
+  "outputs": [
+   {
+    "internalType": "uint48",
+    "name": "",
+    "type": "uint48"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TRUSTED_TOKEN_FACTORY",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "initialSupply",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "numTokensToSell",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "numeraire",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "tokenFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "tokenFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "governanceFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "governanceFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "poolInitializer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "poolInitializerData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "liquidityMigrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "liquidityMigratorData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "integrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "salt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct IAirlock.CreateParams",
+    "name": "data",
+    "type": "tuple"
+   }
+  ],
+  "name": "create",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "governance",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "timelock",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "migrationPool",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "ticker",
+    "type": "string"
+   }
+  ],
+  "name": "getTickerRecord",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "uint48",
+      "name": "deployedAt",
+      "type": "uint48"
+     },
+     {
+      "internalType": "uint48",
+      "name": "reservedUntil",
+      "type": "uint48"
+     }
+    ],
+    "internalType": "struct TickerAirlockFactory.TickerRecord",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "ticker",
+    "type": "string"
+   }
+  ],
+  "name": "isTickerAvailable",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pause",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "paused",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingOwner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "sweepERC20",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address payable",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "sweepNative",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "ticker",
+    "type": "string"
+   }
+  ],
+  "name": "tickerKey",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "key",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "unpause",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

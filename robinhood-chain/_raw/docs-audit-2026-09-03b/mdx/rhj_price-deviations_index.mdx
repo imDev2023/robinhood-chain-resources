@@ -1,0 +1,19 @@
+---
+layout: docs
+title: Price Deviations
+description: Stock Tokens trading at a sustained premium or discount to their underlying.
+---
+
+# Price Deviations
+
+A price deviation occurs when a Stock Token trades at a significant premium or discount to the expected price of its underlying asset. Robinhood discloses a deviation on this page when a token's on-chain price differs from its underlying's reference price by 5% or more for seven consecutive trading days.
+
+On-chain token prices can deviate for a variety of factors, including differences in liquidity, variances in mint and burn pricing, and market conditions.
+
+Deviations are assessed at the end of each business day (five days a week), comparing the NYSE closing price for the underlying — benchmarked to the nearest block — against the average on-chain price from a reputable source over the trailing seven-day period.
+
+## Current Deviations
+
+import { PriceDeviationsTable } from '../../../components/PriceDeviationsTable'
+
+<PriceDeviationsTable />

@@ -1,0 +1,13 @@
+{
+ "allTokensLength()": "0x000000000000000000000000000000000000000000000000000000000000013a",
+ "creationFee()": "0x0000000000000000000000000000000000000000000000000000000000000000",
+ "graduationThreshold()": "0x0000000000000000000000000000000000000000000000004563918244f40000",
+ "partnerFeeBps()": null,
+ "hook()": null,
+ "vault()": null,
+ "owner()": "0x000000000000000000000000c6c66aeebe18e3d1027a4b0b38ce0071616d6464",
+ "tokenImpl()": null,
+ "bondingCurveBeacon()": null,
+ "feeShareBeacon()": null,
+ "paused()": null
+}

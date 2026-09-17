@@ -1,0 +1,112 @@
+{
+ "createParams": {
+  "initialSupply": "1000000000000000000000000000",
+  "numTokensToSell": "1000000000000000000000000000",
+  "numeraire": "0x05b37Fb53A299a1b874A619e1c4C404D52C36F4C",
+  "tokenFactory": "0x1B37D3a72082029c44B35B604Ea473617580b69a",
+  "tokenFactoryData": "0x0000000000000000000000000000000000000000000000000000000000000160...",
+  "governanceFactory": "0x85f37f74Ef2478A770318bc810177a9835911aD7",
+  "governanceFactoryData": "0x",
+  "poolInitializer": "0x4e3468951D49f2EEa976eD0D6e75fFCb44a9a544",
+  "poolInitializerData": "0x0000000000000000000000000000000000000000000000000000000000000020...",
+  "liquidityMigrator": "0xba2F330EDb16cD8056f5988d8CE19BbC63475A0e",
+  "liquidityMigratorData": "0x",
+  "integrator": "0x92d435C96E63c43E12d6D0AB28f6b0B04072F765",
+  "salt": "0x00000000000000000000000000000000ea0d33c17262e30b7636fd8e38472b2f"
+ },
+ "tokenFactoryData": {
+  "name": "Human Intel",
+  "symbol": "HIAI",
+  "vestingSchedules(cliff,duration)": [],
+  "beneficiaries": [],
+  "scheduleIds": [],
+  "amounts": [],
+  "tokenURI": "ipfs://bafkreig37duwng3ch64ser2p4ogqiifw35owcnk34hexigarcpfi6zbosq",
+  "maxBalanceLimit": 0,
+  "balanceLimitEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "excludedFromBalanceLimit": []
+ },
+ "poolInitializerData": {
+  "fee": 1000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   {
+    "tickLower": -157944,
+    "tickUpper": -47504,
+    "numPositions": 1,
+    "shares": 991000000000000000
+   },
+   {
+    "tickLower": -47504,
+    "tickUpper": 887264,
+    "numPositions": 1,
+    "shares": 9000000000000000
+   }
+  ],
+  "beneficiaries": [
+   {
+    "beneficiary": "0x21e2ce70511e4fe542a97708e89520471daa7a66",
+    "sharesWad": 50000000000000000,
+    "sharesPct": 5.0
+   },
+   {
+    "beneficiary": "0x79e660623a3fff90f8233200160eef40a1133b12",
+    "sharesWad": 950000000000000000,
+    "sharesPct": 95.0
+   }
+  ],
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "onInitCalldata": "0x00000000000000000000000005b37fb53a299a1b874a619e1c4c404d52c36f4c00000000000000000000000092d435c96e63c43e12d6d0ab28f6b0b04072f76500000000000000000000000000000000000000000000000000000000000c35000000000000000000000000000000000000000000000000000000000000002bc0000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009e9a7129c22db6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003f70fa10b41249200000000000000000000000000000000000000000000000001fb87d085a0924900000000000000000000000000000000000000000000000009e9a7129c22db6e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001fb87d085a09249",
+  "graduationCalldata": "0x",
+  "rehypeInitData": {
+   "numeraire": "0x05b37fb53a299a1b874a619e1c4c404d52c36f4c",
+   "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+   "startFee": 800000,
+   "startFeePct": 80.0,
+   "endFee": 11200,
+   "endFeePct": 1.12,
+   "durationSeconds": 10,
+   "startingTime": 0,
+   "feeRoutingMode": "DirectBuyback",
+   "feeDistributionInfo": {
+    "assetFeesToAssetBuybackWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "assetFeesToNumeraireBuybackWad": {
+     "wad": 714285714285714286,
+     "pct": 71.42857142857143
+    },
+    "assetFeesToBeneficiaryWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "assetFeesToLpWad": {
+     "wad": 285714285714285714,
+     "pct": 28.571428571428573
+    },
+    "numeraireFeesToAssetBuybackWad": {
+     "wad": 142857142857142857,
+     "pct": 14.285714285714286
+    },
+    "numeraireFeesToNumeraireBuybackWad": {
+     "wad": 714285714285714286,
+     "pct": 71.42857142857143
+    },
+    "numeraireFeesToBeneficiaryWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "numeraireFeesToLpWad": {
+     "wad": 142857142857142857,
+     "pct": 14.285714285714286
+    }
+   }
+  }
+ },
+ "txHash": "0x26617c388ede0de4ac1c967497f81fbbe54b7838beb15c458dd7a7a171a182d6",
+ "from": "0x79e660623A3fFf90f8233200160EeF40a1133B12",
+ "timestamp": "2026-09-02T03:47:57.000000Z"
+}

@@ -1,0 +1,69 @@
+Home
+
+Create token
+
+Portfolio
+
+Menu
+
+# Portfolio
+
+FiltersReceive
+
+0xTEST...REDACTED
+
+Total value
+
+Claimable fees
+
+Total assets
+
+24h PnL
+
+Tokens created
+
+Total value
+
+Claimable fees
+
+Total assets
+
+24h PnL
+
+Tokens created
+
+Filters
+
+Token
+
+Price
+
+Balance
+
+% Port
+
+Est. Value
+
+Fees
+
+24h PnL
+
+24h
+
+### No tokens in portfolio
+
+Start trading to see your portfolio tokens here
+
+No portfolio data
+
+© Doppler 2026
+
+How it works
+
+X.comTelegramDocsMore
+
+### Solana is now on Doppler
+
+Start discovering and trading Solana tokens, now live on Doppler.
+
+Got it

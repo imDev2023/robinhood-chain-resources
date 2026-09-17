@@ -1,0 +1,22 @@
+Derived from _raw/rpc/factory-state-2026-09-02.json (eth_call against ALCHEMY_MAINNET_URL, block 52761706 ) and BagsBondingCurve constants (contracts/BagsBondingCurveImpl-0x4198.../sources/src/BagsBondingCurve.sol).
+graduationThreshold = 5.0 ETH
+creationFee = 0 wei
+partnerFeeBps = 2500
+allTokensLength (v2 factory) = 3934
+initial virtual quote vQ0 = t*17/66 = 1.2878787878787878 ETH; initial virtual token reserve = 1043787878.7878788
+initial price = 1.2339e-09 ETH/token, initial FDV = 1.234 ETH
+price at graduation = 2.9412e-08 ETH/token, FDV at graduation = 29.412 ETH
+LP seeded at graduation: 170000000 tokens + 5.0 ETH -> LP value 10.000 ETH (implied 34.0% of FDV)
+gross ETH buyers must pay to fill the curve = 5.1020 ETH; total curve-phase fees = 0.1020 ETH (creator half 0.0510, protocol half 0.0510)
+BARRY Migrated sqrtPriceX96 -> 2.9412e-08 ETH/token (currency0 WETH, currency1 token), i.e. 34000000 tokens per ETH
+vault balance = 28.171065648650945 ETH
+BARRY curve: migrated 1 realQuoteReserves 5.0 bondingProgress 100 TX_FEE_BPS 200 LP_TOKEN_AMOUNT 170000000.0
+RHOBOT curve: realQuoteReserves 0.1872441851075667 ETH, bondingProgress 15 pct, currentPrice 1.6187e-09 ETH/token
+POINTLESS curve: realQuoteReserves 0 bondingProgress 0 currentPrice 1.2339e-09 ETH/token (= initial price)
+pulse: 100 newest launches span 2.95 days -> 33.8 launches/day; bonded list 33 entries (v1 10, v2 23)
+Migrated events on chain since block 7887312 (all curves, public RPC eth_getLogs): 38 ; PoolMinted on live hook 0x2380: 23
+block 23256514 = 2026-07-30T10:49:55+00:00
+block 7887312 = 2026-07-12T14:45:56+00:00
+block 7887315 = 2026-07-12T14:45:56+00:00
+block 8375410 = 2026-07-13T04:20:53+00:00
+block 52488616 = 2026-09-02T10:03:10+00:00

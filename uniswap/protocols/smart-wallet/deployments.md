@@ -1,0 +1,26 @@
+<!-- source: https://developers.uniswap.org/docs/protocols/smart-wallet/deployments | captured: 2026-08-22 | via: https://developers.uniswap.org/docs/protocols/smart-wallet/deployments.md (native markdown) -->
+# Deployments (/docs/protocols/smart-wallet/deployments)
+
+View Uniswap smart wallet Calibur deployment addresses, versions, and repository references.
+
+> [!NOTE]
+> All Smart Wallet deployment addresses are also available on the unified [Deployments](/deployments) page and its [deployments.json](/deployments.json) feed.
+
+## Deployment Addresses
+| Network          | Address                                    | Commit Hash                              | Version |
+| ---------------- | ------------------------------------------ | ---------------------------------------- | ------- |
+| Mainnet          | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Unichain         | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Base             | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Optimism         | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| BNB              | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Arbitrum One     | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Monad            | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Robinhood        | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| XLayer           | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Unichain Sepolia | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+| Sepolia          | 0x000000005c84F8Fd50b21CAC312528A64437030e | 249cac5e880831d7b2de4111a5920dbf0d242846 | v1.1.0  |
+
+## References
+* [GitHub repository](https://github.com/Uniswap/calibur)
+* [Audits](https://github.com/Uniswap/calibur/tree/main/audits)

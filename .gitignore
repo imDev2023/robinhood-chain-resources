@@ -1,0 +1,27 @@
+# OS and tooling noise
+.DS_Store
+__pycache__/
+*.pyc
+
+# Do NOT ignore node_modules globally.
+# launchpads/*/contracts/*/sources/node_modules/ are verified contract source paths from Blockscout.
+
+# Third-party repository clones.
+# Listed with pinned commits in upstream-repos.tsv, restored by scripts/restore-upstream-repos.sh.
+launchpads/*/_raw/github/
+
+# Browser session captures.
+*.har
+
+# Minified third-party site bundles.
+# Own tooling under _raw/tools/ is kept.
+launchpads/*/_raw/**/*.js
+launchpads/*/_raw/**/*.mjs
+launchpads/*/_raw/**/*.map
+!launchpads/*/_raw/tools/**
+robinhood-chain/_raw/**/*.js
+
+# Local secrets, should any ever be placed here.
+.env
+.env.*
+!.env.example

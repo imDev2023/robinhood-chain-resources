@@ -1,0 +1,586 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "weth_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "owner_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint16",
+    "name": "bps",
+    "type": "uint16"
+   }
+  ],
+  "name": "FractionTooLarge",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddress",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "enum QuoteTier",
+    "name": "tier",
+    "type": "uint8"
+   },
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct QuotePolicy",
+    "name": "policy",
+    "type": "tuple"
+   }
+  ],
+  "name": "DefaultSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "member",
+    "type": "bool"
+   }
+  ],
+  "name": "EcosystemSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "PolicyCleared",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct QuotePolicy",
+    "name": "policy",
+    "type": "tuple"
+   }
+  ],
+  "name": "PolicySet",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_POOL_FRACTION_BPS",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "classify",
+  "outputs": [
+   {
+    "internalType": "enum QuoteTier",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "clearPolicy",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "enum QuoteTier",
+    "name": "tier",
+    "type": "uint8"
+   }
+  ],
+  "name": "defaultFor",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "internalType": "struct QuotePolicy",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "hasExplicitPolicy",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "isEcosystem",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "isStockToken",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingOwner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "policyFor",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "internalType": "struct QuotePolicy",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "enum QuoteTier",
+    "name": "tier",
+    "type": "uint8"
+   },
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "internalType": "struct QuotePolicy",
+    "name": "policy",
+    "type": "tuple"
+   }
+  ],
+  "name": "setDefault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "internalType": "bool",
+    "name": "member",
+    "type": "bool"
+   }
+  ],
+  "name": "setEcosystem",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "Currency",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "enum QuoteTier",
+      "name": "tier",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sweepable",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxPoolFractionBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint128",
+      "name": "minSweep",
+      "type": "uint128"
+     },
+     {
+      "internalType": "uint128",
+      "name": "maxSweepNotional",
+      "type": "uint128"
+     }
+    ],
+    "internalType": "struct QuotePolicy",
+    "name": "policy",
+    "type": "tuple"
+   }
+  ],
+  "name": "setPolicy",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

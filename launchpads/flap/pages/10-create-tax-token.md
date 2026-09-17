@@ -1,0 +1,154 @@
+# Flap - Create Tax Token form (Robinhood Chain)
+
+> Source: https://flap.sh/launch?chain=robinhood&lang=en
+> Retrieved: 2026-09-02 (agent-browser read, no wallet connected)
+
+---
+
+HOMEStoreDocs
+
+Community
+
+XTelegram
+
+More
+
+AI OracleTerms and ConditionsContact Us
+
+Create TokenCREATE
+
+SearchRobinhoodENConnect Wallet
+
+Create TokenCREATESearchRobinhoodConnect Wallet
+
+# Create Tax Token
+
+Create Token
+
+### Basic Information
+
+Cover Image
+
+//Supported File FormatsClick or drag an image herePNG, JPEG, WebP, SVG, GIF, file size limit 3MB
+
+Token Name*
+
+Token Symbol*
+
+Blockchain Network
+
+Robinhood
+
+Token Description
+
+### Select Vault (Optional)
+
+Enable VaultVault unlocks advanced token features and more ways to play. You can enable it now or explore it later.
+
+### Payment token*
+
+CRYPTORWA
+
+ETH
+
+### Select DEX for Migration*
+
+PancakeSwapUniswap
+
+### Creator Token Purchase (Optional)
+
+A small creator buy helps secure your token launch by reducing sniper activity. Maximum purchase amount: 800M tokens. Any overpayment will be refunded. Deploy cost: around 0.001 ETH
+
+Purchase amountBalance: - ETH
+
+25%50%75%MAX
+
+ETH
+
+25%50%75%MAX
+
+Estimated receive: 0 Token
+
+Max: 5.1 ETHMaximum purchase: 5.1 ETH
+
+### Anti-Farmer Protection Duration
+
+Anti-Farmer Protection Duration30 day(s)
+
+During the anti-farmer protection period, users will not be able to add liquidity to some V3 pools. This feature ensures that trades occur primarily in the tax liquidity pool during the protection period, improving the stability of token tax revenue. Set 0 days to disable the protection period.
+
+### Token Setting
+
+Buy Tax Rate
+
+0%10%
+
+Sell Tax Rate
+
+0%10%
+
+Anti-Farmer Protection Duration30 day(s)
+
+During the anti-farmer protection period, users will not be able to add liquidity to some V3 pools. This feature ensures that trades occur primarily in the tax liquidity pool during the protection period, improving the stability of token tax revenue. Set 0 days to disable the protection period.
+
+Min: 0 days · Max: 1 year (365 days) · Default: 30 days
+
+### Tax Allocation
+
+Total allocation must be 100%
+
+10%
+
+Creator Funds Wallet10%
+
+Burn0%
+
+Dividend0%
+
+Liquidity0%
+
+Unallocated90%
+
+Total: 10%Unallocated: 90%
+
+Reset
+
+Creator Funds WalletDev, Marketing, etc.(Dev, Marketing, etc.)
+
+BurnReduce Supply(Reduce Supply)
+
+DividendRewards to Holders(Rewards to Holders)
+
+Liquidityadd to liquidity(add to liquidity)
+
+Minimum Balance for Dividend Eligibility (tokens)
+
+Minimum: 0 tokens
+
+### Recipient Wallet
+
+EVM AddressVault
+
+### Optional Links
+
+Telegram Link
+
+Twitter Link
+
+GitHub Link
+
+YouTube Link
+
+DeBox Link
+
+Website Link
+
+Create Token
+
+Create Token
+
+HOMEStoreDocsCommunityMoreLanguageEN
+
+See `screenshots/12-create-tax-token-robinhood.png` and `screenshots/13-vault-picker.png`.
+
+Note on screenshots: an earlier attempt at this route captured the board rather than the form; that image is kept as `screenshots/10-board-robinhood-hero.png` and is referenced from `pages/01-board-robinhood.md`.

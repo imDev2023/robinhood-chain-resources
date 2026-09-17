@@ -1,0 +1,7 @@
+{
+  "url": "https://app.doppler.lol/api/metadata/robinhood/0xd61240Ce35601fe0F057387116762aD9C1CF5bA3",
+  "method": "GET",
+  "postData": null,
+  "status": 200,
+  "responseSample": "{\"name\":\"Gist\",\"symbol\":\"GIST\",\"attributes\":[{\"trait_type\":\"launch_provider\",\"value\":\"bankr\"},{\"trait_type\":\"chain\",\"value\":\"robinhood\"}],\"description\":\"Deployed using @bankrbot on X\",\"tweet_url\":\"https://twitter.com/gistdotis/status/2095167331181986101\",\"initial_deployer\":{\"address\":\"0x51bd9c086e509242b64b44f2336746518777aba0\",\"x_username\":\"gistdotis\"},\"initial_fee_recipient\":{\"address\":\"0x51bd9c086e509242b64b44f2336746518777aba0\",\"x_username\":\"gistdotis\"},\"ticker\":\"GIST\"}"
+}

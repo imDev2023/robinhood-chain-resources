@@ -1,0 +1,119 @@
+# Doppler - Indexer API
+
+> Source: https://docs.doppler.lol/reference/api-usage
+> Retrieved: 2026-09-02 (GitBook .md endpoint, saved as `_raw/jina/docs-reference_api-usage.direct.md`)
+
+---
+
+# Indexer API
+
+The indexer exposes the indexed data through a GraphQL API and a RESTful search endpoint.
+
+{% hint style="success" %}
+[Whetstone Research](https://whetstone.cc) hosts a free endpoint that supports Base Sepolia for development.
+
+<https://test.indexer.doppler.lol/>
+
+Production endpoints are available upon request.
+
+Indexing APIs that support Solana are a work in progress.
+{% endhint %}
+
+## GraphQL API
+
+The primary way to query data is through the GraphQL endpoint, available at `/graphql`. It is strongly typed and supports complex queries, filtering, and pagination.
+
+### Example Queries
+
+1. **Fetch top 5 pools on Base Sepolia by USD liquidity:**
+
+   ```graphql
+   query TopPoolsByLiquidity {
+     pools(
+       where: { chainId: 84532 }
+       orderBy: "dollarLiquidity"
+       orderDirection: "desc"
+       limit: 5
+     ) {
+       items {
+         address
+         dollarLiquidity
+         volumeUsd
+         baseToken {
+           symbol
+         }
+         quoteToken {
+           symbol
+         }
+       }
+     }
+   }
+   ```
+2. **Get recent swaps for a specific pool:**
+
+   ```graphql
+   query RecentSwaps {
+     swaps(
+       where: { pool: "0x..." }
+       orderBy: "timestamp"
+       orderDirection: "desc"
+       limit: 10
+     ) {
+       items {
+         txHash
+         timestamp
+         type
+         amountIn
+         amountOut
+         swapValueUsd
+       }
+     }
+   }
+   ```
+3. **Fetch detailed information for a single token:**
+
+   ```graphql
+   query TokenDetails {
+     token(address: "0x...", chainId: 84532) {
+       address
+       name
+       symbol
+       decimals
+       image
+       volumeUsd
+       holderCount
+       pool {
+         address
+         price
+       }
+     }
+   }
+   ```
+
+## REST API
+
+A simple REST endpoint is available for searching tokens.
+
+### Search Endpoint
+
+* **URL**: `/search/:query`
+* **Method**: `GET`
+* **Description**: Searches for tokens by name, symbol, or address.
+* **URL Parameters**:
+  * `query`: The search term (e.g., "MyToken", "MTK", or "0x...").
+* **Query Parameters**:
+  * `chain_ids`: A comma-separated list of chain IDs to filter the search (e.g., `?chain_ids=84532,130`).
+
+**Example Usage:**
+
+```bash
+# Search for "doppler" token on Base Sepolia (chain ID 84532)
+curl "http://localhost:42069/search/doppler?chain_ids=84532"
+
+# Search by contract address on Base Sepolia and Ink
+curl "http://localhost:42069/search/0x123...abc?chain_ids=84532,57073"
+```
+
+## Direct SQL Access (Development)
+
+For development and debugging, you can connect directly to the PostgreSQL database. Use `pnpm db shell` to get an interactive psql session. You can also use any standard SQL client with the connection string from your `.env.local` file.

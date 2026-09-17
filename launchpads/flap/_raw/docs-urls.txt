@@ -1,0 +1,15 @@
+https://api.gitbook.com/cache
+https://docs.flap.sh/
+https://docs.flap.sh/flap
+https://docs.flap.sh/flap/~gitbook/site-index
+https://docs.flap.sh/flap/audit-reports
+https://docs.flap.sh/flap/developers
+https://docs.flap.sh/flap/flap-official-links
+https://docs.flap.sh/flap/llms.txt
+https://docs.flap.sh/flap/media-kit
+https://docs.flap.sh/flap/readme.md
+https://docs.flap.sh/flap/skills
+https://flap.sh/
+https://ka-p.fontawesome.com/releases/v7.2.0
+https://static-2v.gitbook.com/
+https://www.gitbook.com/

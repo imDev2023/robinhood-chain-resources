@@ -1,0 +1,200 @@
+[
+ {
+  "addr": "0x40250b4C73FC30f8F6ad077744B0124B3f111C28",
+  "role": "CashCatFactory-current-impl-unverified",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x0679f72DCC42d8fBEB19FC2e0215Be8e7C090881",
+  "tx": "0x12ded6362aeede695b33cb9c48f9defa41d2b149b7412b27897f813bcbf7fbb5",
+  "dir": "CashCatFactory-current-impl-unverified-0x40250b4C73FC30f8F6ad077744B0124B3f111C28"
+ },
+ {
+  "addr": "0x5bd1Fbe78a78fe8236fa00CF48fbEBA74ae34661",
+  "role": "CashCatFactory-proxy",
+  "name": "ERC1967Proxy",
+  "ver": true,
+  "proxy": "eip1967",
+  "impl": "0x40250b4C73FC30f8F6ad077744B0124B3f111C28",
+  "creator": "0x0679f72DCC42d8fBEB19FC2e0215Be8e7C090881",
+  "tx": "0x2b90e5b780a0953828f000af8215bf583e98ef988f8827623f3a6acb9a8f9a5c",
+  "dir": "CashCatFactory-proxy-0x5bd1Fbe78a78fe8236fa00CF48fbEBA74ae34661"
+ },
+ {
+  "addr": "0x3dFd73A63E15920aDd4B6c5C6a4b1b4B768b2c1A",
+  "role": "CashCatFactoryVNext-impl",
+  "name": "CashCatFactoryVNext",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x0679f72DCC42d8fBEB19FC2e0215Be8e7C090881",
+  "tx": "0xf0871106205ff3df6c8f3f11585be0508d813f5f0d3e5c1454c5464983766919",
+  "dir": "CashCatFactoryVNext-impl-0x3dFd73A63E15920aDd4B6c5C6a4b1b4B768b2c1A"
+ },
+ {
+  "addr": "0x75A54357D9C78a2Db19004a5FDc76c50F9242AEC",
+  "role": "CashCatHookV2",
+  "name": "CashCatHookV2",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "tx": "0x8e562b482dec207c8387292b9625726da23a44e580f80257a9d6b6c8b3c5be1e",
+  "dir": "CashCatHookV2-0x75A54357D9C78a2Db19004a5FDc76c50F9242AEC"
+ },
+ {
+  "addr": "0x6D3d822F6e625c59804F47cf2Cc1d53B8301016F",
+  "role": "CashCatRevenueSplitter",
+  "name": "CashCatRevenueSplitter",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x0679f72DCC42d8fBEB19FC2e0215Be8e7C090881",
+  "tx": "0x366e7972de517f43d52b5bb5017624ad74ed8586f5a7cbdadd14680392d12859",
+  "dir": "CashCatRevenueSplitter-0x6D3d822F6e625c59804F47cf2Cc1d53B8301016F"
+ },
+ {
+  "addr": "0xd6Da7f07eE822C8538C901217b37D1e7d86c76E5",
+  "role": "CashCatTokenV2-impl",
+  "name": "CashCatTokenV2",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "",
+  "tx": "",
+  "dir": "CashCatTokenV2-impl-0xd6Da7f07eE822C8538C901217b37D1e7d86c76E5"
+ },
+ {
+  "addr": "0x669D54EC9D475AdD053B50CdaC31fa13558553DB",
+  "role": "CreatorFeeSplitter-sample-GOONER-unverified",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x3087cFD761D679Ded5d0a2baf4d3577aE447d5E3",
+  "tx": "0xec241d073fec00d878d2456fb15d2369aa2a1614a06e7fc3b60a5af2b20c940d",
+  "dir": "CreatorFeeSplitter-sample-GOONER-unverified-0x669D54EC9D475AdD053B50CdaC31fa13558553DB"
+ },
+ {
+  "addr": "0x3087cFD761D679Ded5d0a2baf4d3577aE447d5E3",
+  "role": "DividendDeployer",
+  "name": "DividendDeployer",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "tx": "0xafda2c80ee02a0707375fca553c2bcf65d5f60608f0587854ada922976090787",
+  "dir": "DividendDeployer-0x3087cFD761D679Ded5d0a2baf4d3577aE447d5E3"
+ },
+ {
+  "addr": "0xe1c046571e69Ae2408C21605f2ff657A23977C4c",
+  "role": "FeeRouter",
+  "name": "FeeRouter",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "tx": "0x2b047f1407e6c7612b56c87d9329a064ff09188ff2e5ebc3362dec99ed8d69bf",
+  "dir": "FeeRouter-0xe1c046571e69Ae2408C21605f2ff657A23977C4c"
+ },
+ {
+  "addr": "0x9f3edbfAE8014d55E328b6Dd966C6C95E75f6210",
+  "role": "HOOD10Distributor-unverified",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "0xb3e36d3a6Bbc264cc5DD54F75B4B6ac495F6679d",
+  "tx": "0x01383b0b81d73cef3d850a5b17e3dcb11e7f6f7deb2a5c6a70620283ea01c49f",
+  "dir": "HOOD10Distributor-unverified-0x9f3edbfAE8014d55E328b6Dd966C6C95E75f6210"
+ },
+ {
+  "addr": "0x0D257cA40d40090BE60C2d2Ed5bB3535392838cc",
+  "role": "HOOD10Token-proxy",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "",
+  "tx": "",
+  "dir": "HOOD10Token-proxy-0x0D257cA40d40090BE60C2d2Ed5bB3535392838cc"
+ },
+ {
+  "addr": "0x0E57Ef4Cb77362b3d69EB348735b38534104d237",
+  "role": "LaunchDividendTreasury-sample-GOONER-unverified",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x3087cFD761D679Ded5d0a2baf4d3577aE447d5E3",
+  "tx": "0xec241d073fec00d878d2456fb15d2369aa2a1614a06e7fc3b60a5af2b20c940d",
+  "dir": "LaunchDividendTreasury-sample-GOONER-unverified-0x0E57Ef4Cb77362b3d69EB348735b38534104d237"
+ },
+ {
+  "addr": "0x718633252AA8329495Df8BBa8fF7c9e8378CFC63",
+  "role": "LaunchFactory",
+  "name": "LaunchFactory",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "tx": "0x6f4fdf8495709c5038c260ca5c00fef2182bd699264cd45647e98be7342436cc",
+  "dir": "LaunchFactory-0x718633252AA8329495Df8BBa8fF7c9e8378CFC63"
+ },
+ {
+  "addr": "0xEb0C797DaDd23A7AD0d00187A976143C8AF8972A",
+  "role": "LaunchGeometry-library",
+  "name": "",
+  "ver": null,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "tx": "0xc0b90d428591d15a371116e940d7331907b1d510fb7971acc97b98679db93191",
+  "dir": "LaunchGeometry-library-0xEb0C797DaDd23A7AD0d00187A976143C8AF8972A"
+ },
+ {
+  "addr": "0xe6234a98fF84220CcDA12985548ddAb36327Aacc",
+  "role": "LaunchHook",
+  "name": "LaunchHook",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "tx": "0x8ff15fcd04e8f94eb7904f759774c26d22466ea20b8a596c37e0edb1689be550",
+  "dir": "LaunchHook-0xe6234a98fF84220CcDA12985548ddAb36327Aacc"
+ },
+ {
+  "addr": "0x4E17C658b0ccFB5ba0168cf6FF43DA5Ced9afc07",
+  "role": "LaunchToken-sample-FLYWHEEL",
+  "name": "LaunchToken",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x718633252AA8329495Df8BBa8fF7c9e8378CFC63",
+  "tx": "0x10bd2fba9290f45f4e28925a8217b7d27d6e88b02c30cdc0974315f39ea6e8e8",
+  "dir": "LaunchToken-sample-FLYWHEEL-0x4E17C658b0ccFB5ba0168cf6FF43DA5Ced9afc07"
+ },
+ {
+  "addr": "0x5D8b610E39156d2cFeF3c1ceCC3c22f4990A1298",
+  "role": "QuoteRegistry",
+  "name": "QuoteRegistry",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0xfe2cF227e21C5FC54dcE8Bb65F7C1E1E90236862",
+  "tx": "0x061ce64a94422395fc95cc8bfebf9db5e7748b196da84a846269f934b0fc3b3c",
+  "dir": "QuoteRegistry-0x5D8b610E39156d2cFeF3c1ceCC3c22f4990A1298"
+ },
+ {
+  "addr": "0x8366a39CC670B4001A1121B8F6A443A643e40951",
+  "role": "UniswapV4PoolManager",
+  "name": "PoolManager",
+  "ver": true,
+  "proxy": "",
+  "impl": "",
+  "creator": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "tx": "0x4fb28d4935866f462582c6c931c6f2705e55f5be5eb178c7d8d9329a95c44c41",
+  "dir": "UniswapV4PoolManager-0x8366a39CC670B4001A1121B8F6A443A643e40951"
+ }
+]

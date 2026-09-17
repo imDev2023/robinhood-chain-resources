@@ -1,0 +1,12 @@
+app.doppler.lol wants you to sign in with your Ethereum account:
+0x9b9849762f9be27d5546117c12ac6D7cF1DFBb38
+
+By signing, you are proving you own this wallet and logging in. This does not initiate a transaction or cost any fees.
+
+URI: https://app.doppler.lol
+Version: 1
+Chain ID: 4663
+Nonce: b91a286691bdbb77521777b4cff2eef6d514104610e3e30e5a34903112fee614
+Issued At: 2026-09-02T16:13:14.997Z
+Resources:
+- https://privy.io

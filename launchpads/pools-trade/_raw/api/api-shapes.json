@@ -1,0 +1,315 @@
+{
+ "curve_keys": [
+  "buyersLast1h",
+  "chainId",
+  "createdAt",
+  "creatorAddress",
+  "creatorHandle",
+  "description",
+  "fdvUsd",
+  "graduationProgress",
+  "graduationTargetUsd",
+  "holderCount",
+  "id",
+  "imageEmoji",
+  "imageHue",
+  "imageUrl",
+  "isBlocked",
+  "launchpadId",
+  "poolId",
+  "poolPriceSeries",
+  "poolStats",
+  "recentTrades",
+  "safety",
+  "status",
+  "tierPlan",
+  "tokenAddress",
+  "tokenName",
+  "tokenSymbol",
+  "xProfileImageUrl",
+  "xUrl",
+  "xVerified"
+ ],
+ "curve_sample": {
+  "id": "0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
+  "poolId": "0x590dcb6a87828bf688b48089a62239b693378f1fb64d2286e6a399ed8c005fdf",
+  "launchpadId": "uniswap-bonding-curve",
+  "tokenAddress": "0x18E674231A58c239Dc7DaeDcffE15Ec3A24cff5c",
+  "tokenSymbol": "HOOKR",
+  "tokenName": "Hookr.fun",
+  "description": "Launchpad with custom Uniswap hook builder.  Powered by 0penZaps.",
+  "xUrl": "https://x.com/NodarJ",
+  "xProfileImageUrl": "https://pbs.twimg.com/profile_images/1579793762062065665/9Tt-vB3P_400x400.jpg",
+  "xVerified": true,
+  "imageEmoji": "\ud83c\udf00",
+  "imageHue": 167,
+  "imageUrl": "https://coin-images.coingecko.com/coins/images/102175265/large/hookr.jpg?1786013509",
+  "chainId": 4663,
+  "status": "curveLive",
+  "createdAt": "2026-08-06T04:20:57.000Z",
+  "fdvUsd": 11853961.691004315,
+  "graduationTargetUsd": 50000,
+  "graduationProgress": 237.0792338200863,
+  "holderCount": 5303,
+  "creatorAddress": "0x5a52d4b820ae7f02880d270562950918acb14aa2",
+  "creatorHandle": "0x5a52\u20264aA2",
+  "buyersLast1h": 52,
+  "tierPlan": "default",
+  "poolStats": {
+   "priceUsd": 0.011853961691004316,
+   "priceEth": 4.914785231841882e-06,
+   "priceChange1hPct": 6.8973249617749035,
+   "priceChange24hPct": -22.23292534457884,
+   "volume24hUsd": 4031367.466199619,
+   "liquidityUsd": 1124664.21277963
+  },
+  "poolPriceSeries": [
+   {
+    "at": "2026-09-02T02:52:55.000Z",
+    "clearingPriceUsd": 0.01106018080002803
+   },
+   {
+    "at": "2026-09-02T02:56:04.000Z",
+    "clearingPriceUsd": 0.011072895629074923
+   },
+   {
+    "at": "2026-09-02T02:59:14.000Z",
+    "clearingPriceUsd": 0.011073678387187305
+   },
+   {
+    "at": "2026-09-02T03:02:23.000Z",
+    "clearingPriceUsd": 0.011042313335671902
+   },
+   {
+    "at": "2026-09-02T03:05:33.000Z",
+    "clearingPriceUsd": 0.011013009689151724
+   },
+   {
+    "at": "2026-09-02T03:08:42.000Z",
+    "clearingPriceUsd": 0.011482799875934197
+   },
+   {
+    "at": "2026-09-02T03:11:52.000Z",
+    "clearingPriceUsd": 0.011452599648283277
+   },
+   {
+    "at": "2026-09-02T03:15:01.000Z",
+    "clearingPriceUsd": 0.01152118565263054
+   },
+   {
+    "at": "2026-09-02T03:18:11.000Z",
+    "clearingPriceUsd": 0.01195016345604906
+   },
+   {
+    "at": "2026-09-02T03:21:20.000Z",
+    "clearingPriceUsd": 0.012049919704451722
+   },
+   {
+    "at": "2026-09-02T03:24:30.000Z",
+    "clearingPriceUsd": 0.012114254221005838
+   },
+   {
+    "at": "2026-09-02T03:27:39.000Z",
+    "clearingPriceUsd": 0.012011511618418949
+   },
+   {
+    "at": "2026-09-02T03:30:49.000Z",
+    "clearingPriceUsd": 0.011994436353942666
+   },
+   {
+    "at": "2026-09-02T03:33:58.000Z",
+    "clearingPriceUsd": 0.011946672949542264
+   },
+   {
+    "at": "2026-09-02T03:37:08.000Z",
+    "clearingPriceUsd": 0.0119466934970794
+   },
+   {
+    "at": "2026-09-02T03:40:17.000Z",
+    "clearingPriceUsd": 0.012077437729396552
+   },
+   {
+    "at": "2026-09-02T03:43:27.000Z",
+    "clearingPriceUsd": 0.01213678714612376
+   },
+   {
+    "at": "2026-09-02T03:46:36.000Z",
+    "clearingPriceUsd": 0.01203537529107151
+   },
+   {
+    "at": "2026-09-02T03:49:46.000Z",
+    "clearingPriceUsd": 0.011924832618286058
+   },
+   {
+    "at": "2026-09-02T03:52:55.000Z",
+    "clearingPriceUsd": 0.011831848806381265
+   }
+  ],
+  "recentTrades": [
+   {
+    "id": "0x43f4aaa2845035e45a3a92fa7a99a326b29a9086162bdcced33ed56a484944c2",
+    "txHash": "0x43f4aaa2845035e45a3a92fa7a99a326b29a9086162bdcced33ed56a484944c2",
+    "side": "buy",
+    "trader": "0xE209\u2026EF08",
+    "traderAddress": "0xe209e0047731aa494289e1af9a0d03da19c5ef08",
+    "amountUsd": 468.5313453266704,
+    "tokens": 39256.8141586037,
+    "priceUsd": 0.011900432650217506,
+    "at": "2026-09-02T03:56:40.000Z"
+   },
+   {
+    "id": "0x21127739b832c278e0f569926b277111fbdb8fef41b95b79a910d0a17c1dd7d7",
+    "txHash": "0x21127739b832c278e0f569926b277111fbdb8fef41b95b79a910d0a17c1dd7d7",
+    "side": "buy",
+    "trader": "0xD949\u2026e607",
+    "traderAddress": "0xd9497b53abcd6972b6370cb195b6bfd6b280e607",
+    "amountUsd": 626.0927421591123,
+    "tokens": 52584.05260370771,
+    "priceUsd": 0.011871996706004648,
+    "at": "2026-09-02T03:56:29.000Z"
+   },
+   {
+    "id": "0x33cbdd5aeefa097aa500b88663b3d3d81cf66add0e95eb01625804d483eb4e74",
+    "txHash": "0x33cbdd5aeefa097aa500b88663b3d3d81cf66add0e95eb01625804d483eb4e74",
+    "side": "buy",
+    "trader": "0x1462\u202690F3",
+    "traderAddress": "0x14627d13e868e13e571ace1f26a4cc390b4790f3",
+    "amountUsd": 1200.117115164998,
+    "tokens": 101194.71645195094,
+    "priceUsd": 0.011825103301873668,
+    "at": "2026-09-02T03:56:14.000Z"
+   },
+   {
+    "id": "0x923c46864d675249811fc4d1859c6a457817181c634022dab34f2a2619c449e1",
+    "txHash": "0x923c46864d675249811fc4d1859c6a457817181c634022dab34f2a2619c449e1",
+    "side": "buy",
+    "trader": "0x1Cbe\u2026105E",
+    "traderAddress": "0x1cbe2b0f22dd05452db93a10f9a5d2397f26105e",
+    "amountUsd": 499.8541909409638,
+    "tokens": 42303.43318097254,
+    "priceUsd": 0.011781670568184553,
+    "at": "2026-09-02T03:56:10.000Z"
+   },
+   {
+    "id": "0x4dad69dce200790f2dedce9a8a64e2fe14c4c8809338f450d678c1db809911d5",
+    "txHash": "0x4dad69dce200790f2dedce9a8a64e2fe14c4c8809338f450d678c1db809911d5",
+    "side": "sell",
+    "trader": "0xF27b\u20265029",
+    "traderAddress": "0xf27b6de3bc597ced7d3290f820bb31ae8c7a5029",
+    "amountUsd": 142.88822260292423,
+    "tokens": 12774.125607129215,
+    "priceUsd": 0.011756381055244647,
+    "at": "2026-09-02T03:55:22.000Z"
+   }
+  ],
+  "isBlocked": false,
+  "safety": {
+   "isSpam": false,
+   "isVerified": false,
+   "isBlocked": false,
+   "verdict": "Benign",
+   "features": [
+    "SIGNIFICANT_USD_RESERVES",
+    "HIGH_TRADE_VOLUME",
+    "VERIFIED_CONTRACT"
+   ]
+  }
+ },
+ "auction_keys": [
+  "auctionContractAddress",
+  "bidderCount",
+  "chainId",
+  "clearingPriceEth",
+  "clearingPriceQ96",
+  "clearingPriceUsd",
+  "creatorAddress",
+  "creatorFeeEnabled",
+  "creatorHandle",
+  "description",
+  "endsAt",
+  "fdvUsd",
+  "floorPriceQ96",
+  "floorPriceUsd",
+  "graduationProgress",
+  "graduationTargetUsd",
+  "id",
+  "imageEmoji",
+  "imageHue",
+  "imageUrl",
+  "isBlocked",
+  "priceSeries",
+  "raisedEth",
+  "raisedUsd",
+  "raisedUsdLast1h",
+  "recentBids",
+  "startsAt",
+  "status",
+  "tickSizeQ96",
+  "tokenAddress",
+  "tokenName",
+  "tokenSymbol",
+  "totalSupply",
+  "xVerified"
+ ],
+ "auction_sample": {
+  "id": "4663_0x87F81DE48Bc96500557dAeB705dBfF4cd697A660",
+  "tokenAddress": "0x198D01bD42320B4981095247495d76A9696120E6",
+  "tokenSymbol": "JUDY",
+  "tokenName": "JUDY",
+  "description": "Judy the Cat",
+  "xVerified": false,
+  "imageEmoji": "\ud83d\udc8e",
+  "imageHue": 85,
+  "imageUrl": "ipfs://bafkreib2em7ifh662wv7weqxmnaznyot7i2q42rbylfuu2hb6obo53kj2a",
+  "chainId": 4663,
+  "status": "live",
+  "clearingPriceUsd": 1.0016462455905078e-06,
+  "clearingPriceEth": 4.1522531500000004e-10,
+  "floorPriceUsd": 1.0016462455905078e-06,
+  "totalSupply": 1000000000,
+  "fdvUsd": 1001.6462455905078,
+  "raisedUsd": 277,
+  "raisedEth": 0.11482837654644526,
+  "graduationTargetUsd": 5008.231223127947,
+  "graduationProgress": 0.10000000009633325,
+  "creatorAddress": "0xdbe31c0185ccd7b90c0c850d18de699924848e7d",
+  "creatorHandle": "0xdbe3\u20268e7d",
+  "creatorFeeEnabled": true,
+  "bidderCount": 2,
+  "raisedUsdLast1h": 0,
+  "startsAt": "2026-09-02T01:30:25.902Z",
+  "endsAt": "2026-09-02T05:30:25.902Z",
+  "auctionContractAddress": "0x87F81DE48Bc96500557dAeB705dBfF4cd697A660",
+  "clearingPriceQ96": "32897538736856601500",
+  "floorPriceQ96": "32897538736856601500",
+  "tickSizeQ96": "328975387368566015",
+  "priceSeries": [],
+  "recentBids": [
+   {
+    "id": "2",
+    "bidder": "0xDCf6\u202632A8",
+    "bidderAddress": "0xdcf60e2bbbd4b3f6263f4cc6500175bfb8b532a8",
+    "amountUsd": 275.6909381570706,
+    "at": "2026-09-02T01:30:49.381Z",
+    "txHash": "0xb9b8e958f85bfdd20fd74436bfd43d275f75f5bc1b6d7052bf76067043c43034"
+   },
+   {
+    "id": "1",
+    "bidder": "0xdbe3\u20268e7d",
+    "bidderAddress": "0xdbe31c0185ccd7b90c0c850d18de699924848e7d",
+    "amountUsd": 2.0022054383657255,
+    "at": "2026-09-02T01:30:46.945Z",
+    "txHash": "0xfc54e653cd67894dfb4fb76eb4e7ffc3da41f987e275fb5a260eb03519559037"
+   },
+   {
+    "id": "0",
+    "bidder": "0xDCf6\u202632A8",
+    "bidderAddress": "0xdcf60e2bbbd4b3f6263f4cc6500175bfb8b532a8",
+    "amountUsd": 0.02412295708874368,
+    "at": "2026-09-02T01:30:27.515Z",
+    "txHash": "0x9feccc6b4d0c4958dae8b4eabd4a45b4c01d5083f64b375c771b2d9bddaa0686"
+   }
+  ],
+  "isBlocked": false
+ }
+}

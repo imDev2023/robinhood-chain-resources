@@ -1,0 +1,111 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# API for AI Agents
+
+> Give AI agents structured onchain data across 100+ EVM chains with Blockscout PRO API and MCP server for decoded transactions and metadata.
+
+# Onchain Data via Blockscout PRO API & MCP
+
+Give your AI agents access to structured blockchain data across 100+ EVM chains. No custom integration required.
+
+## Why AI Agents Need Blockscout
+
+AI agents operating onchain need reliable, structured data — not raw RPC responses they have to parse and interpret. Blockscout PRO API provides decoded transaction data, token metadata, contract context, and enriched address information in a format agents can work with immediately.
+
+The Blockscout MCP (Model Context Protocol) server takes this further by providing a standardized interface that LLM-based agents can use natively, with multichain support built in.
+
+## Two Integration Paths
+
+### Path 1: MCP Server (for LLM agents)
+
+The Blockscout MCP server gives AI assistants and coding agents direct access to onchain data through a standardized tool interface.
+
+[→ Blockscout MCP Info](/devs/mcp-server)
+
+**Supported platforms:**
+
+* Claude Desktop
+* Claude Code
+* OpenAI Codex
+* Google Gemini
+* Any MCP-compatible agent framework
+
+**Setup is copy-paste.** Visit the [Blockscout AI Skills Portal](https://www.blockscout.com/agents) for platform-specific instructions.
+
+**Capabilities include:**
+
+* Query address balances and transaction history across chains
+* Inspect smart contract source code and ABIs
+* Look up token metadata and transfers
+* Analyze transaction details with decoded input data
+* Retrieve block information and chain statistics
+
+Multichain support is automatic: agents specify a `chain_id` parameter and the MCP server routes to the correct Blockscout instance.
+
+### Path 2: REST API (for custom agent backends)
+
+For agents with custom backends or automation pipelines, the PRO API provides direct HTTP access to the same data. One key, one base URL, and a `chain_id` parameter to move between chains:
+
+```python theme={null}
+import requests
+
+API_KEY = "your_blockscout_pro_key"
+BASE = "https://api.blockscout.com/v2/api"
+CHAIN_ID = "1"  # Ethereum mainnet — swap for any supported chain, e.g. "8453" for Base
+
+def get_address_activity(address, chain_id=CHAIN_ID):
+    """Get recent transactions for an address — useful for agent monitoring."""
+    resp = requests.get(BASE, params={
+        "chain_id": chain_id,
+        "module": "account",
+        "action": "txlist",
+        "address": address,
+        "sort": "desc",
+        "apikey": API_KEY
+    })
+    return resp.json()["result"]
+
+def get_contract_abi(contract_address, chain_id=CHAIN_ID):
+    """Retrieve ABI for a verified contract — lets agents interact with contracts."""
+    resp = requests.get(BASE, params={
+        "chain_id": chain_id,
+        "module": "contract",
+        "action": "getabi",
+        "address": contract_address,
+        "apikey": API_KEY
+    })
+    return resp.json()["result"]
+```
+
+## Agent Use Cases
+
+**Monitoring & Alerting** — Agents that watch wallet activity, contract events, or token flows and trigger actions based on onchain conditions.
+
+**Portfolio & Wallet Agents** — Conversational agents that report balances, transaction history, and token holdings across multiple chains.
+
+**Contract Analysis** — Agents that inspect verified source code, read contract state, and explain contract behavior to users.
+
+**Onchain Research** — Agents that investigate addresses, trace transaction flows, and compile cross-chain activity reports.
+
+**DeFi Automation** — Agents that monitor liquidity positions, track gas costs, and execute strategies based on real-time chain data.
+
+## Pricing for Agent Workloads
+
+Agents tend to make high-frequency API calls. Blockscout's credit-based pricing is designed for this pattern — you pay for actual usage, not a fixed call count.
+
+| Tier              | RPS    | Monthly Credits | Best For                      |
+| ----------------- | ------ | --------------- | ----------------------------- |
+| Free              | 5      | 100K/day        | Development & testing         |
+| Builder (\$49/mo) | 15     | 100M            | Single-agent production       |
+| Pro (\$199/mo)    | 30     | 500M            | Multi-agent or high-frequency |
+| Enterprise        | Custom | Custom          | Fleet deployments             |
+
+## Get Started
+
+1. **For MCP agents:** Visit [blockscout.com/agents](https://www.blockscout.com/agents) and copy the setup instructions for your platform
+2. **For custom agents:** Get a free API key at [dev.blockscout.com](https://dev.blockscout.com)
+3. **Need help?** Join the [Blockscout Discord](https://discord.gg/blockscout) — the dev team is active and responsive
+
+**→ [AI Skills Portal](https://www.blockscout.com/agents)** · **→ [PRO API Portal](https://dev.blockscout.com)** · **→ [MCP Documentation](/devs/mcp-server)**

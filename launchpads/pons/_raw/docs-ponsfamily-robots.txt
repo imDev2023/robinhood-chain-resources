@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /blocked
+
+Host: https://docs.ponsfamily.com
+Sitemap: https://docs.ponsfamily.com/sitemap.xml

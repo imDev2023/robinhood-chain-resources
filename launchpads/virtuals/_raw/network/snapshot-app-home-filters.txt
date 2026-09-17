@@ -1,0 +1,24 @@
+- region "Notifications" [ref=e1]
+- heading "Filters" [level=2, ref=e2]
+- button "ALL" [ref=e6]
+- button "BASE" [ref=e7]
+- button "SOL" [ref=e8]
+- button "ROBINHOOD" [ref=e9]
+- button "Automated Capital Formation (ACF)" [ref=e10]
+- button "60 days Experiment" [ref=e11]
+- button "Anti Sniper Mechanism" [ref=e12]
+- button "Airdrop Distribution" [ref=e13]
+- button "Robotics" [ref=e14]
+- combobox [expanded=false, ref=e15]: Lowest
+- combobox [expanded=false, ref=e16]: Highest
+- combobox [expanded=false, ref=e17]: Lowest
+- combobox [expanded=false, ref=e18]: Highest
+- combobox [expanded=false, ref=e19]: Lowest
+- combobox [expanded=false, ref=e20]: Highest
+- combobox [expanded=false, ref=e21]: Lowest
+- combobox [expanded=false, ref=e22]: Highest
+- combobox [expanded=false, ref=e23]: Lowest
+- combobox [expanded=false, ref=e24]: Highest
+- button "Clear all" [ref=e3]
+- button "Apply Filters" [ref=e4]
+- button "Close" [ref=e5]

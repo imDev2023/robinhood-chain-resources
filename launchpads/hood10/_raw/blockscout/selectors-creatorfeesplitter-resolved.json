@@ -1,0 +1,117 @@
+{
+ "0x14d625f1": [],
+ "0x14d625f6": [],
+ "0x1ea2564f": [],
+ "0x14d625f8": [],
+ "0x3e0dc34e": [
+  "poolId()"
+ ],
+ "0x07f55381": [],
+ "0x096c144f": [],
+ "0x249d39e9": [
+  "BPS()"
+ ],
+ "0x2187efa1": [],
+ "0x46904840": [
+  "feeRecipient()"
+ ],
+ "0x4300081a": [],
+ "0x27aacc16": [],
+ "0x11ec9d34": [
+  "pushAll()"
+ ],
+ "0x6186c9e7": [],
+ "0x27aacc81": [],
+ "0x3fc8cef3": [
+  "weth()"
+ ],
+ "0x56380313": [],
+ "0x70a08231": [
+  "balanceOf(address)"
+ ],
+ "0x1830b4e2": [
+  "acceptCreator()"
+ ],
+ "0x27aacc60": [],
+ "0x4573d5f8": [],
+ "0x9fab988d": [],
+ "0x4e487b71": [
+  "Panic(uint256)"
+ ],
+ "0x999b93af": [
+  "quote()"
+ ],
+ "0x750521f5": [
+  "setMetadataURI(string)"
+ ],
+ "0x7f5a7c7b": [
+  "hook()"
+ ],
+ "0x483d864b": [],
+ "0x61d027b3": [
+  "treasury()"
+ ],
+ "0xaced1661": [
+  "keeper()"
+ ],
+ "0x4efa82b6": [
+  "payoutToken()"
+ ],
+ "0x57508067": [],
+ "0xd0e30db0": [
+  "deposit()",
+  "X19B3C29E(string)"
+ ],
+ "0x7628cc79": [],
+ "0xb2d14d37": [],
+ "0x5274afe7": [
+  "SafeERC20FailedOperation(address)"
+ ],
+ "0xb0c481e4": [],
+ "0xfc0c546a": [
+  "token()"
+ ],
+ "0x93687c0b": [
+  "NotCreator()"
+ ],
+ "0x861fbe84": [
+  "acceptCreator(bytes32)"
+ ],
+ "0xb155b156": [],
+ "0x96c144f0": [
+  "claim(bytes32,address)"
+ ],
+ "0x3292bead": [
+  "metadataAdmin()"
+ ],
+ "0x959ac484": [
+  "push(uint256)"
+ ],
+ "0x450e5eab": [
+  "isWired()"
+ ],
+ "0xa9059cbb": [
+  "transfer(address,uint256)"
+ ],
+ "0xff94e4f3": [
+  "creatorOf(bytes32)"
+ ],
+ "0xe29321d3": [
+  "NotNative()"
+ ],
+ "0xe3eedef9": [
+  "MAX_CUT()"
+ ],
+ "0xc5177463": [
+  "CutTooLarge(uint256,uint256)"
+ ],
+ "0x68d369c9": [
+  "NothingToPush()"
+ ],
+ "0xffffffff": [
+  "LOCK8605463013()",
+  "test266151307()",
+  "selfCallSimulateExecute565348489()",
+  "uWjK9(uint256)"
+ ]
+}

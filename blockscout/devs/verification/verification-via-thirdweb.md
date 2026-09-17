@@ -1,0 +1,13 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Verify contracts via thirdweb on Blockscout
+
+> Deploy prebuilt contracts across many chains with thirdweb and verify them on Blockscout using the Blockscout contract verification API.
+
+[Thirdweb](https://thirdweb.com/) offers a complete web3 development kit including the ability to quickly deploy prebuilt contracts and start interacting with them on many chains. During this process flow it is also easy to verify contracts using Blockscout APIs.
+
+<Check>
+  [Follow these instructions to verify your contracts via the Blockscout API with thirdweb.](https://support.thirdweb.com/other-faqs/tFbbEYCSbJ1GTeXoPs4QFw/blockscout-api-contract-verification/qpa9r79QkgH31HFsvGissC)
+</Check>

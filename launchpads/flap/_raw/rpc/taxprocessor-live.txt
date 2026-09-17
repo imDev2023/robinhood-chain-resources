@@ -1,0 +1,9 @@
+TaxProcessor-0xd62198
+ taxToken         ('0xa942f0bcca47752a942039559d00525633737777',)
+ quoteToken       ('0x0bd7d308f8e1639fab988df18a8011f41eacad73',)
+ feeReceiver      ('0xa4a727e0918cf9b39639fc4cb7d742d39c5352a4',)
+ marketAddress    ('0xd35e36df9fde27293da1623c99fcd013464d3a80',)
+ commissionRecv   ('0xd35e36df9fde27293da1623c99fcd013464d3a80',)
+ commissionBps    (60,)
+ feeConfigV2      ((10000, 0, 0, 0, 300, True, 60, '0x0bd7d308f8e1639fab988df18a8011f41eacad73'),)
+ feeQuoteBalance  (0,)

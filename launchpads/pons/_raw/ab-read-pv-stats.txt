@@ -1,0 +1,79 @@
+HomeMenu
+
+ExploreStatsSeatsLaunchClaimDocsX
+
+Connect
+
+LiveRead from the chain, not an index
+
+# Protocol stats
+
+Every vault PonsVault has ever built, added up. Staking, burns, and every trade behind them — counted from the chain itself, not from an index.
+
+Stakers
+
+264
+
+336 positions across 41 vaults
+
+Staked
+
+$462.5K
+
+1.20B tokens · 2.94% of supply per launch
+
+Burned
+
+$539.18K
+
+1.83B tokens · 6.52% of supply per launch
+
+Paid to holders
+
+$514.93K
+
+across 48 vaults
+
+Volume
+
+Measuring…
+
+counting every trade ever made
+
+## What it has done
+
+Launches
+
+124
+
+124 vaults built to work for them
+
+Vault runs
+
+865
+
+buybacks, burns and payouts executed
+
+Fees to vaults
+
+$1.01M
+
+taken out of trades and put to work
+
+Vaults burning
+
+28
+
+have actually retired supply
+
+## Vaults by template
+
+Stake & Burn4940%
+
+RWA Dividend3629%
+
+Staking2016%
+
+Buyback & Burn1915%
+
+Read live from 124 vaults · ETH $2,406.95 · updated 14:51:43

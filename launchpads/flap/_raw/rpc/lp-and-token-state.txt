@@ -1,0 +1,27 @@
+MOON/WETH pair totalSupply 44821502752390679081447
+  dead     44790004104703970611336  (99.9297%)
+  portal   0  (0.0000%)
+  zero     1000  (0.0000%)
+  feeSafe  0  (0.0000%)
+ token0 ('0x0bd7d308f8e1639fab988df18a8011f41eacad73',) token1 ('0x862cdccb67c8a22fdb247d09a08b1dad09447777',)
+ reserves (73034366444773509647, 33956449910571121708200878, 1788379667)
+getTokenV8Safe(MOON):
+   status                   4
+   reserve                  0
+   circulatingSupply        1000000000000000000000000000
+   price                    0
+   tokenVersion             6
+   r                        1918979700000000000
+   h                        107036752000000000000000000
+   k                        2124381054241934400000000000
+   dexSupplyThresh          800000000000000000000000000
+   quoteTokenAddress        0x0000000000000000000000000000000000000000
+   nativeToQuoteSwapEnabled False
+   extensionID              0x0000000000000000000000000000000000000000000000000000000000000000
+   buyTaxRate               500
+   sellTaxRate              500
+   pool                     0x55aed1a1406ad8821b3cd0b3a189757acf007447
+   progress                 1000000000000000000
+   lpFeeProfile             0
+   dexId                    0
+getLocks(MOON) ((0, 0),)

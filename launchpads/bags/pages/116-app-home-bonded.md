@@ -1,0 +1,344 @@
+# Bags - Home, Discover with BONDED filter (graduated Robinhood tokens)
+
+> Source: https://bags.fm/
+> Retrieved: 2026-09-02 (agent-browser read after clicking BONDED; screenshots/118-app-home-bonded.png and 119-app-home-network-selector.png)
+
+---
+
+-
+
+Home
+
+-
+
+Trade
+
+-
+
+Create
+
+-
+
+Docs
+
+create
+
+log in
+
+$PEPE
+
+Earned $388.62K from $PEPE
+
+# Launch something new
+
+Launch a coin and earn royalties from every trade.
+
+$4.66Bin trading volume$46.57Min creator earnings183Kprojects funded
+
+launch now
+
+## Trending
+
+CATSRobinhood Cats
+
+▲13.73%
+
+BARRYBarry Marquet
+
+▲741.52%
+
+SNP500Sock & Pussy 500
+
+▼8.95%
+
+MERRYMerry
+
+▼41.47%
+
+NASDAQNASDAQ 6900
+
+▼23.56%
+
+FINNThe Bagworker Bull
+
+▲11.05%
+
+CRYPTOCATSCrypto Cats
+
+▼11.79%
+
+FLATBUSHFlatbush Cats
+
+▼0.96%
+
+MOONCATMoon Cat
+
+▲0.31%
+
+BAGSTOCKBAGSTOCK
+
+▲0.041%
+
+PAULYPAULYHOOD
+
+▲1.45%
+
+GHOSTghost
+
+▼3.96%
+
+CATSRobinhood Cats
+
+▲13.73%
+
+BARRYBarry Marquet
+
+▲741.52%
+
+SNP500Sock & Pussy 500
+
+▼8.95%
+
+MERRYMerry
+
+▼41.47%
+
+NASDAQNASDAQ 6900
+
+▼23.56%
+
+FINNThe Bagworker Bull
+
+▲11.05%
+
+CRYPTOCATSCrypto Cats
+
+▼11.79%
+
+FLATBUSHFlatbush Cats
+
+▼0.96%
+
+MOONCATMoon Cat
+
+▲0.31%
+
+BAGSTOCKBAGSTOCK
+
+▲0.041%
+
+PAULYPAULYHOOD
+
+▲1.45%
+
+GHOSTghost
+
+▼3.96%
+
+## Discover
+
+TRENDING
+
+NEW
+
+SOON
+
+BONDED
+
+Filters
+
+$BARRYBarry Marquet
+
+$24.82K-
+
+0x1F24…f8aF
+
+$MERRYMerry
+
+$6.50K-
+
+0x66c9…6C7A
+
+$SNP500Sock & Pussy 500
+
+$5.87K-
+
+0xcf12…4D33
+
+$BAGSTOCKBAGSTOCK
+
+$2.87K-
+
+0xC2A9…10d5
+
+$NASDAQNASDAQ 6900
+
+$15.44K-
+
+0xEa3d…6A38
+
+$PAULYPAULYHOOD
+
+$3.89K-
+
+0xDDEa…4B70
+
+$EVLADEvil Vladhood
+
+$2.15K-
+
+0x68ee…28d4
+
+$PEPEPEPE COIN
+
+$2.04K-
+
+0xF09B…2631
+
+$PEPEPEPE On Bags
+
+$2.05K-
+
+0x3873…2675
+
+$PEPEPepe By Matt Furie
+
+$2.13K-
+
+0x0a95…3272
+
+$CRYPTOCATSCrypto Cats
+
+$3.85K-
+
+0x366C…605C
+
+$RobinHubRobinHub
+
+$5.02K-
+
+0x4f9C…04fB
+
+$CATSRobinhood Cats
+
+$459.29K-
+
+0x7195…657A
+
+$CASHCATCash Cat
+
+$12.94K-
+
+0x1AC4…C5C9
+
+$CCPEPECash Cat Pepe
+
+$2.22K-
+
+0x238E…8a4f
+
+$CASHBACKCashback
+
+$2.52K-
+
+0xA264…90c5
+
+$EXPLORERRobinhood Explorer
+
+$2.18K-
+
+0x426C…E476
+
+$ROBINHOODRobin Hood
+
+$3.45K-
+
+0xbE75…B1AE
+
+$DICATDesert Island Cat
+
+$2.24K-
+
+0x7f4E…b4b6
+
+$FLATBUSHFlatbush Cats
+
+$26.89K-
+
+0xa638…1a7F
+
+$BASKETMeme Basket
+
+$2.03K-
+
+0x246B…Be09
+
+$LUCKYLucky Jack
+
+$3.87K-
+
+0x6d35…C1f5
+
+$VLODvLOd TeNEb
+
+$2.04K-
+
+0xA960…BaBC
+
+$WSBWallstreet Bets
+
+$2.22K-
+
+0xa83E…987a
+
+$VLADVlad Coin
+
+$2.07K-
+
+0xC931…a8Ed
+
+$ROBINHODODThe Robinhodod
+
+$2.10K-
+
+0x3E16…42f4
+
+$FINNThe Bagworker Bull
+
+$16.99K-
+
+0xED66…C52E
+
+$FINNFINN
+
+$2.15K-
+
+0x75e3…1bEe
+
+$MOONCATMoon Cat
+
+$109.20K-
+
+0x4BC4…C631
+
+$GCFGhana Charity Fund
+
+$2.51K-
+
+0x1494…aCDE
+
+$TJFTJ Partnership Fund
+
+$3.43K-
+
+0xA7d2…e02D
+
+$GHOSTghost
+
+$2.89K-
+
+0xE6cf…e34e
+
+© 2026 Bags Holdings, Inc.
+
+AboutContactTermsDocsDiscordSupport

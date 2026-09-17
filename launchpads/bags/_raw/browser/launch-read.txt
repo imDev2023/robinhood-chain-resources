@@ -1,0 +1,109 @@
+-
+
+Home
+
+-
+
+Trade
+
+-
+
+Create
+
+-
+
+Docs
+
+log in
+
+Steps
+
+- Coin details
+
+- Mode
+
+- Fee sharing
+
+- Launch
+
+# Launch a coin
+
+- Coin details
+
+-
+
+Mode
+
+-
+
+Fee sharing
+
+-
+
+Launch
+
+Coin details
+
+UPLOAD IMAGE
+
+Social links (optional)
+
+Chain
+
+Choose where your coin launches.
+
+Solana
+
+Launch on Solana
+
+Robinhood
+
+Launch on Robinhood Chain
+
+LAUNCH MODE
+
+Choose how your coin's trading fees work.
+
+Founder Mode
+
+Earn 1% of total trading volume
+
+Stock Tokens
+
+Pair your coin with SOL or another quote token
+
+Stock Dividends
+
+Use fees to buy a basket of tokens and pay dividends to holders
+
+FEE SHARING
+
+Add up to 100 creators, apps, or wallets. Anything you don't share stays with you.
+
+Twitter
+
+@Add
+
+Dev buy
+
+Buy your coin before anyone else.
+
+$
+
+‌
+
+Next
+
+copy launch settings link
+
+Preview
+
+Solana
+
+Fee distribution
+
+You100%
+
+© 2026 Bags Holdings, Inc.
+
+AboutContactTermsDocsDiscordSupport

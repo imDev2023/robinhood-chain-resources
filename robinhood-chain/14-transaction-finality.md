@@ -1,0 +1,37 @@
+# Transaction Finality
+
+> Source: <https://docs.robinhood.com/chain/transaction-finality>
+> Retrieved: 2026-08-12 (Tavily extract, advanced depth)
+
+---
+
+# Transaction Finality
+
+Robinhood Chain transactions reach finality in stages. Understanding them helps you choose the right confirmation level for your application — fast soft confirmations for everyday UX, full Ethereum finality for high-value operations.
+
+## Stages of finality
+
+| Stage | What happens | Typical latency | Guarantee |
+| --- | --- | --- | --- |
+| Soft confirmation | The sequencer accepts, orders, and executes your transaction and returns a receipt. | Sub-second | The sequencer has committed to your transaction's inclusion and ordering. Reversible only if the sequencer posts a batch with a different transaction order. |
+| Posted to Ethereum | The sequencer batches transactions and posts the batch to the Ethereum (L1) Inbox. | Minutes | Ordering is now fixed — your transaction can only be reorganized if Ethereum itself reorganizes. |
+| Ethereum finality | The L1 block containing the batch reaches finality on Ethereum. | ~13 minutes after posting | Full finality — your transaction inherits Ethereum's security and is irreversible. |
+
+## Choosing a confirmation level
+
+* Everyday UX (most apps): the soft confirmation from the sequencer is fast and reliable — sufficient for typical interactions.
+* High-value or irreversible actions: wait until the transaction is posted to Ethereum, or for full Ethereum finality, before treating it as settled.
+
+## Withdrawals to Ethereum
+
+Finality is distinct from the withdrawal delay. Moving assets from Robinhood Chain back to Ethereum via the canonical bridge is subject to a 7-day challenge period — a requirement of Arbitrum's fraud-proof system, separate from transaction finality. See [Bridging](/chain/bridging) for details.
+
+## Reorganizations
+
+Once a transaction is posted to Ethereum, it cannot be reorganized unless Ethereum itself reorganizes. Before posting, soft-confirmed transactions rely on the sequencer for the order it returned — in normal operation this is reliable, but it is not yet backed by Ethereum's security.
+
+## Further reading
+
+* [Differences from Ethereum](/chain/differences-from-ethereum)
+* [Bridging](/chain/bridging) — the 7-day withdrawal challenge period
+* [Arbitrum: transaction lifecycle](https://docs.arbitrum.io/how-arbitrum-works/transaction-lifecycle)

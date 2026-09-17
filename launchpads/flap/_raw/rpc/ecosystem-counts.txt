@@ -1,0 +1,13 @@
+Portal.nonce()             (295537,)
+UniswapV2Factory.allPairsLength() (40431,)
+PairFactory.allPairsLength() (173798,)
+PairFactory.pairsLength() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+PairFactory.totalPairs() {'error': {'code': 3, 'message': 'execution reverted', 'data': '0x'}}
+PairFactory.allPairs(0) ('0x936937eebbc581b9baf5d542497dccf6648759fe',)
+PairFactory.allPairs(1) ('0xc1f2f0389778e1a149145a488fccfbf29a0dd93f',)
+PairFactory.allPairs(173797) ('0xa057908591c047bb9db816abbd7c5868b940cd2a',)
+PairFactory.allPairs(173796) ('0x26d8149797250337c25a681c65ab48b9c3fda44c',)
+UniV2.allPairs(0) ('0x4b26f2f37db21dfe226465307e7fce8d5910064f',)
+UniV2.allPairs(40430) ('0xe5c0c21aa968863c3ac5876c7d1dccf51612dbec',)
+0xa057908591c047bb9db816abbd7c5868b940cd2a name ('Uniswap V2',) t0 ('0x0bd7d308f8e1639fab988df18a8011f41eacad73',) t1 ('0x21b47192c8aac8db007a1da91aa26cc574a98888',) graduated (False,) portal ('0x26605f322f7ff986f381bb9a6e3f5dab0beaeb09',)
+0x936937eebbc581b9baf5d542497dccf6648759fe name ('Uniswap V2',) t0 ('0x0bd7d308f8e1639fab988df18a8011f41eacad73',) t1 ('0xed2f8659314a08c4d75366ec6ab8d005feef7777',) graduated (False,) portal ('0x26605f322f7ff986f381bb9a6e3f5dab0beaeb09',)

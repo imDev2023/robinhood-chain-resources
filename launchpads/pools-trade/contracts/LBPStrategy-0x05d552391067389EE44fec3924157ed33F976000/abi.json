@@ -1,0 +1,1081 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPositionManager",
+    "name": "_positionManager",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPoolManager",
+    "name": "_poolManager",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IDistributorFactory",
+    "name": "_initializerFactory",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "declared",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "fromInitializer",
+    "type": "address"
+   }
+  ],
+  "name": "CurrencyMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "swept",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "claimed",
+    "type": "uint256"
+   }
+  ],
+  "name": "CurrencyRaisedMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "HookIsStrategy",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "name": "InitializerAlreadyCreated",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "name": "InitializerNotRegistered",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "totalWeight",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidAllocationWeights",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidAmount",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "count",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidBracketCount",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint24",
+    "name": "rate",
+    "type": "uint24"
+   }
+  ],
+  "name": "InvalidBracketRate",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint128",
+    "name": "lowerThreshold",
+    "type": "uint128"
+   }
+  ],
+  "name": "InvalidBracketThreshold",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDynamicFeeHook",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "endBlock",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "migrationBlock",
+    "type": "uint256"
+   }
+  ],
+  "name": "InvalidEndBlock",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint24",
+    "name": "fee",
+    "type": "uint24"
+   },
+   {
+    "internalType": "uint24",
+    "name": "maxFee",
+    "type": "uint24"
+   }
+  ],
+  "name": "InvalidFee",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "actual",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "expected",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidFundsRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidHook",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidPositionRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidPositionRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidReservedTokenAmountForLP",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "offsetLower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "offsetUpper",
+    "type": "int24"
+   }
+  ],
+  "name": "InvalidTickBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "minTickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "maxTickSpacing",
+    "type": "int24"
+   }
+  ],
+  "name": "InvalidTickSpacing",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidTokenCurrencyPair",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "actual",
+    "type": "address"
+   }
+  ],
+  "name": "InvalidTokensRecipient",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "migrationBlock",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "currentBlock",
+    "type": "uint256"
+   }
+  ],
+  "name": "MigrationNotYetAllowed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoPositionsCreated",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlySelfCall",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlySelfCalls",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "name": "PoolIdOccupied",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "price",
+    "type": "uint256"
+   }
+  ],
+  "name": "PriceIsZero",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "price",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxPrice",
+    "type": "uint256"
+   }
+  ],
+  "name": "PriceTooHigh",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint160",
+    "name": "sqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "internalType": "uint160",
+    "name": "minSqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "internalType": "uint160",
+    "name": "maxSqrtPriceX96",
+    "type": "uint160"
+   }
+  ],
+  "name": "SqrtPriceX96OutOfBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "actual",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "expected",
+    "type": "uint256"
+   }
+  ],
+  "name": "TokenAmountMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "fromParam",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "declared",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "fromInitializer",
+    "type": "address"
+   }
+  ],
+  "name": "TokenMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint24",
+    "name": "actual",
+    "type": "uint24"
+   },
+   {
+    "internalType": "uint24",
+    "name": "max",
+    "type": "uint24"
+   }
+  ],
+  "name": "TooManyPositions",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddressToken",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "index",
+    "type": "uint256"
+   }
+  ],
+  "name": "ZeroPositionWeight",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "CurrencySwept",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "distributor",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   }
+  ],
+  "name": "DistributionInitialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "FundsRecovered",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "currency",
+      "type": "address"
+     },
+     {
+      "internalType": "uint64",
+      "name": "migrationBlock",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint128",
+      "name": "reservedTokenAmountForLP",
+      "type": "uint128"
+     },
+     {
+      "internalType": "address",
+      "name": "recipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "positionRecipient",
+      "type": "address"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint24",
+        "name": "fee",
+        "type": "uint24"
+       },
+       {
+        "internalType": "int24",
+        "name": "tickSpacing",
+        "type": "int24"
+       },
+       {
+        "internalType": "address",
+        "name": "hook",
+        "type": "address"
+       }
+      ],
+      "internalType": "struct PoolParameters",
+      "name": "poolParameters",
+      "type": "tuple"
+     },
+     {
+      "internalType": "bytes",
+      "name": "positionDefinitions",
+      "type": "bytes"
+     },
+     {
+      "internalType": "bytes",
+      "name": "lpAllocationSchedule",
+      "type": "bytes"
+     }
+    ],
+    "indexed": false,
+    "internalType": "struct MigratorParameters",
+    "name": "migrationParams",
+    "type": "tuple"
+   }
+  ],
+  "name": "InitializerCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "indexed": true,
+    "internalType": "struct PoolKey",
+    "name": "key",
+    "type": "tuple"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint160",
+    "name": "initialSqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes",
+    "name": "plan",
+    "type": "bytes"
+   }
+  ],
+  "name": "Migrated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes",
+    "name": "reason",
+    "type": "bytes"
+   }
+  ],
+  "name": "MigrationFailed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "TokensSwept",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct PoolKey",
+    "name": "",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint160",
+    "name": "",
+    "type": "uint160"
+   }
+  ],
+  "name": "beforeInitialize",
+  "outputs": [
+   {
+    "internalType": "bytes4",
+    "name": "",
+    "type": "bytes4"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes",
+    "name": "configData",
+    "type": "bytes"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   }
+  ],
+  "name": "initializeDistribution",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "initializerFactory",
+  "outputs": [
+   {
+    "internalType": "contract IDistributorFactory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "name": "initializers",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "currency",
+      "type": "address"
+     },
+     {
+      "internalType": "uint64",
+      "name": "migrationBlock",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint128",
+      "name": "reservedTokenAmountForLP",
+      "type": "uint128"
+     },
+     {
+      "internalType": "address",
+      "name": "recipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "positionRecipient",
+      "type": "address"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint24",
+        "name": "fee",
+        "type": "uint24"
+       },
+       {
+        "internalType": "int24",
+        "name": "tickSpacing",
+        "type": "int24"
+       },
+       {
+        "internalType": "address",
+        "name": "hook",
+        "type": "address"
+       }
+      ],
+      "internalType": "struct PoolParameters",
+      "name": "poolParameters",
+      "type": "tuple"
+     },
+     {
+      "internalType": "bytes",
+      "name": "positionDefinitions",
+      "type": "bytes"
+     },
+     {
+      "internalType": "bytes",
+      "name": "lpAllocationSchedule",
+      "type": "bytes"
+     }
+    ],
+    "internalType": "struct MigratorParameters",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "name": "migrate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract IPositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "registeredPoolIds",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "initializer",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract ILBPInitializer",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "token",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "currency",
+      "type": "address"
+     },
+     {
+      "internalType": "uint64",
+      "name": "migrationBlock",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint128",
+      "name": "reservedTokenAmountForLP",
+      "type": "uint128"
+     },
+     {
+      "internalType": "address",
+      "name": "recipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "positionRecipient",
+      "type": "address"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint24",
+        "name": "fee",
+        "type": "uint24"
+       },
+       {
+        "internalType": "int24",
+        "name": "tickSpacing",
+        "type": "int24"
+       },
+       {
+        "internalType": "address",
+        "name": "hook",
+        "type": "address"
+       }
+      ],
+      "internalType": "struct PoolParameters",
+      "name": "poolParameters",
+      "type": "tuple"
+     },
+     {
+      "internalType": "bytes",
+      "name": "positionDefinitions",
+      "type": "bytes"
+     },
+     {
+      "internalType": "bytes",
+      "name": "lpAllocationSchedule",
+      "type": "bytes"
+     }
+    ],
+    "internalType": "struct MigratorParameters",
+    "name": "migrationParams",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct PoolKey",
+    "name": "key",
+    "type": "tuple"
+   }
+  ],
+  "name": "tryMigrate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

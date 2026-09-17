@@ -1,0 +1,26 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IVotes",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "contract TimelockController",
+    "name": "timelock",
+    "type": "address"
+   }
+  ],
+  "name": "deploy",
+  "outputs": [
+   {
+    "internalType": "contract LongCommunityGovernor",
+    "name": "governor",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

@@ -1,0 +1,35 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# EaaS: Hosting with Blockscout
+
+> Explorer as a Service (EaaS) from Blockscout provides managed hosting, priority updates, SLA support, and premium features for production chains.
+
+<Tip>
+  🚗 [Autoscout is now available](/using-blockscout/autoscout), providing a simple one-click explorer deployment with Blockscout's optimized hosting infrastructure. Use it for early testing, modifications, and launching a full production-grade explorer. **[Get Started Now](/using-blockscout/autoscout) and have your explorer up-and-running in minutes.**
+</Tip>
+
+Hosted instances receive support and updates not available to non-hosted instances. If you have questions about integrating services or current premium integrations please ask in [Discord.](https://discord.gg/XmNatGKbPS)
+
+🚄 **Hosting on blockscout.com**: Self-hosting can be difficult, often requiring a dev-ops team to make critical in-house updates and/or customizations. A Blockscout-hosted chain not only gives projects access to expert, dedicated technical support, it also greatly increases project visibility and provides access to the premium feature set.
+
+👩🏻 **Priority Updates:** The Ethereum mainnet BlockScout instance is updated regularly with the latest functionality. Premium hosted versions of BlockScout receive these same updates and patches. This includes community requested features, UI enhancements, protocol updates, fixes, and any other additions.
+
+👨💻 **Priority Support & SLA:** Premium customers receive personalized, priority assistance from the BlockScout support team. The BlockScout team responds to issues, requests, and bug reports from premium customers first and responds to your team's requests through a dedicated support channel.
+
+## Hosting your chain on [BlockScout.com](http://blockscout.com/)
+
+Chains hosted on [BlockScout.com](http://blockscout.com/) are **highly visible to the users who visit the website every day**. In addition, chains hosted on [BlockScout.com](http://blockscout.com/) receive **dedicated technical assistance.**
+
+**Benefits include:**
+
+* A branded UI theme with the latest version of Blockscout UI.
+
+* Automatic updates to BlockScout stable versions.
+
+* Customization for specific chain parameters such as market cap, validator info and others as needed.
+
+* Dedicated support from the BlockScout core team.
+
+If you would like to explore hosting options with [BlockScout.com](http://blockscout.com/), please [contact us](https://discord.com/invite/ZUnrZTK). We will set up a call to discuss your chain's unique needs and begin taking the next steps towards integration.

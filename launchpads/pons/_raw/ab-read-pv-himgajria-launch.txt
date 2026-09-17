@@ -1,0 +1,73 @@
+HomeMenu
+
+$COPPERINUTokensLaunchX
+
+Connect
+
+Partner deskPonsVault
+
+# Launch with himgajria
+
+A launch desk run with himgajria. Tokens here use a custom vault: trades pay 5% — 1% to pons, then 2% paid as CPER to stakers and 2% of the token burned. Listed on this page only, not in the main Explore feed.
+
+@himgajria
+
+This desk is unlisted — it is not in the site navigation and its launches are kept out of Explore. The tokens themselves are public on-chain from the moment they are signed.
+
+## Launch token
+
+PonsVault V2
+
+Token, vault, and optional first buy in one transaction from your wallet. You stay the on-chain deployer.
+
+NameLetters, numbers, and spaces. 32 characters max.TickerLetters and numbers. 10 characters max.Description
+
+Token imageI understand that selected artwork will be moderated and uploaded to public IPFS.Confirm public upload firstOr paste ipfs:// URI
+
+X profilex.com/Telegramt.me/WebsitePairing assetETH — Ether
+
+Fixed to ETH on this desk. Buyers spend ETH on the curve, creator fees arrive in ETH, and the vault splits them into CPER for stakers and a buyback of this token.
+
+Trading tax%
+
+Fixed at 4% for this desk. 2% buys CPER for stakers, 2% buys this token back and burns it. Trades pay 5% including the protocol's 1%.
+
+Vault
+
+This desk uses one vault: holders stake to earn CPER (SPDR Copper Trust), and the other half of the 4% tax buys the token back and burns it. Not a dividend — nobody is paid just for holding.
+
+Stake & Burn2% to stakers in CPER. 2% of this token burned.
+
+Holders stake this token to earn CPER. The other half of the tax buys the token back and burns it. Fees arrive in ETH before the split.
+
+Minimum fees before a run (ETH)
+
+The vault waits until this much ETH has built up, then pays CPER to stakers and burns. 0.1 ETH is the floor — raise it and it runs less often in bigger amounts.
+
+Initial buy (optional)
+
+ETH
+
+Bought on the curve in the launch transaction · paid in ETH
+
+Same call as the launch, so nothing can trade in front of it. Leave empty to skip.
+
+Loading fee…—
+
+Connect wallet
+
+## Your token
+
+ticker
+
+Launch fee—
+
+Paired inETH
+
+VaultStake & Burn
+
+Creator fees2% CPER to stakers / 2% burned
+
+Graduation—
+
+LiquidityLocked Uniswap v4

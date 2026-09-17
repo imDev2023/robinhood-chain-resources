@@ -1,0 +1,441 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "launcher_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "poolManager_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing_",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "NativeNumeraireOnly",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "given",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "inParams",
+    "type": "address"
+   }
+  ],
+  "name": "NumeraireMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RefundFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "got",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "wanted",
+    "type": "uint256"
+   }
+  ],
+  "name": "ShortOutput",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenNumeraireOnly",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "cost",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxCost",
+    "type": "uint256"
+   }
+  ],
+  "name": "TooExpensive",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAmount",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "cost",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "assetOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "BoughtFor",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "buyer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalCost",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "recipients",
+    "type": "uint256"
+   }
+  ],
+  "name": "LaunchedAndBought",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "hook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "initialSupply",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "numTokensToSell",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "numeraire",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "tokenFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "tokenFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "governanceFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "governanceFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "poolInitializer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "poolInitializerData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "liquidityMigrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "liquidityMigratorData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "integrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "salt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct CreateParams",
+    "name": "params",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "launchAndBuyExactOut",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cost",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "initialSupply",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "numTokensToSell",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "numeraire",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "tokenFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "tokenFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "governanceFactory",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "governanceFactoryData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "poolInitializer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "poolInitializerData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "liquidityMigrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes",
+      "name": "liquidityMigratorData",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address",
+      "name": "integrator",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "salt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct CreateParams",
+    "name": "params",
+    "type": "tuple"
+   },
+   {
+    "internalType": "address",
+    "name": "numeraire",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amountOut",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxCost",
+    "type": "uint256"
+   }
+  ],
+  "name": "launchAndBuyExactOutWithToken",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cost",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launcher",
+  "outputs": [
+   {
+    "internalType": "contract ILongLauncher",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "tickSpacing",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "unlockCallback",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

@@ -1,0 +1,112 @@
+{
+ "createParams": {
+  "initialSupply": "1000000000000000000000000000",
+  "numTokensToSell": "1000000000000000000000000000",
+  "numeraire": "0x4a0E65A3EcceC6dBe60AE065F2e7bb85Fae35eEa",
+  "tokenFactory": "0x1B37D3a72082029c44B35B604Ea473617580b69a",
+  "tokenFactoryData": "0x0000000000000000000000000000000000000000000000000000000000000160...",
+  "governanceFactory": "0x85f37f74Ef2478A770318bc810177a9835911aD7",
+  "governanceFactoryData": "0x",
+  "poolInitializer": "0x4e3468951D49f2EEa976eD0D6e75fFCb44a9a544",
+  "poolInitializerData": "0x0000000000000000000000000000000000000000000000000000000000000020...",
+  "liquidityMigrator": "0xba2F330EDb16cD8056f5988d8CE19BbC63475A0e",
+  "liquidityMigratorData": "0x",
+  "integrator": "0x92d435C96E63c43E12d6D0AB28f6b0B04072F765",
+  "salt": "0x00000000000000000000000000000000000000000000000000000000001154ef"
+ },
+ "tokenFactoryData": {
+  "name": "SPACEHOOD",
+  "symbol": "SPACEHOOD",
+  "vestingSchedules(cliff,duration)": [],
+  "beneficiaries": [],
+  "scheduleIds": [],
+  "amounts": [],
+  "tokenURI": "ipfs://bafkreide4zuxr7gwyptjaxnae4iqrpds7qiru4lvybac4zfvh2bsl73ej4",
+  "maxBalanceLimit": 0,
+  "balanceLimitEnd": 0,
+  "controller": "0x0000000000000000000000000000000000000000",
+  "excludedFromBalanceLimit": []
+ },
+ "poolInitializerData": {
+  "fee": 7000,
+  "tickSpacing": 8,
+  "farTick": 887256,
+  "curves": [
+   {
+    "tickLower": -157728,
+    "tickUpper": -47288,
+    "numPositions": 1,
+    "shares": 991000000000000000
+   },
+   {
+    "tickLower": -47288,
+    "tickUpper": 887264,
+    "numPositions": 1,
+    "shares": 9000000000000000
+   }
+  ],
+  "beneficiaries": [
+   {
+    "beneficiary": "0x1ae51740ce21caebb8c92c457ad7fc1bdaae5305",
+    "sharesWad": 950000000000000000,
+    "sharesPct": 95.0
+   },
+   {
+    "beneficiary": "0xedeaa06e2eb42a5c19ce27c6cffb36fd4fe1eda8",
+    "sharesWad": 50000000000000000,
+    "sharesPct": 5.0
+   }
+  ],
+  "dopplerHook": "0x6f02324d20cc679d0e585290caa6b16bacbc0f77",
+  "onInitCalldata": "0x0000000000000000000000004a0e65a3eccec6dbe60ae065f2e7bb85fae35eea00000000000000000000000092d435c96e63c43e12d6d0ab28f6b0b04072f76500000000000000000000000000000000000000000000000000000000000c35000000000000000000000000000000000000000000000000000000000000001f40000000000000000000000000000000000000000000000000000000000000000a0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000de0b6b3a76400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000de0b6b3a764000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "graduationCalldata": "0x",
+  "rehypeInitData": {
+   "numeraire": "0x4a0e65a3eccec6dbe60ae065f2e7bb85fae35eea",
+   "buybackDst": "0x92d435c96e63c43e12d6d0ab28f6b0b04072f765",
+   "startFee": 800000,
+   "startFeePct": 80.0,
+   "endFee": 8000,
+   "endFeePct": 0.8,
+   "durationSeconds": 10,
+   "startingTime": 0,
+   "feeRoutingMode": "DirectBuyback",
+   "feeDistributionInfo": {
+    "assetFeesToAssetBuybackWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "assetFeesToNumeraireBuybackWad": {
+     "wad": 1000000000000000000,
+     "pct": 100.0
+    },
+    "assetFeesToBeneficiaryWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "assetFeesToLpWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "numeraireFeesToAssetBuybackWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "numeraireFeesToNumeraireBuybackWad": {
+     "wad": 1000000000000000000,
+     "pct": 100.0
+    },
+    "numeraireFeesToBeneficiaryWad": {
+     "wad": 0,
+     "pct": 0.0
+    },
+    "numeraireFeesToLpWad": {
+     "wad": 0,
+     "pct": 0.0
+    }
+   }
+  }
+ },
+ "txHash": "0x44d4d3df6a420ecf63d182f7a45a83f26d9bd541f69c042974ef021214932218",
+ "from": "0x1Ae51740cE21CAEbB8C92C457Ad7fc1bdAAe5305",
+ "timestamp": "2026-07-14T14:48:13.000000Z"
+}

@@ -1,0 +1,158 @@
+# Source: derived, see per-block headers below | captured: 2026-09-03
+# Subject: which UniversalRouter is canonical on Robinhood Chain (4663),
+#          0x8876789976dEcBfCbBbe364623C63652db8C0904 or 0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99.
+
+== 1. Chain identity of the RPC used ==
+# method: POST $ALCHEMY_MAINNET_URL eth_chainId / eth_blockNumber, 2026-09-03T04:55Z
+eth_chainId   = 0x1237 (4663)
+eth_blockNumber = 0x32a7efb (53107963 at time of call)
+
+== 2. eth_getCode, both addresses, "latest" ==
+# method: POST $ALCHEMY_MAINNET_URL eth_getCode
+# raw hex saved as code-<address>.hex in this directory
+0x8876789976dEcBfCbBbe364623C63652db8C0904  24546 bytes  sha256 9b70267279e3d106d908cbd43927a251acd7a5e94cf34da431228c3c421c7dfb
+0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99  24546 bytes  sha256 01c1f00a112cdbd902431cf4dc3ea00aa8aeafc1cd0bd3347ebe66732988fb5b
+Both addresses hold code. Both are exactly the same length. The hashes differ.
+These two hashes reproduce the 2026-09-02 capture in
+resources/robinhood-chain/_raw/apis-2026-09-02/universal-router-bytecode-sha256.txt exactly.
+
+== 3. Byte-level diff of the two runtime codes ==
+# method: python3, byte-by-byte compare of the two code-*.hex files
+# A = 0x8876...0904, B = 0x06Af...bf99
+111 differing bytes out of 24546, in 6 contiguous runs:
+  1172-1191   (20 bytes)  A=7332d11bd10d18a04b119cd4671a96f3148002c4  B=d29c85f15df544ba632c9e25829fd29d767d7978
+  9705-9724   (20 bytes)  A=7332d11bd10d18a04b119cd4671a96f3148002c4  B=d29c85f15df544ba632c9e25829fd29d767d7978
+  10036-10055 (20 bytes)  A=7332d11bd10d18a04b119cd4671a96f3148002c4  B=d29c85f15df544ba632c9e25829fd29d767d7978
+  18226-18239 (14 bytes)  A=8876789976decbfcbbbe364623c6              B=06afba43fd06227fa663b0daecf5
+  18241-18245 (5 bytes)   A=52db8c0904                                B=f6eaa6bf99
+  18261-18292 (32 bytes)  A=a7af6fcd684cdc3a3dc593f7aef3964925bd849513dc6f154233ada3b5303099
+                          B=26d9cf1eb1d13924a7699560365dc51340482adddb1d1a069eb1c3b0d228097c
+Reading of the six runs:
+  runs 1-3   = the immutable spokePool address, embedded three times.
+  runs 4-5   = the contract's own address as an immutable (the two runs are one
+               20-byte address split by one byte, 0x36, that both share).
+  run 6      = a cached 32-byte EIP-712 domain separator, which is a function of
+               address(this) and therefore differs whenever the address does.
+No other byte differs. The executable logic is byte-identical.
+
+== 4. Verified sources on Blockscout ==
+# source: https://robinhoodchain.blockscout.com/api/v2/smart-contracts/<address>
+# captured 2026-09-02 into resources/robinhood-chain/_raw/apis-2026-09-02/bs_ur_<address>.json
+Both records:
+  name                = UniversalRouter
+  file_path           = src/pkgs/universal-router/contracts/UniversalRouter.sol
+  compiler_version    = v0.8.26+commit.8a97fa7a
+  optimization        = enabled, 4444 runs
+  evm_version         = cancun
+  is_verified         = true (partial match)
+  source_code sha256      = a5cb4897d7d7218c70ac8bc3f2bfbc88a863914ef98e5311389b0de85ed47441  (identical)
+  all 109 sources sha256  = 837f9921199617e1780369c554bce717c3714dc4f5f3f89ef5db7e5f308424d6  (identical)
+  compiler_settings sha256= c57029355890245ccf68ecc01e7c3bfda93c04bfe3785ab3f260ecbf1f0590d1  (identical)
+The two deployments were compiled from the same 109 source files with the same settings.
+
+== 5. Decoded constructor arguments (struct RouterParameters) ==
+# same Blockscout records, field decoded_constructor_args
+field                  0x8876...0904                                                       0x06Af...bf99
+permit2                0x000000000022D473030F116dDEE9F6B43aC78BA3                          same
+weth9                  0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73                          same
+v2Factory              0x8bcEaA40B9AcdfAedF85AdF4FF01F5Ad6517937f                          same
+v3Factory              0x1f7d7550B1b028f7571E69A784071F0205FD2EfA                          same
+pairInitCodeHash       0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f  same
+poolInitCodeHash       0xe34f199b19b2b4f47f68442619d555527d244f78a3297ea89325f843f87b8b54  same
+v4PoolManager          0x8366a39CC670B4001A1121B8F6A443A643e40951                          same
+v3NFTPositionManager   0x73991a25C818Bf1f1128dEAaB1492D45638DE0D3                          same
+v4PositionManager      0x58daec3116aae6D93017bAAea7749052E8a04fA7                          same
+spokePool              0x7332D11BD10d18A04B119Cd4671a96f3148002c4                          0xD29C85F15DF544bA632C9E25829fd29d767d7978
+Every parameter matches except spokePool. Both v2Factory, v3Factory, v4PoolManager,
+Permit2 and WETH match the chain-4663 entries in deployments.json exactly.
+
+== 6. What the two spokePool addresses are ==
+# source: https://robinhoodchain.blockscout.com/api/v2/addresses/<address>
+0x7332D11BD10d18A04B119Cd4671a96f3148002c4
+  name    = UnsupportedProtocol   (Uniswap's revert-on-everything stub)
+  creator = 0x9701fb0aDe1E269c8f64Ec0C7b3cfADB31A13A52
+  created = block 17815, 2026-05-26T18:07:27Z
+0xD29C85F15DF544bA632C9E25829fd29d767d7978
+  name    = ERC1967Proxy
+  impl    = 0x1771c470d41b8c39338450C380bf2C080a2CEdD8 (Universal_SpokePool, Across)
+  creator = 0x9A8f92a830A5cB89a3816e3D267CB7791c16b04D
+  created = block 156309, 2026-06-23T19:07:12Z
+
+== 7. What spokePool is used for, from the verified sources ==
+# grep of the 109 verified source files
+src/pkgs/universal-router/contracts/UniversalRouter.sol:25   ChainedActions(params.spokePool)
+src/pkgs/universal-router/contracts/modules/ChainedActions.sol:13  IV3SpokePool public immutable SPOKE_POOL;
+src/pkgs/universal-router/contracts/modules/ChainedActions.sol:40  IERC20(params.inputToken).forceApprove(address(SPOKE_POOL), inputAmount);
+src/pkgs/universal-router/contracts/modules/ChainedActions.sol:43  SPOKE_POOL.depositV3{value: callValue}(
+spokePool reaches nothing but the Across cross-chain deposit path in ChainedActions.
+It is not touched by any v2, v3 or v4 swap command.
+
+== 8. Deployment provenance ==
+# source: https://robinhoodchain.blockscout.com/api/v2/addresses/<address> and /transactions/<hash>
+0x8876789976dEcBfCbBbe364623C63652db8C0904
+  creation tx   = 0x422569c99e80a452d45680fbf16cf04cd4ae79cd2b0d7a6a89cf6603009ed1fa
+  block / time  = 18127, 2026-05-26T22:22:22Z
+  create2 proxy = 0x4e59b44847b379578588920cA78FbF26c0B4956C (deterministic deployer)
+  tx sender     = 0x9701fb0aDe1E269c8f64Ec0C7b3cfADB31A13A52
+0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99
+  creation tx   = 0xdfb76494e158d8dea4376160315239271636a18515207fd4526e574bc7eeb456
+  block / time  = 3347899, 2026-07-06T22:01:17Z
+  create2 proxy = 0x4e59b44847b379578588920cA78FbF26c0B4956C (deterministic deployer)
+  tx sender     = 0x9701fb0aDe1E269c8f64Ec0C7b3cfADB31A13A52
+Same human deployer, same deterministic CREATE2 factory, six weeks apart.
+The Across SpokePool proxy landed on 2026-06-23, between the two.
+
+== 9. Live traffic ==
+# source: https://robinhoodchain.blockscout.com/api/v2/addresses/<address>/counters, 2026-09-03T04:02Z
+0x8876789976dEcBfCbBbe364623C63652db8C0904  transactions 16,933,489  token transfers 36,345,972  gas used 1,938,946,549,118
+0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99  transactions     46,028  token transfers     98,570  gas used     8,112,990,768
+0x06Af...bf99 carries 0.27 percent of the transactions 0x8876...0904 carries.
+Both are still live: latest 50 inbound calls to each are `execute(bytes,bytes[],uint256)`
+and the most recent on each is 2026-09-03 (03:57:22Z and 03:54:36Z respectively).
+Caller shape differs: 47 distinct senders in the last 50 calls to 0x8876...0904,
+6 distinct senders in the last 50 calls to 0x06Af...bf99.
+
+== 10. What Uniswap's own tooling points at ==
+# universal-router-sdk constants, captured 2026-09-02 into
+# resources/robinhood-chain/_raw/apis-2026-09-02/uniswap-universal-router-sdk-constants.ts
+  // robinhood
+  [4663]: { weth: '0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73',
+            routerConfigs: { [UniversalRouterVersion.V2_1_1]:
+              { address: '0x8876789976decbfcbbbe364623c63652db8c0904', creationBlock: 18127 } },
+            swapProxy: SWAP_PROXY_DEPLOY_ADDRESS }
+Only one router is listed for 4663, and it is 0x8876...0904.
+
+# docs page trading/swapping-api/supported-chains, table row 4663
+| 4663 | Robinhood Chain | (no 2.0) | 0x8876789976decbfcbbbe364623c63652db8c0904 | Yes |
+
+# docs page protocols/v4/deployments and protocols/v3/deployments/v3-robinhood-chain-deployments
+Both list Universal Router 0x8876789976decbfcbbbe364623c63652db8c0904 for 4663.
+
+# deployments.json, generatedAt 2026-07-15T22:25:40Z, Uniswap/contracts @ 37936185de
+{ "id": "universal-router-universalrouter-robinhood-chain", "protocol": "universal-router",
+  "contract": "UniversalRouter", "chainId": 4663, "tier": "labs-supported", "status": "active",
+  "address": "0x06AfBA43Fd06227fA663b0DAecF536f6EaA6bf99", "sourceRef": "023196a" }
+0x8876789976dEcBfCbBbe364623C63652db8C0904 appears nowhere in deployments.json,
+on any chain.
+
+== 11. What the live Trading API builds ==
+# POST https://trade-api.gateway.uniswap.org/v1/quote then /v1/swap, 2026-09-03T05:00Z
+# request: EXACT_INPUT 0.001 native ETH -> USDG (0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168), chain 4663
+# saved as trading-api-quote-4663.json and trading-api-swap-4663-*.json
+no x-universal-router-version header  -> swap.to = 0x8876789976dEcBfCbBbe364623C63652db8C0904
+x-universal-router-version: 2.1.1     -> swap.to = 0x8876789976dEcBfCbBbe364623C63652db8C0904
+x-universal-router-version: 2.0       -> HTTP 500 InternalServerError (4663 has no 2.0 deployment)
+The production API never returns 0x06Af...bf99.
+
+== 12. Conclusion ==
+Both addresses hold a real, verified UniversalRouter on chain 4663.
+They were compiled from identical sources and their runtime code differs only in
+immutables: the spokePool, the self address, and the domain separator derived from it.
+Neither is a fork of the other and neither is modified.
+0x8876...0904 is the genesis-era deployment with Across bridging disabled
+(spokePool = UnsupportedProtocol) and it is what the SDK, the docs tables, the
+Trading API and effectively all live traffic use.
+0x06Af...bf99 is a 2026-07-06 redeployment of the same build wired to the live
+Across SpokePool, and it is what deployments.json records.
+The Bags docs' claim that 0x8876...0904 is a "Robinhood-modified fork" is false:
+the source hashes and the byte diff both rule out any logic change.

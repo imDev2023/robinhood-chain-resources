@@ -1,0 +1,137 @@
+HOMEStoreDocs
+
+Community
+
+XTelegram
+
+More
+
+AI OracleTerms and ConditionsContact Us
+
+Create TokenCREATE
+
+SearchRobinhoodENConnect Wallet
+
+Create TokenCREATESearchRobinhoodConnect Wallet
+
+# Create Non-tax Token
+
+Create Token
+
+### Basic Information
+
+Cover Image
+
+//Supported File FormatsClick or drag an image herePNG, JPEG, WebP, SVG, GIF, file size limit 3MB
+
+Token Name*
+
+Token Symbol*
+
+Blockchain Network
+
+Robinhood
+
+Token Description
+
+### Payment token*
+
+CRYPTORWA
+
+SPYSPY
+
+GMEGME
+
+NVDANVDA
+
+PLTRPLTR
+
+AAPLAAPL
+
+COST
+
+MSFT
+
+AMZN
+
+DJT
+
+MSTR
+
+NFLX
+
+SPCX
+
+TSLA
+
+GOOGL
+
+AMC
+
+BB
+
+F
+
+INDA
+
+JNJ
+
+LULU
+
+PFE
+
+QQQ
+
+SKHY
+
+SNDK
+
+HOODon
+
+### Select DEX for Migration*
+
+PancakeSwapUniswap
+
+### Creator Token Purchase (Optional)
+
+A small creator buy helps secure your token launch by reducing sniper activity. Maximum purchase amount: 800M tokens. Any overpayment will be refunded. Deploy cost: around 0.001 ETH
+
+Purchase amountBalance: - ETH
+
+25%50%75%MAX
+
+ETH
+
+25%50%75%MAX
+
+Estimated receive: 0 Token
+
+Max: 5 ETHMaximum purchase: 5.05 ETH
+
+### Anti-Farmer Protection Duration
+
+Anti-Farmer Protection Duration30 day(s)
+
+Default: 30 days. Enter a value from 3 to 365 days.
+
+### Optional Links
+
+Telegram Link
+
+Twitter Link
+
+GitHub Link
+
+YouTube Link
+
+DeBox Link
+
+Website Link
+
+Create Token
+
+Create Token
+
+Flap — The Programmable Token Launchpad
+
+HOMEStoreDocsCommunityMoreLanguageEN

@@ -1,0 +1,58 @@
+PUSH4 selector scan of feecollector runtime bytecode, resolved via api.openchain.xyz, 2026-09-03
+
+0x01681a62  sweep(address)
+0x03fd2a45  DEAD()
+0x06ec16f8  collect(address)
+0x0effce65  MAX_RECEIVERS()
+0x1103f315  protocolShare()
+0x118cdaa7  OwnableUnauthorizedAccount(address)
+0x1e249585  setConfig(address,address[],uint8[])
+0x1e4fbdf7  OwnableInvalidOwner(address)
+0x3ee5aeb5  ReentrancyGuardReentrantCall()
+0x4e487b71  Panic(uint256)
+0x5274afe7  SafeERC20FailedOperation(address)
+0x61d027b3  treasury()
+0x70a08231  balanceOf(address)
+0x715018a6  renounceOwnership()
+0x8b906c97  NotDeployer()
+0x8da5cb5b  owner()
+0x968daa2c  setTokenTreasuryShare(uint256)
+0xa480ca79  collectFees(address)
+0xa9059cbb  transfer(address,uint256)
+0xab803a76  sweepNative()
+0xbcd55b0f  InvalidSplit()
+0xce9c0bb7  setProtocolShare(uint256)
+0xd7b96d4e  locker()
+0xd92e233d  ZeroAddress()
+0xdcbccc8a  tokenTreasuryShare()
+0xe1a67bf7  setOverride(address,address[],uint8[])
+0xe96a4d76  feeRouting(address)
+0xf0f44260  setTreasury(address)
+0xf2fde38b  transferOwnership(address); _SIMONdotBLACK_(int8[],uint256,address,bytes8,int96)
+0xfff6ec61  clearOverride(address)
+
+unresolved:
+0x01415610
+0x079fbb7f
+0x0a5e1a50
+0x0cbdb7b3
+0x1e7945ad
+0x30361083
+0x3036119f
+0x326f824f
+0x4300081e
+0x4b059351
+0x558b6a9a
+0x565b5f61
+0x565b6020
+0x565b6040
+0x565b6060
+0x565b8252
+0x565b935f
+0x6e73c061
+0x7c706f63
+0x7f4b7465
+0x90600190
+0xa138549b
+0xb155b611
+0xea398280

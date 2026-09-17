@@ -1,0 +1,25 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Current Integrations
+
+> Current Blockscout Wallet as a Service (WaaS) integrations, including the Rootstock Global Wallet and the Polygon Global Wallet for ecosystem users.
+
+<Tip>
+  [Contact the Blockscout team](https://eaas.blockscout.com/?utm_medium=header#contact) if you are ready to integrate a global wallet and start onboarding new users today.
+</Tip>
+
+## Current Integrations
+
+### Rootstock
+
+Rootstock is the first live WaaS integration, made possible by a [grant from the Rootstock Collective DAO.](https://gov.rootstockcollective.xyz/t/2512-grant-1-rootstock-global-wallet-by-blockscout/679) The wallet provides coverage for the entire ecosystem with a simple login, swap, onramp, and account abstraction features.
+
+* Rootstock Global Wallet [https://rootstock-wallet.blockscout.com/](https://rootstock-wallet.blockscout.com/)
+
+### Polygon
+
+A standalone wallet is available for the Polygon ecosystem. Swap, deposit and send tokens seamlessly.
+
+* Polygon Global wallet [https://polygon-wallet.blockscout.com/](https://polygon-wallet.blockscout.com/)

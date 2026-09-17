@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    
+  <url>
+    <loc>https://docs.bags.fm/api-reference/agent-auth-callback</loc>
+    <lastmod>2026-04-09T21:53:57.675Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/agent-auth-init</loc>
+    <lastmod>2026-04-09T21:53:57.686Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/claim-damm-v2-vault</loc>
+    <lastmod>2026-08-22T23:30:37.851Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-damm-v2-launch-transaction</loc>
+    <lastmod>2026-08-22T23:28:45.235Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-dexscreener-order</loc>
+    <lastmod>2026-02-28T17:40:54.806Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-fee-share-admin-transfer-tx</loc>
+    <lastmod>2026-02-28T16:19:05.173Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-fee-share-admin-update-config</loc>
+    <lastmod>2026-02-28T16:19:05.221Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-fee-share-configuration</loc>
+    <lastmod>2025-12-15T16:21:17.987Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-partner-configuration</loc>
+    <lastmod>2025-12-15T16:21:17.991Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-rh-claim-txs</loc>
+    <lastmod>2026-08-03T21:38:35.313Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-swap-transaction</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-token-info</loc>
+    <lastmod>2025-08-07T00:04:58.071Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/create-token-launch-transaction</loc>
+    <lastmod>2025-08-07T00:04:58.095Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-auth-me</loc>
+    <lastmod>2026-04-11T20:29:21.914Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-bags-pool-by-token-mint</loc>
+    <lastmod>2026-03-01T17:34:27.455Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-bags-pools</loc>
+    <lastmod>2026-01-31T04:02:53.000Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-claim-transactions</loc>
+    <lastmod>2025-12-15T16:21:17.989Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-claim-transactions-v3</loc>
+    <lastmod>2026-04-03T12:57:01.086Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-claimable-positions</loc>
+    <lastmod>2026-04-03T12:57:01.087Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-damm-v2-launches</loc>
+    <lastmod>2026-08-22T23:00:07.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-damm-v2-supported-quote-tokens</loc>
+    <lastmod>2026-08-22T23:24:57.184Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-damm-v2-vault-claimables</loc>
+    <lastmod>2026-08-22T23:26:43.925Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-dexscreener-order-availability</loc>
+    <lastmod>2026-02-28T17:40:55.288Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-evm-token-creator</loc>
+    <lastmod>2026-07-11T22:55:00.873Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-fee-share-admin-list</loc>
+    <lastmod>2026-02-28T16:19:05.269Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-fee-share-wallet</loc>
+    <lastmod>2026-07-11T18:49:59.376Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-fee-share-wallet-bulk</loc>
+    <lastmod>2026-07-11T18:49:59.376Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-global-claim-feed-v2</loc>
+    <lastmod>2026-08-20T19:07:18.881Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-partner-claim-transactions</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-partner-stats</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-pool-config-keys</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-balances</loc>
+    <lastmod>2026-07-13T03:28:08.247Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-claimable-positions</loc>
+    <lastmod>2026-08-03T21:38:35.311Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-creation-fee</loc>
+    <lastmod>2026-07-13T03:28:08.248Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-creator-earnings</loc>
+    <lastmod>2026-07-13T03:28:08.244Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-creator-fees</loc>
+    <lastmod>2026-07-13T03:28:08.246Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-creator-roster</loc>
+    <lastmod>2026-07-13T03:28:08.248Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-index-token-history</loc>
+    <lastmod>2026-08-13T02:13:55.414Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-index-token-status</loc>
+    <lastmod>2026-08-13T02:13:55.415Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-pool-price</loc>
+    <lastmod>2026-07-13T03:28:08.243Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-portfolio</loc>
+    <lastmod>2026-07-13T03:28:08.245Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-quote</loc>
+    <lastmod>2026-07-13T03:28:08.245Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-token</loc>
+    <lastmod>2026-07-13T03:28:08.513Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-token-creations</loc>
+    <lastmod>2026-07-13T03:28:08.238Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-token-state</loc>
+    <lastmod>2026-07-13T03:28:08.513Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-tokens</loc>
+    <lastmod>2026-07-13T03:28:08.512Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-top-volume</loc>
+    <lastmod>2026-08-17T22:44:23.608Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-trade-stats</loc>
+    <lastmod>2026-07-13T03:28:08.511Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-rh-trades</loc>
+    <lastmod>2026-07-13T03:28:08.510Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-claim-events</loc>
+    <lastmod>2026-01-16T21:36:00.808Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-claim-stats</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-claim-stats-v4</loc>
+    <lastmod>2026-08-20T19:01:24.771Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-launch</loc>
+    <lastmod>2026-08-22T22:53:48.391Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-launch-bulk</loc>
+    <lastmod>2026-08-22T23:17:28.790Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-launch-creators</loc>
+    <lastmod>2025-09-14T19:54:09.304Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-launch-feed</loc>
+    <lastmod>2026-03-14T01:23:07.093Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-token-lifetime-fees</loc>
+    <lastmod>2025-08-07T00:04:58.162Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/get-trade-quote</loc>
+    <lastmod>2025-12-15T16:21:18.155Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/init-rh-index-token</loc>
+    <lastmod>2026-08-13T02:13:55.419Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/introduction</loc>
+    <lastmod>2026-01-16T13:11:23.710Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/send-transaction</loc>
+    <lastmod>2026-02-01T18:51:23.735Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/api-reference/submit-dexscreener-payment</loc>
+    <lastmod>2026-02-28T17:40:55.395Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/changelog/changelog</loc>
+    <lastmod>2026-08-23T22:47:33.603Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/cli/command-reference</loc>
+    <lastmod>2026-08-06T21:29:35.112Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/cli/install-and-setup</loc>
+    <lastmod>2026-04-11T21:51:38.317Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/cli/quickstart-token-launch</loc>
+    <lastmod>2026-04-11T21:51:38.319Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/faq/do-i-need-wallet</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/faq/how-to-get-api-key</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/faq/linking-wallets</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/faq/what-are-rate-limits</loc>
+    <lastmod>2026-05-19T20:15:29.097Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/faq/what-is-bags-api</loc>
+    <lastmod>2026-08-23T22:47:12.757Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/agent-authentication</loc>
+    <lastmod>2026-04-11T21:51:38.315Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/claim-fees</loc>
+    <lastmod>2026-08-23T22:47:33.558Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/claim-partner-fees</loc>
+    <lastmod>2026-04-11T15:14:06.349Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/create-launch-intent</loc>
+    <lastmod>2026-04-18T02:49:54.726Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/create-partner-key</loc>
+    <lastmod>2026-04-11T15:14:06.358Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/customize-token-fees</loc>
+    <lastmod>2026-06-18T01:13:53.819Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/get-token-claim-events</loc>
+    <lastmod>2026-04-11T15:14:06.350Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/get-token-creators</loc>
+    <lastmod>2026-04-11T15:14:06.351Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/get-token-lifetime-fees</loc>
+    <lastmod>2026-04-11T15:14:07.398Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/initial-buy-math</loc>
+    <lastmod>2026-03-19T02:59:45.944Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/launch-token</loc>
+    <lastmod>2026-08-23T22:47:33.559Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/launch-token-non-sol-quote</loc>
+    <lastmod>2026-08-23T22:47:33.557Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/trade-tokens</loc>
+    <lastmod>2026-04-11T15:14:07.397Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/how-to-guides/typescript-node-setup</loc>
+    <lastmod>2025-11-11T05:50:35.643Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm</loc>
+    <lastmod>2026-05-19T20:15:29.098Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/api-key-management</loc>
+    <lastmod>2025-11-11T05:50:35.653Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/base-url-versioning</loc>
+    <lastmod>2025-11-11T05:50:35.652Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/error-handling</loc>
+    <lastmod>2026-05-19T20:15:29.100Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/file-uploads</loc>
+    <lastmod>2025-12-09T19:38:48.633Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/lookup-tables</loc>
+    <lastmod>2025-12-09T19:38:48.632Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/program-ids</loc>
+    <lastmod>2026-01-12T15:01:35.690Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/rate-limits</loc>
+    <lastmod>2026-05-19T20:15:29.101Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/principles/tipping</loc>
+    <lastmod>2026-07-13T02:56:20.187Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/claim-fees</loc>
+    <lastmod>2026-08-03T21:38:35.258Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/contracts</loc>
+    <lastmod>2026-07-13T02:32:26.701Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/index-tokens</loc>
+    <lastmod>2026-08-13T02:13:55.317Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/launch-token</loc>
+    <lastmod>2026-07-13T02:56:20.186Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/overview</loc>
+    <lastmod>2026-07-13T02:32:26.704Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/partner-program</loc>
+    <lastmod>2026-07-13T02:56:20.185Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/read-state</loc>
+    <lastmod>2026-07-13T02:32:28.336Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/setup</loc>
+    <lastmod>2026-07-13T02:32:28.334Z</lastmod>
+  </url>
+
+  <url>
+    <loc>https://docs.bags.fm/robinhood/trade-tokens</loc>
+    <lastmod>2026-07-13T02:32:28.337Z</lastmod>
+  </url>
+</urlset>

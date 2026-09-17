@@ -1,0 +1,16 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Updating and Redeploying Blockscout on AWS
+
+> Update or redeploy a Blockscout instance on AWS by uploading a new version, stopping the service, running manual deploy steps, and migrating the DB.
+
+To update to the latest version of BlockScout, or redeploy with different chain parameters, you will upload the latest version of BlockScout to your server.
+
+1. Copy the latest version of BlockScout<br />`git clone https://github.com/poanetwork/blockscout`
+2. Zip the folder
+3. Copy the zip archive to the same root application folder where the current instance resides (this should be standard based on marketplace installation)
+4. Access the command line and stop the BlockScout service<br />`sudo systemctl stop blockscout.service`
+5. Follow the [manual deployment instructions](/setup/deployment/manual-old-ui) starting with step 2.
+6. If required, migrate the previous database following the [AWS RDS migration](https://console.aws.amazon.com/dms/) instructions.

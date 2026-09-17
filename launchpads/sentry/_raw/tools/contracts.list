@@ -1,0 +1,54 @@
+LaunchFactoryWeth|0x472286b7d5c1b2a3ce1132ef73d3bccf446c5cc1|Transparent proxy. The WETH-pair launch factory: `launch`, `launchWithFeeRecipient`, `launchWithReflections`, `launchWithWhitelist`. Live implementation read from the EIP-1967 slot on 2026-09-02 is `0x818fdd15dbe95851a0bd8c5389c49ed6d4fe2bbf` (SentryLaunchFactoryV4).
+LaunchFactoryV4Impl|0x818fdd15dbe95851a0bd8c5389c49ed6d4fe2bbf|Implementation shared by both live v4 factories (WETH pairs and stock pairs).
+LaunchFactoryStock|0xd0a93885a387e3a8a14dd82776cf9104a3676b3a|Transparent proxy. The stock-pair launch factory, same implementation as the WETH factory. `getSupportedBaseTokens()` returned 88 tokenised stocks on 2026-09-02.
+LaunchFactoryLegacyV3|0x9e8f6f8214b01fd4cf1d73fb1fb7cf9f811036cb|Transparent proxy, retired. The Uniswap V3 generation: 93 launches, 1% fee tier, LP NFTs swept into the LP vault.
+LaunchFactoryLegacyImpl|0x12a9c6498e8cfd970e78f82410ea23809dd4c98b|Implementation behind the legacy V3 factory proxy.
+LPVault|0x0f0e601041ec765b8bab8c166840e291253f2df0|Immutable custodian of every launch's liquidity. No withdrawal function; `collectV3Fees` and `collectV4Fees` only move fees.
+TreasurySplitter|0x75450496fe333a93e1327368aa3c4130bf008697|Receives the protocol leg of every launch fee and splits it `forwardBps` 6000 to the treasury wallet, remainder into permanently locked SENTRY liquidity.
+FeeHookWeth|0x35c0098836fa0d10a015a95bf02c16387814f0cc|Uniswap v4 hook for plain WETH launches. Contract name SentryStockFeeHookV3.
+FeeHookWethReflections|0x730abadbb4f328520e5350f59126fbe1d67f70cc|Uniswap v4 hook for `launchWithReflections` WETH launches.
+FeeHookStock|0x5daa88b65bd47199ec92d3cde01b56348e1270cc|Uniswap v4 hook every registered stock base token maps to via `baseTokenToHook`.
+FeeHookStockLegacyV2|0x7e6e258851575bd3f69e7a01981066a26329b0cc|Superseded stock hook, still serving the pools launched on it. Unverified on Blockscout.
+DynamicFeeHookDefault|0x3b778ccff74c2f21e771e1e951b1343108fc7080|SentryDynamicFeeHook, the value returned by `hook()` on the stock factory. Fee curve only, no fee legs; every registered stock base token overrides it through `baseTokenToHook`.
+SentryFeeHook|0xa695f84c86367d5aea445e8289dbc7c4c4e530cc|Bespoke v4 hook for the SENTRY/WETH pool, with an 80% early-exit fee on sellers still inside the migration lock.
+TokenLocker|0xbd0e7a242a323e5e4799abe09b7516d9da5ea81d|Ownerless ERC-20 timelock behind sentry.trading/lock. 509 locks as of 2026-09-02.
+SwapRouterV2|0x8bfdc6cc38db45bdaf2f254415251b109058a97c|Sentry aggregating swap router over Uniswap V2 and V3 venues.
+SwapRouterV4|0x5811a5c7c4f73290cc9aa2235245bc9f48523662|Sentry swap router for Uniswap v4 pools. Unverified; `_raw/rpc/code-0x5811a5c7...hex` holds the runtime bytecode.
+SwapRouterStockMultihop|0x641f05602b3dee5b35bac08a1269827f2e84445d|Sentry router for ETH to USDG to stock to token multihops. Unverified.
+SwapRouterPancakeV3|0x4415f2360bfd9b1bf55500cb28fa41df95cb2d2b|Sentry router for PancakeSwap V3 venues.
+SentryToken|0x1eca20cfa4af2e2fa2f4ce2bf8d97bfa184fd4d7|The SENTRY platform token, contract name SentryTokenRelaunch. Fixed 1B supply, WETH reflections, migration lock and an on-chain extension vote.
+RelaunchLauncher|0x0ba59e256b7657163a06eb900605688bb1e74b42|Deployer of the SENTRY relaunch pool; `launcher()` on the SENTRY hook.
+PoolManagerV4|0x8366a39cc670b4001a1121b8f6a443a643e40951|Canonical Uniswap v4 PoolManager on Robinhood Chain. Every Sentry v4 pool lives inside it.
+UniswapV3Factory|0x1f7d7550b1b028f7571e69a784071f0205fd2efa|Canonical Uniswap V3 factory; the venue for the retired legacy generation.
+UniswapV3PositionManager|0x73991a25c818bf1f1128deaab1492d45638de0d3|`npm()` on the legacy factory and `v3Npm()` on the LP vault; holds the 93 locked legacy positions.
+UniswapV3SwapRouter02|0xcaf681a66d020601342297493863e78c959e5cb2|`v3Router()` on the treasury splitter, used to buy SENTRY with protocol fees.
+WETH9|0x0bd7d308f8e1639fab988df18a8011f41eacad73|The only base token the WETH factory accepts.
+USDG|0x5fc5360d0400a0fd4f2af552add042d716f1d168|Global Dollar, the hop asset between ETH and the tokenised stocks.
+ZNSConnectHood|0x8f95ed212f37cdc19f5c0716c24966d9019939ee|The `.hood` name registry the app registers domains against. Unverified.
+TreasurySafe|0xffc93474d99f07e8d0f1c7c8c5b93baa2feddd07|Safe multisig that is `treasury()` on both the SENTRY token and its fee hook.
+ExampleLaunchWeth|0x9b4434278976ccf6150a0ff113acc96d594cabac|Hood Of Meme (HOME), launched 2026-08-31 by `launchWithWhitelist` on the WETH factory. Contract name SentryTokenStandard, the token template every plain launch deploys.
+ExampleLaunchWethReflections|0xef3a80c82c1a5f12c3e16e79eae47c364e4fe669|Baby Sentry (BSENTRY), launched 2026-08-28 by `launchWithReflections`. Unverified on Blockscout.
+ExampleLaunchStock|0xf668b7002810313fd676862a8ec57f0975038692|Silver Inu (SILVER INU), launched 2026-08-29 by `launchWithWhitelist` on the stock factory against SLV. Contract name SentryTokenizedStocks, the stock-paired token template.
+ExampleLaunchStockChill|0xf699aea8a333202a7dc610abc664c213c9dc4111|Netflix and Chill (CHILL), the highest-volume Sentry launch, paired against NFLX.
+StockBaseSLV|0x411efb0e7f985935daec3d4c3ebaea0d0ad7d89f|iShares Silver Trust Robinhood Token, the base asset of the Silver Inu pool.
+StockBaseNFLX|0xe0444ef8bf4ed74f74fd73686e2ddf4c1c5591e8|Netflix Robinhood Token, the base asset of the CHILL pool.
+QuotronsToken|0x5a86828efd322bfb16d93cfed16ee9bc14940d7f|QUOTRONS ERC-20, the sibling Mavrk product's token and the largest market on Sentry's Discover list.
+Quotron404|0x40686524e56aff0f1446958725dcf6e6da5381e6|Quotrons ERC-404 style terminal contract.
+QuotronsNFT|0xbde7bec47cbfc689e5e952b6cdd113a500abcd83|QUOTRONS ERC-721 terminals.
+QuotronMirrorV2|0x027aca2794e44f24950d81227dcd516ffbb49d6e|Quotrons V2 NFT mirror.
+QuotronWethHook|0x62e200cc8e4d95cf622f40dd70f407c883ecb0cc|Quotrons Uniswap v4 fee hook on the QUOTRON/WETH pool.
+QuotronWethLpVault|0x4b7a4f53d9b7e4b4941bc9cf74e852d55444ccbe|Quotrons LP custodian.
+QuotronWethRouter|0x42024fcfdb4f3089dd619a0cef0cd24e7b841c18|Quotrons swap router.
+QuotronWethQuoter|0xb8960fdc8a0be155d196c2795b75747763562df2|Quotrons quoter.
+QuotronReflections|0x666a51eb731a9cf79d97b4a9c64cd5a4806c877c|Quotrons reflections, first generation.
+QuotronReflectionsV2|0xe04fba61fd54ba78dd450a30d8af40167af5d3ec|Quotrons reflections, second generation.
+QuotronWhitelist|0x94cfc3798ca6320ac5e6af04484efe90bd04ac81|Quotrons launch whitelist registry.
+QuotronSeeder|0xcc949c33860e0f695be3373628955d77dd922fee|Quotrons pool seeder.
+QuotronMigrator|0x205e13e6ec07baa4ed1c57d677de9fee1c88cd6d|Quotrons V1 to V2 migrator.
+QuotronLegacyTokenSink|0x077403e402b63da54a594cbd2cfc46dbc92927ad|Sink for migrated V1 Quotron tokens.
+QuotronV2MigrationReserve|0xcf39cb2363f85d3adad4ff891bb357c1766ef292|Reserve funding the V2 migration.
+QuotronRoyaltySplitter|0xd8eb805e96b05cb412a1e48eb3a85b6267f901d7|Quotrons royalty splitter.
+QuotronBurnVault|0xd1258efafa9d1b1d09c86403139db78465540760|Quotrons burn vault for hardwiring.
+QuotronEpochConverter|0x24e62dd5c7058cc41ad9c5375c137460ea1da2fe|Quotrons epoch converter for reward drops.
+QuotronStonksIncinerator|0xc388e730807c6f69b959443ed497c731b8d138f9|Quotrons incinerator.
+QuotronV3ExactInputAdapter|0x59b09a326984dd3c1076b864aa27f0bdd9876f0a|Quotrons Uniswap V3 exact-input adapter.

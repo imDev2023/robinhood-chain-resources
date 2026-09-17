@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-14",
+  "network": {
+    "name": "Robinhood Chain",
+    "chainId": 4663,
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpcUrl": "https://rpc.mainnet.chain.robinhood.com",
+    "explorerUrl": "https://robinhoodchain.blockscout.com"
+  },
+  "contracts": {
+    "quotron": "0x5a86828Efd322bfb16d93cFeD16EE9BC14940D7F",
+    "router": "0x42024fCFdB4F3089Dd619A0cEF0Cd24E7b841C18",
+    "hook": "0x62E200Cc8e4D95cf622f40Dd70f407C883EcB0cc",
+    "quoter": "0xb8960fdC8A0Be155d196C2795b75747763562df2",
+    "weth": "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73"
+  },
+  "canonicalPoolId": "0x0b142aaf734f1b063355bfe854e282a13b26dcac86e2e564e74540f9b218d069",
+  "tradeApi": {
+    "transport": "contract",
+    "quoteMethod": "eth_call",
+    "quoter": "quoteBuyExactEth(uint256,address)",
+    "quoteSell": "quoteSellExactQuotron(uint256,address)",
+    "quoteBuyExactOutput": "quoteBuyExactQuotron(uint256,address)",
+    "buyExactInput": "buyExactEth(uint256,address,uint256)",
+    "buyExactOutput": "buyExactQuotron(uint256,address,uint256)",
+    "sellExactInput": "sellExactQuotronForEth(uint256,uint256,address,uint256)",
+    "sellApprovalSpender": "0x42024fCFdB4F3089Dd619A0cEF0Cd24E7b841C18"
+  },
+  "abis": {
+    "router": "https://quotrons.cash/integration/QuotronWethRouter.abi.json",
+    "quotron": "https://quotrons.cash/integration/Quotron404V2.abi.json",
+    "hook": "https://quotrons.cash/integration/QuotronWethHook.abi.json",
+    "quoter": "https://quotrons.cash/integration/QuotronWethQuoter.abi.json"
+  },
+  "documentation": {
+    "human": "https://quotrons.cash/docs",
+    "integration": "https://quotrons.cash/integration.md",
+    "machineReadable": "https://quotrons.cash/llms-full.txt"
+  }
+}

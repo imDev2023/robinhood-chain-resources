@@ -1,0 +1,443 @@
+{
+ "file_path": "src/v2/QuotronBurnVault.sol",
+ "creation_status": "success",
+ "source_code": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.26;\n\ninterface IQuotronBurnPot {\n    function pullBurn(uint256 amount) external;\n}\n\ninterface IQuotronBurnAdapter {\n    /// @notice Swap an exact input and deliver tokenOut to `recipient`.\n    function swapExactInput(\n        address tokenIn,\n        address tokenOut,\n        uint256 amountIn,\n        uint256 minAmountOut,\n        address recipient,\n        uint256 deadline\n    ) external returns (uint256 amountOut);\n}\n\ninterface IERC20BurnVault {\n    function balanceOf(address account) external view returns (uint256);\n    function approve(address spender, uint256 amount) external returns (bool);\n    function transfer(address to, uint256 amount) external returns (bool);\n}\n\n/// @title QuotronBurnVault\n/// @notice Destination-locked WETH pot. A one-time sealed adapter may convert\n/// WETH to the canonical STONKBROKER token; all measured output is immediately\n/// sent to the immutable burn address. There is no rescue or arbitrary sweep.\ncontract QuotronBurnVault {\n    address public constant BURN_ADDRESS = 0x000000000000000000000000000000000000dEaD;\n\n    address public owner;\n    address public executor;\n    IQuotronBurnPot public immutable hook;\n    address public immutable weth;\n    address public immutable burnToken;\n    IQuotronBurnAdapter public adapter;\n    bool public adapterSealed;\n    bool public paused;\n    uint256 private _lock = 1;\n\n    event AdapterSealed(address indexed adapter);\n    event ExecutorSet(address indexed executor);\n    event BurnExecuted(uint256 wethIn, uint256 tokenBurned);\n    event Paused(bool paused);\n\n    error NotOwner();\n    error NotExecutor();\n    error ZeroAddress();\n    error AlreadySealed();\n    error NotSealed();\n    error Paused_();\n    error Reentrancy();\n    error SlippageExceeded();\n    error TokenTransferFailed();\n    error DeadlineExpired();\n    error InvalidAmount();\n\n    modifier onlyOwner() {\n        if (msg.sender != owner) revert NotOwner();\n        _;\n    }\n\n    modifier onlyExecutor() {\n        if (msg.sender != executor) revert NotExecutor();\n        _;\n    }\n\n    modifier nonReentrant() {\n        if (_lock != 1) revert Reentrancy();\n        _lock = 2;\n        _;\n        _lock = 1;\n    }\n\n    constructor(address hook_, address weth_, address burnToken_, address owner_) {\n        if (hook_ == address(0) || weth_ == address(0) || burnToken_ == address(0) || owner_ == address(0)) {\n            revert ZeroAddress();\n        }\n        hook = IQuotronBurnPot(hook_);\n        weth = weth_;\n        burnToken = burnToken_;\n        owner = owner_;\n        executor = owner_;\n    }\n\n    function setAndSealAdapter(address adapter_) external onlyOwner {\n        if (adapterSealed) revert AlreadySealed();\n        if (adapter_ == address(0)) revert ZeroAddress();\n        adapter = IQuotronBurnAdapter(adapter_);\n        adapterSealed = true;\n        emit AdapterSealed(adapter_);\n    }\n\n    function executeBurn(uint256 wethAmount, uint256 minBurnTokenOut, uint256 deadline)\n        external\n        onlyExecutor\n        nonReentrant\n        returns (uint256 burned)\n    {\n        if (!adapterSealed) revert NotSealed();\n        if (paused) revert Paused_();\n        if (block.timestamp > deadline) revert DeadlineExpired();\n        if (wethAmount == 0 || minBurnTokenOut == 0) revert InvalidAmount();\n\n        hook.pullBurn(wethAmount);\n        uint256 beforeBalance = IERC20BurnVault(burnToken).balanceOf(address(this));\n        _forceApprove(weth, address(adapter), wethAmount);\n        uint256 reported = adapter.swapExactInput(weth, burnToken, wethAmount, minBurnTokenOut, address(this), deadline);\n        _forceApprove(weth, address(adapter), 0);\n\n        burned = IERC20BurnVault(burnToken).balanceOf(address(this)) - beforeBalance;\n        if (burned < minBurnTokenOut || reported < minBurnTokenOut) {\n            revert SlippageExceeded();\n        }\n        _safeTransfer(burnToken, BURN_ADDRESS, burned);\n        emit BurnExecuted(wethAmount, burned);\n    }\n\n    function setExecutor(address executor_) external onlyOwner {\n        if (executor_ == address(0)) revert ZeroAddress();\n        executor = executor_;\n        emit ExecutorSet(executor_);\n    }\n\n    function setPaused(bool paused_) external onlyOwner {\n        paused = paused_;\n        emit Paused(paused_);\n    }\n\n    function transferOwnership(address newOwner) external onlyOwner {\n        if (newOwner == address(0)) revert ZeroAddress();\n        owner = newOwner;\n    }\n\n    function _forceApprove(address token, address spender, uint256 amount) internal {\n        _safeApprove(token, spender, 0);\n        if (amount != 0) _safeApprove(token, spender, amount);\n    }\n\n    function _safeApprove(address token, address spender, uint256 amount) internal {\n        (bool ok, bytes memory data) = token.call(abi.encodeCall(IERC20BurnVault.approve, (spender, amount)));\n        if (!ok || (data.length != 0 && !abi.decode(data, (bool)))) {\n            revert TokenTransferFailed();\n        }\n    }\n\n    function _safeTransfer(address token, address to, uint256 amount) internal {\n        (bool ok, bytes memory data) = token.call(abi.encodeCall(IERC20BurnVault.transfer, (to, amount)));\n        if (!ok || (data.length != 0 && !abi.decode(data, (bool)))) {\n            revert TokenTransferFailed();\n        }\n    }\n}\n",
+ "deployed_bytecode": "0x608060405234801561000f575f80fd5b50600436106100e5575f3560e01c80638da5cb5b11610088578063d26cb81a11610063578063d26cb81a1461020d578063f2fde38b14610220578063faa0a26414610233578063fccc28131461025a575f80fd5b80638da5cb5b146101d4578063c34c08e5146101e6578063ceebf7ce146101f9575f80fd5b80633fc8cef3116100c35780633fc8cef31461014157806341c82d8e146101685780635c975abb146101895780637f5a7c7b146101ad575f80fd5b806303eadcfc146100e957806316c38b3c146101195780631c3c0ea81461012e575b5f80fd5b6002546100fc906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61012c610127366004610a9a565b610263565b005b61012c61013c366004610abc565b6102e5565b6100fc7f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad7381565b61017b610176366004610ae2565b61037f565b604051908152602001610110565b60025461019d90600160a81b900460ff1681565b6040519015158152602001610110565b6100fc7f00000000000000000000000062e200cc8e4d95cf622f40dd70f407c883ecb0cc81565b5f546100fc906001600160a01b031681565b6001546100fc906001600160a01b031681565b60025461019d90600160a01b900460ff1681565b61012c61021b366004610abc565b6107e9565b61012c61022e366004610abc565b6108b4565b6100fc7f000000000000000000000000e934e36a439c94017b64a3fece66af12099abf5081565b6100fc61dead81565b5f546001600160a01b0316331461028d576040516330cd747160e01b815260040160405180910390fd5b60028054821515600160a81b0260ff60a81b199091161790556040517f0e2fb031ee032dc02d8011dc50b816eb450cf856abd8261680dac74f72165bd2906102da90831515815260200190565b60405180910390a150565b5f546001600160a01b0316331461030f576040516330cd747160e01b815260040160405180910390fd5b6001600160a01b0381166103365760405163d92e233d60e01b815260040160405180910390fd5b600180546001600160a01b0319166001600160a01b0383169081179091556040517f3e3c5e6d5b512eaa5d5a80669846cfbaf8bde70fc6f7a3be9828cffc9ba5f1db905f90a250565b6001545f906001600160a01b031633146103ac576040516361968ebb60e11b815260040160405180910390fd5b6003546001146103cf5760405163558a1e0360e11b815260040160405180910390fd5b6002600381905554600160a01b900460ff166103fe5760405163c1f31ec960e01b815260040160405180910390fd5b600254600160a81b900460ff16156104295760405163d4bd01c560e01b815260040160405180910390fd5b8142111561044a57604051631ab7da6b60e01b815260040160405180910390fd5b831580610455575082155b156104735760405163162908e360e11b815260040160405180910390fd5b6040516378c1230960e01b8152600481018590527f00000000000000000000000062e200cc8e4d95cf622f40dd70f407c883ecb0cc6001600160a01b0316906378c12309906024015f604051808303815f87803b1580156104d2575f80fd5b505af11580156104e4573d5f803e3d5ffd5b50506040516370a0823160e01b81523060048201525f92507f000000000000000000000000e934e36a439c94017b64a3fece66af12099abf506001600160a01b031691506370a0823190602401602060405180830381865afa15801561054c573d5f803e3d5ffd5b505050506040513d601f19601f820116820180604052508101906105709190610b0b565b6002549091506105ab907f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73906001600160a01b031687610926565b60025460405163e20c448d60e01b81526001600160a01b037f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73811660048301527f000000000000000000000000e934e36a439c94017b64a3fece66af12099abf5081166024830152604482018890526064820187905230608483015260a482018690525f92169063e20c448d9060c4016020604051808303815f875af1158015610657573d5f803e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061067b9190610b0b565b6002549091506106b6907f0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73906001600160a01b03165f610926565b6040516370a0823160e01b815230600482015282907f000000000000000000000000e934e36a439c94017b64a3fece66af12099abf506001600160a01b0316906370a0823190602401602060405180830381865afa15801561071a573d5f803e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061073e9190610b0b565b6107489190610b22565b92508483108061075757508481105b1561077557604051638199f5f360e01b815260040160405180910390fd5b6107a27f000000000000000000000000e934e36a439c94017b64a3fece66af12099abf5061dead85610947565b60408051878152602081018590527f3ed8840592dd71298523ecd4452e3d8c3b9db10dd83a219e7b8934eb1dbdc6cd910160405180910390a1505060016003559392505050565b5f546001600160a01b03163314610813576040516330cd747160e01b815260040160405180910390fd5b600254600160a01b900460ff161561083e57604051630108cc4760e61b815260040160405180910390fd5b6001600160a01b0381166108655760405163d92e233d60e01b815260040160405180910390fd5b600280546001600160a81b0319166001600160a01b038316908117600160a01b179091556040517f70a593cc56941202dd38d4315d72f6db926d663e8d3e3c812f3f15789b31fcad905f90a250565b5f546001600160a01b031633146108de576040516330cd747160e01b815260040160405180910390fd5b6001600160a01b0381166109055760405163d92e233d60e01b815260040160405180910390fd5b5f80546001600160a01b0319166001600160a01b0392909216919091179055565b61093183835f610a31565b801561094257610942838383610a31565b505050565b6040516001600160a01b038381166024830152604482018390525f91829186169060640160408051601f198184030181529181526020820180516001600160e01b031663a9059cbb60e01b179052516109a09190610b47565b5f604051808303815f865af19150503d805f81146109d9576040519150601f19603f3d011682016040523d82523d5f602084013e6109de565b606091505b5091509150811580610a0c5750805115801590610a0c575080806020019051810190610a0a9190610b5d565b155b15610a2a5760405163022e258160e11b815260040160405180910390fd5b5050505050565b6040516001600160a01b038381166024830152604482018390525f91829186169060640160408051601f198184030181529181526020820180516001600160e01b031663095ea7b360e01b179052516109a09190610b47565b8015158114610a97575f80fd5b50565b5f60208284031215610aaa575f80fd5b8135610ab581610a8a565b9392505050565b5f60208284031215610acc575f80fd5b81356001600160a01b0381168114610ab5575f80fd5b5f805f60608486031215610af4575f80fd5b505081359360208301359350604090920135919050565b5f60208284031215610b1b575f80fd5b5051919050565b81810381811115610b4157634e487b7160e01b5f52601160045260245ffd5b92915050565b5f82518060208501845e5f920191825250919050565b5f60208284031215610b6d575f80fd5b8151610ab581610a8a56fea264697066735822122031cefeac87d191222df91f644abaaa319c0adc796809c9b01631b45c0a48d43f64736f6c634300081a0033",
+ "optimization_enabled": true,
+ "verified_twin_address_hash": null,
+ "is_verified": true,
+ "github_repository_metadata": null,
+ "compiler_settings": {
+  "evmVersion": "cancun",
+  "libraries": {},
+  "metadata": {
+   "appendCBOR": true,
+   "bytecodeHash": "ipfs",
+   "useLiteralContent": false
+  },
+  "optimizer": {
+   "enabled": true,
+   "runs": 200
+  },
+  "outputSelection": {
+   "*": {
+    "": [
+     "*"
+    ],
+    "*": [
+     "*"
+    ]
+   }
+  },
+  "remappings": [
+   "forge-std/=lib/forge-std/src/",
+   "v4-core/=lib/v4-core/src/",
+   "@ensdomains/=lib/v4-core/node_modules/@ensdomains/",
+   "@openzeppelin/=lib/v4-core/lib/openzeppelin-contracts/",
+   "ds-test/=lib/v4-core/lib/forge-std/lib/ds-test/src/",
+   "erc4626-tests/=lib/v4-core/lib/openzeppelin-contracts/lib/erc4626-tests/",
+   "hardhat/=lib/v4-core/node_modules/hardhat/",
+   "openzeppelin-contracts/=lib/v4-core/lib/openzeppelin-contracts/",
+   "solmate/=lib/v4-core/lib/solmate/"
+  ],
+  "viaIR": false
+ },
+ "optimization_runs": 200,
+ "sourcify_repo_url": null,
+ "decoded_constructor_args": [
+  [
+   "0x62E200Cc8e4D95cf622f40Dd70f407C883EcB0cc",
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   }
+  ],
+  [
+   "0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73",
+   {
+    "internalType": "address",
+    "name": "weth_",
+    "type": "address"
+   }
+  ],
+  [
+   "0xe934e36A439C94017B64a3FecE66AF12099aBF50",
+   {
+    "internalType": "address",
+    "name": "burnToken_",
+    "type": "address"
+   }
+  ],
+  [
+   "0x7171E64E979265aeD6588577D1c6b60A701d7866",
+   {
+    "internalType": "address",
+    "name": "owner_",
+    "type": "address"
+   }
+  ]
+ ],
+ "compiler_version": "v0.8.26+commit.8a97fa7a",
+ "is_verified_via_verifier_alliance": false,
+ "verified_at": "2026-08-13T15:25:48.040288Z",
+ "implementations": [],
+ "proxy_type": null,
+ "external_libraries": [],
+ "creation_bytecode": "0x60e06040526001600355348015610014575f80fd5b50604051610d4e380380610d4e833981016040819052610033916100ed565b6001600160a01b038416158061005057506001600160a01b038316155b8061006257506001600160a01b038216155b8061007457506001600160a01b038116155b156100925760405163d92e233d60e01b815260040160405180910390fd5b6001600160a01b0393841660805291831660a052821660c0525f80546001600160a01b03199081169290931691821790556001805490921617905561013e565b80516001600160a01b03811681146100e8575f80fd5b919050565b5f805f8060808587031215610100575f80fd5b610109856100d2565b9350610117602086016100d2565b9250610125604086016100d2565b9150610133606086016100d2565b905092959194509250565b60805160a05160c051610bae6101a05f395f8181610238015281816104fe015281816105ed015281816106cd015261077a01525f81816101460152818161057c015281816105c5015261068701525f81816101b201526104890152610bae5ff3fe608060405234801561000f575f80fd5b50600436106100e5575f3560e01c80638da5cb5b11610088578063d26cb81a11610063578063d26cb81a1461020d578063f2fde38b14610220578063faa0a26414610233578063fccc28131461025a575f80fd5b80638da5cb5b146101d4578063c34c08e5146101e6578063ceebf7ce146101f9575f80fd5b80633fc8cef3116100c35780633fc8cef31461014157806341c82d8e146101685780635c975abb146101895780637f5a7c7b146101ad575f80fd5b806303eadcfc146100e957806316c38b3c146101195780631c3c0ea81461012e575b5f80fd5b6002546100fc906001600160a01b031681565b6040516001600160a01b0390911681526020015b60405180910390f35b61012c610127366004610a9a565b610263565b005b61012c61013c366004610abc565b6102e5565b6100fc7f000000000000000000000000000000000000000000000000000000000000000081565b61017b610176366004610ae2565b61037f565b604051908152602001610110565b60025461019d90600160a81b900460ff1681565b6040519015158152602001610110565b6100fc7f000000000000000000000000000000000000000000000000000000000000000081565b5f546100fc906001600160a01b031681565b6001546100fc906001600160a01b031681565b60025461019d90600160a01b900460ff1681565b61012c61021b366004610abc565b6107e9565b61012c61022e366004610abc565b6108b4565b6100fc7f000000000000000000000000000000000000000000000000000000000000000081565b6100fc61dead81565b5f546001600160a01b0316331461028d576040516330cd747160e01b815260040160405180910390fd5b60028054821515600160a81b0260ff60a81b199091161790556040517f0e2fb031ee032dc02d8011dc50b816eb450cf856abd8261680dac74f72165bd2906102da90831515815260200190565b60405180910390a150565b5f546001600160a01b0316331461030f576040516330cd747160e01b815260040160405180910390fd5b6001600160a01b0381166103365760405163d92e233d60e01b815260040160405180910390fd5b600180546001600160a01b0319166001600160a01b0383169081179091556040517f3e3c5e6d5b512eaa5d5a80669846cfbaf8bde70fc6f7a3be9828cffc9ba5f1db905f90a250565b6001545f906001600160a01b031633146103ac576040516361968ebb60e11b815260040160405180910390fd5b6003546001146103cf5760405163558a1e0360e11b815260040160405180910390fd5b6002600381905554600160a01b900460ff166103fe5760405163c1f31ec960e01b815260040160405180910390fd5b600254600160a81b900460ff16156104295760405163d4bd01c560e01b815260040160405180910390fd5b8142111561044a57604051631ab7da6b60e01b815260040160405180910390fd5b831580610455575082155b156104735760405163162908e360e11b815260040160405180910390fd5b6040516378c1230960e01b8152600481018590527f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906378c12309906024015f604051808303815f87803b1580156104d2575f80fd5b505af11580156104e4573d5f803e3d5ffd5b50506040516370a0823160e01b81523060048201525f92507f00000000000000000000000000000000000000000000000000000000000000006001600160a01b031691506370a0823190602401602060405180830381865afa15801561054c573d5f803e3d5ffd5b505050506040513d601f19601f820116820180604052508101906105709190610b0b565b6002549091506105ab907f0000000000000000000000000000000000000000000000000000000000000000906001600160a01b031687610926565b60025460405163e20c448d60e01b81526001600160a01b037f0000000000000000000000000000000000000000000000000000000000000000811660048301527f000000000000000000000000000000000000000000000000000000000000000081166024830152604482018890526064820187905230608483015260a482018690525f92169063e20c448d9060c4016020604051808303815f875af1158015610657573d5f803e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061067b9190610b0b565b6002549091506106b6907f0000000000000000000000000000000000000000000000000000000000000000906001600160a01b03165f610926565b6040516370a0823160e01b815230600482015282907f00000000000000000000000000000000000000000000000000000000000000006001600160a01b0316906370a0823190602401602060405180830381865afa15801561071a573d5f803e3d5ffd5b505050506040513d601f19601f8201168201806040525081019061073e9190610b0b565b6107489190610b22565b92508483108061075757508481105b1561077557604051638199f5f360e01b815260040160405180910390fd5b6107a27f000000000000000000000000000000000000000000000000000000000000000061dead85610947565b60408051878152602081018590527f3ed8840592dd71298523ecd4452e3d8c3b9db10dd83a219e7b8934eb1dbdc6cd910160405180910390a1505060016003559392505050565b5f546001600160a01b03163314610813576040516330cd747160e01b815260040160405180910390fd5b600254600160a01b900460ff161561083e57604051630108cc4760e61b815260040160405180910390fd5b6001600160a01b0381166108655760405163d92e233d60e01b815260040160405180910390fd5b600280546001600160a81b0319166001600160a01b038316908117600160a01b179091556040517f70a593cc56941202dd38d4315d72f6db926d663e8d3e3c812f3f15789b31fcad905f90a250565b5f546001600160a01b031633146108de576040516330cd747160e01b815260040160405180910390fd5b6001600160a01b0381166109055760405163d92e233d60e01b815260040160405180910390fd5b5f80546001600160a01b0319166001600160a01b0392909216919091179055565b61093183835f610a31565b801561094257610942838383610a31565b505050565b6040516001600160a01b038381166024830152604482018390525f91829186169060640160408051601f198184030181529181526020820180516001600160e01b031663a9059cbb60e01b179052516109a09190610b47565b5f604051808303815f865af19150503d805f81146109d9576040519150601f19603f3d011682016040523d82523d5f602084013e6109de565b606091505b5091509150811580610a0c5750805115801590610a0c575080806020019051810190610a0a9190610b5d565b155b15610a2a5760405163022e258160e11b815260040160405180910390fd5b5050505050565b6040516001600160a01b038381166024830152604482018390525f91829186169060640160408051601f198184030181529181526020820180516001600160e01b031663095ea7b360e01b179052516109a09190610b47565b8015158114610a97575f80fd5b50565b5f60208284031215610aaa575f80fd5b8135610ab581610a8a565b9392505050565b5f60208284031215610acc575f80fd5b81356001600160a01b0381168114610ab5575f80fd5b5f805f60608486031215610af4575f80fd5b505081359360208301359350604090920135919050565b5f60208284031215610b1b575f80fd5b5051919050565b81810381811115610b4157634e487b7160e01b5f52601160045260245ffd5b92915050565b5f82518060208501845e5f920191825250919050565b5f60208284031215610b6d575f80fd5b8151610ab581610a8a56fea264697066735822122031cefeac87d191222df91f644abaaa319c0adc796809c9b01631b45c0a48d43f64736f6c634300081a003300000000000000000000000062e200cc8e4d95cf622f40dd70f407c883ecb0cc0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000e934e36a439c94017b64a3fece66af12099abf500000000000000000000000007171e64e979265aed6588577d1c6b60a701d7866",
+ "name": "QuotronBurnVault",
+ "is_blueprint": false,
+ "license_type": "none",
+ "is_fully_verified": true,
+ "is_verified_via_eth_bytecode_db": false,
+ "language": "solidity",
+ "evm_version": "cancun",
+ "can_be_visualized_via_sol2uml": true,
+ "is_verified_via_sourcify": false,
+ "additional_sources": [],
+ "certified": false,
+ "conflicting_implementations": null,
+ "abi": [
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "hook_",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "weth_",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "burnToken_",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "owner_",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "constructor"
+  },
+  {
+   "inputs": [],
+   "name": "AlreadySealed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "DeadlineExpired",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "InvalidAmount",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotExecutor",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotOwner",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotSealed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "Paused_",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "Reentrancy",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "SlippageExceeded",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "TokenTransferFailed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "ZeroAddress",
+   "type": "error"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "adapter",
+     "type": "address"
+    }
+   ],
+   "name": "AdapterSealed",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "wethIn",
+     "type": "uint256"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint256",
+     "name": "tokenBurned",
+     "type": "uint256"
+    }
+   ],
+   "name": "BurnExecuted",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "executor",
+     "type": "address"
+    }
+   ],
+   "name": "ExecutorSet",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "bool",
+     "name": "paused",
+     "type": "bool"
+    }
+   ],
+   "name": "Paused",
+   "type": "event"
+  },
+  {
+   "inputs": [],
+   "name": "BURN_ADDRESS",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "adapter",
+   "outputs": [
+    {
+     "internalType": "contract IQuotronBurnAdapter",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "adapterSealed",
+   "outputs": [
+    {
+     "internalType": "bool",
+     "name": "",
+     "type": "bool"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "burnToken",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "uint256",
+     "name": "wethAmount",
+     "type": "uint256"
+    },
+    {
+     "internalType": "uint256",
+     "name": "minBurnTokenOut",
+     "type": "uint256"
+    },
+    {
+     "internalType": "uint256",
+     "name": "deadline",
+     "type": "uint256"
+    }
+   ],
+   "name": "executeBurn",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "burned",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "executor",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "hook",
+   "outputs": [
+    {
+     "internalType": "contract IQuotronBurnPot",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "owner",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "paused",
+   "outputs": [
+    {
+     "internalType": "bool",
+     "name": "",
+     "type": "bool"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "adapter_",
+     "type": "address"
+    }
+   ],
+   "name": "setAndSealAdapter",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "executor_",
+     "type": "address"
+    }
+   ],
+   "name": "setExecutor",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "bool",
+     "name": "paused_",
+     "type": "bool"
+    }
+   ],
+   "name": "setPaused",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "transferOwnership",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "weth",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  }
+ ],
+ "is_changed_bytecode": false,
+ "is_partially_verified": false,
+ "package_name": null,
+ "constructor_args": "0x00000000000000000000000062e200cc8e4d95cf622f40dd70f407c883ecb0cc0000000000000000000000000bd7d308f8e1639fab988df18a8011f41eacad73000000000000000000000000e934e36a439c94017b64a3fece66af12099abf500000000000000000000000007171e64e979265aed6588577d1c6b60a701d7866"
+}

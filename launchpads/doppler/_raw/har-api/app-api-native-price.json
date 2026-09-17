@@ -1,0 +1,7 @@
+{
+  "url": "https://app.doppler.lol/api/native-price?assets=eth",
+  "method": "GET",
+  "postData": null,
+  "status": 200,
+  "responseSample": "{\"eth\":{\"usd\":2386.1}}"
+}

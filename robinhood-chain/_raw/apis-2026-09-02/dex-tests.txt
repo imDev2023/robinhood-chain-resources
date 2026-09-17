@@ -1,0 +1,6 @@
+200 latest/dex/pairs/robinhood/0x52e65B17fB6E5BA00Ed806f37Afcd2DaA50271Ca        0
+200 tokens/v1/robinhood/0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC        0
+200 latest/dex/search?q=NVDA%20robinhood        0
+200 token-pairs/v1/robinhood/0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC        0
+200 token-profiles/latest/v1        0
+200 orders/v1/robinhood/0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC        0

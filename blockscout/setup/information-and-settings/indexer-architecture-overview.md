@@ -1,0 +1,67 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.blockscout.com/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Indexer Architecture Overview
+
+> Overview of Blockscout indexer architecture: realtime and catchup indexers, secondary and on-demand fetchers, and chain-specific integrations.
+
+<Frame caption>
+  <img src="https://mintcdn.com/blockscout/BBa8nQTQ6isU0DUJ/images/aa24fd73-image.jpeg?fit=max&auto=format&n=BBa8nQTQ6isU0DUJ&q=85&s=fd5d8904f61fe065ccd47dc0717cb3c5" alt="" width="1920" height="1080" data-path="images/aa24fd73-image.jpeg" />
+</Frame>
+
+## Presentation Highlights
+
+The following presentation describes the past, present and future iterations of Blockscout along with details about how block imports work both synchronously and asynchronously, and a description of the regular and on-demand fetchers.
+
+<Card title="Blockscout Indexer Architecture Overview.pdf" icon="file-pdf" horizontal={false} href="https://blockscout-icons.s3.us-east-1.amazonaws.com/Blockscout+Indexer+Architecture+Overview.pdf">
+  1MB pdf
+</Card>
+
+## Blockscout indexers
+
+See the pdf ⬆️ for more details about the Blockscout indexer. The indexing architecture includes all of the following indexers and fetchers
+
+### Primary Indexers
+
+Both indexers utilize synchronous and asynchronous operations.
+
+* Realtime: Imports new block data from the head of the chain.
+* Catchup: Imports data down the chain (starting from the head and moving backwards towards the genesis block).
+
+### Secondary fetchers
+
+### Regular
+
+* Internal transactions
+* Pending transactions
+* Dropped/Replaced transactions
+* Contract bytecodes
+* Block rewards
+* Token catalog
+* Token/coin balances
+* NFT instances
+* Uncles
+
+### On Demand
+
+* Coin/token balances update
+* Contract bytecodes fetch/re-check
+* Contract source codes lookup
+* NFT instance metadata re-fetch
+* Token total supply
+
+### Off-chain integrations
+
+* Coin / token price, market cap, tvl sources: CMC, Coingecko, Cryptorank, Defillama
+* Smart contract verification: ETH bytecode DB, Sourcify
+* Data enrichment: ENS names, public tags, AI interpreters (own, Noves Fi), sc security scanners (Solidityscan), assets portfolio (Zerion)
+* Chain initialization data import: pre-mined coins, precompiled smart-contracts
+
+### Chain-specific fetchers
+
+* There are more than a dozen chain-specific data fetchers to account for chain differences including arbitrum, optimism, polygon zkevm, zksync etc.
+
+### Temporary fetchers
+
+* Used once to resolve possible data inconsistencies.

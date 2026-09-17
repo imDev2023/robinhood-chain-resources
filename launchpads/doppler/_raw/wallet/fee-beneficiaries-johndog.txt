@@ -1,0 +1,17 @@
+DopplerHookInitializer 0x4e3468951d49f2eea976ed0d6e75ffcb44a9a544
+asset  JOHNDOG 0x64bcf4aa85559526cff0528bcdc0cb9d3ea41e18
+poolId 0xa9349400def8a8fb8b96763c52870fcadbc8775361dd49e95291486be5141e0a
+creator/fee_receiver 0x9b9849762f9be27d5546117c12ac6d7cf1dfbb38
+
+getBeneficiaries -> 2 beneficiaries
+  0x21e2ce70511e4fe542a97708e89520471daa7a66  shares=50000000000000000  = 5.0000% of WAD
+  0x9b9849762f9be27d5546117c12ac6d7cf1dfbb38  shares=950000000000000000  = 95.0000% of WAD
+
+cumulated fees0 (JOHNDOG)    1295237886989384441245474  = 1295237.886989
+cumulated fees1 (SGOV)       3844610859874262834  = 3.844611
+creator last-claimed fees0   1295237886989384441245474  = 1295237.886989
+creator last-claimed fees1   3844610859874262834  = 3.844611
+
+Claimable = cumulated - lastCumulated, scaled by the beneficiary's share.
+Both deltas are zero here, so this creator has nothing outstanding right now.
+Claim entry point: DopplerHookInitializer.collectFees(bytes32 poolId), nonpayable.

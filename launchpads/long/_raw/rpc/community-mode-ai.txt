@@ -1,0 +1,6 @@
+LongCommunityFactory.isActivated(AI) (True,)
+deployCommunityMode [{"internalType": "address", "name": "asset", "type": "address"}] [{"internalType": "address", "name": "splitter", "type": "address"}, {"internalType": "address", "name": "governor", "type": "address"}, {"internalType": "address payable", "name": "timelock", "type": "address"}]
+getDeployment outputs [{"components": [{"internalType": "address", "name": "splitter", "type": "address"}, {"internalType": "address", "name": "governor", "type": "address"}, {"internalType": "address payable", "name": "timelock", "type": "address"}, {"internalType": "address", "name": "originalReceiver", "type": "address"}, {"internalType": "bytes32", "name": "poolId", "type": "bytes32"}, {"internalType": "uint48", "name": "deployedAt", "type": "uint48"}], "internalType": "struct LongCommunityFactory.CommunityDeployment", "name": "", "type": "tuple"}]
+0x4A0cB7EeF4 code 0xef0100612373d7003d694220f7800eeaf8e3924c0951d3 48
+0x79aEaE6a47 code 0xef0100e8b12077f4f9c3e1b239a62f283fe4ef6ec9c449 48
+0x35d217B10F code 0x 2
