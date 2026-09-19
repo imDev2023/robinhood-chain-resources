@@ -1,0 +1,1019 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "initialOwner",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_positionManager",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_voter",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_lockNft",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_protocolFeeRecipient",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "BadPositionSender",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "GaugeDepositFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "GaugeNotAlive",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "GaugeReturnFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidLockWindow",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidMode",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LiquidityExceedsUnlocked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoGauge",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotClosed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotLockOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PositionAlreadyLocked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PositionNotStaked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PositionStaked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ProtocolRecipientZero",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ReentrancyGuardReentrantCall",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "bits",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "value",
+    "type": "uint256"
+   }
+  ],
+  "name": "SafeCastOverflowedUintDowncast",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnknownLock",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnknownPool",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroLiquidity",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "wallet",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "exempt",
+    "type": "bool"
+   }
+  ],
+  "name": "FeeExemptUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "userAmount0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "userAmount1",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "protocolAmount0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "protocolAmount1",
+    "type": "uint256"
+   }
+  ],
+  "name": "LockFeesCollected",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint128",
+    "name": "liquidity",
+    "type": "uint128"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "userAmount0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "userAmount1",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "protocolAmount0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "protocolAmount1",
+    "type": "uint256"
+   }
+  ],
+  "name": "LockLiquidityDecreased",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "userAmount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "protocolAmount",
+    "type": "uint256"
+   }
+  ],
+  "name": "LockTokensPaid",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "startUnlock",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "finishUnlock",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "enum IStonkUpLocker.FeeMode",
+    "name": "feeMode",
+    "type": "uint8"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint128",
+    "name": "initialLiquidity",
+    "type": "uint128"
+   }
+  ],
+  "name": "PositionLocked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "PositionReleased",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "gauge",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "PositionStakedInGauge",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "gauge",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "PositionUnstakedFromGauge",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldRecipient",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newRecipient",
+    "type": "address"
+   }
+  ],
+  "name": "ProtocolFeeRecipientUpdated",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "canRelease",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "clFactory",
+  "outputs": [
+   {
+    "internalType": "contract IUpCLFactory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "claimEmissions",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint128",
+    "name": "amount0Max",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "amount1Max",
+    "type": "uint128"
+   }
+  ],
+  "name": "collectFees",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "userAmount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "userAmount1",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "protocolAmount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "protocolAmount1",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint128",
+    "name": "liquidity",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount0Min",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount1Min",
+    "type": "uint256"
+   }
+  ],
+  "name": "decreaseLockedLiquidity",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "userAmount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "userAmount1",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "protocolAmount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "protocolAmount1",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "feeExempt",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "gaugeFor",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "isStaked",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint64",
+    "name": "startUnlock",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "finishUnlock",
+    "type": "uint64"
+   },
+   {
+    "internalType": "enum IStonkUpLocker.FeeMode",
+    "name": "feeMode",
+    "type": "uint8"
+   }
+  ],
+  "name": "lockByTransfer",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lockNft",
+  "outputs": [
+   {
+    "internalType": "contract StonkLockerOwnershipNFT",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "lockPositions",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "positionTokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "token0",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "token1",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint128",
+    "name": "initialLiquidity",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint128",
+    "name": "withdrawnLiquidity",
+    "type": "uint128"
+   },
+   {
+    "internalType": "uint64",
+    "name": "startUnlock",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "finishUnlock",
+    "type": "uint64"
+   },
+   {
+    "internalType": "enum IStonkUpLocker.FeeMode",
+    "name": "feeMode",
+    "type": "uint8"
+   },
+   {
+    "internalType": "bool",
+    "name": "closed",
+    "type": "bool"
+   },
+   {
+    "internalType": "address",
+    "name": "gauge",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "from",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "tokenId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "onERC721Received",
+  "outputs": [
+   {
+    "internalType": "bytes4",
+    "name": "",
+    "type": "bytes4"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "pendingEmissions",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract IUpNonfungiblePositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "positionToLockTokenId",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "protocolFeeRecipient",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "releasePosition",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "wallet",
+    "type": "address"
+   },
+   {
+    "internalType": "bool",
+    "name": "exempt",
+    "type": "bool"
+   }
+  ],
+  "name": "setFeeExempt",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newRecipient",
+    "type": "address"
+   }
+  ],
+  "name": "setProtocolFeeRecipient",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "stake",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "gauge",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "unstake",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "voter",
+  "outputs": [
+   {
+    "internalType": "contract IUpVoter",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lockTokenId",
+    "type": "uint256"
+   }
+  ],
+  "name": "withdrawableLiquidity",
+  "outputs": [
+   {
+    "internalType": "uint128",
+    "name": "",
+    "type": "uint128"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

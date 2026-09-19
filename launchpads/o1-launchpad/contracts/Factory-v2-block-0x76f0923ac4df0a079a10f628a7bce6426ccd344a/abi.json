@@ -1,0 +1,1119 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "_poolManager",
+    "type": "address"
+   },
+   {
+    "internalType": "contract LaunchHook",
+    "name": "_hook",
+    "type": "address"
+   },
+   {
+    "internalType": "contract LaunchTokenDeployer",
+    "name": "_tokenDeployer",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "launchSupply",
+      "type": "uint256"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint16",
+        "name": "baseFeeBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint16",
+        "name": "creatorBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint16",
+        "name": "platformBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint16",
+        "name": "referrerBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint16",
+        "name": "antiSnipeStartTotalBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint32",
+        "name": "antiSnipeWindowBlocks",
+        "type": "uint32"
+       },
+       {
+        "internalType": "address",
+        "name": "platformTreasury",
+        "type": "address"
+       }
+      ],
+      "internalType": "struct LaunchpadFactoryCore.FeeDefaults",
+      "name": "feeDefaults",
+      "type": "tuple"
+     },
+     {
+      "components": [
+       {
+        "internalType": "int24",
+        "name": "lowerOffset",
+        "type": "int24"
+       },
+       {
+        "internalType": "int24",
+        "name": "upperOffset",
+        "type": "int24"
+       },
+       {
+        "internalType": "uint16",
+        "name": "bps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct LaunchpadFactoryCore.Band[]",
+      "name": "bandTemplate",
+      "type": "tuple[]"
+     }
+    ],
+    "internalType": "struct LaunchpadFactoryCore.InitConfig",
+    "name": "cfg",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "EmptyName",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidConfig",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "deadline",
+    "type": "uint64"
+   }
+  ],
+  "name": "LaunchExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   }
+  ],
+  "name": "LaunchSaltUsed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MisalignedOffset",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotImmutable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OutOfBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteAlreadyRegistered",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteNotRegistered",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint64",
+    "name": "expectedVersion",
+    "type": "uint64"
+   },
+   {
+    "internalType": "uint64",
+    "name": "actualVersion",
+    "type": "uint64"
+   }
+  ],
+  "name": "StaleConfig",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "VestingVaultAlreadySet",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "registry",
+    "type": "address"
+   }
+  ],
+  "name": "AnnouncementRegistryUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "bands",
+    "type": "uint256"
+   }
+  ],
+  "name": "BandTemplateUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "version",
+    "type": "uint64"
+   }
+  ],
+  "name": "ConfigVersionUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "platformTreasury",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint16",
+    "name": "baseFeeBps",
+    "type": "uint16"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint16",
+    "name": "antiSnipeStartTotalBps",
+    "type": "uint16"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "antiSnipeWindowBlocks",
+    "type": "uint32"
+   }
+  ],
+  "name": "FeeDefaultsUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldSupply",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newSupply",
+    "type": "uint256"
+   }
+  ],
+  "name": "LaunchSupplyUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "supply",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "tickSpacing",
+    "type": "int24"
+   }
+  ],
+  "name": "Launched",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "decimals",
+    "type": "uint8"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "startTickToken0Frame",
+    "type": "int24"
+   }
+  ],
+  "name": "QuoteRegistered",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "QuoteUnregistered",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "oldSpacing",
+    "type": "int24"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "newSpacing",
+    "type": "int24"
+   }
+  ],
+  "name": "TickSpacingUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "name": "VestingVaultUpdated",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_ALLOCATIONS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_TOTAL_VEST_STEPS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_VESTED_ALLOCATIONS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_VEST_STEPS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_VESTING_DURATION",
+  "outputs": [
+   {
+    "internalType": "uint32",
+    "name": "",
+    "type": "uint32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "announcementRegistry",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "bands",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "int24",
+      "name": "lowerOffset",
+      "type": "int24"
+     },
+     {
+      "internalType": "int24",
+      "name": "upperOffset",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint16",
+      "name": "bps",
+      "type": "uint16"
+     }
+    ],
+    "internalType": "struct LaunchpadFactoryCore.Band[]",
+    "name": "",
+    "type": "tuple[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "configVersion",
+  "outputs": [
+   {
+    "internalType": "uint64",
+    "name": "",
+    "type": "uint64"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "contractURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "salt",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "quote",
+      "type": "address"
+     },
+     {
+      "internalType": "address[]",
+      "name": "allocationRecipients",
+      "type": "address[]"
+     },
+     {
+      "internalType": "uint256[]",
+      "name": "allocationAmounts",
+      "type": "uint256[]"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "beneficiary",
+        "type": "address"
+       },
+       {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+       },
+       {
+        "components": [
+         {
+          "internalType": "uint32",
+          "name": "delay",
+          "type": "uint32"
+         },
+         {
+          "internalType": "uint16",
+          "name": "cumulativeBps",
+          "type": "uint16"
+         }
+        ],
+        "internalType": "struct LaunchpadFactoryCore.VestStep[]",
+        "name": "steps",
+        "type": "tuple[]"
+       }
+      ],
+      "internalType": "struct LaunchpadFactoryCore.VestAllocation[]",
+      "name": "vestedAllocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "uint64",
+      "name": "expectedConfigVersion",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "deadline",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint8",
+      "name": "roleMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "string[]",
+      "name": "metadataKeys",
+      "type": "string[]"
+     },
+     {
+      "internalType": "string[]",
+      "name": "metadataValues",
+      "type": "string[]"
+     }
+    ],
+    "internalType": "struct LaunchpadFactoryCore.LaunchParams",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "createLaunch",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "PoolId",
+    "name": "poolId",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "feeDefaults",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "baseFeeBps",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "creatorBps",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "platformBps",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "referrerBps",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint16",
+    "name": "antiSnipeStartTotalBps",
+    "type": "uint16"
+   },
+   {
+    "internalType": "uint32",
+    "name": "antiSnipeWindowBlocks",
+    "type": "uint32"
+   },
+   {
+    "internalType": "address",
+    "name": "platformTreasury",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "hook",
+  "outputs": [
+   {
+    "internalType": "contract LaunchHook",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchSupply",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingOwner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "quotes",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "registered",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint8",
+    "name": "decimals",
+    "type": "uint8"
+   },
+   {
+    "internalType": "int24",
+    "name": "startTickToken0Frame",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "startTickToken0Frame",
+    "type": "int24"
+   }
+  ],
+  "name": "registerQuote",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "registry",
+    "type": "address"
+   }
+  ],
+  "name": "setAnnouncementRegistry",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "int24",
+      "name": "lowerOffset",
+      "type": "int24"
+     },
+     {
+      "internalType": "int24",
+      "name": "upperOffset",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint16",
+      "name": "bps",
+      "type": "uint16"
+     }
+    ],
+    "internalType": "struct LaunchpadFactoryCore.Band[]",
+    "name": "newBands",
+    "type": "tuple[]"
+   }
+  ],
+  "name": "setBandTemplate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint16",
+      "name": "baseFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "creatorBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "platformBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "referrerBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "antiSnipeStartTotalBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint32",
+      "name": "antiSnipeWindowBlocks",
+      "type": "uint32"
+     },
+     {
+      "internalType": "address",
+      "name": "platformTreasury",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct LaunchpadFactoryCore.FeeDefaults",
+    "name": "f",
+    "type": "tuple"
+   }
+  ],
+  "name": "setFeeDefaults",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "supply",
+    "type": "uint256"
+   }
+  ],
+  "name": "setLaunchSupply",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "startTickToken0Frame",
+    "type": "int24"
+   }
+  ],
+  "name": "setQuoteStartTick",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int24",
+    "name": "spacing",
+    "type": "int24"
+   }
+  ],
+  "name": "setTickSpacing",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "name": "setVestingVault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "tickSpacing",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "tokenDeployer",
+  "outputs": [
+   {
+    "internalType": "contract LaunchTokenDeployer",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   }
+  ],
+  "name": "unregisterQuote",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "usedLaunchSalts",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "vestingVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ }
+]

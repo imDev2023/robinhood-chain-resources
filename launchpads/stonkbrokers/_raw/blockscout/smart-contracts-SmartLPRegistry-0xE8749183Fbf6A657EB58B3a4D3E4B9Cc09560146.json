@@ -1,0 +1,277 @@
+{
+ "file_path": "contracts/smart-lp/SmartLpRegistry.sol",
+ "creation_status": "success",
+ "source_code": "// SPDX-License-Identifier: BUSL-1.1\npragma solidity ^0.8.24;\n\n/// @title Safety Deposit Box - Smart LP registry\n/// @notice Tiny on-chain index of official Smart LP vaults. Vaults are deployed\n///         directly (script `new SmartLpVault`) rather than through an on-chain\n///         factory: inlining the vault creation code in a factory is the EIP-170\n///         trap the launcher hit, and a deployer indirection buys nothing for an\n///         owner-curated lineup. The registry is the ONLY discovery surface the\n///         UI trusts; listing here is an explicit curation act.\ncontract SmartLpRegistry {\n    error NotOwner();\n    error AlreadyListed();\n    error NotListed();\n    error BadParams();\n\n    event VaultListed(address indexed vault, address indexed pool, uint8 mode);\n    event VaultDelisted(address indexed vault);\n    event OwnerSet(address owner);\n\n    address public owner;\n    address[] public vaults;\n    mapping(address => bool) public isListed;\n\n    modifier onlyOwner() {\n        if (msg.sender != owner) revert NotOwner();\n        _;\n    }\n\n    constructor(address _owner) {\n        if (_owner == address(0)) revert BadParams();\n        owner = _owner;\n    }\n\n    function list(address vault, address pool, uint8 mode) external onlyOwner {\n        if (vault == address(0)) revert BadParams();\n        if (isListed[vault]) revert AlreadyListed();\n        isListed[vault] = true;\n        vaults.push(vault);\n        emit VaultListed(vault, pool, mode);\n    }\n\n    /// @notice Delisting only removes the vault from the UI surface; the vault\n    ///         itself is immutable and withdrawals keep working forever.\n    function delist(address vault) external onlyOwner {\n        if (!isListed[vault]) revert NotListed();\n        isListed[vault] = false;\n        uint256 n = vaults.length;\n        for (uint256 i = 0; i < n; i++) {\n            if (vaults[i] == vault) {\n                vaults[i] = vaults[n - 1];\n                vaults.pop();\n                break;\n            }\n        }\n        emit VaultDelisted(vault);\n    }\n\n    function setOwner(address newOwner) external onlyOwner {\n        if (newOwner == address(0)) revert BadParams();\n        owner = newOwner;\n        emit OwnerSet(newOwner);\n    }\n\n    function count() external view returns (uint256) {\n        return vaults.length;\n    }\n\n    function all() external view returns (address[] memory) {\n        return vaults;\n    }\n}\n",
+ "deployed_bytecode": "0x6080604090808252600480361015610015575f80fd5b5f3560e01c91826306661abd146105025750816310c4e8b01461042457816313af4035146103a15781636b2cc75c146102505781638c64ea4a146102105781638da5cb5b146101e95781639a3d2e44146100b7575063f794062e14610078575f80fd5b346100b35760203660031901126100b3576020906001600160a01b0361009c61051c565b165f526002825260ff815f20541690519015158152f35b5f80fd5b9050346100b35760603660031901126100b3576100d261051c565b6001600160a01b03602435818116949192908590036100b3576044359260ff84168094036100b357805f541633036101d95781169384156101cb57845f52600260205260ff835f2054166101bd57845f526002602052825f20600160ff1982541617905560015490680100000000000000008210156101aa5750916101a37f3dd1a36f073a1702b0ea7db13a70123c0e21753a1571eaf80acacea471618152949261018585600160209701600155610532565b90919060018060a01b038084549260031b9316831b921b1916179055565b51908152a3005b604190634e487b7160e01b5f525260245ffd5b82516328f560bb60e21b8152fd5b825163019af63760e01b8152fd5b82516330cd747160e01b81528590fd5b82346100b3575f3660031901126100b3575f5490516001600160a01b039091168152602090f35b9050346100b35760203660031901126100b35735906001548210156100b35761023a602092610532565b905491519160018060a01b039160031b1c168152f35b82346100b35760203660031901126100b35761026a61051c565b5f546001600160a01b0391908216330361039257811691825f52600260205260ff815f2054161561038357825f5260026020525f2060ff198154169055600190600154905f5b8281106102df575b847f1e50537a8984b347abcf90ec072a917d874c1737aaca4e13ae66aa499977aab15f80a2005b81856102ea83610532565b929054600393841b1c1614610301575083016102b0565b949591925f1992919083810190811161037057906101858561032561033294610532565b9054908a1b1c1691610532565b835490811561035d5750019261034784610532565b81939154921b1b191690555580828080806102b8565b603190634e487b7160e01b5f525260245ffd5b601183634e487b7160e01b5f525260245ffd5b5163665c1c5760e01b81528390fd5b5050516330cd747160e01b8152fd5b82346100b35760203660031901126100b3576103bb61051c565b5f54906001600160a01b0390818316330361041457169283156101cb576001600160a01b0319821684175f5582518481527f50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe290602090a1005b505050516330cd747160e01b8152fd5b9050346100b3575f3660031901126100b3578151918260019360015492838252602080809301809560015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf690895f5b8281106104e45750505050849003601f01601f1916840195905067ffffffffffffffff8611848710176101aa5750848152818552915184820181905291840192849286925f5b8281106104c85785870386f35b83516001600160a01b03168752958101959281019284016104bb565b83546001600160a01b03168552879590940193928101928101610475565b346100b3575f3660031901126100b3576020906001548152f35b600435906001600160a01b03821682036100b357565b6001548110156105675760015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601905f90565b634e487b7160e01b5f52603260045260245ffdfea2646970667358221220057e0269b872913064e554a53ce2bda96d337778c66134870543cc3ed4c5a30364736f6c63430008180033",
+ "optimization_enabled": true,
+ "verified_twin_address_hash": null,
+ "is_verified": true,
+ "github_repository_metadata": null,
+ "compiler_settings": {
+  "evmVersion": "cancun",
+  "libraries": {},
+  "metadata": {
+   "appendCBOR": true,
+   "bytecodeHash": "ipfs",
+   "useLiteralContent": false
+  },
+  "optimizer": {
+   "enabled": true,
+   "runs": 200
+  },
+  "remappings": [
+   "forge-std/=lib/forge-std/src/",
+   "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+   "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+   "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+   "halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/",
+   "openzeppelin-contracts/=lib/openzeppelin-contracts/"
+  ],
+  "viaIR": true
+ },
+ "optimization_runs": 200,
+ "sourcify_repo_url": null,
+ "decoded_constructor_args": [
+  [
+   "0xb668382cF44038a3E8140E789060F6A809787CDa",
+   {
+    "internalType": "address",
+    "name": "_owner",
+    "type": "address"
+   }
+  ]
+ ],
+ "compiler_version": "0.8.24+commit.e11b9ed9",
+ "is_verified_via_verifier_alliance": true,
+ "verified_at": "2026-09-08T21:37:16.705425Z",
+ "implementations": [],
+ "proxy_type": null,
+ "external_libraries": [],
+ "creation_bytecode": "0x60803461008b57601f61065538819003918201601f19168301916001600160401b0383118484101761008f5780849260209460405283398101031261008b57516001600160a01b0381169081900361008b578015610079575f80546001600160a01b0319169190911790556040516105b190816100a48239f35b60405163019af63760e01b8152600490fd5b5f80fd5b634e487b7160e01b5f52604160045260245ffdfe6080604090808252600480361015610015575f80fd5b5f3560e01c91826306661abd146105025750816310c4e8b01461042457816313af4035146103a15781636b2cc75c146102505781638c64ea4a146102105781638da5cb5b146101e95781639a3d2e44146100b7575063f794062e14610078575f80fd5b346100b35760203660031901126100b3576020906001600160a01b0361009c61051c565b165f526002825260ff815f20541690519015158152f35b5f80fd5b9050346100b35760603660031901126100b3576100d261051c565b6001600160a01b03602435818116949192908590036100b3576044359260ff84168094036100b357805f541633036101d95781169384156101cb57845f52600260205260ff835f2054166101bd57845f526002602052825f20600160ff1982541617905560015490680100000000000000008210156101aa5750916101a37f3dd1a36f073a1702b0ea7db13a70123c0e21753a1571eaf80acacea471618152949261018585600160209701600155610532565b90919060018060a01b038084549260031b9316831b921b1916179055565b51908152a3005b604190634e487b7160e01b5f525260245ffd5b82516328f560bb60e21b8152fd5b825163019af63760e01b8152fd5b82516330cd747160e01b81528590fd5b82346100b3575f3660031901126100b3575f5490516001600160a01b039091168152602090f35b9050346100b35760203660031901126100b35735906001548210156100b35761023a602092610532565b905491519160018060a01b039160031b1c168152f35b82346100b35760203660031901126100b35761026a61051c565b5f546001600160a01b0391908216330361039257811691825f52600260205260ff815f2054161561038357825f5260026020525f2060ff198154169055600190600154905f5b8281106102df575b847f1e50537a8984b347abcf90ec072a917d874c1737aaca4e13ae66aa499977aab15f80a2005b81856102ea83610532565b929054600393841b1c1614610301575083016102b0565b949591925f1992919083810190811161037057906101858561032561033294610532565b9054908a1b1c1691610532565b835490811561035d5750019261034784610532565b81939154921b1b191690555580828080806102b8565b603190634e487b7160e01b5f525260245ffd5b601183634e487b7160e01b5f525260245ffd5b5163665c1c5760e01b81528390fd5b5050516330cd747160e01b8152fd5b82346100b35760203660031901126100b3576103bb61051c565b5f54906001600160a01b0390818316330361041457169283156101cb576001600160a01b0319821684175f5582518481527f50146d0e3c60aa1d17a70635b05494f864e86144a2201275021014fbf08bafe290602090a1005b505050516330cd747160e01b8152fd5b9050346100b3575f3660031901126100b3578151918260019360015492838252602080809301809560015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf690895f5b8281106104e45750505050849003601f01601f1916840195905067ffffffffffffffff8611848710176101aa5750848152818552915184820181905291840192849286925f5b8281106104c85785870386f35b83516001600160a01b03168752958101959281019284016104bb565b83546001600160a01b03168552879590940193928101928101610475565b346100b3575f3660031901126100b3576020906001548152f35b600435906001600160a01b03821682036100b357565b6001548110156105675760015f527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601905f90565b634e487b7160e01b5f52603260045260245ffdfea2646970667358221220057e0269b872913064e554a53ce2bda96d337778c66134870543cc3ed4c5a30364736f6c63430008180033000000000000000000000000b668382cf44038a3e8140e789060f6a809787cda",
+ "name": "SmartLpRegistry",
+ "is_blueprint": false,
+ "license_type": "none",
+ "is_fully_verified": false,
+ "is_verified_via_eth_bytecode_db": true,
+ "language": "solidity",
+ "evm_version": "cancun",
+ "can_be_visualized_via_sol2uml": true,
+ "is_verified_via_sourcify": false,
+ "additional_sources": [],
+ "certified": false,
+ "conflicting_implementations": null,
+ "abi": [
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "_owner",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "nonpayable",
+   "type": "constructor"
+  },
+  {
+   "inputs": [],
+   "name": "AlreadyListed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "BadParams",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotListed",
+   "type": "error"
+  },
+  {
+   "inputs": [],
+   "name": "NotOwner",
+   "type": "error"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": false,
+     "internalType": "address",
+     "name": "owner",
+     "type": "address"
+    }
+   ],
+   "name": "OwnerSet",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "vault",
+     "type": "address"
+    }
+   ],
+   "name": "VaultDelisted",
+   "type": "event"
+  },
+  {
+   "anonymous": false,
+   "inputs": [
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "vault",
+     "type": "address"
+    },
+    {
+     "indexed": true,
+     "internalType": "address",
+     "name": "pool",
+     "type": "address"
+    },
+    {
+     "indexed": false,
+     "internalType": "uint8",
+     "name": "mode",
+     "type": "uint8"
+    }
+   ],
+   "name": "VaultListed",
+   "type": "event"
+  },
+  {
+   "inputs": [],
+   "name": "all",
+   "outputs": [
+    {
+     "internalType": "address[]",
+     "name": "",
+     "type": "address[]"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "count",
+   "outputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "vault",
+     "type": "address"
+    }
+   ],
+   "name": "delist",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "name": "isListed",
+   "outputs": [
+    {
+     "internalType": "bool",
+     "name": "",
+     "type": "bool"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "vault",
+     "type": "address"
+    },
+    {
+     "internalType": "address",
+     "name": "pool",
+     "type": "address"
+    },
+    {
+     "internalType": "uint8",
+     "name": "mode",
+     "type": "uint8"
+    }
+   ],
+   "name": "list",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [],
+   "name": "owner",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "address",
+     "name": "newOwner",
+     "type": "address"
+    }
+   ],
+   "name": "setOwner",
+   "outputs": [],
+   "stateMutability": "nonpayable",
+   "type": "function"
+  },
+  {
+   "inputs": [
+    {
+     "internalType": "uint256",
+     "name": "",
+     "type": "uint256"
+    }
+   ],
+   "name": "vaults",
+   "outputs": [
+    {
+     "internalType": "address",
+     "name": "",
+     "type": "address"
+    }
+   ],
+   "stateMutability": "view",
+   "type": "function"
+  }
+ ],
+ "is_changed_bytecode": false,
+ "is_partially_verified": true,
+ "package_name": null,
+ "constructor_args": "0x000000000000000000000000b668382cf44038a3e8140e789060f6a809787cda"
+}

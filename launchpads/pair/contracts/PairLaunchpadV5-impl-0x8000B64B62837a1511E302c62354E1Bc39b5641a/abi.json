@@ -1,0 +1,3419 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "legacyLaunchHelper_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "target",
+    "type": "address"
+   }
+  ],
+  "name": "AddressEmptyCode",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AlreadyGraduated",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "BelowGraduationTarget",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DeadlineExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DuplicatePair",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "implementation",
+    "type": "address"
+   }
+  ],
+  "name": "ERC1967InvalidImplementation",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ERC1967NonPayable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "EconomicsOutOfRange",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "FailedCall",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "FeeTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ImmutableFeeSharingLaunch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "IncorrectLaunchFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAddress",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDecimals",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDeveloperBuy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidInitialization",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidLaunchV2",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidLaunchV2Mode",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidLaunchV2Vault",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidOracle",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidPairCount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidWeight",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LaunchV2AlreadyConfigured",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LaunchV2CommunityTakeoverIneligible",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LaunchV2Disabled",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LegacyHelperCallFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LegacyHelperOnlyProxy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotInitializing",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotLaunched",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlyOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PriceOutOfRange",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PriceRangeTooNarrow",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ReentrancyGuardReentrantCall",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "StaleOracle",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "StockTokenDisabled",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UUPSUnauthorizedCallContext",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "slot",
+    "type": "bytes32"
+   }
+  ],
+  "name": "UUPSUnsupportedProxiableUUID",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WeightsNotOneHundredPercent",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAge",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousRegistry",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newRegistry",
+    "type": "address"
+   }
+  ],
+  "name": "ActiveLaunchV2ModeRegistryInstalled",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "CustomQuoteLaunchV2CapabilitySet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "priceSigner",
+    "type": "address"
+   }
+  ],
+  "name": "CustomQuoteLaunchV2Configured",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousCoordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "initializer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "priceSigner",
+    "type": "address"
+   }
+  ],
+  "name": "CustomQuoteLaunchV2DependenciesRotated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "quoteToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "projectAmountOut",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "quoteAmountIn",
+    "type": "uint256"
+   }
+  ],
+  "name": "InitialDeveloperBuy",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "version",
+    "type": "uint64"
+   }
+  ],
+  "name": "Initialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "principalUsdE8",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "targetUsdE8",
+    "type": "uint256"
+   }
+  ],
+  "name": "LaunchGraduated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "activator",
+    "type": "address"
+   }
+  ],
+  "name": "LaunchV2ActivatorConfigured",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "LaunchV2CapabilitySet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousCreator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newCreator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "previousEpoch",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "newEpoch",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "previousMode",
+    "type": "uint8"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "newMode",
+    "type": "uint8"
+   }
+  ],
+  "name": "LaunchV2CommunityTakeover",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "buybackExecutor",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "aggregator",
+    "type": "address"
+   }
+  ],
+  "name": "LaunchV2Configured",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "userSalt",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "pairCount",
+    "type": "uint256"
+   }
+  ],
+  "name": "LaunchV2Created",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "userSalt",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "pairCount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "epoch1Mode",
+    "type": "uint8"
+   }
+  ],
+  "name": "LaunchV2CreatedWithMode",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "buybackExecutor",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "aggregator",
+    "type": "address"
+   }
+  ],
+  "name": "LaunchV2DependenciesRotated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "LaunchV2FeeSharingCapabilitySet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "aggregator",
+    "type": "address"
+   }
+  ],
+  "name": "LaunchV2FeeSharingConfigured",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "userSalt",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "pairCount",
+    "type": "uint256"
+   }
+  ],
+  "name": "LaunchV2FeeSharingCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "coordinator",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenFactory",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "hook",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "aggregator",
+    "type": "address"
+   }
+  ],
+  "name": "LaunchV2FeeSharingDependenciesRotated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint64",
+    "name": "epoch",
+    "type": "uint64"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "mode",
+    "type": "uint8"
+   }
+  ],
+  "name": "LaunchV2ModeTransitioned",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "pairCount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalSupply",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "graduationTargetUsdE8",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "metadataURI",
+    "type": "string"
+   }
+  ],
+  "name": "MultiPairLaunchCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "quoteToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "positionId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint16",
+    "name": "weightBps",
+    "type": "uint16"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "projectTokenAmount",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "tickLower",
+    "type": "int24"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "tickUpper",
+    "type": "int24"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint160",
+    "name": "initialSqrtPriceX96",
+    "type": "uint160"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "quoteUsdAtLaunchE8",
+    "type": "uint256"
+   }
+  ],
+  "name": "PairPoolCreated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "RoundingDustPermanentlyLocked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "implementation",
+    "type": "address"
+   }
+  ],
+  "name": "Upgraded",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "BPS_DENOMINATOR",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ETH_GRAD_TARGET_WEI",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_DEV_BUY_BPS",
+  "outputs": [
+   {
+    "internalType": "uint16",
+    "name": "",
+    "type": "uint16"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_PAIRS",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_USABLE_TICK",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_USABLE_TICK",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "POOL_FEE",
+  "outputs": [
+   {
+    "internalType": "uint24",
+    "name": "",
+    "type": "uint24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "SQRT_10_X18",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TICK_SPACING",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TOTAL_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "UPGRADE_INTERFACE_VERSION",
+  "outputs": [
+   {
+    "internalType": "string",
+    "name": "",
+    "type": "string"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "activeLaunchV2ModeRegistry",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "quoteToken",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "quoteDecimals",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "quoteUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "projectFloorE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "projectCeilingE8",
+    "type": "uint256"
+   }
+  ],
+  "name": "calculateV4LaunchRange",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "lower",
+    "type": "int24"
+   },
+   {
+    "internalType": "int24",
+    "name": "upper",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint160",
+    "name": "initialSqrtPriceX96",
+    "type": "uint160"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "newCreator",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "newMode",
+    "type": "uint8"
+   }
+  ],
+  "name": "communityTakeoverLaunchV2",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "newCreator",
+    "type": "address"
+   }
+  ],
+  "name": "communityTakeoverLaunchV2",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "initializer_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "priceSigner_",
+    "type": "address"
+   }
+  ],
+  "name": "configureCustomQuoteLaunchV2",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "buybackExecutor_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "aggregator_",
+    "type": "address"
+   }
+  ],
+  "name": "configureLaunchV2",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "quotes",
+    "type": "address[]"
+   }
+  ],
+  "name": "configureLaunchV2ActivationQuotes",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "activator_",
+    "type": "address"
+   }
+  ],
+  "name": "configureLaunchV2Activator",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "aggregator_",
+    "type": "address"
+   }
+  ],
+  "name": "configureLaunchV2FeeSharing",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "registry_",
+    "type": "address"
+   }
+  ],
+  "name": "configureLaunchV2TokenRegistry",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "customQuoteLaunchV2Coordinator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "customQuoteLaunchV2Enabled",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "customQuoteLaunchV2VaultOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "ethUsdE8",
+    "type": "uint256"
+   }
+  ],
+  "name": "deriveLaunchEconomics",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "targetUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "floorUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "ceilingUsdE8",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "developerBuyAdapter",
+  "outputs": [
+   {
+    "internalType": "contract IPairV4DeveloperBuyAdapter",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ethPriceFeed",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "feeConversionLocker",
+  "outputs": [
+   {
+    "internalType": "contract IPairV4ConvertedFeeLocker",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "index",
+    "type": "uint256"
+   }
+  ],
+  "name": "getLaunchPool",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "quoteToken",
+      "type": "address"
+     },
+     {
+      "internalType": "uint16",
+      "name": "weightBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "poolId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint256",
+      "name": "positionId",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "initialProjectTokenAmount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickLower",
+      "type": "int24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickUpper",
+      "type": "int24"
+     },
+     {
+      "internalType": "uint256",
+      "name": "quoteUsdAtLaunchE8",
+      "type": "uint256"
+     },
+     {
+      "internalType": "address",
+      "name": "quotePriceFeed",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "quoteDecimals",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchPool",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "name": "getLaunchPoolCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "name": "graduationStatus",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "principalUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "targetUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "graduated",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "poolManager_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPositionManagerV4",
+    "name": "positionManager_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IStateView",
+    "name": "stateView_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IStockTokenRegistryV5",
+    "name": "stockRegistry_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPairV4Hook",
+    "name": "pairHook_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPairV4Locker",
+    "name": "locker_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPermit2Allowance",
+    "name": "permit2_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "universalRouter_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract IPairV4DeveloperBuyAdapter",
+    "name": "developerBuyAdapter_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "ethPriceFeed_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "protocolTreasury_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "owner_",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "launchFeeWei_",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "protectionBlocks_",
+    "type": "uint256"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "project",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "internalType": "uint160",
+    "name": "sqrtPriceX96",
+    "type": "uint160"
+   }
+  ],
+  "name": "initializeActiveCustomQuotePool",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "registry_",
+    "type": "address"
+   }
+  ],
+  "name": "installActiveLaunchV2ModeRegistry",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "registry_",
+    "type": "address"
+   }
+  ],
+  "name": "installEnabledActiveLaunchV2ModeRegistry",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchFeeWei",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyFundingToken",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "developerBuyMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyAmount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyLimit",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256[5]",
+      "name": "developerBuyQuoteCaps",
+      "type": "uint256[5]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchParams",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "launchTokenMulti",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "developerBuyPairIndex",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerTokenAmountOut",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "maxQuoteAmountIn",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LegacyLaunchParams",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "launchTokenMulti",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyFundingToken",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "developerBuyMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyAmount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyLimit",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256[5]",
+      "name": "developerBuyQuoteCaps",
+      "type": "uint256[5]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "userSalt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchV2Params",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "launchV2",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2Activator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2Aggregator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2BuybackExecutor",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "launchV2CommunityTakeoverEligible",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2Coordinator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2Enabled",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingAggregator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingCoordinator",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingEnabled",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingHook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingTokenFactory",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2FeeSharingVersion",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2Hook",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2ModeRegistry",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2ModeSelectionVersion",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "uint32",
+      "name": "modeId",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes",
+      "name": "modeConfiguration",
+      "type": "bytes"
+     },
+     {
+      "internalType": "address[]",
+      "name": "feeRecipients",
+      "type": "address[]"
+     },
+     {
+      "internalType": "uint16[]",
+      "name": "feeSharesBps",
+      "type": "uint16[]"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint256",
+        "name": "ethAmountIn",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "projectAmountOutMinimum",
+        "type": "uint256"
+       },
+       {
+        "components": [
+         {
+          "internalType": "address",
+          "name": "quoteToken",
+          "type": "address"
+         },
+         {
+          "internalType": "uint256",
+          "name": "ethAmountIn",
+          "type": "uint256"
+         },
+         {
+          "internalType": "uint256",
+          "name": "projectAmountOutMinimum",
+          "type": "uint256"
+         }
+        ],
+        "internalType": "struct PairLaunchpadV5Storage.LaunchV2TokenBuyAllocation[]",
+        "name": "allocations",
+        "type": "tuple[]"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.LaunchV2TokenDeveloperBuy",
+      "name": "developerBuy",
+      "type": "tuple"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "userSalt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchV2TokenParams",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "launchV2Token",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "launchV2TokenFactory",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       },
+       {
+        "internalType": "uint8",
+        "name": "priceMode",
+        "type": "uint8"
+       },
+       {
+        "internalType": "uint256",
+        "name": "quoteUsdE8",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "projectUsdE8",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "validUntil",
+        "type": "uint256"
+       },
+       {
+        "internalType": "bytes",
+        "name": "routedPriceSignature",
+        "type": "bytes"
+       },
+       {
+        "internalType": "uint256",
+        "name": "projectPriceInQuoteX18",
+        "type": "uint256"
+       },
+       {
+        "internalType": "bool",
+        "name": "requestDirectFunding",
+        "type": "bool"
+       },
+       {
+        "internalType": "bool",
+        "name": "requestRoutedDeveloperBuy",
+        "type": "bool"
+       },
+       {
+        "internalType": "bool",
+        "name": "requestFeeConversion",
+        "type": "bool"
+       },
+       {
+        "internalType": "bool",
+        "name": "requestBuyback",
+        "type": "bool"
+       },
+       {
+        "internalType": "address",
+        "name": "directFundingAdapter",
+        "type": "address"
+       },
+       {
+        "internalType": "address",
+        "name": "routedDeveloperBuyAdapter",
+        "type": "address"
+       },
+       {
+        "internalType": "address",
+        "name": "feeConversionAdapter",
+        "type": "address"
+       },
+       {
+        "internalType": "address",
+        "name": "buybackAdapter",
+        "type": "address"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.LaunchV2CustomQuoteAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint256",
+        "name": "ethAmountIn",
+        "type": "uint256"
+       },
+       {
+        "internalType": "uint256",
+        "name": "projectAmountOutMinimum",
+        "type": "uint256"
+       },
+       {
+        "components": [
+         {
+          "internalType": "address",
+          "name": "quoteToken",
+          "type": "address"
+         },
+         {
+          "internalType": "uint256",
+          "name": "ethAmountIn",
+          "type": "uint256"
+         },
+         {
+          "internalType": "uint256",
+          "name": "quoteAmountOutMinimum",
+          "type": "uint256"
+         },
+         {
+          "internalType": "uint256",
+          "name": "projectAmountOutMinimum",
+          "type": "uint256"
+         },
+         {
+          "internalType": "uint8",
+          "name": "routeKind",
+          "type": "uint8"
+         },
+         {
+          "internalType": "uint24",
+          "name": "routeFee",
+          "type": "uint24"
+         },
+         {
+          "internalType": "uint256",
+          "name": "validUntil",
+          "type": "uint256"
+         },
+         {
+          "internalType": "bytes",
+          "name": "routeSignature",
+          "type": "bytes"
+         }
+        ],
+        "internalType": "struct PairLaunchpadV5Storage.LaunchV2CustomQuoteDeveloperBuyLeg[]",
+        "name": "legs",
+        "type": "tuple[]"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.LaunchV2CustomQuoteDeveloperBuy",
+      "name": "developerBuy",
+      "type": "tuple"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "userSalt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchV2CustomQuoteParams",
+    "name": "p",
+    "type": "tuple"
+   }
+  ],
+  "name": "launchV2TokenWithCustomQuotes",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "launchV2VaultOf",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyFundingToken",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "developerBuyMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyAmount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyLimit",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256[5]",
+      "name": "developerBuyQuoteCaps",
+      "type": "uint256[5]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "userSalt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchV2Params",
+    "name": "p",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint8",
+    "name": "epoch1Mode",
+    "type": "uint8"
+   }
+  ],
+  "name": "launchV2WithEpoch1Mode",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "metadataURI",
+      "type": "string"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "metadataHash",
+      "type": "bytes32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "address",
+        "name": "quoteToken",
+        "type": "address"
+       },
+       {
+        "internalType": "uint16",
+        "name": "weightBps",
+        "type": "uint16"
+       }
+      ],
+      "internalType": "struct PairLaunchpadV5Storage.PairAllocation[]",
+      "name": "allocations",
+      "type": "tuple[]"
+     },
+     {
+      "internalType": "address",
+      "name": "creatorFeeRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "developerBuyFundingToken",
+      "type": "address"
+     },
+     {
+      "internalType": "uint8",
+      "name": "developerBuyMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyAmount",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "developerBuyLimit",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256[5]",
+      "name": "developerBuyQuoteCaps",
+      "type": "uint256[5]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "userSalt",
+      "type": "bytes32"
+     }
+    ],
+    "internalType": "struct PairLaunchpadV5Storage.LaunchV2Params",
+    "name": "p",
+    "type": "tuple"
+   },
+   {
+    "internalType": "address[]",
+    "name": "recipients",
+    "type": "address[]"
+   },
+   {
+    "internalType": "uint16[]",
+    "name": "sharesBps",
+    "type": "uint16[]"
+   }
+  ],
+  "name": "launchV2WithFeeSharing",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "launchedTokens",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "launches",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "creatorFeeRecipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint64",
+    "name": "launchedAt",
+    "type": "uint64"
+   },
+   {
+    "internalType": "bool",
+    "name": "graduated",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "targetUsdE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "ethUsdAtLaunchE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "projectUsdFloorE8",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "projectUsdCeilingE8",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "legacyLaunchHelper",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "locker",
+  "outputs": [
+   {
+    "internalType": "contract IPairV4Locker",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "maxOracleAge",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pairHook",
+  "outputs": [
+   {
+    "internalType": "contract IPairV4Hook",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "permit2",
+  "outputs": [
+   {
+    "internalType": "contract IPermit2Allowance",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "positionIdByPoolId",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract IPositionManagerV4",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "projectTokenByPoolId",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "protectionBlocks",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "protocolTreasury",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "proxiableUUID",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "quoteTokenByPoolId",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "quote",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "name": "recoverLaunchV2ActivationInventory",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "name": "registerCustomQuoteLaunchV2Vault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "name": "registerLaunchV2Vault",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "initializer_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "priceSigner_",
+    "type": "address"
+   }
+  ],
+  "name": "rotateCustomQuoteLaunchV2",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "buybackExecutor_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "aggregator_",
+    "type": "address"
+   }
+  ],
+  "name": "rotateLaunchV2Dependencies",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "coordinator_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "tokenFactory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "aggregator_",
+    "type": "address"
+   }
+  ],
+  "name": "rotateLaunchV2FeeSharingDependencies",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "setCustomQuoteLaunchV2Enabled",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPairV4DeveloperBuyAdapter",
+    "name": "newAdapter",
+    "type": "address"
+   }
+  ],
+  "name": "setDeveloperBuyAdapter",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPairV4ConvertedFeeLocker",
+    "name": "newLocker",
+    "type": "address"
+   }
+  ],
+  "name": "setFeeConversionLocker",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "fee",
+    "type": "uint256"
+   }
+  ],
+  "name": "setLaunchFee",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "setLaunchV2Enabled",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "enabled",
+    "type": "bool"
+   }
+  ],
+  "name": "setLaunchV2FeeSharingEnabled",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "age",
+    "type": "uint256"
+   }
+  ],
+  "name": "setMaxOracleAge",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "stateView",
+  "outputs": [
+   {
+    "internalType": "contract IStateView",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "stockRegistry",
+  "outputs": [
+   {
+    "internalType": "contract IStockTokenRegistryV5",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   }
+  ],
+  "name": "syncGraduation",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "projectToken",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "mode",
+    "type": "uint8"
+   }
+  ],
+  "name": "transitionLaunchV2Mode",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "universalRouter",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newImplementation",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "upgradeToAndCall",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "withdrawLaunchFees",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

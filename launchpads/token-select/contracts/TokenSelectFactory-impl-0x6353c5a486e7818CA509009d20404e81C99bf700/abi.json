@@ -1,0 +1,1855 @@
+[
+ {
+  "inputs": [],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "ETHTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "IncorrectDeploymentFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "IndexOutOfBounds",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDeployer",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidDeploymentFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidEthPoolRatio",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidFeeConfig",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidMigrationFee",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidMigrationFeePercentage",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidRange",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidReferrer",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidSelectToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidStreamManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTreasury",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LpVaultAlreadySet",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LpVaultNotSet",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoSelectPoolPosition",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotMigrated",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotTokenSelectToken",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlyMigrationAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OnlyReferrerAdmin",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SelectTokenNotSet",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TreasuryTransferFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnauthorizedPosition",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "previousAdmin",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "newAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "AdminChanged",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "user",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "totalAttempted",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "successfulClaims",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "completed",
+    "type": "bool"
+   }
+  ],
+  "name": "BatchClaimCompleted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "beacon",
+    "type": "address"
+   }
+  ],
+  "name": "BeaconUpgraded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldFee",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "DeploymentFeeUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldRatio",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newRatio",
+    "type": "uint256"
+   }
+  ],
+  "name": "EthPoolRatioUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "uint256",
+    "name": "positionId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "ethFees",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "tokenFees",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "ethServiceCharge",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "tokenServiceCharge",
+    "type": "uint256"
+   }
+  ],
+  "name": "FeesCollected",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "version",
+    "type": "uint8"
+   }
+  ],
+  "name": "Initialized",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "name": "LpVaultDeployed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldMigrationAdmin",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newMigrationAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "MigrationAdminUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldPercentage",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newPercentage",
+    "type": "uint256"
+   }
+  ],
+  "name": "MigrationFeePercentageUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldFee",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "MigrationFeeUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldMinimum",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newMinimum",
+    "type": "uint256"
+   }
+  ],
+  "name": "MinETHLiquidityUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "targetETHRaise",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "migrationFee",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "deploymentFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "NewTokenSelectToken",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "referrer",
+    "type": "address"
+   }
+  ],
+  "name": "ReferrerAdded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldReferrerAdmin",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newReferrerAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "ReferrerAdminUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "referrer",
+    "type": "address"
+   }
+  ],
+  "name": "ReferrerRemoved",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "name": "RefundsEnabled",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldServiceRate",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldCreatorWithReferrerRate",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldCreatorNoReferrerRate",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "oldReferrerRate",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newServiceRate",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newCreatorFeeWithReferrer",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newCreatorFeeNoReferrer",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "newReferrerFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "RewardFeesUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount0",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "amount1",
+    "type": "uint256"
+   }
+  ],
+  "name": "SelectPoolFeesCollected",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "ethPositionId",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "selectPositionId",
+    "type": "uint256"
+   }
+  ],
+  "name": "SelectPoolSeeded",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldToken",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newToken",
+    "type": "address"
+   }
+  ],
+  "name": "SelectTokenUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldStreamManager",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newStreamManager",
+    "type": "address"
+   }
+  ],
+  "name": "StreamManagerUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldTokenDeployer",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newTokenDeployer",
+    "type": "address"
+   }
+  ],
+  "name": "TokenDeployerUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "oldTreasury",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newTreasury",
+    "type": "address"
+   }
+  ],
+  "name": "TreasuryUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "implementation",
+    "type": "address"
+   }
+  ],
+  "name": "Upgraded",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "referrer",
+    "type": "address"
+   }
+  ],
+  "name": "addReferrer",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "authorizedReferrers",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address[]",
+    "name": "tokens",
+    "type": "address[]"
+   }
+  ],
+  "name": "batchClaimRewards",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint256",
+      "name": "totalAttempted",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "successfulClaims",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "lastProcessedIndex",
+      "type": "uint256"
+     },
+     {
+      "internalType": "bool",
+      "name": "completed",
+      "type": "bool"
+     }
+    ],
+    "internalType": "struct ITokenSelectFactory.BatchClaimResult",
+    "name": "result",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "lpPositionId",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "tokenServiceChargeRate",
+    "type": "uint256"
+   }
+  ],
+  "name": "collectAndTransferFees",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "originalETH",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "originalTokens",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "netETHSent",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "netTokensSent",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "name": "collectSelectPoolFees",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "amount0",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount1",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetETHRaise",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "maxContributionPerWallet",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "teamAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "marketingAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "communityRewardsAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "saleStartTime",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "saleEndTime",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint40",
+      "name": "teamStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "teamDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "marketingStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "marketingDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "communityStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "communityDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "address",
+      "name": "teamRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "marketingRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "communityRecipient",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct ITokenSelectFactory.TokenCreationParams",
+    "name": "params",
+    "type": "tuple"
+   },
+   {
+    "internalType": "address",
+    "name": "referrer",
+    "type": "address"
+   }
+  ],
+  "name": "createTokenSelectToken",
+  "outputs": [
+   {
+    "internalType": "address payable",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "creatorFeeNoReferrer",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "creatorFeeWithReferrer",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "deployLpVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "vault",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "deployedTokens",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "deploymentFee",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   }
+  ],
+  "name": "enableRefunds",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ethPoolRatioBps",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getAllDeployedTokens",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getAllocationLimits",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "maxMarketing",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxTeam",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxCommunity",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "maxCombined",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "getDeployedTokensCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "start",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "end",
+    "type": "uint256"
+   }
+  ],
+  "name": "getDeployedTokensRange",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "tokens",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_treasury",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_streamManager",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "_tokenDeployer",
+    "type": "address"
+   }
+  ],
+  "name": "initialize",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "lpVault",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "fairTick",
+    "type": "int24"
+   }
+  ],
+  "name": "migrate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "migrationAdmin",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "migrationFee",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "migrationFeePercentage",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "minETHLiquidity",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "positionManager",
+  "outputs": [
+   {
+    "internalType": "contract INonfungiblePositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "proxiableUUID",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "referrerAdmin",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "referrerFee",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "referrer",
+    "type": "address"
+   }
+  ],
+  "name": "removeReferrer",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "tokenAddress",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "fairTick",
+    "type": "int24"
+   }
+  ],
+  "name": "retrySelectPool",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "selectPoolPositionIds",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "selectToken",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "serviceChargeRate",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "setDeploymentFee",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "_ratioBps",
+    "type": "uint256"
+   }
+  ],
+  "name": "setEthPoolRatioBps",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_newAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "setMigrationAdmin",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "setMigrationFee",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newPercentage",
+    "type": "uint256"
+   }
+  ],
+  "name": "setMigrationFeePercentage",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "newMinimum",
+    "type": "uint256"
+   }
+  ],
+  "name": "setMinETHLiquidity",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_newAdmin",
+    "type": "address"
+   }
+  ],
+  "name": "setReferrerAdmin",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "_newServiceRate",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_newCreatorFeeWithReferrer",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_newCreatorFeeNoReferrer",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "_newReferrerFee",
+    "type": "uint256"
+   }
+  ],
+  "name": "setRewardFees",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "_selectToken",
+    "type": "address"
+   }
+  ],
+  "name": "setSelectToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newStreamManager",
+    "type": "address"
+   }
+  ],
+  "name": "setStreamManager",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newDeployer",
+    "type": "address"
+   }
+  ],
+  "name": "setTokenSelectDeployer",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newTreasury",
+    "type": "address"
+   }
+  ],
+  "name": "setTreasury",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "streamManager",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "tokenAskLPPositions",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "tokenCreators",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "tokenDeployer",
+  "outputs": [
+   {
+    "internalType": "contract ITokenSelectDeployer",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "tokenIndex",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "tokenLPPositions",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "tokenSelectTokens",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "treasury",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newImplementation",
+    "type": "address"
+   }
+  ],
+  "name": "upgradeTo",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newImplementation",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "upgradeToAndCall",
+  "outputs": [],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "components": [
+     {
+      "internalType": "string",
+      "name": "name",
+      "type": "string"
+     },
+     {
+      "internalType": "string",
+      "name": "symbol",
+      "type": "string"
+     },
+     {
+      "internalType": "uint256",
+      "name": "targetETHRaise",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "maxContributionPerWallet",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "teamAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "marketingAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "communityRewardsAllocation",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "saleStartTime",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "saleEndTime",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint40",
+      "name": "teamStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "teamDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "marketingStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "marketingDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "communityStartDelay",
+      "type": "uint40"
+     },
+     {
+      "internalType": "uint40",
+      "name": "communityDuration",
+      "type": "uint40"
+     },
+     {
+      "internalType": "address",
+      "name": "teamRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "marketingRecipient",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "communityRecipient",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct ITokenSelectFactory.TokenCreationParams",
+    "name": "params",
+    "type": "tuple"
+   }
+  ],
+  "name": "validateTokenParams",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]

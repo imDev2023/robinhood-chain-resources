@@ -1,0 +1,33 @@
+{
+ "block_number_balance_updated_at": 66699525,
+ "coin_balance": "0",
+ "creation_status": "success",
+ "creation_transaction_hash": "0x55b14c29316153eacc527eedb3936c4834b2a7e6e951c9b1a3c01a4f6274355d",
+ "creator_address_hash": "0x3Bd13d3F4dC1f152b2c64B1f19eADe52f8070513",
+ "ens_domain_name": null,
+ "exchange_rate": "2612.62",
+ "has_beacon_chain_withdrawals": false,
+ "has_logs": true,
+ "has_token_transfers": true,
+ "has_tokens": true,
+ "has_validated_blocks": false,
+ "hash": "0xA94AA60e9c7f193BF678608D5837F0FD51794635",
+ "implementations": [
+  {
+   "address_hash": "0x6353c5a486e7818CA509009d20404e81C99bf700",
+   "name": "TokenSelectFactory"
+  }
+ ],
+ "is_contract": true,
+ "is_scam": false,
+ "is_verified": true,
+ "metadata": null,
+ "name": "ERC1967Proxy",
+ "private_tags": [],
+ "proxy_type": "eip1967",
+ "public_tags": [],
+ "reputation": "ok",
+ "token": null,
+ "watchlist_address_id": null,
+ "watchlist_names": []
+}

@@ -1,0 +1,401 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "poolManager_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract UnihoodHook",
+    "name": "hook_",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "startTick_",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidMetadata",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LaunchFailedShape",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotPoolManager",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Reentrancy",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "poolId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "metaURI",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "startTick",
+    "type": "int24"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "tokenLiquidity",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "devBuyNative",
+    "type": "uint256"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "devBuyTokens",
+    "type": "uint256"
+   }
+  ],
+  "name": "Launched",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "LP_FEE_PIPS",
+  "outputs": [
+   {
+    "internalType": "uint24",
+    "name": "",
+    "type": "uint24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_METAURI_BYTES",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_NAME_BYTES",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_SYMBOL_BYTES",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TICK_SPACING",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TOKEN_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "allTokens",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "hook",
+  "outputs": [
+   {
+    "internalType": "contract UnihoodHook",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "metaURI",
+    "type": "string"
+   }
+  ],
+  "name": "launch",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "poolId",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "poolIdFor",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "poolKeyFor",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "Currency",
+      "name": "currency0",
+      "type": "address"
+     },
+     {
+      "internalType": "Currency",
+      "name": "currency1",
+      "type": "address"
+     },
+     {
+      "internalType": "uint24",
+      "name": "fee",
+      "type": "uint24"
+     },
+     {
+      "internalType": "int24",
+      "name": "tickSpacing",
+      "type": "int24"
+     },
+     {
+      "internalType": "contract IHooks",
+      "name": "hooks",
+      "type": "address"
+     }
+    ],
+    "internalType": "struct PoolKey",
+    "name": "key",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "poolManager",
+  "outputs": [
+   {
+    "internalType": "contract IPoolManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "startTick",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "tokenCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "start",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "count",
+    "type": "uint256"
+   }
+  ],
+  "name": "tokensSlice",
+  "outputs": [
+   {
+    "internalType": "address[]",
+    "name": "slice",
+    "type": "address[]"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes",
+    "name": "data",
+    "type": "bytes"
+   }
+  ],
+  "name": "unlockCallback",
+  "outputs": [
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ }
+]

@@ -2,6 +2,10 @@
 
 Eleven platforms, each archived in `launchpads/<slug>/`, compared on the dimensions that decide where to launch a token with no budget to seed liquidity.
 
+> **A second wave of eleven platforms was archived on 2026-09-19; see `LAUNCHPADS-II.md`.**
+> It completes the recommended-next-archives list in section 10, corrects three entries there, and ranks all twenty-two on custody rather than on creator payout.
+> Two corrections bear on this document directly: **LetsCash was never missing**, being the CashCat set already archived under `hood10/`, and **PAIR's absence from the catalog is a DefiLlama data defect**, not a gap in `_market`.
+
 Written 2026-09-03 from the eleven platform READMEs.
 Every cell cites the README section it came from, in the form `<slug> s3.1`.
 Where an archive did not answer a dimension the cell reads `not recorded`, which means the question was not settled, not that the answer is no.
@@ -270,14 +274,18 @@ Four of the five open questions in `NEXT-SESSIONS.md` are unanswered, so the ran
 `_market/README.md` catalogs **54 distinct platforms** on this chain, of which 10 are on `launchpad-research.md` and **44 are not**.
 Full catalog, mechanism descriptions and sources are there; it is the authority for this section and this is a pointer, not a copy.
 
-Two platforms, **PAIR** and **Hookers**, appear in the DefiLlama fee table but are **absent from the catalog table entirely**, with no site, handle or mechanism recorded anywhere. That is a gap in `_market`, not in this document.
+Two platforms, **PAIR** and **Hookers**, appear in the DefiLlama fee table but are **absent from the catalog table entirely**, with no site, handle or mechanism recorded anywhere. ~~That is a gap in `_market`, not in this document.~~
+
+**Corrected 2026-09-19: it is neither.** DefiLlama lists PAIR with an **empty `chains` array**, so it survives a chain fee query and is dropped by every chain-filtered catalog query; no amount of care in `_market` would have caught it. PAIR is `pair.fund`, `@pairdotfund`, live on Robinhood Chain, and is now archived in `launchpads/pair/`. Hookers is `hookersrh.com`, `@hookersrh`, and is correctly categorised; it was simply not pulled.
 
 `_market/README.md` also contradicts itself twice on protocol counts, "143 fee-earning protocols" against "all 134 protocols", and "30 protocols in its Launchpad category" against "the 20 Launchpad-category protocols". Neither pair is reconciled.
 
 ### Recommended next archives
 
-1. **StonkBrokers** - $2,542,956 in 30 days makes it the fourth-largest fee earner on the chain and by far the largest with no archive. The biggest single blind spot in the survey.
-2. **LetsCash** - $1,613,786 in 30 days, and the catalog records no site, no X handle and no mechanism at all. Pure unknown at real scale.
+**All of these were archived on 2026-09-19. See `LAUNCHPADS-II.md`; the annotations below record what each one turned out to be.**
+
+1. **StonkBrokers** - $2,542,956 in 30 days makes it the fourth-largest fee earner on the chain and by far the largest with no archive. The biggest single blind spot in the survey. **Archived, partially: seven verified contracts, but the launch factory itself is still not identified.**
+2. ~~**LetsCash** - $1,613,786 in 30 days, and the catalog records no site, no X handle and no mechanism at all. Pure unknown at real scale.~~ **Wrong. LetsCash is letscash.fun, whose factory `0x5bd1Fbe7...` is the `CashCatFactory-proxy` already archived in `hood10/contracts/` and documented in `hood10/README.md` section 5.1. It was never a missing archive.**
 3. **o1 Launchpad** - $463,085 in 24h against $656,777 in 30d, so most of its lifetime fees landed on the capture date. Either accelerating hard or a one-day artefact, and the answer changes the ranking.
 4. **Uniswap CCA** - a **merge, not an archive**. Already documented in `resources/uniswap/liquidity/liquidity-launchpad/`, and `pools-trade/README.md` has already decoded the same `ContinuousClearingAuctionFactory`, the 13-step issuance schedule and all 126 auctions from the other side. Cheapest thing on this list to finish.
 5. **Bankr** - the only catalogued pad whose fee split is described as four-way across creator, locked liquidity, protocol and buybacks, which is precisely the design question a no-LP-budget launch turns on. It is also the **largest Doppler integrator on the chain at 88,764 assets, 81% of all Doppler launches** (`long` s7.1), and it is absent from the fee table, so its economics are unknown at the largest scale on the chain.
@@ -285,6 +293,10 @@ Two platforms, **PAIR** and **Hookers**, appear in the DefiLlama fee table but a
 7. **pools.fun** - unrelated to Pools.trade, verified `PartyFactory` at `0x626C3d09B65bF5d1D40E0D5F25e19fa49783B3D4`, 2,439 tokens on day one, a SushiSwap V3 route nothing else in the survey uses, and it is **not in `launchpad-research.md`**, so nobody owns it.
 
 Below that: Coinbarrel, token.select, PAIR, Openfair, then Unihood and Mixpad together, since both build the same single-sided-supply design as Noxa and Pools Instant Launch and would show whether it is converging chain-wide.
+
+**Resolved 2026-09-19.** Items 3 and 5 through 7 are archived, as are Coinbarrel, token.select, PAIR, Unihood and Mixpad. Item 4, the Uniswap CCA merge, is still open. Openfair and Hookers are still unarchived.
+
+The closing question is answered: **the single-sided-supply design has converged.** Ten of the twenty-two platforms now use it, and all six of the newest do. The wave-two archive that matters most is **Unihood**, which reaches a stricter custody posture than anything in wave one, including Pools.trade, in 793 lines of first-party MIT Solidity.
 
 ---
 

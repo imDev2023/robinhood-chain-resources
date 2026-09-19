@@ -8,8 +8,12 @@ Intended to be reused across projects, not specific to any one build.
 **[`ROBINHOOD-CHAIN.md`](ROBINHOOD-CHAIN.md)** is the master reference.
 It synthesizes every official doc page plus live on-chain verification into one document: network config, ERC-8056 mechanics, contract addresses, price feeds, trust assumptions, and an integration checklist.
 
-For launchpads specifically, start at **[`LAUNCHPADS.md`](LAUNCHPADS.md)**, the cross-platform comparison.
-Go to a platform's own `launchpads/<slug>/README.md` for the detail behind any cell, and to `launchpads/PLAYBOOK.md` for how the archives were built.
+For launchpads specifically, start at **[`LAUNCHPADS.md`](LAUNCHPADS.md)**, the cross-platform comparison, then **[`LAUNCHPADS-II.md`](LAUNCHPADS-II.md)** for the second wave.
+Go to a platform's own `launchpads/<slug>/README.md` for the detail behind any cell, to `launchpads/PLAYBOOK.md` for how the archives were built, and to `scripts/README.md` for the tooling that builds them.
+
+**Twenty-two platforms are archived.**
+`LAUNCHPADS.md` covers the first eleven and ranks them for a creator choosing where to launch.
+`LAUNCHPADS-II.md` covers the second eleven, ranks all twenty-two on custody and upgradeability rather than on creator payout, and corrects three entries in the first document.
 
 ## Layout
 
@@ -27,7 +31,9 @@ Go to a platform's own `launchpads/<slug>/README.md` for the detail behind any c
 | `uniswap/` | Complete Uniswap developer docs (311 pages, native markdown), all-chain `DEPLOYMENTS.md`, and the Trading API OpenAPI spec rendered per endpoint. Start at `uniswap/INDEX.md`. |
 | `blockscout/` | Complete Blockscout docs (402 pages, native markdown, captured 2026-09-10) with a Robinhood-specific start-here list. Begin at `blockscout/README.md`, then `blockscout/INDEX.md`. |
 | `launchpads/` | One directory per token launchpad on this chain, each with a `README.md`, `LINKS.md`, `contracts/ADDRESSES.md` and raw captures. `launchpads/PLAYBOOK.md` is the method; `launchpads/_market/` holds chain-wide market context and a catalog of about 45 launchpads found. |
-| `LAUNCHPADS.md` | **Read this to choose a launchpad.** All eleven archived platforms compared on launch cost, fee split, creator income, liquidity lock, quote assets, verification and privileged keys, every cell cited to a platform README section. Includes a ranked shortlist, the assumptions behind it, and the platforms found but not archived. |
+| `LAUNCHPADS.md` | **Read this to choose a launchpad.** The first eleven archived platforms compared on launch cost, fee split, creator income, liquidity lock, quote assets, verification and privileged keys, every cell cited to a platform README section. Includes a ranked shortlist, the assumptions behind it, and the platforms found but not archived. |
+| `LAUNCHPADS-II.md` | **Read this to choose a design to build on.** The second eleven, archived 2026-09-19, plus a custody and upgradeability ranking across all twenty-two. Shallower than wave one by design: verified contracts and mechanism only, no docs captures or screenshots, with an explicit gap list per archive. |
+| `scripts/` | Tooling that builds the archives: `bsfetch.py` (Blockscout through a browser, since Cloudflare now challenges the API), `mkarchive.py` (contract directories), `push4scan.py` (function surface of unverified contracts). See `scripts/README.md`. |
 
 ## Provenance
 

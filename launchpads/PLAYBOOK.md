@@ -680,3 +680,47 @@ Cheap to check, and the wrong answer had already propagated into a platform READ
 **An unsourced number is worse than a missing one.**
 Where the refresh could not reproduce a figure, it marked it unsourced in place rather than deleting it or leaving it standing.
 That keeps the next session from re-trusting it and from re-deriving it blind.
+
+### From the wave-two archive of eleven platforms (2026-09-19)
+
+**Section 4's Blockscout recipe no longer works. Cloudflare now challenges the API.**
+`https://robinhoodchain.blockscout.com/api/v2/...` returns a 5,917-byte "Just a moment..." interstitial with a 403, **even with the browser User-Agent that section 4 prescribes**.
+A `BLOCKSCOUT_API_KEY` does not clear it either, as a header or as `?apikey=`, and `bdata scrape` fails on it with a JSON parse error.
+What works is a real browser: open the host once with `agent-browser`, then issue the API calls as `fetch` **from inside the page**, where they carry the clearance cookie.
+A 216 KB contract response round-trips through `agent-browser eval` intact.
+`scripts/bsfetch.py` does this and writes the two files `mkarchive.py` expects, so the pair compose.
+
+**The Blockscout MCP server is not a substitute for bulk work.**
+It clears Cloudflare and supports chain 4663, but the free tier is **8 tool calls per session**, which is one contract. Keep it for spot checks.
+
+**DefiLlama's open-source adapters are the fastest address discovery on this chain, by a wide margin.**
+`DefiLlama-Adapters/projects/<slug>/index.js` and `dimension-adapters/fees/<slug>/` are plain source naming the factory, the hook, the deploy block and often the launch event signature, with prose comments explaining the mechanism.
+Unihood's entire entry point came from one file: factory, hook, PoolManager, StateView, `FROM_BLOCK`, and the full `Launched` event ABI.
+o1 Launchpad's `config.ts` yielded **five generations** of factory plus hook plus escrow on this chain, each labelled and dated, plus a link to o1's public source repo.
+Try this **before** Blockscout, and before any browser work.
+Probe `projects/<slug>/index.js` with a few slug spellings; a 404 on all of them means try `gh search code` instead.
+
+**`gh search code` has its own much lower rate limit** than the 5,000/hr REST budget, and burns out after a handful of queries.
+Use it only to locate a path, then fetch through `raw.githubusercontent.com`, which is not metered the same way.
+
+**A DefiLlama protocol with an empty `chains` array is invisible to every chain-filtered query.**
+That is exactly why PAIR appeared in the Robinhood fee table and in no catalog: `api.llama.fi/protocols` filtered to `'Robinhood Chain' in chains` drops it.
+When a protocol shows fees on a chain but cannot be found in that chain's protocol list, check `chains` before concluding the catalog is at fault.
+
+**Do not rank bundle addresses by frequency.**
+On `pair.fund` the most frequent address by far, 386 occurrences against 10 for the real one, was USDG, the chain's stablecoin.
+The launchpad was the 4th most common.
+Frequency finds the most-referenced contract, which is usually the quote asset.
+Fetch each candidate's name off chain and let Blockscout label them.
+
+**A TVL adapter names TVL-bearing contracts and nothing else, so it will hand you lockers and miss launchers.**
+StonkBrokers and Coinbarrel both came back as custody and escrow contracts with no factory, because a launch factory holds no TVL.
+Expect to walk the pointer ring afterwards for any platform sourced this way.
+
+**Constructor arguments remain the cheapest map, and confirmed it again.**
+Dumping them across StonkBrokers' five contracts named two lock NFTs, a voter, a shared protocol fee recipient and two distinct owner keys, which is most of the platform's wiring for no extra requests.
+
+**A PUSH4 scan identified both unverified factories in this wave**, at 67 of 132 (50%) and 56 of 101 (55%) selectors resolved.
+`scripts/push4scan.py` does the scan, the batched openchain.xyz lookup and the report.
+RaiseHood's surface alone yielded the presale model, the vesting schedule, the guard design and a fourteen-function admin surface including `setLpLocker`, which is the weakest lock posture in the whole survey.
+Selector names are evidence of a **family**, not of behaviour: `setPlatformFee` exists on RaiseHood, but whether it is read at collection time (Noxa's bug) or snapshotted per sale cannot be answered from the name.

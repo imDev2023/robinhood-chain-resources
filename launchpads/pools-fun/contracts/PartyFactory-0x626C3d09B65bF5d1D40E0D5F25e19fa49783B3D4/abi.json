@@ -1,0 +1,1020 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "sushiV3Factory_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "npm_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "weth_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "usdg_",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "owner_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "AmbiguousDevBuy",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "CreatorNotCaller",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DeployFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DevBuyTooLarge",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DevBuyTooLittle",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "DevBuyWethOnly",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Expired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "FeedProbeFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidFdv",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidPriceAge",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "InvalidTick",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LockerAlreadySet",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LockerUnset",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "owner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableInvalidOwner",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   }
+  ],
+  "name": "OwnableUnauthorizedAccount",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "OwnershipCannotBeRenounced",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PairedAssetNotAllowed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "Paused",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PoolAlreadyInitialized",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "SafeERC20FailedOperation",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SequencerFeedProbeFailed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "StartTickChanged",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenNotToken0",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnexpectedCallback",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ZeroAddress",
+  "type": "error"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pairedAsset",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "tick",
+    "type": "int24"
+   }
+  ],
+  "name": "FallbackTickUsed",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "usd",
+    "type": "uint256"
+   }
+  ],
+  "name": "InitialFdvSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "locker",
+    "type": "address"
+   }
+  ],
+  "name": "LockerSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferStarted",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "previousOwner",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "OwnershipTransferred",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   }
+  ],
+  "name": "PairedAssetCurveRemoved",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "feed",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "maxPriceAge",
+    "type": "uint32"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "fallbackTick",
+    "type": "int24"
+   }
+  ],
+  "name": "PairedAssetCurveSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "bool",
+    "name": "paused",
+    "type": "bool"
+   }
+  ],
+  "name": "PausedSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "feed",
+    "type": "address"
+   }
+  ],
+  "name": "SequencerUptimeFeedSet",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "pairedAsset",
+    "type": "address"
+   },
+   {
+    "indexed": true,
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "deployer",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "address",
+    "name": "feeRecipient",
+    "type": "address"
+   },
+   {
+    "indexed": false,
+    "internalType": "int24",
+    "name": "startTick",
+    "type": "int24"
+   },
+   {
+    "indexed": false,
+    "internalType": "string",
+    "name": "metadataUri",
+    "type": "string"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint256",
+    "name": "devBuyAmountOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "TokenLaunched",
+  "type": "event"
+ },
+ {
+  "inputs": [],
+  "name": "FEE",
+  "outputs": [
+   {
+    "internalType": "uint24",
+    "name": "",
+    "type": "uint24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_FDV_USD",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_PRICE_AGE",
+  "outputs": [
+   {
+    "internalType": "uint32",
+    "name": "",
+    "type": "uint32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_FDV_USD",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_PRICE_AGE",
+  "outputs": [
+   {
+    "internalType": "uint32",
+    "name": "",
+    "type": "uint32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "SEQUENCER_GRACE_PERIOD",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TICK_SPACING",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TOTAL_SUPPLY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "acceptOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   }
+  ],
+  "name": "allowedPairedAsset",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "deployer",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "metadataUri",
+    "type": "string"
+   }
+  ],
+  "name": "computeTokenAddress",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   }
+  ],
+  "name": "getPairedAssetCurve",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "feed",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "maxPriceAge",
+      "type": "uint32"
+     },
+     {
+      "internalType": "int24",
+      "name": "fallbackTick",
+      "type": "int24"
+     },
+     {
+      "internalType": "bool",
+      "name": "set",
+      "type": "bool"
+     }
+    ],
+    "internalType": "struct PartyFactory.PairedAssetCurve",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "initialFdvUsd",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "string",
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "symbol",
+    "type": "string"
+   },
+   {
+    "internalType": "string",
+    "name": "metadataUri",
+    "type": "string"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "salt",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "pairedAsset",
+    "type": "address"
+   },
+   {
+    "internalType": "int24",
+    "name": "expectedStartTick",
+    "type": "int24"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "creator",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feeRecipient",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "devBuyAmountIn",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "devBuyMinOut",
+    "type": "uint256"
+   }
+  ],
+  "name": "launch",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "pool",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "devBuyOut",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "payable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "locker",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "maxUsableTick",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "npm",
+  "outputs": [
+   {
+    "internalType": "contract INonfungiblePositionManager",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "owner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "paused",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "pendingOwner",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   }
+  ],
+  "name": "removePairedAssetCurve",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "renounceOwnership",
+  "outputs": [],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "sequencerUptimeFeed",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "usd",
+    "type": "uint256"
+   }
+  ],
+  "name": "setInitialFdvUsd",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "locker_",
+    "type": "address"
+   }
+  ],
+  "name": "setLocker",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feed",
+    "type": "address"
+   },
+   {
+    "internalType": "uint32",
+    "name": "maxPriceAge",
+    "type": "uint32"
+   },
+   {
+    "internalType": "int24",
+    "name": "fallbackTick",
+    "type": "int24"
+   }
+  ],
+  "name": "setPairedAssetCurve",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bool",
+    "name": "paused_",
+    "type": "bool"
+   }
+  ],
+  "name": "setPaused",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "feed",
+    "type": "address"
+   }
+  ],
+  "name": "setSequencerUptimeFeed",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "pairedAsset",
+    "type": "address"
+   }
+  ],
+  "name": "startTickFor",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "tick",
+    "type": "int24"
+   },
+   {
+    "internalType": "bool",
+    "name": "live",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "sushiFactory",
+  "outputs": [
+   {
+    "internalType": "contract ISushiV3Factory",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "newOwner",
+    "type": "address"
+   }
+  ],
+  "name": "transferOwnership",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "int256",
+    "name": "",
+    "type": "int256"
+   },
+   {
+    "internalType": "int256",
+    "name": "amount1Delta",
+    "type": "int256"
+   },
+   {
+    "internalType": "bytes",
+    "name": "",
+    "type": "bytes"
+   }
+  ],
+  "name": "uniswapV3SwapCallback",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "usdg",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "asset",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "feed",
+    "type": "address"
+   },
+   {
+    "internalType": "uint32",
+    "name": "maxPriceAge",
+    "type": "uint32"
+   },
+   {
+    "internalType": "int24",
+    "name": "fallbackTick",
+    "type": "int24"
+   }
+  ],
+  "name": "validatePairedAssetCurve",
+  "outputs": [
+   {
+    "internalType": "int24",
+    "name": "liveTick",
+    "type": "int24"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "weth",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "stateMutability": "payable",
+  "type": "receive"
+ }
+]
