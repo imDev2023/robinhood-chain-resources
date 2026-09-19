@@ -32,8 +32,13 @@ Still **194 active** tokens. No symbol added, none removed, and every contract a
 | WDC | `1.000000000000` | `1.000217565250523909` |
 | XOM | `1.000000000000` | `1.001039563764661900` |
 
-This is the practical reminder that a Robinhood Stock Token balance is not static.
-`uiMultiplier()` rises as corporate actions land, so these behave as elastic-supply tokens for any contract that holds them.
+This is the practical reminder that `uiMultiplier()` moves often.
+
+**It does not follow that the balances move, and an earlier version of this file said it did.**
+The multiplier is display-only: it scales `balanceOfUI()` and `totalSupplyUI()` and never touches `balanceOf`.
+Stock tokens are not elastic-supply tokens for a contract that holds them.
+Measured either side of two real corporate actions with zero transfers, and swept across all 194 tokens, in `46-uimultiplier-is-display-only.md`.
+What a contract holding these tokens does need to price in is the issuer's control surface: a central blocklist, `adminBurn` from any holder, and one shared upgrade beacon behind all 194 tokens. Same file.
 
 ## Market shape
 
