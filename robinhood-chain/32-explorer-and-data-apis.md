@@ -552,7 +552,45 @@ Routes that people guess at and that do not exist: `/lp/approve`, `/lp/pool_info
 
 ---
 
-## 8. Which tool to reach for
+## 8. dRPC, the public RPC, and what a wide log scan actually costs
+
+Measured 2026-09-19 against chain 4663 at block ~67,303,004, scanning Uniswap v4 `Initialize` off the PoolManager and v3 `PoolCreated` across three factories, constrained on both indexed currencies.
+
+### Every endpoint refuses a wide `eth_getLogs`, but not for the same reason
+
+The distinction decides whether splitting the range helps at all.
+
+| Endpoint | Refusal | Limit is on |
+| --- | --- | --- |
+| `robinhood-mainnet.g.alchemy.com` (free) | `Under the Free tier plan, you can make eth_getLogs requests with up to a 10 block range` | block range |
+| `lb.drpc.live` (free) | `ranges over 10000 blocks are not supported on free plan` | block range |
+| `app.doppler.lol/api/rpc/4663` | `Log response size exceeded. You can make eth_getLogs requests with up to a 5,000 block range` | block range |
+| `rpc.mainnet.chain.robinhood.com` | `logs matched by query exceeds limit of 10000` | **log count** |
+
+**Only the public endpoint can serve a wide scan.** A block-range cap cannot be satisfied by halving - splitting 67M blocks six times still leaves ranges a thousand times wider than Alchemy's 10. A log-count cap is exactly what halving is for. So route log scans to `rpc.mainnet.chain.robinhood.com` and keep the keyed endpoints for `eth_call`, where they are genuinely better.
+
+This is the same conclusion section 9 reaches for wide historical logs, arrived at from the other direction.
+
+### Throttling arrives as a JSON-RPC error, not an HTTP 429
+
+The public endpoint throttles under sustained scanning, and it reports that as a JSON-RPC `error` object rather than a 429 status. Code that treats any JSON-RPC error as "too many logs" and splits the range makes it worse: both halves are throttled too, so requests double per level while the answer never changes, and the ranges that end up "failing" get recorded as unscanned.
+
+Same scan, same endpoint, one hour apart:
+
+| Strategy | Requests | Pools found | Unscanned ranges |
+| --- | --- | --- | --- |
+| Split on every error | 254 | 12,281 | 120 |
+| Retry on a backoff, split only on `exceeds limit` | **27** | **12,597** | **0** |
+
+### Cloudflare Workers egress is throttled far harder than a laptop
+
+The same full-chain scan takes 14 s from a laptop and **never completes inside 180 s from a deployed Worker**, which matters because a Worker invocation has a wall-clock budget and a partial scan that aborts may write nothing. Treat a first full-chain backfill as an operator task run from a workstation, then have the Worker scan only incremental ranges.
+
+`eth_call` does not share the problem in the same way, but its sizing does not transfer either: a Multicall3 `aggregate3` of 1,500 pool reads answers in about a second from a laptop on all three endpoints, and a 6,000-read page did not return from a deployed Worker at all. Size Multicall3 batches against the deployment, not against local runs.
+
+---
+
+## 9. Which tool to reach for
 
 | Question | Reach for | Why not the others |
 | --- | --- | --- |
@@ -563,7 +601,7 @@ Routes that people guess at and that do not exist: `/lp/approve`, `/lp/pool_info
 | Token balances for one wallet | `alchemy_getTokenBalances`, or Blockscout `/addresses/<addr>/tokens?type=ERC-20` | Both are one call. Alchemy also returns raw hex balances without pagination. |
 | Price, liquidity, 24h volume | Dexscreener `token-pairs/v1/robinhood/<token>` | It aggregates every DEX on the chain, v4 pool ids included. Alchemy's Prices API gives a single USD number with no liquidity context. |
 | Turning a 64-hex pool id into tokens | Dexscreener `latest/dex/pairs/robinhood/<poolId>` | It is a v4 `PoolId`, so there is no contract at that address to query. |
-| Historical logs over a wide range | `alchemy_getAssetTransfers` for transfers, or Blockscout `module=logs&action=getLogs` with paging | Free-tier `eth_getLogs` is capped at exactly 10 blocks. Blockscout's v1 getLogs takes wide ranges but returns at most 1,000 entries per page and 500s on a full-chain span. |
+| Historical logs over a wide range | `eth_getLogs` against `rpc.mainnet.chain.robinhood.com`, halving the range on `exceeds limit` (section 8); or `alchemy_getAssetTransfers` for transfers, or Blockscout `module=logs&action=getLogs` with paging | The keyed endpoints cap by block range (10 and 10,000), which halving cannot satisfy; the public one caps by log count, which it can. Blockscout's v1 getLogs takes wide ranges but returns at most 1,000 entries per page and 500s on a full-chain span. |
 | Call traces | `debug_traceTransaction` on a paid Alchemy tier, or Goldsky `robinhood_mainnet.raw_traces` | `trace_block` and `arbtrace_block` are unavailable on this network at any tier. |
 | A quote, a swap payload, or the current Uniswap contract set | Uniswap Developer API `/quote`, `/swap`, `/supported_chains` | `/supported_chains` is the vendor's own live answer for which Universal Router is current, which beats any archived address list. |
 | Continuously indexing this chain | Goldsky subgraphs on `robinhood-mainnet`, or a Mirror pipeline from `robinhood_mainnet.raw_logs` | Confirmed working; the account already runs a healthy synced subgraph on `robinhood-testnet`. |
@@ -571,10 +609,11 @@ Routes that people guess at and that do not exist: `/lp/approve`, `/lp/pool_info
 
 ---
 
-## 9. Known gaps in this page
+## 10. Known gaps in this page
 
 - The `bypass-429-option: temporary_token` path that Blockscout advertises was not exercised, so the ceiling with a temp token is unknown.
 - `debug_traceTransaction` on a paid Alchemy tier was not tested, only the free-tier refusal message.
 - Goldsky Mirror was verified by dataset existence, not by running a pipeline, and `goldsky dataset list` could not be enumerated from a non-interactive shell.
 - Goldsky subgraph indexing is proven on `robinhood-testnet`; no mainnet subgraph was deployed from this account.
+- Paid tiers on Alchemy and dRPC were not tested, only the free-tier refusals in section 8.
 - The Blockscout PRO API was exercised on nine routes, not exhaustively, and its credit cost per route was not measured.
