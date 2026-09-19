@@ -52,6 +52,28 @@ Unihood already supports the same composition: `UnihoodHook.setFeeRecipient` is 
 The PV1 generation is verified (`PV1VaultLauncher`, `PV1VaultRegistry`, `PV1BuybackBurnVaultFactory`), but the v1 vault instance itself is not.
 Anyone building a vault menu has no source to copy from PonsVault.
 
+**But other platforms on this chain do ship usable vault source, and it is easy to miss.**
+Corrected 2026-09-19 after an initial pass concluded, wrongly, that no vault source existed anywhere.
+The error was generalising from PonsVault to the whole chain, and it was avoidable: `PLAYBOOK.md` section 4 already records that "a contract deployed with `new` by a verified factory shows unverified, but the factory's verified sources are the readable source".
+`LaunchDividendTreasury` is exactly that case.
+Its sample deployment reads unverified, and its full 407-line source sits inside `hood10/contracts/DividendDeployer-.../sources/`.
+
+| Contract | Platform | Lines | `onlyOwner` | Pattern |
+| --- | --- | --- | --- | --- |
+| `CreatorFeeSplitter.sol` | hood10 | 243 | **0** | Fee splitting, no privileged surface |
+| `CashCatBuybackBurner.sol` | hood10 | 281 | 4 | Burn tank market-buys on a v3 pool and sends to dead; burns are permissionless and bounty-driven; the split is tunable for **future** revenue only |
+| `AgentVeTokenV2.sol` | virtuals | 289 | 3 | ve-style locked staking |
+| `Dividend.sol` | flap | 397 | 5 | MasterChef-style magnified dividend-per-share |
+| `CashCatRevenueSplitter.sol` | hood10 | 405 | 4 | Revenue splitting |
+| `LaunchDividendTreasury.sol` | hood10 | 407 | 6 | Period lifecycle plus Merkle entitlement; its natspec records the same family settling twenty-two periods in production |
+
+All six are MIT and verified.
+Between them they cover four of PonsVault's five templates: Fee Share, Buyback and Burn, Staking and Dividend.
+
+The caveat is custody, not availability.
+Every one except `CreatorFeeSplitter` carries three to six owner functions, so bolting any of them onto an ownerless core reintroduces exactly the privileged surface section 2 ranks on.
+That is a design decision to make deliberately, not a reason to write from scratch.
+
 ---
 
 ## 2. The custody ranking, across all twenty-two
