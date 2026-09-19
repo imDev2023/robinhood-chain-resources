@@ -153,6 +153,19 @@ Evidence: `_raw/apis-2026-09-03/bs-apikey-tests.txt`.
 
 ## 2. Blockscout PRO API, which does cover chain 4663
 
+> **Corrected 2026-09-19.** The PRO key is out of credits and has been for at least a full UTC day, so the section below describes a route that no longer answers.
+> `api.blockscout.com/4663/api?module=logs&action=getLogs` returns **HTTP 402 `{"error":"Out of credits"}`** with a valid key. A bogus key returns 401, so the 402 is quota exhaustion and not a bad key.
+> The free tier is 100,000 credits a day at 20 credits per call, and it was being spent in full by 05:14 UTC with no identified consumer. There is no top-up product; the cheapest plan is $49/month.
+>
+> **The public instance is unaffected and still serves the v1 `getLogs` for free.**
+> `robinhoodchain.blockscout.com/api?module=logs&action=getLogs` returns 200 for the same query, given a browser `User-Agent` and a `Referer` header of any value.
+> Measured against the v4 PoolManager `0x8366a39cc670b4001a1121b8f6a443a643e40951`: blocks 67,300,000 to 67,300,010 gave 265 logs; a 1,000-block span gave exactly 1,000 and a 10,000-block span also gave exactly 1,000.
+> `page=2&offset=1000` returned byte-identical results to `page=1`. **The 1,000-entry cap is a hard ceiling with no pagination behind it**, so the only way past it is to shrink the block range per window.
+> Eight successful v1 calls were made in a few minutes during this check, which is consistent with the ten-per-47-minutes v1 bucket recorded above rather than evidence that the bucket has changed.
+>
+> For bulk logs on this chain use dRPC, which pulled 724,750 blocks in 3.53 minutes for free. See `44-uniswap-v4-hooks.md` and the v4-hooks repo's `docs/assurance/bulk-log-access-4663.md`.
+
+
 This is the most useful thing found on 2026-09-03 and it is not in the plan.
 The multichain PRO API serves Robinhood Chain under its chain id, and it fixes both of the instance's problems at once.
 
