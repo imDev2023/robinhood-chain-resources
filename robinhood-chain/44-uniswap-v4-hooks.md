@@ -78,14 +78,22 @@ function _getBlockNumber() internal view override returns (uint48) {
 
 Treat any hook reading `block.number` on this chain as needing the override until shown otherwise, and assert it in a fork test.
 
-## Stock tokens are elastic supply
+## Stock tokens are not elastic supply
+
+> Corrected 2026-09-19. This section previously called stock tokens elastic supply and the classic rebasing-token hazard. That was wrong; `46-uimultiplier-is-display-only.md` has the measurements.
 
 Robinhood Stock Tokens carry an ERC-8056 `uiMultiplier()` that rises as corporate actions land.
 Between 2026-09-03 and 2026-09-19, 18 of the 194 multipliers moved (see `45-v4-pools-and-liquidity.md`).
 
-For hook authors this is the classic rebasing-token hazard.
-Uniswap's own security framework lists rebasing and elastic-supply tokens as a token-type hazard that breaks accounting assumptions.
-A hook that holds one of these tokens, caches a balance across callbacks, or derives an amount from a stored balance must account for the multiplier moving underneath it.
+The multiplier is display-only.
+It scales `balanceOfUI()` and `totalSupplyUI()` and never touches `balanceOf` or `totalSupply`, so at the accounting layer a stock token is an ordinary fixed-supply ERC-20.
+The rebasing hazard in Uniswap's security framework, where `PoolManager.sync` and `PoolManager.settle` credit the difference between two balance reads, does not apply to these tokens.
+
+A further data point, read 2026-09-19 through the Alchemy archive RPC: SGOV (`0x92FD66527192E3e61d4DDd13322Aa222DE86F9B5`) moved from 1.002981519346766532 to 1.005101770003214918 at `effectiveAt` 1788220826, between L2 blocks 51,274,907 and 51,274,926.
+`totalSupply()` held at 7401.66265947 and the v4 PoolManager's raw `balanceOf` held at 52.574071334340010176, identical to the wei on both sides.
+
+What a hook author should price in instead is the issuer's powers over the tokens, all documented in file 46: a central blocklist checked on every transfer and approval, `adminBurn` from any address including a pool's reserves, a global pause, and one shared upgrade beacon behind all 194 tokens that could change this behaviour in a single upgrade.
+These are the pausable and blocklist token hazards from the same framework, and they are reasons to cap exposure rather than reasons the accounting breaks.
 
 The dominant quote asset is **USDG**, the Paxos Global Dollar, not a wrapped native token.
 
