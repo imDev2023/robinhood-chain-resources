@@ -82,7 +82,7 @@ This is the column that decides what to build on, and it is the one where the ne
 
 | # | Platform | Privileged surface in the launch path | Upgradeable? |
 | --- | --- | --- | --- |
-| 1 | **Unihood** | **None.** No `Ownable`, no `onlyOwner`, no `owner()` in factory, hook or token | No |
+| 1 | **Unihood** | No `Ownable`, no `onlyOwner`, no `owner()`. Two `platformRecipient` gates, **neither reaching a creator**: `setFactory` is one-shot and already spent, `claimPlatformFees` moves only the platform's own share | No |
 | 1= | **Pools.trade** | **None.** No owner, setter, treasury or proxy anywhere | No |
 | 3 | **Coinbarrel** (custody only) | None on the custody contract, 81 lines | No |
 | 4 | **HOOD10** | Two: `setFeeRouter` on the hook, `setPaused` on the factory | No |

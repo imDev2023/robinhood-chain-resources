@@ -74,6 +74,7 @@ Because the schedule reads the clock and nothing else, it cannot be gamed with d
 ## 5. Custody and trust
 
 - **No owner.** No `Ownable`, no `onlyOwner`, no `owner()` in factory, hook or token.
+- **Two `platformRecipient` gates, neither reaching a creator.** `setFactory` is one-shot and reverts `FactoryAlreadySet` afterwards; live `factory()` already returns `0x0485a439...`, so it is spent. `claimPlatformFees` moves only the platform's own accrued 15%. Recorded because "no privileged functions" would overstate it: the accurate claim is that no key can alter a creator's terms, redirect their income, or touch the launch position.
 - **No proxy.** Blockscout reports `proxy_type: null` for both factory and hook.
 - **No fee knobs.** The hook's natspec: "every number below is immutable at deploy".
 - **No withdrawal path.** The factory holds the launch position and has no function that removes liquidity.
