@@ -34,6 +34,24 @@ PAIR is `pair.fund`, `@pairdotfund`, and it is live on Robinhood Chain.
 
 **pools.fun and Pools.trade are unrelated**, which the catalog flagged and which is confirmed: different operators, different venues, SushiSwap V3 against Uniswap v4.
 
+### PonsVault is archived, inside `pons/`
+
+Recorded here because it is not findable by name from the top level and is easy to mistake for a missing archive.
+
+`ponsvault.com` is a second front end by the Pons team that launches **through the same pons v2 factory** and sets `creatorFeeRecipient` to a vault contract instead of a wallet, so the creator's fee share is spent on a rule rather than paid out.
+It is covered in `pons/README.md` section 3.4, with 22 page captures (`pons/pages/12-ponsvault-home.md` through `33-ponsvault-docs-live.md`) and 20 PV1 and PV2 contracts under `pons/contracts/`.
+
+Its launch menu is the widest set of creator-fee options on the chain: **Staking**, **RWA Dividend** and **Fee Share** in the live form, plus **Stake & Burn** and **Buyback & Burn**, which were pulled from the public form but still have 49 and 19 live vaults respectively.
+Every vault parameter is written once at creation and has no setter.
+
+**The design idea is worth more than the contracts.**
+Because the vault is simply the fee recipient, the launchpad core needs to know nothing about vault types, and an options menu can be added without touching custody-critical code.
+Unihood already supports the same composition: `UnihoodHook.setFeeRecipient` is gated on `msg.sender == feeRecipient`, so a creator can point the stream at a vault and **no admin can redirect it**, which is the specific weakness Pons itself has.
+
+**The contracts are not reusable.** Re-checked live on 2026-09-19: all five PV2 vault implementations (`PV2StakingVault`, `PV2RwaVault` and its live twin, `PV2BuybackBurnVault`, `PV2StakeBurnVault`) are **unverified**, and the archive holds them as `bytecode.hex` and `metadata.json` only.
+The PV1 generation is verified (`PV1VaultLauncher`, `PV1VaultRegistry`, `PV1BuybackBurnVaultFactory`), but the v1 vault instance itself is not.
+Anyone building a vault menu has no source to copy from PonsVault.
+
 ---
 
 ## 2. The custody ranking, across all twenty-two
