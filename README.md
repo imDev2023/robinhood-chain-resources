@@ -19,6 +19,8 @@ Go to a platform's own `launchpads/<slug>/README.md` for the detail behind any c
 | `robinhood-chain/` | Verbatim archive, one markdown file per source URL. Source of truth when the master doc summarizes something. |
 | `robinhood-chain/31-onchain-verification.md` | What was read directly from mainnet, and where the docs and reality diverge. Re-verified 2026-09-03 at block 53,117,114. |
 | `robinhood-chain/32-explorer-and-data-apis.md` | Original writing. Which explorer and data APIs actually answer questions about chain 4663: Blockscout v2 and the browser User-Agent requirement, the Blockscout PRO API at `api.blockscout.com/4663`, contract verification routes, Dexscreener chain id `robinhood`, Goldsky subgraph and Mirror support, Alchemy Data API coverage and refusals, and the Uniswap Developer API. Verified 2026-09-03. |
+| `robinhood-chain/44-uniswap-v4-hooks.md` | Original writing. What changes when you put a Uniswap v4 **hook** on this chain: v4 addresses verified live, the CREATE2 deployer, EIP-1153 availability, and the `block.number` divergence (about 120 L2 blocks per tick) that silently changes two of OpenZeppelin's ready-made hooks. Verified 2026-09-19. |
+| `robinhood-chain/45-v4-pools-and-liquidity.md` | Generated. Live pool census: 123 v4 pools against 49 v3, total liquidity and 24h volume, top pools by liquidity, quote-asset mix, and the 18 stock-token multipliers that moved since 2026-09-03. Captured 2026-09-19. |
 | `robinhood-chain/16-token-contracts.md` | All Stock Token addresses, ISINs, UIDs, multipliers, matched feeds. 194 tokens as of 2026-09-03. |
 | `robinhood-chain/11-chainlink-feed-addresses.md` | All Chainlink feeds on the chain, verified live. 57 as of 2026-09-03. |
 | `robinhood-chain/CHANGELOG-2026-09-02.md` | Hand-written log of what changed in the official docs between captures, with old and new values. |
@@ -32,7 +34,7 @@ Go to a platform's own `launchpads/<slug>/README.md` for the detail behind any c
 ## Provenance
 
 Documentation captured 2026-08-12 via the Tavily CLI (`tvly extract`, advanced depth) across 26 official pages and 3 linked sub-pages, refreshed 2026-09-02 and 2026-09-03.
-On-chain state was first captured 2026-08-12 at block 34,251,364 and re-verified 2026-09-03 at block 53,117,114, both through an Alchemy archive RPC plus Multicall3, read-only.
+On-chain state was first captured 2026-08-12 at block 34,251,364, re-verified 2026-09-03 at block 53,117,114, and re-verified again 2026-09-19 at block 66,716,100, through an Alchemy archive RPC plus Multicall3, read-only.
 No transaction was ever sent and no private key was ever used.
 
 The archived pages preserve source wording exactly.
