@@ -1,0 +1,33 @@
+{
+ "block_number_balance_updated_at": 67635178,
+ "coin_balance": "0",
+ "creation_status": "success",
+ "creation_transaction_hash": "0xa89110f6c5ab52e6db5384b1b73e7fe84b5ab3e3699b612f8bd80a356229c20e",
+ "creator_address_hash": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+ "ens_domain_name": null,
+ "exchange_rate": "2585.39",
+ "has_beacon_chain_withdrawals": false,
+ "has_logs": true,
+ "has_token_transfers": true,
+ "has_tokens": true,
+ "has_validated_blocks": false,
+ "hash": "0x4Eb1976978756Bd56802d8162f2271844924e0cc",
+ "implementations": [
+  {
+   "address_hash": "0x3690dF68DB6eff764c5321552eff3a414562eB17",
+   "name": "LunchTaxHookPair"
+  }
+ ],
+ "is_contract": true,
+ "is_scam": false,
+ "is_verified": true,
+ "metadata": null,
+ "name": "ERC1967Proxy",
+ "private_tags": [],
+ "proxy_type": "eip1967",
+ "public_tags": [],
+ "reputation": "ok",
+ "token": null,
+ "watchlist_address_id": null,
+ "watchlist_names": []
+}
