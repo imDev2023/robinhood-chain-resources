@@ -2,7 +2,7 @@
 
 > Original writing, 2026-09-19. Two outside sources, read and summarised, plus figures computed the same day from Uniswap's public `hooklist.json`.
 > Complements `44-uniswap-v4-hooks.md` (what reaches hook code) and `45-v4-pools-and-liquidity.md`, which records that DEX Screener returns no hook address for a v4 pool.
-> Nothing in this file was measured by us on-chain; the provenance of each figure is stated.
+> The census figures are not ours; the one thing measured by us on-chain is the worked example under "Measuring a hook's take with two read-only calls", added 2026-09-20. The provenance of each figure is stated.
 
 ## Uniswap publishes a hook registry, and this chain tops it
 
@@ -81,6 +81,36 @@ Always key on the token address; USDG's is in `16-token-contracts.md` and `ROBIN
 **Hook creators are hidden by the CREATE2 factory.**
 Most hooks are deployed through the shared factory at `0x4e59b44847b379578588920cA78FbF26c0B4956C`, so the creation record names that address as the creator of hundreds of unrelated hooks.
 Finding who built a hook takes a funding trace, not the creation record.
+
+## Measuring a hook's take with two read-only calls
+
+Measured by us, 2026-09-20, at chain head through Alchemy `robinhood-mainnet`; not pinned to a block, so treat the figures as a demonstration of the method and re-read them before relying on them.
+
+A hook's take can be read without logs, traces or an indexer, which matters here because `trace_block` is unavailable at any tier and most hooked pools quote in native ETH, whose movements leave no transfer log.
+
+1. Get the pool's key. `PositionManager.poolKeys(bytes25)` at `0x58daec3116aae6d93017baaea7749052e8a04fa7` returns `(currency0, currency1, fee, tickSpacing, hooks)` for the first 25 bytes of a pool id, for pools whose positions were minted through it.
+2. Read the pool price and LP fee from `StateView.getSlot0(bytes32)` at `0xf3334192d15450cdd385c8b70e03f9a6bd9e673b`.
+3. Quote a small exact-input swap in each direction with `Quoter.quoteExactInputSingle(((address,address,uint24,int24,address),bool,uint128,bytes))` at `0x8dc178efb8111bb0973dd9d722ebeff267c98f94`, with empty `hookData`. The Quoter simulates the swap with the hook attached, so its output already reflects whatever the hook takes.
+4. Quoted cost is `1 - quoted output / (amount in x pool price)`; the hook's take is that minus the LP fee. Keep the size small against the pool's depth so price impact does not pollute the number.
+
+Worked example, HIMS/BONER, the sixth deepest pool on the chain in `45-v4-pools-and-liquidity.md`:
+
+| | |
+| --- | --- |
+| Pool id | `0x9c89b04303dfa76f3f6fb02c2b77be0e8a00ab8fa00d507119acd54ab3e8640d` |
+| `currency0` / `currency1` | BONER `0x98096d17e191B3dA1d5f99a6D7b3584351b11E18` / HIMS `0xCceE82fE024c36fA15E1005edE3E9e4787e23D09` |
+| `fee` / `tickSpacing` | `8388608`, the dynamic-fee flag / `8` |
+| Hook | `0x4e3468951D49f2EEa976eD0D6e75fFCb44a9a544`, registered in Uniswap's hooklist as `Doppler`, flags `beforeInitialize`, `afterAddLiquidity`, `afterRemoveLiquidity`, `afterSwap`, `afterSwapReturnsDelta` |
+| `getSlot0` | `sqrtPriceX96` 3190814128983647224291727889, tick -64245, protocol fee 0, **LP fee 1000 (0.10%)** |
+| Quote 0.01 BONER to HIMS | 15976669393257 out, against 16219700000000 at the pool price: **quoted cost 1.4986%** |
+| Quote 0.01 HIMS to BONER | 6072932325809246330 out: **quoted cost 1.4986%** |
+| Implied hook take | **about 1.40% in each direction**, on a pool that displays 0.10% |
+
+Each quote reported a gas estimate of about 750,000, so quoting is far heavier than a state read and must be paged accordingly in any batch job.
+
+Limits of the method.
+A quote that reverts does not by itself mean the hook refuses trades: the Quoter is not the Universal Router, and a hook that admits only certain callers or requires custom `hookData` will revert for the Quoter while serving real swaps.
+`poolKeys` is empty for pools whose liquidity was never minted through the PositionManager, so those keys must come from the `Initialize` event instead.
 
 ## What is still nobody's product
 
