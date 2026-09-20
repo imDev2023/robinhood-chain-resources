@@ -50,7 +50,15 @@ Real L2 height comes from `ArbSys(0x64).arbBlockNumber()`.
 
 ### Two widely used hooks are affected
 
-OpenZeppelin's `uniswap-hooks` library is the base every current hook inherits from, and two of its ready-made hooks key state on `block.number`:
+OpenZeppelin's `uniswap-hooks` library is the base every current hook inherits from.
+
+> **Two things about the library itself, checked 2026-09-20 against v1.2.1, the current release.**
+>
+> **Override `_afterSwap`, not `afterSwap`.** Since v1.2.0 the ten `IHooks` entry points on `BaseHook` are non-virtual and permanently `onlyPoolManager`, and each forwards to an internal `_beforeSwap` or `_afterSwap` that the hook overrides instead. Overriding the external one fails to compile with "Trying to override non-virtual function". Almost every tutorial predates this and teaches the old form. It is worth the migration: a `BaseHook` subclass can no longer drop the caller guard, so an entire access-control defect class stops being expressible.
+>
+> **`onlyValidPools` is not in any release yet.** It and `onlySelf` were removed on 2025-10-17 as "unused", so v1.2.0 and v1.2.1 ship without them. `onlyValidPools` was re-added on 2026-08-28 when `LimitOrderHook` needed to validate a pool, and sits on `main` unreleased. Until it ships, write the check by hand: any public or external function taking a caller-supplied `PoolKey` must reject a key whose `hooks` is not the contract itself, because the PoolManager accepts any initialized pool and a pool configured with a different hook never calls into yours.
+
+Two of the library's ready-made hooks key state on `block.number`:
 
 - `src/general/AntiSandwichHook.sol:131`
 - `src/general/LiquidityPenaltyHook.sol:186`
