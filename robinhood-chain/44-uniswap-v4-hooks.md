@@ -120,6 +120,62 @@ The dominant quote asset is **USDG**, the Paxos Global Dollar, not a wrapped nat
 `block.timestamp` advances normally at 0.1 s block time, so deadline checks such as `BaseCustomAccounting.sol:111` behave.
 A deadline measured in blocks would not.
 
+## Swapping against a delta-returning hook through the Universal Router
+
+> Verified 2026-09-20 on testnet 46630 near L2 block 121,920,000, by `eth_call` and then by real swaps.
+> The hook under test sets both `beforeSwapReturnDelta` and `afterSwapReturnDelta` and takes its fee on the native side of a native-ETH pool.
+
+Most aggregators and the Uniswap Labs interface will not route a pool whose hook returns deltas.
+The contracts themselves have no such objection, which matters to anyone building their own swap page for such a pool.
+
+**The Universal Router and the V4 Quoter both work against a delta-returning hook.**
+`quoteExactInputSingle` returns amounts with the hook's fee already taken out, in both directions, and a real swap then delivered the quoted amount to the wei.
+So a frontend for such a pool needs no router of its own.
+
+**The periphery is on testnet 46630 at the mainnet addresses.**
+Compared by bytecode: the V4 Quoter (`0x8Dc178eFB8111BB0973Dd9d722ebeFF267c98F94`), StateView (`0xF3334192D15450CdD385c8B70e03f9A6bD9E673b`) and PoolManager are byte-identical across 4663 and 46630.
+The Universal Router (`0x8876789976dEcBfCbBbe364623C63652db8C0904`) and Permit2 have the same length and differ only in hash, which is what chain-specific immutables produce.
+Multicall3 is on both as well.
+
+### The struct trap: both layouts appear to work
+
+Universal Router 2.1.1 takes this for `SWAP_EXACT_IN_SINGLE`:
+
+```solidity
+struct ExactInputSingleParams {
+    PoolKey poolKey;
+    bool zeroForOne;
+    uint128 amountIn;
+    uint128 amountOutMinimum;
+    uint256 minHopPriceX36; // absent from most tutorials and from older periphery
+    bytes hookData;
+}
+```
+
+**Sending the older five-field struct does not revert.**
+The router reads the struct straight from calldata rather than ABI-decoding it, so under the wrong layout the word where `minHopPriceX36` belongs is read as the `hookData` offset, lands on a zero length, and decodes as empty bytes.
+The swap succeeds, and the per-hop price guard has been silently dropped.
+A success is therefore not evidence that the encoding is right.
+
+To tell the layouts apart on chain, set the floor either side of the real price.
+With the new layout a floor just below the quoted price passes and one just above reverts `V4TooLittleReceivedPerHopSingle(uint256 minPrice, uint256 price)`, selector `0x4713c18b`.
+The price it reports is exactly `amountOut * 1e36 / amountIn`, which is also how to compute a floor: derive it from the minimum amount out, not from the quoted price, or it can reject a fill the minimum would have accepted.
+
+### Shape of a working swap
+
+`execute(commands, inputs, deadline)` with command `0x10` (`V4_SWAP`) and actions `0x06 0x0c 0x0f`: `SWAP_EXACT_IN_SINGLE`, `SETTLE_ALL`, `TAKE_ALL`.
+Buying with native ETH sends it as `msg.value` and settles currency `address(0)`.
+
+Selling an ERC-20 goes through Permit2, because the router pulls the token with `permit2.transferFrom`.
+The holder approves Permit2 on the token once, then signs a `PermitSingle`, and the signature rides in the same call: commands `0x0a10`, `PERMIT2_PERMIT` then `V4_SWAP`.
+After that a sale is one transaction until the permit expires.
+An unpermitted sell reverts `InsufficientAllowance(uint256)` (`0xf96fb071`) or `AllowanceExpired(uint256)` (`0xd81b2f2e`) from Permit2, unwrapped.
+
+Reverts from the swap itself also arrive unwrapped, for example `V4TooLittleReceived(uint256,uint256)` (`0x8b063d73`) and `TransactionDeadlinePassed()` (`0x5bf6f916`).
+A revert raised inside a hook arrives inside the PoolManager's `WrappedError(address,bytes4,bytes,bytes)` (`0x90bfb865`), so an error decoder has to look through that wrapper.
+
+Gas on testnet was about 176k for the buy and 201k for the permit-and-sell.
+
 ## Tooling notes
 
 Alchemy is first-class for this chain as `robinhood-mainnet`, confirmed 2026-09-19 returning chain id `0x1237`.
