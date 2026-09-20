@@ -611,6 +611,14 @@ Two rules follow, and breaking either cost a production pass its entire budget f
 **`eth_call` does not share the problem at all.** An earlier version of this section said a large Multicall3 page "did not return from a deployed Worker", and that was wrong: the call was never made, because a throttled log scan in front of it had already spent the invocation's abort, and the error named an endpoint tried after the abort fired. Measured properly, a Multicall3 `aggregate3` of ~1,900 calls returns in **500-600 ms from a deployed Worker** through Alchemy, the same as from a laptop.
 When a Worker times out "in an `eth_call`", time each stage before believing it.
 
+### Batched archive `eth_call` on the free tiers
+
+Measured 2026-09-20 around block 67,690,000, reading two view functions for 133 addresses at two historical blocks.
+
+- **dRPC's free plan refuses any JSON-RPC batch of more than 3 requests**: `{"message":"Batch of more than 3 requests are not allowed on free plan...","code":31}`, returned per item. Single archive `eth_call`s are served normally, so dRPC is fine for a handful of historical reads and wrong for a batched sweep.
+- **Alchemy's free tier serves batched archive calls but meters them at about 500 compute units a second**, with `eth_call` at 26. A single batch of 80 archive calls passed; batches of 32 sent back to back drew 429, sometimes as a per-item JSON-RPC error (`"code":429`, "exceeded its compute units per second capacity") and sometimes as a bare HTTP 429 **with no JSON body**, so parse defensively. A two-second retry did not clear it. Batches of 16 calls, one second apart, ran 34 batches clean.
+- Both endpoints served state six hours and seven days back without complaint; neither showed a history horizon inside the life of the contract being read (deployed at block 62,065,003).
+
 ---
 
 ## 9. Which tool to reach for
