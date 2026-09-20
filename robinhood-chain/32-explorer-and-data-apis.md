@@ -584,9 +584,10 @@ The distinction decides whether splitting the range helps at all.
 
 This is the same conclusion section 9 reaches for wide historical logs, arrived at from the other direction.
 
-### Throttling arrives as a JSON-RPC error, not an HTTP 429
+### Throttling arrives as a JSON-RPC error from a laptop, and as HTTP 429 from Cloudflare
 
-The public endpoint throttles under sustained scanning, and it reports that as a JSON-RPC `error` object rather than a 429 status. Code that treats any JSON-RPC error as "too many logs" and splits the range makes it worse: both halves are throttled too, so requests double per level while the answer never changes, and the ranges that end up "failing" get recorded as unscanned.
+The public endpoint throttles under sustained scanning, and from a workstation it reports that as a JSON-RPC `error` object rather than a 429 status.
+From Cloudflare Workers egress it is a plain HTTP 429, returned in about 105 ms, so handle both. Code that treats any JSON-RPC error as "too many logs" and splits the range makes it worse: both halves are throttled too, so requests double per level while the answer never changes, and the ranges that end up "failing" get recorded as unscanned.
 
 Same scan, same endpoint, one hour apart:
 
@@ -599,7 +600,16 @@ Same scan, same endpoint, one hour apart:
 
 The same full-chain scan takes 14 s from a laptop and **never completes inside 180 s from a deployed Worker**, which matters because a Worker invocation has a wall-clock budget and a partial scan that aborts may write nothing. Treat a first full-chain backfill as an operator task run from a workstation, then have the Worker scan only incremental ranges.
 
-`eth_call` does not share the problem in the same way, but its sizing does not transfer either: a Multicall3 `aggregate3` of 1,500 pool reads answers in about a second from a laptop on all three endpoints, and a 6,000-read page did not return from a deployed Worker at all. Size Multicall3 batches against the deployment, not against local runs.
+Measured from a deployed Worker on 2026-09-20, with every HTTP attempt timed: **70 of 72 `eth_getLogs` requests to the public endpoint came back HTTP 429**, and both keyed endpoints answered their block-range cap as a bare HTTP 400 with the message in the body.
+So even the incremental scan is a lottery from a Worker, not only the first backfill.
+
+Two rules follow, and breaking either cost a production pass its entire budget for sixteen hours:
+
+- **Split only on `exceeds limit`.** A 429 is not splittable and neither is a block-range plan cap, even though the latter reads like a size refusal. Splitting on either turns one refused query into a 127-leaf tree.
+- **Bound retries by wall clock, not by attempt count.** Six attempts at an exponential backoff is 15.75 s of sleep per query against 0.6 s of network; 127 leaves of that is 33 minutes. Cap the backoff (the long waits bought no extra successes), give the scan a deadline, and never put anything irreplaceable behind a log scan on a shared timeout.
+
+**`eth_call` does not share the problem at all.** An earlier version of this section said a large Multicall3 page "did not return from a deployed Worker", and that was wrong: the call was never made, because a throttled log scan in front of it had already spent the invocation's abort, and the error named an endpoint tried after the abort fired. Measured properly, a Multicall3 `aggregate3` of ~1,900 calls returns in **500-600 ms from a deployed Worker** through Alchemy, the same as from a laptop.
+When a Worker times out "in an `eth_call`", time each stage before believing it.
 
 ---
 
