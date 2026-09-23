@@ -4,6 +4,7 @@
 > Token roster re-pulled the same day from `GET https://api.robinhood.com/rhj/assets`.
 > Raw: `_raw/pools-2026-09-19/pairs.json` and `roster.json`.
 > Liquidity and volume are point-in-time and move constantly. Addresses and pool ids do not.
+> **Caveat found 2026-09-23:** `tokens/v1` returns only each token's top pool, so the per-token figures below are top-pool figures and the pair count is a count of top pools. NVDA's top pool held $14.3M of the $24.1M its 30 pools traded that day. See `50-stock-token-market-data.md` section 6.
 
 ## Roster check against 2026-09-03
 

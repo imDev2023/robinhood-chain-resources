@@ -6,6 +6,7 @@
 > Re-checked 2026-09-03 against a live pull of `GET https://api.robinhood.com/rhj/assets`: still **194** active tokens, none added, none removed, and every contract address unchanged.
 > One multiplier moved, `F` (Ford), corrected in the table below.
 > Raw: `_raw/docs-audit-2026-09-03b/ext/rhj-assets.json`.
+> Re-checked 2026-09-23: **195** active tokens. One addition, `QNT` (Quantinuum Inc. Class A) at `0xB7EDfE2F33C1aC06830a971dFb559bDe8A2a3d76`, not yet in the table below; no removals, no other address changed. See `50-stock-token-market-data.md`.
 
 ---
 

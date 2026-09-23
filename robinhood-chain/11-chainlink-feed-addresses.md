@@ -6,6 +6,7 @@
 > Every proxy below was called on-chain via `latestRoundData()` on 2026-08-12 - all 56 returned a live answer.
 > Re-checked 2026-09-02: the directory now lists 57 feeds; the one addition is `CBBTC / USD` (added below, live answer verified). No feed was removed. The Stock Token roster grew to 194, so 159 tokens now have no feed (35 equity feeds unchanged).
 > Re-checked 2026-09-03: the directory still lists **57** feeds and all 57 proxy addresses match this file exactly, with none added and none removed since 2026-09-02.
+> Re-checked 2026-09-23: **58** feeds. The addition is `GLD / USD` at `0x470A51258068043bd43dC0a56245625C9fE86eB0`, a DEX-state price feed for the GLD Stock Token rather than a tokenized-equity reference feed; see `50-stock-token-market-data.md` section 5. The 35 equity feeds are unchanged.
 > **Always re-read addresses from Chainlink rather than hardcoding this snapshot.**
 
 ---
