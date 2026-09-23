@@ -92,11 +92,82 @@ That is the platform's main functional limitation.
 
 Not settled in this pass, and each is a real question rather than an assumption:
 
-1. **Launch count and graduation rate.** The hook references a `gradTick` and "external LP is blocked until graduation", so a graduation concept exists; what it unlocks was not traced.
+1. **Graduation rate.** 61 launches at L2 block 70,733,903; how many graduated was not counted. What graduation unlocks is settled in section 8.
 2. **No docs capture.** `unihood.fun` was not crawled, no `pages/`, no screenshots, no socials.
-3. **No decoded production launch.** The `Launched` event signature is known from the adapter but no real call was decoded.
-4. **Bid wall behaviour unverified on chain.** The mechanism is read from source, not observed.
+3. **No decoded production launch.** A launch was reproduced on a mainnet fork (section 8), but no real launch transaction was decoded.
+4. **Bid wall behaviour unverified on chain.** The mechanism is read from source, not observed; the fork trades in section 8 stayed far below the 0.005 ETH threshold.
 5. **No audit.** Consistent with all 21 other platforms on this chain.
+
+## 8. Integrating: verified live and on a mainnet fork
+
+> Read live from mainnet at L2 block 70,733,903 on 2026-09-23, then reproduced on an `anvil --fork-url` fork of mainnet at L2 blocks 70,737,559 and 70,739,598 the same day.
+> Method: the meme-factory Unihood adapter (`packages/launch/src/adapters/robinhood-unihood/`), which launches from an impersonated address, buys and sells through the Universal Router, and claims the creator fee.
+> Nothing was broadcast to mainnet.
+
+### There is no creator parameter
+
+`launch(string name, string symbol, string metaURI) payable` (selector `0x42a81515`) takes no creator argument.
+The factory passes `msg.sender` as creator to the token, the hook's `registerPool` and the `Launched` event, and the hook sets `feeRecipient = creator`.
+So the wallet that signs the launch is the creator and the fee recipient.
+Launching from a hot wallet on someone else's behalf means a second transaction, `setFeeRecipient(poolId, to)`, callable only by the current recipient.
+
+### Live parameters
+
+| Read | Value |
+| --- | --- |
+| `startTick` | 197,600 (381.3M tokens per ETH, FDV 2.623 ETH) |
+| `gradTick` | 172,800 (FDV about 31.3 ETH) |
+| `wallThreshold` | 5,000,000,000,000,000 wei (0.005 ETH) |
+| `feeDisclosure()` | 100, 80, 5, 15 bps (base, creator, wall, platform) |
+| `SNIPE_*` | 1,500 bps under 5 s, 500 bps under 15 s |
+| `platformRecipient` | `0x64900b69E56583C12900F3458525a3fdB6f274D7`, the deployer |
+| `tokenCount()` | 61 |
+
+`factory.hook()`, `factory.poolManager()` and `hook.factory()` all point at the addresses in section 1.
+
+**Graduation (gap 1, settled from source).** `_afterSwap` latches `graduated` once the tick is at or below `gradTick`, and it never reverts.
+Its only effect is in `_beforeAddLiquidity`: after graduation anyone may add liquidity, before it only the factory and the hook can.
+Nothing migrates and no fee changes.
+
+### `metaURI` is raw JSON, not a URL
+
+Of the 61 launches, 60 store an inline JSON object as `metaURI` and one stores an empty string.
+None is a URL or a `data:` URI, although the token's natspec suggests either.
+Keys seen: `category` (60, always `"Meme"`), `description` (60), `image` (54), `x` (23), `website` (7), `telegram` (1).
+Every `image` is an inline `data:image/webp;base64,...` thumbnail, and the longest `metaURI` is 3,571 bytes against the factory's 4,096 byte limit.
+Whether unihood.fun renders an `https://` image in that field is not verified.
+
+### Launch on the fork
+
+| Measure | Value |
+| --- | --- |
+| Launch gas, 171 byte `metaURI`, 0.01 ETH first buy | 1,096,614 L2 gas on the fork |
+| Launch gas, 91 byte `metaURI`, 0.01 ETH first buy | 1,027,880 L2 gas on the fork |
+| Mainnet `eth_estimateGas` for the 171 byte case | 1,106,485 gas, at 0.0515 gwei = 0.000057 ETH |
+| Fee-free first buy of 0.01 ETH | 3,798,194.78 tokens, 0.380% of supply |
+| Tokens left in the PoolManager after that buy | 996,201,805.22 (99.62%) |
+| Rounding dust kept by the factory | 16,511 wei of token |
+| `currentFeeBps` right after launch, then 16 s later | 1,500, then 100 |
+
+Launch gas grows with the `metaURI` length, because the token stores it: about 860 gas per byte between the two runs above.
+The fork does not model Nitro's L1 data fee; the mainnet estimate includes it, about 10k gas here.
+The token's address is the factory's next `CREATE` address, so it is predictable until someone else launches first.
+
+Event topics: `Launched` `0x5cd196e1690a04a9ca256d39f6627563d3d3b650d3bde1bd4bb5b82bee064707`, `SwapFees` `0xe87c82083cef51c0583d7ecadc9f97c27cb43c40a2ffd2e23fd0f981ab0c16bc`.
+
+### Trading and fees on the fork
+
+After stepping past the anti-snipe window, a 0.001 ETH buy and a sale of half the tokens both went through the mainnet Universal Router (`0x8876789976dEcBfCbBbe364623C63652db8C0904`) with the six-field `ExactInputSingleParams`, and delivered the V4 Quoter's amount to the wei.
+A per-hop floor 1% above the quote reverted `V4TooLittleReceivedPerHopSingle`, which confirms on mainnet what `robinhood-chain/44-uniswap-v4-hooks.md` found on testnet.
+The sell used an on-chain `Permit2.approve` rather than a signed permit.
+
+| Step | Gas | `SwapFees` split |
+| --- | --- | --- |
+| Buy 0.001 ETH | 164,292 | creator 8.0e12, wall 5.0e11, platform 1.5e12 wei: exactly 80/5/15 bps of gross |
+| Sell for 0.000495 ETH gross | 159,137 | creator 3,960,744,382,189, wall 247,546,523,886, platform 742,639,571,660 wei |
+| `claimCreatorFees(poolId)` | 64,526 | paid 11,960,744,382,189 wei, the sum of both creator fees |
+
+Gap 4, the bid wall, is still unobserved: two small trades put 0.00000075 ETH in the wall budget, far below the 0.005 ETH threshold.
 
 ## Sources
 
