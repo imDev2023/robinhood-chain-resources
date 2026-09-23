@@ -659,6 +659,20 @@ Two rules follow, and breaking either cost a production pass its entire budget f
 **`eth_call` does not share the problem at all.** An earlier version of this section said a large Multicall3 page "did not return from a deployed Worker", and that was wrong: the call was never made, because a throttled log scan in front of it had already spent the invocation's abort, and the error named an endpoint tried after the abort fired. Measured properly, a Multicall3 `aggregate3` of ~1,900 calls returns in **500-600 ms from a deployed Worker** through Alchemy, the same as from a laptop.
 When a Worker times out "in an `eth_call`", time each stage before believing it.
 
+### A wide topic-filtered span can also time out, and halving fixes that too
+
+Measured 2026-09-23 at block ~70,834,000 from a workstation, while reading Unihood `SwapFees` logs (hook `0xec392C2b716C4B46df67cA6196ff92f7Dc2De8Cc`, topic1 = an OR-list of 10 pool ids) over 21 days.
+
+- A single 5,000,000-block `eth_getLogs` on `rpc.mainnet.chain.robinhood.com` sometimes answers JSON-RPC `-32602` "Missing or invalid parameters" with the detail `log query timed out`, and sometimes succeeds for the same range a minute later.
+- Halving the range on that message converged every time (109 requests for the 21-day scan on the slow run, 18 on the fast one), so treat `log query timed out` like `exceeds limit`: a size refusal that splitting fixes. It is not a throttle.
+- The chain ran at about ten blocks a second over September (53,123,000 on 2026-09-03 to 70,834,000 on 2026-09-23), so an hour is about 36,000 blocks and a day about 870,000.
+
+### New native-ETH v4 pools: the launch flow of the whole chain
+
+Measured the same day: `Initialize` on the PoolManager `0x8366a39CC670B4001A1121B8F6A443A643e40951` with topic2 = zero (currency0 native ETH) returned pools for 57 distinct non-stock tokens in the 20 minutes to 2026-09-23T21:03Z (60 in the 20 minutes to 21:01Z), one `eth_getLogs` call on the public RPC each time, so about 175 new tokens an hour.
+Names repeat within minutes: two unrelated tokens named TAIL (`0x41F1aF354bE6F80b02d4132Ca6bE606FaF2fb8bC` and `0xc7EC172a518B63285f0d1490473AecfA4E528b1c`) launched in that same window, which is the base rate any copycat watcher on this chain has to expect.
+Code that reads this: meme-factory `packages/watch/src/venues/robinhood-v4.ts`.
+
 ### Batched archive `eth_call` on the free tiers
 
 Measured 2026-09-20 around block 67,690,000, reading two view functions for 133 addresses at two historical blocks.

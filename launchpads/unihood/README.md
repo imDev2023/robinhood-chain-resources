@@ -182,6 +182,17 @@ Read at block ~70,756,000 with `eth_call` on `rpc.mainnet.chain.robinhood.com` a
 - Gap 3 above is partly closed: the pool id and fee flows are now read on a production launch, though a `Launched` event has still not been decoded.
 - Code that does this: meme-factory `packages/monitor/src/fees/unihood.ts`.
 
+### Reading the newest launches without a log scan, 2026-09-23
+
+Checked at block ~70,834,000 through `rpc.mainnet.chain.robinhood.com`.
+
+- `tokensSlice(count - n, n)` returns the newest `n` launches in launch order, and `hook.pools(poolId)` field 3 is each launch time, so "what launched in the last hour" costs two multicalls and no `eth_getLogs`.
+- Each token answers `metaURI()` with the inline board JSON described above, so name, symbol and thumbnail come from one more multicall (`name`, `symbol`, `metaURI`).
+- Trades per launch are the hook's `SwapFees` logs with topic1 = pool id; `grossNativeAmount` (the second data word) is the ETH side of each swap.
+- The venue is quiet: the newest launch was TESTHOOD `0xb923c15FcB9D744E563062E0c6c8C91859084456` at 2026-09-14T23:58:23Z, and the 21 days before 2026-09-23T21:08Z held 10 launches. The busiest first hours in that window were USDC `0x8014E87Fb9D62f698ec85BA08D6b702d9Ec977c5` (2,529 `SwapFees` events) and YUNO `0xC5C0D966b4B1c5641689cC26a5895F5e1c90D0f8` (587).
+- A radar watching only Unihood sees nothing most hours; the chain's launch flow is on the other native-ETH v4 pools (see `robinhood-chain/32-explorer-and-data-apis.md` section 8).
+- Code that does this: meme-factory `packages/watch/src/venues/unihood.ts`.
+
 ## Sources
 
 - `contracts/` built by `scripts/bsfetch.py` and `scripts/mkarchive.py` from Blockscout, 2026-09-19.
