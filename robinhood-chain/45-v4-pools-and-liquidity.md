@@ -99,3 +99,18 @@ Use `alchemy_getAssetTransfers`, the Blockscout PRO API, or a Goldsky subgraph f
 
 A `PoolId` is a hash, not an address, so there is no contract to call at it.
 To resolve one back to its tokens, use `https://api.dexscreener.com/latest/dex/pairs/robinhood/<poolId>`.
+
+## New-pool rate: v3 versus v4
+
+> Measured 2026-09-23 on the public RPC, blocks 70,333,742 to 70,733,742 (400,000 blocks, 11.2 hours), with `eth_getLogs` in 100,000-block windows.
+
+| Event | Emitter | Count | Per day, extrapolated |
+| --- | --- | ---: | ---: |
+| v3 `PoolCreated` | factory `0x1f7d7550B1b028f7571E69A784071F0205FD2EfA` | 227 | about 490 |
+| v4 `Initialize` | PoolManager `0x8366a39cc670b4001a1121b8f6a443a643e40951` | 4,552 | about 9,750 |
+
+About 95% of new pools on this chain are v4.
+A launch watcher that only listens for v3 `PoolCreated` misses nearly all of them; it must also subscribe to `Initialize` (topic `0xdd466e674ea557f56295e2d0218a125ea4b4f0f6f3307b95f85e6110838d6438`) on the PoolManager.
+Many v4 pools quote in native ETH (`currency0 == address(0)`), which a watcher keyed only on WETH and USDG also misses.
+The v4 figure is lower than the roughly 15,000 per day in `48-hook-census.md`, which comes from an outside source over a different window.
+The public RPC served these 100,000-block `eth_getLogs` windows with no range error, unlike the 10-block cap on free Alchemy.
