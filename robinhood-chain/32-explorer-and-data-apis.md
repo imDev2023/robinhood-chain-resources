@@ -48,9 +48,27 @@ The whole fix is `-A "$UA"`.
 > The Bright Data Web Unlocker (`brightdata scrape`) got through, as did the Blockscout MCP server.
 > Evidence: `fly-brain/research/03-rh-scan-address.md`, Gaps section.
 
+> **Correction 2026-09-23 (block ~70,756,000): the header that matters is `Referer`, not `User-Agent`.**
+> Measured with curl and with Node's built-in `fetch` against `/api/v2/tokens/<addr>/counters`:
+>
+> | Headers sent | Result |
+> | --- | --- |
+> | none | 403, Cloudflare "Just a moment" |
+> | browser `User-Agent` only | 403, same challenge (`cf-mitigated: challenge`) |
+> | browser `User-Agent` plus `Accept: application/json` | 403 |
+> | `Referer` only, any value (`-H "Referer: x"` passed) | **200 JSON** |
+> | browser `User-Agent` plus `Referer` | 200 JSON |
+>
+> So a scripted client needs only `-H "Referer: https://robinhoodchain.blockscout.com/"`; the User-Agent is optional.
+> This is Cloudflare rule behaviour and may change again; the 2026-09-11 note above records a day when even this did not help.
+> Used in production by meme-factory's monitor (`packages/monitor/src/sources/blockscout.ts`).
+
 ```bash
 curl -s -A "$UA" https://robinhoodchain.blockscout.com/api/v2/config/backend-version
 # {"backend_version":"v11.2.8.+commit.e889cab0"}
+curl -s -H "Referer: https://robinhoodchain.blockscout.com/" \
+  https://robinhoodchain.blockscout.com/api/v2/tokens/0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC/counters
+# {"transfers_count":"25812682","token_holders_count":"177676",...}   (2026-09-23)
 ```
 
 Captured proof: `_raw/apis-2026-09-03/bs_noUA.html` is the 5,549-byte challenge page, `bs_config_backend-version.json` is the 46-byte answer.
@@ -301,6 +319,28 @@ And Forge does not send a browser User-Agent, so if you see a Cloudflare interst
 
 ---
 
+## 3b. Etherscan API v2 serves chain 4663 on the free key
+
+Measured 2026-09-23 at block ~70,756,000 with the free `ETHERSCAN_API_KEY`.
+Base URL `https://api.etherscan.io/v2/api?chainid=4663&...&apikey=<key>`.
+
+| Action | Result on the free key |
+| --- | --- |
+| `module=proxy&action=eth_blockNumber` | works (`0x4375f0b` at the time) |
+| `module=account&action=tokenbalance` | works |
+| `module=logs&action=getLogs` with `address`, `topic0..3` and `topicX_Y_opr=and` | works, full-chain range (`fromBlock=0&toBlock=latest`), 1,000 logs per page |
+| `module=block&action=getblocknobytime&closest=before` | works, which makes a time-to-block table cheap |
+| `module=token&action=tokenholdercount`, `tokeninfo` | "API Pro endpoint", not on the free key |
+| any action on chain 56 (BNB) or 8453 (Base) | "Free API access is not supported for this chain" |
+
+The limit is **3 calls a second**, returned as `{"status":"0","result":"Max calls per sec rate limit reached (3/sec)"}` with HTTP 200, so check the body, not the status.
+"No records found" also comes back as `status: "0"` and means an empty result, not an error.
+For topic-filtered log reads on this chain this is the simplest free route: no Cloudflare, no block-range cap, unlike every RPC in section 8.
+Worked example: the Unihood hook's `CreatorFeesClaimed` logs for one pool id (topic1) across the whole chain in one call; see `launchpads/unihood/README.md` section 8.
+Holder counts still need Blockscout (section 1) or GeckoTerminal's `/networks/robinhood/tokens/<addr>/info`, whose `holders.count` matched Blockscout within about 0.5% for NVDA on the same day (176,847 against 177,676).
+
+---
+
 ## 4. Dexscreener
 
 Chain id is the literal string `robinhood`.
@@ -341,6 +381,14 @@ Saved response: `_raw/apis-2026-09-03/dex_pairs_v4poolid.json`.
 
 Of the 30 pools Dexscreener knows for NVDA, 13 are v4 with 66-character ids and 17 are conventional pair addresses across Uniswap v2 and v3, up, ramses, alandale, giga, sheriff, pancakeswap and robinswap.
 Do not assume a Dexscreener id can be fed to `eth_getCode`.
+
+### Dead launches are simply absent
+
+Measured 2026-09-23: of 61 Unihood launches (the factory's full `tokensSlice` list), Dexscreener's `token-pairs/v1/robinhood/<token>` returned a pool for 1, and GeckoTerminal's `/tokens/<addr>/pools` returned `{"data":[]}` for the dead ones it was asked about.
+Dexscreener also returned `[]` for sampled dead launches on Base, BNB Chain and Solana, and GeckoTerminal did for a dead Base launch.
+An empty array therefore means "never traded enough to be listed, or delisted", not "unknown", and any study that takes its outcomes from these aggregators silently drops the failures.
+Count on-chain activity (ERC-20 `Transfer` logs through Etherscan v2, section 3b) when you need every launch.
+For Unihood, the Dexscreener `pairAddress` of the one listed pool is exactly the v4 pool id that `UnihoodFactory.poolIdFor(token)` returns.
 
 ---
 

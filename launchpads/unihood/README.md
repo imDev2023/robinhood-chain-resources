@@ -169,6 +169,19 @@ The sell used an on-chain `Permit2.approve` rather than a signed permit.
 
 Gap 4, the bid wall, is still unobserved: two small trades put 0.00000075 ETH in the wall budget, far below the 0.005 ETH threshold.
 
+## 8. On-chain observations, 2026-09-23
+
+Read at block ~70,756,000 with `eth_call` on `rpc.mainnet.chain.robinhood.com` and Etherscan v2 `getLogs` (chain 4663, free key).
+
+- **61 launches in total**: `UnihoodFactory.tokenCount()` returned `0x3d`.
+- **Pool ids are computable off chain**: `keccak256(abi.encode(address(0), token, uint24(0), int24(200), hook))` equals `poolIdFor(token)`; checked for UNIHOOD `0x99b1887E985a985ECb23AC248421EAc96CB92492`, pool id `0xa4a6ec2084c3d5f029383209cfb859853ef8413eff67767571fd4e95bdf9933e`.
+- **Reading a creator's lifetime fees** takes two reads: `hook.pools(poolId).creatorAccrued` (field 6, unclaimed, wei) plus the sum of `CreatorFeesClaimed(bytes32 indexed poolId, address indexed recipient, uint256 amount)` logs for that pool id (topic0 `0x8e516b1bd244658d81db3afcb0a968075b1d535a0e97d62254d5fb333e0e3ec7`).
+- UNIHOOD itself: 0.0613 ETH unclaimed, 11.333 ETH already claimed over 21 claims, so 11.39 ETH lifetime to its creator.
+- Across the platform, 56 `CreatorFeesClaimed` events from 25 distinct pools had paid 13.202 ETH to creators.
+- The hook's native ERC-6909 claim balance on the PoolManager (`balanceOf(hook, 0)`) was 0.2033 ETH, covering all unclaimed creator, platform and wall balances at that block.
+- Gap 3 above is partly closed: the pool id and fee flows are now read on a production launch, though a `Launched` event has still not been decoded.
+- Code that does this: meme-factory `packages/monitor/src/fees/unihood.ts`.
+
 ## Sources
 
 - `contracts/` built by `scripts/bsfetch.py` and `scripts/mkarchive.py` from Blockscout, 2026-09-19.
