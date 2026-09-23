@@ -190,6 +190,22 @@ Note this is the Robinhood-modified fork, not the `0x06AfBA43...` address in Uni
 Canonical Permit2.
 `LiquidityLauncher.permit()` routes through it.
 
+## Added 2026-09-23: the v3.3.0 stack rolling out
+
+Found by decoding the app's launches on 2026-09-23 (meme-factory T32), read on chain at L2 block 70,866,985 and checked on Blockscout and in Uniswap's deployment feed the same day.
+No source directories yet; the strategy is unverified.
+
+| address | role | verified | in Uniswap's feed | notes |
+| --- | --- | --- | --- | --- |
+| `0x7c48DDe3B447381F4d986334679b3Afc7F2D35C2` | InstantLaunchStrategy, new creator-fee generation | **no** | no | 11,287 bytes of runtime, created via `0x4e59...956C` in tx `0x9882987ecc1e3efdd930ddb5c3865f872db2cb78f2e9d93241bdd23f86f8116d`. Same immutables as `0x23f8...27f1` (launcher, PositionManager, PoolManager, `initialTick 198050`, `LP_FEE 2500`, `TICK_SPACING 25`) except `feeSplitter` and `beneficiaryVault` below. Used by the app for launch `0xf7c42012...9552` at 22:03Z. |
+| `0x9411fa7F956f64aa7981AA27cB3bC6eC0415449C` | FeeSplitter for the new strategy | yes, `FeeSplitter` | no | `getSplits()` = `[(0x26d2...2553, 4000, 0, true), (0xf585...C58D, 6000, 10000, true)]`: the same 40/60 and 0/100 table. First activity 2026-09-15. |
+| `0x26d2F7AcB07707034406a0dC458351Bb63C02553` | UERC20BeneficiaryVault v3.3.0 | per feed | yes, `active`, `sourceRef v3.3.0` | `nativeFallback 0x2aC03e14...82F8`, `tokenFallback 0x...dEaD`, ERC-721 "Fee Beneficiary" (FEEB). |
+| `0xf585b5D728A8fdE743027307BF5F3556E3B9C58D` | CompoundingClaimRecipient v3.3.0 | per feed | yes, `active`, `sourceRef v3.3.0` | `minLiquidityIncrease() = 1e20`, same as v3.2.0. |
+
+The feed now marks the v3.2.0 vault `0xd35E...36D7` and compounder `0xf952...E99a` as `deprecated` while `InstantLaunchStrategy#creator-fees` `0x23f8...27f1` and `FeeSplitter#creator-fees` `0xeFF1...ACDf` stay `active`.
+The app still sent launch `0xa5de5610...6e83` through `0x23f8...27f1` at 20:58Z the same day.
+Every v3.2.0 contract is immutable, so positions already in it keep collecting and paying out.
+
 **WETH9** `0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73`
 Wrapped ETH on chain 4663, a TransparentUpgradeableProxy.
 Not used by the standard launch path, which pairs against native ETH.
@@ -216,6 +232,6 @@ A live ContinuousClearingAuction instance, kept as the worked example of a per-l
 ## Related addresses that are not pools.trade contracts
 
 - `0x4e59b44847b379578588920cA78FbF26c0B4956C` is the canonical deterministic CREATE2 deployment proxy, which is why it shows as the creator of almost every contract above. The EOA behind those calls is `0x32f4B2e69EbD7746596AF8699DAC1908F43107aD`, the same key that deployed `ContinuousClearingAuctionFactory` at the identical address on Ethereum mainnet (`_raw/leads/etherscan-mainnet-creators.json`).
-- `0x6d0009504d129cf5002dba61d9ae8575aa79314c` is `V4FeeAdapter`, the v4 `protocolFeeController` that receives Uniswap's 0.04% protocol fee. It is Uniswap v4 chain infrastructure, not a pools.trade contract.
+- `0x6d0009504d129cf5002dba61d9ae8575aa79314c` is `V4FeeAdapter`, the v4 `protocolFeeController` that receives Uniswap's protocol fee (0.04% on the POOLS pool; 0 on a pool launched on a fork of block 70,873,371 on 2026-09-23, see the README's 2026-09-23 section). It is Uniswap v4 chain infrastructure, not a pools.trade contract.
 - `0x2bad8182c09f50c8318d769245bea52c32be46cd` is the `PoolManager` owner and is an EOA, not a contract. Also v4 infrastructure rather than pools.trade.
 - `0x626C3d09B65bF5d1D40E0D5F25e19fa49783B3D4` is `PartyFactory`, the launch contract of the unrelated **pools.fun** platform. See `pages/14-pools-fun-is-a-different-platform.md`.

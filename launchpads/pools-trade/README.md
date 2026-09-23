@@ -385,6 +385,27 @@ The technical documentation for the Liquidity Launchpad was already archived by 
 
 ---
 
+## 8b. Verified 2026-09-23 by a fork launch (meme-factory T32)
+
+meme-factory built a Pools.trade Instant Launch adapter and ran the whole flow on an anvil fork of mainnet at L2 blocks 70,871,087 to 70,873,371, plus three production launches decoded from calldata and receipts.
+Adapter and fork log: `meme-factory/packages/launch/src/adapters/robinhood-poolstrade/README.md`.
+Nothing was broadcast to mainnet.
+
+- **The creator fee split is exact, to the wei.** A 0.01 ETH launch buy, a 0.001 ETH buy and a sell produced 0.0000275 ETH of LP fees, exactly 0.25% of the 0.011 ETH that went in, plus 493.14 tokens from the sell. `FeeSplitter.collectFees` sent 0.000011 ETH (40%) and 0 tokens to the vault, 0.0000165 ETH (60%) and every token wei to the compounder. Buys pay the LP fee in ETH and sells in the token, so the creator earns 0.10% of buy volume and nothing on sells.
+- **Fees are lazy.** Nothing reaches the vault until someone calls `FeeSplitter.collectFees([positionId])`, which anyone may do; the vault's `amounts(positionId)` reads 0 until then.
+- **The claim NFT id is the LP position id.** The strategy calls `registerBeneficiary(tokenId, feeBeneficiary)` inside the launch, so the vault mints ERC-721 "Fee Beneficiary" (FEEB) `#positionId` to the creator in the launch transaction. Transferring it moves the right: the old holder's `claim` reverts `NotBeneficiary(uint256,address)`, the new holder's passes.
+- **The creator fee switch is a strategy choice**, not a flag: `0x23f8...27f1` (creator fees) versus `0xAD44...04b2` (none). With fees on, `configData` is exactly `abi.encode(feeBeneficiary)`.
+- **The Uniswap v4 protocol fee on a new pool was 0**, not 0.04%: `StateView.getSlot0` on the fork-launched pool returned `protocolFee = 0`. Section 9 gap 9 said the 0.04% was read from one pool only; it is per pool, set by the fee controller at initialize.
+- **`UERC20Metadata` has four fields**, `(description, website, image, extraData)`, not the three in `decoded-launcher-recent-50.txt`. A three-field decode happens to succeed on the same bytes. The app now fills `extraData` with JSON: one launch carried `{"social":{...},"links":{...}}`, another `{"v":1,"xVerificationToken":"..."}` (the X link proof).
+- **The third argument of `distributeToken` and `distributeWithNative` is a salt, not the graffiti.** Production values differ from `keccak256(abi.encode(creator))`; the launcher forwards `keccak256(abi.encode(msg.sender, salt))`, which neither strategy reads. The token's `graffiti()` is `keccak256(abi.encode(creator))`, computed by the launcher from `msg.sender`, and `token.creator()` is the launcher.
+- **UERC20 gives Permit2 an infinite allowance from every holder** (solady `ERC20._givePermit2InfiniteAllowance`), and `approve(Permit2, x)` for any `x` below `max` reverts `Permit2AllowanceIsFixedAtInfinity()` (`0x3f68539a`). Selling needs only a Permit2-to-router allowance.
+- **The app's launch buy route changed.** On 2026-09-03 it was `commands 0x1004`, actions `SWAP_EXACT_IN, SETTLE, TAKE` then `SWEEP`; on 2026-09-23 it is `commands 0x10`, actions `SWAP_EXACT_IN_SINGLE, SETTLE_ALL, TAKE`, with `amountOutMinimum 0` both times. The six-field `ExactInputSingleParams` (with `minHopPriceX36`) is the one Universal Router 2.1.1 reads.
+- **The 5% "Buy at launch" cap is the interface's, not the contracts'.** Launch `0xa5de5610...6e83` on 2026-09-23 bought with 0.99 ETH, roughly a quarter of the supply.
+- **The launch costs 2.31M to 2.41M gas of L2 execution** on the fork with a first buy; mainnet `eth_estimateGas` including the L1 data component was 2.62M to 2.80M, about 0.00014 ETH at 0.051 gwei.
+- **A v3.3.0 stack is rolling out**, with an unverified strategy: see `contracts/ADDRESSES.md`, "Added 2026-09-23".
+
+---
+
 ## 9. Gaps
 
 1. **No launch transaction was captured from the interface.** The shared test wallet holds 0.00100 ETH, about $2.40, and both review screens quote a higher network cost, so the flow ends at `Add funds` and the wallet is never asked to sign. Closed from the other side: 50 real production launches are decoded in `_raw/blockscout/decoded-launcher-recent-50.txt`, and every parameter in section 3 and section 4 comes from those or from `eth_call`. Topping the wallet up to about 0.01 ETH would let a future session capture the actual `eth_sendTransaction` payload.
