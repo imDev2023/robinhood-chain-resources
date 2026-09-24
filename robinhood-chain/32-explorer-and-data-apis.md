@@ -666,6 +666,17 @@ Measured 2026-09-23 at block ~70,834,000 from a workstation, while reading Uniho
 - A single 5,000,000-block `eth_getLogs` on `rpc.mainnet.chain.robinhood.com` sometimes answers JSON-RPC `-32602` "Missing or invalid parameters" with the detail `log query timed out`, and sometimes succeeds for the same range a minute later.
 - Halving the range on that message converged every time (109 requests for the 21-day scan on the slow run, 18 on the fast one), so treat `log query timed out` like `exceeds limit`: a size refusal that splitting fixes. It is not a throttle.
 - The chain ran at about ten blocks a second over September (53,123,000 on 2026-09-03 to 70,834,000 on 2026-09-23), so an hour is about 36,000 blocks and a day about 870,000.
+- Split only on the node's own message (`log query timed out`), never on a client-side timeout. A client that splits whenever *it* stops waiting turns an endpoint that has stopped answering into an endless tree of waits; meme-factory's radar hit exactly that on 2026-09-24 against a BSC endpoint, and every cycle ran into its 60 s timeout.
+- The public endpoint also returns plain HTTP 429 during a burst of wide scans (seen 2026-09-24 during a 21-day scan's burst of 5M-block requests). It clears within seconds; back off and retry rather than split.
+
+### Logs carry no timestamp, and the block rate is not steady
+
+Measured 2026-09-24 on `rpc.mainnet.chain.robinhood.com`.
+
+- `eth_getLogs` results include a `blockTimestamp` field, but it is always `0x0` here. mainnet.base.org and PublicNode's BSC endpoint fill it in, so code that relies on it silently gets 1970 on this chain.
+- Placing a log in time therefore needs block timestamps, and interpolating between two far-apart blocks is not good enough: the block rate varies with load. A clock through only the window's ends, over 21 days, put the first hour of the Unihood launch USDC (`0x8014E87Fb9D62f698ec85BA08D6b702d9Ec977c5`, launched 2026-09-05T14:44:08Z) far enough off to count 58 of its 2,529 first-hour `SwapFees` events. Adding points at each launch time and one hour later, found in a few secant steps each, brings the count to the block-exact 2,529 (and 587 for YUNO), checked against block-by-time lookups within 7 s.
+- Over an hour, two-point interpolation is accurate to seconds.
+- Code: meme-factory `packages/watch/src/evm.ts` (`windowClock`, `refineClock`, `logTs`).
 
 ### New native-ETH v4 pools: the launch flow of the whole chain
 
