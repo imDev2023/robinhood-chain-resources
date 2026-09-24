@@ -406,6 +406,13 @@ Nothing was broadcast to mainnet.
 
 ---
 
+### Creator fee claim, verified 2026-09-23 on a fork (meme-factory T36)
+
+Claiming takes two calls: `FeeSplitter.collectFees([positionId])` moves the position's accrued fees into the vault, then `vault.claim(positionId, min0, 0)` pays the claim-NFT holder.
+Anyone can call `collectFees`; only the current holder of the claim NFT can call `claim`.
+On a fork of a real launch after 0.02 ETH of trading, `collectFees` used 306,605 gas and `claim` used 57,397 gas, and the creator received exactly 40% of the ETH-side fees.
+Method: anvil fork of Robinhood Chain mainnet, fee owner impersonated; source in meme-factory `packages/launch/src/claims/README.md`.
+
 ## 9. Gaps
 
 1. **No launch transaction was captured from the interface.** The shared test wallet holds 0.00100 ETH, about $2.40, and both review screens quote a higher network cost, so the flow ends at `Add funds` and the wallet is never asked to sign. Closed from the other side: 50 real production launches are decoded in `_raw/blockscout/decoded-launcher-recent-50.txt`, and every parameter in section 3 and section 4 comes from those or from `eth_call`. Topping the wallet up to about 0.01 ETH would let a future session capture the actual `eth_sendTransaction` payload.
