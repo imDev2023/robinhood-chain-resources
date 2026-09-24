@@ -692,6 +692,19 @@ Measured 2026-09-20 around block 67,690,000, reading two view functions for 133 
 - **Alchemy's free tier serves batched archive calls but meters them at about 500 compute units a second**, with `eth_call` at 26. A single batch of 80 archive calls passed; batches of 32 sent back to back drew 429, sometimes as a per-item JSON-RPC error (`"code":429`, "exceeded its compute units per second capacity") and sometimes as a bare HTTP 429 **with no JSON body**, so parse defensively. A two-second retry did not clear it. Batches of 16 calls, one second apart, ran 34 batches clean.
 - Both endpoints served state six hours and seven days back without complaint; neither showed a history horizon inside the life of the contract being read (deployed at block 62,065,003).
 
+### The gas an `eth_call` may burn, and which endpoints keep history
+
+Measured 2026-09-24 around block 71,190,000 by the Dex-screener quoting phase, with Multicall3 `aggregate3` batches of V4 Quoter quotes on HIMS/BONER, each estimating about 780,000 gas.
+
+- **The public endpoint and dRPC cap one `eth_call` at 50 million gas.**
+  63 quotes (about 49.3 million estimated) answered and 64 were refused with `{"code":-32000,"message":"out of gas"}` for the whole call, on both.
+  The refusal is for the call, not for the quote that ran out inside it, so it is loud; it is also deterministic, so retrying it on the same endpoint only asks again.
+- **Alchemy did not cap it in anything measured**: 640 quotes, about 501 million gas, answered in 2 seconds.
+- **The calls are fast**: 40 quotes return in about 300 ms on all three, and a whole roster of 144 pools, both ways, took 8 calls and 1.3 s from a laptop through Alchemy.
+- **Only Alchemy serves historical state.** At a block 3.5 million back, dRPC answered `Unknown state. First available state is 1` and the public endpoint `historical state ... is not available`, so any fixture pinned to a block has to be read through Alchemy.
+- **Inside an `eth_call`, `ArbSys(0x64).arbBlockNumber()` is the block the call ran at** (checked against a call pinned to a stated block), while `block.number`, and so Multicall3's `getBlockNumber()`, is the L1 estimate of `12-differences-from-ethereum.md`: 26,045,825 while the chain stood at 71,190,560.
+- **A quote's `gasEstimate` depends on what ran before it in the same call.** CRM/USDG estimated 43,160 alone and 34,660 after a state read of the same pool in the same `aggregate3`, because the read had already warmed its storage, so the gas of a batch is measured on a batch and not added up from single quotes.
+
 ---
 
 ## 9. Which tool to reach for
