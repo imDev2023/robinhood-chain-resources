@@ -101,6 +101,24 @@ Use `alchemy_getAssetTransfers`, the Blockscout PRO API, or a Goldsky subgraph f
 A `PoolId` is a hash, not an address, so there is no contract to call at it.
 To resolve one back to its tokens, use `https://api.dexscreener.com/latest/dex/pairs/robinhood/<poolId>`.
 
+## Ramses pool fees are mutable, Uniswap v3 fees are not
+
+> Measured 2026-09-25 by the Dex-screener project (issue #35), read-only.
+
+On Uniswap v3 the fee in the factory's `PoolCreated` event is the fee for life: `fee` is immutable in the pool.
+All 2,343 Uniswap v3 pools created since block 67,108,864 still answered `fee()` (`0xddca3f43`) with their creation fee on 2026-09-25.
+
+Ramses is the same interface with a setter.
+Of its 513 pools, 102 answered a different `fee()` than their creation fee that day, 50 higher and 52 lower.
+Each change emits `FeeAdjustment(uint24,uint24)` from the pool itself, topic `0x0cba87189055d3b5ab05c96fbd641bc766576c9e7cf0d195bdfb58a0c6a6df24`.
+
+The worked case is the PENG/USDG pool `0x9b977d504d94cf1efbee30531392545fa55349ab`, created at 20000 pips and moved to 25000, 4500, 50000, 20000 and then, on 2026-09-08, 10000, which it still charges.
+Anything that keys a Ramses pool's fee from its creation event, such as a volume recovered from fee growth divided by the fee, is wrong by the ratio of the two fees; that pool's volume read as half.
+
+Ramses also keeps a 5% protocol fee: six swaps alone in their block put 0.950000 of the input times the current fee into fee growth.
+
+Rule: read `fee()` beside `slot0()` for any v3-style pool on this chain, and treat the creation fee as a starting value only.
+
 ## New-pool rate: v3 versus v4
 
 > Measured 2026-09-23 on the public RPC, blocks 70,333,742 to 70,733,742 (400,000 blocks, 11.2 hours), with `eth_getLogs` in 100,000-block windows.
