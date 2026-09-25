@@ -734,3 +734,17 @@ Measured 2026-09-24 around block 71,190,000 by the Dex-screener quoting phase, w
 - Goldsky subgraph indexing is proven on `robinhood-testnet`; no mainnet subgraph was deployed from this account.
 - Paid tiers on Alchemy and dRPC were not tested, only the free-tier refusals in section 8.
 - The Blockscout PRO API was exercised on nine routes, not exhaustively, and its credit cost per route was not measured.
+
+## 11. Provider plans priced, 2026-09-25
+
+Read from each provider's pricing page on 2026-09-25 (Bright Data scrape), for sizing an indexer on this chain.
+All four serve Robinhood Chain; QuickNode lists it on its chains page but has not been measured here.
+
+| Provider | Free | Paid entry |
+| --- | --- | --- |
+| dRPC | 210M CU a month, public nodes, 100 rps, `eth_getLogs` capped at 101 blocks, `eth_subscribe` works (section 8, `52-swap-throughput-and-head-following.md`) | Growth, pay as you go, about $6 per 1M requests |
+| Alchemy | 30M CU a month, `eth_getLogs` capped at 10 blocks, `eth_subscribe` works | Pay as you go, $0.525 per 1M CU |
+| QuickNode | 10M credits, 15 rps, trial | Build $49 a month, 80M credits, 50 rps; Growth $249, Scale $499 |
+| Etherscan API v2 | 3 calls a second, 100,000 calls a day, chain 4663 served, chains 56 and 8453 refused, holder endpoints refused (section 3b) | Lite $49 (all chains, community endpoints only); Standard $199 is the cheapest with the API Pro endpoints, which is where `tokenholdercount`, `tokenholderlist` and `topholders` live |
+
+Unmeasured, and the question that decides the bill for a subscription-fed indexer: whether a provider meters each `logs` notification as a request. At 3.3M swap logs a day that is 100M notifications a month, which is $500 to $1,400 a month on Alchemy pay as you go if metered at 10 to 27 CU each, and nothing if only the subscribe call is metered. Dex-screener issue #45 measures it from Cloudflare egress.
