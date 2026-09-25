@@ -495,6 +495,13 @@ All eight addresses returned bytecode from `eth_getCode` at block 53,117,114 on 
 | Safe 4337 Module v0.3.0 (EntryPoint v0.7.0) | `0x75cf11467937ce3F2f357CE24ffc3DBF8fD5c226` |
 
 **EIP-7702 is also supported**, so existing EOAs can delegate to contract code and gain batching, sponsorship, and session keys without migrating to a new address.
+
+### Safe multisigs, and Safe{Wallet}
+
+Checked 2026-09-25; the record is `robinhood-chain/54-safe-wallet-support.md`.
+The Safe 1.4.1 stack sits at its canonical addresses on both chains, with identical code by hash: proxy factory `0x4e1DCf7AD4e460CfD30791CCC4F9c8a4f820ec67`, SafeL2 singleton `0x29fcB43b46531BcA003ddC8FCB67FFE91900C762`, Safe singleton `0x41675C099F32341bf84BFc5382aF534df5C7461a`, fallback handler `0xfd0732Dc9E303f09fCEf3a7388Ad10A83459Ec99`, MultiSend `0x38869bf66a61cF6bDB996A6aE40D5853Fd43B526`.
+**Safe{Wallet} at `app.safe.global` serves both chains**, as `robinhood` (4663) and `robinhood-testnet` (46630), each with a transaction service at `api.safe.global/tx-service/<short name>`; a Safe opens at `https://app.safe.global/home?safe=robinhood:<address>`.
+A real Safe is a proxy whose code hashes to `0xd7d408ebcd99b2b70be43e20253d6d92a8ea8fab29bd3be7f55b10032331fb4c` and whose slot 0 names one of the singletons; `getThreshold()` and `getOwners()` alone prove nothing, and a module listed by `getModulesPaginated` acts for the Safe with no owner's signature.
 AA providers: Alchemy (primary), ZeroDev, Privy, Dynamic.
 
 ## 10. Deploying
