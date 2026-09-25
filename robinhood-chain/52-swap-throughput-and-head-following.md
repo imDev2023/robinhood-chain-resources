@@ -65,7 +65,12 @@ This was measured from a workstation; the next section is the same question aske
 
 ## From Cloudflare Workers egress, for a day (measurement running)
 
-> Started 2026-09-25T20:07:39Z, closes 2026-09-26T20:07:39Z. Rows marked PENDING are filled from the probe after the window; rows marked PLACEHOLDER from the providers' own dashboards.
+> Started 2026-09-25T20:26:09Z, closes 2026-09-26T20:26:09Z. Rows marked PENDING are filled from the probe after the window; rows marked PLACEHOLDER from the providers' own dashboards.
+
+**Alchemy's free plan does not survive the firehose.**
+Subscribed to both Swap topics and newHeads from about 19:54Z, Alchemy closed the socket at 20:32:55Z with close code 1008 "Monthly capacity limit exceeded", and every handshake after that answered HTTP 403 then 429.
+About 58 swap logs a second were flowing, so Alchemy meters every subscription notification against compute units and the 30M CU free month is spent in under an hour.
+The probe dropped Alchemy after that and the table's Alchemy column ends there; dRPC held the full window.
 
 A throwaway Worker with one Durable Object (Dex-screener issue #45, `src/egress-probe/`) holds one WebSocket per keyed free plan, Alchemy and dRPC, from Cloudflare's egress.
 Each socket carries a `newHeads` subscription and a `logs` subscription filtered to the two `Swap` topics above.
