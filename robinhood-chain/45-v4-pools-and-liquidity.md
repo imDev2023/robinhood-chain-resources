@@ -101,6 +101,22 @@ Use `alchemy_getAssetTransfers`, the Blockscout PRO API, or a Goldsky subgraph f
 A `PoolId` is a hash, not an address, so there is no contract to call at it.
 To resolve one back to its tokens, use `https://api.dexscreener.com/latest/dex/pairs/robinhood/<poolId>`.
 
+## Depth is one-sided at the edge of a pool's only range
+
+> Measured 2026-09-25 by the Dex-screener project (issue #32), read-only, chain 4663.
+
+Depth computed from in-range liquidity alone, as if the active range reached 1% either side of the price, overstates a pool whose price sits at the edge of its only range.
+Eight production-selected v4 pools reverted the V4 Quoter with `NotEnoughLiquidity` in one direction at a thousandth of their "depth"; the worst, `0x63c29e10a43395389b7227ea0511c72b9df693f380db0cc1cc93436ab832dda3`, carried $17,208 on file with 67,805 raw USDG (about seven cents) of real buy depth, its only range being one tick wide.
+Across a page of 2,000 Doppler pools, pools at $100 or more of depth fell from 93 to 11 once walked, and the deepest from $816,045 to $262.
+
+Where the liquidity ends is read from storage, never from a quote:
+
+- Uniswap v4: `extsload` on the PoolManager (`0x8366a39cc670b4001a1121b8f6a443a643e40951`) at offset 4 (`ticks`, keyed by the sign-extended int256 tick, word 0 holds `liquidityGross` in the low 128 bits and `liquidityNet` in the high 128) and offset 5 (`tickBitmap`, keyed by the int16 word) from the pool's `Pool.State` slot.
+- Uniswap v3 and Ramses: `tickBitmap(int16)` and `ticks(int24)` on the pool, which both answer identically; the "up" factory is decoded the same way unmeasured.
+
+Summing `liquidityNet` over every initialized tick at or below the current tick returns the pool's `liquidity()` exactly on v4, Uniswap v3 and Ramses, which is the check that the slots are right; a wrong slot reads as no liquidity, never as an error.
+Block-pinned `eth_call` cannot be used to make the rounds consistent: dRPC's free plan refuses any block-pinned call ("Unknown state") and the public endpoint serves only about 2,000 blocks back, so a pool's state, bitmap words and ticks are read in one call.
+
 ## Ramses pool fees are mutable, Uniswap v3 fees are not
 
 > Measured 2026-09-25 by the Dex-screener project (issue #35), read-only.
