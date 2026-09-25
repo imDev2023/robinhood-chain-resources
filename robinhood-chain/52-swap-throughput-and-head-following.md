@@ -61,7 +61,42 @@ Measured once per endpoint, each subscription given 30 s to deliver and stopped 
 
 Use `wss://` against the same path as the HTTPS endpoint.
 The public endpoint has no usable WebSocket, so a subscriber has to hold a key.
-This was measured from a workstation; it has not been tried from Cloudflare Workers egress, which is where the public endpoint refuses about 99 log queries in 100.
+This was measured from a workstation; the next section is the same question asked from Cloudflare Workers egress, which is where the public endpoint refuses about 99 log queries in 100.
+
+## From Cloudflare Workers egress, for a day (measurement running)
+
+> Started 2026-09-25T20:07:39Z, closes 2026-09-26T20:07:39Z. Rows marked PENDING are filled from the probe after the window; rows marked PLACEHOLDER from the providers' own dashboards.
+
+A throwaway Worker with one Durable Object (Dex-screener issue #45, `src/egress-probe/`) holds one WebSocket per keyed free plan, Alchemy and dRPC, from Cloudflare's egress.
+Each socket carries a `newHeads` subscription and a `logs` subscription filtered to the two `Swap` topics above.
+A 15-second Durable Object alarm keeps the object alive and reconnects anything silent for 30 seconds.
+Per endpoint it records time to first notification, notifications, heads skipped while connected, disconnects, reconnect latency, the gap in blocks across each reconnect, and refusals.
+
+A silent drop is measured two ways rather than assumed away.
+Heads heard between two public-endpoint head reads are compared with the blocks the chain produced between them.
+Logs are compared once a minute with a 101-block `eth_getLogs` on dRPC over the same filter and the same blocks, which is also the gap-repair path's own served-against-refused count from egress.
+Alchemy is not asked `eth_getLogs`: its free plan refuses more than 10 blocks.
+
+At verification, a few minutes in, both providers had delivered first notifications on both subscription types from egress, with no refusal, no disconnect and no skipped head, and the first covered 101-block window matched to the log on both.
+
+| | Alchemy | dRPC |
+| --- | ---: | ---: |
+| First `newHeads` / `logs` notification | PENDING | PENDING |
+| Notifications per day | PENDING | PENDING |
+| Heads delivered within its own span | PENDING | PENDING |
+| Logs missing against 101-block `eth_getLogs` | PENDING | PENDING |
+| Disconnects, reconnect latency p50 / max | PENDING | PENDING |
+| Gap across reconnects, total / max blocks | PENDING | PENDING |
+| Refusals | PENDING | PENDING |
+| Compute units metered for the day | PLACEHOLDER | PLACEHOLDER |
+| Projected share of the free monthly allowance | PLACEHOLDER | PLACEHOLDER |
+
+| 101-block `eth_getLogs` on dRPC from egress | |
+| --- | ---: |
+| Served / asked | PENDING |
+| Refusals by reason | PENDING |
+
+The compute-unit rows answer the question `32-explorer-and-data-apis.md` section 11 leaves open: whether a provider meters each `logs` notification or only the subscribe call.
 
 ## Polling numbers, for the fallback path
 
