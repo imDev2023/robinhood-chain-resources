@@ -71,13 +71,17 @@ Contracts deploy unmodified, but Nitro semantics differ in ways that cause silen
 | Behaviour | On Robinhood Chain | What to do |
 | --- | --- | --- |
 | `block.number` | Returns an estimate of the **L1** block number, updated only periodically | Use `ArbSys(0x64).arbBlockNumber()` for the real L2 height |
-| `block.prevrandao` / `block.difficulty` | Constant | Never use for randomness; use Chainlink VRF |
+| `block.prevrandao` / `block.difficulty` | Constant | Never use for randomness; use a verifiable source (Chainlink VRF if deployed, or drand verified on-chain through the EIP-2537 BLS12-381 precompiles, which are live: see below) |
 | `blockhash(n)` | Reliable only for recent blocks | Do not use for old blocks or randomness |
 | `block.coinbase` | Network fee account, not a validator | Do not treat as a miner address |
 | `gasleft()` and gas estimation | Differ because fees have an L1 data component | Query pricing via `ArbGasInfo`; do not hardcode gas |
 | `msg.sender` from L1 | **Aliased** L1 address (original plus fixed offset) | Apply/undo alias in access control; use SDK `applyAlias` |
 | Max contract size | **96 KB** code, 192 KB init code (vs 24 KB on Ethereum) | Contracts too big for Ethereum can deploy here |
 | Transaction ordering | First-come, first-served | Fee bumping does not reprioritize |
+
+**BLS12-381 precompiles (EIP-2537) are live**, checked 2026-10-05 with `eth_call` on the public RPC: `0x0b` (G1 add) returned the point at infinity for a 256-byte zero input, and `0x0b` and `0x0f` (pairing check) both reject malformed input with `invalid input length`, where an address with no precompile would return empty success.
+This makes on-chain verification of drand quicknet rounds (BLS signatures on G1, `bls-unchained-g1-rfc9380`, served by Cloudflare at `drand.cloudflare.com`) possible on this chain; gas cost and a hash-to-curve library are not yet measured.
+See the Cloudflare knowledge base, `other-products.md`, section Randomness Beacon.
 | Inclusion | Sanctioned-address transactions silently excluded | Do not assume every submitted tx resolves |
 
 Full detail in `robinhood-chain/12-differences-from-ethereum.md`.
