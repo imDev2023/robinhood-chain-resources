@@ -63,14 +63,23 @@ Use `wss://` against the same path as the HTTPS endpoint.
 The public endpoint has no usable WebSocket, so a subscriber has to hold a key.
 This was measured from a workstation; the next section is the same question asked from Cloudflare Workers egress, which is where the public endpoint refuses about 99 log queries in 100.
 
-## From Cloudflare Workers egress, for a day (measurement running)
+## From Cloudflare Workers egress, for a day (measured)
 
-> Started 2026-09-25T20:26:09Z, closes 2026-09-26T20:26:09Z. Rows marked PENDING are filled from the probe after the window; rows marked PLACEHOLDER from the providers' own dashboards.
+> Started 2026-09-25T20:26:09Z, meant to close 24 hours later; the probe was left running and read on 2026-10-07 over 268.9 hours. dRPC's free month ran out at 2026-09-27T09:54Z, 37.5 hours in, so every dRPC rate is over that live span. Rows marked PLACEHOLDER come from the providers' own dashboards. The full tables and the decision are in Dex-screener `docs/research/option-a-spike.md` section 5.
 
 **Alchemy's free plan does not survive the firehose.**
 Subscribed to both Swap topics and newHeads from about 19:54Z, Alchemy closed the socket at 20:32:55Z with close code 1008 "Monthly capacity limit exceeded", and every handshake after that answered HTTP 403 then 429.
 About 58 swap logs a second were flowing, so Alchemy meters every subscription notification against compute units and the 30M CU free month is spent in under an hour.
-The probe dropped Alchemy after that and the table's Alchemy column ends there; dRPC held the full window.
+The probe dropped Alchemy after that and the table's Alchemy column ends there.
+
+**dRPC's free plan does not survive it either.**
+It held both subscriptions for 37.5 hours, then answered `User monthly free request limit has been reached` (code 37) to every `eth_subscribe` and every `eth_getLogs` for the rest of the month.
+The live rate was about 860,000 `newHeads` and 2.57 million `logs` notifications a day, 103 million a month, against a 210M compute-unit allowance, so a notification is metered at well over one unit; the key was shared with three single-pair ingest Workers, and the dashboard settles the split.
+While it was up it was clean: 99.986% of heads, no log missing or extra across 2,140 reconciled 101-block windows, 10 disconnects resumed in about 1.2 s each.
+
+**The public endpoint changed on 2026-09-27.**
+It refused 46.7% of plain `eth_blockNumber` reads from egress over the window (`Too Many Requests` and `Rate Limit Hit, limit will reset in 60 seconds`), and it now refuses any `eth_getLogs` spanning more than 100,000 blocks with `query spans N blocks (0 to N), but only 100000 are allowed for this request`, where before it capped by log count only (section 32 of this knowledge base describes the older behaviour).
+A whole-history scan from block 0, which Dex-screener's launchpad fold relied on, is no longer served.
 
 A throwaway Worker with one Durable Object (Dex-screener issue #45, `src/egress-probe/`) holds one WebSocket per keyed free plan, Alchemy and dRPC, from Cloudflare's egress.
 Each socket carries a `newHeads` subscription and a `logs` subscription filtered to the two `Swap` topics above.
@@ -86,20 +95,20 @@ At verification, a few minutes in, both providers had delivered first notificati
 
 | | Alchemy | dRPC |
 | --- | ---: | ---: |
-| First `newHeads` / `logs` notification | PENDING | PENDING |
-| Notifications per day | PENDING | PENDING |
-| Heads delivered within its own span | PENDING | PENDING |
-| Logs missing against 101-block `eth_getLogs` | PENDING | PENDING |
-| Disconnects, reconnect latency p50 / max | PENDING | PENDING |
-| Gap across reconnects, total / max blocks | PENDING | PENDING |
-| Refusals | PENDING | PENDING |
+| First `newHeads` / `logs` notification | 51 / 65 ms | 189 / 210 ms |
+| Notifications per day (over its live span) | 6 minutes only: 4,058 heads, 2,750 logs | 859,741 heads, 2,568,601 logs |
+| Heads delivered within its own span | 100% (4,058) | 99.986% (1,343,345 of 1,343,528; 183 lost to 10 disconnects, 2,788 more to the probe's own restarts) |
+| Logs missing against 101-block `eth_getLogs` | 0 of 2,750 in 5 windows | 0 of 647,427 in 2,140 windows |
+| Disconnects, reconnect latency p50 / max | 1, the spent plan | 10 in 37.5 h, 1,173 / 1,224 ms |
+| Gap across reconnects, total / max blocks | 0 | 183 / 53 |
+| Refusals | 33 handshakes after 20:32:55Z | 0 until 2026-09-27T09:54Z, then every one (55,261 by 2026-10-07) |
 | Compute units metered for the day | PLACEHOLDER | PLACEHOLDER |
 | Projected share of the free monthly allowance | PLACEHOLDER | PLACEHOLDER |
 
 | 101-block `eth_getLogs` on dRPC from egress | |
 | --- | ---: |
-| Served / asked | PENDING |
-| Refusals by reason | PENDING |
+| Served / asked | 2,150 / 2,266 (94.9%) |
+| Refusals by reason | 74 `Request timeout on the free plan`, 42 `monthly free request limit has been reached` |
 
 The compute-unit rows answer the question `32-explorer-and-data-apis.md` section 11 leaves open: whether a provider meters each `logs` notification or only the subscribe call.
 
