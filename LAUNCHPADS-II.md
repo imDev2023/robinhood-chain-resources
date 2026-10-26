@@ -171,6 +171,18 @@ Fees accrue as ERC-6909 claims inside the PoolManager.
 2. `github.com/o1exchange/o1-launch` at commit `756a75c` is o1's public source. One clone, and it answers o1's ten owner functions.
 3. Enumerating the owner functions on Mixpad (13), pools.fun (7) and o1 (10) would finish section 2's table.
 
+**Two launchpads found after this archive, not archived** (2026-10-26, from the Top-pad research [`research/alpha-vault-prior-art.md`](https://github.com/imDev2023/top-pad/blob/research/alpha-vault-prior-art/research/alpha-vault-prior-art.md), sections E8 and E9; neither was read on chain here beyond what follows):
+
+- **Harmonized** (harmonized.org).
+  The site says it "launches tokens on Uniswap and up. at the same price, in the same block, and lets Uniswap's new Aggregator Hooks route between them", "Built on Robinhood Chain", and lists Launcher `0x91993bd0a2538D2eA013571949a520b84F6dD54B`, Migration `0x5816A5975352046FCe7fea627D2fF5bb1e2e6767` and Aggregator Hook `0xA1f9CDa5fB5c662eA7712302e3aB7BDAAcd92888`; its linked X account `harmonizedhooks` no longer exists.
+  On Blockscout the Launcher is a verified contract named `HarmonizedLauncher`, created through the CREATE2 factory `0x4e59b44847b379578588920cA78FbF26c0B4956C`, with its first transaction on 2026-10-23.
+  Red flag: the same domain served the metadata of the Solana coin HMD, launched on 2026-10-08 by an anonymous operator through a Meteora Alpha Vault sale, whose deployer pulled all the pool's liquidity 14 minutes 53 seconds after trading opened (outside traders lost a net 26.99 SOL) after running the same scheme as Cryptstarter two days earlier.
+  Whether the same people run the Robinhood Chain Harmonized today is unverified: the domain is the only link found.
+- **Vaultz** (vltz.io, `@LaunchOnVaultz`, promoted by Phronis).
+  The site now reads "Vaultz - Anti-snipe launch vaults on Robinhood Chain" and describes "a permissionless presale vault protocol on Robinhood Chain. Raise ETH, auto-migrate to a locked Uniswap v3 position, launch without handing bots the first block."
+  It moved over from Solana devnet, where between May and June 2026 it tested NFT-backed Meteora Alpha Vault presales (three still-upgradeable devnet programs, 6 and 12 distinct joining wallets, never on Solana mainnet).
+  Its Robinhood Chain contract addresses were not recorded.
+
 **Unverified claims carried forward from the catalog**, each of which needs a contract read before it is trusted: Bankr's four-way fee split, pools.fun's daily buy-and-burn, token.select's presale model.
 
 **No audit anywhere.** Adding eleven platforms did not change the finding from `LAUNCHPADS.md` section 11: not one platform on this chain has a published audit covering the code that runs on it. The column is now empty twenty-two times.
