@@ -38,8 +38,13 @@ PAIR is `pair.fund`, `@pairdotfund`, and it is live on Robinhood Chain.
 
 Recorded here because it is not findable by name from the top level and is easy to mistake for a missing archive.
 
-`ponsvault.com` is a second front end by the Pons team that launches **through the same pons v2 factory** and sets `creatorFeeRecipient` to a vault contract instead of a wallet, so the creator's fee share is spent on a rule rather than paid out.
+`ponsvault.com` is a second front end that launches **through the same pons v2 factory** and sets `creatorFeeRecipient` to a vault contract instead of a wallet, so the creator's fee share is spent on a rule rather than paid out.
 It is covered in `pons/README.md` section 3.4, with 22 page captures (`pons/pages/12-ponsvault-home.md` through `33-ponsvault-docs-live.md`) and 20 PV1 and PV2 contracts under `pons/contracts/`.
+
+**Contradicted 2026-10-26: who runs it.**
+This section said on 2026-09-19 that PonsVault is "by the Pons team".
+The live ponsvault.com footer on 2026-10-26 says PonsVault is independent of pons and Robinhood (read by the Top-pad research, [`research/reference-launchpads.md`](https://github.com/imDev2023/top-pad/blob/research/reference-launchpads/research/reference-launchpads.md)), and the archived PonsVault docs (`pons/pages/33-ponsvault-docs-live.md`, retrieved 2026-09-02) already said it is "not affiliated with or endorsed by Pons Labs".
+Both claims are kept, with the evidence, in `pons/README.md` sections 1 and 9.
 
 Its launch menu is the widest set of creator-fee options on the chain: **Staking**, **RWA Dividend** and **Fee Share** in the live form, plus **Stake & Burn** and **Buyback & Burn**, which were pulled from the public form but still have 49 and 19 live vaults respectively.
 Every vault parameter is written once at creation and has no setter.

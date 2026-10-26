@@ -26,8 +26,14 @@ Robinhood Chain, chain id 4663.
 
 Two front ends, one protocol.
 `ponsfamily.com` is the launchpad itself and offers both generations behind a `v2 / v1` tab on the create page (`pages/03-pons-launchpad-create.md`).
-`ponsvault.com` is a separate product by the same people that launches a token *through* the pons v2 factory and points its creator fees at a vault contract instead of at a wallet (`pages/18-ponsvault-docs.md`, Contracts).
+`ponsvault.com` is a separate product that launches a token *through* the pons v2 factory and points its creator fees at a vault contract instead of at a wallet (`pages/18-ponsvault-docs.md`, Contracts).
 PonsVault has its own X account, its own docs and its own contract set, and it is the only place a vault can be attached at launch.
+
+Who runs PonsVault is contradicted, so both claims are kept with their dates (details in section 9):
+
+- 2026-09-02, this archive: "a separate product by the same people" as pons, citing `pages/18-ponsvault-docs.md`, whose Contracts section names the `PonsV2*` vault contracts but does not say who built them.
+- 2026-10-26, the live ponsvault.com footer: PonsVault is independent of pons and Robinhood (read by the Top-pad research, [`research/reference-launchpads.md`](https://github.com/imDev2023/top-pad/blob/research/reference-launchpads/research/reference-launchpads.md), "Corrections to the brief").
+  This archive's own capture of the live docs, `pages/33-ponsvault-docs-live.md` (retrieved 2026-09-02), already ends with the line that PonsVault "is not affiliated with or endorsed by Pons Labs".
 
 `ponsfamily.com` geo-blocks the United Kingdom.
 Requesting any page from a UK IP redirects to `/blocked?country=GB` (`pages/09-pons-blocked-geo.md`, `screenshots/45-ponsfamily-blocked-gb.png`).
@@ -589,6 +595,12 @@ Every address in section 5 was read from the chain instead, which is a stronger 
 The v2 docs say public launches are closed; `canLaunch` says otherwise.
 The official repo names a v1 factory that reads `launchEnabled() == false`.
 Both are recorded in sections 3.1 and 5.2 with the evidence.
+
+**Who operates PonsVault is unresolved.**
+Section 1 of this README (2026-09-02) and `LAUNCHPADS-II.md` (2026-09-19) attribute PonsVault to the Pons team.
+Its own docs (`pages/33-ponsvault-docs-live.md`, retrieved 2026-09-02) say it is "not affiliated with or endorsed by Pons Labs", and its live footer on 2026-10-26 says it is independent of pons and Robinhood ([Top-pad research `reference-launchpads`](https://github.com/imDev2023/top-pad/blob/research/reference-launchpads/research/reference-launchpads.md)).
+No source read for this archive states that the Pons team built it.
+Not checked: who deployed the PonsVault launcher and vault factories, and whether that deployer is linked to any pons v2 admin key.
 
 **Vault Seats per-series contracts are enumerated but not archived.**
 Six series exist across two registries, 42 contracts in total.
